@@ -1,0 +1,16 @@
+﻿l_russian:
+
+ XSM_neutrality_party:0 "Гоминьдан"
+ XSM_neutrality_party_long:0 "Гоминьдан"
+ XSM_communism_party:0 "КПК"
+ XSM_communism_party_long:0 "Коммунистическая партия Китая"
+ XSM_fascism_party:0 "ОСР"
+ XSM_fascism_party_long:0 "Общество Синих Рубашек"
+ XSM_monarchy_party:0 "Династия Цин"
+ XSM_monarchy_party_long:0 "Лоялисты Цин"
+ XSM_democratic_party:0 "Гоминьдан"
+ XSM_democratic_party_long:0 "Гоминьдан"
+ XSM_anarchism_party:0 "Анархическая фракция Гоминьдана"
+ XSM_anarchism_party_long:0 "Анархическая фракция Гоминьдана"
+ XSM_trozkism_party:0 "Левая фракция КПК"
+ XSM_trozkism_party_long:0 "Левая фракция Коммунистической партии Китая"

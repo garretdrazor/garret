@@ -1,0 +1,5 @@
+opinion_modifiers = {
+	
+	XSM_cliqe_opinion = { trade = yes value = -500 }
+
+}

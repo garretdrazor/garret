@@ -1,0 +1,15 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			604 = {
+				add_dynamic_modifier = { modifier = XSM_slavery_dyn }
+				force_update_dynamic_modifier = yes
+			}
+			1166 = {
+				add_dynamic_modifier = { modifier = XSM_slavery_dyn }
+				force_update_dynamic_modifier = yes
+			}
+		}
+	}
+}
+

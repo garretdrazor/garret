@@ -1,0 +1,7 @@
+XSM_slavery_dyn = {
+	enable = { controller = { original_tag = XSM } }
+	icon = GFX_state_elephants_modifier
+	production_factory_max_efficiency_factor = -0.1
+	political_power_gain = -0.05
+	state_production_speed_buildings_factor = -0.05
+}

@@ -1,0 +1,66 @@
+ideas = {
+	country = {
+		XSM_idea_chinese_cliqe = {
+			removal_cost = -1
+			allowed = { always = no }
+			picture = chinese_cliqe
+			rule = {
+				can_join_factions = no
+			}
+			modifier = {
+				custom_modifier_tooltip = chinese_cliqe_tt
+			}
+			on_remove = {
+				every_other_country = {
+					remove_opinion_modifier = {
+						target = ROOT
+						modifier = XSM_cliqe_opinion
+					}
+				}
+			}
+			on_add = { set_country_flag = block_global_market }
+			on_remove = { clr_country_flag = block_global_market }
+		}
+		XSM_idea_gubernator_conflict = {
+			removal_cost = -1
+			allowed = { always = no }
+			picture = gubernator_conflict
+			modifier = {
+				command_power_gain_mult = -0.25
+				political_power_factor = -0.1
+				political_advisor_cost_factor = 0.15
+				promote_cost_factor = 0.1
+			}
+		}
+		XSM_idea_muslim_salafit = {
+			removal_cost = -1
+			allowed = { always = no }
+			picture = muslim_salafit
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.1
+				army_org_factor = -0.05
+			}
+		}
+		XSM_idea_agrar_problem = {
+			removal_cost = -1
+			allowed = { always = no }
+			picture = agrar_problem
+			modifier = {
+				consumer_goods_factor = 0.1
+				MONTHLY_POPULATION = -0.05
+			}
+		}
+		XSM_idea_bad_economy = {
+			removal_cost = -1
+			allowed = { always = no }
+			picture = bad_economy
+			modifier = {
+				consumer_goods_factor = 0.03
+				political_power_factor = -0.2
+				production_factory_efficiency_gain_factor = -0.05
+				production_factory_max_efficiency_factor = -0.05
+			}
+		}
+	}
+}

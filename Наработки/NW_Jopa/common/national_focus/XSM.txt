@@ -1,0 +1,1097 @@
+focus_tree = {
+	continuous_focus_position = { x = 1940 y = 950 }
+	id = XSM
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = XSM
+		}
+	}
+	default = no
+	focus = {
+		id = XSM_power
+		icon = GFX_z_goal_Ma_Power
+		cost = 10
+		x = 15
+		y = 0
+
+	}
+	focus = {
+		id = XSM_pies
+		icon = GFX_z_goal_pie
+		cost = 10
+		x = 31
+		y = 6
+
+	}
+	focus = {
+		id = XSM_codex_for_soldiers
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = XSM_pies
+		}
+		x = 0
+		y = 1
+		relative_position_id = XSM_pies
+
+	}
+	focus = {
+		id = XSM_cult
+		icon = GFX_z_goal_islamic_prayer
+		cost = 10
+		prerequisite = {
+			focus = XSM_power
+		}
+		x = 1
+		y = 1
+		relative_position_id = XSM_power
+
+	}
+	focus = {
+		id = XSM_loyality
+		icon = GFX_z_goal_gomindan_loyality
+		cost = 10
+		prerequisite = {
+			focus = XSM_power
+		}
+		x = -1
+		y = 1
+		relative_position_id = XSM_power
+
+	}
+	focus = {
+		id = XSM_piece_unification
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = XSM_loyality
+		}
+		mutually_exclusive = {
+			focus = XSM_figt_for_title
+		}
+		x = 1
+		y = 2
+		relative_position_id = XSM_loyality
+
+	}
+	focus = {
+		id = XSM_Ma
+		icon = GFX_z_goal_Ma_lin
+		cost = 10
+		prerequisite = {
+			focus = XSM_power
+		}
+		x = -10
+		y = 1
+		relative_position_id = XSM_power
+
+	}
+	focus = {
+		id = XSM_Ma_avanture
+		icon = GFX_z_goal_war_red_generals
+		cost = 10
+		prerequisite = {
+			focus = XSM_Ma
+		}
+		x = 3
+		y = 1
+		relative_position_id = XSM_Ma
+
+	}
+	focus = {
+		id = XSM_bulding_work
+		icon = GFX_z_goal_cinhai_build
+		cost = 10
+		prerequisite = {
+			focus = XSM_Ma
+		}
+		x = 5
+		y = 1
+		relative_position_id = XSM_Ma
+
+	}
+	focus = {
+		id = XSM_Ma_bufang
+		icon = GFX_z_goal_Ma_Bufang
+		cost = 10
+		prerequisite = {
+			focus = XSM_power
+		}
+		x = 10
+		y = 1
+		relative_position_id = XSM_power
+
+	}
+	focus = {
+		id = XSM_licvidate_slavery
+		icon = GFX_z_goal_free_for_efiop_ppl
+		cost = 10
+		prerequisite = {
+			focus = XSM_Ma_bufang
+		}
+		x = 7
+		y = 1
+		relative_position_id = XSM_Ma_bufang
+
+	}
+	focus = {
+		id = XSM_armory_from_pekyn
+		icon = GFX_z_goal_Armored_control
+		cost = 10
+		prerequisite = {
+			focus = XSM_Ma_bufang
+		}
+		x = 9
+		y = 1
+		relative_position_id = XSM_Ma_bufang
+
+	}
+	focus = {
+		id = XSM_old_supp
+		icon = GFX_z_goal_generic_general_support
+		cost = 10
+		prerequisite = {
+			focus = XSM_Ma
+		}
+		x = -2
+		y = 1
+		relative_position_id = XSM_Ma
+
+	}
+	focus = {
+		id = XSM_joining_SZPNO
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = XSM_old_supp
+		}
+		mutually_exclusive = {
+			focus = XSM_Join_left_Gomindan
+		}
+		x = -1
+		y = 1
+		relative_position_id = XSM_old_supp
+
+	}
+	focus = {
+		id = XSM_Join_left_Gomindan
+		icon = GFX_z_goal_leave_left_gomindan
+		cost = 10
+		prerequisite = {
+			focus = XSM_old_supp
+		}
+		mutually_exclusive = {
+			focus = XSM_joining_SZPNO
+		}
+		x = 1
+		y = 1
+		relative_position_id = XSM_old_supp
+
+	}
+	focus = {
+		id = XSM_support_yan
+		icon = GFX_z_goal_support_yan_hichen
+		cost = 10
+		prerequisite = {
+			focus = XSM_joining_SZPNO
+		}
+		mutually_exclusive = {
+			focus = XSM_create_commi
+		}
+		x = -2
+		y = 1
+		relative_position_id = XSM_joining_SZPNO
+
+	}
+	focus = {
+		id = XSM_create_commi
+		icon = GFX_z_goal_red_army
+		cost = 10
+		prerequisite = {
+			focus = XSM_joining_SZPNO
+		}
+		mutually_exclusive = {
+			focus = XSM_support_yan
+		}
+		x = 0
+		y = 1
+		relative_position_id = XSM_joining_SZPNO
+
+	}
+	focus = {
+		id = XSM_Low_autonomy_cinhai
+		icon = GFX_z_goal_low_cinhai_autonomy
+		cost = 10
+		prerequisite = {
+			focus = XSM_support_yan
+			focus = XSM_create_commi
+		}
+		x = 1
+		y = 1
+		relative_position_id = XSM_support_yan
+
+	}
+	focus = {
+		id = XSM_coop_with_army
+		icon = GFX_z_goal_china_army
+		cost = 10
+		prerequisite = {
+			focus = XSM_Join_left_Gomindan
+		}
+		x = 0
+		y = 1
+		relative_position_id = XSM_Join_left_Gomindan
+
+	}
+	focus = {
+		id = XSM_let_hesi_coridor
+		icon = GFX_z_goal_let_hesi
+		cost = 10
+		prerequisite = {
+			focus = XSM_Join_left_Gomindan
+		}
+		x = 2
+		y = 1
+		relative_position_id = XSM_Join_left_Gomindan
+
+	}
+	focus = {
+		id = XSM_support_centralizatiom
+		icon = GFX_z_goal_generic_political_correctness
+		cost = 10
+		prerequisite = {
+			focus = XSM_coop_with_army
+			focus = XSM_let_hesi_coridor
+		}
+		x = 1
+		y = 1
+		relative_position_id = XSM_coop_with_army
+
+	}
+	focus = {
+		id = XSM_rule_cinhai_army
+		icon = GFX_z_goal_chinese_soldiers
+		cost = 10
+		prerequisite = {
+			focus = XSM_Ma_avanture
+		}
+		x = 0
+		y = 1
+		relative_position_id = XSM_Ma_avanture
+
+	}
+	focus = {
+		id = XSM_central_control
+		icon = GFX_z_goal_government_2
+		cost = 10
+		prerequisite = {
+			focus = XSM_bulding_work
+		}
+		x = 0
+		y = 2
+		relative_position_id = XSM_bulding_work
+
+	}
+	focus = {
+		id = XSM_change_tibet_opinion
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = XSM_central_control
+		}
+		x = 0
+		y = 1
+		relative_position_id = XSM_central_control
+
+	}
+	focus = {
+		id = XSM_recruit_new_soldiers
+		icon = GFX_z_goal_new_army
+		cost = 10
+		prerequisite = {
+			focus = XSM_rule_cinhai_army
+		}
+		x = 0
+		y = 3
+		relative_position_id = XSM_rule_cinhai_army
+
+	}
+	focus = {
+		id = XSM_low_control_journalists
+		icon = GFX_z_goal_free_papers
+		cost = 10
+		prerequisite = {
+			focus = XSM_change_tibet_opinion
+		}
+		x = 0
+		y = 1
+		relative_position_id = XSM_change_tibet_opinion
+
+	}
+	focus = {
+		id = XSM_low_officer_courpus
+		icon = GFX_z_goal_chain_army
+		cost = 10
+		prerequisite = {
+			focus = XSM_recruit_new_soldiers
+		}
+		x = -1
+		y = 1
+		relative_position_id = XSM_recruit_new_soldiers
+
+	}
+	focus = {
+		id = XSM_create_koordinate_shtabe
+		icon = GFX_z_goal_generic_military_lobby
+		cost = 10
+		prerequisite = {
+			focus = XSM_recruit_new_soldiers
+		}
+		x = 1
+		y = 1
+		relative_position_id = XSM_recruit_new_soldiers
+
+	}
+	focus = {
+		id = XSM_train_soldiers
+		icon = GFX_z_goal_peoples_army_anarch
+		cost = 10
+		prerequisite = {
+			focus = XSM_low_officer_courpus
+		}
+		x = -2
+		y = 1
+		relative_position_id = XSM_low_officer_courpus
+
+	}
+	focus = {
+		id = XSM_military_and_civilian
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = XSM_create_koordinate_shtabe
+			focus = XSM_low_officer_courpus
+		}
+		mutually_exclusive = {
+			focus = XSM_no_gubernator
+		}
+		x = 0
+		y = 1
+		relative_position_id = XSM_low_officer_courpus
+
+	}
+	focus = {
+		id = XSM_no_gubernator
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = XSM_low_officer_courpus
+			focus = XSM_create_koordinate_shtabe
+		}
+		mutually_exclusive = {
+			focus = XSM_military_and_civilian
+		}
+		x = 2
+		y = 1
+		relative_position_id = XSM_low_officer_courpus
+
+	}
+	focus = {
+		id = XSM_commy_strategy
+		icon = GFX_z_goal_generic_communists_soldiers
+		cost = 10
+		prerequisite = {
+			focus = XSM_military_and_civilian
+			focus = XSM_no_gubernator
+		}
+		x = 1
+		y = 1
+		relative_position_id = XSM_military_and_civilian
+
+	}
+	focus = {
+		id = XSM_gorizontal_army
+		icon = GFX_z_goal_save_army
+		cost = 10
+		prerequisite = {
+			focus = XSM_commy_strategy
+		}
+		x = -1
+		y = 1
+		relative_position_id = XSM_commy_strategy
+
+	}
+	focus = {
+		id = XSM_terra_search
+		icon = GFX_z_goal_land_aristo
+		cost = 10
+		prerequisite = {
+			focus = XSM_commy_strategy
+		}
+		x = 9
+		y = 10
+
+	}
+	focus = {
+		id = XSM_crate_def_point
+		icon = GFX_z_goal_generic_defensive_strategy
+		cost = 10
+		prerequisite = {
+			focus = XSM_gorizontal_army
+		}
+		prerequisite = {
+			focus = XSM_terra_search
+		}
+		x = 1
+		y = 1
+		relative_position_id = XSM_gorizontal_army
+
+	}
+	focus = {
+		id = XSM_repair_airports
+		icon = GFX_z_goal_generic_airports_focus_2
+		cost = 10
+		prerequisite = {
+			focus = XSM_loyality
+		}
+		x = -2
+		y = 1
+		relative_position_id = XSM_loyality
+
+	}
+	focus = {
+		id = XSM_press_separate
+		icon = GFX_z_goal_balkan_crusade2
+		cost = 10
+		prerequisite = {
+			focus = XSM_repair_airports
+		}
+		x = -1
+		y = 1
+		relative_position_id = XSM_repair_airports
+
+	}
+	focus = {
+		id = XSM_figt_for_title
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = XSM_loyality
+		}
+		mutually_exclusive = {
+			focus = XSM_piece_unification
+		}
+		x = -1
+		y = 2
+		relative_position_id = XSM_loyality
+
+	}
+	focus = {
+		id = XSM_cult_finance
+		icon = GFX_z_goal_islam_bank
+		cost = 10
+		prerequisite = {
+			focus = XSM_cult
+		}
+		x = 0
+		y = 1
+		relative_position_id = XSM_cult
+
+	}
+	focus = {
+		id = XSM_licvidate_salafite
+		icon = GFX_z_goal_last_blow_to_islam
+		cost = 10
+		prerequisite = {
+			focus = XSM_cult_finance
+		}
+		x = 0
+		y = 2
+		relative_position_id = XSM_cult_finance
+
+	}
+	focus = {
+		id = XSM_cult_ideas
+		icon = GFX_z_goal_islam_education_2
+		cost = 10
+		prerequisite = {
+			focus = XSM_central_control
+		}
+		prerequisite = {
+			focus = XSM_licvidate_salafite
+		}
+		x = 4
+		y = 1
+		relative_position_id = XSM_central_control
+
+	}
+	focus = {
+		id = XSM_moderate_socium
+		icon = GFX_z_goal_social_laws_2
+		cost = 10
+		prerequisite = {
+			focus = XSM_cult_ideas
+		}
+		x = 1
+		y = 1
+		relative_position_id = XSM_cult_ideas
+
+	}
+	focus = {
+		id = XSM_china_nationalism
+		icon = GFX_focus_generic_china1
+		cost = 10
+		prerequisite = {
+			focus = XSM_cult_ideas
+		}
+		prerequisite = {
+			focus = XSM_recruit_new_soldiers
+		}
+		x = 5
+		y = 1
+		relative_position_id = XSM_recruit_new_soldiers
+
+	}
+	focus = {
+		id = XSM_svet_education
+		icon = GFX_goal_generic_national_unity
+		cost = 10
+		prerequisite = {
+			focus = XSM_moderate_socium
+		}
+		x = 0
+		y = 1
+		relative_position_id = XSM_moderate_socium
+
+	}
+	focus = {
+		id = XSM_low_economy_control
+		icon = GFX_z_goal_generic_increased_intervention_in_economy
+		cost = 10
+		prerequisite = {
+			focus = XSM_moderate_socium
+		}
+		x = 2
+		y = 1
+		relative_position_id = XSM_moderate_socium
+
+	}
+	focus = {
+		id = XSM_socium_system_support
+		icon = GFX_z_goal_support_traders
+		cost = 10
+		prerequisite = {
+			focus = XSM_china_nationalism
+		}
+		prerequisite = {
+			focus = XSM_low_economy_control
+		}
+		x = 2
+		y = 1
+		relative_position_id = XSM_china_nationalism
+
+	}
+	focus = {
+		id = XSM_create_infrastructure
+		icon = GFX_z_goal_city_road_cei
+		cost = 10
+		prerequisite = {
+			focus = XSM_low_economy_control
+		}
+		x = 0
+		y = 1
+		relative_position_id = XSM_low_economy_control
+
+	}
+	focus = {
+		id = XSM_eat_sklad_grow
+		icon = GFX_z_goal_food_prom
+		cost = 10
+		prerequisite = {
+			focus = XSM_socium_system_support
+		}
+		prerequisite = {
+			focus = XSM_create_infrastructure
+		}
+		x = 1
+		y = 1
+		relative_position_id = XSM_socium_system_support
+
+	}
+	focus = {
+		id = XSM_Sinin_theatre
+		icon = GFX_z_goal_government
+		cost = 10
+		prerequisite = {
+			focus = XSM_Ma_bufang
+		}
+		x = -7
+		y = 1
+		relative_position_id = XSM_Ma_bufang
+
+	}
+	focus = {
+		id = XSM_save_art
+		icon = GFX_z_goal_muscat_san_marino
+		cost = 10
+		prerequisite = {
+			focus = XSM_Sinin_theatre
+		}
+		x = 0
+		y = 1
+		relative_position_id = XSM_Sinin_theatre
+
+	}
+	focus = {
+		id = XSM_forest_rise
+		icon = GFX_z_goal_forest_warfare
+		cost = 10
+		prerequisite = {
+			focus = XSM_Ma_bufang
+		}
+		x = -5
+		y = 1
+		relative_position_id = XSM_Ma_bufang
+
+	}
+	focus = {
+		id = XSM_irragacional_system
+		icon = GFX_z_goal_irrigation_system
+		cost = 10
+		prerequisite = {
+			focus = XSM_forest_rise
+		}
+		prerequisite = {
+			focus = XSM_nice_roads
+		}
+		x = 0
+		y = 1
+		relative_position_id = XSM_forest_rise
+
+	}
+	focus = {
+		id = XSM_ppl_group
+		icon = GFX_goal_tfv_generic_tech_sharing
+		cost = 10
+		prerequisite = {
+			focus = XSM_irragacional_system
+		}
+		x = 0
+		y = 1
+		relative_position_id = XSM_irragacional_system
+
+	}
+	focus = {
+		id = XSM_nice_roads
+		icon = GFX_z_goal_via_balbo
+		cost = 10
+		prerequisite = {
+			focus = XSM_Ma_bufang
+		}
+		x = -3
+		y = 1
+		relative_position_id = XSM_Ma_bufang
+
+	}
+	focus = {
+		id = XSM_inegartion_blueshirts_ideas
+		icon = GFX_z_goal_save_army
+		cost = 10
+		prerequisite = {
+			focus = XSM_Ma_bufang
+		}
+		x = 1
+		y = 1
+		relative_position_id = XSM_Ma_bufang
+
+	}
+	focus = {
+		id = XSM_press_control
+		icon = GFX_z_goal_generic_filtering_news
+		cost = 10
+		prerequisite = {
+			focus = XSM_Ma_bufang
+		}
+		x = 3
+		y = 1
+		relative_position_id = XSM_Ma_bufang
+
+	}
+	focus = {
+		id = XSM_clear_sinin
+		icon = GFX_z_goal_cleaning_city
+		cost = 10
+		prerequisite = {
+			focus = XSM_press_control
+		}
+		x = 0
+		y = 1
+		relative_position_id = XSM_press_control
+
+	}
+	focus = {
+		id = XSM_build_school
+		icon = GFX_z_goal_school_neutral
+		cost = 10
+		prerequisite = {
+			focus = XSM_clear_sinin
+		}
+		x = 0
+		y = 1
+		relative_position_id = XSM_clear_sinin
+
+	}
+	focus = {
+		id = XSM_expedition_golog
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = XSM_Ma_bufang
+		}
+		x = 5
+		y = 1
+		relative_position_id = XSM_Ma_bufang
+
+	}
+	focus = {
+		id = XSM_tibet_chinese
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = XSM_licvidate_slavery
+		}
+		x = -1
+		y = 1
+		relative_position_id = XSM_licvidate_slavery
+
+	}
+	focus = {
+		id = XSM_up_tibet_nalog
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = XSM_licvidate_slavery
+		}
+		x = 33
+		y = 3
+
+	}
+	focus = {
+		id = XSM_tibet_in_army
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = XSM_tibet_chinese
+		}
+		prerequisite = {
+			focus = XSM_up_tibet_nalog
+		}
+		x = 1
+		y = 1
+		relative_position_id = XSM_tibet_chinese
+
+	}
+	focus = {
+		id = XSM_create_company
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = XSM_ppl_group
+		}
+		prerequisite = {
+			focus = XSM_build_school
+		}
+		x = 4
+		y = 1
+		relative_position_id = XSM_ppl_group
+
+	}
+	focus = {
+		id = XSM_prom
+		icon = GFX_z_goal_industrial_ref
+		cost = 10
+		prerequisite = {
+			focus = XSM_create_company
+		}
+		x = -2
+		y = 1
+		relative_position_id = XSM_create_company
+
+	}
+	focus = {
+		id = XSM_animal
+		icon = GFX_z_goal_support_for_sheep_breeding
+		cost = 10
+		prerequisite = {
+			focus = XSM_create_company
+		}
+		x = 0
+		y = 1
+		relative_position_id = XSM_create_company
+
+	}
+	focus = {
+		id = XSM_bank
+		icon = GFX_z_goal_bank_ref
+		cost = 10
+		prerequisite = {
+			focus = XSM_create_company
+		}
+		x = 2
+		y = 1
+		relative_position_id = XSM_create_company
+
+	}
+	focus = {
+		id = XSM_jihad_vs_JAP
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = XSM_pies
+		}
+		x = -2
+		y = 1
+		relative_position_id = XSM_pies
+
+	}
+	focus = {
+		id = XSM_fight_with_commy
+		icon = GFX_z_goal_broken_red_star
+		cost = 10
+		prerequisite = {
+			focus = XSM_pies
+		}
+		x = 2
+		y = 1
+		relative_position_id = XSM_pies
+
+	}
+	focus = {
+		id = XSM_elite_horse
+		icon = GFX_z_goal_black_deth
+		cost = 10
+		prerequisite = {
+			focus = XSM_jihad_vs_JAP
+		}
+		x = -1
+		y = 1
+		relative_position_id = XSM_jihad_vs_JAP
+
+	}
+	focus = {
+		id = XSM_hight_train
+		icon = GFX_z_goal_generic_allies_build_infantry_up
+		cost = 10
+		prerequisite = {
+			focus = XSM_codex_for_soldiers
+		}
+		x = -1
+		y = 1
+		relative_position_id = XSM_codex_for_soldiers
+
+	}
+	focus = {
+		id = XSM_field_for_sun
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = XSM_codex_for_soldiers
+		}
+		x = 1
+		y = 1
+		relative_position_id = XSM_codex_for_soldiers
+
+	}
+	focus = {
+		id = XSM_mobilize_militia
+		icon = GFX_z_goal_bet_on_militia
+		cost = 10
+		prerequisite = {
+			focus = XSM_fight_with_commy
+		}
+		x = 1
+		y = 1
+		relative_position_id = XSM_fight_with_commy
+
+	}
+	focus = {
+		id = XSM_wave_tactik
+		icon = GFX_z_goal_generic_offensive_strategy
+		cost = 10
+		prerequisite = {
+			focus = XSM_elite_horse
+		}
+		x = 1
+		y = 1
+		relative_position_id = XSM_elite_horse
+
+	}
+	focus = {
+		id = XSM_modern_strategy
+		icon = GFX_focus_prc_infiltration
+		cost = 10
+		prerequisite = {
+			focus = XSM_hight_train
+		}
+		prerequisite = {
+			focus = XSM_field_for_sun
+		}
+		x = 1
+		y = 1
+		relative_position_id = XSM_hight_train
+
+	}
+	focus = {
+		id = XSM_crowd_tactik
+		icon = GFX_z_goal_peasents_soldiers
+		cost = 10
+		prerequisite = {
+			focus = XSM_mobilize_militia
+		}
+		x = -1
+		y = 1
+		relative_position_id = XSM_mobilize_militia
+
+	}
+	focus = {
+		id = XSM_motorize
+		icon = GFX_goal_generic_army_motorized
+		cost = 10
+		prerequisite = {
+			focus = XSM_modern_strategy
+		}
+		x = -2
+		y = 1
+		relative_position_id = XSM_modern_strategy
+
+	}
+	focus = {
+		id = XSM_army_great
+		icon = GFX_goal_generic_army_doctrines
+		cost = 10
+		prerequisite = {
+			focus = XSM_modern_strategy
+		}
+		x = 0
+		y = 1
+		relative_position_id = XSM_modern_strategy
+
+	}
+	focus = {
+		id = XSM_repair_logistik
+		icon = GFX_z_goal_item_bat
+		cost = 10
+		prerequisite = {
+			focus = XSM_modern_strategy
+		}
+		x = 2
+		y = 1
+		relative_position_id = XSM_modern_strategy
+
+	}
+	focus = {
+		id = XSM_rise_revolutionary
+		icon = GFX_z_goal_revolution
+		cost = 10
+		prerequisite = {
+			focus = XSM_motorize
+		}
+		prerequisite = {
+			focus = XSM_army_great
+		}
+		prerequisite = {
+			focus = XSM_repair_logistik
+		}
+		x = 2
+		y = 1
+		relative_position_id = XSM_motorize
+
+	}
+	focus = {
+		id = XSM_industrial
+		icon = GFX_z_goal_invest_in_the_construction_industry
+		cost = 10
+		prerequisite = {
+			focus = XSM_Ma_bufang
+		}
+		x = -1
+		y = 1
+		relative_position_id = XSM_Ma_bufang
+
+	}
+
+	focus = {
+		id = XSM_agrarian_projects
+		icon = GFX_z_goal_SH_ref
+		cost = 10
+		prerequisite = {
+			focus = XSM_industrial
+		}
+		x = 2
+		y = 1
+		relative_position_id = XSM_industrial
+
+	}
+	focus = {
+		id = XSM_education_projects
+		icon = GFX_goal_generic_scientific_exchange
+		cost = 10
+		prerequisite = {
+			focus = XSM_industrial
+		}
+		x = 0
+		y = 1
+		relative_position_id = XSM_industrial
+
+	}
+	focus = {
+		id = XSM_water_sinin
+		icon = GFX_z_goal_water_issue
+		cost = 10
+		prerequisite = {
+			focus = XSM_agrarian_projects
+		}
+		x = 0
+		y = 1
+		relative_position_id = XSM_agrarian_projects
+
+	}
+	focus = {
+		id = XSM_money_for_scholar
+		icon = GFX_z_goal_money_scholar
+		cost = 10
+		prerequisite = {
+			focus = XSM_education_projects
+		}
+		x = 0
+		y = 1
+		relative_position_id = XSM_education_projects
+
+	}
+	focus = {
+		id = XSM_sanitar_project
+		icon = GFX_z_goal_red_cross
+		cost = 10
+		prerequisite = {
+			focus = XSM_industrial
+		}
+		x = -2
+		y = 1
+		relative_position_id = XSM_industrial
+
+	}
+	focus = {
+		id = XSM_medical_project
+		icon = GFX_z_goal_modernization_healthcare_system
+		cost = 10
+		prerequisite = {
+			focus = XSM_sanitar_project
+		}
+		x = 0
+		y = 1
+		relative_position_id = XSM_sanitar_project
+
+	}
+}
