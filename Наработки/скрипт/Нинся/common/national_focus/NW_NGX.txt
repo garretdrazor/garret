@@ -1,0 +1,1009 @@
+focus_tree = {
+	id = NW_NGX
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = NGX
+		}
+	}
+	default = no
+	focus = {
+		id = NGX_Ma
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 17
+		y = 0
+
+	}
+	focus = {
+		id = NGX_create_islam_federation
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 32
+		y = 0
+
+	}
+	focus = {
+		id = NGX_support_s_w
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_Ma
+		}
+		x = -15
+		y = 1
+		relative_position_id = NGX_Ma
+
+	}
+	focus = {
+		id = NGX_Save_contacts
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_support_s_w
+		}
+		x = 1
+		y = 1
+		relative_position_id = NGX_support_s_w
+
+	}
+	focus = {
+		id = NGX_funing_company
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_Ma
+		}
+		x = 3
+		y = 1
+		relative_position_id = NGX_Ma
+
+	}
+	focus = {
+		id = NGX_build_company
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_funing_company
+		}
+		x = 2
+		y = 1
+		relative_position_id = NGX_funing_company
+
+	}
+	focus = {
+		id = NGX_greenpiece
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_Ma
+		}
+		x = 7
+		y = 1
+		relative_position_id = NGX_Ma
+
+	}
+	focus = {
+		id = NGX_islam_education
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_Ma
+		}
+		x = 9
+		y = 1
+		relative_position_id = NGX_Ma
+
+	}
+	focus = {
+		id = NGX_japan_weapon
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_Ma
+		}
+		x = 11
+		y = 1
+		relative_position_id = NGX_Ma
+
+	}
+	focus = {
+		id = NGX_siege
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_support_s_w
+		}
+		x = -1
+		y = 1
+		relative_position_id = NGX_support_s_w
+
+	}
+	focus = {
+		id = NGX_second_front
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_siege
+		}
+		x = -1
+		y = 1
+		relative_position_id = NGX_siege
+
+	}
+	focus = {
+		id = NGX_attak_sinin
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_siege
+		}
+		prerequisite = {
+			focus = NGX_Save_contacts
+		}
+		x = 1
+		y = 1
+		relative_position_id = NGX_siege
+
+	}
+	focus = {
+		id = NGX_restore_nincya
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_Save_contacts
+		}
+		x = 1
+		y = 1
+		relative_position_id = NGX_Save_contacts
+
+	}
+	focus = {
+		id = NGX_one_leader
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_attak_sinin
+		}
+		x = 0
+		y = 1
+		relative_position_id = NGX_attak_sinin
+
+	}
+	focus = {
+		id = NGX_decentaralization
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_one_leader
+		}
+		mutually_exclusive = {
+			focus = NGX_power_in_hands
+		}
+		x = -1
+		y = 1
+		relative_position_id = NGX_one_leader
+
+	}
+	focus = {
+		id = NGX_power_in_hands
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_one_leader
+		}
+		mutually_exclusive = {
+			focus = NGX_decentaralization
+		}
+		x = 1
+		y = 1
+		relative_position_id = NGX_one_leader
+
+	}
+	focus = {
+		id = NGX_last
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_decentaralization
+		}
+		prerequisite = {
+			focus = NGX_power_in_hands
+		}
+		x = 1
+		y = 1
+		relative_position_id = NGX_decentaralization
+
+	}
+	focus = {
+		id = NGX_fight_bandit
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_Ma
+		}
+		x = -9
+		y = 1
+		relative_position_id = NGX_Ma
+
+	}
+	focus = {
+		id = NGX_close_tabacco
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_fight_bandit
+		}
+		x = -1
+		y = 1
+		relative_position_id = NGX_fight_bandit
+
+	}
+	focus = {
+		id = NGX_close_narkotik
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_fight_bandit
+		}
+		x = 1
+		y = 1
+		relative_position_id = NGX_fight_bandit
+
+	}
+	focus = {
+		id = NGX_clear_narkotiks
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_close_tabacco
+		}
+		prerequisite = {
+			focus = NGX_close_narkotik
+		}
+		x = 1
+		y = 1
+		relative_position_id = NGX_close_tabacco
+
+	}
+	focus = {
+		id = NGX_three_principles
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_Ma
+		}
+		x = -3
+		y = 1
+		relative_position_id = NGX_Ma
+
+	}
+	focus = {
+		id = NGX_power
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_three_principles
+		}
+		x = -1
+		y = 1
+		relative_position_id = NGX_three_principles
+
+	}
+	focus = {
+		id = NGX_money
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_three_principles
+		}
+		x = 1
+		y = 1
+		relative_position_id = NGX_three_principles
+
+	}
+	focus = {
+		id = NGX_our_valute
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_power
+			focus = NGX_money
+		}
+		x = 1
+		y = 1
+		relative_position_id = NGX_power
+
+	}
+	focus = {
+		id = NGX_rise_ekonomik
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_our_valute
+		}
+		x = 0
+		y = 1
+		relative_position_id = NGX_our_valute
+
+	}
+	focus = {
+		id = NGX_nepotism
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_three_principles
+		}
+		x = -3
+		y = 1
+		relative_position_id = NGX_three_principles
+
+	}
+	focus = {
+		id = NGX_three_principles_Ma
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_nepotism
+		}
+		x = 0
+		y = 1
+		relative_position_id = NGX_nepotism
+
+	}
+	focus = {
+		id = NGX_soldiers
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_three_principles_Ma
+		}
+		x = -1
+		y = 1
+		relative_position_id = NGX_three_principles_Ma
+
+	}
+	focus = {
+		id = NGX_bao_reorganization
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_three_principles_Ma
+		}
+		x = 1
+		y = 1
+		relative_position_id = NGX_three_principles_Ma
+
+	}
+	focus = {
+		id = NGX_Huan_lessons
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_soldiers
+		}
+		x = -3
+		y = 1
+		relative_position_id = NGX_soldiers
+
+	}
+	focus = {
+		id = NGX_bunkes_anti
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_soldiers
+		}
+		x = -1
+		y = 1
+		relative_position_id = NGX_soldiers
+
+	}
+	focus = {
+		id = NGX_mongol_border_control
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_bunkes_anti
+		}
+		x = 0
+		y = 1
+		relative_position_id = NGX_bunkes_anti
+
+	}
+	focus = {
+		id = NGX_three_order_one
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_bao_reorganization
+		}
+		prerequisite = {
+			focus = NGX_soldiers
+		}
+		x = 1
+		y = 1
+		relative_position_id = NGX_soldiers
+
+	}
+	focus = {
+		id = NGX_five_order_two
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_three_order_one
+		}
+		x = 0
+		y = 1
+		relative_position_id = NGX_three_order_one
+
+	}
+	focus = {
+		id = NGX_fight_for_Ma
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_Ma
+		}
+		x = 0
+		y = 1
+		relative_position_id = NGX_Ma
+
+	}
+	focus = {
+		id = NGX_huan_ice
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_funing_company
+		}
+		x = -2
+		y = 1
+		relative_position_id = NGX_funing_company
+
+	}
+	focus = {
+		id = NGX_icecream_industrial
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_huan_ice
+		}
+		x = 1
+		y = 1
+		relative_position_id = NGX_huan_ice
+
+	}
+	focus = {
+		id = NGX_icecream_export
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_icecream_industrial
+		}
+		x = -1
+		y = 1
+		relative_position_id = NGX_icecream_industrial
+
+	}
+	focus = {
+		id = NGX_connected_china_railways
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_build_company
+		}
+		x = -1
+		y = 1
+		relative_position_id = NGX_build_company
+
+	}
+	focus = {
+		id = NGX_cinhai_branch
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_connected_china_railways
+		}
+		x = 1
+		y = 1
+		relative_position_id = NGX_connected_china_railways
+
+	}
+	focus = {
+		id = NGX_new_tree
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_greenpiece
+		}
+		x = 0
+		y = 1
+		relative_position_id = NGX_greenpiece
+
+	}
+	focus = {
+		id = NGX_huanhe_gidro
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_new_tree
+		}
+		prerequisite = {
+			focus = NGX_build_company
+		}
+		x = 2
+		y = 1
+		relative_position_id = NGX_build_company
+
+	}
+	focus = {
+		id = NGX_irrigacion_company
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_huanhe_gidro
+		}
+		x = 0
+		y = 1
+		relative_position_id = NGX_huanhe_gidro
+
+	}
+	focus = {
+		id = NGX_create_arabo_china_school
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_islam_education
+		}
+		x = 0
+		y = 1
+		relative_position_id = NGX_islam_education
+
+	}
+	focus = {
+		id = NGX_oficial_ceremony
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_create_islam_federation
+		}
+		x = -1
+		y = 1
+		relative_position_id = NGX_create_islam_federation
+
+	}
+	focus = {
+		id = NGX_let_japan_in
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_create_islam_federation
+		}
+		x = 1
+		y = 1
+		relative_position_id = NGX_create_islam_federation
+
+	}
+	focus = {
+		id = NGX_born_new_nations
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_oficial_ceremony
+		}
+		x = 0
+		y = 1
+		relative_position_id = NGX_oficial_ceremony
+
+	}
+	focus = {
+		id = NGX_projapan_country
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_let_japan_in
+		}
+		x = 0
+		y = 1
+		relative_position_id = NGX_let_japan_in
+
+	}
+	focus = {
+		id = NGX_control_muslim_territory
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_born_new_nations
+		}
+		x = -4
+		y = 1
+		relative_position_id = NGX_born_new_nations
+
+	}
+	focus = {
+		id = NGX_sin_qestion
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_control_muslim_territory
+		}
+		x = -1
+		y = 1
+		relative_position_id = NGX_control_muslim_territory
+
+	}
+	focus = {
+		id = NGX_national_army_huei
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_born_new_nations
+		}
+		x = -3
+		y = 2
+		relative_position_id = NGX_born_new_nations
+
+	}
+	focus = {
+		id = NGX_zero_army
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_national_army_huei
+		}
+		mutually_exclusive = {
+			focus = NGX_ugrade_army
+		}
+		x = -1
+		y = 1
+		relative_position_id = NGX_national_army_huei
+
+	}
+	focus = {
+		id = NGX_ugrade_army
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_national_army_huei
+		}
+		mutually_exclusive = {
+			focus = NGX_zero_army
+		}
+		x = 1
+		y = 1
+		relative_position_id = NGX_national_army_huei
+
+	}
+	focus = {
+		id = NGX_modern_teh
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_zero_army
+		}
+		x = -1
+		y = 1
+		relative_position_id = NGX_zero_army
+
+	}
+	focus = {
+		id = NGX_maas_buying_weapon
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_ugrade_army
+		}
+		x = 1
+		y = 1
+		relative_position_id = NGX_ugrade_army
+
+	}
+	focus = {
+		id = NGX_fight_with_dai_li
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_zero_army
+			focus = NGX_ugrade_army
+		}
+		x = 1
+		y = 1
+		relative_position_id = NGX_zero_army
+
+	}
+	focus = {
+		id = NGX_create_artyllery
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_fight_with_dai_li
+		}
+		x = -1
+		y = 1
+		relative_position_id = NGX_fight_with_dai_li
+
+	}
+	focus = {
+		id = NGX_motorization
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_fight_with_dai_li
+		}
+		x = 1
+		y = 1
+		relative_position_id = NGX_fight_with_dai_li
+
+	}
+	focus = {
+		id = NGX_prom_for_army
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_create_artyllery
+		}
+		prerequisite = {
+			focus = NGX_motorization
+		}
+		x = 1
+		y = 1
+		relative_position_id = NGX_create_artyllery
+
+	}
+	focus = {
+		id = NGX_create_gos_institute
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_born_new_nations
+		}
+		prerequisite = {
+			focus = NGX_projapan_country
+		}
+		x = 1
+		y = 1
+		relative_position_id = NGX_born_new_nations
+
+	}
+	focus = {
+		id = NGX_japan_burocraty
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_create_gos_institute
+		}
+		mutually_exclusive = {
+			focus = NGX_huei_burocraty
+		}
+		x = -1
+		y = 1
+		relative_position_id = NGX_create_gos_institute
+
+	}
+	focus = {
+		id = NGX_huei_burocraty
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_create_gos_institute
+		}
+		mutually_exclusive = {
+			focus = NGX_japan_burocraty
+		}
+		x = 1
+		y = 1
+		relative_position_id = NGX_create_gos_institute
+
+	}
+	focus = {
+		id = NGX_licvidate_gomindan
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_japan_burocraty
+			focus = NGX_huei_burocraty
+		}
+		x = 1
+		y = 1
+		relative_position_id = NGX_japan_burocraty
+
+	}
+	focus = {
+		id = NGX_consitucion
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_licvidate_gomindan
+		}
+		x = 0
+		y = 1
+		relative_position_id = NGX_licvidate_gomindan
+
+	}
+	focus = {
+		id = NGX_no_party_goverment
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_consitucion
+		}
+		mutually_exclusive = {
+			focus = NGX_chose_king
+		}
+		x = -1
+		y = 1
+		relative_position_id = NGX_consitucion
+
+	}
+	focus = {
+		id = NGX_chose_king
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_consitucion
+		}
+		mutually_exclusive = {
+			focus = NGX_no_party_goverment
+		}
+		x = 1
+		y = 1
+		relative_position_id = NGX_consitucion
+
+	}
+	focus = {
+		id = NGX_last2
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_no_party_goverment
+		}
+		x = -1
+		y = 1
+		relative_position_id = NGX_no_party_goverment
+
+	}
+	focus = {
+		id = NGX_last3
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_chose_king
+		}
+		x = 1
+		y = 1
+		relative_position_id = NGX_chose_king
+
+	}
+	focus = {
+		id = NGX_install_friendships_with_jap_ally
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_no_party_goverment
+			focus = NGX_chose_king
+		}
+		x = 1
+		y = 1
+		relative_position_id = NGX_no_party_goverment
+
+	}
+	focus = {
+		id = NGX_demobilization
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_install_friendships_with_jap_ally
+		}
+		x = -1
+		y = 1
+		relative_position_id = NGX_install_friendships_with_jap_ally
+
+	}
+	focus = {
+		id = NGX_close_antijapan
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_install_friendships_with_jap_ally
+		}
+		x = 1
+		y = 1
+		relative_position_id = NGX_install_friendships_with_jap_ally
+
+	}
+	focus = {
+		id = NGX_ekonom_border_order
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_demobilization
+		}
+		prerequisite = {
+			focus = NGX_close_antijapan
+		}
+		x = 1
+		y = 1
+		relative_position_id = NGX_demobilization
+
+	}
+	focus = {
+		id = NGX_let_japan_ekonomy
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_projapan_country
+		}
+		x = 2
+		y = 1
+		relative_position_id = NGX_projapan_country
+
+	}
+	focus = {
+		id = NGX_japan_investition
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_let_japan_ekonomy
+		}
+		x = 0
+		y = 1
+		relative_position_id = NGX_let_japan_ekonomy
+
+	}
+	focus = {
+		id = NGX_oil
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_japan_investition
+		}
+		x = -1
+		y = 1
+		relative_position_id = NGX_japan_investition
+
+	}
+	focus = {
+		id = NGX_n_w_rail_ways
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_japan_investition
+		}
+		x = 1
+		y = 1
+		relative_position_id = NGX_japan_investition
+
+	}
+	focus = {
+		id = NGX_sinin_universitet
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_oil
+		}
+		prerequisite = {
+			focus = NGX_n_w_rail_ways
+		}
+		x = 1
+		y = 1
+		relative_position_id = NGX_oil
+
+	}
+	focus = {
+		id = NGX_society_education
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = NGX_consitucion
+		}
+		prerequisite = {
+			focus = NGX_sinin_universitet
+		}
+		x = 0
+		y = 1
+		relative_position_id = NGX_sinin_universitet
+
+	}
+}
