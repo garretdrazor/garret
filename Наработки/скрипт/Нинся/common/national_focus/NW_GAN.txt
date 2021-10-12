@@ -1,0 +1,194 @@
+focus_tree = {
+	id = NW_GAN
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = GAN
+		}
+	}
+	default = no
+	focus = {
+		id = GAN_rise_goverment
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 8
+		y = 0
+
+	}
+	focus = {
+		id = GAN_Loyality_centr
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = GAN_rise_goverment
+		}
+		x = 0
+		y = 1
+		relative_position_id = GAN_rise_goverment
+
+	}
+	focus = {
+		id = GAN_back_ninsya_contol
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = GAN_rise_goverment
+		}
+		x = 2
+		y = 1
+		relative_position_id = GAN_rise_goverment
+
+	}
+	focus = {
+		id = GAN_form_ninsya
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = GAN_back_ninsya_contol
+		}
+		x = 4
+		y = 1
+		relative_position_id = GAN_back_ninsya_contol
+
+	}
+	focus = {
+		id = GAN_secret_with_commi
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = GAN_rise_goverment
+		}
+		x = -2
+		y = 1
+		relative_position_id = GAN_rise_goverment
+
+	}
+	focus = {
+		id = GAN_with_commi
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = GAN_secret_with_commi
+		}
+		x = -1
+		y = 1
+		relative_position_id = GAN_secret_with_commi
+
+	}
+	focus = {
+		id = GAN_finance_from_republik
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = GAN_Loyality_centr
+		}
+		x = 0
+		y = 1
+		relative_position_id = GAN_Loyality_centr
+
+	}
+	focus = {
+		id = GAN_take_hesi
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = GAN_back_ninsya_contol
+		}
+		x = 0
+		y = 1
+		relative_position_id = GAN_back_ninsya_contol
+
+	}
+	focus = {
+		id = GAN_war_with_cinhai
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = GAN_back_ninsya_contol
+		}
+		x = 2
+		y = 1
+		relative_position_id = GAN_back_ninsya_contol
+
+	}
+	focus = {
+		id = GAN_form_cinhai
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = GAN_war_with_cinhai
+		}
+		x = 1
+		y = 1
+		relative_position_id = GAN_war_with_cinhai
+
+	}
+	focus = {
+		id = GAN_last_king_of_n_e
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = GAN_take_hesi
+			focus = GAN_war_with_cinhai
+		}
+		x = 1
+		y = 1
+		relative_position_id = GAN_take_hesi
+
+	}
+	focus = {
+		id = GAN_soldier_propaganda
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = GAN_with_commi
+		}
+		x = 1
+		y = 1
+		relative_position_id = GAN_with_commi
+
+	}
+	focus = {
+		id = GAN_commi_goverment
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = GAN_with_commi
+		}
+		x = -1
+		y = 1
+		relative_position_id = GAN_with_commi
+
+	}
+	focus = {
+		id = GAN_with_ccp
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = GAN_commi_goverment
+		}
+		prerequisite = {
+			focus = GAN_soldier_propaganda
+		}
+		x = 1
+		y = 1
+		relative_position_id = GAN_commi_goverment
+
+	}
+	focus = {
+		id = GAN_likvidate_autonomy
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = GAN_finance_from_republik
+		}
+		prerequisite = {
+			focus = GAN_last_king_of_n_e
+		}
+		x = 0
+		y = 2
+		relative_position_id = GAN_finance_from_republik
+
+	}
+}
