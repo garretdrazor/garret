@@ -9,6 +9,19 @@ on_actions = {
 				add_dynamic_modifier = { modifier = XSM_slavery_dyn }
 				force_update_dynamic_modifier = yes
 			}
+			if = {
+				limit = {
+					original_tag = XSM
+					PREV = {
+						has_completed_focus = XSM_ma_bufang
+						has_completed_focus = XSM_loyality
+						has_war = yes
+					}
+					XSM = {
+						country_event = { id = xsm.40 days = 400 }
+					}
+				}
+			}
 		}
 	}
 }

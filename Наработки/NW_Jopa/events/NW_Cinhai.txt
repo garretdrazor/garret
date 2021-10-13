@@ -1,0 +1,695 @@
+﻿add_namespace = xsm
+
+country_event = {
+	id = xsm.1
+	title = xsm.1.t
+	desc = xsm.1.d
+	picture = GFX_report_event_xsm_1
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event xsm.1" }
+
+	option = {
+		name = xsm.1.a
+	}
+}
+
+country_event = {
+	id = xsm.2
+	title = xsm.2.t
+	desc = xsm.2.d
+	picture = GFX_report_event_xsm_2
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event xsm.2" }
+
+	option = {
+		name = xsm.2.a
+		add_stability = 0.01
+		add_political_power = 15
+	}
+}
+
+country_event = {
+	id = xsm.3
+	title = xsm.3.t
+	desc = xsm.3.d
+	picture = GFX_report_event_xsm_3
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event xsm.3" }
+
+	option = {
+		name = xsm.3.a
+		add_opinion_modifier = { target = XSM modifier = XSM_air_butang_opinion } 
+	}
+}
+
+country_event = {
+	id = xsm.4
+	title = xsm.4.t
+	desc = xsm.4.d
+	picture = GFX_report_event_xsm_4
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event xsm.4" }
+
+	option = {
+		name = xsm.4.a
+		add_stability = -0.02
+		add_war_support = -0.02
+	}
+}
+
+country_event = {
+	id = xsm.5
+	title = xsm.5.t
+	desc = xsm.5.d
+	picture = GFX_report_event_xsm_5
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event xsm.5" }
+
+	option = {
+		name = xsm.5.a
+		add_stability = -0.03
+		add_war_support = -0.03
+	}
+}
+
+country_event = {
+	id = xsm.6
+	title = xsm.6.t
+	desc = xsm.6.d
+	picture = GFX_report_event_xsm_6
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event xsm.6" }
+
+	option = {
+		name = xsm.6.a
+		trigger = { original_tag = NGX }
+		if = {
+			limit = { 1133 = { is_owned_by = NGX } }
+			1133 = { add_core_of = XSM }
+			1133 = { add_claim_by = XSM }
+		}
+		if = {
+			limit = { 1125 = { is_owned_by = NGX } }
+			1125 = { add_core_of = XSM }
+			1125 = { add_claim_by = XSM }
+		}
+		if = {
+			limit = { 616 = { is_owned_by = NGX } }
+			616 = { add_core_of = XSM }
+			616 = { add_claim_by = XSM }
+		}
+		every_unit_leader = {
+			set_nationality = XSM
+		}
+		XSM = {
+			annex_country = {
+				target = ROOT
+				transfer_troops = yes
+			}
+			inherit_technology = ROOT
+			If = {
+				limit = {
+					NGX = {
+						is_ai = no
+					}
+				}
+			XSM = { change_tag_from = NGX }
+			}
+			set_cosmetic_tag = XMS_all_ma
+		}
+		
+	}
+	option = {
+		name = xsm.6.b
+		trigger = { original_tag = GAN }
+		if = {
+			limit = { 1133 = { is_owned_by = GAN } }
+			1133 = { add_core_of = XSM }
+			1133 = { add_claim_by = XSM }
+		}
+		if = {
+			limit = { 1125 = { is_owned_by = GAN } }
+			1125 = { add_core_of = XSM }
+			1125 = { add_claim_by = XSM }
+		}
+		if = {
+			limit = { 616 = { is_owned_by = GAN } }
+			616 = { add_core_of = XSM }
+			616 = { add_claim_by = XSM }
+		}
+		every_unit_leader = {
+			set_nationality = XSM
+		}
+		XSM = {
+			annex_country = {
+				target = ROOT
+				transfer_troops = yes
+			}
+			inherit_technology = ROOT
+			If = {
+				limit = {
+					GAN = {
+						is_ai = no
+					}
+				}
+			XSM = { change_tag_from = GAN }
+			}
+			set_cosmetic_tag = XMS_all_ma
+		}
+	}
+	option = {
+		name = xsm.6.c
+		XSM = {
+			country_event = { id = xsm.7 }
+		}
+	}
+}
+
+country_event = {
+	id = xsm.7
+	title = xsm.7.t
+	desc = xsm.7.d
+	picture = GFX_report_event_xsm_7
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event xsm.7" }
+
+	option = {
+		name = xsm.7.a
+	}
+}
+
+country_event = {
+	id = xsm.8
+	title = xsm.8.t
+	desc = xsm.8.d
+	picture = GFX_report_event_xsm_8
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event xsm.8" }
+
+	option = {
+		name = xsm.8.a
+		swap_ideas = {
+			remove_idea = XSM_idea_muslim_equality
+			add_idea = XSM_idea_muslim_salafit
+		}
+	}
+}
+
+country_event = {
+	id = xsm.9
+	title = xsm.9.t
+	desc = xsm.9.d
+	picture = GFX_report_event_xsm_9
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event xsm.9" }
+
+	option = {
+		name = xsm.9.a
+		random_unit_leader = {
+			limit = {
+				has_id = 30191
+				has_id = 30192
+			}
+			set_nationality = TIB
+		}
+		TIB = {
+			country_event = { id = xsm.10 }
+		}
+	}
+	
+	option = {
+		name = xsm.9.b
+		random_unit_leader = {
+			limit = {
+				has_id = 30191
+				has_id = 30192
+			}
+			set_nationality = TIB
+		}
+		TIB = {
+			country_event = { id = xsm.11 }
+		}
+	}
+}
+
+country_event = {
+	id = xsm.10
+	title = xsm.10.t
+	desc = xsm.10.d
+	picture = GFX_report_event_xsm_10
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event xsm.10" }
+
+	option = {
+		name = xsm.10.a
+		custom_effect_tooltip = xsm_tibet_war_tt
+		hidden_effect = {
+			create_country_leader = {
+				name = "Ma Bufang"
+				desc = "Ma_Bufang_desc"
+				picture = "GFX_portrait_xsm_ma_bufang"
+				expire = "1965.1.1"
+				ideology = despotism
+				traits = {
+					chinese_militarist
+					modernization
+					reformator
+				}
+			}
+			set_party_name = { ideology = neutrality long_name = XSM_neutrality_party_long name = XSM_neutrality_party}
+			start_civil_war = {
+				ruling_party = ROOT
+				ideology = neutrality
+				size = 0
+				capital = 601
+				add_ideas = TIB_dalay_lama_xiv
+				keep_unit_leaders = {
+					301911 301912
+				}
+			}
+			random_enemy_country = {
+				limit = { original_tag = ROOT }
+				XSM = {
+					transfer_units_fraction = {
+						target = PREV
+						size = 0.67
+						army_ratio = 0.67
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = xsm.10.b
+		custom_effect_tooltip = xsm_tibet_war_ma_tt
+		hidden_effect = {
+			create_country_leader = {
+				name = "Ma Bufang"
+				desc = "Ma_Bufang_desc"
+				picture = "GFX_portrait_xsm_ma_bufang"
+				expire = "1965.1.1"
+				ideology = despotism
+				traits = {
+					chinese_militarist
+					modernization
+					reformator
+				}
+			}
+			set_party_name = { ideology = neutrality long_name = XSM_neutrality_party_long name = XSM_neutrality_party}
+			set_capital = 601
+			start_civil_war = {
+				ruling_party = neutrality
+				ideology = ROOT
+				size = 1
+				capital = 601
+				keep_unit_leaders = {
+					301911 301912
+				}
+			}
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 1
+			}
+			add_ideas = TIB_dalay_lama_xiv
+			XSM = {
+				transfer_units_fraction = {
+					target = TIB
+					size = 0.67
+					army_ratio = 0.67
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = xsm.11
+	title = xsm.11.t
+	desc = xsm.11.d
+	picture = GFX_report_event_xsm_11
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event xsm.11" }
+
+	option = {
+		name = xsm.11.a
+		custom_effect_tooltip = xsm_tibet_war_pancen_ma_tt
+		hidden_effect = {
+			create_country_leader = {
+				name = "Ma Bufang"
+				desc = "Ma_Bufang_desc"
+				picture = "GFX_portrait_xsm_ma_bufang"
+				expire = "1965.1.1"
+				ideology = despotism
+				traits = {
+					chinese_militarist
+					modernization
+					reformator
+				}
+			}
+			set_party_name = { ideology = neutrality long_name = XSM_neutrality_party_long name = XSM_neutrality_party}
+			start_civil_war = {
+				ruling_party = ROOT
+				ideology = neutrality
+				size = 0
+				capital = 601
+				add_ideas = XMS_idea_panchen_lama
+				keep_unit_leaders = {
+					301911 301912
+				}
+			}
+			random_enemy_country = {
+				limit = { original_tag = ROOT }
+				XSM = {
+					transfer_units_fraction = {
+						target = PREV
+						size = 0.67
+						army_ratio = 0.67
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = xsm.11.b
+		custom_effect_tooltip = xsm_tibet_war_pancen_tt
+		hidden_effect = {
+			create_country_leader = {
+				name = "Ma Bufang"
+				desc = "Ma_Bufang_desc"
+				picture = "GFX_portrait_xsm_ma_bufang"
+				expire = "1965.1.1"
+				ideology = despotism
+				traits = {
+					chinese_militarist
+					modernization
+					reformator
+				}
+			}
+			set_party_name = { ideology = neutrality long_name = XSM_neutrality_party_long name = XSM_neutrality_party}
+			set_capital = 601
+			start_civil_war = {
+				ruling_party = neutrality
+				ideology = ROOT
+				size = 1
+				capital = 601
+				keep_unit_leaders = {
+					301911 301912
+				}
+			}
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 1
+			}
+			add_ideas = XMS_idea_panchen_lama
+			XSM = {
+				transfer_units_fraction = {
+					target = TIB
+					size = 0.67
+					army_ratio = 0.67
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = xsm.12
+	title = xsm.12.t
+	desc = xsm.12.d
+	picture = GFX_report_event_xsm_12
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event xsm.12" }
+
+	option = {
+		name = xsm.12.a
+		create_country_leader = {
+			name = "Ma Pu"
+			desc = "Ma_Pu_desc"
+			picture = "gfx/leaders/XSM/Portrait_Ma_Pu.dds"
+			expire = "1965.1.1"
+			ideology = despotism
+			traits = {
+				manipulated
+			}
+		}
+	}
+}
+
+country_event = { # это на проигрыш буфана
+	id = xsm.13
+	title = xsm.13.t
+	desc = xsm.13.d
+	picture = GFX_report_event_xsm_13
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event xsm.13" }
+
+	option = {
+		name = xsm.13.a
+		create_country_leader = {
+			name = "Ma Pu"
+			desc = "Ma_Pu_desc"
+			picture = "gfx/leaders/XSM/Portrait_Ma_Pu.dds"
+			expire = "1965.1.1"
+			ideology = despotism
+			traits = {
+				manipulated
+			}
+		}
+	}
+}
+
+country_event = { 
+	id = xsm.14
+	title = xsm.14.t
+	desc = xsm.14.d
+	picture = GFX_report_event_xsm_14
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event xsm.14" }
+
+	option = {
+		name = xsm.14.a
+		add_political_power = 20
+		country_event = { id = xsm.15 days = 50 }
+	}
+}
+
+country_event = { 
+	id = xsm.15
+	title = xsm.15.t
+	desc = xsm.15.d
+	picture = GFX_report_event_xsm_15
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event xsm.15" }
+
+	option = {
+		name = xsm.15.a
+		add_stability = 0.03
+		add_command_power = 5
+		remove_unit_leader = 30193
+		country_event = { id = xsm.16 days = 50 }
+	}
+}
+
+country_event = { 
+	id = xsm.16
+	title = xsm.16.t
+	desc = xsm.16.d
+	picture = GFX_report_event_xsm_16
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event xsm.16" }
+
+	option = {
+		name = xsm.16.a
+		country_event = { id = xsm.17 days = 50 }
+	}
+}
+
+country_event = { 
+	id = xsm.17
+	title = xsm.17.t
+	desc = xsm.17.d
+	picture = GFX_report_event_xsm_17
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event xsm.17" }
+
+	option = {
+		name = xsm.17.a
+		country_event = { id = xsm.18 days = 50 }
+	}
+}
+
+country_event = { 
+	id = xsm.18
+	title = xsm.18.t
+	desc = xsm.18.d
+	picture = GFX_report_event_xsm_18
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event xsm.18" }
+
+	option = {
+		name = xsm.18.a
+		754 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+}
+
+country_event = { 
+	id = xsm.19
+	title = xsm.19.t
+	desc = xsm.19.d
+	picture = GFX_report_event_xsm_19
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event xsm.19" }
+
+	option = {
+		name = xsm.19.a
+		add_stability = 0.02
+	}
+}
+
+country_event = { 
+	id = xsm.20
+	title = xsm.20.t
+	desc = xsm.20.d
+	picture = GFX_report_event_xsm_20
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event xsm.20" }
+
+	option = {
+		name = xsm.20.a
+		add_stability = 0.01
+		hidden_effect = { country_event = { id = xsm.21 days = 360 } }
+	}
+}
+
+country_event = { 
+	id = xsm.21
+	title = xsm.21.t
+	desc = xsm.21.d
+	picture = GFX_report_event_xsm_21
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event xsm.21" }
+
+	option = {
+		name = xsm.21.a
+		add_political_power = -5
+		hidden_effect = { country_event = { id = xsm.22 days = 15 } }
+	}
+}
+
+country_event = { 
+	id = xsm.22
+	title = xsm.22.t
+	desc = xsm.22.d
+	picture = GFX_report_event_xsm_22
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event xsm.22" }
+
+	option = {
+		name = xsm.22.a
+	}
+}
+
+country_event = { 
+	id = xsm.23
+	title = xsm.23.t
+	desc = xsm.23.d
+	picture = GFX_report_event_xsm_23
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event xsm.23" }
+
+	option = {
+		name = xsm.23.a
+		add_stability = 0.02
+	}
+}
+
+country_event = { 
+	id = xsm.24
+	title = xsm.24.t
+	desc = xsm.24.d
+	picture = GFX_report_event_xsm_24
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event xsm.24" }
+
+	option = {
+		name = xsm.24.a
+		add_timed_idea = {
+			idea = XSM_idea_horse_song
+			days = 180
+		}
+	}
+}
+
+country_event = { 
+	id = xsm.25
+	title = xsm.25.t
+	desc = xsm.25.d
+	picture = GFX_report_event_xsm_25
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event xsm.25" }
+
+	option = {
+		name = xsm.25.a
+		add_timed_idea = {
+			idea = XSM_idea_marsh
+			days = 180
+		}
+	}
+}
+
+country_event = { 
+	id = xsm.40
+	title = xsm.40.t
+	desc = xsm.40.d
+	picture = GFX_report_event_xsm_40
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event xsm.40" }
+
+	option = {
+		name = xsm.40.a
+		set_country_flag = brother_war_flag
+	}
+}

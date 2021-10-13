@@ -4,6 +4,6 @@ tags={
 }
 name="NW_Jopa"
 dependencies={
-	"New Ways alpha 0.3.1 dev build"
+	"New Ways alpha DEV BUILD"
 }
 supported_version="1.10.8"

@@ -1,0 +1,61 @@
+#Контроль над границами республики
+XSM_border_control_category = {
+	icon = generic_formable_nations
+	allowed = {
+		original_tag = XSM
+		has_completed_focus = XSM_press_separate
+	}
+	visible = {
+		NOT = { has_war_with = CHI }
+	}
+}
+XSM_fight_vs_salafit_category = {
+	icon = GFX_decision_category_salafit_fight
+	allowed = {
+		original_tag = XSM
+		has_completed_focus = XSM_licvidate_salafite
+	}
+	visible = {
+		OR = {
+			756 = {
+				has_dynamic_modifier = { modifier = XSM_salafit_influence_dyn }
+			}
+			1126 = {
+				has_dynamic_modifier = { modifier = XSM_salafit_influence_dyn }
+			}
+			755 = {
+				has_dynamic_modifier = { modifier = XSM_salafit_influence_dyn }
+			}
+			1177 = {
+				has_dynamic_modifier = { modifier = XSM_salafit_influence_dyn }
+			}
+			1166 = {
+				has_dynamic_modifier = { modifier = XSM_salafit_influence_dyn }
+			}
+			604 = {
+				has_dynamic_modifier = { modifier = XSM_salafit_influence_dyn }
+			}
+		}
+	}
+}
+
+XSM_patron_art_category = {
+	icon = GFX_decision_category_salafit_fight
+	allowed = {
+		original_tag = XSM
+		has_completed_focus = XSM_save_art
+	}
+	visible = {
+		has_completed_focus = XSM_save_art
+	}
+}
+XSM_brother_war_category = {
+	icon = generic_formable_nations
+	allowed = {
+		original_tag = XSM
+		has_completed_focus = XSM_press_separate
+	}
+	visible = {
+		NOT = { has_war_with = CHI }
+	}
+}

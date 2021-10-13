@@ -42,6 +42,15 @@ ideas = {
 				army_org_factor = -0.05
 			}
 		}
+		XSM_idea_muslim_equality  = {
+			removal_cost = -1
+			allowed = { always = no }
+			picture = muslim_salafit
+			modifier = {
+				stability_factor = -0.07
+				war_support_factor = -0.07
+			}
+		}
 		XSM_idea_agrar_problem = {
 			removal_cost = -1
 			allowed = { always = no }
@@ -60,6 +69,126 @@ ideas = {
 				political_power_factor = -0.2
 				production_factory_efficiency_gain_factor = -0.05
 				production_factory_max_efficiency_factor = -0.05
+			}
+		}
+		XSM_idea_cult_finance = {
+			removal_cost = -1
+			allowed = { always = no }
+			picture = bad_economy
+			modifier = {
+				consumer_goods_factor = 0.03
+				political_power_gain = -0.05
+			}
+		}
+		XSM_idea_forming_divisions = {
+			removal_cost = -1
+			allowed = { always = no }
+			picture = bad_economy
+			modifier = {
+				training_time_factor = -0.1
+			}
+		}
+		XSM_idea_army_corruption = {
+			removal_cost = -1
+			allowed = { always = no }
+			picture = bad_economy
+			modifier = {
+				political_power_factor = -0.1
+			}
+		}
+		XSM_idea_army_corruption_2 = {
+			removal_cost = -1
+			allowed = { always = no }
+			picture = bad_economy
+			modifier = {
+				political_power_factor = -0.15
+				stability_factor = 0.05
+				command_power_gain_mult = +0.2
+			}
+		}
+		XSM_idea_no_army_guber = {
+			removal_cost = -1
+			allowed = { always = no }
+			picture = bad_economy
+			modifier = {
+				stability_factor = 0.15
+				command_power_gain_mult = -0.2
+			}
+		}
+		XSM_idea_build_def = {
+			removal_cost = -1
+			allowed = { always = no }
+			picture = bad_economy
+			modifier = {
+				consumer_goods_factor = 0.03
+				production_speed_bunker_factor = 0.15 
+			}
+		}
+		XSM_idea_build_buro = {
+			removal_cost = -1
+			allowed = { always = no }
+			picture = bad_economy
+			modifier = {
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		XSM_idea_moderate_socium = {
+			removal_cost = -1
+			allowed = { always = no }
+			picture = bad_economy
+			modifier = {
+				political_advisor_cost_factor = -0.1
+				political_power_factor = 0.1
+				MONTHLY_POPULATION = 0.05
+				research_speed_factor = -0.01
+			}
+		}
+		XSM_idea_ekonom_up = {
+			removal_cost = -1
+			allowed = { always = no }
+			picture = bad_economy
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+		XSM_idea_soc_system = {
+			removal_cost = -1
+			allowed = { always = no }
+			picture = bad_economy
+			modifier = {
+				consumer_goods_factor = 0.1
+				stability_weekly = 0.0021
+				drift_defence_factor = 0.5
+				neutrality_drift = 0.0014
+			}
+		}
+		XMS_idea_panchen_lama = {
+			removal_cost = -1
+			allowed = { always = no }
+			picture = bad_economy
+			modifier = {
+				stability_factor = 0.1
+			}
+		}
+		XSM_idea_horse_song = {
+			removal_cost = -1
+			allowed = { always = no }
+			picture = bad_economy
+			modifier = {
+				cavalry_attack_factor = 0.02
+				army_org_factor = 0.03
+				org_loss_when_moving = -0.1
+			}
+		}
+		XSM_idea_marsh = {
+			removal_cost = -1
+			allowed = { always = no }
+			picture = bad_economy
+			modifier = {
+				army_defence_factor = 0.04
+				out_of_supply_factor = -0.15
 			}
 		}
 	}

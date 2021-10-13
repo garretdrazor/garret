@@ -12,10 +12,16 @@ focus_tree = {
 	focus = {
 		id = XSM_power
 		icon = GFX_z_goal_Ma_Power
-		cost = 10
+		cost = 5
 		x = 15
 		y = 0
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_power"
+			add_political_power = 100
+			hidden_effect = {
+				country_event = { id = xsm.1 days = 1 }
+			}
+		}
 	}
 	focus = {
 		id = XSM_pies
@@ -23,7 +29,10 @@ focus_tree = {
 		cost = 10
 		x = 31
 		y = 6
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_pies"
+			
+		}
 	}
 	focus = {
 		id = XSM_codex_for_soldiers
@@ -35,7 +44,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = XSM_pies
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_codex_for_soldiers"
+			
+		}
 	}
 	focus = {
 		id = XSM_cult
@@ -47,7 +59,13 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = XSM_power
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_cult"
+			swap_ideas = {
+				remove_idea = XSM_idea_muslim_salafit
+				add_idea = XSM_idea_muslim_equality
+			}
+		}
 	}
 	focus = {
 		id = XSM_loyality
@@ -59,11 +77,33 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = XSM_power
-
+		available = {
+			is_puppet = no
+			NOT = {
+				country_exists = FSR
+			}
+			CHI = {
+				has_civil_war = no
+			}
+			NOT = {
+				has_idea = XSM_idea_gubernator_conflict
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_loyality"
+			remove_ideas = XSM_idea_bad_economy
+			CHI = {
+				set_autonomy = {
+					target = XSM
+					autonomy_state = puppet
+				}
+				country_event = { id = xsm.2 }
+			}
+		}
 	}
 	focus = {
 		id = XSM_piece_unification
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_Ma_piece
 		cost = 10
 		prerequisite = {
 			focus = XSM_loyality
@@ -71,10 +111,43 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = XSM_figt_for_title
 		}
+		available = {
+			NGX = {
+				NOT = {
+					has_war_with = GAN
+				}
+			}
+			OR = {
+				NGX = {
+					has_government = neutrality
+				}
+				GAN = {
+					has_government = neutrality
+				}
+			}
+		}
 		x = 1
 		y = 2
 		relative_position_id = XSM_loyality
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_piece_unification"
+			if = {
+				limit ={
+					country_exists = NGX
+				}
+				NGX = {
+					country_event = { id = xsm.6 }
+				}
+			}
+			else_if = {
+				limit ={
+					country_exists = GAN
+				}
+				GAN = {
+					country_event = { id = xsm.6 }
+				}
+			}
+		}
 	}
 	focus = {
 		id = XSM_Ma
@@ -83,10 +156,19 @@ focus_tree = {
 		prerequisite = {
 			focus = XSM_power
 		}
+		available = {
+			has_country_leader = {
+				name = "Ma Lin"
+				ruling_only = yes
+			}
+		}
 		x = -10
 		y = 1
 		relative_position_id = XSM_power
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_Ma"
+			remove_ideas = XSM_idea_bad_economy
+		}
 	}
 	focus = {
 		id = XSM_Ma_avanture
@@ -95,10 +177,22 @@ focus_tree = {
 		prerequisite = {
 			focus = XSM_Ma
 		}
+		available = {
+			has_country_leader = {
+				name = "Ma Lin"
+				ruling_only = yes
+			}
+			TIB = {
+				has_country_flag = TIB_lama_search
+			}
+		}
 		x = 3
 		y = 1
 		relative_position_id = XSM_Ma
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_Ma_avanture"
+			country_event = { id = xsm.9 }
+		}
 	}
 	focus = {
 		id = XSM_bulding_work
@@ -107,10 +201,19 @@ focus_tree = {
 		prerequisite = {
 			focus = XSM_Ma
 		}
+		available = {
+			has_country_leader = {
+				name = "Ma Lin"
+				ruling_only = yes
+			}
+		}
 		x = 5
 		y = 1
 		relative_position_id = XSM_Ma
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_bulding_work"
+			add_ideas = XSM_idea_build_buro
+		}
 	}
 	focus = {
 		id = XSM_Ma_bufang
@@ -119,10 +222,19 @@ focus_tree = {
 		prerequisite = {
 			focus = XSM_power
 		}
+		available = {
+			has_country_leader = {
+				name = "Ma Bufang"
+				ruling_only = yes
+			}
+		}
 		x = 10
 		y = 1
 		relative_position_id = XSM_power
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_Ma_bufang"
+			country_event = { id = xsm.14 }
+		}
 	}
 	focus = {
 		id = XSM_licvidate_slavery
@@ -134,7 +246,10 @@ focus_tree = {
 		x = 7
 		y = 1
 		relative_position_id = XSM_Ma_bufang
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_licvidate_slavery"
+			
+		}
 	}
 	focus = {
 		id = XSM_armory_from_pekyn
@@ -146,7 +261,10 @@ focus_tree = {
 		x = 9
 		y = 1
 		relative_position_id = XSM_Ma_bufang
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_armory_from_pekyn"
+			
+		}
 	}
 	focus = {
 		id = XSM_old_supp
@@ -155,10 +273,54 @@ focus_tree = {
 		prerequisite = {
 			focus = XSM_Ma
 		}
+		available = {
+			OR = {
+				has_country_leader = {
+					name = "Ma Lin"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Ma Pu"
+					ruling_only = yes
+				}
+			}
+		}
 		x = -2
 		y = 1
 		relative_position_id = XSM_Ma
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_old_supp"
+			PRC = {
+				add_opinion_modifier = {
+					target = XSM
+					modifier = XSM_old_opinion
+				}
+			}
+			FSR = {
+				add_opinion_modifier = {
+					target = XSM
+					modifier = XSM_old_opinion
+				}
+			}
+			NWA = {
+				add_opinion_modifier = {
+					target = XSM
+					modifier = XSM_old_opinion
+				}
+			}
+			NEA = {
+				add_opinion_modifier = {
+					target = XSM
+					modifier = XSM_old_opinion
+				}
+			}
+			HCP = {
+				add_opinion_modifier = {
+					target = XSM
+					modifier = XSM_old_opinion
+				}
+			}
+		}
 	}
 	focus = {
 		id = XSM_joining_SZPNO
@@ -170,10 +332,45 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = XSM_Join_left_Gomindan
 		}
+		available = {
+			is_subject = no
+			any_country_with_original_tag = {
+				original_tag_to_check = NEA
+				is_faction_leader = yes
+				NOT = { has_war_with = ROOT }
+			}
+			OR = {
+				has_country_leader = {
+					name = "Ma Lin"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Ma Pu"
+					ruling_only = yes
+				}
+			}
+		}
+		bypass = {
+			is_in_faction_with = NEA
+		}
 		x = -1
 		y = 1
 		relative_position_id = XSM_old_supp
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_joining_SZPNO"
+			if = {
+				limit = { is_in_faction = yes }
+				leave_faction = yes
+			}
+			NEA = {
+				country_event = generic.2
+				add_ai_strategy = {
+					type = alliance
+					id = ROOT		
+					value = 200
+				}
+			}
+		}
 	}
 	focus = {
 		id = XSM_Join_left_Gomindan
@@ -185,10 +382,45 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = XSM_joining_SZPNO
 		}
+		available = {
+			is_subject = no
+			any_country_with_original_tag = {
+				original_tag_to_check = NWA
+				is_faction_leader = yes
+				NOT = { has_war_with = ROOT }
+			}
+			OR = {
+				has_country_leader = {
+					name = "Ma Lin"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Ma Pu"
+					ruling_only = yes
+				}
+			}
+		}
+		bypass = {
+			is_in_faction_with = NWA
+		}
 		x = 1
 		y = 1
 		relative_position_id = XSM_old_supp
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_Join_left_Gomindan"
+			if = {
+				limit = { is_in_faction = yes }
+				leave_faction = yes
+			}
+			NWA = {
+				country_event = generic.2
+				add_ai_strategy = {
+					type = alliance
+					id = ROOT		
+					value = 200
+				}
+			}
+		}
 	}
 	focus = {
 		id = XSM_support_yan
@@ -200,10 +432,64 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = XSM_create_commi
 		}
+		available = {
+			is_subject = no
+			OR = {
+				has_country_leader = {
+					name = "Ma Lin"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Ma Pu"
+					ruling_only = yes
+				}
+			}
+		}
 		x = -2
 		y = 1
 		relative_position_id = XSM_joining_SZPNO
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_support_yan"
+			add_popularity = { ideology = democratic popularity = 0.35 }
+			set_politics = { ruling_party = democratic }
+			if = {
+				limit = {
+					has_country_leader = {
+						name = "Ma Lin"
+						ruling_only = yes
+					}
+				}
+				create_country_leader = {
+					name = "Ma Lin"
+					desc = "Ma_Lin_desc"
+					picture = "gfx/leaders/XSM/Portrait_Ma_Lin.dds"
+					expire = "1965.1.1"
+					ideology = democratic_socialism
+					traits = {
+						old_horse
+						talk_with_ppl
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_leader = {
+						name = "Ma Pu"
+						ruling_only = yes
+					}
+				}
+				create_country_leader = {
+					name = "Ma Pu"
+					desc = "Ma_Pu_desc"
+					picture = "gfx/leaders/XSM/Portrait_Ma_Pu.dds"
+					expire = "1965.1.1"
+					ideology = democratic_socialism
+					traits = {
+						manipulated
+					}
+				}
+			}
+		}
 	}
 	focus = {
 		id = XSM_create_commi
@@ -215,10 +501,64 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = XSM_support_yan
 		}
+		available = {
+			is_subject = no
+			OR = {
+				has_country_leader = {
+					name = "Ma Lin"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Ma Pu"
+					ruling_only = yes
+				}
+			}
+		}
 		x = 0
 		y = 1
 		relative_position_id = XSM_joining_SZPNO
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_create_commi"
+			add_popularity = { ideology = communism popularity = 0.35 }
+			set_politics = { ruling_party = communism }
+			if = {
+				limit = {
+					has_country_leader = {
+						name = "Ma Lin"
+						ruling_only = yes
+					}
+				}
+				create_country_leader = {
+					name = "Ma Lin"
+					desc = "Ma_Lin_desc"
+					picture = "gfx/leaders/XSM/Portrait_Ma_Lin.dds"
+					expire = "1965.1.1"
+					ideology = right_wing_communism
+					traits = {
+						old_horse
+						talk_with_ppl
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_leader = {
+						name = "Ma Pu"
+						ruling_only = yes
+					}
+				}
+				create_country_leader = {
+					name = "Ma Pu"
+					desc = "Ma_Pu_desc"
+					picture = "gfx/leaders/XSM/Portrait_Ma_Pu.dds"
+					expire = "1965.1.1"
+					ideology = right_wing_communism
+					traits = {
+						manipulated
+					}
+				}
+			}
+		}
 	}
 	focus = {
 		id = XSM_Low_autonomy_cinhai
@@ -228,10 +568,93 @@ focus_tree = {
 			focus = XSM_support_yan
 			focus = XSM_create_commi
 		}
+		available = {
+			country_exists = NEA
+			OR = {
+				has_country_leader = {
+					name = "Ma Lin"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Ma Pu"
+					ruling_only = yes
+				}
+			}
+		}
 		x = 1
 		y = 1
 		relative_position_id = XSM_support_yan
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_Low_autonomy_cinhai"
+			every_unit_leader = {
+				set_nationality = NEA
+			}
+			NEA = {
+				annex_country = {
+					target = ROOT
+					transfer_troops = yes
+				}
+				inherit_technology = ROOT
+				if = {
+					limit = {
+						XSM = {
+							is_ai = no
+						}
+					}
+				NEA = { change_tag_from = ROOT }
+				}
+			}
+			if = {
+				limit = { 1133 = { is_owned_by = ROOT } }
+				1133 = { add_core_of = NEA }
+				1133 = { add_claim_by = NEA }
+			}
+			if = {
+				limit = { 1125 = { is_owned_by = ROOT } }
+				1125 = { add_core_of = NEA }
+				1125 = { add_claim_by = NEA }
+			}
+			if = {
+				limit = { 616 = { is_owned_by = ROOT } }
+				616 = { add_core_of = NEA }
+				616 = { add_claim_by = NEA }
+			}
+			if = {
+				limit = { 604 = { is_owned_by = ROOT } }
+				604 = { add_core_of = NEA }
+				604 = { add_claim_by = NEA }
+			}
+			if = {
+				limit = { 1166 = { is_owned_by = ROOT } }
+				1166 = { add_core_of = NEA }
+				1166 = { add_claim_by = NEA }
+			}
+			if = {
+				limit = { 754 = { is_owned_by = ROOT } }
+				754 = { add_core_of = NEA }
+				754 = { add_claim_by = NEA }
+			}
+			if = {
+				limit = { 755 = { is_owned_by = ROOT } }
+				755 = { add_core_of = NEA }
+				755 = { add_claim_by = NEA }
+			}
+			if = {
+				limit = { 756 = { is_owned_by = ROOT } }
+				756 = { add_core_of = NEA }
+				756 = { add_claim_by = NEA }
+			}
+			if = {
+				limit = { 1126 = { is_owned_by = ROOT } }
+				1126 = { add_core_of = NEA }
+				1126 = { add_claim_by = NEA }
+			}
+			if = {
+				limit = { 1177 = { is_owned_by = ROOT } }
+				1177 = { add_core_of = NEA }
+				1177 = { add_claim_by = NEA }
+			}
+		}
 	}
 	focus = {
 		id = XSM_coop_with_army
@@ -240,10 +663,27 @@ focus_tree = {
 		prerequisite = {
 			focus = XSM_Join_left_Gomindan
 		}
+		available = {
+			OR = {
+				has_country_leader = {
+					name = "Ma Lin"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Ma Pu"
+					ruling_only = yes
+				}
+			}
+		}
 		x = 0
 		y = 1
 		relative_position_id = XSM_Join_left_Gomindan
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_coop_with_army"
+			army_experience = 20
+			add_command_power = 20
+			NWA = { army_experience = 10 }
+		}
 	}
 	focus = {
 		id = XSM_let_hesi_coridor
@@ -252,10 +692,34 @@ focus_tree = {
 		prerequisite = {
 			focus = XSM_Join_left_Gomindan
 		}
+		available = {
+			OR = {
+				has_country_leader = {
+					name = "Ma Lin"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Ma Pu"
+					ruling_only = yes
+				}
+			}
+		}
 		x = 2
 		y = 1
 		relative_position_id = XSM_Join_left_Gomindan
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_let_hesi_coridor"
+			if = {
+				limit = { 756 = { is_owned_by = ROOT } }
+				756 = { add_claim_by = NWA }
+				756 = { add_core_of = NWA }
+			}
+			if = {
+				limit = { 1126 = { is_owned_by = ROOT } }
+				1126 = { add_claim_by = NWA }
+				1126 = { add_core_of = NWA }
+			}
+		}
 	}
 	focus = {
 		id = XSM_support_centralizatiom
@@ -265,10 +729,93 @@ focus_tree = {
 			focus = XSM_coop_with_army
 			focus = XSM_let_hesi_coridor
 		}
+		available = {
+			country_exists = NWB
+			OR = {
+				has_country_leader = {
+					name = "Ma Lin"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Ma Pu"
+					ruling_only = yes
+				}
+			}
+		}
 		x = 1
 		y = 1
 		relative_position_id = XSM_coop_with_army
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_support_centralizatiom"
+			every_unit_leader = {
+				set_nationality = NWB
+			}
+			NWB = {
+				annex_country = {
+					target = ROOT
+					transfer_troops = yes
+				}
+				inherit_technology = ROOT
+				if = {
+					limit = {
+						XSM = {
+							is_ai = no
+						}
+					}
+				NWB = { change_tag_from = ROOT }
+				}
+			}
+			if = {
+				limit = { 1133 = { is_owned_by = ROOT } }
+				1133 = { add_core_of = NWB }
+				1133 = { add_claim_by = NWB }
+			}
+			if = {
+				limit = { 1125 = { is_owned_by = ROOT } }
+				1125 = { add_core_of = NWB }
+				1125 = { add_claim_by = NWB }
+			}
+			if = {
+				limit = { 616 = { is_owned_by = ROOT } }
+				616 = { add_core_of = NWB }
+				616 = { add_claim_by = NWB }
+			}
+			if = {
+				limit = { 604 = { is_owned_by = ROOT } }
+				604 = { add_core_of = NWB }
+				604 = { add_claim_by = NWB }
+			}
+			if = {
+				limit = { 1166 = { is_owned_by = ROOT } }
+				1166 = { add_core_of = NWB }
+				1166 = { add_claim_by = NWB }
+			}
+			if = {
+				limit = { 754 = { is_owned_by = ROOT } }
+				754 = { add_core_of = NWB }
+				754 = { add_claim_by = NWB }
+			}
+			if = {
+				limit = { 755 = { is_owned_by = ROOT } }
+				755 = { add_core_of = NWB }
+				755 = { add_claim_by = NWB }
+			}
+			if = {
+				limit = { 756 = { is_owned_by = ROOT } }
+				756 = { add_core_of = NWB }
+				756 = { add_claim_by = NWB }
+			}
+			if = {
+				limit = { 1126 = { is_owned_by = ROOT } }
+				1126 = { add_core_of = NEA }
+				1126 = { add_claim_by = NWB }
+			}
+			if = {
+				limit = { 1177 = { is_owned_by = ROOT } }
+				1177 = { add_core_of = NWB }
+				1177 = { add_claim_by = NWB }
+			}
+		}
 	}
 	focus = {
 		id = XSM_rule_cinhai_army
@@ -277,10 +824,25 @@ focus_tree = {
 		prerequisite = {
 			focus = XSM_Ma_avanture
 		}
+		available = {
+			has_country_leader = {
+				name = "Ma Lin"
+				ruling_only = yes
+			}
+			TIB = {
+				has_country_leader = {
+					name = "Ma Bufang"
+					ruling_only = yes
+				}
+			}
+		}
 		x = 0
 		y = 1
 		relative_position_id = XSM_Ma_avanture
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_rule_cinhai_army"
+			remove_ideas = XSM_idea_gubernator_conflict
+		}
 	}
 	focus = {
 		id = XSM_central_control
@@ -289,10 +851,18 @@ focus_tree = {
 		prerequisite = {
 			focus = XSM_bulding_work
 		}
+		available = {
+			has_country_leader = {
+				name = "Ma Lin"
+				ruling_only = yes
+			}
+		}
 		x = 0
 		y = 2
 		relative_position_id = XSM_bulding_work
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_central_control"
+		}
 	}
 	focus = {
 		id = XSM_change_tibet_opinion
@@ -301,10 +871,37 @@ focus_tree = {
 		prerequisite = {
 			focus = XSM_central_control
 		}
+		available = {
+			OR = {
+				has_country_leader = {
+					name = "Ma Lin"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Ma Pu"
+					ruling_only = yes
+				}
+			}
+		}
 		x = 0
 		y = 1
 		relative_position_id = XSM_central_control
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_change_tibet_opinion"
+			1166 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = hospital
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
 	}
 	focus = {
 		id = XSM_recruit_new_soldiers
@@ -313,10 +910,29 @@ focus_tree = {
 		prerequisite = {
 			focus = XSM_rule_cinhai_army
 		}
+		available = {
+			OR = {
+				has_country_leader = {
+					name = "Ma Lin"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Ma Pu"
+					ruling_only = yes
+				}
+			}
+		}
 		x = 0
 		y = 3
 		relative_position_id = XSM_rule_cinhai_army
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_recruit_new_soldiers"
+			add_timed_idea = {
+				idea = XSM_idea_forming_divisions
+				days = 360
+			}
+			add_ideas = limited_conscription
+		}
 	}
 	focus = {
 		id = XSM_low_control_journalists
@@ -325,10 +941,30 @@ focus_tree = {
 		prerequisite = {
 			focus = XSM_change_tibet_opinion
 		}
+		available = {
+			OR = {
+				has_country_leader = {
+					name = "Ma Lin"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Ma Pu"
+					ruling_only = yes
+				}
+			}
+		}
 		x = 0
 		y = 1
 		relative_position_id = XSM_change_tibet_opinion
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_low_control_journalists"
+			add_popularity = { ideology = democratic popularity = 0.06 }
+			add_popularity = { ideology = communism popularity = 0.04 }
+			add_popularity = { ideology = trozkism popularity = 0.01 }
+			add_popularity = { ideology = fascism popularity = 0.01 }
+			add_stability = 0.1
+			add_political_power = 50
+		}
 	}
 	focus = {
 		id = XSM_low_officer_courpus
@@ -337,10 +973,28 @@ focus_tree = {
 		prerequisite = {
 			focus = XSM_recruit_new_soldiers
 		}
+		available = {
+			OR = {
+				has_country_leader = {
+					name = "Ma Lin"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Ma Pu"
+					ruling_only = yes
+				}
+			}
+		}
 		x = -1
 		y = 1
 		relative_position_id = XSM_recruit_new_soldiers
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_low_officer_courpus"
+			add_ideas = XSM_idea_army_corruption
+			every_army_leader = {
+				add_skill_level = 1
+			}
+		}
 	}
 	focus = {
 		id = XSM_create_koordinate_shtabe
@@ -349,10 +1003,25 @@ focus_tree = {
 		prerequisite = {
 			focus = XSM_recruit_new_soldiers
 		}
+		available = {
+			OR = {
+				has_country_leader = {
+					name = "Ma Lin"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Ma Pu"
+					ruling_only = yes
+				}
+			}
+		}
 		x = 1
 		y = 1
 		relative_position_id = XSM_recruit_new_soldiers
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_create_koordinate_shtabe"
+			custom_effect_tooltip = xsm_shtabe_tt
+		}
 	}
 	focus = {
 		id = XSM_train_soldiers
@@ -361,10 +1030,25 @@ focus_tree = {
 		prerequisite = {
 			focus = XSM_low_officer_courpus
 		}
+		available = {
+			OR = {
+				has_country_leader = {
+					name = "Ma Lin"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Ma Pu"
+					ruling_only = yes
+				}
+			}
+		}
 		x = -2
 		y = 1
 		relative_position_id = XSM_low_officer_courpus
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_train_soldiers"
 
+		}
 	}
 	focus = {
 		id = XSM_military_and_civilian
@@ -377,10 +1061,28 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = XSM_no_gubernator
 		}
+		available = {
+			OR = {
+				has_country_leader = {
+					name = "Ma Lin"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Ma Pu"
+					ruling_only = yes
+				}
+			}
+		}
 		x = 0
 		y = 1
 		relative_position_id = XSM_low_officer_courpus
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_military_and_civilian"
+			swap_ideas = {
+				remove_idea = XSM_idea_army_corruption
+				add_idea = XSM_idea_army_corruption_2
+			}
+		}
 	}
 	focus = {
 		id = XSM_no_gubernator
@@ -393,10 +1095,25 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = XSM_military_and_civilian
 		}
+		available = {
+			OR = {
+				has_country_leader = {
+					name = "Ma Lin"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Ma Pu"
+					ruling_only = yes
+				}
+			}
+		}
 		x = 2
 		y = 1
 		relative_position_id = XSM_low_officer_courpus
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_no_gubernator"
+			add_ideas = XSM_idea_no_army_guber
+		}
 	}
 	focus = {
 		id = XSM_commy_strategy
@@ -406,10 +1123,30 @@ focus_tree = {
 			focus = XSM_military_and_civilian
 			focus = XSM_no_gubernator
 		}
+		available = {
+			OR = {
+				has_country_leader = {
+					name = "Ma Lin"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Ma Pu"
+					ruling_only = yes
+				}
+			}
+		}
 		x = 1
 		y = 1
 		relative_position_id = XSM_military_and_civilian
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_commy_strategy"
+			add_tech_bonus = {
+				name = XSM_commy_strategy_bonus
+				bonus = 1.0
+				uses = 1
+				category = cat_asymmetric_warfare
+			}
+		}
 	}
 	focus = {
 		id = XSM_gorizontal_army
@@ -418,10 +1155,31 @@ focus_tree = {
 		prerequisite = {
 			focus = XSM_commy_strategy
 		}
+		available = {
+			OR = {
+				has_country_leader = {
+					name = "Ma Lin"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Ma Pu"
+					ruling_only = yes
+				}
+			}
+		}
 		x = -1
 		y = 1
 		relative_position_id = XSM_commy_strategy
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_gorizontal_army"
+			add_tech_bonus = {
+				name = XSM_commy_strategy_bonus
+				bonus = 0.5
+				uses = 1
+				category = cat_asymmetric_warfare
+			}
+			army_experience = 15
+		}
 	}
 	focus = {
 		id = XSM_terra_search
@@ -430,9 +1188,29 @@ focus_tree = {
 		prerequisite = {
 			focus = XSM_commy_strategy
 		}
+		available = {
+			OR = {
+				has_country_leader = {
+					name = "Ma Lin"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Ma Pu"
+					ruling_only = yes
+				}
+			}
+		}
 		x = 9
 		y = 10
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_terra_search"
+			add_tech_bonus = {
+				name = XSM_commy_strategy_bonus
+				bonus = 1.0
+				uses = 1
+				category = recon_tech
+			}
+		}
 	}
 	focus = {
 		id = XSM_crate_def_point
@@ -441,13 +1219,31 @@ focus_tree = {
 		prerequisite = {
 			focus = XSM_gorizontal_army
 		}
+		available = {
+			OR = {
+				has_country_leader = {
+					name = "Ma Lin"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Ma Pu"
+					ruling_only = yes
+				}
+			}
+		}
 		prerequisite = {
 			focus = XSM_terra_search
 		}
 		x = 1
 		y = 1
 		relative_position_id = XSM_gorizontal_army
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_crate_def_point"
+			add_timed_idea = {
+				idea = XSM_idea_build_def
+				days = 360
+			}
+		}
 	}
 	focus = {
 		id = XSM_repair_airports
@@ -459,11 +1255,34 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = XSM_loyality
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_repair_airports"
+			add_autonomy_score = {
+				value = 250
+			}
+			1166 = {
+				add_building_construction = {
+					type = air_base
+					level = 3
+					instant_build = yes
+				}
+			}
+			CHI = {
+				country_event = { id = xsm.3 }
+			}
+			IF = {
+				limit = {
+					TIB = {
+						is_puppet = no
+					}
+				}
+				country_event = { id = xsm.4 }
+			}
+		}
 	}
 	focus = {
 		id = XSM_press_separate
-		icon = GFX_z_goal_balkan_crusade2
+		icon = GFX_z_goal_press_separate_cliqe
 		cost = 10
 		prerequisite = {
 			focus = XSM_repair_airports
@@ -471,11 +1290,14 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = XSM_repair_airports
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_press_separate"
+			unlock_decision_category_tooltip = XSM_border_control_category
+		}
 	}
 	focus = {
 		id = XSM_figt_for_title
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_Ma_fight
 		cost = 10
 		prerequisite = {
 			focus = XSM_loyality
@@ -483,10 +1305,45 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = XSM_piece_unification
 		}
+		available = {
+			NGX = {
+				NOT = {
+					has_war_with = GAN
+				}
+			}
+			OR = {
+				NGX = {
+					has_government = communism
+				}
+				GAN = {
+					has_government = communism
+				}
+			}
+		}
 		x = -1
 		y = 2
 		relative_position_id = XSM_loyality
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_figt_for_title"
+			if = {
+				limit ={
+					country_exists = NGX
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = NGX
+				}
+			}
+			else_if = {
+				limit ={
+					country_exists = GAN
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = GAN
+				}
+			}
+		}
 	}
 	focus = {
 		id = XSM_cult_finance
@@ -498,19 +1355,45 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = XSM_cult
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_cult_finance"
+			add_ideas = XSM_idea_cult_finance
+			country_event = { id = xsm.8 days = 50 }
+		}
 	}
 	focus = {
 		id = XSM_licvidate_salafite
-		icon = GFX_z_goal_last_blow_to_islam
+		icon = GFX_z_goal_likvidate_salafit
 		cost = 10
 		prerequisite = {
 			focus = XSM_cult_finance
 		}
+		available = {
+			has_idea = XSM_idea_muslim_salafit
+		}
 		x = 0
 		y = 2
 		relative_position_id = XSM_cult_finance
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_licvidate_salafite"
+			756 = {
+				add_dynamic_modifier = { modifier = XSM_salafit_influence_dyn }
+				force_update_dynamic_modifier = yes
+			}
+			1126 = {
+				add_dynamic_modifier = { modifier = XSM_salafit_influence_dyn }
+				force_update_dynamic_modifier = yes
+			}
+			755 = {
+				add_dynamic_modifier = { modifier = XSM_salafit_influence_dyn }
+				force_update_dynamic_modifier = yes
+			}
+			1177 = {
+				add_dynamic_modifier = { modifier = XSM_salafit_influence_dyn }
+				force_update_dynamic_modifier = yes
+			}
+			unlock_decision_category_tooltip = XSM_fight_vs_salafit_category
+		}
 	}
 	focus = {
 		id = XSM_cult_ideas
@@ -522,10 +1405,23 @@ focus_tree = {
 		prerequisite = {
 			focus = XSM_licvidate_salafite
 		}
+		available = {
+			has_country_leader = {
+				name = "Ma Lin"
+				ruling_only = yes
+			}
+			NOT = {
+				has_idea = XSM_idea_muslim_salafit
+			}
+		}
 		x = 4
 		y = 1
 		relative_position_id = XSM_central_control
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_cult_ideas"
+			add_political_power = 150
+			custom_effect_tooltip = xsm_Ma_Pu_tt
+		}
 	}
 	focus = {
 		id = XSM_moderate_socium
@@ -534,10 +1430,25 @@ focus_tree = {
 		prerequisite = {
 			focus = XSM_cult_ideas
 		}
+		available = {
+			OR = {
+				has_country_leader = {
+					name = "Ma Lin"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Ma Pu"
+					ruling_only = yes
+				}
+			}
+		}
 		x = 1
 		y = 1
 		relative_position_id = XSM_cult_ideas
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_moderate_socium"
+			add_ideas = XSM_idea_moderate_socium
+		}
 	}
 	focus = {
 		id = XSM_china_nationalism
@@ -549,10 +1460,88 @@ focus_tree = {
 		prerequisite = {
 			focus = XSM_recruit_new_soldiers
 		}
+		available = {
+			OR = {
+				has_country_leader = {
+					name = "Ma Lin"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Ma Pu"
+					ruling_only = yes
+				}
+			}
+		}
 		x = 5
 		y = 1
 		relative_position_id = XSM_recruit_new_soldiers
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_china_nationalism"
+			add_war_support = 0.15
+			if = {
+				limit = {
+					has_government = neutrality
+				}
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.1
+				}
+			}
+			else_if = {
+				limit = {
+					has_government = democratic
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.1
+				}
+			}
+			else_if = {
+				limit = {
+					has_government = communism
+				}
+				add_popularity = {
+					ideology = communism
+					popularity = 0.1
+				}
+			}
+			else_if = {
+				limit = {
+					has_government = trozkism
+				}
+				add_popularity = {
+					ideology = trozkism
+					popularity = 0.1
+				}
+			}
+			else_if = {
+				limit = {
+					has_government = fascism
+				}
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.1
+				}
+			}
+			else_if = {
+				limit = {
+					has_government = anarchism
+				}
+				add_popularity = {
+					ideology = anarchism
+					popularity = 0.1
+				}
+			}
+			else_if = {
+				limit = {
+					has_government = monarchy
+				}
+				add_popularity = {
+					ideology = monarchy
+					popularity = 0.1
+				}
+			}
+		}
 	}
 	focus = {
 		id = XSM_svet_education
@@ -561,10 +1550,25 @@ focus_tree = {
 		prerequisite = {
 			focus = XSM_moderate_socium
 		}
+		available = {
+			OR = {
+				has_country_leader = {
+					name = "Ma Lin"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Ma Pu"
+					ruling_only = yes
+				}
+			}
+		}
 		x = 0
 		y = 1
 		relative_position_id = XSM_moderate_socium
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_svet_education"
+			add_research_slot = 1
+		}
 	}
 	focus = {
 		id = XSM_low_economy_control
@@ -573,10 +1577,25 @@ focus_tree = {
 		prerequisite = {
 			focus = XSM_moderate_socium
 		}
+		available = {
+			OR = {
+				has_country_leader = {
+					name = "Ma Lin"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Ma Pu"
+					ruling_only = yes
+				}
+			}
+		}
 		x = 2
 		y = 1
 		relative_position_id = XSM_moderate_socium
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_low_economy_control"
+			add_ideas = XSM_idea_ekonom_up
+		}
 	}
 	focus = {
 		id = XSM_socium_system_support
@@ -588,10 +1607,25 @@ focus_tree = {
 		prerequisite = {
 			focus = XSM_low_economy_control
 		}
+		available = {
+			OR = {
+				has_country_leader = {
+					name = "Ma Lin"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Ma Pu"
+					ruling_only = yes
+				}
+			}
+		}
 		x = 2
 		y = 1
 		relative_position_id = XSM_china_nationalism
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_socium_system_support"
+			add_ideas = XSM_idea_soc_system
+		}
 	}
 	focus = {
 		id = XSM_create_infrastructure
@@ -600,10 +1634,38 @@ focus_tree = {
 		prerequisite = {
 			focus = XSM_low_economy_control
 		}
+		available = {
+			OR = {
+				has_country_leader = {
+					name = "Ma Lin"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Ma Pu"
+					ruling_only = yes
+				}
+			}
+		}
 		x = 0
 		y = 1
 		relative_position_id = XSM_low_economy_control
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_create_infrastructure"
+			1177 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			754 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
 	}
 	focus = {
 		id = XSM_eat_sklad_grow
@@ -615,10 +1677,25 @@ focus_tree = {
 		prerequisite = {
 			focus = XSM_create_infrastructure
 		}
+		available = {
+			OR = {
+				has_country_leader = {
+					name = "Ma Lin"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Ma Pu"
+					ruling_only = yes
+				}
+			}
+		}
 		x = 1
 		y = 1
 		relative_position_id = XSM_socium_system_support
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_eat_sklad_grow"
+			remove_ideas = XSM_idea_agrar_problem
+		}
 	}
 	focus = {
 		id = XSM_Sinin_theatre
@@ -627,10 +1704,32 @@ focus_tree = {
 		prerequisite = {
 			focus = XSM_Ma_bufang
 		}
+		available = {
+			OR = {
+				has_country_leader = {
+					name = "Ma Bufang"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Ma Buqing"
+					ruling_only = yes
+				}
+			}
+		}
 		x = -7
 		y = 1
 		relative_position_id = XSM_Ma_bufang
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_Sinin_theatre"
+			add_stability = 0.05
+			754 = {
+				add_building_construction = {
+					type = hospital
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
 	}
 	focus = {
 		id = XSM_save_art
@@ -639,10 +1738,25 @@ focus_tree = {
 		prerequisite = {
 			focus = XSM_Sinin_theatre
 		}
+		available = {
+			OR = {
+				has_country_leader = {
+					name = "Ma Bufang"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Ma Buqing"
+					ruling_only = yes
+				}
+			}
+		}
 		x = 0
 		y = 1
 		relative_position_id = XSM_Sinin_theatre
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_save_art"
+			unlock_decision_category_tooltip = XSM_patron_art_category
+		}
 	}
 	focus = {
 		id = XSM_forest_rise
@@ -651,10 +1765,25 @@ focus_tree = {
 		prerequisite = {
 			focus = XSM_Ma_bufang
 		}
+		available = {
+			OR = {
+				has_country_leader = {
+					name = "Ma Bufang"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Ma Buqing"
+					ruling_only = yes
+				}
+			}
+		}
 		x = -5
 		y = 1
 		relative_position_id = XSM_Ma_bufang
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_forest_rise"
+			
+		}
 	}
 	focus = {
 		id = XSM_irragacional_system
@@ -666,10 +1795,25 @@ focus_tree = {
 		prerequisite = {
 			focus = XSM_nice_roads
 		}
+		available = {
+			OR = {
+				has_country_leader = {
+					name = "Ma Bufang"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Ma Buqing"
+					ruling_only = yes
+				}
+			}
+		}
 		x = 0
 		y = 1
 		relative_position_id = XSM_forest_rise
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_irragacional_system"
+			
+		}
 	}
 	focus = {
 		id = XSM_ppl_group
@@ -678,10 +1822,25 @@ focus_tree = {
 		prerequisite = {
 			focus = XSM_irragacional_system
 		}
+		available = {
+			OR = {
+				has_country_leader = {
+					name = "Ma Bufang"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Ma Buqing"
+					ruling_only = yes
+				}
+			}
+		}
 		x = 0
 		y = 1
 		relative_position_id = XSM_irragacional_system
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_ppl_group"
+			
+		}
 	}
 	focus = {
 		id = XSM_nice_roads
@@ -690,10 +1849,25 @@ focus_tree = {
 		prerequisite = {
 			focus = XSM_Ma_bufang
 		}
+		available = {
+			OR = {
+				has_country_leader = {
+					name = "Ma Bufang"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Ma Buqing"
+					ruling_only = yes
+				}
+			}
+		}
 		x = -3
 		y = 1
 		relative_position_id = XSM_Ma_bufang
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_nice_roads"
+			
+		}
 	}
 	focus = {
 		id = XSM_inegartion_blueshirts_ideas
@@ -702,10 +1876,69 @@ focus_tree = {
 		prerequisite = {
 			focus = XSM_Ma_bufang
 		}
+		available = {
+			OR = {
+				has_country_leader = {
+					name = "Ma Bufang"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Ma Buqing"
+					ruling_only = yes
+				}
+			}
+			CHI = {
+				has_government = fascism
+			}
+			has_completed_focus = XSM_loyality
+		}
 		x = 1
 		y = 1
 		relative_position_id = XSM_Ma_bufang
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_inegartion_blueshirts_ideas"
+			add_popularity = { ideology = fascism popularity = 0.40 }
+			set_politics = { ruling_party = fascism }
+			if = {
+				limit = {
+					has_country_leader = {
+						name = "Ma Bufang"
+						ruling_only = yes
+					}
+				}
+				create_country_leader = {
+					name = "Ma Bufang"
+					desc = "Ma_Bufang_desc"
+					picture = "GFX_portrait_xsm_ma_bufang"
+					expire = "1965.1.1"
+					ideology = nationalism_ideology
+					traits = {
+						chinese_militarist
+						modernization
+						reformator
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_leader = {
+						name = "Ma Buqing"
+						ruling_only = yes
+					}
+				}
+				create_country_leader = {
+					name = "Ma Buqing"
+					desc = "Ma_Buqing_desc"
+					picture = "gfx/leaders/XSM/Portrait_Ma_Buqing.dds"
+					expire = "1965.1.1"
+					ideology = nationalism_ideology
+					traits = {
+						last_blood
+						corruption_loyality
+					}
+				}
+			}
+		}
 	}
 	focus = {
 		id = XSM_press_control
@@ -714,10 +1947,25 @@ focus_tree = {
 		prerequisite = {
 			focus = XSM_Ma_bufang
 		}
+		available = {
+			OR = {
+				has_country_leader = {
+					name = "Ma Bufang"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Ma Buqing"
+					ruling_only = yes
+				}
+			}
+		}
 		x = 3
 		y = 1
 		relative_position_id = XSM_Ma_bufang
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_press_control"
+			
+		}
 	}
 	focus = {
 		id = XSM_clear_sinin
@@ -726,10 +1974,25 @@ focus_tree = {
 		prerequisite = {
 			focus = XSM_press_control
 		}
+		available = {
+			OR = {
+				has_country_leader = {
+					name = "Ma Bufang"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Ma Buqing"
+					ruling_only = yes
+				}
+			}
+		}
 		x = 0
 		y = 1
 		relative_position_id = XSM_press_control
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_clear_sinin"
+			
+		}
 	}
 	focus = {
 		id = XSM_build_school
@@ -738,10 +2001,25 @@ focus_tree = {
 		prerequisite = {
 			focus = XSM_clear_sinin
 		}
+		available = {
+			OR = {
+				has_country_leader = {
+					name = "Ma Bufang"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Ma Buqing"
+					ruling_only = yes
+				}
+			}
+		}
 		x = 0
 		y = 1
 		relative_position_id = XSM_clear_sinin
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_build_school"
+			
+		}
 	}
 	focus = {
 		id = XSM_expedition_golog
@@ -750,10 +2028,25 @@ focus_tree = {
 		prerequisite = {
 			focus = XSM_Ma_bufang
 		}
+		available = {
+			OR = {
+				has_country_leader = {
+					name = "Ma Bufang"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Ma Buqing"
+					ruling_only = yes
+				}
+			}
+		}
 		x = 5
 		y = 1
 		relative_position_id = XSM_Ma_bufang
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_expedition_golog"
+			
+		}
 	}
 	focus = {
 		id = XSM_tibet_chinese
@@ -762,10 +2055,25 @@ focus_tree = {
 		prerequisite = {
 			focus = XSM_licvidate_slavery
 		}
+		available = {
+			OR = {
+				has_country_leader = {
+					name = "Ma Bufang"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Ma Buqing"
+					ruling_only = yes
+				}
+			}
+		}
 		x = -1
 		y = 1
 		relative_position_id = XSM_licvidate_slavery
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_tibet_chinese"
+			
+		}
 	}
 	focus = {
 		id = XSM_up_tibet_nalog
@@ -774,9 +2082,24 @@ focus_tree = {
 		prerequisite = {
 			focus = XSM_licvidate_slavery
 		}
+		available = {
+			OR = {
+				has_country_leader = {
+					name = "Ma Bufang"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Ma Buqing"
+					ruling_only = yes
+				}
+			}
+		}
 		x = 33
 		y = 3
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_up_tibet_nalog"
+			
+		}
 	}
 	focus = {
 		id = XSM_tibet_in_army
@@ -788,10 +2111,25 @@ focus_tree = {
 		prerequisite = {
 			focus = XSM_up_tibet_nalog
 		}
+		available = {
+			OR = {
+				has_country_leader = {
+					name = "Ma Bufang"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Ma Buqing"
+					ruling_only = yes
+				}
+			}
+		}
 		x = 1
 		y = 1
 		relative_position_id = XSM_tibet_chinese
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_tibet_in_army"
+			
+		}
 	}
 	focus = {
 		id = XSM_create_company
@@ -803,10 +2141,25 @@ focus_tree = {
 		prerequisite = {
 			focus = XSM_build_school
 		}
+		available = {
+			OR = {
+				has_country_leader = {
+					name = "Ma Bufang"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Ma Buqing"
+					ruling_only = yes
+				}
+			}
+		}
 		x = 4
 		y = 1
 		relative_position_id = XSM_ppl_group
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_create_company"
+			
+		}
 	}
 	focus = {
 		id = XSM_prom
@@ -815,10 +2168,25 @@ focus_tree = {
 		prerequisite = {
 			focus = XSM_create_company
 		}
+		available = {
+			OR = {
+				has_country_leader = {
+					name = "Ma Bufang"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Ma Buqing"
+					ruling_only = yes
+				}
+			}
+		}
 		x = -2
 		y = 1
 		relative_position_id = XSM_create_company
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_prom"
+			
+		}
 	}
 	focus = {
 		id = XSM_animal
@@ -827,10 +2195,25 @@ focus_tree = {
 		prerequisite = {
 			focus = XSM_create_company
 		}
+		available = {
+			OR = {
+				has_country_leader = {
+					name = "Ma Bufang"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Ma Buqing"
+					ruling_only = yes
+				}
+			}
+		}
 		x = 0
 		y = 1
 		relative_position_id = XSM_create_company
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_animal"
+			
+		}
 	}
 	focus = {
 		id = XSM_bank
@@ -839,10 +2222,25 @@ focus_tree = {
 		prerequisite = {
 			focus = XSM_create_company
 		}
+		available = {
+			OR = {
+				has_country_leader = {
+					name = "Ma Bufang"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Ma Buqing"
+					ruling_only = yes
+				}
+			}
+		}
 		x = 2
 		y = 1
 		relative_position_id = XSM_create_company
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_bank"
+			
+		}
 	}
 	focus = {
 		id = XSM_jihad_vs_JAP
@@ -851,10 +2249,25 @@ focus_tree = {
 		prerequisite = {
 			focus = XSM_pies
 		}
+		available = {
+			OR = {
+				has_country_leader = {
+					name = "Ma Bufang"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Ma Buqing"
+					ruling_only = yes
+				}
+			}
+		}
 		x = -2
 		y = 1
 		relative_position_id = XSM_pies
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_jihad_vs_JAP"
+			
+		}
 	}
 	focus = {
 		id = XSM_fight_with_commy
@@ -863,10 +2276,25 @@ focus_tree = {
 		prerequisite = {
 			focus = XSM_pies
 		}
+		available = {
+			OR = {
+				has_country_leader = {
+					name = "Ma Bufang"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Ma Buqing"
+					ruling_only = yes
+				}
+			}
+		}
 		x = 2
 		y = 1
 		relative_position_id = XSM_pies
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_fight_with_commy"
+			
+		}
 	}
 	focus = {
 		id = XSM_elite_horse
@@ -875,10 +2303,25 @@ focus_tree = {
 		prerequisite = {
 			focus = XSM_jihad_vs_JAP
 		}
+		available = {
+			OR = {
+				has_country_leader = {
+					name = "Ma Bufang"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Ma Buqing"
+					ruling_only = yes
+				}
+			}
+		}
 		x = -1
 		y = 1
 		relative_position_id = XSM_jihad_vs_JAP
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_elite_horse"
+			
+		}
 	}
 	focus = {
 		id = XSM_hight_train
@@ -887,10 +2330,25 @@ focus_tree = {
 		prerequisite = {
 			focus = XSM_codex_for_soldiers
 		}
+		available = {
+			OR = {
+				has_country_leader = {
+					name = "Ma Bufang"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Ma Buqing"
+					ruling_only = yes
+				}
+			}
+		}
 		x = -1
 		y = 1
 		relative_position_id = XSM_codex_for_soldiers
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_hight_train"
+			
+		}
 	}
 	focus = {
 		id = XSM_field_for_sun
@@ -899,10 +2357,25 @@ focus_tree = {
 		prerequisite = {
 			focus = XSM_codex_for_soldiers
 		}
+		available = {
+			OR = {
+				has_country_leader = {
+					name = "Ma Bufang"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Ma Buqing"
+					ruling_only = yes
+				}
+			}
+		}
 		x = 1
 		y = 1
 		relative_position_id = XSM_codex_for_soldiers
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_field_for_sun"
+			
+		}
 	}
 	focus = {
 		id = XSM_mobilize_militia
@@ -911,10 +2384,25 @@ focus_tree = {
 		prerequisite = {
 			focus = XSM_fight_with_commy
 		}
+		available = {
+			OR = {
+				has_country_leader = {
+					name = "Ma Bufang"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Ma Buqing"
+					ruling_only = yes
+				}
+			}
+		}
 		x = 1
 		y = 1
 		relative_position_id = XSM_fight_with_commy
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_mobilize_militia"
+			
+		}
 	}
 	focus = {
 		id = XSM_wave_tactik
@@ -923,10 +2411,25 @@ focus_tree = {
 		prerequisite = {
 			focus = XSM_elite_horse
 		}
+		available = {
+			OR = {
+				has_country_leader = {
+					name = "Ma Bufang"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Ma Buqing"
+					ruling_only = yes
+				}
+			}
+		}
 		x = 1
 		y = 1
 		relative_position_id = XSM_elite_horse
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_wave_tactik"
+			
+		}
 	}
 	focus = {
 		id = XSM_modern_strategy
@@ -935,13 +2438,28 @@ focus_tree = {
 		prerequisite = {
 			focus = XSM_hight_train
 		}
+		available = {
+			OR = {
+				has_country_leader = {
+					name = "Ma Bufang"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Ma Buqing"
+					ruling_only = yes
+				}
+			}
+		}
 		prerequisite = {
 			focus = XSM_field_for_sun
 		}
 		x = 1
 		y = 1
 		relative_position_id = XSM_hight_train
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_modern_strategy"
+			
+		}
 	}
 	focus = {
 		id = XSM_crowd_tactik
@@ -950,10 +2468,25 @@ focus_tree = {
 		prerequisite = {
 			focus = XSM_mobilize_militia
 		}
+		available = {
+			OR = {
+				has_country_leader = {
+					name = "Ma Bufang"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Ma Buqing"
+					ruling_only = yes
+				}
+			}
+		}
 		x = -1
 		y = 1
 		relative_position_id = XSM_mobilize_militia
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_crowd_tactik"
+			
+		}
 	}
 	focus = {
 		id = XSM_motorize
@@ -962,10 +2495,25 @@ focus_tree = {
 		prerequisite = {
 			focus = XSM_modern_strategy
 		}
+		available = {
+			OR = {
+				has_country_leader = {
+					name = "Ma Bufang"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Ma Buqing"
+					ruling_only = yes
+				}
+			}
+		}
 		x = -2
 		y = 1
 		relative_position_id = XSM_modern_strategy
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_motorize"
+			
+		}
 	}
 	focus = {
 		id = XSM_army_great
@@ -974,10 +2522,25 @@ focus_tree = {
 		prerequisite = {
 			focus = XSM_modern_strategy
 		}
+		available = {
+			OR = {
+				has_country_leader = {
+					name = "Ma Bufang"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Ma Buqing"
+					ruling_only = yes
+				}
+			}
+		}
 		x = 0
 		y = 1
 		relative_position_id = XSM_modern_strategy
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_army_great"
+			
+		}
 	}
 	focus = {
 		id = XSM_repair_logistik
@@ -986,10 +2549,25 @@ focus_tree = {
 		prerequisite = {
 			focus = XSM_modern_strategy
 		}
+		available = {
+			OR = {
+				has_country_leader = {
+					name = "Ma Bufang"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Ma Buqing"
+					ruling_only = yes
+				}
+			}
+		}
 		x = 2
 		y = 1
 		relative_position_id = XSM_modern_strategy
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_repair_logistik"
+			
+		}
 	}
 	focus = {
 		id = XSM_rise_revolutionary
@@ -1004,10 +2582,25 @@ focus_tree = {
 		prerequisite = {
 			focus = XSM_repair_logistik
 		}
+		available = {
+			OR = {
+				has_country_leader = {
+					name = "Ma Bufang"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Ma Buqing"
+					ruling_only = yes
+				}
+			}
+		}
 		x = 2
 		y = 1
 		relative_position_id = XSM_motorize
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_rise_revolutionary"
+			
+		}
 	}
 	focus = {
 		id = XSM_industrial
@@ -1016,10 +2609,25 @@ focus_tree = {
 		prerequisite = {
 			focus = XSM_Ma_bufang
 		}
+		available = {
+			OR = {
+				has_country_leader = {
+					name = "Ma Bufang"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Ma Buqing"
+					ruling_only = yes
+				}
+			}
+		}
 		x = -1
 		y = 1
 		relative_position_id = XSM_Ma_bufang
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_industrial"
+			
+		}
 	}
 
 	focus = {
@@ -1029,10 +2637,25 @@ focus_tree = {
 		prerequisite = {
 			focus = XSM_industrial
 		}
+		available = {
+			OR = {
+				has_country_leader = {
+					name = "Ma Bufang"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Ma Buqing"
+					ruling_only = yes
+				}
+			}
+		}
 		x = 2
 		y = 1
 		relative_position_id = XSM_industrial
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_agrarian_projects"
+			
+		}
 	}
 	focus = {
 		id = XSM_education_projects
@@ -1041,10 +2664,25 @@ focus_tree = {
 		prerequisite = {
 			focus = XSM_industrial
 		}
+		available = {
+			OR = {
+				has_country_leader = {
+					name = "Ma Bufang"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Ma Buqing"
+					ruling_only = yes
+				}
+			}
+		}
 		x = 0
 		y = 1
 		relative_position_id = XSM_industrial
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_education_projects"
+			
+		}
 	}
 	focus = {
 		id = XSM_water_sinin
@@ -1053,10 +2691,25 @@ focus_tree = {
 		prerequisite = {
 			focus = XSM_agrarian_projects
 		}
+		available = {
+			OR = {
+				has_country_leader = {
+					name = "Ma Bufang"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Ma Buqing"
+					ruling_only = yes
+				}
+			}
+		}
 		x = 0
 		y = 1
 		relative_position_id = XSM_agrarian_projects
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_water_sinin"
+			
+		}
 	}
 	focus = {
 		id = XSM_money_for_scholar
@@ -1065,10 +2718,25 @@ focus_tree = {
 		prerequisite = {
 			focus = XSM_education_projects
 		}
+		available = {
+			OR = {
+				has_country_leader = {
+					name = "Ma Bufang"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Ma Buqing"
+					ruling_only = yes
+				}
+			}
+		}
 		x = 0
 		y = 1
 		relative_position_id = XSM_education_projects
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_money_for_scholar"
+			
+		}
 	}
 	focus = {
 		id = XSM_sanitar_project
@@ -1077,10 +2745,25 @@ focus_tree = {
 		prerequisite = {
 			focus = XSM_industrial
 		}
+		available = {
+			OR = {
+				has_country_leader = {
+					name = "Ma Bufang"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Ma Buqing"
+					ruling_only = yes
+				}
+			}
+		}
 		x = -2
 		y = 1
 		relative_position_id = XSM_industrial
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_sanitar_project"
+			
+		}
 	}
 	focus = {
 		id = XSM_medical_project
@@ -1089,9 +2772,24 @@ focus_tree = {
 		prerequisite = {
 			focus = XSM_sanitar_project
 		}
+		available = {
+			OR = {
+				has_country_leader = {
+					name = "Ma Bufang"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Ma Buqing"
+					ruling_only = yes
+				}
+			}
+		}
 		x = 0
 		y = 1
 		relative_position_id = XSM_sanitar_project
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_medical_project"
+			
+		}
 	}
 }
