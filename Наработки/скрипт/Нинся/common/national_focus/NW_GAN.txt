@@ -10,7 +10,7 @@ focus_tree = {
 	default = no
 	focus = {
 		id = GAN_rise_goverment
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_diplomacy_1
 		cost = 10
 		x = 8
 		y = 0
@@ -54,7 +54,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GAN_secret_with_commi
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_communist_discourse
 		cost = 10
 		prerequisite = {
 			focus = GAN_rise_goverment
@@ -66,7 +66,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GAN_with_commi
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_communist_revolt
 		cost = 10
 		prerequisite = {
 			focus = GAN_secret_with_commi
@@ -114,7 +114,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GAN_form_cinhai
-		icon = GFX_goal_unknown
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
 		cost = 10
 		prerequisite = {
 			focus = GAN_war_with_cinhai
@@ -139,7 +139,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GAN_soldier_propaganda
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_red_army2
 		cost = 10
 		prerequisite = {
 			focus = GAN_with_commi
@@ -151,7 +151,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GAN_commi_goverment
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_council_communism
 		cost = 10
 		prerequisite = {
 			focus = GAN_with_commi
@@ -163,7 +163,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GAN_with_ccp
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_communist_brigades
 		cost = 10
 		prerequisite = {
 			focus = GAN_commi_goverment
@@ -178,7 +178,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GAN_likvidate_autonomy
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_government_2
 		cost = 10
 		prerequisite = {
 			focus = GAN_finance_from_republik
