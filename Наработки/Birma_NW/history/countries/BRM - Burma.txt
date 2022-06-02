@@ -1,0 +1,49 @@
+﻿capital = 288
+oob = "BRM_1936"
+set_stability = 0.25
+set_war_support = 0.0
+set_research_slots = 2
+add_ideas = {
+	BRM_idea_nation_conflict
+	BRM_idea_nalog_hight
+	BRM_idea_raj_burj
+	BRM_idea_no_army
+	disarmed_nation
+}
+set_cosmetic_tag = GOG_belgian
+
+set_convoys = 20
+
+recruit_character = BRM_Hugh_Lansdown_Stephenson
+recruit_character = BRM_Smith_Dun
+
+1936.1.1 = {
+
+	set_popularities = {
+		democratic = 0
+		fascism = 0
+		communism = 0
+		neutrality = 100
+		trozkism = 0
+		anarchism = 0
+		monarchy = 0
+	}
+	
+	set_politics = {
+		ruling_party = neutrality
+		last_election = "1935.6.20"
+		election_frequency = 57
+		elections_allowed = yes
+	}
+}
+
+#create_country_leader = {
+#	
+#	name = "Jonas Lote"
+#	picture = "gfx//leaders//Africa//Portrait_Africa_Generic_2.dds"
+#	expire = "1965.1.1"
+#	ideology = a
+#	traits = {
+#		#
+#	}
+#}

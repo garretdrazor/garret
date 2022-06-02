@@ -1,0 +1,214 @@
+create_burma_party_pie_chart = {
+	clear_array = burma_party_pie_chart
+	resize_array = {
+		array = burma_party_pie_chart
+		value = 1 # 1 is value for neutrality frame, so we don't have to make a loop for it
+		size = 100 # 100 pieces, each percent is one piece
+	}
+	set_temp_variable = { burma_party_grey_pop = burma_party_grey_pop_total }
+	round_temp_variable = burma_party_grey_pop
+
+	set_temp_variable = { burma_party_red_pop = burma_party_red_pop_total }
+	round_temp_variable = burma_party_red_pop 
+	set_variable = { ROOT.last_idx = burma_party_grey_pop }
+	add_to_temp_variable = { burma_party_red_pop = ROOT.last_idx }
+	for_loop_effect = {
+		start = ROOT.last_idx
+		end = burma_party_red_pop
+		set_variable = { burma_party_pie_chart^v = 2 }
+		add_to_variable = { ROOT.last_idx = 1 }
+	}
+
+	set_temp_variable = { burma_party_white_pop = burma_party_white_pop_total }
+	round_temp_variable = burma_party_white_pop 
+	set_variable = { ROOT.last_idx = burma_party_red_pop }
+	add_to_temp_variable = { burma_party_white_pop = ROOT.last_idx }
+	for_loop_effect = {
+		start = ROOT.last_idx
+		end = burma_party_white_pop
+		set_variable = { burma_party_pie_chart^v = 3 }
+		add_to_variable = { ROOT.last_idx = 1 }
+	}
+
+	set_temp_variable = { burma_party_blue_pop = burma_party_blue_pop_total }
+	round_temp_variable = burma_party_blue_pop 
+	set_variable = { ROOT.last_idx = burma_party_white_pop }
+	add_to_temp_variable = { burma_party_blue_pop = ROOT.last_idx }
+	for_loop_effect = {
+		start = ROOT.last_idx
+		end = burma_party_blue_pop
+		set_variable = { burma_party_pie_chart^v = 4 }
+		add_to_variable = { ROOT.last_idx = 1 }
+	}
+
+	set_temp_variable = { burma_party_green_pop = burma_party_green_pop_total }
+	round_temp_variable = burma_party_green_pop 
+	set_variable = { ROOT.last_idx = burma_party_blue_pop }
+	add_to_temp_variable = { burma_party_green_pop = ROOT.last_idx }
+	for_loop_effect = {
+		start = ROOT.last_idx
+		end = burma_party_green_pop
+		set_variable = { burma_party_pie_chart^v = 5 }
+		add_to_variable = { ROOT.last_idx = 1 }
+	}
+
+	clear_variable = ROOT.last_idx
+}
+
+
+# команды для эффектов. Пример:
+# set_temp_variable = { add_popularity_burma_party_grey_temp = 10 }
+# add_popularity_burma_party_grey = yes
+
+add_popularity_burma_party_grey = {
+	add_to_variable = { burma_party_grey_pop_total = add_popularity_burma_party_grey_temp }
+	custom_effect_tooltip = add_burma_party_grey_pop_tt
+	
+	reload_burma_party_array = yes
+	set_variable = { burma_party_total_array^0 = 0 }
+	add_to_temp_variable = { reload_temp_var = -1 }
+	set_temp_variable = { t1 = add_popularity_burma_party_grey_temp }
+	divide_temp_variable = { t1 = reload_temp_var }
+	synchronization_total_var = yes
+	clamp_total_var = yes
+	create_burma_party_pie_chart = yes
+}
+
+add_popularity_burma_party_red = {
+	add_to_variable = { burma_party_red_pop_total = add_popularity_burma_party_red_temp }
+	custom_effect_tooltip = add_burma_party_red_pop_tt
+	
+	reload_burma_party_array = yes
+	set_variable = { burma_party_total_array^0 = 0 }
+	add_to_temp_variable = { reload_temp_var = -1 }
+	set_temp_variable = { t1 = add_popularity_burma_party_red_temp }
+	divide_temp_variable = { t1 = reload_temp_var }
+	synchronization_total_var = yes
+	clamp_total_var = yes
+	create_burma_party_pie_chart = yes
+}
+
+add_popularity_burma_party_white = {
+	add_to_variable = { burma_party_white_pop_total = add_popularity_burma_party_white_temp }
+	custom_effect_tooltip = add_burma_party_white_pop_tt
+	
+	reload_burma_party_array = yes
+	set_variable = { burma_party_total_array^0 = 0 }
+	add_to_temp_variable = { reload_temp_var = -1 }
+	set_temp_variable = { t1 = add_popularity_burma_party_white_temp }
+	divide_temp_variable = { t1 = reload_temp_var }
+	synchronization_total_var = yes
+	clamp_total_var = yes
+	create_burma_party_pie_chart = yes
+}
+
+add_popularity_burma_party_blue = {
+	add_to_variable = { burma_party_blue_pop_total = add_popularity_burma_party_blue_temp }
+	custom_effect_tooltip = add_burma_party_blue_pop_tt
+	
+	reload_burma_party_array = yes
+	set_variable = { burma_party_total_array^0 = 0 }
+	add_to_temp_variable = { reload_temp_var = -1 }
+	set_temp_variable = { t1 = add_popularity_burma_party_blue_temp }
+	divide_temp_variable = { t1 = reload_temp_var }
+	synchronization_total_var = yes
+	clamp_total_var = yes
+	create_burma_party_pie_chart = yes
+}
+
+add_popularity_burma_party_green = {
+	add_to_variable = { burma_party_green_pop_total = add_popularity_burma_party_green_temp }
+	custom_effect_tooltip = add_burma_party_green_pop_tt
+	
+	reload_burma_party_array = yes
+	set_variable = { burma_party_total_array^0 = 0 }
+	add_to_temp_variable = { reload_temp_var = -1 }
+	set_temp_variable = { t1 = add_popularity_burma_party_green_temp }
+	divide_temp_variable = { t1 = reload_temp_var }
+	synchronization_total_var = yes
+	clamp_total_var = yes
+	create_burma_party_pie_chart = yes
+}
+
+
+
+# техническая команда для вычетания популярностей из ДРУГИХ ориентаций при добавлении через эффект/нацдух указанной ориентации
+# служит для определения количества других ориентаций, между которыми будет поделен эффект
+
+reload_burma_party_array = {
+	clear_array = burma_party_total_array
+	
+	add_to_array = { array = burma_party_total_array value = burma_party_grey_pop_total }
+	add_to_array = { array = burma_party_total_array value = burma_party_red_pop_total }
+	add_to_array = { array = burma_party_total_array value = burma_party_white_pop_total }
+	add_to_array = { array = burma_party_total_array value = burma_party_blue_pop_total }
+	add_to_array = { array = burma_party_total_array value = burma_party_green_pop_total }
+	
+	#log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): burma_party_total_array^0 = [?burma_party_total_array^0]"
+	#log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): burma_party_total_array^1 = [?burma_party_total_array^1]"
+	#log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): burma_party_total_array^2 = [?burma_party_total_array^2]"
+	#log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): burma_party_total_array^3 = [?burma_party_total_array^3]"
+	#log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): burma_party_total_array^4 = [?burma_party_total_array^4]"
+	
+	if = {
+		limit = { check_variable = { burma_party_grey_pop_total > 0 } }
+		add_to_temp_variable = { reload_temp_var = 1 }
+	}
+	if = {
+		limit = { check_variable = { burma_party_red_pop_total > 0 } }
+		add_to_temp_variable = { reload_temp_var = 1 }
+	}
+	if = {
+		limit = { check_variable = { burma_party_white_pop_total > 0 } }
+		add_to_temp_variable = { reload_temp_var = 1 }
+	}
+	if = {
+		limit = { check_variable = { burma_party_blue_pop_total > 0 } }
+		add_to_temp_variable = { reload_temp_var = 1 }
+	}
+	if = {
+		limit = { check_variable = { burma_party_green_pop_total > 0 } }
+		add_to_temp_variable = { reload_temp_var = 1 }
+	}
+	
+}
+
+
+# техническая команда. собстна, операция вычетания. ДОЛЖНА юзаться с командой выше
+# пришлось разграничить т.к. между ними тоже есть операции
+
+synchronization_total_var = {
+	if = {
+		limit = { check_variable = { burma_party_total_array^0 > 0 } }
+		subtract_from_variable = { burma_party_grey_pop_total = t1 }
+	}
+	if = {
+		limit = { check_variable = { burma_party_total_array^1 > 0 } }
+		subtract_from_variable = { burma_party_red_pop_total = t1 }
+	}
+	if = {
+		limit = { check_variable = { burma_party_total_array^2 > 0 } }
+		subtract_from_variable = { burma_party_white_pop_total = t1 }
+	}
+	if = {
+		limit = { check_variable = { burma_party_total_array^3 > 0 } }
+		subtract_from_variable = { burma_party_blue_pop_total = t1 }
+	}
+	if = {
+		limit = { check_variable = { burma_party_total_array^4 > 0 } }
+		subtract_from_variable = { burma_party_green_pop_total = t1 }
+	}
+
+	clear_array = burma_party_total_array
+}
+
+
+
+# техническая команда для ВСЕХ эффектов изменения популярности (даже нацдухов). Ограничивает все популярности между 0 и 100%
+clamp_total_var = {
+	clamp_variable = { var = burma_party_grey_pop_total min = 0 max = 100 }
+	clamp_variable = { var = burma_party_red_pop_total min = 0 max = 100 }
+	clamp_variable = { var = burma_party_white_pop_total min = 0 max = 100 }
+	clamp_variable = { var = burma_party_blue_pop_total min = 0 max = 100 }
+	clamp_variable = { var = burma_party_green_pop_total min = 0 max = 100 }
+}

@@ -1,0 +1,105 @@
+﻿add_namespace = brm
+
+#ПРОМЫШЛЕННОСТЬ#
+
+#спасение банка миср#
+
+
+
+
+# Второй университетский бойкот в Бирме			### Подписывай заголовки ивентов, блять. Потом хуй пойми что куда
+country_event = {
+	id = brm.1
+	title = brm.1.t
+	desc = brm.1.d
+	picture = GFX_report_event_brm_1
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event brm.1" }
+
+	option = {
+		name = brm.1.a
+		add_stability = -0.03
+	}
+}
+
+# Смерть четвёртой принцессы
+country_event = {
+	id = brm.2
+	title = brm.2.t
+	desc = brm.2.d
+	picture = GFX_report_event_brm_2
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event brm.2" }
+
+	option = {
+		name = brm.2.a
+		add_stability = -0.03
+	}
+}
+
+# Студенческая забастовка
+country_event = {
+	id = brm.3
+	title = brm.3.t
+	desc = brm.3.d
+	picture = GFX_report_event_brm_3
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event brm.3" }
+
+	option = {
+		name = brm.3.a
+		add_stability = -0.03
+		add_ideas = BRM_idea_students_riot
+	}
+}
+
+# Выборы в первый Бирманский парламент
+country_event = {
+	id = brm.4
+	title = brm.4.t
+	desc = brm.4.d
+	picture = GFX_report_event_brm_4
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event brm.4" }
+
+	option = {
+		name = brm.4.a
+		add_stability = 0.01
+		unlock_decision_category_tooltip = BRM_congress_categories
+		set_country_flag = BRM_congress_categories_flag
+		hidden_effect = {
+			set_variable = { burma_party_grey_pop_total = 18 }
+			set_variable = { burma_party_red_pop_total = 0 }
+			set_variable = { burma_party_white_pop_total = 40 }
+			set_variable = { burma_party_blue_pop_total = 13 }
+			set_variable = { burma_party_green_pop_total = 29 }
+			create_burma_party_pie_chart = yes
+		}
+	}
+}
+
+
+
+
+
+
+
+
+# TEST
+country_event = {
+	id = brm.999
+	is_triggered_only = yes
+	hidden = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event brm.999" }
+
+	option = {
+		name = "1"
+		set_temp_variable = { add_popularity_burma_party_grey_temp = 10 }
+		add_popularity_burma_party_grey = yes
+	}
+}

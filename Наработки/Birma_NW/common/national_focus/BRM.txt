@@ -1,0 +1,2617 @@
+focus_tree = {
+	id = BRM
+	continuous_focus_position = { x = 700 y = 1300 }
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = BRM
+		}
+	}
+	default = no
+	focus = {
+		id = BRM_new_constitution
+		text = BRM_new_constitution
+		icon = GFX_z_goal_liberation
+		cost = 10
+		x = 27
+		y = 0
+
+	}
+	focus = {
+		id = BRM_bhurma_road
+		text = BRM_bhurma_road
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10
+		x = 6
+		y = 14
+
+	}
+	focus = {
+		id = BRM_create_vmf
+		text = BRM_create_vmf
+		icon = GFX_z_goal_bhurma_vmf
+		cost = 10
+		x = 15
+		y = 14
+
+	}
+	focus = {
+		id = BRM_birma_rifle
+		text = BRM_birma_rifle
+		icon = GFX_focus_mex_caudillo_private_armies
+		cost = 10
+		x = 22
+		y = 14
+
+	}
+	focus = {
+		id = BRM_police_reorganization
+		text = BRM_police_reorganization
+		icon = GFX_z_goal_churma_police_reorganozation
+		cost = 10
+		x = 29
+		y = 14
+
+	}
+	focus = {
+		id = BRM_air_dabaing
+		icon = GFX_focus_generic_aircraft_production
+		cost = 10
+		x = 33
+		y = 14
+
+	}
+	focus = {
+		id = BRM_general_association
+		text = BRM_general_association
+		icon = GFX_z_goal_GBBA
+		cost = 10
+		prerequisite = {
+			focus = BRM_new_constitution
+		}
+		mutually_exclusive = {
+			focus = BR_sinega
+			focus = BRM_form_parlament
+		}
+		x = -25
+		y = 1
+		relative_position_id = BRM_new_constitution
+
+	}
+	focus = {
+		id = BRM_small_nations
+		text = BRM_small_nations
+		icon = GFX_goal_generic_national_unity
+		cost = 10
+		prerequisite = {
+			focus = BRM_general_association
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRM_general_association
+
+	}
+	focus = {
+		id = BRM_cancel_price
+		text = BRM_cancel_price
+		icon = GFX_z_goal_generic_fight_against_corruption
+		cost = 10
+		prerequisite = {
+			focus = BRM_general_association
+		}
+		x = 2
+		y = 1
+		relative_position_id = BRM_general_association
+
+	}
+	focus = {
+		id = BRM_form_parlament
+		text = BRM_form_parlament
+		icon = GFX_z_goal_five_flowers
+		cost = 10
+		prerequisite = {
+			focus = BRM_new_constitution
+		}
+		mutually_exclusive = {
+			focus = BR_sinega
+			focus = BRM_general_association
+		}
+		x = 13
+		y = 1
+		relative_position_id = BRM_new_constitution
+
+	}
+	focus = {
+		id = BRM_unite_five_flowers
+		text = BRM_unite_five_flowers
+		icon = GFX_z_goal_five_flowers_pact
+		cost = 10
+		prerequisite = {
+			focus = BRM_form_parlament
+		}
+		x = 2
+		y = 2
+		relative_position_id = BRM_form_parlament
+
+	}
+	focus = {
+		id = BRM_royal_support
+		text = BRM_royal_support
+		icon = GFX_z_goal_brm_royal1
+		cost = 10
+		prerequisite = {
+			focus = BRM_form_parlament
+		}
+		mutually_exclusive = {
+			focus = BRM_budda_activists
+		}
+		x = 4
+		y = 1
+		relative_position_id = BRM_form_parlament
+
+	}
+	focus = {
+		id = BR_sinega
+		text = BR_sinega
+		icon = GFX_z_goal_win_Ba_Mo
+		cost = 10
+		prerequisite = {
+			focus = BRM_new_constitution
+		}
+		mutually_exclusive = {
+			focus = BRM_general_association
+			focus = BRM_form_parlament
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRM_new_constitution
+
+	}
+	focus = {
+		id = BRM_second_galon
+		text = BRM_second_galon
+		icon = GFX_z_goal_bet_on_militia
+		cost = 10
+		prerequisite = {
+			focus = BRM_general_association
+			focus = BR_sinega
+			focus = BRM_form_parlament
+		}
+		mutually_exclusive = {
+			focus = BRM_foff_Ba_Maw
+			focus = BRM_last_Hunger_March
+		}
+		x = 4
+		y = 3
+		relative_position_id = BRM_new_constitution
+
+	}
+	focus = {
+		id = BRM_budda_yang_rise
+		text = BRM_budda_yang_rise
+		icon = GFX_z_goal_yang_bhurma
+		cost = 10
+		prerequisite = {
+			focus = BRM_general_association
+		}
+		x = -2
+		y = 1
+		relative_position_id = BRM_general_association
+
+	}
+	focus = {
+		id = BRM_province_referendum
+		text = BRM_province_referendum
+		icon = GFX_z_goal_elections_congress
+		cost = 10
+		prerequisite = {
+			focus = BRM_small_nations
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRM_small_nations
+
+	}
+	focus = {
+		id = BRM_dominion_status
+		text = BRM_dominion_status
+		icon = GFX_goal_generic_major_alliance
+		cost = 10
+		prerequisite = {
+			focus = BRM_province_referendum
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRM_province_referendum
+
+	}
+	focus = {
+		id = BRM_defend_buddism
+		text = BRM_defend_buddism
+		icon = GFX_z_goal_authoritarian_democracy_focus
+		cost = 10
+		prerequisite = {
+			focus = BRM_budda_yang_rise
+		}
+		prerequisite = {
+			focus = BRM_dominion_status
+		}
+		x = -2
+		y = 1
+		relative_position_id = BRM_dominion_status
+
+	}
+	focus = {
+		id = BRM_change_president_constitution
+		text = BRM_change_president_constitution
+		icon = GFX_z_goal_pretor
+		cost = 10
+		prerequisite = {
+			focus = BRM_dominion_status
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRM_dominion_status
+
+	}
+	focus = {
+		id = BRM_back_debt
+		text = BRM_back_debt
+		icon = GFX_z_goal_Cupe_nalog
+		cost = 10
+		prerequisite = {
+			focus = BRM_cancel_price
+		}
+		prerequisite = {
+			focus = BRM_dominion_status
+		}
+		x = 2
+		y = 1
+		relative_position_id = BRM_dominion_status
+
+	}
+	focus = {
+		id = BRM_last_Hunger_March
+		text = BRM_last_Hunger_March
+		icon = GFX_z_goal_hungry_marsh
+		cost = 10
+		prerequisite = {
+			focus = BRM_general_association
+			focus = BR_sinega
+			focus = BRM_form_parlament
+		}
+		mutually_exclusive = {
+			focus = BRM_foff_Ba_Maw
+			focus = BRM_second_galon
+		}
+		x = -15
+		y = 3
+		relative_position_id = BRM_new_constitution
+
+	}
+	focus = {
+		id = BRM_create_new_profally
+		text = BRM_create_new_profally
+		icon = GFX_z_goal_generic_dictatorship_of_proletariat
+		cost = 10
+		prerequisite = {
+			focus = BRM_last_Hunger_March
+		}
+		x = -2
+		y = 1
+		relative_position_id = BRM_last_Hunger_March
+
+	}
+	focus = {
+		id = BRM_dobama_asaion
+		text = BRM_dobama_asaion
+		icon = GFX_z_goal_dobaima
+		cost = 10
+		prerequisite = {
+			focus = BRM_last_Hunger_March
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRM_last_Hunger_March
+
+	}
+	focus = {
+		id = BRM_lethion_tat
+		text = BRM_lethion_tat
+		icon = GFX_focus_SOV_builder_of_the_red_army
+		cost = 10
+		prerequisite = {
+			focus = BRM_last_Hunger_March
+		}
+		x = 2
+		y = 1
+		relative_position_id = BRM_last_Hunger_March
+
+	}
+	focus = {
+		id = BRM_com_party
+		text = BRM_com_party
+		icon = GFX_z_goal_unification_of_communist_cells
+		cost = 10
+		prerequisite = {
+			focus = BRM_dobama_asaion
+		}
+		mutually_exclusive = {
+			focus = BRM_bhurna_bad_day
+		}
+		x = -6
+		y = 1
+		relative_position_id = BRM_dobama_asaion
+
+	}
+	focus = {
+		id = BRM_bhurna_bad_day
+		text = BRM_bhurna_bad_day
+		icon = GFX_z_goal_brm_bad_day
+		cost = 10
+		prerequisite = {
+			focus = BRM_dobama_asaion
+		}
+		mutually_exclusive = {
+			focus = BRM_com_party
+		}
+		x = 6
+		y = 1
+		relative_position_id = BRM_dobama_asaion
+
+	}
+	focus = {
+		id = BRM_rise_white_flag
+		text = BRM_rise_white_flag
+		icon = GFX_z_goal_brm_white_flag
+		cost = 10
+		prerequisite = {
+			focus = BRM_com_party
+		}
+		mutually_exclusive = {
+			focus = BRM_people_front
+			focus = BRM_rise_red_flag
+		}
+		x = -6
+		y = 1
+		relative_position_id = BRM_com_party
+
+	}
+	focus = {
+		id = BRM_Volunteer_Organization
+		text = BRM_Volunteer_Organization
+		icon = GFX_z_goal_red_army3
+		cost = 10
+		prerequisite = {
+			focus = BRM_rise_white_flag
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRM_rise_white_flag
+
+	}
+	focus = {
+		id = BRM_Pangalon
+		text = BRM_Pangalon
+		icon = GFX_z_goal_commi_raskol
+		cost = 10
+		prerequisite = {
+			focus = BRM_Volunteer_Organization
+			focus = BRM_culture_revolution
+		}
+		x = 1
+		y = 1
+		relative_position_id = BRM_Volunteer_Organization
+
+	}
+	focus = {
+		id = BRM_our_generals
+		text = BRM_our_generals
+		icon = GFX_z_goal_war_red_generals
+		cost = 10
+		prerequisite = {
+			focus = BRM_Volunteer_Organization
+		}
+		x = 0
+		y = 2
+		relative_position_id = BRM_Volunteer_Organization
+
+	}
+	focus = {
+		id = BRM_help_from_com_china
+		icon = GFX_focus_chi_cooperation_with_the_communists
+		cost = 10
+		prerequisite = {
+			focus = BRM_our_generals
+		}
+		mutually_exclusive = {
+			focus = BRM_ally_with_SOV
+			focus = BRM_raj_ally
+		}
+		x = 0
+		y = 2
+		relative_position_id = BRM_our_generals
+
+	}
+	focus = {
+		id = BRM_integrate_small_nations
+		text = BRM_integrate_small_nations
+		icon = GFX_goal_generic_national_unity
+		cost = 10
+		prerequisite = {
+			focus = BRM_our_generals
+			focus = BRM_insane_manifest
+		}
+		x = 1
+		y = 1
+		relative_position_id = BRM_our_generals
+
+	}
+	focus = {
+		id = BRM_people_front
+		text = BRM_people_front
+		icon = GFX_z_goal_brm_ppl_front
+		cost = 10
+		prerequisite = {
+			focus = BRM_com_party
+		}
+		mutually_exclusive = {
+			focus = BRM_rise_white_flag
+			focus = BRM_rise_red_flag
+		}
+		x = -4
+		y = 1
+		relative_position_id = BRM_com_party
+
+	}
+	focus = {
+		id = BRM_culture_revolution
+		text = BRM_culture_revolution
+		icon = GFX_goal_generic_war_with_comintern
+		cost = 10
+		prerequisite = {
+			focus = BRM_people_front
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRM_people_front
+
+	}
+	focus = {
+		id = BRM_insane_manifest
+		text = BRM_insane_manifest
+		icon = GFX_focus_por_workers_of_iberia
+		cost = 10
+		prerequisite = {
+			focus = BRM_culture_revolution
+		}
+		x = 0
+		y = 2
+		relative_position_id = BRM_culture_revolution
+
+	}
+	focus = {
+		id = BRM_ally_with_SOV
+		text = BRM_ally_with_SOV
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		cost = 10
+		prerequisite = {
+			focus = BRM_integrate_small_nations
+			focus = BRM_save_autonomy
+		}
+		mutually_exclusive = {
+			focus = BRM_help_from_com_china
+			focus = BRM_raj_ally
+		}
+		x = 0
+		y = 2
+		relative_position_id = BRM_insane_manifest
+
+	}
+	focus = {
+		id = BRM_rise_red_flag
+		text = BRM_rise_red_flag
+		icon = GFX_z_goal_red_flag
+		cost = 10
+		prerequisite = {
+			focus = BRM_com_party
+		}
+		mutually_exclusive = {
+			focus = BRM_people_front
+			focus = BRM_rise_white_flag
+		}
+		x = -2
+		y = 1
+		relative_position_id = BRM_com_party
+
+	}
+	focus = {
+		id = BRM_culture_ally
+		text = BRM_culture_ally
+		icon = GFX_z_goal_rev_militia1
+		cost = 10
+		prerequisite = {
+			focus = BRM_rise_red_flag
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRM_rise_red_flag
+
+	}
+	focus = {
+		id = BRM_provoke_karen
+		text = BRM_provoke_karen
+		icon = GFX_z_goal_militarism_focus
+		cost = 10
+		prerequisite = {
+			focus = BRM_culture_ally
+		}
+		x = 0
+		y = 2
+		relative_position_id = BRM_culture_ally
+
+	}
+	focus = {
+		id = BRM_save_autonomy
+		text = BRM_save_autonomy
+		icon = GFX_z_guarantee_autonomy_minorities
+		cost = 10
+		prerequisite = {
+			focus = BRM_provoke_karen
+		}
+		x = -1
+		y = 1
+		relative_position_id = BRM_provoke_karen
+
+	}
+	focus = {
+		id = BRM_war_vs_imperalism
+		icon = GFX_z_goal_burn_imperalism
+		cost = 10
+		prerequisite = {
+			focus = BRM_provoke_karen
+		}
+		x = 1
+		y = 1
+		relative_position_id = BRM_provoke_karen
+
+	}
+	focus = {
+		id = BRM_raj_ally
+		text = BRM_raj_ally
+		icon = GFX_z_goal_raj_dem_ally
+		cost = 10
+		prerequisite = {
+			focus = BRM_provoke_karen
+		}
+		mutually_exclusive = {
+			focus = BRM_ally_with_SOV
+			focus = BRM_help_from_com_china
+		}
+		x = 0
+		y = 2
+		relative_position_id = BRM_provoke_karen
+
+	}
+	focus = {
+		id = BRM_fast_military
+		text = BRM_fast_military
+		icon = GFX_z_goal_communist_factories
+		cost = 10
+		prerequisite = {
+			focus = BRM_com_party
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRM_com_party
+
+	}
+	focus = {
+		id = BRM_agrar_com_reform
+		text = BRM_agrar_com_reform
+		icon = GFX_z_goal_new_agrarian_reform
+		cost = 10
+		prerequisite = {
+			focus = BRM_fast_military
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRM_fast_military
+
+	}
+	focus = {
+		id = BRM_personality_cult
+		text = BRM_personality_cult
+		icon = GFX_focus_SOV_stalins_cult_of_personality
+		cost = 10
+		prerequisite = {
+			focus = BRM_agrar_com_reform
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRM_agrar_com_reform
+
+	}
+	focus = {
+		id = BRM_broke_separate
+		text = BRM_broke_separate
+		icon = GFX_focus_SOV_penal_battalions
+		cost = 10
+		prerequisite = {
+			focus = BRM_fast_military
+		}
+		x = 2
+		y = 1
+		relative_position_id = BRM_fast_military
+
+	}
+	focus = {
+		id = BRM_rise_after_civil_war
+		text = BRM_rise_after_civil_war
+		icon = GFX_z_goal_com_country_up
+		cost = 10
+		prerequisite = {
+			focus = BRM_broke_separate
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRM_broke_separate
+
+	}
+	focus = {
+		id = BRM_oil_nacionalization
+		text = BRM_oil_nacionalization
+		icon = GFX_z_goal_oil
+		cost = 10
+		prerequisite = {
+			focus = BRM_com_party
+			focus = BRM_bhurna_bad_day
+		}
+		x = -3
+		y = 2
+		relative_position_id = BRM_dobama_asaion
+
+	}
+	focus = {
+		id = BRM_red_dragon
+		text = BRM_red_dragon
+		icon = GFX_z_goal_red_dragon
+		cost = 10
+		prerequisite = {
+			focus = BRM_com_party
+			focus = BRM_bhurna_bad_day
+		}
+		x = -1
+		y = 2
+		relative_position_id = BRM_dobama_asaion
+
+	}
+	focus = {
+		id = BRM_take_raj_lands
+		text = BRM_take_raj_lands
+		icon = GFX_z_goal_collectivization_of_agriculture
+		cost = 10
+		prerequisite = {
+			focus = BRM_com_party
+			focus = BRM_bhurna_bad_day
+		}
+		x = 1
+		y = 2
+		relative_position_id = BRM_dobama_asaion
+
+	}
+	focus = {
+		id = BRM_all_nacionalization
+		text = BRM_all_nacionalization
+		icon = GFX_z_goal_industry_nationalization
+		cost = 10
+		prerequisite = {
+			focus = BRM_oil_nacionalization
+		}
+		prerequisite = {
+			focus = BRM_take_raj_lands
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRM_red_dragon
+
+	}
+	focus = {
+		id = BRM_marionate_thai
+		text = BRM_marionate_thai
+		icon = GFX_focus_ger_great_red_menace
+		cost = 10
+		prerequisite = {
+			focus = BRM_all_nacionalization
+		}
+		x = -1
+		y = 1
+		relative_position_id = BRM_all_nacionalization
+
+	}
+	focus = {
+		id = BRM_marionate_raj
+		text = BRM_marionate_raj
+		icon = GFX_focus_RAJ_seek_help_from_soviet
+		cost = 10
+		prerequisite = {
+			focus = BRM_all_nacionalization
+		}
+		x = 1
+		y = 1
+		relative_position_id = BRM_all_nacionalization
+
+	}
+	focus = {
+		id = BRM_marionate_indchi
+		text = BRM_marionate_indchi
+		icon = GFX_z_goal_communist_brigades
+		cost = 10
+		prerequisite = {
+			focus = BRM_marionate_thai
+		}
+		x = -1
+		y = 1
+		relative_position_id = BRM_marionate_thai
+
+	}
+	focus = {
+		id = BRM_marionate_south_chi
+		text = BRM_marionate_south_chi
+		icon = GFX_z_goal_communist_brigades
+		cost = 10
+		prerequisite = {
+			focus = BRM_marionate_thai
+			focus = BRM_marionate_raj
+		}
+		x = 1
+		y = 1
+		relative_position_id = BRM_marionate_thai
+
+	}
+	focus = {
+		id = BRM_marionate_raj_lands
+		text = BRM_marionate_raj_lands
+		icon = GFX_focus_RAJ_seek_help_from_soviet
+		cost = 10
+		prerequisite = {
+			focus = BRM_marionate_raj
+		}
+		x = 1
+		y = 1
+		relative_position_id = BRM_marionate_raj
+
+	}
+	focus = {
+		id = BRM_Peedatva
+		text = BRM_Peedatva
+		icon = GFX_z_goal_Start_the_first_five_year_plan
+		cost = 10
+		prerequisite = {
+			focus = BRM_bhurna_bad_day
+		}
+		x = -3
+		y = 1
+		relative_position_id = BRM_bhurna_bad_day
+
+	}
+	focus = {
+		id = BRM_add_infra
+		text = BRM_add_infra
+		icon = GFX_z_goal_city_road_cei
+		cost = 10
+		prerequisite = {
+			focus = BRM_Peedatva
+		}
+		x = -1
+		y = 1
+		relative_position_id = BRM_Peedatva
+
+	}
+	focus = {
+		id = BRM_add_soc
+		text = BRM_add_soc
+		icon = GFX_z_goal_social_laws_2
+		cost = 10
+		prerequisite = {
+			focus = BRM_Peedatva
+		}
+		x = 1
+		y = 1
+		relative_position_id = BRM_Peedatva
+
+	}
+	focus = {
+		id = BRM_upgrade_prov
+		text = BRM_upgrade_prov
+		icon = GFX_focus_BUL_free_balkan_states
+		cost = 10
+		prerequisite = {
+			focus = BRM_add_infra
+		}
+		prerequisite = {
+			focus = BRM_add_soc
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRM_add_infra
+
+	}
+	focus = {
+		id = BRM_upgrade_prom
+		text = BRM_upgrade_prom
+		icon = GFX_z_goal_ekonomik_ref
+		cost = 10
+		prerequisite = {
+			focus = BRM_add_infra
+		}
+		prerequisite = {
+			focus = BRM_add_soc
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRM_add_soc
+
+	}
+	focus = {
+		id = BRM_massive_org
+		text = BRM_massive_org
+		icon = GFX_focus_YUG_pan_slavic_congress
+		cost = 10
+		prerequisite = {
+			focus = BRM_bhurna_bad_day
+		}
+		mutually_exclusive = {
+			focus = BRM_kadr_org
+		}
+		x = -1
+		y = 1
+		relative_position_id = BRM_bhurna_bad_day
+
+	}
+	focus = {
+		id = BRM_kadr_org
+		icon = GFX_z_goal_soviet_pansionat
+		cost = 10
+		prerequisite = {
+			focus = BRM_bhurna_bad_day
+		}
+		mutually_exclusive = {
+			focus = BRM_massive_org
+		}
+		x = 1
+		y = 1
+		relative_position_id = BRM_bhurna_bad_day
+
+	}
+	focus = {
+		id = BRM_our_country
+		text = BRM_our_country
+		icon = GFX_z_goal_budda_country
+		cost = 10
+		prerequisite = {
+			focus = BRM_bhurna_bad_day
+		}
+		mutually_exclusive = {
+			focus = BRM_military_power
+			focus = BRM_new_selection
+		}
+		x = 3
+		y = 1
+		relative_position_id = BRM_bhurna_bad_day
+
+	}
+	focus = {
+		id = BRM_spirit_leader
+		text = BRM_spirit_leader
+		icon = GFX_z_goal_support_buddism_gimns
+		cost = 10
+		prerequisite = {
+			focus = BRM_our_country
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRM_our_country
+
+	}
+	focus = {
+		id = BRM_budda_piece
+		text = BRM_budda_piece
+		icon = GFX_z_goal_buddism_yang_move
+		cost = 10
+		prerequisite = {
+			focus = BRM_our_country
+		}
+		x = -2
+		y = 1
+		relative_position_id = BRM_our_country
+
+	}
+	focus = {
+		id = BRM_budda_price
+		text = BRM_budda_price
+		icon = GFX_z_goal_open_buddish_temple
+		cost = 10
+		prerequisite = {
+			focus = BRM_budda_piece
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRM_budda_piece
+
+	}
+	focus = {
+		id = BRM_resource_with_USA
+		text = BRM_resource_with_USA
+		icon = GFX_focus_chi_mission_to_the_us
+		cost = 10
+		prerequisite = {
+			focus = BRM_upgrade_prom
+		}
+		x = -2
+		y = 1
+		relative_position_id = BRM_budda_price
+
+	}
+	focus = {
+		id = BRM_monastry_socialism
+		text = BRM_monastry_socialism
+		icon = GFX_z_goal_buddism_communism
+		cost = 10
+		prerequisite = {
+			focus = BRM_budda_price
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRM_budda_price
+
+	}
+	focus = {
+		id = BRM_military_power
+		text = BRM_military_power
+		icon = GFX_z_goal_brm_military_soc
+		cost = 10
+		prerequisite = {
+			focus = BRM_bhurna_bad_day
+		}
+		mutually_exclusive = {
+			focus = BRM_our_country
+			focus = BRM_new_selection
+		}
+		x = 5
+		y = 1
+		relative_position_id = BRM_bhurna_bad_day
+
+	}
+	focus = {
+		id = BRM_political_upbringing
+		text = BRM_political_upbringing
+		icon = GFX_z_goal_generic_political_correctness
+		cost = 10
+		prerequisite = {
+			focus = BRM_military_power
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRM_military_power
+
+	}
+	focus = {
+		id = BRM_country_hospital
+		text = BRM_country_hospital
+		icon = GFX_z_goal_med
+		cost = 10
+		prerequisite = {
+			focus = BRM_political_upbringing
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRM_political_upbringing
+
+	}
+	focus = {
+		id = BRM_central_army_train
+		text = BRM_central_army_train
+		icon = GFX_z_goal_new_army
+		cost = 10
+		prerequisite = {
+			focus = BRM_political_upbringing
+		}
+		x = -2
+		y = 1
+		relative_position_id = BRM_political_upbringing
+
+	}
+	focus = {
+		id = BRM_avtarki
+		text = BRM_avtarki
+		icon = GFX_focus_generic_rubber
+		cost = 10
+		prerequisite = {
+			focus = BRM_central_army_train
+		}
+		prerequisite = {
+			focus = BRM_upgrade_prom
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRM_central_army_train
+
+	}
+	focus = {
+		id = BRM_new_selection
+		text = BRM_new_selection
+		icon = GFX_z_goal_marx_change
+		cost = 10
+		prerequisite = {
+			focus = BRM_bhurna_bad_day
+		}
+		mutually_exclusive = {
+			focus = BRM_military_power
+			focus = BRM_our_country
+		}
+		x = 7
+		y = 1
+		relative_position_id = BRM_bhurna_bad_day
+
+	}
+	focus = {
+		id = BRM_active_industrial
+		text = BRM_active_industrial
+		icon = GFX_z_goal_invest_in_the_construction_industry
+		cost = 10
+		prerequisite = {
+			focus = BRM_new_selection
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRM_new_selection
+
+	}
+	focus = {
+		id = BRM_cooperatives
+		text = BRM_cooperatives
+		icon = GFX_z_goal_socialist_industry
+		cost = 10
+		prerequisite = {
+			focus = BRM_active_industrial
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRM_active_industrial
+
+	}
+	focus = {
+		id = BRM_importchange
+		text = BRM_importchange
+		icon = GFX_z_goal_transfer_industries
+		cost = 10
+		prerequisite = {
+			focus = BRM_cooperatives
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRM_cooperatives
+
+	}
+	focus = {
+		id = BRM_military_prom_revolution
+		icon = GFX_z_goal_generic_industrial_production2
+		cost = 10
+		prerequisite = {
+			focus = BRM_cooperatives
+		}
+		prerequisite = {
+			focus = BRM_upgrade_prom
+		}
+		x = 2
+		y = 1
+		relative_position_id = BRM_cooperatives
+
+	}
+	focus = {
+		id = BRM_land_order
+		text = BRM_land_order
+		icon = GFX_z_goal_agrarian_reform
+		cost = 10
+		prerequisite = {
+			focus = BR_sinega
+		}
+		x = 0
+		y = 1
+		relative_position_id = BR_sinega
+
+	}
+	focus = {
+		id = BRM_foff_Ba_Maw
+		text = BRM_foff_Ba_Maw
+		icon = GFX_z_goal_erasure_class_differences
+		cost = 10
+		prerequisite = {
+			focus = BRM_land_order
+		}
+		mutually_exclusive = {
+			focus = BRM_last_Hunger_March
+			focus = BRM_second_galon
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRM_land_order
+
+	}
+	focus = {
+		id = BRM_def_order
+		text = BRM_def_order
+		icon = GFX_z_goal_generic_defensive_strategy
+		cost = 10
+		prerequisite = {
+			focus = BRM_foff_Ba_Maw
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRM_foff_Ba_Maw
+
+	}
+	focus = {
+		id = BRM_arest_left
+		text = BRM_arest_left
+		icon = GFX_goal_anti_comintern_pact
+		cost = 10
+		prerequisite = {
+			focus = BRM_def_order
+		}
+		x = -1
+		y = 1
+		relative_position_id = BRM_def_order
+
+	}
+	focus = {
+		id = BRM_U_Saw_compromise
+		text = BRM_U_Saw_compromise
+		icon = GFX_goal_tripartite_pact
+		cost = 10
+		prerequisite = {
+			focus = BRM_def_order
+		}
+		x = 1
+		y = 1
+		relative_position_id = BRM_def_order
+
+	}
+	focus = {
+		id = BRM_arest_Ba_Maw
+		text = BRM_arest_Ba_Maw
+		icon = GFX_z_goal_arest_ba_mo
+		cost = 10
+		prerequisite = {
+			focus = BRM_U_Saw_compromise
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRM_U_Saw_compromise
+
+	}
+	focus = {
+		id = BRM_def_woman
+		text = BRM_def_woman
+		icon = GFX_focus_SOV_women_in_aviation
+		cost = 10
+		prerequisite = {
+			focus = BRM_arest_Ba_Maw
+			focus = BRM_newspapper_Sun
+		}
+		x = -1
+		y = 1
+		relative_position_id = BRM_newspapper_Sun
+
+	}
+	focus = {
+		id = BRM_galon_tat
+		text = BRM_galon_tat
+		icon = GFX_z_goal_chinese_soldiers
+		cost = 10
+		prerequisite = {
+			focus = BRM_second_galon
+		}
+		x = -1
+		y = 1
+		relative_position_id = BRM_second_galon
+
+	}
+	focus = {
+		id = BRM_broken_small_nat
+		text = BRM_broken_small_nat
+		icon = GFX_focus_eng_move_to_secure_the_dominions
+		cost = 10
+		prerequisite = {
+			focus = BRM_second_galon
+		}
+		x = 1
+		y = 1
+		relative_position_id = BRM_second_galon
+
+	}
+	focus = {
+		id = BRM_support_our_landlords
+		text = BRM_support_our_landlords
+		icon = GFX_z_goal_land_aristo
+		cost = 10
+		prerequisite = {
+			focus = BRM_second_galon
+		}
+		x = 0
+		y = 2
+		relative_position_id = BRM_second_galon
+
+	}
+	focus = {
+		id = BRM_newspapper_Sun
+		text = BRM_newspapper_Sun
+		icon = GFX_z_goal_big_news
+		cost = 10
+		prerequisite = {
+			focus = BRM_galon_tat
+		}
+		x = 0
+		y = 2
+		relative_position_id = BRM_galon_tat
+
+	}
+	focus = {
+		id = BRM_def_buddism_religion
+		text = BRM_def_buddism_religion
+		icon = GFX_z_goal_generic_king_goverment
+		cost = 10
+		prerequisite = {
+			focus = BRM_support_our_landlords
+			focus = BRM_monastry_speach
+		}
+		x = 2
+		y = 1
+		relative_position_id = BRM_support_our_landlords
+
+	}
+	focus = {
+		id = BRM_no_raj_and_muslim
+		text = BRM_no_raj_and_muslim
+		icon = GFX_z_goal_last_blow_to_islam
+		cost = 10
+		prerequisite = {
+			focus = BRM_newspapper_Sun
+		}
+		prerequisite = {
+			focus = BRM_support_our_landlords
+		}
+		x = 0
+		y = 2
+		relative_position_id = BRM_support_our_landlords
+
+	}
+	focus = {
+		id = BRM_restavration_monastry
+		text = BRM_restavration_monastry
+		icon = GFX_z_goal_monarchism_17
+		cost = 10
+		prerequisite = {
+			focus = BRM_def_buddism_religion
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRM_def_buddism_religion
+
+	}
+	focus = {
+		id = BRM_change_other_lands
+		text = BRM_change_other_lands
+		icon = GFX_z_goal_agriculture
+		cost = 10
+		prerequisite = {
+			focus = BRM_no_raj_and_muslim
+		}
+		x = -2
+		y = 1
+		relative_position_id = BRM_no_raj_and_muslim
+
+	}
+	focus = {
+		id = BRM_militarization_socium
+		text = BRM_militarization_socium
+		icon = GFX_z_goal_peasents_soldiers
+		cost = 10
+		prerequisite = {
+			focus = BRM_no_raj_and_muslim
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRM_no_raj_and_muslim
+
+	}
+	focus = {
+		id = BRM_bir_jap_association
+		text = BRM_bir_jap_association
+		icon = GFX_z_goal_resumption_of_relations_with_japan
+		cost = 10
+		prerequisite = {
+			focus = BRM_no_raj_and_muslim
+		}
+		x = 2
+		y = 1
+		relative_position_id = BRM_no_raj_and_muslim
+
+	}
+	focus = {
+		id = BRM_our_ally
+		text = BRM_our_ally
+		icon = GFX_goal_generic_improve_relations
+		cost = 10
+		prerequisite = {
+			focus = BRM_militarization_socium
+		}
+		mutually_exclusive = {
+			focus = BRM_with_right_raj
+			focus = BRM_with_jap
+		}
+		x = -2
+		y = 1
+		relative_position_id = BRM_militarization_socium
+
+	}
+	focus = {
+		id = BRM_with_right_raj
+		text = BRM_with_right_raj
+		icon = GFX_z_goal_raj_dem_ally
+		cost = 10
+		prerequisite = {
+			focus = BRM_militarization_socium
+		}
+		mutually_exclusive = {
+			focus = BRM_our_ally
+			focus = BRM_with_jap
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRM_militarization_socium
+
+	}
+	focus = {
+		id = BRM_with_jap
+		text = BRM_with_jap
+		icon = GFX_focus_chi_collaboration_with_the_japanese
+		cost = 10
+		prerequisite = {
+			focus = BRM_militarization_socium
+		}
+		mutually_exclusive = {
+			focus = BRM_with_right_raj
+			focus = BRM_our_ally
+		}
+		x = 2
+		y = 1
+		relative_position_id = BRM_militarization_socium
+
+	}
+	focus = {
+		id = BRM_noth_thai
+		text = BRM_noth_thai
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		cost = 10
+		prerequisite = {
+			focus = BRM_militarization_socium
+		}
+		x = -1
+		y = 1
+		relative_position_id = BRM_with_right_raj
+
+	}
+	focus = {
+		id = BRM_west_indchi
+		text = BRM_west_indchi
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		cost = 10
+		prerequisite = {
+			focus = BRM_noth_thai
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRM_noth_thai
+
+	}
+	focus = {
+		id = BRM_back_malasi
+		text = BRM_back_malasi
+		icon = GFX_goal_generic_major_war
+		cost = 10
+		prerequisite = {
+			focus = BRM_noth_thai
+		}
+		x = -2
+		y = 1
+		relative_position_id = BRM_noth_thai
+
+	}
+	focus = {
+		id = BRM_back_okean
+		text = BRM_back_okean
+		icon = GFX_goal_generic_navy_cruiser
+		cost = 10
+		prerequisite = {
+			focus = BRM_back_malasi
+			focus = BRM_west_indchi
+		}
+		x = 1
+		y = 1
+		relative_position_id = BRM_back_malasi
+
+	}
+	focus = {
+		id = BRM_raj_revenge
+		text = BRM_raj_revenge
+		icon = GFX_goal_generic_political_pressure
+		cost = 10
+		prerequisite = {
+			focus = BRM_militarization_socium
+		}
+		x = 1
+		y = 1
+		relative_position_id = BRM_with_right_raj
+
+	}
+	focus = {
+		id = BRM_ceilon
+		text = BRM_ceilon
+		icon = GFX_goal_generic_major_war
+		cost = 10
+		prerequisite = {
+			focus = BRM_raj_revenge
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRM_raj_revenge
+
+	}
+	focus = {
+		id = BRM_bhutan
+		text = BRM_bhutan
+		icon = GFX_z_goal_butan_revenge
+		cost = 10
+		prerequisite = {
+			focus = BRM_raj_revenge
+		}
+		x = 2
+		y = 1
+		relative_position_id = BRM_raj_revenge
+
+	}
+	focus = {
+		id = BRM_tibet
+		text = BRM_tibet
+		icon = GFX_z_goal_revenge_tibet
+		cost = 10
+		prerequisite = {
+			focus = BRM_bhutan
+		}
+		x = -2
+		y = 1
+		relative_position_id = BRM_bhutan
+
+	}
+	focus = {
+		id = BRM_sikkim
+		text = BRM_sikkim
+		icon = GFX_z_goal_claim_Sikkim
+		cost = 10
+		prerequisite = {
+			focus = BRM_bhutan
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRM_bhutan
+
+	}
+	focus = {
+		id = BRM_nepal
+		text = BRM_nepal
+		icon = GFX_z_goal_nepal_revenge
+		cost = 10
+		prerequisite = {
+			focus = BRM_bhutan
+		}
+		x = 2
+		y = 1
+		relative_position_id = BRM_bhutan
+
+	}
+	focus = {
+		id = BRM_china_atak_with_jap
+		text = BRM_china_atak_with_jap
+		icon = GFX_focus_attack_china
+		cost = 10
+		prerequisite = {
+			focus = BRM_with_jap
+		}
+		x = 1
+		y = 1
+		relative_position_id = BRM_with_jap
+
+	}
+	focus = {
+		id = BRM_budda_activists
+		text = BRM_budda_activists
+		icon = GFX_z_goal_brm_budda1
+		cost = 10
+		prerequisite = {
+			focus = BRM_form_parlament
+		}
+		mutually_exclusive = {
+			focus = BRM_royal_support
+		}
+		x = -4
+		y = 1
+		relative_position_id = BRM_form_parlament
+
+	}
+	focus = {
+		id = BRM_Vuntarnu
+		text = BRM_Vuntarnu
+		icon = GFX_z_goal_buddism_for_all
+		cost = 10
+		prerequisite = {
+			focus = BRM_budda_activists
+		}
+		x = -2
+		y = 1
+		relative_position_id = BRM_budda_activists
+
+	}
+	focus = {
+		id = BRM_sanghi
+		text = BRM_sanghi
+		icon = GFX_z_goal_open_buddish_temple
+		cost = 10
+		prerequisite = {
+			focus = BRM_budda_activists
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRM_budda_activists
+
+	}
+	focus = {
+		id = BRM_boikot
+		text = BRM_boikot
+		icon = GFX_z_goal_democratic_propaganda
+		cost = 10
+		prerequisite = {
+			focus = BRM_budda_activists
+		}
+		x = 2
+		y = 1
+		relative_position_id = BRM_budda_activists
+
+	}
+	focus = {
+		id = BRM_left_GB
+		text = BRM_left_GB
+		icon = GFX_z_goal_abolition_of_private_property
+		cost = 10
+		prerequisite = {
+			focus = BRM_Vuntarnu
+		}
+		prerequisite = {
+			focus = BRM_sanghi
+		}
+		x = -2
+		y = 1
+		relative_position_id = BRM_sanghi
+
+	}
+	focus = {
+		id = BRM_NP_Suria
+		text = BRM_NP_Suria
+		icon = GFX_z_goal_day_suria_mal
+		cost = 10
+		prerequisite = {
+			focus = BRM_sanghi
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRM_sanghi
+
+	}
+	focus = {
+		id = BRM_left_raj
+		text = BRM_left_raj
+		icon = GFX_z_goal_abolition_of_private_property
+		cost = 10
+		prerequisite = {
+			focus = BRM_boikot
+		}
+		prerequisite = {
+			focus = BRM_sanghi
+		}
+		x = 2
+		y = 1
+		relative_position_id = BRM_sanghi
+
+	}
+	focus = {
+		id = BRM_monastry_speach
+		text = BRM_monastry_speach
+		icon = GFX_z_goal_brm_budda2
+		cost = 10
+		prerequisite = {
+			focus = BRM_NP_Suria
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRM_NP_Suria
+
+	}
+	focus = {
+		id = BRM_budda_yang_association
+		text = BRM_budda_yang_association
+		icon = GFX_z_goal_yang_bhurma
+		cost = 10
+		prerequisite = {
+			focus = BRM_monastry_speach
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRM_monastry_speach
+
+	}
+	focus = {
+		id = BRM_budda_neutral
+		text = BRM_budda_neutral
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 10
+		prerequisite = {
+			focus = BRM_budda_yang_association
+		}
+		mutually_exclusive = {
+			focus = BRM_drahma_ally
+		}
+		x = -1
+		y = 1
+		relative_position_id = BRM_budda_yang_association
+
+	}
+	focus = {
+		id = BRM_drahma_ally
+		text = BRM_drahma_ally
+		icon = GFX_z_goal_buddism_koleso
+		cost = 10
+		prerequisite = {
+			focus = BRM_budda_yang_association
+		}
+		mutually_exclusive = {
+			focus = BRM_budda_neutral
+		}
+		x = 1
+		y = 1
+		relative_position_id = BRM_budda_yang_association
+
+	}
+	focus = {
+		id = BRM_big_prom_support
+		text = BRM_big_prom_support
+		icon = GFX_z_goal_prom_initiative
+		cost = 10
+		prerequisite = {
+			focus = BRM_form_parlament
+		}
+		x = 0
+		y = 2
+		relative_position_id = BRM_form_parlament
+
+	}
+	focus = {
+		id = BRM_new_factory
+		text = BRM_new_factory
+		icon = GFX_z_goal_prom_country
+		cost = 10
+		prerequisite = {
+			focus = BRM_big_prom_support
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRM_big_prom_support
+
+	}
+	focus = {
+		id = BRM_support_handmade
+		text = BRM_support_handmade
+		icon = GFX_z_goal_arab_market
+		cost = 10
+		prerequisite = {
+			focus = BRM_monastry_speach
+		}
+		prerequisite = {
+			focus = BRM_new_factory
+		}
+		x = 2
+		y = 1
+		relative_position_id = BRM_monastry_speach
+
+	}
+	focus = {
+		id = BRM_fast_five_industrialization
+		text = BRM_fast_five_industrialization
+		icon = GFX_z_goal_industrial_ref
+		cost = 10
+		prerequisite = {
+			focus = BRM_new_factory
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRM_new_factory
+
+	}
+	focus = {
+		id = BRM_let_reform
+		text = BRM_let_reform
+		icon = GFX_z_goal_order_army
+		cost = 10
+		prerequisite = {
+			focus = BRM_unite_five_flowers
+		}
+		x = -2
+		y = 2
+		relative_position_id = BRM_royal_support
+
+	}
+	focus = {
+		id = BRM_back_royal
+		text = BRM_back_royal
+		icon = GFX_z_goal_elections_monarchy
+		cost = 10
+		prerequisite = {
+			focus = BRM_royal_support
+		}
+		prerequisite = {
+			focus = BRM_unite_five_flowers
+		}
+		x = 0
+		y = 2
+		relative_position_id = BRM_royal_support
+
+	}
+	focus = {
+		id = BRM_white_Tibo
+		text = BRM_white_Tibo
+		icon = GFX_z_goal_monarchism_1
+		cost = 10
+		prerequisite = {
+			focus = BRM_royal_support
+		}
+		x = 2
+		y = 2
+		relative_position_id = BRM_royal_support
+
+	}
+	focus = {
+		id = BRM_Bhurma_throne
+		text = BRM_Bhurma_throne
+		icon = GFX_z_goal_monarchy_power
+		cost = 10
+		prerequisite = {
+			focus = BRM_white_Tibo
+		}
+		prerequisite = {
+			focus = BRM_back_royal
+		}
+		prerequisite = {
+			focus = BRM_let_reform
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRM_back_royal
+
+	}
+	focus = {
+		id = BRM_let_dual_monarchy
+		text = BRM_let_dual_monarchy
+		icon = GFX_z_goal_brm_royal2
+		cost = 10
+		prerequisite = {
+			focus = BRM_Bhurma_throne
+		}
+		x = -2
+		y = 1
+		relative_position_id = BRM_Bhurma_throne
+
+	}
+	focus = {
+		id = BRM_no_raj_landlord
+		text = BRM_no_raj_landlord
+		icon = GFX_z_goal_abolition_of_private_property
+		cost = 10
+		prerequisite = {
+			focus = BRM_let_dual_monarchy
+		}
+		prerequisite = {
+			focus = BRM_fast_five_industrialization
+		}
+		x = -2
+		y = 1
+		relative_position_id = BRM_let_dual_monarchy
+
+	}
+	focus = {
+		id = BRM_back_impire
+		text = BRM_back_impire
+		icon = GFX_z_goal_vanguard_monarchy
+		cost = 10
+		prerequisite = {
+			focus = BRM_let_dual_monarchy
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRM_let_dual_monarchy
+
+	}
+	focus = {
+		id = BRM_yang_monarchy
+		text = BRM_yang_monarchy
+		icon = GFX_z_goal_generic_king_army
+		cost = 10
+		prerequisite = {
+			focus = BRM_let_dual_monarchy
+		}
+		x = 2
+		y = 1
+		relative_position_id = BRM_let_dual_monarchy
+
+	}
+	focus = {
+		id = BRM_minipur
+		text = BRM_minipur
+		icon = GFX_GFX_goal_generic_occupy_states_ongoing_war
+		cost = 10
+		prerequisite = {
+			focus = BRM_back_impire
+		}
+		x = -2
+		y = 1
+		relative_position_id = BRM_back_impire
+
+	}
+	focus = {
+		id = BRM_back_siam
+		text = BRM_back_siam
+		icon = GFX_GFX_goal_generic_occupy_states_ongoing_war
+		cost = 10
+		prerequisite = {
+			focus = BRM_back_impire
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRM_back_impire
+
+	}
+	focus = {
+		id = BRM_back_koshanpai
+		text = BRM_back_koshanpai
+		icon = GFX_GFX_goal_generic_occupy_states_ongoing_war
+		cost = 10
+		prerequisite = {
+			focus = BRM_back_impire
+		}
+		x = 2
+		y = 1
+		relative_position_id = BRM_back_impire
+
+	}
+	focus = {
+		id = BRM_back_west_indchi
+		text = BRM_back_west_indchi
+		icon = GFX_GFX_goal_generic_occupy_states_ongoing_war
+		cost = 10
+		prerequisite = {
+			focus = BRM_back_siam
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRM_back_siam
+
+	}
+	focus = {
+		id = BRM_mountain_prom
+		text = BRM_mountain_prom
+		icon = GFX_z_goal_mountain_prom_2
+		cost = 10
+		prerequisite = {
+			focus = BRM_bhurma_road
+		}
+		x = -6
+		y = 1
+		relative_position_id = BRM_bhurma_road
+
+	}
+	focus = {
+		id = BRM_oil_prom
+		text = BRM_oil_prom
+		icon = GFX_z_goal_oil_refining
+		cost = 10
+		prerequisite = {
+			focus = BRM_mountain_prom
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRM_mountain_prom
+
+	}
+	focus = {
+		id = BRM_volfram_main
+		text = BRM_volfram_main
+		icon = GFX_focus_generic_tungsten
+		cost = 10
+		prerequisite = {
+			focus = BRM_bhurma_road
+		}
+		x = 2
+		y = 15
+
+	}
+	focus = {
+		id = BRM_volfram_prom
+		text = BRM_volfram_prom
+		icon = GFX_focus_generic_tungsten
+		cost = 10
+		prerequisite = {
+			focus = BRM_volfram_main
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRM_volfram_main
+
+	}
+	focus = {
+		id = BRM_banks
+		text = BRM_banks
+		icon = GFX_z_goal_peoples_bank_2
+		cost = 10
+		prerequisite = {
+			focus = BRM_bhurma_road
+		}
+		x = -2
+		y = 1
+		relative_position_id = BRM_bhurma_road
+
+	}
+	focus = {
+		id = BRM_our_money
+		text = BRM_our_money
+		icon = GFX_z_goal_private_money
+		cost = 10
+		prerequisite = {
+			focus = BRM_bhurma_road
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRM_bhurma_road
+
+	}
+	focus = {
+		id = BRM_arm_factory
+		text = BRM_arm_factory
+		icon = GFX_z_goal_factory_complex
+		cost = 10
+		prerequisite = {
+			focus = BRM_our_money
+		}
+		x = -2
+		y = 1
+		relative_position_id = BRM_our_money
+
+	}
+	focus = {
+		id = BRM_bullet_factory
+		text = BRM_bullet_factory
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10
+		prerequisite = {
+			focus = BRM_volfram_prom
+		}
+		prerequisite = {
+			focus = BRM_arm_factory
+		}
+		x = 1
+		y = 1
+		relative_position_id = BRM_volfram_prom
+
+	}
+	focus = {
+		id = BRM_yangon_university
+		text = BRM_yangon_university
+		icon = GFX_focus_research2
+		cost = 10
+		prerequisite = {
+			focus = BRM_our_money
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRM_our_money
+
+	}
+	focus = {
+		id = BRM_yes_opium
+		text = BRM_yes_opium
+		icon = GFX_z_goal_opium
+		cost = 10
+		prerequisite = {
+			focus = BRM_bhurma_road
+		}
+		mutually_exclusive = {
+			focus = BRM_no_opium
+		}
+		x = 2
+		y = 1
+		relative_position_id = BRM_bhurma_road
+
+	}
+	focus = {
+		id = BRM_no_opium
+		text = BRM_no_opium
+		icon = GFX_z_goal_no_opium
+		cost = 10
+		prerequisite = {
+			focus = BRM_bhurma_road
+		}
+		mutually_exclusive = {
+			focus = BRM_yes_opium
+		}
+		x = 4
+		y = 1
+		relative_position_id = BRM_bhurma_road
+
+	}
+	focus = {
+		id = BRM_tik_wood
+		text = BRM_tik_wood
+		icon = GFX_z_goal_agrar_country
+		cost = 10
+		prerequisite = {
+			focus = BRM_bhurma_road
+		}
+		x = 6
+		y = 1
+		relative_position_id = BRM_bhurma_road
+
+	}
+	focus = {
+		id = BRM_rubbon
+		text = BRM_rubbon
+		icon = GFX_focus_generic_rubber
+		cost = 10
+		prerequisite = {
+			focus = BRM_our_money
+		}
+		x = 2
+		y = 1
+		relative_position_id = BRM_our_money
+
+	}
+	focus = {
+		id = BRM_rice_export
+		text = BRM_rice_export
+		icon = GFX_z_goal_white_rice
+		cost = 10
+		prerequisite = {
+			focus = BRM_our_money
+		}
+		x = 4
+		y = 1
+		relative_position_id = BRM_our_money
+
+	}
+	focus = {
+		id = BRM_wood_build
+		text = BRM_wood_build
+		icon = GFX_z_goal_cinhai_build
+		cost = 10
+		prerequisite = {
+			focus = BRM_tik_wood
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRM_tik_wood
+
+	}
+	focus = {
+		id = BRM_rr_y-B
+		text = BRM_rr_y-B
+		icon = GFX_focus_SOV_the_road_of_life
+		cost = 10
+		prerequisite = {
+			focus = BRM_yangon_university
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRM_yangon_university
+
+	}
+	focus = {
+		id = BRM_tecstile_factory
+		text = BRM_tecstile_factory
+		icon = GFX_z_goal_hlop_prom
+		cost = 10
+		prerequisite = {
+			focus = BRM_yangon_university
+		}
+		prerequisite = {
+			focus = BRM_rubbon
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRM_rubbon
+
+	}
+	focus = {
+		id = BRM_univer_2
+		text = BRM_univer_2
+		icon = GFX_focus_research
+		cost = 10
+		prerequisite = {
+			focus = BRM_wood_build
+		}
+		prerequisite = {
+			focus = BRM_rice_export
+		}
+		prerequisite = {
+			focus = BRM_rubbon
+		}
+		prerequisite = {
+			focus = BRM_rr_y-B
+		}
+		x = 4
+		y = 1
+		relative_position_id = BRM_rr_y-B
+
+	}
+	focus = {
+		id = BRM_project_sinmala
+		text = BRM_project_sinmala
+		icon = GFX_goal_generic_production2
+		cost = 10
+		prerequisite = {
+			focus = BRM_rr_y-B
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRM_rr_y-B
+
+	}
+	focus = {
+		id = BRM_combo_meh_elec
+		text = BRM_combo_meh_elec
+		icon = GFX_goal_generic_production
+		cost = 10
+		prerequisite = {
+			focus = BRM_bullet_factory
+		}
+		prerequisite = {
+			focus = BRM_rr_y-B
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRM_bullet_factory
+
+	}
+	focus = {
+		id = BRM_create_vmf_shtab
+		text = BRM_create_vmf_shtab
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		cost = 10
+		prerequisite = {
+			focus = BRM_create_vmf
+		}
+		x = -1
+		y = 1
+		relative_position_id = BRM_create_vmf
+
+	}
+	focus = {
+		id = BRM_create_vmf_base
+		text = BRM_create_vmf_base
+		icon = GFX_goal_generic_occypy_states_coastal
+		cost = 10
+		prerequisite = {
+			focus = BRM_create_vmf_shtab
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRM_create_vmf_shtab
+
+	}
+	focus = {
+		id = BRM_create_vmf_train
+		text = BRM_create_vmf_train
+		icon = GFX_goal_generic_amphibious_assault
+		cost = 10
+		prerequisite = {
+			focus = BRM_create_vmf
+		}
+		x = 1
+		y = 1
+		relative_position_id = BRM_create_vmf
+
+	}
+	focus = {
+		id = BRM_create_vmf_verf
+		text = BRM_create_vmf_verf
+		icon = GFX_focus_POL_develop_polish_shipbuilding
+		cost = 10
+		prerequisite = {
+			focus = BRM_create_vmf_train
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRM_create_vmf_train
+
+	}
+	focus = {
+		id = BRM_create_esminec
+		text = BRM_create_esminec
+		icon = GFX_goal_generic_navy_battleship
+		cost = 10
+		prerequisite = {
+			focus = BRM_create_vmf_base
+		}
+		prerequisite = {
+			focus = BRM_create_vmf_verf
+		}
+		x = 1
+		y = 1
+		relative_position_id = BRM_create_vmf_base
+
+	}
+	focus = {
+		id = BRM_mount_soldier
+		text = BRM_mount_soldier
+		icon = GFX_z_goal_mountaineers
+		cost = 10
+		prerequisite = {
+			focus = BRM_birma_rifle
+		}
+		x = -4
+		y = 1
+		relative_position_id = BRM_birma_rifle
+
+	}
+	focus = {
+		id = BRM_mech_soldier
+		text = BRM_mech_soldier
+		icon = GFX_goal_generic_army_motorized
+		cost = 10
+		prerequisite = {
+			focus = BRM_birma_rifle
+		}
+		x = -2
+		y = 1
+		relative_position_id = BRM_birma_rifle
+
+	}
+	focus = {
+		id = BRM_vmf_rezerv
+		text = BRM_vmf_rezerv
+		icon = GFX_goal_generic_special_forces
+		cost = 10
+		prerequisite = {
+			focus = BRM_create_vmf_train
+		}
+		prerequisite = {
+			focus = BRM_mech_soldier
+		}
+		x = 2
+		y = 1
+		relative_position_id = BRM_create_vmf_train
+
+	}
+	focus = {
+		id = BRM_fort_herz
+		text = BRM_fort_herz
+		icon = GFX_goal_generic_construct_military
+		cost = 10
+		prerequisite = {
+			focus = BRM_mech_soldier
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRM_mech_soldier
+
+	}
+	focus = {
+		id = BRM_injeners
+		text = BRM_injeners
+		icon = GFX_goal_generic_construction2
+		cost = 10
+		prerequisite = {
+			focus = BRM_birma_rifle
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRM_birma_rifle
+
+	}
+	focus = {
+		id = BRM_woman_army
+		text = BRM_woman_army
+		icon = GFX_focus_SOV_womens_fascist_movement
+		cost = 10
+		prerequisite = {
+			focus = BRM_injeners
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRM_injeners
+
+	}
+	focus = {
+		id = BRM_create_army
+		text = BRM_create_army
+		icon = GFX_z_goal_bhurma_army
+		cost = 10
+		prerequisite = {
+			focus = BRM_birma_rifle
+		}
+		x = 2
+		y = 1
+		relative_position_id = BRM_birma_rifle
+
+	}
+	focus = {
+		id = BRM_z_force
+		text = BRM_z_force
+		icon = GFX_focus_YUG_zmaj
+		cost = 10
+		prerequisite = {
+			focus = BRM_birma_rifle
+		}
+		x = 5
+		y = 1
+		relative_position_id = BRM_birma_rifle
+
+	}
+	focus = {
+		id = BRM_army_money
+		text = BRM_army_money
+		icon = GFX_focus_generic_combined_arms
+		cost = 10
+		prerequisite = {
+			focus = BRM_create_army
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRM_create_army
+
+	}
+	focus = {
+		id = BRM_no_army_conflict
+		text = BRM_no_army_conflict
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 10
+		prerequisite = {
+			focus = BRM_create_army
+		}
+		x = 2
+		y = 1
+		relative_position_id = BRM_create_army
+
+	}
+	focus = {
+		id = BRM_birman_radio
+		text = BRM_birman_radio
+		icon = GFX_z_goal_radio_portative
+		cost = 10
+		prerequisite = {
+			focus = BRM_army_money
+		}
+		x = -2
+		y = 1
+		relative_position_id = BRM_army_money
+
+	}
+	focus = {
+		id = BRM_birman_gurkhs
+		text = BRM_birman_gurkhs
+		icon = GFX_focus_RAJ_indian_gurkhas
+		cost = 10
+		prerequisite = {
+			focus = BRM_army_money
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRM_army_money
+
+	}
+	focus = {
+		id = BRM_birman_jungle_train
+		text = BRM_birman_jungle_train
+		icon = GFX_focus_RAJ_indianisation_of_army
+		cost = 10
+		prerequisite = {
+			focus = BRM_birman_radio
+		}
+		prerequisite = {
+			focus = BRM_birman_gurkhs
+		}
+		x = 1
+		y = 1
+		relative_position_id = BRM_birman_radio
+
+	}
+	focus = {
+		id = BRM_med_corpus
+		text = BRM_med_corpus
+		icon = GFX_z_goal_cotteje_hospital
+		cost = 10
+		prerequisite = {
+			focus = BRM_army_money
+		}
+		x = 2
+		y = 1
+		relative_position_id = BRM_army_money
+
+	}
+	focus = {
+		id = BRM_med_corpus2
+		text = BRM_med_corpus2
+		icon = GFX_z_goal_military_hospitals
+		cost = 10
+		prerequisite = {
+			focus = BRM_med_corpus
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRM_med_corpus
+
+	}
+	focus = {
+		id = BRM_police_corps
+		text = BRM_police_corps
+		icon = GFX_z_goal_luxembourg_police
+		cost = 10
+		prerequisite = {
+			focus = BRM_police_reorganization
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRM_police_reorganization
+
+	}
+	focus = {
+		id = BRM_police_new
+		text = BRM_police_new
+		icon = GFX_z_goal_political_commissars
+		cost = 10
+		prerequisite = {
+			focus = BRM_z_force
+		}
+		prerequisite = {
+			focus = BRM_police_corps
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRM_police_corps
+
+	}
+	focus = {
+		id = BRM_air_akyab
+		text = BRM_air_akyab
+		icon = GFX_focus_generic_aircraft_production
+		cost = 10
+		prerequisite = {
+			focus = BRM_air_dabaing
+		}
+		x = -2
+		y = 1
+		relative_position_id = BRM_air_dabaing
+
+	}
+	focus = {
+		id = BRM_air_mergui
+		text = BRM_air_mergui
+		icon = GFX_focus_generic_aircraft_production
+		cost = 10
+		prerequisite = {
+			focus = BRM_air_akyab
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRM_air_akyab
+
+	}
+	focus = {
+		id = BRM_air_mingaladon
+		text = BRM_air_mingaladon
+		icon = GFX_focus_generic_aircraft_production
+		cost = 10
+		prerequisite = {
+			focus = BRM_air_dabaing
+		}
+		x = 0
+		y = 2
+		relative_position_id = BRM_air_dabaing
+
+	}
+	focus = {
+		id = BRM_air_hwambi
+		text = BRM_air_hwambi
+		icon = GFX_focus_generic_aircraft_production
+		cost = 10
+		prerequisite = {
+			focus = BRM_air_dabaing
+		}
+		x = 2
+		y = 1
+		relative_position_id = BRM_air_dabaing
+
+	}
+	focus = {
+		id = BRM_air_meiktila
+		text = BRM_air_meiktila
+		icon = GFX_focus_generic_aircraft_production
+		cost = 10
+		prerequisite = {
+			focus = BRM_air_hwambi
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRM_air_hwambi
+
+	}
+	focus = {
+		id = BRM_air_mingaladon_anti
+		text = BRM_air_mingaladon_anti
+		icon = GFX_focus_generic_air_defense
+		cost = 10
+		prerequisite = {
+			focus = BRM_air_mingaladon
+		}
+		x = -2
+		y = 1
+		relative_position_id = BRM_air_mingaladon
+
+	}
+	focus = {
+		id = BRM_air_vvs_create
+		text = BRM_air_vvs_create
+		icon = GFX_z_goal_bhurma_vvs
+		cost = 10
+		prerequisite = {
+			focus = BRM_air_mingaladon
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRM_air_mingaladon
+
+	}
+	focus = {
+		id = BRM_air_school
+		text = BRM_air_school
+		icon = GFX_focus_eng_special_air_service
+		cost = 10
+		prerequisite = {
+			focus = BRM_air_mingaladon
+		}
+		x = 2
+		y = 1
+		relative_position_id = BRM_air_mingaladon
+
+	}
+	focus = {
+		id = BRM_air_shtab
+		text = BRM_air_shtab
+		icon = GFX_goal_generic_air_doctrine
+		cost = 10
+		prerequisite = {
+			focus = BRM_air_vvs_create
+		}
+		x = 0
+		y = 1
+		relative_position_id = BRM_air_vvs_create
+
+	}
+}

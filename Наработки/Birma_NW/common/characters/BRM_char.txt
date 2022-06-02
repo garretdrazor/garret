@@ -1,0 +1,34 @@
+characters={
+	BRM_Hugh_Lansdown_Stephenson={
+		name="Hugh Lansdown Stephenson"
+		portraits={
+			civilian={
+				large="gfx/leaders/BRM/Portrait_Hugh_Lansdown_Stephenson.dds"
+			}
+		}
+		country_leader={
+			ideology=despotism
+			traits={ 			}
+			expire="1.1.1.1"
+			id=-1
+		}
+	}
+	BRM_Smith_Dun={
+		name="Smith Dun"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_arab_2"
+				large="gfx/leaders/BRM/Portrait_Smith_Dun.dds"
+			}
+		}
+		corps_commander={
+			traits={ trait_trickster }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+}

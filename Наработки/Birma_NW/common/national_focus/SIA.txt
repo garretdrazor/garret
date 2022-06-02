@@ -1,0 +1,3171 @@
+focus_tree = {
+	id = SIA
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = SIA
+		}
+	}
+	default = no
+	focus = {
+		id = SIA_no_gold_valute
+		text = SIA_no_gold_valute
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 4
+		y = 0
+
+	}
+	focus = {
+		id = SIA_create_vvs
+		text = SIA_create_vvs
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 13
+		y = 0
+
+	}
+	focus = {
+		id = SIA_royal_police
+		text = SIA_royal_police
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 19
+		y = 0
+
+	}
+	focus = {
+		id = SIA_army_invest
+		text = SIA_army_invest
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 25
+		y = 0
+
+	}
+	focus = {
+		id = SIA_accum_factory
+		text = SIA_accum_factory
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 32
+		y = 0
+
+	}
+	focus = {
+		id = SIA_land_maximum
+		text = SIA_land_maximum
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 23
+		y = 8
+
+	}
+	focus = {
+		id = SIA_create_medicine
+		text = SIA_create_medicine
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 27
+		y = 8
+
+	}
+	focus = {
+		id = SIA_woman_monks
+		text = SIA_woman_monks
+		icon = GFX_goal_unknown
+		cost = 10
+		x = 40
+		y = 12
+
+	}
+	focus = {
+		id = SIA_deanonce_bad_theatry
+		text = SIA_deanonce_bad_theatry
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_no_gold_valute
+		}
+		x = 3
+		y = 1
+
+	}
+	focus = {
+		id = SIA_back_border
+		text = SIA_back_border
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_no_gold_valute
+		}
+		x = 5
+		y = 1
+
+	}
+	focus = {
+		id = SIA_new_theatry_with_france
+		text = SIA_new_theatry_with_france
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_deanonce_bad_theatry
+			focus = SIA_back_border
+		}
+		x = 1
+		y = 2
+
+	}
+	focus = {
+		id = SIA_usa_invest
+		text = SIA_usa_invest
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_deanonce_bad_theatry
+			focus = SIA_back_border
+		}
+		x = 3
+		y = 2
+
+	}
+	focus = {
+		id = SIA_scan_invest
+		text = SIA_scan_invest
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_deanonce_bad_theatry
+			focus = SIA_back_border
+		}
+		x = 5
+		y = 2
+
+	}
+	focus = {
+		id = SIA_right_invest
+		text = SIA_right_invest
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_deanonce_bad_theatry
+			focus = SIA_back_border
+		}
+		x = 7
+		y = 2
+
+	}
+	focus = {
+		id = SIA_GB_compromise
+		text = SIA_GB_compromise
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_new_theatry_with_france
+			focus = SIA_usa_invest
+			focus = SIA_scan_invest
+			focus = SIA_right_invest
+		}
+		mutually_exclusive = {
+			focus = SIA_nacionalization_anather
+		}
+		x = 2
+		y = 3
+
+	}
+	focus = {
+		id = SIA_sugar_factory
+		text = SIA_sugar_factory
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_new_theatry_with_france
+			focus = SIA_usa_invest
+		}
+		x = 0
+		y = 3
+
+	}
+	focus = {
+		id = SIA_half_olovo
+		text = SIA_half_olovo
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_GB_compromise
+		}
+		x = 2
+		y = 4
+
+	}
+	focus = {
+		id = SIA_military_parlament
+		text = SIA_military_parlament
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_land_maximum
+			focus = SIA_create_medicine
+		}
+		mutually_exclusive = {
+			focus = SIA_ressurect_commi
+		}
+		x = 3
+		y = 10
+
+	}
+	focus = {
+		id = SIA_clearing_generals
+		text = SIA_clearing_generals
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_military_parlament
+		}
+		x = 3
+		y = 11
+
+	}
+	focus = {
+		id = SIA_create_idochina
+		text = SIA_create_idochina
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_clearing_generals
+		}
+		x = 3
+		y = 14
+
+	}
+	focus = {
+		id = SIA_neutral_military
+		text = SIA_neutral_military
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_create_idochina
+		}
+		mutually_exclusive = {
+			focus = SIA_upgrade_indochina
+			focus = SIA_with_german_inpire
+		}
+		x = 3
+		y = 15
+
+	}
+	focus = {
+		id = SIA_upgrade_indochina
+		text = SIA_upgrade_indochina
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_create_idochina
+		}
+		mutually_exclusive = {
+			focus = SIA_neutral_military
+			focus = SIA_with_german_inpire
+		}
+		x = 1
+		y = 15
+
+	}
+	focus = {
+		id = SIA_ally_prom
+		text = SIA_ally_prom
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_upgrade_indochina
+		}
+		x = 3
+		y = 16
+
+	}
+	focus = {
+		id = SIA_military_ally
+		text = SIA_military_ally
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_upgrade_indochina
+		}
+		x = 1
+		y = 16
+
+	}
+	focus = {
+		id = SIA_nacionalization_anather
+		text = SIA_nacionalization_anather
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_new_theatry_with_france
+			focus = SIA_usa_invest
+			focus = SIA_scan_invest
+			focus = SIA_right_invest
+		}
+		mutually_exclusive = {
+			focus = SIA_GB_compromise
+		}
+		x = 6
+		y = 3
+
+	}
+	focus = {
+		id = SIA_china_exile
+		text = SIA_china_exile
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_GB_compromise
+			focus = SIA_nacionalization_anather
+		}
+		mutually_exclusive = {
+			focus = SIA_china_nac
+		}
+		x = 4
+		y = 4
+
+	}
+	focus = {
+		id = SIA_china_nac
+		text = SIA_china_nac
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_GB_compromise
+			focus = SIA_nacionalization_anather
+		}
+		mutually_exclusive = {
+			focus = SIA_china_exile
+		}
+		x = 6
+		y = 4
+
+	}
+	focus = {
+		id = SIA_univer_kasetsart
+		text = SIA_univer_kasetsart
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_china_exile
+			focus = SIA_china_nac
+		}
+		x = 4
+		y = 5
+
+	}
+	focus = {
+		id = SIA_metal_and_rubber
+		text = SIA_metal_and_rubber
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_univer_kasetsart
+		}
+		x = 1
+		y = 6
+
+	}
+	focus = {
+		id = SIA_rubbon_up
+		text = SIA_rubbon_up
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_china_exile
+			focus = SIA_china_nac
+		}
+		x = 2
+		y = 5
+
+	}
+	focus = {
+		id = SIA_cement_group
+		text = SIA_cement_group
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_univer_kasetsart
+		}
+		x = 4
+		y = 6
+
+	}
+	focus = {
+		id = SIA_univer_Mongkut
+		text = SIA_univer_Mongkut
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_cement_group
+		}
+		x = 4
+		y = 7
+
+	}
+	focus = {
+		id = SIA_up_rail_for_army
+		text = SIA_up_rail_for_army
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_military_parlament
+		}
+		x = 5
+		y = 11
+
+	}
+	focus = {
+		id = SIA_west_armor
+		text = SIA_west_armor
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_up_rail_for_army
+		}
+		x = 4
+		y = 12
+
+	}
+	focus = {
+		id = SIA_water_infra
+		text = SIA_water_infra
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_up_rail_for_army
+		}
+		x = 5
+		y = 13
+
+	}
+	focus = {
+		id = SIA_water_def
+		text = SIA_water_def
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_water_infra
+		}
+		x = 5
+		y = 14
+
+	}
+	focus = {
+		id = SIA_with_german_inpire
+		text = SIA_with_german_inpire
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_create_idochina
+		}
+		mutually_exclusive = {
+			focus = SIA_neutral_military
+			focus = SIA_upgrade_indochina
+		}
+		x = 5
+		y = 15
+
+	}
+	focus = {
+		id = SIA_generals_from_german_impire
+		text = SIA_generals_from_german_impire
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_with_german_inpire
+		}
+		x = 5
+		y = 16
+
+	}
+	focus = {
+		id = SIA_military_ally_search
+		text = SIA_military_ally_search
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_military_ally
+			focus = SIA_generals_from_german_impire
+		}
+		x = 3
+		y = 17
+
+	}
+	focus = {
+		id = SIA_rise_export
+		text = SIA_rise_export
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_china_exile
+			focus = SIA_china_nac
+		}
+		x = 6
+		y = 5
+
+	}
+	focus = {
+		id = SIA_rise_factory
+		text = SIA_rise_factory
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_rise_export
+		}
+		x = 6
+		y = 7
+
+	}
+	focus = {
+		id = SIA_east_armor
+		text = SIA_east_armor
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_up_rail_for_army
+		}
+		x = 6
+		y = 12
+
+	}
+	focus = {
+		id = SIA_share_indochine
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_with_german_inpire
+		}
+		x = 6
+		y = 17
+
+	}
+	focus = {
+		id = SIA_irom_main
+		text = SIA_irom_main
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_univer_kasetsart
+		}
+		x = 7
+		y = 6
+
+	}
+	focus = {
+		id = SIA_share_malasie
+		text = SIA_share_malasie
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_with_german_inpire
+		}
+		x = 7
+		y = 16
+
+	}
+	focus = {
+		id = SIA_beer_factory
+		text = SIA_beer_factory
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_scan_invest
+			focus = SIA_right_invest
+		}
+		x = 8
+		y = 3
+
+	}
+	focus = {
+		id = SIA_ip_ooo
+		text = SIA_ip_ooo
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_nacionalization_anather
+		}
+		x = 8
+		y = 4
+
+	}
+	focus = {
+		id = SIA_tai_nia_pachinko
+		text = SIA_tai_nia_pachinko
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_ip_ooo
+		}
+		prerequisite = {
+			focus = SIA_china_nac
+		}
+		x = 8
+		y = 5
+
+	}
+	focus = {
+		id = SIA_north_oil
+		text = SIA_north_oil
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_irom_main
+		}
+		x = 8
+		y = 7
+
+	}
+	focus = {
+		id = SIA_tabacco_farm_and_factory
+		text = SIA_tabacco_farm_and_factory
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_rise_export
+		}
+		x = 9
+		y = 6
+
+	}
+	focus = {
+		id = SIA_med_air
+		text = SIA_med_air
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_china_exile
+			focus = SIA_china_nac
+		}
+		x = 10
+		y = 5
+
+	}
+	focus = {
+		id = SIA_tabacco_export
+		text = SIA_tabacco_export
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_tabacco_farm_and_factory
+		}
+		x = 10
+		y = 7
+
+	}
+	focus = {
+		id = SIA_taktik_vvs
+		text = SIA_taktik_vvs
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_create_vvs
+		}
+		x = 11
+		y = 1
+
+	}
+	focus = {
+		id = SIA_command_vvs
+		text = SIA_command_vvs
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_create_vvs
+		}
+		x = 13
+		y = 1
+
+	}
+	focus = {
+		id = SIA_airdef_vvs
+		text = SIA_airdef_vvs
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_taktik_vvs
+			focus = SIA_command_vvs
+		}
+		x = 12
+		y = 2
+
+	}
+	focus = {
+		id = SIA_new_airbase_vvs
+		text = SIA_new_airbase_vvs
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_create_vvs
+		}
+		x = 15
+		y = 1
+
+	}
+	focus = {
+		id = SIA_airspec_vvs
+		text = SIA_airspec_vvs
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_command_vvs
+			focus = SIA_new_airbase_vvs
+		}
+		x = 14
+		y = 2
+
+	}
+	focus = {
+		id = SIA_franch_air
+		text = SIA_franch_air
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_airdef_vvs
+			focus = SIA_airspec_vvs
+		}
+		mutually_exclusive = {
+			focus = SIA_japan_air
+			focus = SIA_usa_air
+		}
+		x = 11
+		y = 3
+
+	}
+	focus = {
+		id = SIA_japan_air
+		text = SIA_japan_air
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_airdef_vvs
+			focus = SIA_airspec_vvs
+		}
+		mutually_exclusive = {
+			focus = SIA_franch_air
+			focus = SIA_usa_air
+		}
+		x = 13
+		y = 3
+
+	}
+	focus = {
+		id = SIA_usa_air
+		text = SIA_usa_air
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_airdef_vvs
+			focus = SIA_airspec_vvs
+		}
+		mutually_exclusive = {
+			focus = SIA_japan_air
+			focus = SIA_franch_air
+		}
+		x = 15
+		y = 3
+
+	}
+	focus = {
+		id = SIA_usa_base
+		text = SIA_usa_base
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_usa_air
+		}
+		x = 15
+		y = 4
+
+	}
+	focus = {
+		id = SIA_ressurect_commi
+		text = SIA_ressurect_commi
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_land_maximum
+			focus = SIA_create_medicine
+		}
+		mutually_exclusive = {
+			focus = SIA_military_parlament
+			focus = SIA_third_path
+		}
+		x = 13
+		y = 10
+
+	}
+	focus = {
+		id = SIA_soc_buddism
+		text = SIA_soc_buddism
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_ressurect_commi
+		}
+		x = 15
+		y = 11
+
+	}
+	focus = {
+		id = SIA_japan_taktik
+		text = SIA_japan_taktik
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_japan_air
+		}
+		x = 13
+		y = 4
+
+	}
+	focus = {
+		id = SIA_franch_motor
+		text = SIA_franch_motor
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_franch_air
+		}
+		x = 11
+		y = 4
+
+	}
+	focus = {
+		id = SIA_spec_buro
+		text = SIA_spec_buro
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_royal_police
+		}
+		x = 18
+		y = 1
+
+	}
+	focus = {
+		id = SIA_polit_police
+		text = SIA_polit_police
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_spec_buro
+		}
+		x = 17
+		y = 2
+
+	}
+	focus = {
+		id = SIA_third_path
+		text = SIA_third_path
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_land_maximum
+			focus = SIA_create_medicine
+		}
+		mutually_exclusive = {
+			focus = SIA_ressurect_commi
+			focus = SIA_passive_path
+		}
+		x = 22
+		y = 10
+
+	}
+	focus = {
+		id = SIA_consensus_with_royalists
+		text = SIA_consensus_with_royalists
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_third_path
+		}
+		mutually_exclusive = {
+			focus = SIA_no_party_with_royal
+		}
+		x = 18
+		y = 11
+
+	}
+	focus = {
+		id = SIA_world_police
+		text = SIA_world_police
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_spec_buro
+		}
+		x = 19
+		y = 2
+
+	}
+	focus = {
+		id = SIA_choose_police
+		text = SIA_choose_police
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_world_police
+		}
+		mutually_exclusive = {
+			focus = SIA_choose_army
+		}
+		x = 19
+		y = 3
+
+	}
+	focus = {
+		id = SIA_border_police
+		text = SIA_border_police
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_choose_police
+		}
+		x = 17
+		y = 4
+
+	}
+	focus = {
+		id = SIA_power_air
+		text = SIA_power_air
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_usa_base
+			focus = SIA_japan_taktik
+			focus = SIA_franch_motor
+		}
+		prerequisite = {
+			focus = SIA_border_police
+		}
+		x = 16
+		y = 5
+
+	}
+	focus = {
+		id = SIA_woman_police
+		text = SIA_woman_police
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_choose_police
+		}
+		x = 19
+		y = 4
+
+	}
+	focus = {
+		id = SIA_no_party_with_royal
+		text = SIA_no_party_with_royal
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_third_path
+		}
+		mutually_exclusive = {
+			focus = SIA_consensus_with_royalists
+		}
+		x = 20
+		y = 11
+
+	}
+	focus = {
+		id = SIA_crown_fate
+		text = SIA_crown_fate
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_consensus_with_royalists
+			focus = SIA_no_party_with_royal
+		}
+		x = 19
+		y = 12
+
+	}
+	focus = {
+		id = SIA_super_spec_buro
+		text = SIA_super_spec_buro
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_royal_police
+		}
+		x = 20
+		y = 1
+
+	}
+	focus = {
+		id = SIA_police_randjers
+		text = SIA_police_randjers
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_super_spec_buro
+		}
+		x = 20
+		y = 5
+
+	}
+	focus = {
+		id = SIA_police_marsh
+		text = SIA_police_marsh
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_choose_police
+		}
+		x = 21
+		y = 4
+
+	}
+	focus = {
+		id = SIA_yellow_book
+		text = SIA_yellow_book
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_third_path
+		}
+		x = 22
+		y = 11
+
+	}
+	focus = {
+		id = SIA_industrial_with_company
+		text = SIA_industrial_with_company
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_yellow_book
+		}
+		x = 21
+		y = 12
+
+	}
+	focus = {
+		id = SIA_create_work_order
+		text = SIA_create_work_order
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_industrial_with_company
+		}
+		x = 21
+		y = 13
+
+	}
+	focus = {
+		id = SIA_create_free_thai
+		text = SIA_create_free_thai
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_create_work_order
+		}
+		x = 20
+		y = 14
+
+	}
+	focus = {
+		id = SIA_create_ekonomik_soviet
+		text = SIA_create_ekonomik_soviet
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_yellow_book
+		}
+		x = 22
+		y = 14
+
+	}
+	focus = {
+		id = SIA_create_league
+		text = SIA_create_league
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_create_ekonomik_soviet
+		}
+		mutually_exclusive = {
+			focus = SIA_USA_ally
+		}
+		x = 21
+		y = 15
+
+	}
+	focus = {
+		id = SIA_league_indochi
+		text = SIA_league_indochi
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_create_league
+		}
+		x = 19
+		y = 16
+
+	}
+	focus = {
+		id = SIA_league_research
+		text = SIA_league_research
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_create_league
+		}
+		x = 21
+		y = 16
+
+	}
+	focus = {
+		id = SIA_league_malaia
+		text = SIA_league_malaia
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_create_league
+		}
+		x = 20
+		y = 17
+
+	}
+	focus = {
+		id = SIA_GB_colonies
+		text = SIA_GB_colonies
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_create_league
+		}
+		x = 22
+		y = 17
+
+	}
+	focus = {
+		id = SIA_league_bhurma
+		text = SIA_league_bhurma
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_league_malaia
+			focus = SIA_GB_colonies
+		}
+		x = 21
+		y = 18
+
+	}
+	focus = {
+		id = SIA_long_recon
+		text = SIA_long_recon
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_army_invest
+		}
+		x = 22
+		y = 1
+
+	}
+	focus = {
+		id = SIA_GB_tank
+		text = SIA_GB_tank
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_army_invest
+		}
+		mutually_exclusive = {
+			focus = SIA_Ger_tank
+		}
+		x = 24
+		y = 1
+
+	}
+	focus = {
+		id = SIA_Ger_tank
+		text = SIA_Ger_tank
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_army_invest
+		}
+		mutually_exclusive = {
+			focus = SIA_GB_tank
+		}
+		x = 26
+		y = 1
+
+	}
+	focus = {
+		id = SIA_GB_rifle
+		text = SIA_GB_rifle
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_GB_tank
+			focus = SIA_Ger_tank
+		}
+		mutually_exclusive = {
+			focus = SIA_siam_rifle
+			focus = SIA_japan_rifle
+		}
+		x = 22
+		y = 2
+
+	}
+	focus = {
+		id = SIA_siam_rifle
+		text = SIA_siam_rifle
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_GB_tank
+			focus = SIA_Ger_tank
+		}
+		mutually_exclusive = {
+			focus = SIA_GB_rifle
+			focus = SIA_japan_rifle
+		}
+		x = 24
+		y = 2
+
+	}
+	focus = {
+		id = SIA_japan_rifle
+		text = SIA_japan_rifle
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_GB_tank
+			focus = SIA_Ger_tank
+		}
+		mutually_exclusive = {
+			focus = SIA_siam_rifle
+			focus = SIA_GB_rifle
+		}
+		x = 26
+		y = 2
+
+	}
+	focus = {
+		id = SIA_choose_army
+		text = SIA_choose_army
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_GB_rifle
+			focus = SIA_siam_rifle
+			focus = SIA_japan_rifle
+		}
+		mutually_exclusive = {
+			focus = SIA_choose_police
+		}
+		x = 24
+		y = 3
+
+	}
+	focus = {
+		id = SIA_students_def
+		text = SIA_students_def
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_choose_army
+		}
+		x = 23
+		y = 4
+
+	}
+	focus = {
+		id = SIA_general_shtab
+		text = SIA_general_shtab
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_police_marsh
+			focus = SIA_students_def
+		}
+		x = 22
+		y = 5
+
+	}
+	focus = {
+		id = SIA_territory_cammanders
+		text = SIA_territory_cammanders
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_choose_army
+		}
+		prerequisite = {
+			focus = SIA_general_shtab
+		}
+		x = 24
+		y = 6
+
+	}
+	focus = {
+		id = SIA_powder_factory
+		text = SIA_powder_factory
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_GB_rifle
+			focus = SIA_siam_rifle
+			focus = SIA_japan_rifle
+		}
+		x = 26
+		y = 3
+
+	}
+	focus = {
+		id = SIA_injeners_army
+		text = SIA_injeners_army
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_choose_army
+		}
+		prerequisite = {
+			focus = SIA_powder_factory
+		}
+		x = 25
+		y = 4
+
+	}
+	focus = {
+		id = SIA_border_conflict
+		text = SIA_border_conflict
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_land_maximum
+			focus = SIA_create_medicine
+		}
+		x = 25
+		y = 9
+
+	}
+	focus = {
+		id = SIA_passive_path
+		text = SIA_passive_path
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_create_medicine
+			focus = SIA_land_maximum
+		}
+		mutually_exclusive = {
+			focus = SIA_third_path
+			focus = SIA_blue_army
+		}
+		x = 28
+		y = 10
+
+	}
+	focus = {
+		id = SIA_no_generals_on_parlament
+		text = SIA_no_generals_on_parlament
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_third_path
+			focus = SIA_passive_path
+		}
+		x = 25
+		y = 11
+
+	}
+	focus = {
+		id = SIA_free_business
+		text = SIA_free_business
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_passive_path
+		}
+		x = 27
+		y = 11
+
+	}
+	focus = {
+		id = SIA_rise_after_civil_dem
+		text = SIA_rise_after_civil_dem
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_yellow_book
+			focus = SIA_free_business
+		}
+		x = 25
+		y = 12
+
+	}
+	focus = {
+		id = SIA_med_for_all
+		text = SIA_med_for_all
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_yellow_book
+		}
+		x = 23
+		y = 12
+
+	}
+	focus = {
+		id = SIA_ekonom_result
+		text = SIA_ekonom_result
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_free_business
+		}
+		x = 27
+		y = 12
+
+	}
+	focus = {
+		id = SIA_money_for_research
+		text = SIA_money_for_research
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_med_for_all
+			focus = SIA_ekonom_result
+		}
+		x = 25
+		y = 13
+
+	}
+	focus = {
+		id = SIA_rifle_factory
+		text = SIA_rifle_factory
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_powder_factory
+		}
+		x = 26
+		y = 5
+
+	}
+	focus = {
+		id = SIA_other_banks
+		text = SIA_other_banks
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_ekonom_result
+		}
+		x = 27
+		y = 13
+
+	}
+	focus = {
+		id = SIA_royal_academy
+		text = SIA_royal_academy
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_army_invest
+		}
+		x = 28
+		y = 1
+
+	}
+	focus = {
+		id = SIA_artillery_train
+		text = SIA_artillery_train
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_royal_academy
+		}
+		x = 28
+		y = 2
+
+	}
+	focus = {
+		id = SIA_new_trening
+		text = SIA_new_trening
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_artillery_train
+		}
+		prerequisite = {
+			focus = SIA_choose_army
+		}
+		x = 28
+		y = 4
+
+	}
+	focus = {
+		id = SIA_elephant_divisions
+		text = SIA_elephant_divisions
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_artillery_train
+		}
+		x = 29
+		y = 3
+
+	}
+	focus = {
+		id = SIA_strong_king
+		text = SIA_strong_king
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_passive_path
+		}
+		x = 29
+		y = 11
+
+	}
+	focus = {
+		id = SIA_new_uncomm_order
+		text = SIA_new_uncomm_order
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_strong_king
+		}
+		x = 29
+		y = 12
+
+	}
+	focus = {
+		id = SIA_faund_demparty
+		text = SIA_faund_demparty
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_ekonom_result
+		}
+		prerequisite = {
+			focus = SIA_new_uncomm_order
+		}
+		x = 29
+		y = 13
+
+	}
+	focus = {
+		id = SIA_price_order
+		text = SIA_price_order
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_other_banks
+		}
+		prerequisite = {
+			focus = SIA_faund_demparty
+		}
+		x = 27
+		y = 14
+
+	}
+	focus = {
+		id = SIA_west_politic
+		text = SIA_west_politic
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_faund_demparty
+		}
+		x = 29
+		y = 14
+
+	}
+	focus = {
+		id = SIA_USA_ally
+		text = SIA_USA_ally
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_create_ekonomik_soviet
+			focus = SIA_west_politic
+		}
+		mutually_exclusive = {
+			focus = SIA_create_league
+			focus = SIA_find_dem_ally
+		}
+		x = 25
+		y = 15
+
+	}
+	focus = {
+		id = SIA_find_dem_ally
+		text = SIA_find_dem_ally
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_west_politic
+		}
+		mutually_exclusive = {
+			focus = SIA_USA_ally
+			focus = SIA_dem_neutral
+		}
+		x = 29
+		y = 15
+
+	}
+	focus = {
+		id = SIA_find_lic
+		text = SIA_find_lic
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_find_dem_ally
+		}
+		x = 28
+		y = 16
+
+	}
+	focus = {
+		id = SIA_find_war_missions
+		text = SIA_find_war_missions
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_find_dem_ally
+		}
+		x = 30
+		y = 16
+
+	}
+	focus = {
+		id = SIA_find_resours
+		text = SIA_find_resours
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_find_lic
+			focus = SIA_find_war_missions
+		}
+		x = 29
+		y = 17
+
+	}
+	focus = {
+		id = SIA_underwater
+		text = SIA_underwater
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_accum_factory
+		}
+		x = 30
+		y = 1
+
+	}
+	focus = {
+		id = SIA_Sattahip
+		text = SIA_Sattahip
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_underwater
+		}
+		x = 30
+		y = 2
+
+	}
+	focus = {
+		id = SIA_royal_vmf
+		text = SIA_royal_vmf
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_Sattahip
+		}
+		x = 31
+		y = 3
+
+	}
+	focus = {
+		id = SIA_Kentung_road
+		text = SIA_Kentung_road
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_passive_path
+		}
+		x = 31
+		y = 11
+
+	}
+	focus = {
+		id = SIA_sea_train_in_japan
+		text = SIA_sea_train_in_japan
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_accum_factory
+		}
+		x = 32
+		y = 1
+
+	}
+	focus = {
+		id = SIA_border_ship
+		text = SIA_border_ship
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_accum_factory
+		}
+		x = 34
+		y = 1
+
+	}
+	focus = {
+		id = SIA_stud_patrul
+		text = SIA_stud_patrul
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_underwater
+			focus = SIA_border_ship
+		}
+		x = 32
+		y = 2
+
+	}
+	focus = {
+		id = SIA_royal_docs
+		text = SIA_royal_docs
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_border_ship
+		}
+		x = 34
+		y = 2
+
+	}
+	focus = {
+		id = SIA_royal_seaman
+		text = SIA_royal_seaman
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_stud_patrul
+			focus = SIA_royal_docs
+		}
+		x = 33
+		y = 3
+
+	}
+	focus = {
+		id = SIA_usa_seaman
+		text = SIA_usa_seaman
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_royal_seaman
+		}
+		x = 32
+		y = 4
+
+	}
+	focus = {
+		id = SIA_blue_army
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_land_maximum
+			focus = SIA_create_medicine
+		}
+		mutually_exclusive = {
+			focus = SIA_passive_path
+			focus = SIA_18_corps
+		}
+		x = 37
+		y = 10
+
+	}
+	focus = {
+		id = SIA_weak_constitution
+		text = SIA_weak_constitution
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_blue_army
+		}
+		x = 33
+		y = 11
+
+	}
+	focus = {
+		id = SIA_deportament_seaman
+		text = SIA_deportament_seaman
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_royal_seaman
+		}
+		x = 34
+		y = 4
+
+	}
+	focus = {
+		id = SIA_absolute_morachy
+		text = SIA_absolute_morachy
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_blue_army
+		}
+		x = 35
+		y = 11
+
+	}
+	focus = {
+		id = SIA_contrrevolution_agents
+		text = SIA_contrrevolution_agents
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_weak_constitution
+			focus = SIA_absolute_morachy
+		}
+		x = 34
+		y = 12
+
+	}
+	focus = {
+		id = SIA_help_royal_company
+		text = SIA_help_royal_company
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_contrrevolution_agents
+		}
+		x = 35
+		y = 13
+
+	}
+	focus = {
+		id = SIA_royal_cult
+		text = SIA_royal_cult
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_help_royal_company
+		}
+		x = 35
+		y = 14
+
+	}
+	focus = {
+		id = SIA_Rama_VII
+		text = SIA_Rama_VII
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_blue_army
+		}
+		x = 37
+		y = 11
+
+	}
+	focus = {
+		id = SIA_new_king
+		text = SIA_new_king
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_Rama_VII
+		}
+		x = 36
+		y = 12
+
+	}
+	focus = {
+		id = SIA_imperalism
+		text = SIA_imperalism
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_Rama_VII
+		}
+		mutually_exclusive = {
+			focus = SIA_dem_neutral
+		}
+		x = 37
+		y = 15
+
+	}
+	focus = {
+		id = SIA_royal_Laos
+		text = SIA_royal_Laos
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_imperalism
+		}
+		x = 36
+		y = 17
+
+	}
+	focus = {
+		id = SIA_king_ally
+		text = SIA_king_ally
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_imperalism
+		}
+		x = 34
+		y = 17
+
+	}
+	focus = {
+		id = SIA_royal_Cambodja
+		text = SIA_royal_Cambodja
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_imperalism
+		}
+		x = 35
+		y = 16
+
+	}
+	focus = {
+		id = SIA_royal_south
+		text = SIA_royal_south
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_imperalism
+		}
+		x = 37
+		y = 16
+
+	}
+	focus = {
+		id = SIA_municipalism
+		text = SIA_municipalism
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_blue_army
+		}
+		x = 39
+		y = 11
+
+	}
+	focus = {
+		id = SIA_help_west
+		text = SIA_help_west
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_Rama_VII
+		}
+		prerequisite = {
+			focus = SIA_municipalism
+		}
+		x = 38
+		y = 12
+
+	}
+	focus = {
+		id = SIA_migrate_order
+		text = SIA_migrate_order
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_help_west
+		}
+		x = 38
+		y = 13
+
+	}
+	focus = {
+		id = SIA_royal_Annam
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_imperalism
+		}
+		x = 38
+		y = 17
+
+	}
+	focus = {
+		id = SIA_nac_irr_system
+		text = SIA_nac_irr_system
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_migrate_order
+		}
+		prerequisite = {
+			focus = SIA_woman_monks
+		}
+		x = 39
+		y = 14
+
+	}
+	focus = {
+		id = SIA_royal_Bhurma
+		text = SIA_royal_Bhurma
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_imperalism
+		}
+		x = 39
+		y = 16
+
+	}
+	focus = {
+		id = SIA_back_dinasty
+		text = SIA_back_dinasty
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_blue_army
+		}
+		x = 41
+		y = 11
+
+	}
+	focus = {
+		id = SIA_back_princes
+		text = SIA_back_princes
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_strong_king
+			focus = SIA_back_dinasty
+		}
+		x = 31
+		y = 12
+
+	}
+	focus = {
+		id = SIA_Bovorader_reforms
+		text = SIA_Bovorader_reforms
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_back_princes
+		}
+		x = 33
+		y = 13
+
+	}
+	focus = {
+		id = SIA_18_corps
+		text = SIA_18_corps
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_land_maximum
+			focus = SIA_create_medicine
+		}
+		mutually_exclusive = {
+			focus = SIA_blue_army
+		}
+		x = 45
+		y = 10
+
+	}
+	focus = {
+		id = SIA_army_burocraty
+		text = SIA_army_burocraty
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_18_corps
+		}
+		x = 43
+		y = 11
+
+	}
+	focus = {
+		id = SIA_Uvachon
+		text = SIA_Uvachon
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_army_burocraty
+		}
+		x = 43
+		y = 12
+
+	}
+	focus = {
+		id = SIA_Songcram_cult
+		text = SIA_Songcram_cult
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_Uvachon
+		}
+		x = 42
+		y = 13
+
+	}
+	focus = {
+		id = SIA_thai_nac_bank
+		text = SIA_thai_nac_bank
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_Songcram_cult
+		}
+		x = 41
+		y = 14
+
+	}
+	focus = {
+		id = SIA_ultranac
+		text = SIA_ultranac
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_18_corps
+		}
+		x = 45
+		y = 11
+
+	}
+	focus = {
+		id = SIA_Japan_friend
+		text = SIA_Japan_friend
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_ultranac
+		}
+		x = 45
+		y = 12
+
+	}
+	focus = {
+		id = SIA_no_japan
+		text = SIA_no_japan
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_Japan_friend
+		}
+		mutually_exclusive = {
+			focus = SIA_yes_japan
+		}
+		x = 44
+		y = 13
+
+	}
+	focus = {
+		id = SIA_yes_japan
+		text = SIA_yes_japan
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_Japan_friend
+		}
+		mutually_exclusive = {
+			focus = SIA_no_japan
+		}
+		x = 46
+		y = 13
+
+	}
+	focus = {
+		id = SIA_war_with_indchi
+		text = SIA_war_with_indchi
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_yes_japan
+			focus = SIA_no_japan
+		}
+		x = 45
+		y = 14
+
+	}
+	focus = {
+		id = SIA_thai_viette
+		text = SIA_thai_viette
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_no_japan
+			focus = SIA_yes_japan
+		}
+		x = 43
+		y = 14
+
+	}
+	focus = {
+		id = SIA_back_north_malaia
+		text = SIA_back_north_malaia
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_no_japan
+			focus = SIA_yes_japan
+		}
+		x = 44
+		y = 15
+
+	}
+	focus = {
+		id = SIA_help_bhurma_thai
+		text = SIA_help_bhurma_thai
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_no_japan
+			focus = SIA_yes_japan
+		}
+		x = 46
+		y = 15
+
+	}
+	focus = {
+		id = SIA_great_thai
+		text = SIA_great_thai
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_back_north_malaia
+		}
+		prerequisite = {
+			focus = SIA_help_bhurma_thai
+		}
+		x = 45
+		y = 16
+
+	}
+	focus = {
+		id = SIA_back_last_thai
+		text = SIA_back_last_thai
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_great_thai
+		}
+		x = 45
+		y = 18
+
+	}
+	focus = {
+		id = SIA_budda_city
+		text = SIA_budda_city
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_great_thai
+		}
+		x = 46
+		y = 17
+
+	}
+	focus = {
+		id = SIA_build_oil_factory
+		text = SIA_build_oil_factory
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_18_corps
+		}
+		x = 47
+		y = 11
+
+	}
+	focus = {
+		id = SIA_12_culture
+		text = SIA_12_culture
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_ultranac
+		}
+		x = 47
+		y = 12
+
+	}
+	focus = {
+		id = SIA_destroy_seri_thai
+		text = SIA_destroy_seri_thai
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_yes_japan
+		}
+		mutually_exclusive = {
+			focus = SIA_help_seri_thai
+		}
+		x = 47
+		y = 14
+
+	}
+	focus = {
+		id = SIA_woman_army
+		text = SIA_woman_army
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_12_culture
+		}
+		x = 48
+		y = 13
+
+	}
+	focus = {
+		id = SIA_soc_evolution
+		text = SIA_soc_evolution
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_woman_army
+		}
+		x = 48
+		y = 15
+
+	}
+	focus = {
+		id = SIA_invest_railroad_gb
+		text = SIA_invest_railroad_gb
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_GB_compromise
+		}
+		x = 0
+		y = 4
+
+	}
+	focus = {
+		id = SIA_infra_credit_gb
+		text = SIA_infra_credit_gb
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_invest_railroad_gb
+		}
+		x = 0
+		y = 5
+
+	}
+	focus = {
+		id = SIA_avto_factory
+		text = SIA_avto_factory
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_metal_and_rubber
+		}
+		x = 0
+		y = 7
+
+	}
+	focus = {
+		id = SIA_modern_rail
+		text = SIA_modern_rail
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_metal_and_rubber
+		}
+		x = 2
+		y = 7
+
+	}
+	focus = {
+		id = SIA_med_air2
+		text = SIA_med_air2
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_med_air
+			focus = SIA_franch_motor
+			focus = SIA_japan_taktik
+			focus = SIA_usa_base
+		}
+		x = 11
+		y = 6
+
+	}
+	focus = {
+		id = SIA_radio_air
+		text = SIA_radio_air
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_usa_base
+			focus = SIA_japan_taktik
+			focus = SIA_franch_motor
+		}
+		x = 13
+		y = 5
+
+	}
+	focus = {
+		id = SIA_military_reform
+		text = SIA_military_reform
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_military_parlament
+		}
+		x = 1
+		y = 11
+
+	}
+	focus = {
+		id = SIA_thai_tank
+		text = SIA_thai_tank
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_military_reform
+		}
+		x = 0
+		y = 12
+
+	}
+	focus = {
+		id = SIA_new_military_school
+		text = SIA_new_military_school
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_military_reform
+		}
+		x = 2
+		y = 12
+
+	}
+	focus = {
+		id = SIA_military_prom
+		text = SIA_military_prom
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_thai_tank
+		}
+		x = 0
+		y = 13
+
+	}
+	focus = {
+		id = SIA_changmala
+		text = SIA_changmala
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_new_military_school
+		}
+		x = 2
+		y = 13
+
+	}
+	focus = {
+		id = SIA_proffessional_army
+		text = SIA_proffessional_army
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_thai_tank
+		}
+		x = 1
+		y = 14
+
+	}
+	focus = {
+		id = SIA_indochina_better
+		text = SIA_indochina_better
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_military_ally
+		}
+		x = 1
+		y = 17
+
+	}
+	focus = {
+		id = SIA_rise_country
+		text = SIA_rise_country
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_ressurect_commi
+		}
+		x = 11
+		y = 11
+
+	}
+	focus = {
+		id = SIA_ppl_newspaper
+		text = SIA_ppl_newspaper
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_ressurect_commi
+		}
+		x = 13
+		y = 11
+
+	}
+	focus = {
+		id = SIA_central_profally
+		text = SIA_central_profally
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_rise_country
+		}
+		prerequisite = {
+			focus = SIA_ppl_newspaper
+		}
+		x = 10
+		y = 12
+
+	}
+	focus = {
+		id = SIA_fiveyear_plan
+		text = SIA_fiveyear_plan
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_central_profally
+		}
+		x = 10
+		y = 13
+
+	}
+	focus = {
+		id = SIA_radio_voice
+		text = SIA_radio_voice
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_ppl_newspaper
+		}
+		x = 12
+		y = 12
+
+	}
+	focus = {
+		id = SIA_rev_yaung
+		text = SIA_rev_yaung
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_ppl_newspaper
+		}
+		x = 14
+		y = 12
+
+	}
+	focus = {
+		id = SIA_no_king
+		text = SIA_no_king
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_radio_voice
+		}
+		prerequisite = {
+			focus = SIA_rev_yaung
+		}
+		x = 13
+		y = 13
+
+	}
+	focus = {
+		id = SIA_thai_urbazation
+		text = SIA_thai_urbazation
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_ppl_newspaper
+		}
+		x = 16
+		y = 12
+
+	}
+	focus = {
+		id = SIA_hmong_soldiers
+		text = SIA_hmong_soldiers
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_thai_urbazation
+		}
+		x = 16
+		y = 13
+
+	}
+	focus = {
+		id = SIA_urban_teh
+		text = SIA_urban_teh
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_thai_urbazation
+			focus = SIA_industrial_with_company
+		}
+		x = 18
+		y = 13
+
+	}
+	focus = {
+		id = SIA_west_sssr
+		text = SIA_west_sssr
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_no_king
+		}
+		mutually_exclusive = {
+			focus = SIA_with_comchina
+			focus = SIA_with_SSSR
+		}
+		x = 13
+		y = 14
+
+	}
+	focus = {
+		id = SIA_with_comchina
+		text = SIA_with_comchina
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_no_king
+		}
+		mutually_exclusive = {
+			focus = SIA_west_sssr
+		}
+		x = 8
+		y = 14
+
+	}
+	focus = {
+		id = SIA_with_SSSR
+		text = SIA_with_SSSR
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_no_king
+		}
+		mutually_exclusive = {
+			focus = SIA_west_sssr
+		}
+		x = 17
+		y = 14
+
+	}
+	focus = {
+		id = SIA_piece_with_chinese
+		text = SIA_piece_with_chinese
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_with_comchina
+		}
+		x = 8
+		y = 15
+
+	}
+	focus = {
+		id = SIA_chi_exp
+		text = SIA_chi_exp
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_with_comchina
+		}
+		x = 9
+		y = 16
+
+	}
+	focus = {
+		id = SIA_comchi_prom
+		text = SIA_comchi_prom
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_piece_with_chinese
+		}
+		x = 8
+		y = 18
+
+	}
+	focus = {
+		id = SIA_chi_marx
+		text = SIA_chi_marx
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_chi_exp
+		}
+		x = 9
+		y = 17
+
+	}
+	focus = {
+		id = SIA_sssr_laos
+		text = SIA_sssr_laos
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_west_sssr
+		}
+		x = 10
+		y = 15
+
+	}
+	focus = {
+		id = SIA_sssr_cambodja
+		text = SIA_sssr_cambodja
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_west_sssr
+		}
+		x = 12
+		y = 15
+
+	}
+	focus = {
+		id = SIA_sssr_annam
+		text = SIA_sssr_annam
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_sssr_laos
+			focus = SIA_sssr_cambodja
+		}
+		x = 11
+		y = 16
+
+	}
+	focus = {
+		id = SIA_sssr_indochina_again
+		text = SIA_sssr_indochina_again
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_sssr_annam
+		}
+		x = 11
+		y = 17
+
+	}
+	focus = {
+		id = SIA_sssr_bhurma
+		text = SIA_sssr_bhurma
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_west_sssr
+		}
+		x = 14
+		y = 15
+
+	}
+	focus = {
+		id = SIA_sssr_malaisia
+		text = SIA_sssr_malaisia
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_west_sssr
+		}
+		x = 13
+		y = 16
+
+	}
+	focus = {
+		id = SIA_sssr_research
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_west_sssr
+		}
+		x = 15
+		y = 16
+
+	}
+	focus = {
+		id = SIA_sssr_philippins
+		text = SIA_sssr_philippins
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_sssr_malaisia
+		}
+		x = 13
+		y = 17
+
+	}
+	focus = {
+		id = SIA_sssr_indonesia
+		text = SIA_sssr_indonesia
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_sssr_malaisia
+		}
+		x = 15
+		y = 17
+
+	}
+	focus = {
+		id = SIA_central_pom_exp
+		text = SIA_central_pom_exp
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_with_SSSR
+		}
+		x = 16
+		y = 15
+
+	}
+	focus = {
+		id = SIA_SSSR_generals
+		text = SIA_SSSR_generals
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_with_SSSR
+		}
+		x = 18
+		y = 15
+
+	}
+	focus = {
+		id = SIA_ateism
+		text = SIA_ateism
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_with_SSSR
+		}
+		x = 17
+		y = 16
+
+	}
+	focus = {
+		id = SIA_rev_education
+		text = SIA_rev_education
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_ateism
+		}
+		x = 17
+		y = 17
+
+	}
+	focus = {
+		id = SIA_united_thai
+		text = SIA_united_thai
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_chi_marx
+			focus = SIA_rev_education
+		}
+		x = 13
+		y = 18
+
+	}
+	focus = {
+		id = SIA_new_constitution
+		text = SIA_new_constitution
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_med_for_all
+		}
+		x = 23
+		y = 13
+
+	}
+	focus = {
+		id = SIA_create_nac_bank
+		text = SIA_create_nac_bank
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_new_constitution
+		}
+		x = 24
+		y = 14
+
+	}
+	focus = {
+		id = SIA_league_frank_colonies
+		text = SIA_league_frank_colonies
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_create_league
+		}
+		x = 23
+		y = 16
+
+	}
+	focus = {
+		id = SIA_league_phillipins
+		text = SIA_league_phillipins
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_league_indochi
+		}
+		x = 19
+		y = 18
+
+	}
+	focus = {
+		id = SIA_league_usa_colonies
+		text = SIA_league_usa_colonies
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_league_frank_colonies
+		}
+		x = 23
+		y = 18
+
+	}
+	focus = {
+		id = SIA_league_indonesia
+		text = SIA_league_indonesia
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_league_malaia
+		}
+		x = 20
+		y = 19
+
+	}
+	focus = {
+		id = SIA_league_niderland_colonies
+		text = SIA_league_niderland_colonies
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_GB_colonies
+		}
+		x = 22
+		y = 19
+
+	}
+	focus = {
+		id = SIA_league_one_federation
+		text = SIA_league_one_federation
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_league_bhurma
+		}
+		x = 21
+		y = 20
+
+	}
+	focus = {
+		id = SIA_USA_generals
+		text = SIA_USA_generals
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_USA_ally
+		}
+		x = 25
+		y = 16
+
+	}
+	focus = {
+		id = SIA_USA_armory
+		text = SIA_USA_armory
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_USA_generals
+		}
+		x = 24
+		y = 17
+
+	}
+	focus = {
+		id = SIA_USA_research
+		text = SIA_USA_research
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_USA_generals
+		}
+		x = 26
+		y = 17
+
+	}
+	focus = {
+		id = SIA_USA_base_dem
+		text = SIA_USA_base_dem
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_USA_generals
+		}
+		x = 25
+		y = 18
+
+	}
+	focus = {
+		id = SIA_USA_lic
+		text = SIA_USA_lic
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_USA_research
+		}
+		prerequisite = {
+			focus = SIA_USA_armory
+		}
+		x = 27
+		y = 18
+
+	}
+	focus = {
+		id = SIA_USA_ekonomik_help
+		text = SIA_USA_ekonomik_help
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_USA_research
+		}
+		x = 26
+		y = 19
+
+	}
+	focus = {
+		id = SIA_USA_stop_japan
+		text = SIA_USA_stop_japan
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_league_usa_colonies
+			focus = SIA_USA_base_dem
+		}
+		x = 24
+		y = 19
+
+	}
+	focus = {
+		id = SIA_restore_traditions
+		text = SIA_restore_traditions
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_faund_demparty
+		}
+		prerequisite = {
+			focus = SIA_back_princes
+		}
+		x = 31
+		y = 14
+
+	}
+	focus = {
+		id = SIA_dem_neutral
+		text = SIA_dem_neutral
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_west_politic
+			focus = SIA_Rama_VII
+		}
+		mutually_exclusive = {
+			focus = SIA_find_dem_ally
+			focus = SIA_imperalism
+		}
+		x = 32
+		y = 15
+
+	}
+	focus = {
+		id = SIA_royal_scouts
+		text = SIA_royal_scouts
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_Bovorader_reforms
+		}
+		x = 33
+		y = 14
+
+	}
+	focus = {
+		id = SIA_help_seri_thai
+		text = SIA_help_seri_thai
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_yes_japan
+		}
+		mutually_exclusive = {
+			focus = SIA_destroy_seri_thai
+		}
+		x = 49
+		y = 14
+
+	}
+	focus = {
+		id = SIA_west_modernization
+		text = SIA_west_modernization
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_thai_nac_bank
+		}
+		x = 42
+		y = 15
+
+	}
+	focus = {
+		id = SIA_new_banknots
+		text = SIA_new_banknots
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_thai_nac_bank
+		}
+		x = 41
+		y = 16
+
+	}
+	focus = {
+		id = SIA_new_capital
+		text = SIA_new_capital
+		icon = GFX_goal_unknown
+		cost = 10
+		prerequisite = {
+			focus = SIA_great_thai
+		}
+		x = 44
+		y = 17
+
+	}
+}

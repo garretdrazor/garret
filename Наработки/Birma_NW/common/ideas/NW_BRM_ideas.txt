@@ -1,0 +1,121 @@
+ideas = {
+	country = {
+	#НД стартовые и по базовым событиям
+		BRM_idea_nation_conflict = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = BRM_idea_half_birma
+			modifier = {
+				stability_factor = -0.3
+			}
+		}
+		BRM_idea_nalog_hight = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = BRM_idea_hight_renta
+			modifier = {
+				conscription = -0.01
+				MONTHLY_POPULATION = -0.20
+				research_speed_factor = -0.02
+			}
+		}
+		BRM_idea_raj_burj = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = big_col_app
+			modifier = {
+				consumer_goods_factor = 0.1
+			}
+		}
+		BRM_idea_no_army = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				is_subject = yes
+			}
+			picture = BRM_idea_no_birma_soldiers
+			modifier = {
+				custom_modifier_tooltip = SPR_military_disloyalty_tt
+				country_lock_all_division_template = yes
+			}
+		}
+		BRM_idea_students_riot = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = big_col_app
+			modifier = {
+				research_speed_factor = -0.03
+				political_power_factor = -0.5
+			}
+		}
+		BRM_idea_vacation_factory = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = big_col_app
+			modifier = {
+				stability_factor = 0.1
+				production_factory_max_efficiency_factor = -0.1
+				production_factory_efficiency_gain_factor = -0.1
+			}
+		}
+		BRM_idea_vacation_builders = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = big_col_app
+			modifier = {
+				stability_factor = 0.05
+				production_speed_buildings_factor = -0.1
+			}
+		}
+		BRM_idea_vacation_seaworkers = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = big_col_app
+			modifier = {
+				stability_factor = 0.05
+				MONTHLY_POPULATION = -0.1
+				production_speed_dockyard_factor = -0.1
+			}
+		}
+	}
+}

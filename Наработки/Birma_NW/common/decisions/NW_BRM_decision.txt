@@ -1,0 +1,243 @@
+BRM_congress_categories = {
+	BRM_let_democacy_1 = {
+
+		icon = eng_blackshirt_speech
+
+		cost = 30
+		days_remove = 21
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision BRM_let_democacy_1"
+			random_list = {
+				20 = {
+					set_temp_variable = { add_popularity_burma_party_blue_temp = 1 }
+					add_to_variable = { burma_party_blue_pop_total = add_popularity_burma_party_blue_temp }
+					add_popularity_burma_party_blue = yes
+					custom_effect_tooltip = BRM_GBSA_1_tt
+				}
+				20 = {
+					set_temp_variable = { add_popularity_burma_party_blue_temp = 2 }
+					add_to_variable = { burma_party_blue_pop_total = add_popularity_burma_party_blue_temp }
+					add_popularity_burma_party_blue = yes
+					custom_effect_tooltip = BRM_GBSA_2_tt
+				}
+				20 = {
+					set_temp_variable = { add_popularity_burma_party_blue_temp = 3 }
+					add_to_variable = { burma_party_blue_pop_total = add_popularity_burma_party_blue_temp }
+					add_popularity_burma_party_blue = yes
+					custom_effect_tooltip = BRM_GBSA_3_tt
+				}
+				20 = {
+					set_temp_variable = { add_popularity_burma_party_blue_temp = 4 }
+					add_to_variable = { burma_party_blue_pop_total = add_popularity_burma_party_blue_temp }
+					add_popularity_burma_party_blue = yes
+					custom_effect_tooltip = BRM_GBSA_4_tt
+				}
+				20 = {
+					set_temp_variable = { add_popularity_burma_party_blue_temp = 5 }
+					add_to_variable = { burma_party_blue_pop_total = add_popularity_burma_party_blue_temp }
+					add_popularity_burma_party_blue = yes
+					custom_effect_tooltip = BRM_GBSA_5_tt
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 20
+				has_political_power > 30
+			}
+			
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+	BRM_let_democacy_2 = {
+
+		icon = generic_construction
+
+		days_remove = 50
+		
+		modifier = {
+			civilian_factory_use = 3
+		}
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision BRM_let_democacy_2"
+			set_temp_variable = { add_popularity_burma_party_blue_temp = 2 }
+			add_to_variable = { burma_party_blue_pop_total = add_popularity_burma_party_blue_temp }
+			add_popularity_burma_party_blue = yes
+			custom_effect_tooltip = BRM_GBSA_2_tt
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 20
+				num_of_civilian_factories_available_for_projects > 3
+			}
+			
+			modifier = {
+				factor = 0
+				num_of_civilian_factories_available_for_projects < 3
+			}
+			
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+	BRM_let_democacy_3 = {
+
+		icon = generic_political_rally
+
+		days_remove = 30
+		available = {
+			OR {
+				NOT = {
+					has_idea = BRM_idea_vacation_factory
+				}
+				NOT = {
+					has_idea = BRM_idea_vacation_builders
+				}
+				NOT = {
+					has_idea = BRM_idea_vacation_seaworkers
+				}
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision BRM_let_democacy_3"
+				IF = {
+					limit = { 
+						NOT = {
+							has_idea = BRM_idea_vacation_factory
+						}
+					}
+					add_timed_idea = {
+						idea = BRM_idea_vacation_factory
+						days = 365
+					}
+				}
+				else_IF = {
+					limit = { 
+						OR = {
+							NOT = {
+								has_idea = BRM_idea_vacation_factory
+								has_idea = BRM_idea_vacation_builders
+							}
+						}
+					}
+					add_timed_idea = {
+						idea = BRM_idea_vacation_builders
+						days = 365
+					}
+				}
+				else_IF = {
+					limit = {
+						NOT = {
+							has_idea = BRM_idea_vacation_factory
+						}
+						NOT = {
+							has_idea = BRM_idea_vacation_builders
+						}
+						NOT = {
+							has_idea = BRM_idea_vacation_seaworkers
+						}
+					}
+					add_timed_idea = {
+						idea = BRM_idea_vacation_seaworkers
+						days = 365
+					}
+				}
+			random_list = {
+				33 = {
+					set_temp_variable = { add_popularity_burma_party_blue_temp = 2 }
+					add_to_variable = { burma_party_blue_pop_total = add_popularity_burma_party_blue_temp }
+					add_popularity_burma_party_blue = yes
+					custom_effect_tooltip = BRM_GBSA_2_tt
+				}
+				34 = {
+					set_temp_variable = { add_popularity_burma_party_blue_temp = 3 }
+					add_to_variable = { burma_party_blue_pop_total = add_popularity_burma_party_blue_temp }
+					add_popularity_burma_party_blue = yes
+					custom_effect_tooltip = BRM_GBSA_3_tt
+				}
+				33 = {
+					set_temp_variable = { add_popularity_burma_party_blue_temp = 4 }
+					add_to_variable = { burma_party_blue_pop_total = add_popularity_burma_party_blue_temp }
+					add_popularity_burma_party_blue = yes
+					custom_effect_tooltip = BRM_GBSA_4_tt
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+	BRM_let_populity_1 = {
+
+		icon = eng_propaganda_campaigns
+
+		cost = 30
+		days_remove = 21
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision BRM_let_populity_1"
+			random_list = {
+				20 = {
+					set_temp_variable = { add_popularity_burma_party_grey_temp = 1 }
+					add_to_variable = { burma_party_grey_pop_total = add_popularity_burma_party_grey_temp }
+					add_popularity_burma_party_grey = yes
+					custom_effect_tooltip = BRM_SIN_1_tt
+				}
+				20 = {
+					set_temp_variable = { add_popularity_burma_party_grey_temp = 2 }
+					add_to_variable = { burma_party_grey_pop_total = add_popularity_burma_party_grey_temp }
+					add_popularity_burma_party_grey = yes
+					custom_effect_tooltip = BRM_SIN_2_tt
+				}
+				20 = {
+					set_temp_variable = { add_popularity_burma_party_grey_temp = 3 }
+					add_to_variable = { burma_party_grey_pop_total = add_popularity_burma_party_grey_temp }
+					add_popularity_burma_party_grey = yes
+					custom_effect_tooltip = BRM_SIN_3_tt
+				}
+				20 = {
+					set_temp_variable = { add_popularity_burma_party_grey_temp = 4 }
+					add_to_variable = { burma_party_grey_pop_total = add_popularity_burma_party_grey_temp }
+					add_popularity_burma_party_grey = yes
+					custom_effect_tooltip = BRM_SIN_4_tt
+				}
+				20 = {
+					set_temp_variable = { add_popularity_burma_party_grey_temp = 5 }
+					add_to_variable = { burma_party_grey_pop_total = add_popularity_burma_party_grey_temp }
+					add_popularity_burma_party_grey = yes
+					custom_effect_tooltip = BRM_SIN_5_tt
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 20
+				has_political_power > 30
+			}
+			
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
