@@ -82,12 +82,279 @@ country_event = {
 	}
 }
 
+# Продолжение забастовок в Бирме
+country_event = {
+	id = brm.5
+	title = brm.5.t
+	desc = brm.5.d
+	picture = GFX_report_event_brm_5
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event brm.5" }
 
+	option = {
+		name = brm.5.a
+		add_stability = 0.01
+		hidden_effect = {
+			country_event = { id = egy.6 days = 8 }
+		}
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+	}
+	option = {
+		name = brm.5.b
+		add_stability = 0.03
+		set_temp_variable = { add_popularity_burma_party_blue_temp = 2 }
+		add_to_variable = { burma_party_blue_pop_total = add_popularity_burma_party_blue_temp }
+		add_popularity_burma_party_blue = yes
+		custom_effect_tooltip = BRM_GBSA_2_tt
+		set_temp_variable = { add_popularity_burma_party_white_temp = 2 }
+		subtract_from_temp_variable = { burma_party_white_pop_total = add_popularity_burma_party_white_temp }
+		add_popularity_burma_party_white = yes
+		custom_effect_tooltip = BRM_neutral_02_tt
+		hidden_effect = {
+			country_event = { id = egy.8 days = 29 }
+		}
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
 
+# Конец забастовок
+country_event = {
+	id = brm.6
+	title = brm.6.t
+	desc = brm.6.d
+	picture = GFX_report_event_brm_6
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event brm.6" }
 
+	option = {
+		name = brm.6.a
+		add_stability = 0.01
+		remove_ideas = BRM_idea_students_riot
+		retire_character = BRM_Hugh_Lansdown_Stephenson
+		recruit_character = BRM_Archibald_Douglas_Cochrane
+		BRM_Archibald_Douglas_Cochrane = {
+			promote_character = yes
+			promote_character = despotism
+		}
+		hidden_effect = {
+			country_event = { id = egy.7 days = 20 }
+		}
+	}
+}
 
+# Создание Всебирманского союза студентов
+country_event = {
+	id = brm.7
+	title = brm.7.t
+	desc = brm.7.d
+	picture = GFX_report_event_brm_6
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event brm.7" }
 
+	option = {
+		name = brm.7.a
+		add_popularity = { ideology = trozkism popularity = 0.05 }
+		add_popularity = { ideology = communism popularity = 0.05 }
+	}
+}
+# Забастовка затихает
+country_event = {
+	id = brm.8
+	title = brm.8.t
+	desc = brm.8.d
+	picture = GFX_report_event_brm_8
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event brm.8" }
 
+	option = {
+		name = brm.8.a
+		add_stability = 0.02
+		add_political_power = 25
+		remove_ideas = BRM_idea_students_riot
+		retire_character = BRM_Hugh_Lansdown_Stephenson
+		recruit_character = BRM_Archibald_Douglas_Cochrane
+		BRM_Archibald_Douglas_Cochrane = {
+			promote_character = yes
+			promote_character = despotism
+		}
+		set_temp_variable = { add_popularity_burma_party_blue_temp = 3 }
+		add_to_variable = { burma_party_blue_pop_total = add_popularity_burma_party_blue_temp }
+		add_popularity_burma_party_blue = yes
+		custom_effect_tooltip = BRM_GBSA_3_tt
+		set_temp_variable = { add_popularity_burma_party_white_temp = 3 }
+		subtract_from_temp_variable = { burma_party_white_pop_total = add_popularity_burma_party_white_temp }
+		add_popularity_burma_party_white = yes
+		custom_effect_tooltip = BRM_neutral_03_tt
+	}
+}
+
+# Партия Пяти Цветков привлекла У Оттаму
+country_event = {
+	id = brm.9
+	title = brm.9.t
+	desc = brm.9.d
+	picture = GFX_report_event_brm_9
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event brm.9" }
+
+	option = {
+		name = brm.9.a
+		add_political_power = -10
+		set_temp_variable = { add_popularity_burma_party_green_temp = 10 }
+		add_to_variable = { burma_party_green_pop_total = add_popularity_burma_party_green_temp }
+		add_popularity_burma_party_green = yes
+		custom_effect_tooltip = BRM_FFV_10_tt
+		set_temp_variable = { add_popularity_burma_party_white_temp = 10 }
+		subtract_from_temp_variable = { burma_party_white_pop_total = add_popularity_burma_party_white_temp }
+		add_popularity_burma_party_white = yes
+		custom_effect_tooltip = BRM_neutral_010_tt
+	}
+}
+
+# Выступления У Оттамы
+country_event = {
+	id = brm.10
+	title = brm.10.t
+	desc = brm.10.d
+	picture = GFX_report_event_brm_10
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event brm.10" }
+
+	option = {
+		name = brm.10.a
+		add_political_power = -10
+		set_temp_variable = { add_popularity_burma_party_green_temp = 10 }
+		add_to_variable = { burma_party_green_pop_total = add_popularity_burma_party_green_temp }
+		add_popularity_burma_party_green = yes
+		custom_effect_tooltip = BRM_FFV_10_tt
+		set_temp_variable = { add_popularity_burma_party_white_temp = 10 }
+		subtract_from_temp_variable = { burma_party_white_pop_total = add_popularity_burma_party_white_temp }
+		add_popularity_burma_party_white = yes
+		custom_effect_tooltip = BRM_neutral_010_tt
+	}
+}
+
+# Создание партии Комин-кочин
+country_event = {
+	id = brm.11
+	title = brm.11.t
+	desc = brm.11.d
+	picture = GFX_report_event_brm_11
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event brm.11" }
+
+	option = {
+		name = brm.11.a
+		add_political_power = -10
+		set_temp_variable = { add_popularity_burma_party_red_temp = 3 }
+		add_to_variable = { burma_party_red_pop_total = add_popularity_burma_party_red_temp }
+		add_popularity_burma_party_red = yes
+		custom_effect_tooltip = BRM_KK_3_tt
+		set_temp_variable = { add_popularity_burma_party_white_temp = 3 }
+		subtract_from_temp_variable = { burma_party_white_pop_total = add_popularity_burma_party_white_temp }
+		add_popularity_burma_party_white = yes
+		custom_effect_tooltip = BRM_neutral_03_tt
+	}
+}
+
+# Окончание выборов в парламент
+country_event = {
+	id = brm.12
+	title = brm.12.t
+	desc = brm.12.d
+	picture = GFX_report_event_brm_12
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event brm.12" }
+
+	option = {
+		name = brm.12.a
+		add_political_power = -10
+		set_country_flag = BRM_elections_end_flag
+		unlock_decision_category_tooltip = BRM_party_moves_categories
+	}
+}
+
+# Комин-кочин укрепляется в профсоюзах
+country_event = {
+	id = brm.13
+	title = brm.13.t
+	desc = brm.13.d
+	picture = GFX_report_event_brm_13
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event brm.13" }
+
+	option = {
+		name = brm.13.a
+		set_temp_variable = { add_popularity_burma_party_red_temp = 1 }
+		add_to_variable = { burma_party_red_pop_total = add_popularity_burma_party_red_temp }
+		add_popularity_burma_party_red = yes
+		custom_effect_tooltip = BRM_KK_1_tt
+	}
+}
+
+# Спонтанные митинги буддистских организаций
+country_event = {
+	id = brm.14
+	title = brm.14.t
+	desc = brm.14.d
+	picture = GFX_report_event_brm_14
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event brm.14" }
+
+	option = {
+		name = brm.14.a
+		set_temp_variable = { add_popularity_burma_party_blue_temp = 2 }
+		add_to_variable = { burma_party_blue_pop_total = add_popularity_burma_party_blue_temp }
+		add_popularity_burma_party_blue = yes
+		custom_effect_tooltip = BRM_GBSA_2_tt
+	}
+}
+
+# Предложение Партии Пяти Цветков
+country_event = {
+	id = brm.15
+	title = brm.15.t
+	desc = brm.15.d
+	picture = GFX_report_event_brm_15
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event brm.15" }
+
+	option = {
+		name = brm.15.a
+		add_political_power = -100
+		
+	}
+	
+	option = {
+		name = brm.15.b
+		
+	}
+}
 
 # TEST
 country_event = {

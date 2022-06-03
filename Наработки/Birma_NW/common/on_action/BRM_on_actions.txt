@@ -11,6 +11,12 @@ on_actions = {
 					country_event = { id = brm.2 days = 62 }
 					country_event = { id = brm.3 days = 64 }
 					country_event = { id = brm.4 days = 121 }
+					country_event = { id = brm.5 days = 122 }
+					country_event = { id = brm.9 days = 157 }
+					country_event = { id = brm.10 days = 228 }
+					country_event = { id = brm.11 days = 246 }
+					country_event = { id = brm.12 days = 334 }
+					
 				}
 			}
 		}

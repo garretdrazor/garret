@@ -1,6 +1,7 @@
 ideas = {
 	country = {
 	#НД стартовые и по базовым событиям
+		# Разобщённые нации 
 		BRM_idea_nation_conflict = {
 			removal_cost = -1
 			allowed = {
@@ -14,6 +15,7 @@ ideas = {
 				stability_factor = -0.3
 			}
 		}
+		# Высокий подушный налог 
 		BRM_idea_nalog_hight = {
 			removal_cost = -1
 			allowed = {
@@ -29,6 +31,7 @@ ideas = {
 				research_speed_factor = -0.02
 			}
 		}
+		# Индийская буржуазия 
 		BRM_idea_raj_burj = {
 			removal_cost = -1
 			allowed = {
@@ -42,6 +45,7 @@ ideas = {
 				consumer_goods_factor = 0.1
 			}
 		}
+		# Запрет набора бирманцев в армию 
 		BRM_idea_no_army = {
 			removal_cost = -1
 			allowed = {
@@ -59,6 +63,7 @@ ideas = {
 				country_lock_all_division_template = yes
 			}
 		}
+		# Студенческие забастовки в Бирме
 		BRM_idea_students_riot = {
 			removal_cost = -1
 			allowed = {
@@ -73,6 +78,7 @@ ideas = {
 				political_power_factor = -0.5
 			}
 		}
+		# Отпуска для фабричных рабочих
 		BRM_idea_vacation_factory = {
 			removal_cost = -1
 			allowed = {
@@ -88,6 +94,7 @@ ideas = {
 				production_factory_efficiency_gain_factor = -0.1
 			}
 		}
+		# Отпуска для строителей
 		BRM_idea_vacation_builders = {
 			removal_cost = -1
 			allowed = {
@@ -102,6 +109,7 @@ ideas = {
 				production_speed_buildings_factor = -0.1
 			}
 		}
+		# Отпуска для работников верфей и рыбного промысла
 		BRM_idea_vacation_seaworkers = {
 			removal_cost = -1
 			allowed = {

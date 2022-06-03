@@ -97,21 +97,13 @@ BRM_congress_categories = {
 
 		days_remove = 30
 		available = {
-			OR {
-				NOT = {
-					has_idea = BRM_idea_vacation_factory
-				}
-				NOT = {
-					has_idea = BRM_idea_vacation_builders
-				}
-				NOT = {
-					has_idea = BRM_idea_vacation_seaworkers
-				}
+			NOT = {
+				has_country_flag = brm_no_vacation_flag
 			}
 		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision BRM_let_democacy_3"
-				IF = {
+				if = {
 					limit = { 
 						NOT = {
 							has_idea = BRM_idea_vacation_factory
@@ -122,13 +114,10 @@ BRM_congress_categories = {
 						days = 365
 					}
 				}
-				else_IF = {
+				else_if = {
 					limit = { 
-						OR = {
-							NOT = {
-								has_idea = BRM_idea_vacation_factory
-								has_idea = BRM_idea_vacation_builders
-							}
+						NOT = {
+							has_idea = BRM_idea_vacation_builders
 						}
 					}
 					add_timed_idea = {
@@ -136,14 +125,8 @@ BRM_congress_categories = {
 						days = 365
 					}
 				}
-				else_IF = {
+				else_if = {
 					limit = {
-						NOT = {
-							has_idea = BRM_idea_vacation_factory
-						}
-						NOT = {
-							has_idea = BRM_idea_vacation_builders
-						}
 						NOT = {
 							has_idea = BRM_idea_vacation_seaworkers
 						}
@@ -151,6 +134,9 @@ BRM_congress_categories = {
 					add_timed_idea = {
 						idea = BRM_idea_vacation_seaworkers
 						days = 365
+					}
+					hidden_effect = {
+						set_country_flag = brm_no_vacation_flag
 					}
 				}
 			random_list = {
@@ -237,6 +223,124 @@ BRM_congress_categories = {
 			modifier = {
 				factor = 100
 				is_historical_focus_on = yes
+			}
+		}
+	}
+	BRM_let_populity_2 = {
+
+		icon = eng_propaganda_campaigns
+
+		days_remove = 21
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision BRM_let_populity_2"
+			add_stability = -0.05
+			random_list = {
+				25 = {
+					set_temp_variable = { add_popularity_burma_party_grey_temp = 3 }
+					add_to_variable = { burma_party_grey_pop_total = add_popularity_burma_party_grey_temp }
+					add_popularity_burma_party_grey = yes
+					custom_effect_tooltip = BRM_SIN_3_tt
+				}
+				25 = {
+					set_temp_variable = { add_popularity_burma_party_grey_temp = 4 }
+					add_to_variable = { burma_party_grey_pop_total = add_popularity_burma_party_grey_temp }
+					add_popularity_burma_party_grey = yes
+					custom_effect_tooltip = BRM_SIN_4_tt
+				}
+				25 = {
+					set_temp_variable = { add_popularity_burma_party_grey_temp = 5 }
+					add_to_variable = { burma_party_grey_pop_total = add_popularity_burma_party_grey_temp }
+					add_popularity_burma_party_grey = yes
+					custom_effect_tooltip = BRM_SIN_5_tt
+				}
+				25 = {
+					set_temp_variable = { add_popularity_burma_party_grey_temp = 6 }
+					add_to_variable = { burma_party_grey_pop_total = add_popularity_burma_party_grey_temp }
+					add_popularity_burma_party_grey = yes
+					custom_effect_tooltip = BRM_SIN_6_tt
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 20
+				has_stability > 25
+			}
+			
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+	}
+	BRM_let_populity_3 = {
+
+		icon = eng_propaganda_campaigns
+
+		days_remove = 14
+		cost = 75
+		
+		available = {
+			has_country_flag = BRM_elections_end_flag
+		}
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision BRM_let_populity_3"
+			set_temp_variable = { add_popularity_burma_party_grey_temp = 5 }
+			add_to_variable = { burma_party_grey_pop_total = add_popularity_burma_party_grey_temp }
+			add_popularity_burma_party_grey = yes
+			custom_effect_tooltip = BRM_SIN_5_tt
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 20
+				has_political_power > 75
+			}
+			
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+BRM_party_moves_categories = {
+	BRM_party_moves_mission = {
+		allowed = {
+			tag = BRM
+		}
+		available = {
+			has_country_flag = BRM_parlament_ready_flag
+		}
+		activation = {
+			has_country_flag = BRM_elections_end_flag
+			NOT = { has_country_flag = BRM_parlament_ready_flag }
+		}
+		is_good = yes
+		days_mission_timeout = 20
+		icon = GFX_decision_wood_develop
+		timeout_effect = {
+			random_list = {
+				20 = {
+					country_event = { id = egy.7 }
+				}
+				20 = {
+					country_event = { id = egy.7 }
+				}
+				20 = {
+					country_event = { id = egy.7 }
+				}
+				20 = {
+					country_event = { id = egy.7 }
+				}
+				20 = {
+					country_event = { id = egy.7 }
+				}
 			}
 		}
 	}

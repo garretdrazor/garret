@@ -13,6 +13,23 @@ characters={
 			id=-1
 		}
 	}
+	BRM_Archibald_Douglas_Cochrane={
+		name="Archibald Douglas Cochrane"
+		portraits={
+			civilian={
+				large="gfx/leaders/BRM/Portrait_Archibald_Douglas_Cochrane.dds"
+			}
+		}
+		country_leader={
+			ideology=despotism
+			traits={ 			}
+			expire="1.1.1.1"
+			id=-1
+		}
+		traits={
+			sea_officer
+		}
+	}
 	BRM_Smith_Dun={
 		name="Smith Dun"
 		portraits={
