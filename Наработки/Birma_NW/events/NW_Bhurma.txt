@@ -100,7 +100,6 @@ country_event = {
 		}
 		ai_will_do = {
 			factor = 1
-			
 			modifier = {
 				factor = 100
 				is_historical_focus_on = yes
@@ -113,11 +112,9 @@ country_event = {
 		set_temp_variable = { add_popularity_burma_party_blue_temp = 2 }
 		add_to_variable = { burma_party_blue_pop_total = add_popularity_burma_party_blue_temp }
 		add_popularity_burma_party_blue = yes
-		custom_effect_tooltip = BRM_GBSA_2_tt
 		set_temp_variable = { add_popularity_burma_party_white_temp = 2 }
 		subtract_from_temp_variable = { burma_party_white_pop_total = add_popularity_burma_party_white_temp }
 		add_popularity_burma_party_white = yes
-		custom_effect_tooltip = BRM_neutral_02_tt
 		hidden_effect = {
 			country_event = { id = egy.8 days = 29 }
 		}
@@ -198,11 +195,9 @@ country_event = {
 		set_temp_variable = { add_popularity_burma_party_blue_temp = 3 }
 		add_to_variable = { burma_party_blue_pop_total = add_popularity_burma_party_blue_temp }
 		add_popularity_burma_party_blue = yes
-		custom_effect_tooltip = BRM_GBSA_3_tt
 		set_temp_variable = { add_popularity_burma_party_white_temp = 3 }
 		subtract_from_temp_variable = { burma_party_white_pop_total = add_popularity_burma_party_white_temp }
 		add_popularity_burma_party_white = yes
-		custom_effect_tooltip = BRM_neutral_03_tt
 	}
 }
 
@@ -222,11 +217,9 @@ country_event = {
 		set_temp_variable = { add_popularity_burma_party_green_temp = 10 }
 		add_to_variable = { burma_party_green_pop_total = add_popularity_burma_party_green_temp }
 		add_popularity_burma_party_green = yes
-		custom_effect_tooltip = BRM_FFV_10_tt
 		set_temp_variable = { add_popularity_burma_party_white_temp = 10 }
 		subtract_from_temp_variable = { burma_party_white_pop_total = add_popularity_burma_party_white_temp }
 		add_popularity_burma_party_white = yes
-		custom_effect_tooltip = BRM_neutral_010_tt
 	}
 }
 
@@ -246,11 +239,9 @@ country_event = {
 		set_temp_variable = { add_popularity_burma_party_green_temp = 10 }
 		add_to_variable = { burma_party_green_pop_total = add_popularity_burma_party_green_temp }
 		add_popularity_burma_party_green = yes
-		custom_effect_tooltip = BRM_FFV_10_tt
 		set_temp_variable = { add_popularity_burma_party_white_temp = 10 }
 		subtract_from_temp_variable = { burma_party_white_pop_total = add_popularity_burma_party_white_temp }
 		add_popularity_burma_party_white = yes
-		custom_effect_tooltip = BRM_neutral_010_tt
 	}
 }
 
@@ -270,11 +261,9 @@ country_event = {
 		set_temp_variable = { add_popularity_burma_party_red_temp = 3 }
 		add_to_variable = { burma_party_red_pop_total = add_popularity_burma_party_red_temp }
 		add_popularity_burma_party_red = yes
-		custom_effect_tooltip = BRM_KK_3_tt
 		set_temp_variable = { add_popularity_burma_party_white_temp = 3 }
 		subtract_from_temp_variable = { burma_party_white_pop_total = add_popularity_burma_party_white_temp }
 		add_popularity_burma_party_white = yes
-		custom_effect_tooltip = BRM_neutral_03_tt
 	}
 }
 
@@ -311,7 +300,6 @@ country_event = {
 		set_temp_variable = { add_popularity_burma_party_red_temp = 1 }
 		add_to_variable = { burma_party_red_pop_total = add_popularity_burma_party_red_temp }
 		add_popularity_burma_party_red = yes
-		custom_effect_tooltip = BRM_KK_1_tt
 	}
 }
 
@@ -330,7 +318,6 @@ country_event = {
 		set_temp_variable = { add_popularity_burma_party_blue_temp = 2 }
 		add_to_variable = { burma_party_blue_pop_total = add_popularity_burma_party_blue_temp }
 		add_popularity_burma_party_blue = yes
-		custom_effect_tooltip = BRM_GBSA_2_tt
 	}
 }
 
@@ -347,11 +334,88 @@ country_event = {
 	option = {
 		name = brm.15.a
 		add_political_power = -100
-		
+		random_list = {
+			50 = {
+				1147 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			50 = {
+				1149 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+		set_temp_variable = { add_popularity_burma_party_green_temp = 2 }
+		add_to_variable = { burma_party_green_pop_total = add_popularity_burma_party_green_temp }
+		add_popularity_burma_party_green = yes
 	}
 	
 	option = {
 		name = brm.15.b
+	}
+}
+
+# Громкий скандал в Альянсе Пяти Цветков
+country_event = {
+	id = brm.16
+	title = brm.16.t
+	desc = brm.16.d
+	picture = GFX_report_event_brm_16
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event brm.16" }
+
+	option = {
+		name = brm.16.a
+		add_political_power = 50
+		set_temp_variable = { add_popularity_burma_party_green_temp = 2 }
+		subtract_from_temp_variable = { burma_party_green_pop_total = add_popularity_burma_party_green_temp }
+		add_popularity_burma_party_green = yes
+	}
+}
+
+# Интриги Ба МО
+country_event = {
+	id = brm.17
+	title = brm.17.t
+	desc = brm.17.d
+	picture = GFX_report_event_brm_17
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event brm.17" }
+
+	option = {
+		name = brm.17.a
+		set_temp_variable = { add_popularity_burma_party_grey_temp = 3 }
+		add_to_variable = { burma_party_grey_pop_total = add_popularity_burma_party_grey_temp }
+		add_popularity_burma_party_grey = yes
+	}
+}
+
+# Спад экономики
+country_event = {
+	id = brm.18
+	title = brm.18.t
+	desc = brm.18.d
+	picture = GFX_report_event_brm_18
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event brm.18" }
+
+	option = {
+		name = brm.18.a
+		add_stability = -0.02
 		
 	}
 }

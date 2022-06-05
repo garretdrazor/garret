@@ -13,31 +13,26 @@ BRM_congress_categories = {
 					set_temp_variable = { add_popularity_burma_party_blue_temp = 1 }
 					add_to_variable = { burma_party_blue_pop_total = add_popularity_burma_party_blue_temp }
 					add_popularity_burma_party_blue = yes
-					custom_effect_tooltip = BRM_GBSA_1_tt
 				}
 				20 = {
 					set_temp_variable = { add_popularity_burma_party_blue_temp = 2 }
 					add_to_variable = { burma_party_blue_pop_total = add_popularity_burma_party_blue_temp }
 					add_popularity_burma_party_blue = yes
-					custom_effect_tooltip = BRM_GBSA_2_tt
 				}
 				20 = {
 					set_temp_variable = { add_popularity_burma_party_blue_temp = 3 }
 					add_to_variable = { burma_party_blue_pop_total = add_popularity_burma_party_blue_temp }
 					add_popularity_burma_party_blue = yes
-					custom_effect_tooltip = BRM_GBSA_3_tt
 				}
 				20 = {
 					set_temp_variable = { add_popularity_burma_party_blue_temp = 4 }
 					add_to_variable = { burma_party_blue_pop_total = add_popularity_burma_party_blue_temp }
 					add_popularity_burma_party_blue = yes
-					custom_effect_tooltip = BRM_GBSA_4_tt
 				}
 				20 = {
 					set_temp_variable = { add_popularity_burma_party_blue_temp = 5 }
 					add_to_variable = { burma_party_blue_pop_total = add_popularity_burma_party_blue_temp }
 					add_popularity_burma_party_blue = yes
-					custom_effect_tooltip = BRM_GBSA_5_tt
 				}
 			}
 		}
@@ -70,7 +65,6 @@ BRM_congress_categories = {
 			set_temp_variable = { add_popularity_burma_party_blue_temp = 2 }
 			add_to_variable = { burma_party_blue_pop_total = add_popularity_burma_party_blue_temp }
 			add_popularity_burma_party_blue = yes
-			custom_effect_tooltip = BRM_GBSA_2_tt
 		}
 
 		ai_will_do = {
@@ -144,19 +138,16 @@ BRM_congress_categories = {
 					set_temp_variable = { add_popularity_burma_party_blue_temp = 2 }
 					add_to_variable = { burma_party_blue_pop_total = add_popularity_burma_party_blue_temp }
 					add_popularity_burma_party_blue = yes
-					custom_effect_tooltip = BRM_GBSA_2_tt
 				}
 				34 = {
 					set_temp_variable = { add_popularity_burma_party_blue_temp = 3 }
 					add_to_variable = { burma_party_blue_pop_total = add_popularity_burma_party_blue_temp }
 					add_popularity_burma_party_blue = yes
-					custom_effect_tooltip = BRM_GBSA_3_tt
 				}
 				33 = {
 					set_temp_variable = { add_popularity_burma_party_blue_temp = 4 }
 					add_to_variable = { burma_party_blue_pop_total = add_popularity_burma_party_blue_temp }
 					add_popularity_burma_party_blue = yes
-					custom_effect_tooltip = BRM_GBSA_4_tt
 				}
 			}
 		}
@@ -184,31 +175,26 @@ BRM_congress_categories = {
 					set_temp_variable = { add_popularity_burma_party_grey_temp = 1 }
 					add_to_variable = { burma_party_grey_pop_total = add_popularity_burma_party_grey_temp }
 					add_popularity_burma_party_grey = yes
-					custom_effect_tooltip = BRM_SIN_1_tt
 				}
 				20 = {
 					set_temp_variable = { add_popularity_burma_party_grey_temp = 2 }
 					add_to_variable = { burma_party_grey_pop_total = add_popularity_burma_party_grey_temp }
 					add_popularity_burma_party_grey = yes
-					custom_effect_tooltip = BRM_SIN_2_tt
 				}
 				20 = {
 					set_temp_variable = { add_popularity_burma_party_grey_temp = 3 }
 					add_to_variable = { burma_party_grey_pop_total = add_popularity_burma_party_grey_temp }
 					add_popularity_burma_party_grey = yes
-					custom_effect_tooltip = BRM_SIN_3_tt
 				}
 				20 = {
 					set_temp_variable = { add_popularity_burma_party_grey_temp = 4 }
 					add_to_variable = { burma_party_grey_pop_total = add_popularity_burma_party_grey_temp }
 					add_popularity_burma_party_grey = yes
-					custom_effect_tooltip = BRM_SIN_4_tt
 				}
 				20 = {
 					set_temp_variable = { add_popularity_burma_party_grey_temp = 5 }
 					add_to_variable = { burma_party_grey_pop_total = add_popularity_burma_party_grey_temp }
 					add_popularity_burma_party_grey = yes
-					custom_effect_tooltip = BRM_SIN_5_tt
 				}
 			}
 		}
@@ -240,25 +226,21 @@ BRM_congress_categories = {
 					set_temp_variable = { add_popularity_burma_party_grey_temp = 3 }
 					add_to_variable = { burma_party_grey_pop_total = add_popularity_burma_party_grey_temp }
 					add_popularity_burma_party_grey = yes
-					custom_effect_tooltip = BRM_SIN_3_tt
 				}
 				25 = {
 					set_temp_variable = { add_popularity_burma_party_grey_temp = 4 }
 					add_to_variable = { burma_party_grey_pop_total = add_popularity_burma_party_grey_temp }
 					add_popularity_burma_party_grey = yes
-					custom_effect_tooltip = BRM_SIN_4_tt
 				}
 				25 = {
 					set_temp_variable = { add_popularity_burma_party_grey_temp = 5 }
 					add_to_variable = { burma_party_grey_pop_total = add_popularity_burma_party_grey_temp }
 					add_popularity_burma_party_grey = yes
-					custom_effect_tooltip = BRM_SIN_5_tt
 				}
 				25 = {
 					set_temp_variable = { add_popularity_burma_party_grey_temp = 6 }
 					add_to_variable = { burma_party_grey_pop_total = add_popularity_burma_party_grey_temp }
 					add_popularity_burma_party_grey = yes
-					custom_effect_tooltip = BRM_SIN_6_tt
 				}
 			}
 		}
@@ -292,7 +274,6 @@ BRM_congress_categories = {
 			set_temp_variable = { add_popularity_burma_party_grey_temp = 5 }
 			add_to_variable = { burma_party_grey_pop_total = add_popularity_burma_party_grey_temp }
 			add_popularity_burma_party_grey = yes
-			custom_effect_tooltip = BRM_SIN_5_tt
 		}
 
 		ai_will_do = {
