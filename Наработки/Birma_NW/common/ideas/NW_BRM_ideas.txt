@@ -45,6 +45,19 @@ ideas = {
 				consumer_goods_factor = 0.1
 			}
 		}
+		BRM_idea_raj_burj_2 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = big_col_app
+			modifier = {
+				consumer_goods_factor = 0.15
+			}
+		}
 		# Запрет набора бирманцев в армию 
 		BRM_idea_no_army = {
 			removal_cost = -1
@@ -123,6 +136,151 @@ ideas = {
 				stability_factor = 0.05
 				MONTHLY_POPULATION = -0.1
 				production_speed_dockyard_factor = -0.1
+			}
+		}
+		# Обезземеливание крестьян
+		BRM_idea_no_peasent_lands_10 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = big_col_app
+			modifier = {
+				global_building_slots_factor = -0.5
+			}
+		}
+		BRM_idea_no_peasent_lands_9 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = big_col_app
+			modifier = {
+				global_building_slots_factor = -0.45
+			}
+		}
+		BRM_idea_no_peasent_lands_8 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = big_col_app
+			modifier = {
+				global_building_slots_factor = -0.4
+			}
+		}
+		BRM_idea_no_peasent_lands_7 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = big_col_app
+			modifier = {
+				global_building_slots_factor = -0.35
+			}
+		}
+		BRM_idea_no_peasent_lands_6 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = big_col_app
+			modifier = {
+				global_building_slots_factor = -0.3
+			}
+		}
+		BRM_idea_no_peasent_lands_5 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = big_col_app
+			modifier = {
+				global_building_slots_factor = -0.25
+			}
+		}
+		BRM_idea_no_peasent_lands_4 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = big_col_app
+			modifier = {
+				global_building_slots_factor = -0.2
+			}
+		}
+		BRM_idea_no_peasent_lands_3 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = big_col_app
+			modifier = {
+				global_building_slots_factor = -0.15
+			}
+		}
+		BRM_idea_no_peasent_lands_2 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = big_col_app
+			modifier = {
+				global_building_slots_factor = -0.1
+			}
+		}
+		BRM_idea_no_peasent_lands_1 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = big_col_app
+			modifier = {
+				global_building_slots_factor = -0.05
+			}
+		}
+		# Инвестиции в крестьянство
+		BRM_idea_peasent_invest = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = big_col_app
+			modifier = {
+				political_power_factor = -0.2
 			}
 		}
 	}

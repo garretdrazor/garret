@@ -16,7 +16,7 @@ on_actions = {
 					country_event = { id = brm.10 days = 228 }
 					country_event = { id = brm.11 days = 246 }
 					country_event = { id = brm.12 days = 334 }
-					
+					country_event = { id = brm.18 days = 372 }
 				}
 			}
 		}
