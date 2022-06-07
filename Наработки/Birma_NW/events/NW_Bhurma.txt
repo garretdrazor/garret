@@ -426,6 +426,116 @@ country_event = {
 	}
 }
 
+# Неопределённость в Партии Пяти Цветков
+country_event = {
+	id = brm.19
+	title = brm.19.t
+	desc = brm.19.d
+	picture = GFX_report_event_brm_19
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event brm.19" }
+
+	option = {
+		name = brm.19.a
+		set_temp_variable = { add_popularity_burma_party_green_temp = -3 }
+		add_temp_variable = { burma_party_green_pop_total = add_popularity_burma_party_green_temp }
+		add_popularity_burma_party_green = yes
+	}
+}
+
+# Новое правительство
+country_event = {
+	id = brm.20
+	title = brm.20.t
+	desc = brm.20.d
+	picture = GFX_report_event_brm_20
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event brm.20" }
+
+	option = {
+		name = brm.20.a
+		set_temp_variable = { add_popularity_burma_party_green_temp = -3 }
+		add_temp_variable = { burma_party_green_pop_total = add_popularity_burma_party_green_temp }
+		add_popularity_burma_party_green = yes
+	}
+}
+
+# Долг перед Индией
+country_event = {
+	id = brm.21
+	title = brm.21.t
+	desc = brm.21.d
+	picture = GFX_report_event_brm_21
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event brm.21" }
+
+	option = {
+		name = brm.21.a
+		add_stability = -0.02
+		add_timed_idea = {
+			idea = BRM_idea_raj_duty
+			days = 1095
+		}
+	}
+}
+
+# Долг Бирмы
+country_event = {
+	id = brm.22
+	title = brm.22.t
+	desc = brm.22.d
+	picture = GFX_report_event_brm_22
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event brm.22" }
+
+	option = {
+		name = brm.22.a
+		add_stability = 0.02
+		add_timed_idea = {
+			idea = BRM_idea_brm_duty
+			days = 1095
+		}
+	}
+}
+
+# Начало забастовок
+country_event = {
+	id = brm.23
+	title = brm.23.t
+	desc = brm.23.d
+	picture = GFX_report_event_brm_23
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event brm.23" }
+
+	option = {
+		name = brm.23.a
+		add_political_power = -50
+		add_ideas = BRM_idea_brm_strikes
+	}
+}
+
+# Расширение забастовок
+country_event = {
+	id = brm.24
+	title = brm.24.t
+	desc = brm.24.d
+	picture = GFX_report_event_brm_24
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event brm.24" }
+
+	option = {
+		name = brm.24.a
+		unlock_decision_category_tooltip = BRM_hungry_marsh_categories
+		unlock_decision_category_tooltip = BRM_takin_fight_categories
+	}
+}
+
 # TEST
 country_event = {
 	id = brm.999

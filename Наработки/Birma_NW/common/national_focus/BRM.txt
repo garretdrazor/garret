@@ -16,7 +16,10 @@ focus_tree = {
 		cost = 10
 		x = 27
 		y = 0
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_new_constitution"
+			
+		}
 	}
 	focus = {
 		id = BRM_bhurma_road
@@ -25,7 +28,10 @@ focus_tree = {
 		cost = 10
 		x = 6
 		y = 14
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_bhurma_road"
+			
+		}
 	}
 	focus = {
 		id = BRM_create_vmf
@@ -34,7 +40,10 @@ focus_tree = {
 		cost = 10
 		x = 15
 		y = 14
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_create_vmf"
+			
+		}
 	}
 	focus = {
 		id = BRM_birma_rifle
@@ -43,7 +52,10 @@ focus_tree = {
 		cost = 10
 		x = 22
 		y = 14
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_birma_rifle"
+			
+		}
 	}
 	focus = {
 		id = BRM_police_reorganization
@@ -52,7 +64,10 @@ focus_tree = {
 		cost = 10
 		x = 29
 		y = 14
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_police_reorganization"
+			
+		}
 	}
 	focus = {
 		id = BRM_air_dabaing
@@ -60,7 +75,10 @@ focus_tree = {
 		cost = 10
 		x = 33
 		y = 14
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_air_dabaing"
+			
+		}
 	}
 	focus = {
 		id = BRM_general_association
@@ -77,7 +95,10 @@ focus_tree = {
 		x = -25
 		y = 1
 		relative_position_id = BRM_new_constitution
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_general_association"
+			
+		}
 	}
 	focus = {
 		id = BRM_small_nations
@@ -90,7 +111,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRM_general_association
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_small_nations"
+			
+		}
 	}
 	focus = {
 		id = BRM_cancel_price
@@ -103,7 +127,10 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = BRM_general_association
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_cancel_price"
+			
+		}
 	}
 	focus = {
 		id = BRM_form_parlament
@@ -120,7 +147,10 @@ focus_tree = {
 		x = 13
 		y = 1
 		relative_position_id = BRM_new_constitution
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_form_parlament"
+			
+		}
 	}
 	focus = {
 		id = BRM_unite_five_flowers
@@ -133,7 +163,10 @@ focus_tree = {
 		x = 2
 		y = 2
 		relative_position_id = BRM_form_parlament
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_unite_five_flowers"
+			
+		}
 	}
 	focus = {
 		id = BRM_royal_support
@@ -149,7 +182,10 @@ focus_tree = {
 		x = 4
 		y = 1
 		relative_position_id = BRM_form_parlament
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_royal_support"
+			
+		}
 	}
 	focus = {
 		id = BR_sinega
@@ -166,7 +202,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRM_new_constitution
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BR_sinega"
+			
+		}
 	}
 	focus = {
 		id = BRM_second_galon
@@ -185,7 +224,10 @@ focus_tree = {
 		x = 4
 		y = 3
 		relative_position_id = BRM_new_constitution
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_second_galon"
+			
+		}
 	}
 	focus = {
 		id = BRM_budda_yang_rise
@@ -198,7 +240,10 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = BRM_general_association
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_budda_yang_rise"
+			
+		}
 	}
 	focus = {
 		id = BRM_province_referendum
@@ -211,7 +256,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRM_small_nations
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_province_referendum"
+			
+		}
 	}
 	focus = {
 		id = BRM_dominion_status
@@ -224,7 +272,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRM_province_referendum
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_dominion_status"
+			
+		}
 	}
 	focus = {
 		id = BRM_defend_buddism
@@ -240,7 +291,10 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = BRM_dominion_status
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_defend_buddism"
+			
+		}
 	}
 	focus = {
 		id = BRM_change_president_constitution
@@ -253,7 +307,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRM_dominion_status
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_change_president_constitution"
+			
+		}
 	}
 	focus = {
 		id = BRM_back_debt
@@ -269,7 +326,10 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = BRM_dominion_status
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_back_debt"
+			
+		}
 	}
 	focus = {
 		id = BRM_last_Hunger_March
@@ -288,7 +348,10 @@ focus_tree = {
 		x = -15
 		y = 3
 		relative_position_id = BRM_new_constitution
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_last_Hunger_March"
+			
+		}
 	}
 	focus = {
 		id = BRM_create_new_profally
@@ -301,7 +364,10 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = BRM_last_Hunger_March
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_create_new_profally"
+			
+		}
 	}
 	focus = {
 		id = BRM_dobama_asaion
@@ -314,7 +380,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRM_last_Hunger_March
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_dobama_asaion"
+			
+		}
 	}
 	focus = {
 		id = BRM_lethion_tat
@@ -327,7 +396,10 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = BRM_last_Hunger_March
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_lethion_tat"
+			
+		}
 	}
 	focus = {
 		id = BRM_com_party
@@ -343,7 +415,10 @@ focus_tree = {
 		x = -6
 		y = 1
 		relative_position_id = BRM_dobama_asaion
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_com_party"
+			
+		}
 	}
 	focus = {
 		id = BRM_bhurna_bad_day
@@ -359,7 +434,10 @@ focus_tree = {
 		x = 6
 		y = 1
 		relative_position_id = BRM_dobama_asaion
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_bhurna_bad_day"
+			
+		}
 	}
 	focus = {
 		id = BRM_rise_white_flag
@@ -376,7 +454,10 @@ focus_tree = {
 		x = -6
 		y = 1
 		relative_position_id = BRM_com_party
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_rise_white_flag"
+			
+		}
 	}
 	focus = {
 		id = BRM_Volunteer_Organization
@@ -389,7 +470,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRM_rise_white_flag
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_Volunteer_Organization"
+			
+		}
 	}
 	focus = {
 		id = BRM_Pangalon
@@ -403,7 +487,10 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = BRM_Volunteer_Organization
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_Pangalon"
+			
+		}
 	}
 	focus = {
 		id = BRM_our_generals
@@ -416,7 +503,10 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = BRM_Volunteer_Organization
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_our_generals"
+			
+		}
 	}
 	focus = {
 		id = BRM_help_from_com_china
@@ -432,7 +522,10 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = BRM_our_generals
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_help_from_com_china"
+			
+		}
 	}
 	focus = {
 		id = BRM_integrate_small_nations
@@ -446,7 +539,10 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = BRM_our_generals
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_integrate_small_nations"
+			
+		}
 	}
 	focus = {
 		id = BRM_people_front
@@ -463,7 +559,10 @@ focus_tree = {
 		x = -4
 		y = 1
 		relative_position_id = BRM_com_party
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_people_front"
+			
+		}
 	}
 	focus = {
 		id = BRM_culture_revolution
@@ -476,7 +575,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRM_people_front
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_culture_revolution"
+			
+		}
 	}
 	focus = {
 		id = BRM_insane_manifest
@@ -489,7 +591,10 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = BRM_culture_revolution
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_insane_manifest"
+			
+		}
 	}
 	focus = {
 		id = BRM_ally_with_SOV
@@ -507,7 +612,10 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = BRM_insane_manifest
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_ally_with_SOV"
+			
+		}
 	}
 	focus = {
 		id = BRM_rise_red_flag
@@ -524,7 +632,10 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = BRM_com_party
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_rise_red_flag"
+			
+		}
 	}
 	focus = {
 		id = BRM_culture_ally
@@ -537,7 +648,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRM_rise_red_flag
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_culture_ally"
+			
+		}
 	}
 	focus = {
 		id = BRM_provoke_karen
@@ -550,7 +664,10 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = BRM_culture_ally
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_provoke_karen"
+			
+		}
 	}
 	focus = {
 		id = BRM_save_autonomy
@@ -563,7 +680,10 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = BRM_provoke_karen
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_save_autonomy"
+			
+		}
 	}
 	focus = {
 		id = BRM_war_vs_imperalism
@@ -575,7 +695,10 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = BRM_provoke_karen
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_war_vs_imperalism"
+			
+		}
 	}
 	focus = {
 		id = BRM_raj_ally
@@ -592,7 +715,10 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = BRM_provoke_karen
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_raj_ally"
+			
+		}
 	}
 	focus = {
 		id = BRM_fast_military
@@ -605,7 +731,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRM_com_party
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_fast_military"
+			
+		}
 	}
 	focus = {
 		id = BRM_agrar_com_reform
@@ -618,7 +747,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRM_fast_military
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_agrar_com_reform"
+			
+		}
 	}
 	focus = {
 		id = BRM_personality_cult
@@ -631,7 +763,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRM_agrar_com_reform
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_personality_cult"
+			
+		}
 	}
 	focus = {
 		id = BRM_broke_separate
@@ -644,7 +779,10 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = BRM_fast_military
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_broke_separate"
+			
+		}
 	}
 	focus = {
 		id = BRM_rise_after_civil_war
@@ -657,7 +795,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRM_broke_separate
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_rise_after_civil_war"
+			
+		}
 	}
 	focus = {
 		id = BRM_oil_nacionalization
@@ -671,7 +812,10 @@ focus_tree = {
 		x = -3
 		y = 2
 		relative_position_id = BRM_dobama_asaion
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_oil_nacionalization"
+			
+		}
 	}
 	focus = {
 		id = BRM_red_dragon
@@ -685,7 +829,10 @@ focus_tree = {
 		x = -1
 		y = 2
 		relative_position_id = BRM_dobama_asaion
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_red_dragon"
+			
+		}
 	}
 	focus = {
 		id = BRM_take_raj_lands
@@ -699,7 +846,10 @@ focus_tree = {
 		x = 1
 		y = 2
 		relative_position_id = BRM_dobama_asaion
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_take_raj_lands"
+			
+		}
 	}
 	focus = {
 		id = BRM_all_nacionalization
@@ -715,7 +865,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRM_red_dragon
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_all_nacionalization"
+			
+		}
 	}
 	focus = {
 		id = BRM_marionate_thai
@@ -728,7 +881,10 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = BRM_all_nacionalization
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_marionate_thai"
+			
+		}
 	}
 	focus = {
 		id = BRM_marionate_raj
@@ -741,7 +897,10 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = BRM_all_nacionalization
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_marionate_raj"
+			
+		}
 	}
 	focus = {
 		id = BRM_marionate_indchi
@@ -754,7 +913,10 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = BRM_marionate_thai
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_marionate_indchi"
+			
+		}
 	}
 	focus = {
 		id = BRM_marionate_south_chi
@@ -768,7 +930,10 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = BRM_marionate_thai
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_marionate_south_chi"
+			
+		}
 	}
 	focus = {
 		id = BRM_marionate_raj_lands
@@ -781,7 +946,10 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = BRM_marionate_raj
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_marionate_raj_lands"
+			
+		}
 	}
 	focus = {
 		id = BRM_Peedatva
@@ -794,7 +962,10 @@ focus_tree = {
 		x = -3
 		y = 1
 		relative_position_id = BRM_bhurna_bad_day
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_Peedatva"
+			
+		}
 	}
 	focus = {
 		id = BRM_add_infra
@@ -807,7 +978,10 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = BRM_Peedatva
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_add_infra"
+			
+		}
 	}
 	focus = {
 		id = BRM_add_soc
@@ -820,7 +994,10 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = BRM_Peedatva
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_add_soc"
+			
+		}
 	}
 	focus = {
 		id = BRM_upgrade_prov
@@ -836,7 +1013,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRM_add_infra
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_upgrade_prov"
+			
+		}
 	}
 	focus = {
 		id = BRM_upgrade_prom
@@ -852,7 +1032,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRM_add_soc
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_upgrade_prom"
+			
+		}
 	}
 	focus = {
 		id = BRM_massive_org
@@ -868,7 +1051,10 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = BRM_bhurna_bad_day
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_massive_org"
+			
+		}
 	}
 	focus = {
 		id = BRM_kadr_org
@@ -883,7 +1069,10 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = BRM_bhurna_bad_day
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_kadr_org"
+			
+		}
 	}
 	focus = {
 		id = BRM_our_country
@@ -900,7 +1089,10 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = BRM_bhurna_bad_day
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_our_country"
+			
+		}
 	}
 	focus = {
 		id = BRM_spirit_leader
@@ -913,7 +1105,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRM_our_country
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_spirit_leader"
+			
+		}
 	}
 	focus = {
 		id = BRM_budda_piece
@@ -926,7 +1121,10 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = BRM_our_country
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_budda_piece"
+			
+		}
 	}
 	focus = {
 		id = BRM_budda_price
@@ -939,7 +1137,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRM_budda_piece
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_budda_price"
+			
+		}
 	}
 	focus = {
 		id = BRM_resource_with_USA
@@ -952,7 +1153,10 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = BRM_budda_price
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_resource_with_USA"
+			
+		}
 	}
 	focus = {
 		id = BRM_monastry_socialism
@@ -965,7 +1169,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRM_budda_price
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_monastry_socialism"
+			
+		}
 	}
 	focus = {
 		id = BRM_military_power
@@ -982,7 +1189,10 @@ focus_tree = {
 		x = 5
 		y = 1
 		relative_position_id = BRM_bhurna_bad_day
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_military_power"
+			
+		}
 	}
 	focus = {
 		id = BRM_political_upbringing
@@ -995,7 +1205,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRM_military_power
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_political_upbringing"
+			
+		}
 	}
 	focus = {
 		id = BRM_country_hospital
@@ -1008,7 +1221,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRM_political_upbringing
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_country_hospital"
+			
+		}
 	}
 	focus = {
 		id = BRM_central_army_train
@@ -1021,7 +1237,10 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = BRM_political_upbringing
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_central_army_train"
+			
+		}
 	}
 	focus = {
 		id = BRM_avtarki
@@ -1037,7 +1256,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRM_central_army_train
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_avtarki"
+			
+		}
 	}
 	focus = {
 		id = BRM_new_selection
@@ -1054,7 +1276,10 @@ focus_tree = {
 		x = 7
 		y = 1
 		relative_position_id = BRM_bhurna_bad_day
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_new_selection"
+			
+		}
 	}
 	focus = {
 		id = BRM_active_industrial
@@ -1067,7 +1292,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRM_new_selection
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_active_industrial"
+			
+		}
 	}
 	focus = {
 		id = BRM_cooperatives
@@ -1080,7 +1308,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRM_active_industrial
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_cooperatives"
+			
+		}
 	}
 	focus = {
 		id = BRM_importchange
@@ -1093,7 +1324,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRM_cooperatives
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_importchange"
+			
+		}
 	}
 	focus = {
 		id = BRM_military_prom_revolution
@@ -1108,7 +1342,10 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = BRM_cooperatives
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_military_prom_revolution"
+			
+		}
 	}
 	focus = {
 		id = BRM_land_order
@@ -1121,7 +1358,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BR_sinega
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_land_order"
+			
+		}
 	}
 	focus = {
 		id = BRM_foff_Ba_Maw
@@ -1138,7 +1378,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRM_land_order
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_foff_Ba_Maw"
+			
+		}
 	}
 	focus = {
 		id = BRM_def_order
@@ -1151,7 +1394,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRM_foff_Ba_Maw
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_def_order"
+			
+		}
 	}
 	focus = {
 		id = BRM_arest_left
@@ -1164,7 +1410,10 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = BRM_def_order
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_arest_left"
+			
+		}
 	}
 	focus = {
 		id = BRM_U_Saw_compromise
@@ -1177,7 +1426,10 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = BRM_def_order
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_U_Saw_compromise"
+			
+		}
 	}
 	focus = {
 		id = BRM_arest_Ba_Maw
@@ -1190,7 +1442,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRM_U_Saw_compromise
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_arest_Ba_Maw"
+			
+		}
 	}
 	focus = {
 		id = BRM_def_woman
@@ -1204,7 +1459,10 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = BRM_newspapper_Sun
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_def_woman"
+			
+		}
 	}
 	focus = {
 		id = BRM_galon_tat
@@ -1217,7 +1475,10 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = BRM_second_galon
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_galon_tat"
+			
+		}
 	}
 	focus = {
 		id = BRM_broken_small_nat
@@ -1230,7 +1491,10 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = BRM_second_galon
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_broken_small_nat"
+			
+		}
 	}
 	focus = {
 		id = BRM_support_our_landlords
@@ -1243,7 +1507,10 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = BRM_second_galon
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_support_our_landlords"
+			
+		}
 	}
 	focus = {
 		id = BRM_newspapper_Sun
@@ -1256,7 +1523,10 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = BRM_galon_tat
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_newspapper_Sun"
+			
+		}
 	}
 	focus = {
 		id = BRM_def_buddism_religion
@@ -1270,7 +1540,10 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = BRM_support_our_landlords
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_def_buddism_religion"
+			
+		}
 	}
 	focus = {
 		id = BRM_no_raj_and_muslim
@@ -1286,7 +1559,10 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = BRM_support_our_landlords
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_no_raj_and_muslim"
+			
+		}
 	}
 	focus = {
 		id = BRM_restavration_monastry
@@ -1299,7 +1575,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRM_def_buddism_religion
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_restavration_monastry"
+			
+		}
 	}
 	focus = {
 		id = BRM_change_other_lands
@@ -1312,7 +1591,10 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = BRM_no_raj_and_muslim
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_change_other_lands"
+			
+		}
 	}
 	focus = {
 		id = BRM_militarization_socium
@@ -1325,7 +1607,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRM_no_raj_and_muslim
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_militarization_socium"
+			
+		}
 	}
 	focus = {
 		id = BRM_bir_jap_association
@@ -1338,7 +1623,10 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = BRM_no_raj_and_muslim
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_bir_jap_association"
+			
+		}
 	}
 	focus = {
 		id = BRM_our_ally
@@ -1355,7 +1643,10 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = BRM_militarization_socium
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_our_ally"
+			
+		}
 	}
 	focus = {
 		id = BRM_with_right_raj
@@ -1372,7 +1663,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRM_militarization_socium
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_with_right_raj"
+			
+		}
 	}
 	focus = {
 		id = BRM_with_jap
@@ -1389,7 +1683,10 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = BRM_militarization_socium
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_with_jap"
+			
+		}
 	}
 	focus = {
 		id = BRM_noth_thai
@@ -1402,7 +1699,10 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = BRM_with_right_raj
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_noth_thai"
+			
+		}
 	}
 	focus = {
 		id = BRM_west_indchi
@@ -1415,7 +1715,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRM_noth_thai
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_west_indchi"
+			
+		}
 	}
 	focus = {
 		id = BRM_back_malasi
@@ -1428,7 +1731,10 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = BRM_noth_thai
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_back_malasi"
+			
+		}
 	}
 	focus = {
 		id = BRM_back_okean
@@ -1442,7 +1748,10 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = BRM_back_malasi
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_back_okean"
+			
+		}
 	}
 	focus = {
 		id = BRM_raj_revenge
@@ -1455,7 +1764,10 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = BRM_with_right_raj
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_raj_revenge"
+			
+		}
 	}
 	focus = {
 		id = BRM_ceilon
@@ -1468,7 +1780,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRM_raj_revenge
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_ceilon"
+			
+		}
 	}
 	focus = {
 		id = BRM_bhutan
@@ -1481,7 +1796,10 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = BRM_raj_revenge
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_bhutan"
+			
+		}
 	}
 	focus = {
 		id = BRM_tibet
@@ -1494,7 +1812,10 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = BRM_bhutan
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_tibet"
+			
+		}
 	}
 	focus = {
 		id = BRM_sikkim
@@ -1507,7 +1828,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRM_bhutan
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_sikkim"
+			
+		}
 	}
 	focus = {
 		id = BRM_nepal
@@ -1520,7 +1844,10 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = BRM_bhutan
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_nepal"
+			
+		}
 	}
 	focus = {
 		id = BRM_china_atak_with_jap
@@ -1533,7 +1860,10 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = BRM_with_jap
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_china_atak_with_jap"
+			
+		}
 	}
 	focus = {
 		id = BRM_budda_activists
@@ -1549,7 +1879,10 @@ focus_tree = {
 		x = -4
 		y = 1
 		relative_position_id = BRM_form_parlament
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_budda_activists"
+			
+		}
 	}
 	focus = {
 		id = BRM_Vuntarnu
@@ -1562,7 +1895,10 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = BRM_budda_activists
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_Vuntarnu"
+			
+		}
 	}
 	focus = {
 		id = BRM_sanghi
@@ -1575,7 +1911,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRM_budda_activists
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_sanghi"
+			
+		}
 	}
 	focus = {
 		id = BRM_boikot
@@ -1588,7 +1927,10 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = BRM_budda_activists
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_boikot"
+			
+		}
 	}
 	focus = {
 		id = BRM_left_GB
@@ -1604,7 +1946,10 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = BRM_sanghi
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_left_GB"
+			
+		}
 	}
 	focus = {
 		id = BRM_NP_Suria
@@ -1617,7 +1962,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRM_sanghi
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_NP_Suria"
+			
+		}
 	}
 	focus = {
 		id = BRM_left_raj
@@ -1633,7 +1981,10 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = BRM_sanghi
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_left_raj"
+			
+		}
 	}
 	focus = {
 		id = BRM_monastry_speach
@@ -1646,7 +1997,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRM_NP_Suria
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_monastry_speach"
+			
+		}
 	}
 	focus = {
 		id = BRM_budda_yang_association
@@ -1659,7 +2013,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRM_monastry_speach
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_budda_yang_association"
+			
+		}
 	}
 	focus = {
 		id = BRM_budda_neutral
@@ -1675,7 +2032,10 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = BRM_budda_yang_association
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_budda_neutral"
+			
+		}
 	}
 	focus = {
 		id = BRM_drahma_ally
@@ -1691,7 +2051,10 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = BRM_budda_yang_association
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_drahma_ally"
+			
+		}
 	}
 	focus = {
 		id = BRM_big_prom_support
@@ -1704,7 +2067,10 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = BRM_form_parlament
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_big_prom_support"
+			
+		}
 	}
 	focus = {
 		id = BRM_new_factory
@@ -1717,7 +2083,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRM_big_prom_support
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_new_factory"
+			
+		}
 	}
 	focus = {
 		id = BRM_support_handmade
@@ -1733,7 +2102,10 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = BRM_monastry_speach
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_support_handmade"
+			
+		}
 	}
 	focus = {
 		id = BRM_fast_five_industrialization
@@ -1746,7 +2118,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRM_new_factory
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_fast_five_industrialization"
+			
+		}
 	}
 	focus = {
 		id = BRM_let_reform
@@ -1759,7 +2134,10 @@ focus_tree = {
 		x = -2
 		y = 2
 		relative_position_id = BRM_royal_support
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_let_reform"
+			
+		}
 	}
 	focus = {
 		id = BRM_back_royal
@@ -1775,7 +2153,10 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = BRM_royal_support
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_back_royal"
+			
+		}
 	}
 	focus = {
 		id = BRM_white_Tibo
@@ -1788,7 +2169,10 @@ focus_tree = {
 		x = 2
 		y = 2
 		relative_position_id = BRM_royal_support
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_white_Tibo"
+			
+		}
 	}
 	focus = {
 		id = BRM_Bhurma_throne
@@ -1807,7 +2191,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRM_back_royal
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_Bhurma_throne"
+			
+		}
 	}
 	focus = {
 		id = BRM_let_dual_monarchy
@@ -1820,7 +2207,10 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = BRM_Bhurma_throne
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_let_dual_monarchy"
+			
+		}
 	}
 	focus = {
 		id = BRM_no_raj_landlord
@@ -1836,7 +2226,10 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = BRM_let_dual_monarchy
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_no_raj_landlord"
+			
+		}
 	}
 	focus = {
 		id = BRM_back_impire
@@ -1849,7 +2242,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRM_let_dual_monarchy
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_back_impire"
+			
+		}
 	}
 	focus = {
 		id = BRM_yang_monarchy
@@ -1862,7 +2258,10 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = BRM_let_dual_monarchy
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_yang_monarchy"
+			
+		}
 	}
 	focus = {
 		id = BRM_minipur
@@ -1875,7 +2274,10 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = BRM_back_impire
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_minipur"
+			
+		}
 	}
 	focus = {
 		id = BRM_back_siam
@@ -1888,7 +2290,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRM_back_impire
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_back_siam"
+			
+		}
 	}
 	focus = {
 		id = BRM_back_koshanpai
@@ -1901,7 +2306,10 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = BRM_back_impire
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_back_koshanpai"
+			
+		}
 	}
 	focus = {
 		id = BRM_back_west_indchi
@@ -1914,8 +2322,12 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRM_back_siam
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_back_west_indchi"
+			
+		}
 	}
+	#Горнодобывающие кампании
 	focus = {
 		id = BRM_mountain_prom
 		text = BRM_mountain_prom
@@ -1927,8 +2339,24 @@ focus_tree = {
 		x = -6
 		y = 1
 		relative_position_id = BRM_bhurma_road
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_mountain_prom"
+			random_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				bonus = 1.5
+				uses = 2
+				category = all_resources_category
+			}
+		}
 	}
+	#Бирманская нефтяная компания
 	focus = {
 		id = BRM_oil_prom
 		text = BRM_oil_prom
@@ -1940,8 +2368,12 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRM_mountain_prom
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_oil_prom"
+			
+		}
 	}
+	#Расширить добычу вольфрама в Каренни
 	focus = {
 		id = BRM_volfram_main
 		text = BRM_volfram_main
@@ -1952,7 +2384,10 @@ focus_tree = {
 		}
 		x = 2
 		y = 15
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_volfram_main"
+			
+		}
 	}
 	focus = {
 		id = BRM_volfram_prom
@@ -1965,7 +2400,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRM_volfram_main
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_volfram_prom"
+			
+		}
 	}
 	focus = {
 		id = BRM_banks
@@ -1978,7 +2416,10 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = BRM_bhurma_road
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_banks"
+			
+		}
 	}
 	focus = {
 		id = BRM_our_money
@@ -1991,7 +2432,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRM_bhurma_road
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_our_money"
+			
+		}
 	}
 	focus = {
 		id = BRM_arm_factory
@@ -2004,7 +2448,10 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = BRM_our_money
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_arm_factory"
+			
+		}
 	}
 	focus = {
 		id = BRM_bullet_factory
@@ -2020,7 +2467,10 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = BRM_volfram_prom
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_bullet_factory"
+			
+		}
 	}
 	focus = {
 		id = BRM_yangon_university
@@ -2033,7 +2483,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRM_our_money
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_yangon_university"
+			
+		}
 	}
 	focus = {
 		id = BRM_yes_opium
@@ -2049,7 +2502,10 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = BRM_bhurma_road
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_yes_opium"
+			
+		}
 	}
 	focus = {
 		id = BRM_no_opium
@@ -2065,7 +2521,10 @@ focus_tree = {
 		x = 4
 		y = 1
 		relative_position_id = BRM_bhurma_road
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_no_opium"
+			
+		}
 	}
 	focus = {
 		id = BRM_tik_wood
@@ -2078,7 +2537,10 @@ focus_tree = {
 		x = 6
 		y = 1
 		relative_position_id = BRM_bhurma_road
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_tik_wood"
+			
+		}
 	}
 	focus = {
 		id = BRM_rubbon
@@ -2091,7 +2553,10 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = BRM_our_money
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_rubbon"
+			
+		}
 	}
 	focus = {
 		id = BRM_rice_export
@@ -2104,7 +2569,10 @@ focus_tree = {
 		x = 4
 		y = 1
 		relative_position_id = BRM_our_money
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_rice_export"
+			
+		}
 	}
 	focus = {
 		id = BRM_wood_build
@@ -2117,7 +2585,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRM_tik_wood
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_wood_build"
+			
+		}
 	}
 	focus = {
 		id = BRM_rr_y-B
@@ -2130,7 +2601,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRM_yangon_university
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_rr_y-B"
+			
+		}
 	}
 	focus = {
 		id = BRM_tecstile_factory
@@ -2146,7 +2620,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRM_rubbon
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_tecstile_factory"
+			
+		}
 	}
 	focus = {
 		id = BRM_univer_2
@@ -2168,7 +2645,10 @@ focus_tree = {
 		x = 4
 		y = 1
 		relative_position_id = BRM_rr_y-B
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_univer_2"
+			
+		}
 	}
 	focus = {
 		id = BRM_project_sinmala
@@ -2181,7 +2661,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRM_rr_y-B
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_project_sinmala"
+			
+		}
 	}
 	focus = {
 		id = BRM_combo_meh_elec
@@ -2197,7 +2680,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRM_bullet_factory
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_combo_meh_elec"
+			
+		}
 	}
 	focus = {
 		id = BRM_create_vmf_shtab
@@ -2210,7 +2696,10 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = BRM_create_vmf
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_create_vmf_shtab"
+			
+		}
 	}
 	focus = {
 		id = BRM_create_vmf_base
@@ -2223,7 +2712,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRM_create_vmf_shtab
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_create_vmf_base"
+			
+		}
 	}
 	focus = {
 		id = BRM_create_vmf_train
@@ -2236,7 +2728,10 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = BRM_create_vmf
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_create_vmf_train"
+			
+		}
 	}
 	focus = {
 		id = BRM_create_vmf_verf
@@ -2249,7 +2744,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRM_create_vmf_train
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_create_vmf_verf"
+			
+		}
 	}
 	focus = {
 		id = BRM_create_esminec
@@ -2265,7 +2763,10 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = BRM_create_vmf_base
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_create_esminec"
+			
+		}
 	}
 	focus = {
 		id = BRM_mount_soldier
@@ -2278,7 +2779,10 @@ focus_tree = {
 		x = -4
 		y = 1
 		relative_position_id = BRM_birma_rifle
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_mount_soldier"
+			
+		}
 	}
 	focus = {
 		id = BRM_mech_soldier
@@ -2291,7 +2795,10 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = BRM_birma_rifle
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_mech_soldier"
+			
+		}
 	}
 	focus = {
 		id = BRM_vmf_rezerv
@@ -2307,7 +2814,10 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = BRM_create_vmf_train
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_vmf_rezerv"
+			
+		}
 	}
 	focus = {
 		id = BRM_fort_herz
@@ -2320,7 +2830,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRM_mech_soldier
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_fort_herz"
+			
+		}
 	}
 	focus = {
 		id = BRM_injeners
@@ -2333,7 +2846,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRM_birma_rifle
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_injeners"
+			
+		}
 	}
 	focus = {
 		id = BRM_woman_army
@@ -2346,7 +2862,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRM_injeners
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_woman_army"
+			
+		}
 	}
 	focus = {
 		id = BRM_create_army
@@ -2359,7 +2878,10 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = BRM_birma_rifle
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_create_army"
+			
+		}
 	}
 	focus = {
 		id = BRM_z_force
@@ -2372,7 +2894,10 @@ focus_tree = {
 		x = 5
 		y = 1
 		relative_position_id = BRM_birma_rifle
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_z_force"
+			
+		}
 	}
 	focus = {
 		id = BRM_army_money
@@ -2385,7 +2910,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRM_create_army
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_army_money"
+			
+		}
 	}
 	focus = {
 		id = BRM_no_army_conflict
@@ -2398,7 +2926,10 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = BRM_create_army
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_no_army_conflict"
+			
+		}
 	}
 	focus = {
 		id = BRM_birman_radio
@@ -2411,7 +2942,10 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = BRM_army_money
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_birman_radio"
+			
+		}
 	}
 	focus = {
 		id = BRM_birman_gurkhs
@@ -2424,7 +2958,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRM_army_money
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_birman_gurkhs"
+			
+		}
 	}
 	focus = {
 		id = BRM_birman_jungle_train
@@ -2440,7 +2977,10 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = BRM_birman_radio
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_birman_jungle_train"
+			
+		}
 	}
 	focus = {
 		id = BRM_med_corpus
@@ -2453,7 +2993,10 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = BRM_army_money
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_med_corpus"
+			
+		}
 	}
 	focus = {
 		id = BRM_med_corpus2
@@ -2466,7 +3009,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRM_med_corpus
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_med_corpus2"
+			
+		}
 	}
 	focus = {
 		id = BRM_police_corps
@@ -2479,7 +3025,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRM_police_reorganization
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_police_corps"
+			
+		}
 	}
 	focus = {
 		id = BRM_police_new
@@ -2495,7 +3044,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRM_police_corps
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_police_new"
+			
+		}
 	}
 	focus = {
 		id = BRM_air_akyab
@@ -2508,7 +3060,10 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = BRM_air_dabaing
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_air_akyab"
+			
+		}
 	}
 	focus = {
 		id = BRM_air_mergui
@@ -2521,7 +3076,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRM_air_akyab
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_air_mergui"
+			
+		}
 	}
 	focus = {
 		id = BRM_air_mingaladon
@@ -2534,7 +3092,10 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = BRM_air_dabaing
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_air_mingaladon"
+			
+		}
 	}
 	focus = {
 		id = BRM_air_hwambi
@@ -2547,7 +3108,10 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = BRM_air_dabaing
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_air_hwambi"
+			
+		}
 	}
 	focus = {
 		id = BRM_air_meiktila
@@ -2560,7 +3124,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRM_air_hwambi
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_air_meiktila"
+			
+		}
 	}
 	focus = {
 		id = BRM_air_mingaladon_anti
@@ -2573,7 +3140,10 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = BRM_air_mingaladon
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_air_mingaladon_anti"
+			
+		}
 	}
 	focus = {
 		id = BRM_air_vvs_create
@@ -2586,7 +3156,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRM_air_mingaladon
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_air_vvs_create"
+			
+		}
 	}
 	focus = {
 		id = BRM_air_school
@@ -2599,7 +3172,10 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = BRM_air_mingaladon
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_air_school"
+			
+		}
 	}
 	focus = {
 		id = BRM_air_shtab
@@ -2612,6 +3188,9 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = BRM_air_vvs_create
-
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_air_shtab"
+			
+		}
 	}
 }

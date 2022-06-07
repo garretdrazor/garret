@@ -60,5 +60,36 @@ BRM_peasent_support_categories = {
 			has_idea = BRM_idea_no_peasent_lands_1
 		}
 	}
+}
 
+# Голодные марши
+BRM_hungry_marsh_categories = {
+	icon = eng_imperial_conference
+	allowed = {
+		original_tag = BRM
+		NOT = {
+			has_global_flag = THE_MOTHER_OF_ORDER_FLAG
+			has_global_flag = WORLD_OF_SPLIT_FLAG
+		}
+	}
+	
+	visible = {
+		
+	}
+}
+
+# Борьба с такинами
+BRM_takin_fight_categories = {
+	icon = eng_imperial_conference
+	allowed = {
+		original_tag = BRM
+		NOT = {
+			has_global_flag = THE_MOTHER_OF_ORDER_FLAG
+			has_global_flag = WORLD_OF_SPLIT_FLAG
+		}
+	}
+	
+	visible = {
+		
+	}
 }
