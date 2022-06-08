@@ -2389,6 +2389,7 @@ focus_tree = {
 			
 		}
 	}
+	#Заводы по производству карбида вольфрама
 	focus = {
 		id = BRM_volfram_prom
 		text = BRM_volfram_prom
@@ -2402,9 +2403,22 @@ focus_tree = {
 		relative_position_id = BRM_volfram_main
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_volfram_prom"
-			
+			288 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
+	#Открытие иностранных банков
 	focus = {
 		id = BRM_banks
 		text = BRM_banks
@@ -2415,12 +2429,25 @@ focus_tree = {
 		}
 		x = -2
 		y = 1
+		available ={
+			ROOT = {
+				NOT ={
+					is_subject_of = RAJ
+				}
+			}
+			NOT = {
+				has_government = communism
+				has_government = trozkism
+				has_completed_focus = BRM_military_power
+			}
+		}
 		relative_position_id = BRM_bhurma_road
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_banks"
-			
+			add_ideas = BRM_idea_other_country_banks
 		}
 	}
+	#Введение собственной валюты
 	focus = {
 		id = BRM_our_money
 		text = BRM_our_money
@@ -2431,12 +2458,20 @@ focus_tree = {
 		}
 		x = 0
 		y = 1
+		available ={
+			ROOT = {
+				NOT ={
+					is_subject_of = RAJ
+				}
+			}
+		}
 		relative_position_id = BRM_bhurma_road
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_our_money"
-			
+			add_political_power = 75
 		}
 	}
+	#Оружейные заводы
 	focus = {
 		id = BRM_arm_factory
 		text = BRM_arm_factory
@@ -2450,9 +2485,17 @@ focus_tree = {
 		relative_position_id = BRM_our_money
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_arm_factory"
-			
+			random_state = { 
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
+	#Завод по производству снарядов
 	focus = {
 		id = BRM_bullet_factory
 		text = BRM_bullet_factory
@@ -2469,9 +2512,17 @@ focus_tree = {
 		relative_position_id = BRM_volfram_prom
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_bullet_factory"
-			
+			random_state = { 
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
+	#Университет Янгона
 	focus = {
 		id = BRM_yangon_university
 		text = BRM_yangon_university
@@ -2485,7 +2536,7 @@ focus_tree = {
 		relative_position_id = BRM_our_money
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_yangon_university"
-			
+			add_research_slot = 1
 		}
 	}
 	focus = {
@@ -2501,10 +2552,13 @@ focus_tree = {
 		}
 		x = 2
 		y = 1
+		available ={
+			is_subject = no
+		}
 		relative_position_id = BRM_bhurma_road
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_yes_opium"
-			
+			add_ideas = BRM_idea_yes_opium
 		}
 	}
 	focus = {

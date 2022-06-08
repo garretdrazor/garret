@@ -337,5 +337,21 @@ ideas = {
 				custom_modifier_tooltip = BRM_brm_strikes_effect_tt
 			}
 		}
+		# Соглашение с торговцами опиума
+		BRM_idea_yes_opium = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = big_col_app
+			modifier = {
+				consumer_goods_factor = -0.1
+				MONTHLY_POPULATION = -0.1
+			}
+		}
+		
 	}
 }
