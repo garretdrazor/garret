@@ -58,6 +58,24 @@ ideas = {
 				consumer_goods_factor = 0.15
 			}
 		}
+		# Расовые конфликты в армии
+		BRM_idea_army_race_conflict = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				is_subject = yes
+			}
+			picture = BRM_idea_no_birma_soldiers
+			modifier = {
+				conscription_factor = -0.2
+				army_org_factor = -0.2
+			}
+		}
 		# Запрет набора бирманцев в армию 
 		BRM_idea_no_army = {
 			removal_cost = -1
@@ -350,8 +368,50 @@ ideas = {
 			modifier = {
 				consumer_goods_factor = -0.1
 				MONTHLY_POPULATION = -0.1
+				conscription_factor = -0.1
 			}
 		}
-		
+		# Экспорт риса
+		BRM_idea_rice_export = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = big_col_app
+			modifier = {
+				political_power_gain = 0.25
+			}
+		}
+		# Материалы и инструменты из тика
+		BRM_idea_tik_build = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = big_col_app
+			modifier = {
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		# Набор в горных племенах
+		BRM_idea_mount_tribes = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = big_col_app
+			modifier = {
+				conscription = 0.005
+			}
+		}
 	}
 }

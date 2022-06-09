@@ -8,6 +8,7 @@ add_ideas = {
 	BRM_idea_nalog_hight
 	BRM_idea_raj_burj
 	BRM_idea_no_army
+	BRM_idea_army_race_conflict
 	disarmed_nation
 }
 set_cosmetic_tag = GOG_belgian

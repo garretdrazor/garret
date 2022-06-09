@@ -33,6 +33,7 @@ focus_tree = {
 			
 		}
 	}
+	# Основание ВМФ Бирмы
 	focus = {
 		id = BRM_create_vmf
 		text = BRM_create_vmf
@@ -40,11 +41,15 @@ focus_tree = {
 		cost = 10
 		x = 15
 		y = 14
+		available = {
+			is_subject = no
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_create_vmf"
-			
+			navy_experience = 10
 		}
 	}
+	# Бирманские винтовки
 	focus = {
 		id = BRM_birma_rifle
 		text = BRM_birma_rifle
@@ -54,7 +59,27 @@ focus_tree = {
 		y = 14
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_birma_rifle"
-			
+			army_experience = 10
+			hidden_effect = {
+				division_template = {
+					name = "Burma Rifles"
+					is_locked = yes
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+					}
+				}
+			}
+			capital_scope = {
+				create_unit = {
+					division = "name = \"Burma Rifles\" division_template = \"Burma Rifles\" start_experience_factor = 0.8" 
+					owner = ROOT
+				}
+			}
 		}
 	}
 	focus = {
@@ -2539,6 +2564,7 @@ focus_tree = {
 			add_research_slot = 1
 		}
 	}
+	#Договориться с опиумными торговцами
 	focus = {
 		id = BRM_yes_opium
 		text = BRM_yes_opium
@@ -2561,6 +2587,7 @@ focus_tree = {
 			add_ideas = BRM_idea_yes_opium
 		}
 	}
+	#Запрет на торговлю опиумом
 	focus = {
 		id = BRM_no_opium
 		text = BRM_no_opium
@@ -2577,9 +2604,64 @@ focus_tree = {
 		relative_position_id = BRM_bhurma_road
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_no_opium"
-			
+			add_stability = 0.1
+			if = {
+				limit = {
+					has_government = communism
+				}
+				add_popularity = {
+					ideology = communism
+					popularity = 0.1
+				}
+			}
+			else_if = {
+				limit = {
+					has_government = trozkism
+				}
+				add_popularity = {
+					ideology = trozkism
+					popularity = 0.1
+				}
+			}
+			else_if = {
+				limit = {
+					has_government = democratic
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.1
+				}
+			}
+			else_if = {
+				limit = {
+					has_government = monarchy
+				}
+				add_popularity = {
+					ideology = monarchy
+					popularity = 0.1
+				}
+			}
+			else_if = {
+				limit = {
+					has_government = fascism
+				}
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.1
+				}
+			}
+			else_if = {
+				limit = {
+					has_government = neutrality
+				}
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.1
+				}
+			}
 		}
 	}
+	#Производство из тикового дерева
 	focus = {
 		id = BRM_tik_wood
 		text = BRM_tik_wood
@@ -2593,9 +2675,17 @@ focus_tree = {
 		relative_position_id = BRM_bhurma_road
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_tik_wood"
-			
+			random_state = { 
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
+	#Каучуковые плантации
 	focus = {
 		id = BRM_rubbon
 		text = BRM_rubbon
@@ -2606,12 +2696,22 @@ focus_tree = {
 		}
 		x = 2
 		y = 1
+		available = {
+			640 = {
+				is_controlled_by = BRM
+			}
+		}
 		relative_position_id = BRM_our_money
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_rubbon"
-			
+			add_resource = {
+				type = rubber
+				amount = 20
+				state = 640
+			}
 		}
 	}
+	#Восстановить экспорт риса после кризиса
 	focus = {
 		id = BRM_rice_export
 		text = BRM_rice_export
@@ -2622,12 +2722,30 @@ focus_tree = {
 		}
 		x = 4
 		y = 1
+		available = {
+			has_country_flag = BRM_start_regress_flag
+			NOT = {
+				OR = {
+					has_idea = BRM_idea_no_peasent_lands_10
+					has_idea = BRM_idea_no_peasent_lands_9
+					has_idea = BRM_idea_no_peasent_lands_8
+					has_idea = BRM_idea_no_peasent_lands_7
+					has_idea = BRM_idea_no_peasent_lands_6
+					has_idea = BRM_idea_no_peasent_lands_5
+					has_idea = BRM_idea_no_peasent_lands_4
+					has_idea = BRM_idea_no_peasent_lands_3
+					has_idea = BRM_idea_no_peasent_lands_2
+					has_idea = BRM_idea_no_peasent_lands_1
+				}
+			}
+		}
 		relative_position_id = BRM_our_money
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_rice_export"
-			
+			add_ideas = BRM_idea_rice_export
 		}
 	}
+	#Строительные материалы и инструменты из тика
 	focus = {
 		id = BRM_wood_build
 		text = BRM_wood_build
@@ -2641,7 +2759,15 @@ focus_tree = {
 		relative_position_id = BRM_tik_wood
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_wood_build"
-			
+			random_state = { 
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_ideas = BRM_idea_tik_build
 		}
 	}
 	focus = {
@@ -2660,6 +2786,7 @@ focus_tree = {
 			
 		}
 	}
+	#Текстильная промышленность
 	focus = {
 		id = BRM_tecstile_factory
 		text = BRM_tecstile_factory
@@ -2676,9 +2803,17 @@ focus_tree = {
 		relative_position_id = BRM_rubbon
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_tecstile_factory"
-			
+			random_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
 		}
 	}
+	#Присоединить сельскохозяйственный колледж к университету
 	focus = {
 		id = BRM_univer_2
 		text = BRM_univer_2
@@ -2698,12 +2833,14 @@ focus_tree = {
 		}
 		x = 4
 		y = 1
+		available = { num_of_factories > 25 }
 		relative_position_id = BRM_rr_y-B
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_univer_2"
-			
+			add_research_slot = 1
 		}
 	}
+	#Проект Синмала
 	focus = {
 		id = BRM_project_sinmala
 		text = BRM_project_sinmala
@@ -2714,12 +2851,14 @@ focus_tree = {
 		}
 		x = 0
 		y = 1
+		available = { num_of_factories > 50 }
 		relative_position_id = BRM_rr_y-B
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_project_sinmala"
-			
+			add_research_slot = 1
 		}
 	}
+	#Комбинированная программа по машиностроению и электротехнике
 	focus = {
 		id = BRM_combo_meh_elec
 		text = BRM_combo_meh_elec
@@ -2733,12 +2872,23 @@ focus_tree = {
 		}
 		x = 0
 		y = 1
+		available = { num_of_factories > 35 }
 		relative_position_id = BRM_bullet_factory
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_combo_meh_elec"
-			
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 2
+				category = industry
+			}
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 2
+				category = electronics
+			}
 		}
 	}
+	#Военно-морской штаб министерства обороны
 	focus = {
 		id = BRM_create_vmf_shtab
 		text = BRM_create_vmf_shtab
@@ -2822,6 +2972,7 @@ focus_tree = {
 			
 		}
 	}
+	#Вербовка горных племён
 	focus = {
 		id = BRM_mount_soldier
 		text = BRM_mount_soldier
@@ -2832,10 +2983,17 @@ focus_tree = {
 		}
 		x = -4
 		y = 1
+		available = {
+			NOT = {
+				has_idea = BRM_idea_army_race_conflict
+			}
+		}
 		relative_position_id = BRM_birma_rifle
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_mount_soldier"
-			
+			add_ideas = BRM_idea_mount_tribes
+			custom_effect_tooltip = NEP_mountain_training_effect
+			hidden_effect = { set_technology = { mountain_warfare = 1 } }
 		}
 	}
 	focus = {
