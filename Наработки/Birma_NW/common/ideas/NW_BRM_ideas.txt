@@ -413,5 +413,86 @@ ideas = {
 				conscription = 0.005
 			}
 		}
+		# Военно-морской учебный центр
+		BRM_idea_vmf_train = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = big_col_app
+			modifier = {
+				experience_gain_navy = 0.01
+				experience_gain_navy_factor = 0.15
+			}
+		}
+		# Добровольцы ВМФ
+		BRM_idea_vmf_rezerv = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = big_col_app
+			modifier = {
+				conscription = 0.005
+				repair_speed_factor = 0.1
+			}
+		}
+		# Авиабаза Мингаладон
+		BRM_idea_Mingalodon = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = big_col_app
+			modifier = {
+				air_range_factor = 0.15
+			}
+		}
+		BRM_idea_Mingalodon_2 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = big_col_app
+			modifier = {
+				air_range_factor = 0.15
+				experience_gain_air = 0.02
+				air_doctrine_cost_factor = -0.1
+			}
+		}
+		# Поддержка промышленников
+		BRM_idea_industrial_support = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				OR = {
+					has_government = neutrality
+					has_government = monarchy
+				}
+			}
+			picture = big_col_app
+			modifier = {
+				political_power_gain = 0.1
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+			}
+		}
 	}
 }

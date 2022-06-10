@@ -9,6 +9,7 @@ focus_tree = {
 		}
 	}
 	default = no
+	# Новая конституция
 	focus = {
 		id = BRM_new_constitution
 		text = BRM_new_constitution
@@ -16,9 +17,18 @@ focus_tree = {
 		cost = 10
 		x = 27
 		y = 0
+		available ={
+			NOT = {
+				ROOT = {
+					is_subject_of = RAJ
+				}
+			}
+		}
+			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_new_constitution"
-			
+			add_stability = 0.05
+			custom_effect_tooltip = TUR_focus_autocomplete_tt
 		}
 	}
 	focus = {
@@ -47,6 +57,11 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_create_vmf"
 			navy_experience = 10
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = navy_doctrine
+			}
 		}
 	}
 	# Бирманские винтовки
@@ -94,6 +109,7 @@ focus_tree = {
 			
 		}
 	}
+	# Авиабаза «Dabaing»
 	focus = {
 		id = BRM_air_dabaing
 		icon = GFX_focus_generic_aircraft_production
@@ -102,7 +118,13 @@ focus_tree = {
 		y = 14
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_air_dabaing"
-			
+			1148 = {
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
 	focus = {
@@ -119,10 +141,16 @@ focus_tree = {
 		}
 		x = -25
 		y = 1
+		available = {
+			has_country_flag = BRM_elections_end_flag
+			check_variable = { burma_party_green_pop_total > 50 }
+		}
 		relative_position_id = BRM_new_constitution
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_general_association"
-			
+			add_political_power = -250
+			set_country_flag = BRM_parlament_ready_flag
+			custom_modifier_tooltip = BRM_brm_data_FFP_tt
 		}
 	}
 	focus = {
@@ -2081,6 +2109,7 @@ focus_tree = {
 			
 		}
 	}
+	# Заручиться поддержкой промышленников
 	focus = {
 		id = BRM_big_prom_support
 		text = BRM_big_prom_support
@@ -2089,12 +2118,18 @@ focus_tree = {
 		prerequisite = {
 			focus = BRM_form_parlament
 		}
+		available = {
+			OR = {
+				has_government = neutrality
+				has_government = monarchy
+			}
+		}
 		x = 0
 		y = 2
 		relative_position_id = BRM_form_parlament
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_big_prom_support"
-			
+			add_ideas = BRM_idea_industrial_support
 		}
 	}
 	focus = {
@@ -2902,9 +2937,15 @@ focus_tree = {
 		relative_position_id = BRM_create_vmf
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_create_vmf_shtab"
-			
+			navy_experience = 10
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = navy_doctrine
+			}
 		}
 	}
+	#Создание морских баз
 	focus = {
 		id = BRM_create_vmf_base
 		text = BRM_create_vmf_base
@@ -2918,9 +2959,35 @@ focus_tree = {
 		relative_position_id = BRM_create_vmf_shtab
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_create_vmf_base"
-			
+			if = {
+				limit = {
+					1094 = { is_controlled_by = ROOT }
+				}
+				1094 = {
+					add_building_construction = {
+						type = naval_base
+						level = 2
+						instant_build = yes
+						province = 1330
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					1094 = { is_controlled_by = ROOT }
+				}
+				1094 = {
+					add_building_construction = {
+						type = naval_base
+						level = 2
+						instant_build = yes
+						province = 4275
+					}
+				}
+			}
 		}
 	}
+	#Военно-морской учебный центр
 	focus = {
 		id = BRM_create_vmf_train
 		text = BRM_create_vmf_train
@@ -2934,9 +3001,16 @@ focus_tree = {
 		relative_position_id = BRM_create_vmf
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_create_vmf_train"
-			
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = navy_doctrine
+			}
+			add_ideas = BRM_idea_vmf_train
+			navy_leader_start_level = 1 
 		}
 	}
+	# Собственные верфи
 	focus = {
 		id = BRM_create_vmf_verf
 		text = BRM_create_vmf_verf
@@ -2950,9 +3024,25 @@ focus_tree = {
 		relative_position_id = BRM_create_vmf_train
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_create_vmf_verf"
-			
+			288 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			1152 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
+	# Модернизация эсминцев
 	focus = {
 		id = BRM_create_esminec
 		text = BRM_create_esminec
@@ -2969,7 +3059,11 @@ focus_tree = {
 		relative_position_id = BRM_create_vmf_base
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_create_esminec"
-			
+			add_tech_bonus = {
+				bonus = 2.0
+				uses = 1
+				category = dd_tech
+			}
 		}
 	}
 	#Вербовка горных племён
@@ -3012,6 +3106,7 @@ focus_tree = {
 			
 		}
 	}
+	# Бирманский добровольческий резерв ВМФ
 	focus = {
 		id = BRM_vmf_rezerv
 		text = BRM_vmf_rezerv
@@ -3028,7 +3123,7 @@ focus_tree = {
 		relative_position_id = BRM_create_vmf_train
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_vmf_rezerv"
-			
+			add_ideas = BRM_idea_vmf_rezerv
 		}
 	}
 	focus = {
@@ -3261,6 +3356,7 @@ focus_tree = {
 			
 		}
 	}
+	# Авиабаза «Akyab»
 	focus = {
 		id = BRM_air_akyab
 		text = BRM_air_akyab
@@ -3274,9 +3370,16 @@ focus_tree = {
 		relative_position_id = BRM_air_dabaing
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_air_akyab"
-			
+			1148 = {
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
+	# Авиабаза «Mergui»
 	focus = {
 		id = BRM_air_mergui
 		text = BRM_air_mergui
@@ -3290,9 +3393,16 @@ focus_tree = {
 		relative_position_id = BRM_air_akyab
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_air_mergui"
-			
+			1152 = {
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
+	# Военная авиабаза «Мингаладон»
 	focus = {
 		id = BRM_air_mingaladon
 		text = BRM_air_mingaladon
@@ -3306,9 +3416,17 @@ focus_tree = {
 		relative_position_id = BRM_air_dabaing
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_air_mingaladon"
-			
+			288 = {
+				add_building_construction = {
+					type = air_base
+					level = 4
+					instant_build = yes
+				}
+			}
+			add_ideas = BRM_idea_Mingalodon
 		}
 	}
+	# Авиабаза «Hmawbi»
 	focus = {
 		id = BRM_air_hwambi
 		text = BRM_air_hwambi
@@ -3322,9 +3440,16 @@ focus_tree = {
 		relative_position_id = BRM_air_dabaing
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_air_hwambi"
-			
+			288 = {
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
+	# Авиабаза «Meiktila»
 	focus = {
 		id = BRM_air_meiktila
 		text = BRM_air_meiktila
@@ -3338,9 +3463,16 @@ focus_tree = {
 		relative_position_id = BRM_air_hwambi
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_air_meiktila"
-			
+			640 = {
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
+	# Оснастить «Мингаладон» ПВО
 	focus = {
 		id = BRM_air_mingaladon_anti
 		text = BRM_air_mingaladon_anti
@@ -3354,9 +3486,16 @@ focus_tree = {
 		relative_position_id = BRM_air_mingaladon
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_air_mingaladon_anti"
-			
+			288 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 4
+					instant_build = yes
+				}
+			}
 		}
 	}
+	# Создание ВВС Бирмы
 	focus = {
 		id = BRM_air_vvs_create
 		text = BRM_air_vvs_create
@@ -3370,9 +3509,10 @@ focus_tree = {
 		relative_position_id = BRM_air_mingaladon
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_air_vvs_create"
-			
+			air_experience = 15
 		}
 	}
+	# Переделать лётную школу «Мингаладон»
 	focus = {
 		id = BRM_air_school
 		text = BRM_air_school
@@ -3381,14 +3521,21 @@ focus_tree = {
 		prerequisite = {
 			focus = BRM_air_mingaladon
 		}
+		available = {
+			is_subject = no
+		}
 		x = 2
 		y = 1
 		relative_position_id = BRM_air_mingaladon
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_air_school"
-			
+			swap_ideas = {
+				remove_idea = BRM_idea_Mingalodon
+				add_idea = BRM_idea_Mingalodon_2
+			}
 		}
 	}
+	# Штаб-квартира «Мингаладон»
 	focus = {
 		id = BRM_air_shtab
 		text = BRM_air_shtab
@@ -3402,7 +3549,8 @@ focus_tree = {
 		relative_position_id = BRM_air_vvs_create
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_air_shtab"
-			
+			unlock_decision_category_tooltip = BRM_mingaladon_categories
+			hidden_effect = { set_country_flag = BRM_mingaladon_flag }
 		}
 	}
 }
