@@ -1,0 +1,72 @@
+﻿add_namespace = sia
+
+ # Открытие монумента защиты конституции
+country_event = {
+	id = sia.1
+	title = sia.1.t
+	desc = sia.1.d
+	picture = GFX_report_event_sia_1
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event sia.1" }
+
+	option = {
+		name = sia.1.a
+		add_stability = 0.02
+		add_popularity = { ideology = democratic popularity = 0.01 }
+		add_political_power = 15
+	}
+}
+ # Церемония захоронения мемориальной доски Народной партии
+country_event = {
+	id = sia.2
+	title = sia.2.t
+	desc = sia.2.d
+	picture = GFX_report_event_sia_2
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event sia.2" }
+
+	option = {
+		name = sia.2.a
+		add_stability = 0.02
+		add_popularity = { ideology = democratic popularity = 0.01 }
+		add_political_power = 15
+	}
+}
+
+ # Имущественный скандал
+country_event = {
+	id = sia.3
+	title = sia.3.t
+	desc = sia.3.d
+	picture = GFX_report_event_sia_3
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event sia.3" }
+
+	option = {
+		name = sia.3.a
+		add_stability = -0.05
+		add_popularity = { ideology = democratic popularity = -0.1 }
+		add_political_power = -50
+	}
+}
+
+ # День революции
+country_event = {
+	id = sia.4
+	title = sia.4.t
+	desc = sia.4.d
+	picture = GFX_report_event_sia_4
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event sia.4" }
+
+	option = {
+		name = sia.4.a
+		add_stability = 0.02
+		add_popularity = { ideology = democratic popularity = 0.01 }
+		add_political_power = 15
+	}
+}

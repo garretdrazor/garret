@@ -15,7 +15,14 @@ focus_tree = {
 		cost = 10
 		x = 4
 		y = 0
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_no_gold_valute"
+			
+		}
 	}
 	focus = {
 		id = SIA_create_vvs
@@ -24,7 +31,14 @@ focus_tree = {
 		cost = 10
 		x = 13
 		y = 0
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_create_vvs"
+			
+		}
 	}
 	focus = {
 		id = SIA_royal_police
@@ -33,7 +47,14 @@ focus_tree = {
 		cost = 10
 		x = 19
 		y = 0
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_royal_police"
+			
+		}
 	}
 	focus = {
 		id = SIA_army_invest
@@ -42,7 +63,14 @@ focus_tree = {
 		cost = 10
 		x = 25
 		y = 0
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_army_invest"
+			
+		}
 	}
 	focus = {
 		id = SIA_accum_factory
@@ -51,7 +79,14 @@ focus_tree = {
 		cost = 10
 		x = 32
 		y = 0
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_accum_factory"
+			
+		}
 	}
 	focus = {
 		id = SIA_land_maximum
@@ -60,7 +95,14 @@ focus_tree = {
 		cost = 10
 		x = 23
 		y = 8
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_land_maximum"
+			
+		}
 	}
 	focus = {
 		id = SIA_create_medicine
@@ -69,7 +111,14 @@ focus_tree = {
 		cost = 10
 		x = 27
 		y = 8
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_create_medicine"
+			
+		}
 	}
 	focus = {
 		id = SIA_woman_monks
@@ -78,7 +127,14 @@ focus_tree = {
 		cost = 10
 		x = 40
 		y = 12
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_woman_monks"
+			
+		}
 	}
 	focus = {
 		id = SIA_deanonce_bad_theatry
@@ -90,7 +146,14 @@ focus_tree = {
 		}
 		x = 3
 		y = 1
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_deanonce_bad_theatry"
+			
+		}
 	}
 	focus = {
 		id = SIA_back_border
@@ -102,7 +165,14 @@ focus_tree = {
 		}
 		x = 5
 		y = 1
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_back_border"
+			
+		}
 	}
 	focus = {
 		id = SIA_new_theatry_with_france
@@ -115,7 +185,14 @@ focus_tree = {
 		}
 		x = 1
 		y = 2
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_new_theatry_with_france"
+			
+		}
 	}
 	focus = {
 		id = SIA_usa_invest
@@ -128,7 +205,14 @@ focus_tree = {
 		}
 		x = 3
 		y = 2
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_usa_invest"
+			
+		}
 	}
 	focus = {
 		id = SIA_scan_invest
@@ -141,7 +225,14 @@ focus_tree = {
 		}
 		x = 5
 		y = 2
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_scan_invest"
+			
+		}
 	}
 	focus = {
 		id = SIA_right_invest
@@ -154,7 +245,14 @@ focus_tree = {
 		}
 		x = 7
 		y = 2
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_right_invest"
+			
+		}
 	}
 	focus = {
 		id = SIA_GB_compromise
@@ -172,7 +270,14 @@ focus_tree = {
 		}
 		x = 2
 		y = 3
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_GB_compromise"
+			
+		}
 	}
 	focus = {
 		id = SIA_sugar_factory
@@ -185,7 +290,14 @@ focus_tree = {
 		}
 		x = 0
 		y = 3
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_sugar_factory"
+			
+		}
 	}
 	focus = {
 		id = SIA_half_olovo
@@ -197,7 +309,14 @@ focus_tree = {
 		}
 		x = 2
 		y = 4
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_half_olovo"
+			
+		}
 	}
 	focus = {
 		id = SIA_military_parlament
@@ -213,7 +332,14 @@ focus_tree = {
 		}
 		x = 3
 		y = 10
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_military_parlament"
+			
+		}
 	}
 	focus = {
 		id = SIA_clearing_generals
@@ -225,7 +351,14 @@ focus_tree = {
 		}
 		x = 3
 		y = 11
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_clearing_generals"
+			
+		}
 	}
 	focus = {
 		id = SIA_create_idochina
@@ -237,7 +370,14 @@ focus_tree = {
 		}
 		x = 3
 		y = 14
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_create_idochina"
+			
+		}
 	}
 	focus = {
 		id = SIA_neutral_military
@@ -253,7 +393,14 @@ focus_tree = {
 		}
 		x = 3
 		y = 15
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_neutral_military"
+			
+		}
 	}
 	focus = {
 		id = SIA_upgrade_indochina
@@ -269,7 +416,14 @@ focus_tree = {
 		}
 		x = 1
 		y = 15
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_upgrade_indochina"
+			
+		}
 	}
 	focus = {
 		id = SIA_ally_prom
@@ -281,7 +435,14 @@ focus_tree = {
 		}
 		x = 3
 		y = 16
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_ally_prom"
+			
+		}
 	}
 	focus = {
 		id = SIA_military_ally
@@ -293,7 +454,14 @@ focus_tree = {
 		}
 		x = 1
 		y = 16
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_military_ally"
+			
+		}
 	}
 	focus = {
 		id = SIA_nacionalization_anather
@@ -311,7 +479,14 @@ focus_tree = {
 		}
 		x = 6
 		y = 3
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_nacionalization_anather"
+			
+		}
 	}
 	focus = {
 		id = SIA_china_exile
@@ -327,7 +502,14 @@ focus_tree = {
 		}
 		x = 4
 		y = 4
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_china_exile"
+			
+		}
 	}
 	focus = {
 		id = SIA_china_nac
@@ -343,7 +525,14 @@ focus_tree = {
 		}
 		x = 6
 		y = 4
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_china_nac"
+			
+		}
 	}
 	focus = {
 		id = SIA_univer_kasetsart
@@ -356,7 +545,14 @@ focus_tree = {
 		}
 		x = 4
 		y = 5
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_univer_kasetsart"
+			
+		}
 	}
 	focus = {
 		id = SIA_metal_and_rubber
@@ -368,7 +564,14 @@ focus_tree = {
 		}
 		x = 1
 		y = 6
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_metal_and_rubber"
+			
+		}
 	}
 	focus = {
 		id = SIA_rubbon_up
@@ -381,7 +584,14 @@ focus_tree = {
 		}
 		x = 2
 		y = 5
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_rubbon_up"
+			
+		}
 	}
 	focus = {
 		id = SIA_cement_group
@@ -393,7 +603,14 @@ focus_tree = {
 		}
 		x = 4
 		y = 6
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_cement_group"
+			
+		}
 	}
 	focus = {
 		id = SIA_univer_Mongkut
@@ -405,7 +622,14 @@ focus_tree = {
 		}
 		x = 4
 		y = 7
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_univer_Mongkut"
+			
+		}
 	}
 	focus = {
 		id = SIA_up_rail_for_army
@@ -417,7 +641,14 @@ focus_tree = {
 		}
 		x = 5
 		y = 11
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_up_rail_for_army"
+			
+		}
 	}
 	focus = {
 		id = SIA_west_armor
@@ -429,7 +660,14 @@ focus_tree = {
 		}
 		x = 4
 		y = 12
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_west_armor"
+			
+		}
 	}
 	focus = {
 		id = SIA_water_infra
@@ -441,7 +679,14 @@ focus_tree = {
 		}
 		x = 5
 		y = 13
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_water_infra"
+			
+		}
 	}
 	focus = {
 		id = SIA_water_def
@@ -453,7 +698,14 @@ focus_tree = {
 		}
 		x = 5
 		y = 14
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_water_def"
+			
+		}
 	}
 	focus = {
 		id = SIA_with_german_inpire
@@ -469,7 +721,14 @@ focus_tree = {
 		}
 		x = 5
 		y = 15
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_with_german_inpire"
+			
+		}
 	}
 	focus = {
 		id = SIA_generals_from_german_impire
@@ -481,7 +740,14 @@ focus_tree = {
 		}
 		x = 5
 		y = 16
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_generals_from_german_impire"
+			
+		}
 	}
 	focus = {
 		id = SIA_military_ally_search
@@ -494,7 +760,14 @@ focus_tree = {
 		}
 		x = 3
 		y = 17
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_military_ally_search"
+			
+		}
 	}
 	focus = {
 		id = SIA_rise_export
@@ -507,7 +780,14 @@ focus_tree = {
 		}
 		x = 6
 		y = 5
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_rise_export"
+			
+		}
 	}
 	focus = {
 		id = SIA_rise_factory
@@ -519,7 +799,14 @@ focus_tree = {
 		}
 		x = 6
 		y = 7
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_rise_factory"
+			
+		}
 	}
 	focus = {
 		id = SIA_east_armor
@@ -531,7 +818,14 @@ focus_tree = {
 		}
 		x = 6
 		y = 12
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_east_armor"
+			
+		}
 	}
 	focus = {
 		id = SIA_share_indochine
@@ -542,7 +836,14 @@ focus_tree = {
 		}
 		x = 6
 		y = 17
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_share_indochine"
+			
+		}
 	}
 	focus = {
 		id = SIA_irom_main
@@ -554,7 +855,14 @@ focus_tree = {
 		}
 		x = 7
 		y = 6
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_irom_main"
+			
+		}
 	}
 	focus = {
 		id = SIA_share_malasie
@@ -566,7 +874,14 @@ focus_tree = {
 		}
 		x = 7
 		y = 16
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_share_malasie"
+			
+		}
 	}
 	focus = {
 		id = SIA_beer_factory
@@ -579,7 +894,14 @@ focus_tree = {
 		}
 		x = 8
 		y = 3
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_beer_factory"
+			
+		}
 	}
 	focus = {
 		id = SIA_ip_ooo
@@ -591,7 +913,14 @@ focus_tree = {
 		}
 		x = 8
 		y = 4
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_ip_ooo"
+			
+		}
 	}
 	focus = {
 		id = SIA_tai_nia_pachinko
@@ -606,7 +935,14 @@ focus_tree = {
 		}
 		x = 8
 		y = 5
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_tai_nia_pachinko"
+			
+		}
 	}
 	focus = {
 		id = SIA_north_oil
@@ -618,7 +954,14 @@ focus_tree = {
 		}
 		x = 8
 		y = 7
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_north_oil"
+			
+		}
 	}
 	focus = {
 		id = SIA_tabacco_farm_and_factory
@@ -630,7 +973,14 @@ focus_tree = {
 		}
 		x = 9
 		y = 6
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_tabacco_farm_and_factory"
+			
+		}
 	}
 	focus = {
 		id = SIA_med_air
@@ -643,7 +993,14 @@ focus_tree = {
 		}
 		x = 10
 		y = 5
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_med_air"
+			
+		}
 	}
 	focus = {
 		id = SIA_tabacco_export
@@ -655,7 +1012,14 @@ focus_tree = {
 		}
 		x = 10
 		y = 7
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_tabacco_export"
+			
+		}
 	}
 	focus = {
 		id = SIA_taktik_vvs
@@ -667,7 +1031,14 @@ focus_tree = {
 		}
 		x = 11
 		y = 1
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_taktik_vvs"
+			
+		}
 	}
 	focus = {
 		id = SIA_command_vvs
@@ -679,7 +1050,14 @@ focus_tree = {
 		}
 		x = 13
 		y = 1
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_command_vvs"
+			
+		}
 	}
 	focus = {
 		id = SIA_airdef_vvs
@@ -692,7 +1070,14 @@ focus_tree = {
 		}
 		x = 12
 		y = 2
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_airdef_vvs"
+			
+		}
 	}
 	focus = {
 		id = SIA_new_airbase_vvs
@@ -704,7 +1089,14 @@ focus_tree = {
 		}
 		x = 15
 		y = 1
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_new_airbase_vvs"
+			
+		}
 	}
 	focus = {
 		id = SIA_airspec_vvs
@@ -717,7 +1109,14 @@ focus_tree = {
 		}
 		x = 14
 		y = 2
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_airspec_vvs"
+			
+		}
 	}
 	focus = {
 		id = SIA_franch_air
@@ -734,7 +1133,14 @@ focus_tree = {
 		}
 		x = 11
 		y = 3
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_franch_air"
+			
+		}
 	}
 	focus = {
 		id = SIA_japan_air
@@ -751,7 +1157,14 @@ focus_tree = {
 		}
 		x = 13
 		y = 3
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_japan_air"
+			
+		}
 	}
 	focus = {
 		id = SIA_usa_air
@@ -768,7 +1181,14 @@ focus_tree = {
 		}
 		x = 15
 		y = 3
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_usa_air"
+			
+		}
 	}
 	focus = {
 		id = SIA_usa_base
@@ -780,7 +1200,14 @@ focus_tree = {
 		}
 		x = 15
 		y = 4
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_usa_base"
+			
+		}
 	}
 	focus = {
 		id = SIA_ressurect_commi
@@ -797,7 +1224,14 @@ focus_tree = {
 		}
 		x = 13
 		y = 10
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_ressurect_commi"
+			
+		}
 	}
 	focus = {
 		id = SIA_soc_buddism
@@ -809,7 +1243,14 @@ focus_tree = {
 		}
 		x = 15
 		y = 11
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_soc_buddism"
+			
+		}
 	}
 	focus = {
 		id = SIA_japan_taktik
@@ -821,7 +1262,14 @@ focus_tree = {
 		}
 		x = 13
 		y = 4
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_japan_taktik"
+			
+		}
 	}
 	focus = {
 		id = SIA_franch_motor
@@ -833,7 +1281,14 @@ focus_tree = {
 		}
 		x = 11
 		y = 4
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_franch_motor"
+			
+		}
 	}
 	focus = {
 		id = SIA_spec_buro
@@ -845,7 +1300,14 @@ focus_tree = {
 		}
 		x = 18
 		y = 1
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_spec_buro"
+			
+		}
 	}
 	focus = {
 		id = SIA_polit_police
@@ -857,7 +1319,14 @@ focus_tree = {
 		}
 		x = 17
 		y = 2
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_polit_police"
+			
+		}
 	}
 	focus = {
 		id = SIA_third_path
@@ -874,7 +1343,14 @@ focus_tree = {
 		}
 		x = 22
 		y = 10
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_third_path"
+			
+		}
 	}
 	focus = {
 		id = SIA_consensus_with_royalists
@@ -889,7 +1365,14 @@ focus_tree = {
 		}
 		x = 18
 		y = 11
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_consensus_with_royalists"
+			
+		}
 	}
 	focus = {
 		id = SIA_world_police
@@ -901,7 +1384,14 @@ focus_tree = {
 		}
 		x = 19
 		y = 2
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_world_police"
+			
+		}
 	}
 	focus = {
 		id = SIA_choose_police
@@ -916,7 +1406,14 @@ focus_tree = {
 		}
 		x = 19
 		y = 3
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_choose_police"
+			
+		}
 	}
 	focus = {
 		id = SIA_border_police
@@ -928,7 +1425,14 @@ focus_tree = {
 		}
 		x = 17
 		y = 4
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_border_police"
+			
+		}
 	}
 	focus = {
 		id = SIA_power_air
@@ -945,7 +1449,14 @@ focus_tree = {
 		}
 		x = 16
 		y = 5
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_power_air"
+			
+		}
 	}
 	focus = {
 		id = SIA_woman_police
@@ -957,7 +1468,14 @@ focus_tree = {
 		}
 		x = 19
 		y = 4
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_woman_police"
+			
+		}
 	}
 	focus = {
 		id = SIA_no_party_with_royal
@@ -972,7 +1490,14 @@ focus_tree = {
 		}
 		x = 20
 		y = 11
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_no_party_with_royal"
+			
+		}
 	}
 	focus = {
 		id = SIA_crown_fate
@@ -985,7 +1510,14 @@ focus_tree = {
 		}
 		x = 19
 		y = 12
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_crown_fate"
+			
+		}
 	}
 	focus = {
 		id = SIA_super_spec_buro
@@ -997,7 +1529,14 @@ focus_tree = {
 		}
 		x = 20
 		y = 1
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_super_spec_buro"
+			
+		}
 	}
 	focus = {
 		id = SIA_police_randjers
@@ -1009,7 +1548,14 @@ focus_tree = {
 		}
 		x = 20
 		y = 5
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_police_randjers"
+			
+		}
 	}
 	focus = {
 		id = SIA_police_marsh
@@ -1021,7 +1567,14 @@ focus_tree = {
 		}
 		x = 21
 		y = 4
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_police_marsh"
+			
+		}
 	}
 	focus = {
 		id = SIA_yellow_book
@@ -1033,7 +1586,14 @@ focus_tree = {
 		}
 		x = 22
 		y = 11
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_yellow_book"
+			
+		}
 	}
 	focus = {
 		id = SIA_industrial_with_company
@@ -1045,7 +1605,14 @@ focus_tree = {
 		}
 		x = 21
 		y = 12
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_industrial_with_company"
+			
+		}
 	}
 	focus = {
 		id = SIA_create_work_order
@@ -1057,7 +1624,14 @@ focus_tree = {
 		}
 		x = 21
 		y = 13
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_create_work_order"
+			
+		}
 	}
 	focus = {
 		id = SIA_create_free_thai
@@ -1069,7 +1643,14 @@ focus_tree = {
 		}
 		x = 20
 		y = 14
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_create_free_thai"
+			
+		}
 	}
 	focus = {
 		id = SIA_create_ekonomik_soviet
@@ -1081,7 +1662,14 @@ focus_tree = {
 		}
 		x = 22
 		y = 14
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_create_ekonomik_soviet"
+			
+		}
 	}
 	focus = {
 		id = SIA_create_league
@@ -1096,7 +1684,14 @@ focus_tree = {
 		}
 		x = 21
 		y = 15
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_create_league"
+			
+		}
 	}
 	focus = {
 		id = SIA_league_indochi
@@ -1108,7 +1703,14 @@ focus_tree = {
 		}
 		x = 19
 		y = 16
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_league_indochi"
+			
+		}
 	}
 	focus = {
 		id = SIA_league_research
@@ -1120,7 +1722,14 @@ focus_tree = {
 		}
 		x = 21
 		y = 16
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_league_research"
+			
+		}
 	}
 	focus = {
 		id = SIA_league_malaia
@@ -1132,7 +1741,14 @@ focus_tree = {
 		}
 		x = 20
 		y = 17
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_league_malaia"
+			
+		}
 	}
 	focus = {
 		id = SIA_GB_colonies
@@ -1144,7 +1760,14 @@ focus_tree = {
 		}
 		x = 22
 		y = 17
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_GB_colonies"
+			
+		}
 	}
 	focus = {
 		id = SIA_league_bhurma
@@ -1157,7 +1780,14 @@ focus_tree = {
 		}
 		x = 21
 		y = 18
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_league_bhurma"
+			
+		}
 	}
 	focus = {
 		id = SIA_long_recon
@@ -1169,7 +1799,14 @@ focus_tree = {
 		}
 		x = 22
 		y = 1
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_long_recon"
+			
+		}
 	}
 	focus = {
 		id = SIA_GB_tank
@@ -1184,7 +1821,14 @@ focus_tree = {
 		}
 		x = 24
 		y = 1
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_GB_tank"
+			
+		}
 	}
 	focus = {
 		id = SIA_Ger_tank
@@ -1199,7 +1843,14 @@ focus_tree = {
 		}
 		x = 26
 		y = 1
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_Ger_tank"
+			
+		}
 	}
 	focus = {
 		id = SIA_GB_rifle
@@ -1216,7 +1867,14 @@ focus_tree = {
 		}
 		x = 22
 		y = 2
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_GB_rifle"
+			
+		}
 	}
 	focus = {
 		id = SIA_siam_rifle
@@ -1233,7 +1891,14 @@ focus_tree = {
 		}
 		x = 24
 		y = 2
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_siam_rifle"
+			
+		}
 	}
 	focus = {
 		id = SIA_japan_rifle
@@ -1250,7 +1915,14 @@ focus_tree = {
 		}
 		x = 26
 		y = 2
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_japan_rifle"
+			
+		}
 	}
 	focus = {
 		id = SIA_choose_army
@@ -1267,7 +1939,14 @@ focus_tree = {
 		}
 		x = 24
 		y = 3
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_choose_army"
+			
+		}
 	}
 	focus = {
 		id = SIA_students_def
@@ -1279,7 +1958,14 @@ focus_tree = {
 		}
 		x = 23
 		y = 4
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_students_def"
+			
+		}
 	}
 	focus = {
 		id = SIA_general_shtab
@@ -1292,7 +1978,14 @@ focus_tree = {
 		}
 		x = 22
 		y = 5
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_general_shtab"
+			
+		}
 	}
 	focus = {
 		id = SIA_territory_cammanders
@@ -1307,7 +2000,14 @@ focus_tree = {
 		}
 		x = 24
 		y = 6
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_territory_cammanders"
+			
+		}
 	}
 	focus = {
 		id = SIA_powder_factory
@@ -1321,7 +2021,14 @@ focus_tree = {
 		}
 		x = 26
 		y = 3
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_powder_factory"
+			
+		}
 	}
 	focus = {
 		id = SIA_injeners_army
@@ -1336,7 +2043,14 @@ focus_tree = {
 		}
 		x = 25
 		y = 4
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_injeners_army"
+			
+		}
 	}
 	focus = {
 		id = SIA_border_conflict
@@ -1349,7 +2063,14 @@ focus_tree = {
 		}
 		x = 25
 		y = 9
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_border_conflict"
+			
+		}
 	}
 	focus = {
 		id = SIA_passive_path
@@ -1366,7 +2087,14 @@ focus_tree = {
 		}
 		x = 28
 		y = 10
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_passive_path"
+			
+		}
 	}
 	focus = {
 		id = SIA_no_generals_on_parlament
@@ -1379,7 +2107,14 @@ focus_tree = {
 		}
 		x = 25
 		y = 11
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_no_generals_on_parlament"
+			
+		}
 	}
 	focus = {
 		id = SIA_free_business
@@ -1391,7 +2126,14 @@ focus_tree = {
 		}
 		x = 27
 		y = 11
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_free_business"
+			
+		}
 	}
 	focus = {
 		id = SIA_rise_after_civil_dem
@@ -1404,7 +2146,14 @@ focus_tree = {
 		}
 		x = 25
 		y = 12
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_rise_after_civil_dem"
+			
+		}
 	}
 	focus = {
 		id = SIA_med_for_all
@@ -1416,7 +2165,14 @@ focus_tree = {
 		}
 		x = 23
 		y = 12
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_med_for_all"
+			
+		}
 	}
 	focus = {
 		id = SIA_ekonom_result
@@ -1428,7 +2184,14 @@ focus_tree = {
 		}
 		x = 27
 		y = 12
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_ekonom_result"
+			
+		}
 	}
 	focus = {
 		id = SIA_money_for_research
@@ -1441,7 +2204,14 @@ focus_tree = {
 		}
 		x = 25
 		y = 13
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_money_for_research"
+			
+		}
 	}
 	focus = {
 		id = SIA_rifle_factory
@@ -1453,7 +2223,14 @@ focus_tree = {
 		}
 		x = 26
 		y = 5
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_rifle_factory"
+			
+		}
 	}
 	focus = {
 		id = SIA_other_banks
@@ -1465,7 +2242,14 @@ focus_tree = {
 		}
 		x = 27
 		y = 13
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_other_banks"
+			
+		}
 	}
 	focus = {
 		id = SIA_royal_academy
@@ -1477,7 +2261,14 @@ focus_tree = {
 		}
 		x = 28
 		y = 1
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_royal_academy"
+			
+		}
 	}
 	focus = {
 		id = SIA_artillery_train
@@ -1489,7 +2280,14 @@ focus_tree = {
 		}
 		x = 28
 		y = 2
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_artillery_train"
+			
+		}
 	}
 	focus = {
 		id = SIA_new_trening
@@ -1504,7 +2302,14 @@ focus_tree = {
 		}
 		x = 28
 		y = 4
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_new_trening"
+			
+		}
 	}
 	focus = {
 		id = SIA_elephant_divisions
@@ -1516,7 +2321,14 @@ focus_tree = {
 		}
 		x = 29
 		y = 3
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_elephant_divisions"
+			
+		}
 	}
 	focus = {
 		id = SIA_strong_king
@@ -1528,7 +2340,14 @@ focus_tree = {
 		}
 		x = 29
 		y = 11
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_strong_king"
+			
+		}
 	}
 	focus = {
 		id = SIA_new_uncomm_order
@@ -1540,7 +2359,14 @@ focus_tree = {
 		}
 		x = 29
 		y = 12
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_new_uncomm_order"
+			
+		}
 	}
 	focus = {
 		id = SIA_faund_demparty
@@ -1555,7 +2381,14 @@ focus_tree = {
 		}
 		x = 29
 		y = 13
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_faund_demparty"
+			
+		}
 	}
 	focus = {
 		id = SIA_price_order
@@ -1570,7 +2403,14 @@ focus_tree = {
 		}
 		x = 27
 		y = 14
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_price_order"
+			
+		}
 	}
 	focus = {
 		id = SIA_west_politic
@@ -1582,7 +2422,14 @@ focus_tree = {
 		}
 		x = 29
 		y = 14
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_west_politic"
+			
+		}
 	}
 	focus = {
 		id = SIA_USA_ally
@@ -1599,7 +2446,14 @@ focus_tree = {
 		}
 		x = 25
 		y = 15
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_USA_ally"
+			
+		}
 	}
 	focus = {
 		id = SIA_find_dem_ally
@@ -1615,7 +2469,14 @@ focus_tree = {
 		}
 		x = 29
 		y = 15
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_find_dem_ally"
+			
+		}
 	}
 	focus = {
 		id = SIA_find_lic
@@ -1627,7 +2488,14 @@ focus_tree = {
 		}
 		x = 28
 		y = 16
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_find_lic"
+			
+		}
 	}
 	focus = {
 		id = SIA_find_war_missions
@@ -1639,7 +2507,14 @@ focus_tree = {
 		}
 		x = 30
 		y = 16
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_find_war_missions"
+			
+		}
 	}
 	focus = {
 		id = SIA_find_resours
@@ -1652,7 +2527,14 @@ focus_tree = {
 		}
 		x = 29
 		y = 17
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_find_resours"
+			
+		}
 	}
 	focus = {
 		id = SIA_underwater
@@ -1664,7 +2546,14 @@ focus_tree = {
 		}
 		x = 30
 		y = 1
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_underwater"
+			
+		}
 	}
 	focus = {
 		id = SIA_Sattahip
@@ -1676,7 +2565,14 @@ focus_tree = {
 		}
 		x = 30
 		y = 2
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_Sattahip"
+			
+		}
 	}
 	focus = {
 		id = SIA_royal_vmf
@@ -1688,7 +2584,14 @@ focus_tree = {
 		}
 		x = 31
 		y = 3
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_royal_vmf"
+			
+		}
 	}
 	focus = {
 		id = SIA_Kentung_road
@@ -1700,7 +2603,14 @@ focus_tree = {
 		}
 		x = 31
 		y = 11
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_Kentung_road"
+			
+		}
 	}
 	focus = {
 		id = SIA_sea_train_in_japan
@@ -1712,7 +2622,14 @@ focus_tree = {
 		}
 		x = 32
 		y = 1
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_sea_train_in_japan"
+			
+		}
 	}
 	focus = {
 		id = SIA_border_ship
@@ -1724,7 +2641,14 @@ focus_tree = {
 		}
 		x = 34
 		y = 1
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_border_ship"
+			
+		}
 	}
 	focus = {
 		id = SIA_stud_patrul
@@ -1737,7 +2661,14 @@ focus_tree = {
 		}
 		x = 32
 		y = 2
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_stud_patrul"
+			
+		}
 	}
 	focus = {
 		id = SIA_royal_docs
@@ -1749,7 +2680,14 @@ focus_tree = {
 		}
 		x = 34
 		y = 2
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_royal_docs"
+			
+		}
 	}
 	focus = {
 		id = SIA_royal_seaman
@@ -1762,7 +2700,14 @@ focus_tree = {
 		}
 		x = 33
 		y = 3
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_royal_seaman"
+			
+		}
 	}
 	focus = {
 		id = SIA_usa_seaman
@@ -1774,7 +2719,14 @@ focus_tree = {
 		}
 		x = 32
 		y = 4
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_usa_seaman"
+			
+		}
 	}
 	focus = {
 		id = SIA_blue_army
@@ -1790,7 +2742,14 @@ focus_tree = {
 		}
 		x = 37
 		y = 10
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_blue_army"
+			
+		}
 	}
 	focus = {
 		id = SIA_weak_constitution
@@ -1802,7 +2761,14 @@ focus_tree = {
 		}
 		x = 33
 		y = 11
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_weak_constitution"
+			
+		}
 	}
 	focus = {
 		id = SIA_deportament_seaman
@@ -1814,7 +2780,14 @@ focus_tree = {
 		}
 		x = 34
 		y = 4
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_deportament_seaman"
+			
+		}
 	}
 	focus = {
 		id = SIA_absolute_morachy
@@ -1826,7 +2799,14 @@ focus_tree = {
 		}
 		x = 35
 		y = 11
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_absolute_morachy"
+			
+		}
 	}
 	focus = {
 		id = SIA_contrrevolution_agents
@@ -1839,7 +2819,14 @@ focus_tree = {
 		}
 		x = 34
 		y = 12
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_contrrevolution_agents"
+			
+		}
 	}
 	focus = {
 		id = SIA_help_royal_company
@@ -1851,7 +2838,14 @@ focus_tree = {
 		}
 		x = 35
 		y = 13
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_help_royal_company"
+			
+		}
 	}
 	focus = {
 		id = SIA_royal_cult
@@ -1863,7 +2857,14 @@ focus_tree = {
 		}
 		x = 35
 		y = 14
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_royal_cult"
+			
+		}
 	}
 	focus = {
 		id = SIA_Rama_VII
@@ -1875,7 +2876,14 @@ focus_tree = {
 		}
 		x = 37
 		y = 11
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_Rama_VII"
+			
+		}
 	}
 	focus = {
 		id = SIA_new_king
@@ -1887,7 +2895,14 @@ focus_tree = {
 		}
 		x = 36
 		y = 12
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_new_king"
+			
+		}
 	}
 	focus = {
 		id = SIA_imperalism
@@ -1902,7 +2917,14 @@ focus_tree = {
 		}
 		x = 37
 		y = 15
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_imperalism"
+			
+		}
 	}
 	focus = {
 		id = SIA_royal_Laos
@@ -1926,7 +2948,14 @@ focus_tree = {
 		}
 		x = 34
 		y = 17
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_royal_Laos"
+			
+		}
 	}
 	focus = {
 		id = SIA_royal_Cambodja
@@ -1938,7 +2967,14 @@ focus_tree = {
 		}
 		x = 35
 		y = 16
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_royal_Cambodja"
+			
+		}
 	}
 	focus = {
 		id = SIA_royal_south
@@ -1950,7 +2986,14 @@ focus_tree = {
 		}
 		x = 37
 		y = 16
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_royal_south"
+			
+		}
 	}
 	focus = {
 		id = SIA_municipalism
@@ -1962,7 +3005,14 @@ focus_tree = {
 		}
 		x = 39
 		y = 11
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_municipalism"
+			
+		}
 	}
 	focus = {
 		id = SIA_help_west
@@ -1977,7 +3027,14 @@ focus_tree = {
 		}
 		x = 38
 		y = 12
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_help_west"
+			
+		}
 	}
 	focus = {
 		id = SIA_migrate_order
@@ -1989,7 +3046,14 @@ focus_tree = {
 		}
 		x = 38
 		y = 13
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_migrate_order"
+			
+		}
 	}
 	focus = {
 		id = SIA_royal_Annam
@@ -2000,7 +3064,14 @@ focus_tree = {
 		}
 		x = 38
 		y = 17
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_royal_Annam"
+			
+		}
 	}
 	focus = {
 		id = SIA_nac_irr_system
@@ -2015,7 +3086,14 @@ focus_tree = {
 		}
 		x = 39
 		y = 14
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_nac_irr_system"
+			
+		}
 	}
 	focus = {
 		id = SIA_royal_Bhurma
@@ -2027,7 +3105,14 @@ focus_tree = {
 		}
 		x = 39
 		y = 16
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_royal_Bhurma"
+			
+		}
 	}
 	focus = {
 		id = SIA_back_dinasty
@@ -2039,7 +3124,14 @@ focus_tree = {
 		}
 		x = 41
 		y = 11
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_back_dinasty"
+			
+		}
 	}
 	focus = {
 		id = SIA_back_princes
@@ -2052,7 +3144,14 @@ focus_tree = {
 		}
 		x = 31
 		y = 12
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_back_princes"
+			
+		}
 	}
 	focus = {
 		id = SIA_Bovorader_reforms
@@ -2064,7 +3163,14 @@ focus_tree = {
 		}
 		x = 33
 		y = 13
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_Bovorader_reforms"
+			
+		}
 	}
 	focus = {
 		id = SIA_18_corps
@@ -2080,7 +3186,14 @@ focus_tree = {
 		}
 		x = 45
 		y = 10
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_18_corps"
+			
+		}
 	}
 	focus = {
 		id = SIA_army_burocraty
@@ -2092,7 +3205,14 @@ focus_tree = {
 		}
 		x = 43
 		y = 11
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_army_burocraty"
+			
+		}
 	}
 	focus = {
 		id = SIA_Uvachon
@@ -2104,7 +3224,14 @@ focus_tree = {
 		}
 		x = 43
 		y = 12
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_Uvachon"
+			
+		}
 	}
 	focus = {
 		id = SIA_Songcram_cult
@@ -2116,7 +3243,14 @@ focus_tree = {
 		}
 		x = 42
 		y = 13
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_Songcram_cult"
+			
+		}
 	}
 	focus = {
 		id = SIA_thai_nac_bank
@@ -2128,7 +3262,14 @@ focus_tree = {
 		}
 		x = 41
 		y = 14
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_thai_nac_bank"
+			
+		}
 	}
 	focus = {
 		id = SIA_ultranac
@@ -2140,7 +3281,14 @@ focus_tree = {
 		}
 		x = 45
 		y = 11
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_ultranac"
+			
+		}
 	}
 	focus = {
 		id = SIA_Japan_friend
@@ -2152,7 +3300,14 @@ focus_tree = {
 		}
 		x = 45
 		y = 12
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_Japan_friend"
+			
+		}
 	}
 	focus = {
 		id = SIA_no_japan
@@ -2167,7 +3322,14 @@ focus_tree = {
 		}
 		x = 44
 		y = 13
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_no_japan"
+			
+		}
 	}
 	focus = {
 		id = SIA_yes_japan
@@ -2182,7 +3344,14 @@ focus_tree = {
 		}
 		x = 46
 		y = 13
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_yes_japan"
+			
+		}
 	}
 	focus = {
 		id = SIA_war_with_indchi
@@ -2195,7 +3364,14 @@ focus_tree = {
 		}
 		x = 45
 		y = 14
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_war_with_indchi"
+			
+		}
 	}
 	focus = {
 		id = SIA_thai_viette
@@ -2208,7 +3384,14 @@ focus_tree = {
 		}
 		x = 43
 		y = 14
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_thai_viette"
+			
+		}
 	}
 	focus = {
 		id = SIA_back_north_malaia
@@ -2221,7 +3404,14 @@ focus_tree = {
 		}
 		x = 44
 		y = 15
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_back_north_malaia"
+			
+		}
 	}
 	focus = {
 		id = SIA_help_bhurma_thai
@@ -2234,7 +3424,14 @@ focus_tree = {
 		}
 		x = 46
 		y = 15
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_help_bhurma_thai"
+			
+		}
 	}
 	focus = {
 		id = SIA_great_thai
@@ -2249,7 +3446,14 @@ focus_tree = {
 		}
 		x = 45
 		y = 16
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_great_thai"
+			
+		}
 	}
 	focus = {
 		id = SIA_back_last_thai
@@ -2261,7 +3465,14 @@ focus_tree = {
 		}
 		x = 45
 		y = 18
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_back_last_thai"
+			
+		}
 	}
 	focus = {
 		id = SIA_budda_city
@@ -2273,7 +3484,14 @@ focus_tree = {
 		}
 		x = 46
 		y = 17
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_budda_city"
+			
+		}
 	}
 	focus = {
 		id = SIA_build_oil_factory
@@ -2285,7 +3503,14 @@ focus_tree = {
 		}
 		x = 47
 		y = 11
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_build_oil_factory"
+			
+		}
 	}
 	focus = {
 		id = SIA_12_culture
@@ -2297,7 +3522,14 @@ focus_tree = {
 		}
 		x = 47
 		y = 12
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_12_culture"
+			
+		}
 	}
 	focus = {
 		id = SIA_destroy_seri_thai
@@ -2312,7 +3544,14 @@ focus_tree = {
 		}
 		x = 47
 		y = 14
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_destroy_seri_thai"
+			
+		}
 	}
 	focus = {
 		id = SIA_woman_army
@@ -2324,7 +3563,14 @@ focus_tree = {
 		}
 		x = 48
 		y = 13
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_woman_army"
+			
+		}
 	}
 	focus = {
 		id = SIA_soc_evolution
@@ -2336,7 +3582,14 @@ focus_tree = {
 		}
 		x = 48
 		y = 15
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_soc_evolution"
+			
+		}
 	}
 	focus = {
 		id = SIA_invest_railroad_gb
@@ -2348,7 +3601,14 @@ focus_tree = {
 		}
 		x = 0
 		y = 4
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_invest_railroad_gb"
+			
+		}
 	}
 	focus = {
 		id = SIA_infra_credit_gb
@@ -2360,7 +3620,14 @@ focus_tree = {
 		}
 		x = 0
 		y = 5
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_infra_credit_gb"
+			
+		}
 	}
 	focus = {
 		id = SIA_avto_factory
@@ -2372,7 +3639,14 @@ focus_tree = {
 		}
 		x = 0
 		y = 7
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_avto_factory"
+			
+		}
 	}
 	focus = {
 		id = SIA_modern_rail
@@ -2384,7 +3658,14 @@ focus_tree = {
 		}
 		x = 2
 		y = 7
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_modern_rail"
+			
+		}
 	}
 	focus = {
 		id = SIA_med_air2
@@ -2399,7 +3680,14 @@ focus_tree = {
 		}
 		x = 11
 		y = 6
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_med_air2"
+			
+		}
 	}
 	focus = {
 		id = SIA_radio_air
@@ -2413,7 +3701,14 @@ focus_tree = {
 		}
 		x = 13
 		y = 5
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_radio_air"
+			
+		}
 	}
 	focus = {
 		id = SIA_military_reform
@@ -2425,7 +3720,14 @@ focus_tree = {
 		}
 		x = 1
 		y = 11
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_military_reform"
+			
+		}
 	}
 	focus = {
 		id = SIA_thai_tank
@@ -2437,7 +3739,14 @@ focus_tree = {
 		}
 		x = 0
 		y = 12
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_thai_tank"
+			
+		}
 	}
 	focus = {
 		id = SIA_new_military_school
@@ -2449,7 +3758,14 @@ focus_tree = {
 		}
 		x = 2
 		y = 12
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_new_military_school"
+			
+		}
 	}
 	focus = {
 		id = SIA_military_prom
@@ -2461,7 +3777,14 @@ focus_tree = {
 		}
 		x = 0
 		y = 13
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_military_prom"
+			
+		}
 	}
 	focus = {
 		id = SIA_changmala
@@ -2473,7 +3796,14 @@ focus_tree = {
 		}
 		x = 2
 		y = 13
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_changmala"
+			
+		}
 	}
 	focus = {
 		id = SIA_proffessional_army
@@ -2485,7 +3815,14 @@ focus_tree = {
 		}
 		x = 1
 		y = 14
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_proffessional_army"
+			
+		}
 	}
 	focus = {
 		id = SIA_indochina_better
@@ -2497,7 +3834,14 @@ focus_tree = {
 		}
 		x = 1
 		y = 17
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_indochina_better"
+			
+		}
 	}
 	focus = {
 		id = SIA_rise_country
@@ -2509,7 +3853,14 @@ focus_tree = {
 		}
 		x = 11
 		y = 11
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_rise_country"
+			
+		}
 	}
 	focus = {
 		id = SIA_ppl_newspaper
@@ -2521,7 +3872,14 @@ focus_tree = {
 		}
 		x = 13
 		y = 11
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_ppl_newspaper"
+			
+		}
 	}
 	focus = {
 		id = SIA_central_profally
@@ -2536,7 +3894,14 @@ focus_tree = {
 		}
 		x = 10
 		y = 12
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_central_profally"
+			
+		}
 	}
 	focus = {
 		id = SIA_fiveyear_plan
@@ -2548,7 +3913,14 @@ focus_tree = {
 		}
 		x = 10
 		y = 13
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_fiveyear_plan"
+			
+		}
 	}
 	focus = {
 		id = SIA_radio_voice
@@ -2560,7 +3932,14 @@ focus_tree = {
 		}
 		x = 12
 		y = 12
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_radio_voice"
+			
+		}
 	}
 	focus = {
 		id = SIA_rev_yaung
@@ -2572,7 +3951,14 @@ focus_tree = {
 		}
 		x = 14
 		y = 12
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_rev_yaung"
+			
+		}
 	}
 	focus = {
 		id = SIA_no_king
@@ -2587,7 +3973,14 @@ focus_tree = {
 		}
 		x = 13
 		y = 13
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_no_king"
+			
+		}
 	}
 	focus = {
 		id = SIA_thai_urbazation
@@ -2599,7 +3992,14 @@ focus_tree = {
 		}
 		x = 16
 		y = 12
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_thai_urbazation"
+			
+		}
 	}
 	focus = {
 		id = SIA_hmong_soldiers
@@ -2611,7 +4011,14 @@ focus_tree = {
 		}
 		x = 16
 		y = 13
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_hmong_soldiers"
+			
+		}
 	}
 	focus = {
 		id = SIA_urban_teh
@@ -2624,7 +4031,14 @@ focus_tree = {
 		}
 		x = 18
 		y = 13
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_urban_teh"
+			
+		}
 	}
 	focus = {
 		id = SIA_west_sssr
@@ -2640,7 +4054,14 @@ focus_tree = {
 		}
 		x = 13
 		y = 14
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_west_sssr"
+			
+		}
 	}
 	focus = {
 		id = SIA_with_comchina
@@ -2655,7 +4076,14 @@ focus_tree = {
 		}
 		x = 8
 		y = 14
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_with_comchina"
+			
+		}
 	}
 	focus = {
 		id = SIA_with_SSSR
@@ -2670,7 +4098,14 @@ focus_tree = {
 		}
 		x = 17
 		y = 14
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_with_SSSR"
+			
+		}
 	}
 	focus = {
 		id = SIA_piece_with_chinese
@@ -2682,7 +4117,14 @@ focus_tree = {
 		}
 		x = 8
 		y = 15
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_piece_with_chinese"
+			
+		}
 	}
 	focus = {
 		id = SIA_chi_exp
@@ -2694,7 +4136,14 @@ focus_tree = {
 		}
 		x = 9
 		y = 16
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_chi_exp"
+			
+		}
 	}
 	focus = {
 		id = SIA_comchi_prom
@@ -2706,7 +4155,14 @@ focus_tree = {
 		}
 		x = 8
 		y = 18
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_comchi_prom"
+			
+		}
 	}
 	focus = {
 		id = SIA_chi_marx
@@ -2718,7 +4174,14 @@ focus_tree = {
 		}
 		x = 9
 		y = 17
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_chi_marx"
+			
+		}
 	}
 	focus = {
 		id = SIA_sssr_laos
@@ -2730,7 +4193,14 @@ focus_tree = {
 		}
 		x = 10
 		y = 15
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_sssr_laos"
+			
+		}
 	}
 	focus = {
 		id = SIA_sssr_cambodja
@@ -2742,7 +4212,14 @@ focus_tree = {
 		}
 		x = 12
 		y = 15
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_sssr_cambodja"
+			
+		}
 	}
 	focus = {
 		id = SIA_sssr_annam
@@ -2755,7 +4232,14 @@ focus_tree = {
 		}
 		x = 11
 		y = 16
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_sssr_annam"
+			
+		}
 	}
 	focus = {
 		id = SIA_sssr_indochina_again
@@ -2767,7 +4251,14 @@ focus_tree = {
 		}
 		x = 11
 		y = 17
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_sssr_indochina_again"
+			
+		}
 	}
 	focus = {
 		id = SIA_sssr_bhurma
@@ -2779,7 +4270,14 @@ focus_tree = {
 		}
 		x = 14
 		y = 15
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_sssr_bhurma"
+			
+		}
 	}
 	focus = {
 		id = SIA_sssr_malaisia
@@ -2791,7 +4289,14 @@ focus_tree = {
 		}
 		x = 13
 		y = 16
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_sssr_malaisia"
+			
+		}
 	}
 	focus = {
 		id = SIA_sssr_research
@@ -2802,7 +4307,14 @@ focus_tree = {
 		}
 		x = 15
 		y = 16
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_sssr_research"
+			
+		}
 	}
 	focus = {
 		id = SIA_sssr_philippins
@@ -2814,7 +4326,14 @@ focus_tree = {
 		}
 		x = 13
 		y = 17
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_sssr_philippins"
+			
+		}
 	}
 	focus = {
 		id = SIA_sssr_indonesia
@@ -2826,7 +4345,14 @@ focus_tree = {
 		}
 		x = 15
 		y = 17
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_sssr_indonesia"
+			
+		}
 	}
 	focus = {
 		id = SIA_central_pom_exp
@@ -2838,7 +4364,14 @@ focus_tree = {
 		}
 		x = 16
 		y = 15
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_central_pom_exp"
+			
+		}
 	}
 	focus = {
 		id = SIA_SSSR_generals
@@ -2850,7 +4383,14 @@ focus_tree = {
 		}
 		x = 18
 		y = 15
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_SSSR_generals"
+			
+		}
 	}
 	focus = {
 		id = SIA_ateism
@@ -2862,7 +4402,14 @@ focus_tree = {
 		}
 		x = 17
 		y = 16
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_ateism"
+			
+		}
 	}
 	focus = {
 		id = SIA_rev_education
@@ -2874,7 +4421,14 @@ focus_tree = {
 		}
 		x = 17
 		y = 17
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_rev_education"
+			
+		}
 	}
 	focus = {
 		id = SIA_united_thai
@@ -2887,7 +4441,14 @@ focus_tree = {
 		}
 		x = 13
 		y = 18
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_united_thai"
+			
+		}
 	}
 	focus = {
 		id = SIA_new_constitution
@@ -2899,7 +4460,14 @@ focus_tree = {
 		}
 		x = 23
 		y = 13
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_new_constitution"
+			
+		}
 	}
 	focus = {
 		id = SIA_create_nac_bank
@@ -2911,7 +4479,14 @@ focus_tree = {
 		}
 		x = 24
 		y = 14
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_create_nac_bank"
+			
+		}
 	}
 	focus = {
 		id = SIA_league_frank_colonies
@@ -2923,7 +4498,14 @@ focus_tree = {
 		}
 		x = 23
 		y = 16
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_league_frank_colonies"
+			
+		}
 	}
 	focus = {
 		id = SIA_league_phillipins
@@ -2935,7 +4517,14 @@ focus_tree = {
 		}
 		x = 19
 		y = 18
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_league_phillipins"
+			
+		}
 	}
 	focus = {
 		id = SIA_league_usa_colonies
@@ -2947,7 +4536,14 @@ focus_tree = {
 		}
 		x = 23
 		y = 18
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_league_usa_colonies"
+			
+		}
 	}
 	focus = {
 		id = SIA_league_indonesia
@@ -2959,7 +4555,14 @@ focus_tree = {
 		}
 		x = 20
 		y = 19
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_league_indonesia"
+			
+		}
 	}
 	focus = {
 		id = SIA_league_niderland_colonies
@@ -2971,7 +4574,14 @@ focus_tree = {
 		}
 		x = 22
 		y = 19
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_league_niderland_colonies"
+			
+		}
 	}
 	focus = {
 		id = SIA_league_one_federation
@@ -2983,7 +4593,14 @@ focus_tree = {
 		}
 		x = 21
 		y = 20
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_league_one_federation"
+			
+		}
 	}
 	focus = {
 		id = SIA_USA_generals
@@ -2995,7 +4612,14 @@ focus_tree = {
 		}
 		x = 25
 		y = 16
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_USA_generals"
+			
+		}
 	}
 	focus = {
 		id = SIA_USA_armory
@@ -3007,7 +4631,14 @@ focus_tree = {
 		}
 		x = 24
 		y = 17
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_USA_armory"
+			
+		}
 	}
 	focus = {
 		id = SIA_USA_research
@@ -3019,7 +4650,14 @@ focus_tree = {
 		}
 		x = 26
 		y = 17
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_USA_research"
+			
+		}
 	}
 	focus = {
 		id = SIA_USA_base_dem
@@ -3031,7 +4669,14 @@ focus_tree = {
 		}
 		x = 25
 		y = 18
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_USA_base_dem"
+			
+		}
 	}
 	focus = {
 		id = SIA_USA_lic
@@ -3046,7 +4691,14 @@ focus_tree = {
 		}
 		x = 27
 		y = 18
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_USA_lic"
+			
+		}
 	}
 	focus = {
 		id = SIA_USA_ekonomik_help
@@ -3058,7 +4710,14 @@ focus_tree = {
 		}
 		x = 26
 		y = 19
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_USA_ekonomik_help"
+			
+		}
 	}
 	focus = {
 		id = SIA_USA_stop_japan
@@ -3071,7 +4730,14 @@ focus_tree = {
 		}
 		x = 24
 		y = 19
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_USA_stop_japan"
+			
+		}
 	}
 	focus = {
 		id = SIA_restore_traditions
@@ -3086,7 +4752,14 @@ focus_tree = {
 		}
 		x = 31
 		y = 14
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_restore_traditions"
+			
+		}
 	}
 	focus = {
 		id = SIA_dem_neutral
@@ -3103,7 +4776,14 @@ focus_tree = {
 		}
 		x = 32
 		y = 15
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_dem_neutral"
+			
+		}
 	}
 	focus = {
 		id = SIA_royal_scouts
@@ -3115,7 +4795,14 @@ focus_tree = {
 		}
 		x = 33
 		y = 14
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_royal_scouts"
+			
+		}
 	}
 	focus = {
 		id = SIA_help_seri_thai
@@ -3130,7 +4817,14 @@ focus_tree = {
 		}
 		x = 49
 		y = 14
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_help_seri_thai"
+			
+		}
 	}
 	focus = {
 		id = SIA_west_modernization
@@ -3142,7 +4836,14 @@ focus_tree = {
 		}
 		x = 42
 		y = 15
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_west_modernization"
+			
+		}
 	}
 	focus = {
 		id = SIA_new_banknots
@@ -3154,7 +4855,14 @@ focus_tree = {
 		}
 		x = 41
 		y = 16
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_new_banknots"
+			
+		}
 	}
 	focus = {
 		id = SIA_new_capital
@@ -3166,6 +4874,13 @@ focus_tree = {
 		}
 		x = 44
 		y = 17
-
+		available ={
+			
+		}
+			
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_new_capital"
+			
+		}
 	}
 }

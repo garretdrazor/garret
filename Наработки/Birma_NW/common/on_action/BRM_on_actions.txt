@@ -1,11 +1,11 @@
 on_actions = {
 	on_startup = {
 		effect = {
-			#Бирма стартпак
 			if = {
 				limit = {
 					has_start_date < 1936.01.02
 				}
+				# Бирма стартпак
 				BRM = {
 					country_event = { id = brm.1 days = 22 }
 					country_event = { id = brm.2 days = 62 }
@@ -24,6 +24,13 @@ on_actions = {
 				}
 				RAJ = {
 					country_event = { id = brm.22 days = 470 }
+				}
+				# Сиам стартпак
+				SIA = {
+					country_event = { id = sia.1 days = 287 }
+					country_event = { id = sia.2 days = 344 }
+					country_event = { id = sia.3 days = 573 }
+					country_event = { id = sia.4 days = 929 }
 				}
 			}
 		}

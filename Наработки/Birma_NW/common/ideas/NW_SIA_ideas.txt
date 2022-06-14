@@ -1,0 +1,110 @@
+ideas = {
+	country = {
+	#НД стартовые и по базовым событиям
+		# Аграрная страна  
+		SIA_idea_agrar = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = BRM_idea_half_birma
+			modifier = {
+				MONTHLY_POPULATION = 0.5
+				conscription = -0.003
+				consumer_goods_factor = 0.05
+				production_speed_buildings_factor = -0.05
+				research_speed_factor = -0.05
+				production_factory_max_efficiency_factor = -0.05
+			}
+		}
+		# Долги короны
+		SIA_idea_crown_credits = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = BRM_idea_half_birma
+			targeted_modifier = {
+				tag = ENG
+				cic_to_target_factor = 0.06
+			}
+			targeted_modifier = {
+				tag = ITA
+				cic_to_target_factor = 0.06
+			}
+			targeted_modifier = {
+				tag = FRA
+				cic_to_target_factor = 0.06
+			}
+			targeted_modifier = {
+				tag = GER
+				cic_to_target_factor = 0.06
+			}
+			targeted_modifier = {
+				tag = USA
+				cic_to_target_factor = 0.06
+			}
+			targeted_modifier = {
+				tag = JAP
+				cic_to_target_factor = 0.06
+			}
+		}
+		# Последствия экономического кризиса 
+		SIA_idea_crisis_ekonom = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = BRM_idea_half_birma
+			modifier = {
+				consumer_goods_factor = 0.1
+				production_factory_max_efficiency_factor = -0.1
+				political_power_gain = -0.2
+				stability_factor = -0.1
+			}
+		}
+		# Китайские ростовщики и рабочие 
+		SIA_idea_chine_workers = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = BRM_idea_half_birma
+			modifier = {
+				consumer_goods_factor = 0.05
+				production_factory_max_efficiency_factor = -0.1
+				political_power_factor = -0.1
+				stability_factor = -0.05
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_min_efficiency_factor = 0.05
+			}
+		}
+		# Rama VIII
+		SIA_idea_rama_viii = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = BRM_idea_half_birma
+			modifier = {
+				stability_factor = -0.05
+				monarchy_drift = -0.01
+			}
+		}
+	}
+}
