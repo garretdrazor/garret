@@ -60,7 +60,7 @@ focus_tree = {
 			add_doctrine_cost_reduction = {
 				cost_reduction = 0.5
 				uses = 1
-				category = navy_doctrine
+				category = naval_doctrine
 			}
 		}
 	}
@@ -141,16 +141,10 @@ focus_tree = {
 		}
 		x = -25
 		y = 1
-		available = {
-			has_country_flag = BRM_elections_end_flag
-			check_variable = { burma_party_green_pop_total > 50 }
-		}
 		relative_position_id = BRM_new_constitution
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_general_association"
-			add_political_power = -250
-			set_country_flag = BRM_parlament_ready_flag
-			custom_modifier_tooltip = BRM_brm_data_FFP_tt
+			
 		}
 	}
 	focus = {
@@ -199,10 +193,16 @@ focus_tree = {
 		}
 		x = 13
 		y = 1
+		available = {
+			has_country_flag = BRM_elections_end_flag
+			check_variable = { burma_party_green_pop_total > 50 }
+		}
 		relative_position_id = BRM_new_constitution
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_form_parlament"
-			
+			add_political_power = -250
+			set_country_flag = BRM_parlament_ready_flag
+			custom_effect_tooltip = BRM_brm_data_FFP_tt
 		}
 	}
 	focus = {
@@ -1501,6 +1501,38 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = BRM_galon_tat
+		text = BRM_galon_tat
+		icon = GFX_z_goal_chinese_soldiers
+		cost = 10
+		prerequisite = {
+			focus = BRM_second_galon
+		}
+		x = -1
+		y = 1
+		relative_position_id = BRM_second_galon
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_galon_tat"
+			
+		}
+	}
+	focus = {
+		id = BRM_newspapper_Sun
+		text = BRM_newspapper_Sun
+		icon = GFX_z_goal_big_news
+		cost = 10
+		prerequisite = {
+			focus = BRM_galon_tat
+		}
+		x = 0
+		y = 2
+		relative_position_id = BRM_galon_tat
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_newspapper_Sun"
+			
+		}
+	}
+	focus = {
 		id = BRM_def_woman
 		text = BRM_def_woman
 		icon = GFX_focus_SOV_women_in_aviation
@@ -1514,22 +1546,6 @@ focus_tree = {
 		relative_position_id = BRM_newspapper_Sun
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_def_woman"
-			
-		}
-	}
-	focus = {
-		id = BRM_galon_tat
-		text = BRM_galon_tat
-		icon = GFX_z_goal_chinese_soldiers
-		cost = 10
-		prerequisite = {
-			focus = BRM_second_galon
-		}
-		x = -1
-		y = 1
-		relative_position_id = BRM_second_galon
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_galon_tat"
 			
 		}
 	}
@@ -1562,22 +1578,6 @@ focus_tree = {
 		relative_position_id = BRM_second_galon
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_support_our_landlords"
-			
-		}
-	}
-	focus = {
-		id = BRM_newspapper_Sun
-		text = BRM_newspapper_Sun
-		icon = GFX_z_goal_big_news
-		cost = 10
-		prerequisite = {
-			focus = BRM_galon_tat
-		}
-		x = 0
-		y = 2
-		relative_position_id = BRM_galon_tat
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_newspapper_Sun"
 			
 		}
 	}
@@ -2941,7 +2941,7 @@ focus_tree = {
 			add_doctrine_cost_reduction = {
 				cost_reduction = 0.5
 				uses = 1
-				category = navy_doctrine
+				category = naval_doctrine
 			}
 		}
 	}
@@ -3004,10 +3004,9 @@ focus_tree = {
 			add_doctrine_cost_reduction = {
 				cost_reduction = 0.5
 				uses = 1
-				category = navy_doctrine
+				category = naval_doctrine
 			}
 			add_ideas = BRM_idea_vmf_train
-			navy_leader_start_level = 1 
 		}
 	}
 	# Собственные верфи

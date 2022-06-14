@@ -98,8 +98,8 @@ country_event = {
 		hidden_effect = {
 			country_event = { id = egy.6 days = 8 }
 		}
-		ai_will_do = {
-			factor = 1
+		ai_chance = {
+			factor = 50
 			modifier = {
 				factor = 100
 				is_historical_focus_on = yes
@@ -113,14 +113,13 @@ country_event = {
 		add_to_variable = { burma_party_blue_pop_total = add_popularity_burma_party_blue_temp }
 		add_popularity_burma_party_blue = yes
 		set_temp_variable = { add_popularity_burma_party_white_temp = -2 }
-		add_temp_variable = { burma_party_white_pop_total = add_popularity_burma_party_white_temp }
+		add_to_variable = { burma_party_white_pop_total = add_popularity_burma_party_white_temp }
 		add_popularity_burma_party_white = yes
 		hidden_effect = {
 			country_event = { id = egy.8 days = 29 }
 		}
-		ai_will_do = {
-			factor = 1
-			
+		ai_chance = {
+			factor = 50
 			modifier = {
 				factor = 0
 				is_historical_focus_on = yes
@@ -144,10 +143,8 @@ country_event = {
 		add_stability = 0.01
 		remove_ideas = BRM_idea_students_riot
 		retire_character = BRM_Hugh_Lansdown_Stephenson
-		recruit_character = BRM_Archibald_Douglas_Cochrane
 		BRM_Archibald_Douglas_Cochrane = {
-			promote_character = yes
-			promote_character = despotism
+			promote_leader = yes
 		}
 		hidden_effect = {
 			country_event = { id = egy.7 days = 20 }
@@ -187,16 +184,14 @@ country_event = {
 		add_political_power = 25
 		remove_ideas = BRM_idea_students_riot
 		retire_character = BRM_Hugh_Lansdown_Stephenson
-		recruit_character = BRM_Archibald_Douglas_Cochrane
 		BRM_Archibald_Douglas_Cochrane = {
-			promote_character = yes
-			promote_character = despotism
+			promote_leader = yes
 		}
 		set_temp_variable = { add_popularity_burma_party_blue_temp = 3 }
 		add_to_variable = { burma_party_blue_pop_total = add_popularity_burma_party_blue_temp }
 		add_popularity_burma_party_blue = yes
 		set_temp_variable = { add_popularity_burma_party_white_temp = -3 }
-		add_temp_variable = { burma_party_white_pop_total = add_popularity_burma_party_white_temp }
+		add_to_variable = { burma_party_white_pop_total = add_popularity_burma_party_white_temp }
 		add_popularity_burma_party_white = yes
 	}
 }
@@ -218,7 +213,7 @@ country_event = {
 		add_to_variable = { burma_party_green_pop_total = add_popularity_burma_party_green_temp }
 		add_popularity_burma_party_green = yes
 		set_temp_variable = { add_popularity_burma_party_white_temp = -10 }
-		add_temp_variable = { burma_party_white_pop_total = add_popularity_burma_party_white_temp }
+		add_to_variable = { burma_party_white_pop_total = add_popularity_burma_party_white_temp }
 		add_popularity_burma_party_white = yes
 	}
 }
@@ -240,7 +235,7 @@ country_event = {
 		add_to_variable = { burma_party_green_pop_total = add_popularity_burma_party_green_temp }
 		add_popularity_burma_party_green = yes
 		set_temp_variable = { add_popularity_burma_party_white_temp = -10 }
-		add_temp_variable = { burma_party_white_pop_total = add_popularity_burma_party_white_temp }
+		add_to_variable = { burma_party_white_pop_total = add_popularity_burma_party_white_temp }
 		add_popularity_burma_party_white = yes
 	}
 }
@@ -262,7 +257,7 @@ country_event = {
 		add_to_variable = { burma_party_red_pop_total = add_popularity_burma_party_red_temp }
 		add_popularity_burma_party_red = yes
 		set_temp_variable = { add_popularity_burma_party_white_temp = -3 }
-		add_temp_variable = { burma_party_white_pop_total = add_popularity_burma_party_white_temp }
+		add_to_variable = { burma_party_white_pop_total = add_popularity_burma_party_white_temp }
 		add_popularity_burma_party_white = yes
 	}
 }
@@ -380,7 +375,7 @@ country_event = {
 		name = brm.16.a
 		add_political_power = 50
 		set_temp_variable = { add_popularity_burma_party_green_temp = -2 }
-		add_temp_variable = { burma_party_green_pop_total = add_popularity_burma_party_green_temp }
+		add_to_variable = { burma_party_green_pop_total = add_popularity_burma_party_green_temp }
 		add_popularity_burma_party_green = yes
 	}
 }
@@ -439,7 +434,7 @@ country_event = {
 	option = {
 		name = brm.19.a
 		set_temp_variable = { add_popularity_burma_party_green_temp = -3 }
-		add_temp_variable = { burma_party_green_pop_total = add_popularity_burma_party_green_temp }
+		add_to_variable = { burma_party_green_pop_total = add_popularity_burma_party_green_temp }
 		add_popularity_burma_party_green = yes
 	}
 }
@@ -457,7 +452,7 @@ country_event = {
 	option = {
 		name = brm.20.a
 		set_temp_variable = { add_popularity_burma_party_green_temp = -3 }
-		add_temp_variable = { burma_party_green_pop_total = add_popularity_burma_party_green_temp }
+		add_to_variable = { burma_party_green_pop_total = add_popularity_burma_party_green_temp }
 		add_popularity_burma_party_green = yes
 	}
 }

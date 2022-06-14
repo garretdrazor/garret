@@ -25,9 +25,9 @@ characters={
 			traits={ 			}
 			expire="1.1.1.1"
 			id=-1
-		}
-		traits={
-			sea_officer
+			traits={
+				sea_officer
+			}
 		}
 	}
 	BRM_Smith_Dun={

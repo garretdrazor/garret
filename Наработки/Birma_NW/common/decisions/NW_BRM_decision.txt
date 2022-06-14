@@ -911,7 +911,7 @@ BRM_mingaladon_categories = {
 		
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision BRM_fighters_research"
-			remove_country_flag = BRM_fighting_res_flag
+			clr_country_flag = BRM_fighting_res_flag
 			add_tech_bonus = {
 				bonus = 1.0
 				uses = 1
@@ -948,7 +948,7 @@ BRM_mingaladon_categories = {
 		
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision BRM_storm_research"
-			remove_country_flag = BRM_fighting_res_flag
+			clr_country_flag = BRM_fighting_res_flag
 			add_tech_bonus = {
 				bonus = 1.0
 				uses = 1
@@ -985,7 +985,7 @@ BRM_mingaladon_categories = {
 		
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision BRM_bomber_research"
-			remove_country_flag = BRM_fighting_res_flag
+			clr_country_flag = BRM_fighting_res_flag
 			add_tech_bonus = {
 				bonus = 1.0
 				uses = 1
@@ -1019,7 +1019,7 @@ BRM_mingaladon_categories = {
 		
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision BRM_doctrine_research"
-			remove_country_flag = BRM_fighting_res_flag
+			clr_country_flag = BRM_fighting_res_flag
 			add_doctrine_cost_reduction = {
 				cost_reduction = 0.5
 				uses = 1

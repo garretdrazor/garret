@@ -426,6 +426,7 @@ ideas = {
 			modifier = {
 				experience_gain_navy = 0.01
 				experience_gain_navy_factor = 0.15
+				navy_leader_start_level = 1 
 			}
 		}
 		# Добровольцы ВМФ

@@ -16,6 +16,7 @@ set_cosmetic_tag = GOG_belgian
 set_convoys = 20
 
 recruit_character = BRM_Hugh_Lansdown_Stephenson
+recruit_character = BRM_Archibald_Douglas_Cochrane
 recruit_character = BRM_Smith_Dun
 
 1936.1.1 = {
