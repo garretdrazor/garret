@@ -1,0 +1,8 @@
+opinion_modifiers = {
+	#SIA
+	SIA_fra_invest = { value = 25 }
+	SIA_trade_invest = { trade = yes value = 25 }
+	SIA_en_us_invest = { value = 25 }
+	SIA_de_no_sw_invest = { value = 25 }
+	SIA_ge_it_invest = { value = 25 }
+}

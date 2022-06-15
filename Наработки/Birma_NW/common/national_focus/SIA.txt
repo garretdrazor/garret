@@ -8,6 +8,7 @@ focus_tree = {
 		}
 	}
 	default = no
+	# Вывод валюты из золотого стандарта
 	focus = {
 		id = SIA_no_gold_valute
 		text = SIA_no_gold_valute
@@ -15,13 +16,15 @@ focus_tree = {
 		cost = 10
 		x = 4
 		y = 0
-		available ={
-			
-		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_no_gold_valute"
-			
+			add_stability = -0.05
+			add_political_power = 300
+			add_days_mission_timeout = {
+				mission = SIA_new_crisis_mission
+				days = 100
+			}
 		}
 	}
 	focus = {
@@ -136,6 +139,7 @@ focus_tree = {
 			
 		}
 	}
+	# Денонсация неравноправных договоров
 	focus = {
 		id = SIA_deanonce_bad_theatry
 		text = SIA_deanonce_bad_theatry
@@ -146,15 +150,20 @@ focus_tree = {
 		}
 		x = 3
 		y = 1
-		available ={
-			
-		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_deanonce_bad_theatry"
-			
+			remove_ideas = SIA_idea_crown_credits
+			add_ideas = SIA_idea_credit_ENG
+			add_ideas = SIA_idea_credit_USA
+			add_ideas = SIA_idea_credit_FRA
+			add_ideas = SIA_idea_credit_ITA
+			add_ideas = SIA_idea_credit_JAP
+			add_ideas = SIA_idea_credit_GER
+			unlock_decision_category_tooltip = SIA_bad_theatry_categories
 		}
 	}
+	# Восстановление таможенной независимости
 	focus = {
 		id = SIA_back_border
 		text = SIA_back_border
@@ -165,15 +174,61 @@ focus_tree = {
 		}
 		x = 5
 		y = 1
-		available ={
-			
-		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_back_border"
-			
+			447 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = { 
+					has_idea = SIA_idea_crisis_ekonom_1
+				}
+				swap_ideas = {
+					remove_idea = SIA_idea_crisis_ekonom_1
+					add_idea = SIA_idea_crisis_ekonom_2
+				}
+			}
+			else_if = {
+				limit = { 
+					has_idea = SIA_idea_crisis_ekonom_2
+				}
+				swap_ideas = {
+					remove_idea = SIA_idea_crisis_ekonom_2
+					add_idea = SIA_idea_crisis_ekonom_3
+				}
+			}
+			else_if = {
+				limit = { 
+					has_idea = SIA_idea_crisis_ekonom_3
+				}
+				swap_ideas = {
+					remove_idea = SIA_idea_crisis_ekonom_3
+					add_idea = SIA_idea_crisis_ekonom_4
+				}
+			}
+			else_if = {
+				limit = { 
+					has_idea = SIA_idea_crisis_ekonom_4
+				}
+				swap_ideas = {
+					remove_idea = SIA_idea_crisis_ekonom_4
+					add_idea = SIA_idea_crisis_ekonom_5
+				}
+			}
+			else_if = {
+				limit = { 
+					has_idea = SIA_idea_crisis_ekonom_5
+				}
+				remove_ideas = SIA_idea_crisis_ekonom_5
+			}
 		}
 	}
+	# Заключить новый договор с Францией
 	focus = {
 		id = SIA_new_theatry_with_france
 		text = SIA_new_theatry_with_france
@@ -186,14 +241,74 @@ focus_tree = {
 		x = 1
 		y = 2
 		available ={
-			
+			FRA = {	has_opinion = { target = SIA value < 20 } }
+			NOT = {
+				has_completed_focus = SIA_nacionalization_anather
+			}
 		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_new_theatry_with_france"
-			
+			random_state = { 
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_days_mission_timeout = {
+				mission = SIA_new_crisis_mission
+				days = 50
+			}
+			add_opinion_modifier = { target = FRA modifier = SIA_fra_invest }
+			FRA = { add_opinion_modifier = { target = SIA modifier = SIA_fra_invest } }
+			FRA = { add_opinion_modifier = { target = SIA modifier = SIA_trade_invest } }
+			if = {
+				limit = { 
+					has_idea = SIA_idea_crisis_ekonom_1
+				}
+				swap_ideas = {
+					remove_idea = SIA_idea_crisis_ekonom_1
+					add_idea = SIA_idea_crisis_ekonom_2
+				}
+			}
+			else_if = {
+				limit = { 
+					has_idea = SIA_idea_crisis_ekonom_2
+				}
+				swap_ideas = {
+					remove_idea = SIA_idea_crisis_ekonom_2
+					add_idea = SIA_idea_crisis_ekonom_3
+				}
+			}
+			else_if = {
+				limit = { 
+					has_idea = SIA_idea_crisis_ekonom_3
+				}
+				swap_ideas = {
+					remove_idea = SIA_idea_crisis_ekonom_3
+					add_idea = SIA_idea_crisis_ekonom_4
+				}
+			}
+			else_if = {
+				limit = { 
+					has_idea = SIA_idea_crisis_ekonom_4
+				}
+				swap_ideas = {
+					remove_idea = SIA_idea_crisis_ekonom_4
+					add_idea = SIA_idea_crisis_ekonom_5
+				}
+			}
+			else_if = {
+				limit = { 
+					has_idea = SIA_idea_crisis_ekonom_5
+				}
+				remove_ideas = SIA_idea_crisis_ekonom_5
+			}
 		}
 	}
+	# Инвестиции из Великобритании и США
 	focus = {
 		id = SIA_usa_invest
 		text = SIA_usa_invest
@@ -206,14 +321,86 @@ focus_tree = {
 		x = 3
 		y = 2
 		available ={
-			
+			USA = {	has_opinion = { target = SIA value < 20 } }
+			ENG = {	has_opinion = { target = SIA value < 20 } }
+			NOT = {
+				has_completed_focus = SIA_nacionalization_anather
+			}
 		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_usa_invest"
-			
+			random_state = { 
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_state = { 
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_days_mission_timeout = {
+				mission = SIA_new_crisis_mission
+				days = 100
+			}
+			add_opinion_modifier = { target = USA modifier = SIA_en_us_invest }
+			add_opinion_modifier = { target = ENG modifier = SIA_en_us_invest }
+			USA = { add_opinion_modifier = { target = SIA modifier = SIA_en_us_invest } }
+			ENG = { add_opinion_modifier = { target = SIA modifier = SIA_en_us_invest } }
+			USA = { add_opinion_modifier = { target = SIA modifier = SIA_trade_invest } }
+			ENG = { add_opinion_modifier = { target = SIA modifier = SIA_trade_invest } }
+			if = {
+				limit = { 
+					has_idea = SIA_idea_crisis_ekonom_1
+				}
+				swap_ideas = {
+					remove_idea = SIA_idea_crisis_ekonom_1
+					add_idea = SIA_idea_crisis_ekonom_2
+				}
+			}
+			else_if = {
+				limit = { 
+					has_idea = SIA_idea_crisis_ekonom_2
+				}
+				swap_ideas = {
+					remove_idea = SIA_idea_crisis_ekonom_2
+					add_idea = SIA_idea_crisis_ekonom_3
+				}
+			}
+			else_if = {
+				limit = { 
+					has_idea = SIA_idea_crisis_ekonom_3
+				}
+				swap_ideas = {
+					remove_idea = SIA_idea_crisis_ekonom_3
+					add_idea = SIA_idea_crisis_ekonom_4
+				}
+			}
+			else_if = {
+				limit = { 
+					has_idea = SIA_idea_crisis_ekonom_4
+				}
+				swap_ideas = {
+					remove_idea = SIA_idea_crisis_ekonom_4
+					add_idea = SIA_idea_crisis_ekonom_5
+				}
+			}
+			else_if = {
+				limit = { 
+					has_idea = SIA_idea_crisis_ekonom_5
+				}
+				remove_ideas = SIA_idea_crisis_ekonom_5
+			}
 		}
 	}
+	# Привлечь вложения Скандинавских стран
 	focus = {
 		id = SIA_scan_invest
 		text = SIA_scan_invest
@@ -226,14 +413,82 @@ focus_tree = {
 		x = 5
 		y = 2
 		available ={
-			
+			DEN = {	has_opinion = { target = SIA value < 20 } }
+			NOR = {	has_opinion = { target = SIA value < 20 } }
+			SWE = {	has_opinion = { target = SIA value < 20 } }
+			NOT = {
+				has_completed_focus = SIA_nacionalization_anather
+			}
 		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_scan_invest"
-			
+			random_state = { 
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_days_mission_timeout = {
+				mission = SIA_new_crisis_mission
+				days = 100
+			}
+			add_opinion_modifier = { target = DEN modifier = SIA_de_no_sw_invest }
+			add_opinion_modifier = { target = NOR modifier = SIA_de_no_sw_invest }
+			add_opinion_modifier = { target = SWE modifier = SIA_de_no_sw_invest }
+			DEN = { add_opinion_modifier = { target = SIA modifier = SIA_de_no_sw_invest } }
+			NOR = { add_opinion_modifier = { target = SIA modifier = SIA_de_no_sw_invest } }
+			SWE = { add_opinion_modifier = { target = SIA modifier = SIA_de_no_sw_invest } }
+			DEN = { add_opinion_modifier = { target = SIA modifier = SIA_trade_invest } }
+			NOR = { add_opinion_modifier = { target = SIA modifier = SIA_trade_invest } }
+			SWE = { add_opinion_modifier = { target = SIA modifier = SIA_trade_invest } }
+			if = {
+				limit = { 
+					has_idea = SIA_idea_crisis_ekonom_1
+				}
+				swap_ideas = {
+					remove_idea = SIA_idea_crisis_ekonom_1
+					add_idea = SIA_idea_crisis_ekonom_2
+				}
+			}
+			else_if = {
+				limit = { 
+					has_idea = SIA_idea_crisis_ekonom_2
+				}
+				swap_ideas = {
+					remove_idea = SIA_idea_crisis_ekonom_2
+					add_idea = SIA_idea_crisis_ekonom_3
+				}
+			}
+			else_if = {
+				limit = { 
+					has_idea = SIA_idea_crisis_ekonom_3
+				}
+				swap_ideas = {
+					remove_idea = SIA_idea_crisis_ekonom_3
+					add_idea = SIA_idea_crisis_ekonom_4
+				}
+			}
+			else_if = {
+				limit = { 
+					has_idea = SIA_idea_crisis_ekonom_4
+				}
+				swap_ideas = {
+					remove_idea = SIA_idea_crisis_ekonom_4
+					add_idea = SIA_idea_crisis_ekonom_5
+				}
+			}
+			else_if = {
+				limit = { 
+					has_idea = SIA_idea_crisis_ekonom_5
+				}
+				remove_ideas = SIA_idea_crisis_ekonom_5
+			}
 		}
 	}
+	# Итальянские и Германские концессии
 	focus = {
 		id = SIA_right_invest
 		text = SIA_right_invest
@@ -246,12 +501,75 @@ focus_tree = {
 		x = 7
 		y = 2
 		available ={
-			
+			ITA = {	has_opinion = { target = SIA value < 20 } }
+			GER = {	has_opinion = { target = SIA value < 20 } }
+			NOT = {
+				has_completed_focus = SIA_nacionalization_anather
+			}
 		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_right_invest"
-			
+			random_state = { 
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_days_mission_timeout = {
+				mission = SIA_new_crisis_mission
+				days = 100
+			}
+			add_opinion_modifier = { target = ITA modifier = SIA_ge_it_invest }
+			add_opinion_modifier = { target = GER modifier = SIA_ge_it_invest }
+			ITA = { add_opinion_modifier = { target = SIA modifier = SIA_ge_it_invest } }
+			GER = { add_opinion_modifier = { target = SIA modifier = SIA_ge_it_invest } }
+			ITA = { add_opinion_modifier = { target = SIA modifier = SIA_trade_invest } }
+			GER = { add_opinion_modifier = { target = SIA modifier = SIA_trade_invest } }
+			if = {
+				limit = { 
+					has_idea = SIA_idea_crisis_ekonom_1
+				}
+				swap_ideas = {
+					remove_idea = SIA_idea_crisis_ekonom_1
+					add_idea = SIA_idea_crisis_ekonom_2
+				}
+			}
+			else_if = {
+				limit = { 
+					has_idea = SIA_idea_crisis_ekonom_2
+				}
+				swap_ideas = {
+					remove_idea = SIA_idea_crisis_ekonom_2
+					add_idea = SIA_idea_crisis_ekonom_3
+				}
+			}
+			else_if = {
+				limit = { 
+					has_idea = SIA_idea_crisis_ekonom_3
+				}
+				swap_ideas = {
+					remove_idea = SIA_idea_crisis_ekonom_3
+					add_idea = SIA_idea_crisis_ekonom_4
+				}
+			}
+			else_if = {
+				limit = { 
+					has_idea = SIA_idea_crisis_ekonom_4
+				}
+				swap_ideas = {
+					remove_idea = SIA_idea_crisis_ekonom_4
+					add_idea = SIA_idea_crisis_ekonom_5
+				}
+			}
+			else_if = {
+				limit = { 
+					has_idea = SIA_idea_crisis_ekonom_5
+				}
+				remove_ideas = SIA_idea_crisis_ekonom_5
+			}
 		}
 	}
 	focus = {
@@ -279,6 +597,7 @@ focus_tree = {
 			
 		}
 	}
+	# Постройка сахарного завода
 	focus = {
 		id = SIA_sugar_factory
 		text = SIA_sugar_factory
@@ -290,13 +609,29 @@ focus_tree = {
 		}
 		x = 0
 		y = 3
-		available ={
-			
-		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_sugar_factory"
-			
+			random_state = { 
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_state = { 
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_days_mission_timeout = {
+				mission = SIA_new_crisis_mission
+				days = 50
+			}
 		}
 	}
 	focus = {
@@ -883,6 +1218,7 @@ focus_tree = {
 			
 		}
 	}
+	# Постройка пивоваренного завода
 	focus = {
 		id = SIA_beer_factory
 		text = SIA_beer_factory
@@ -894,13 +1230,21 @@ focus_tree = {
 		}
 		x = 8
 		y = 3
-		available ={
-			
-		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_beer_factory"
-			
+			random_state = { 
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_days_mission_timeout = {
+				mission = SIA_new_crisis_mission
+				days = 100
+			}
 		}
 	}
 	focus = {

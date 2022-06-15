@@ -70,3 +70,918 @@ country_event = {
 		add_political_power = 15
 	}
 }
+
+ # Проблемы бюджета
+country_event = {
+	id = sia.5
+	title = sia.5.t
+	desc = sia.5.d
+	picture = GFX_report_event_sia_5
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event sia.5" }
+
+	option = {
+		name = sia.5.a
+		unlock_decision_category_tooltip = SIA_elections_categories
+		add_timed_idea = {
+			idea = SIA_idea_crisis
+			days = 356
+		}
+	}
+}
+
+ # Визит представителя Сиама
+country_event = {
+	id = sia.6
+	title = sia.6.t
+	desc = sia.6.d
+	picture = GFX_report_event_sia_6
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event sia.6" }
+
+	option = {
+		name = sia.6.a
+		trigger = {
+			original_tag = ITA
+		}
+		ai_chance = {
+			modifier = {
+				has_opinion = { target = SIA value < 20 }
+				factor = 0
+			}
+			modifier = {
+				has_opinion = { target = SIA value < 60 }
+				has_opinion = { target = SIA value > 20 }
+				factor = 45
+			}
+			modifier = {
+				has_opinion = { target = SIA value > 60 }
+				factor = 60
+			}
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		SIA = { country_event = { id = sia.7 } }
+	}
+	option = {
+		name = sia.6.b
+		trigger = {
+			original_tag = ITA
+		}
+		ai_chance = {
+			factor = 34
+			modifier = {
+				has_opinion = { target = SIA value < 20 }
+				factor = 10
+			}
+			modifier = {
+				has_opinion = { target = SIA value < 60 }
+				has_opinion = { target = SIA value > 20 }
+				factor = 25
+			}
+			modifier = {
+				has_opinion = { target = SIA value > 60 }
+				factor = 30
+			}
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		SIA = { country_event = { id = sia.8 } }
+	}
+	option = {
+		name = sia.6.c
+		trigger = {
+			original_tag = ITA
+		}
+		ai_chance = {
+			modifier = {
+				has_opinion = { target = SIA value < 20 }
+				factor = 90
+			}
+			modifier = {
+				has_opinion = { target = SIA value < 60 }
+				has_opinion = { target = SIA value > 20 }
+				factor = 30
+			}
+			modifier = {
+				has_opinion = { target = SIA value > 60 }
+				factor = 10
+			}
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		SIA = { country_event = { id = sia.9 } }
+	}
+	option = {
+		name = sia.6.e
+		trigger = {
+			original_tag = GER
+		}
+		ai_chance = {
+			modifier = {
+				has_opinion = { target = SIA value < 20 }
+				factor = 0
+			}
+			modifier = {
+				has_opinion = { target = SIA value < 60 }
+				has_opinion = { target = SIA value > 20 }
+				factor = 45
+			}
+			modifier = {
+				has_opinion = { target = SIA value > 60 }
+				factor = 60
+			}
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		SIA = { country_event = { id = sia.7 } }
+	}
+	option = {
+		name = sia.6.f
+		trigger = {
+			original_tag = GER
+		}
+		ai_chance = {
+			factor = 34
+			modifier = {
+				has_opinion = { target = SIA value < 20 }
+				factor = 10
+			}
+			modifier = {
+				has_opinion = { target = SIA value < 60 }
+				has_opinion = { target = SIA value > 20 }
+				factor = 25
+			}
+			modifier = {
+				has_opinion = { target = SIA value > 60 }
+				factor = 30
+			}
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		SIA = { country_event = { id = sia.8 } }
+	}
+	option = {
+		name = sia.6.g
+		trigger = {
+			original_tag = GER
+		}
+		ai_chance = {
+			modifier = {
+				has_opinion = { target = SIA value < 20 }
+				factor = 90
+			}
+			modifier = {
+				has_opinion = { target = SIA value < 60 }
+				has_opinion = { target = SIA value > 20 }
+				factor = 30
+			}
+			modifier = {
+				has_opinion = { target = SIA value > 60 }
+				factor = 10
+			}
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		SIA = { country_event = { id = sia.9 } }
+	}
+	option = {
+		name = sia.6.h
+		trigger = {
+			original_tag = JAP
+		}
+		ai_chance = {
+			modifier = {
+				has_opinion = { target = SIA value < 20 }
+				factor = 0
+			}
+			modifier = {
+				has_opinion = { target = SIA value < 60 }
+				has_opinion = { target = SIA value > 20 }
+				factor = 45
+			}
+			modifier = {
+				has_opinion = { target = SIA value > 60 }
+				factor = 60
+			}
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		SIA = { country_event = { id = sia.7 } }
+	}
+	option = {
+		name = sia.6.i
+		trigger = {
+			original_tag = JAP
+		}
+		ai_chance = {
+			factor = 34
+			modifier = {
+				has_opinion = { target = SIA value < 20 }
+				factor = 10
+			}
+			modifier = {
+				has_opinion = { target = SIA value < 60 }
+				has_opinion = { target = SIA value > 20 }
+				factor = 25
+			}
+			modifier = {
+				has_opinion = { target = SIA value > 60 }
+				factor = 30
+			}
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		SIA = { country_event = { id = sia.8 } }
+	}
+	option = {
+		name = sia.6.j
+		trigger = {
+			original_tag = JAP
+		}
+		ai_chance = {
+			modifier = {
+				has_opinion = { target = SIA value < 20 }
+				factor = 90
+			}
+			modifier = {
+				has_opinion = { target = SIA value < 60 }
+				has_opinion = { target = SIA value > 20 }
+				factor = 30
+			}
+			modifier = {
+				has_opinion = { target = SIA value > 60 }
+				factor = 10
+			}
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		SIA = { country_event = { id = sia.9 } }
+	}
+	option = {
+		name = sia.6.k
+		trigger = {
+			original_tag = FRA
+		}
+		ai_chance = {
+			modifier = {
+				has_opinion = { target = SIA value < 20 }
+				factor = 0
+			}
+			modifier = {
+				has_opinion = { target = SIA value < 60 }
+				has_opinion = { target = SIA value > 20 }
+				factor = 45
+			}
+			modifier = {
+				has_opinion = { target = SIA value > 60 }
+				factor = 60
+			}
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		SIA = { country_event = { id = sia.7 } }
+	}
+	option = {
+		name = sia.6.l
+		trigger = {
+			original_tag = FRA
+		}
+		ai_chance = {
+			factor = 34
+			modifier = {
+				has_opinion = { target = SIA value < 20 }
+				factor = 10
+			}
+			modifier = {
+				has_opinion = { target = SIA value < 60 }
+				has_opinion = { target = SIA value > 20 }
+				factor = 25
+			}
+			modifier = {
+				has_opinion = { target = SIA value > 60 }
+				factor = 30
+			}
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		SIA = { country_event = { id = sia.8 } }
+	}
+	option = {
+		name = sia.6.m
+		trigger = {
+			original_tag = FRA
+		}
+		ai_chance = {
+			modifier = {
+				has_opinion = { target = SIA value < 20 }
+				factor = 90
+			}
+			modifier = {
+				has_opinion = { target = SIA value < 60 }
+				has_opinion = { target = SIA value > 20 }
+				factor = 30
+			}
+			modifier = {
+				has_opinion = { target = SIA value > 60 }
+				factor = 10
+			}
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		SIA = { country_event = { id = sia.9 } }
+	}
+	option = {
+		name = sia.6.n
+		trigger = {
+			original_tag = ENG
+		}
+		ai_chance = {
+			modifier = {
+				has_opinion = { target = SIA value < 20 }
+				factor = 0
+			}
+			modifier = {
+				has_opinion = { target = SIA value < 60 }
+				has_opinion = { target = SIA value > 20 }
+				factor = 45
+			}
+			modifier = {
+				has_opinion = { target = SIA value > 60 }
+				factor = 60
+			}
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		SIA = { country_event = { id = sia.7 } }
+	}
+	option = {
+		name = sia.6.o
+		trigger = {
+			original_tag = ENG
+		}
+		ai_chance = {
+			factor = 34
+			modifier = {
+				has_opinion = { target = SIA value < 20 }
+				factor = 10
+			}
+			modifier = {
+				has_opinion = { target = SIA value < 60 }
+				has_opinion = { target = SIA value > 20 }
+				factor = 25
+			}
+			modifier = {
+				has_opinion = { target = SIA value > 60 }
+				factor = 30
+			}
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		SIA = { country_event = { id = sia.8 } }
+	}
+	option = {
+		name = sia.6.p
+		trigger = {
+			original_tag = ENG
+		}
+		ai_chance = {
+			modifier = {
+				has_opinion = { target = SIA value < 20 }
+				factor = 90
+			}
+			modifier = {
+				has_opinion = { target = SIA value < 60 }
+				has_opinion = { target = SIA value > 20 }
+				factor = 30
+			}
+			modifier = {
+				has_opinion = { target = SIA value > 60 }
+				factor = 10
+			}
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		SIA = { country_event = { id = sia.9 } }
+	}
+	option = {
+		name = sia.6.q
+		trigger = {
+			original_tag = USA
+		}
+		ai_chance = {
+			modifier = {
+				has_opinion = { target = SIA value < 20 }
+				factor = 0
+			}
+			modifier = {
+				has_opinion = { target = SIA value < 60 }
+				has_opinion = { target = SIA value > 20 }
+				factor = 45
+			}
+			modifier = {
+				has_opinion = { target = SIA value > 60 }
+				factor = 60
+			}
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		SIA = { country_event = { id = sia.7 } }
+	}
+	option = {
+		name = sia.6.r
+		trigger = {
+			original_tag = USA
+		}
+		ai_chance = {
+			factor = 34
+			modifier = {
+				has_opinion = { target = SIA value < 20 }
+				factor = 10
+			}
+			modifier = {
+				has_opinion = { target = SIA value < 60 }
+				has_opinion = { target = SIA value > 20 }
+				factor = 25
+			}
+			modifier = {
+				has_opinion = { target = SIA value > 60 }
+				factor = 30
+			}
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		SIA = { country_event = { id = sia.8 } }
+	}
+	option = {
+		name = sia.6.s
+		trigger = {
+			original_tag = USA
+		}
+		ai_chance = {
+			modifier = {
+				has_opinion = { target = SIA value < 20 }
+				factor = 90
+			}
+			modifier = {
+				has_opinion = { target = SIA value < 60 }
+				has_opinion = { target = SIA value > 20 }
+				factor = 30
+			}
+			modifier = {
+				has_opinion = { target = SIA value > 60 }
+				factor = 10
+			}
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		SIA = { country_event = { id = sia.9 } }
+	}
+}
+ # Правительство ИМЯ_СТРАНЫ уменьшило процентную ставку на треть
+country_event = {
+	id = sia.7
+	title = sia.7.t
+	desc = sia.7.d
+	picture = GFX_report_event_sia_7
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event sia.7" }
+
+	option = {
+		name = sia.7.a
+		trigger = {
+			FROM = { original_tag = ITA }
+		}
+		add_days_mission_timeout = {
+			mission = SIA_new_crisis_mission
+			days = 40
+		}
+		if = {
+			limit = { 
+				has_idea = SIA_idea_credit_ITA
+			}
+			swap_ideas = {
+				remove_idea = SIA_idea_credit_ITA
+				add_idea = SIA_idea_credit_ITA_2
+			}
+		}
+		else_if = {
+			limit = { 
+				has_idea = SIA_idea_credit_ITA_2
+			}
+			swap_ideas = {
+				remove_idea = SIA_idea_credit_ITA_2
+				add_idea = SIA_idea_credit_ITA_3
+			}
+		}
+		else_if = {
+			limit = { 
+				has_idea = SIA_idea_credit_ITA_3
+			}
+			remove_ideas = SIA_idea_credit_ITA_3
+		}
+	}
+	option = {
+		name = sia.7.a
+		trigger = {
+			FROM = { original_tag = GER }
+		}
+		add_days_mission_timeout = {
+			mission = SIA_new_crisis_mission
+			days = 40
+		}
+		if = {
+			limit = { 
+				has_idea = SIA_idea_credit_GER
+			}
+			swap_ideas = {
+				remove_idea = SIA_idea_credit_GER
+				add_idea = SIA_idea_credit_GER_2
+			}
+		}
+		else_if = {
+			limit = { 
+				has_idea = SIA_idea_credit_GER_2
+			}
+			swap_ideas = {
+				remove_idea = SIA_idea_credit_GER_2
+				add_idea = SIA_idea_credit_GER_3
+			}
+		}
+		else_if = {
+			limit = { 
+				has_idea = SIA_idea_credit_GER_3
+			}
+			remove_ideas = SIA_idea_credit_GER_3
+		}
+	}
+	option = {
+		name = sia.7.a
+		trigger = {
+			FROM = { original_tag = JAP }
+		}
+		add_days_mission_timeout = {
+			mission = SIA_new_crisis_mission
+			days = 40
+		}
+		if = {
+			limit = { 
+				has_idea = SIA_idea_credit_JAP
+			}
+			swap_ideas = {
+				remove_idea = SIA_idea_credit_JAP
+				add_idea = SIA_idea_credit_JAP_2
+			}
+		}
+		else_if = {
+			limit = { 
+				has_idea = SIA_idea_credit_JAP_2
+			}
+			swap_ideas = {
+				remove_idea = SIA_idea_credit_JAP_2
+				add_idea = SIA_idea_credit_JAP_3
+			}
+		}
+		else_if = {
+			limit = { 
+				has_idea = SIA_idea_credit_JAP_3
+			}
+			remove_ideas = SIA_idea_credit_JAP_3
+		}
+	}
+	option = {
+		name = sia.7.a
+		trigger = {
+			FROM = { original_tag = FRA }
+		}
+		add_days_mission_timeout = {
+			mission = SIA_new_crisis_mission
+			days = 40
+		}
+		if = {
+			limit = { 
+				has_idea = SIA_idea_credit_FRA
+			}
+			swap_ideas = {
+				remove_idea = SIA_idea_credit_FRA
+				add_idea = SIA_idea_credit_FRA_2
+			}
+		}
+		else_if = {
+			limit = { 
+				has_idea = SIA_idea_credit_FRA_2
+			}
+			swap_ideas = {
+				remove_idea = SIA_idea_credit_FRA_2
+				add_idea = SIA_idea_credit_FRA_3
+			}
+		}
+		else_if = {
+			limit = { 
+				has_idea = SIA_idea_credit_FRA_3
+			}
+			remove_ideas = SIA_idea_credit_FRA_3
+		}
+	}
+	option = {
+		name = sia.7.a
+		trigger = {
+			FROM = { original_tag = ENG }
+		}
+		add_days_mission_timeout = {
+			mission = SIA_new_crisis_mission
+			days = 40
+		}
+		if = {
+			limit = { 
+				has_idea = SIA_idea_credit_ENG
+			}
+			swap_ideas = {
+				remove_idea = SIA_idea_credit_ENG
+				add_idea = SIA_idea_credit_ENG_2
+			}
+		}
+		else_if = {
+			limit = { 
+				has_idea = SIA_idea_credit_ENG_2
+			}
+			swap_ideas = {
+				remove_idea = SIA_idea_credit_ENG_2
+				add_idea = SIA_idea_credit_ENG_3
+			}
+		}
+		else_if = {
+			limit = { 
+				has_idea = SIA_idea_credit_ENG_3
+			}
+			remove_ideas = SIA_idea_credit_ENG_3
+		}
+	}
+	option = {
+		name = sia.7.a
+		trigger = {
+			FROM = { original_tag = USA }
+		}
+		add_days_mission_timeout = {
+			mission = SIA_new_crisis_mission
+			days = 40
+		}
+		if = {
+			limit = { 
+				has_idea = SIA_idea_credit_USA
+			}
+			swap_ideas = {
+				remove_idea = SIA_idea_credit_USA
+				add_idea = SIA_idea_credit_USA_2
+			}
+		}
+		else_if = {
+			limit = { 
+				has_idea = SIA_idea_credit_USA_2
+			}
+			swap_ideas = {
+				remove_idea = SIA_idea_credit_USA_2
+				add_idea = SIA_idea_credit_USA_3
+			}
+		}
+		else_if = {
+			limit = { 
+				has_idea = SIA_idea_credit_USA_3
+			}
+			remove_ideas = SIA_idea_credit_USA_3
+		}
+	}
+}
+# Правительство ИМЯ_СТРАНЫ отменило процентную ставку
+country_event = {
+	id = sia.8
+	title = sia.8.t
+	desc = sia.8.d
+	picture = GFX_report_event_sia_8
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event sia.8" }
+
+	option = {
+		name = sia.8.a
+		trigger = {
+			FROM = { original_tag = ITA }
+		}
+		add_days_mission_timeout = {
+			mission = SIA_new_crisis_mission
+			days = 100
+		}
+		if = {
+			limit = { 
+				has_idea = SIA_idea_credit_ITA
+			}
+			remove_ideas = SIA_idea_credit_ITA
+		}
+		else_if = {
+			limit = { 
+				has_idea = SIA_idea_credit_ITA_2
+			}
+			remove_ideas = SIA_idea_credit_ITA_2
+		}
+		else_if = {
+			limit = { 
+				has_idea = SIA_idea_credit_ITA_3
+			}
+			remove_ideas = SIA_idea_credit_ITA_3
+		}
+	}
+	option = {
+		name = sia.8.a
+		trigger = {
+			FROM = { original_tag = GER }
+		}
+		add_days_mission_timeout = {
+			mission = SIA_new_crisis_mission
+			days = 100
+		}
+		if = {
+			limit = { 
+				has_idea = SIA_idea_credit_GER
+			}
+			remove_ideas = SIA_idea_credit_GER
+		}
+		else_if = {
+			limit = { 
+				has_idea = SIA_idea_credit_GER_2
+			}
+			remove_ideas = SIA_idea_credit_GER_2
+		}
+		else_if = {
+			limit = { 
+				has_idea = SIA_idea_credit_GER_3
+			}
+			remove_ideas = SIA_idea_credit_GER_3
+		}
+	}
+	option = {
+		name = sia.8.a
+		trigger = {
+			FROM = { original_tag = JAP }
+		}
+		add_days_mission_timeout = {
+			mission = SIA_new_crisis_mission
+			days = 100
+		}
+		if = {
+			limit = { 
+				has_idea = SIA_idea_credit_JAP
+			}
+			remove_ideas = SIA_idea_credit_JAP
+		}
+		else_if = {
+			limit = { 
+				has_idea = SIA_idea_credit_JAP_2
+			}
+			remove_ideas = SIA_idea_credit_JAP_2
+		}
+		else_if = {
+			limit = { 
+				has_idea = SIA_idea_credit_JAP_3
+			}
+			remove_ideas = SIA_idea_credit_JAP_3
+		}
+	}
+	option = {
+		name = sia.8.a
+		trigger = {
+			FROM = { original_tag = FRA }
+		}
+		add_days_mission_timeout = {
+			mission = SIA_new_crisis_mission
+			days = 100
+		}
+		if = {
+			limit = { 
+				has_idea = SIA_idea_credit_FRA
+			}
+			remove_ideas = SIA_idea_credit_FRA
+		}
+		else_if = {
+			limit = { 
+				has_idea = SIA_idea_credit_FRA_2
+			}
+			remove_ideas = SIA_idea_credit_FRA_2
+		}
+		else_if = {
+			limit = { 
+				has_idea = SIA_idea_credit_FRA_3
+			}
+			remove_ideas = SIA_idea_credit_FRA_3
+		}
+	}
+	option = {
+		name = sia.8.a
+		trigger = {
+			FROM = { original_tag = ENG }
+		}
+		add_days_mission_timeout = {
+			mission = SIA_new_crisis_mission
+			days = 100
+		}
+		if = {
+			limit = { 
+				has_idea = SIA_idea_credit_ENG
+			}
+			remove_ideas = SIA_idea_credit_ENG
+		}
+		else_if = {
+			limit = { 
+				has_idea = SIA_idea_credit_ENG_2
+			}
+			remove_ideas = SIA_idea_credit_ENG_2
+		}
+		else_if = {
+			limit = { 
+				has_idea = SIA_idea_credit_ENG_3
+			}
+			remove_ideas = SIA_idea_credit_ENG_3
+		}
+	}
+	option = {
+		name = sia.8.a
+		trigger = {
+			FROM = { original_tag = USA }
+		}
+		add_days_mission_timeout = {
+			mission = SIA_new_crisis_mission
+			days = 100
+		}
+		if = {
+			limit = { 
+				has_idea = SIA_idea_credit_USA
+			}
+			remove_ideas = SIA_idea_credit_USA
+		}
+		else_if = {
+			limit = { 
+				has_idea = SIA_idea_credit_USA_2
+			}
+			remove_ideas = SIA_idea_credit_USA_2
+		}
+		else_if = {
+			limit = { 
+				has_idea = SIA_idea_credit_USA_3
+			}
+			remove_ideas = SIA_idea_credit_USA_3
+		}
+	}
+}
+# Правительство ИМЯ_СТРАНЫ отказало в уменьшении процентной ставки
+country_event = {
+	id = sia.9
+	title = sia.9.t
+	desc = sia.9.d
+	picture = GFX_report_event_sia_9
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event sia.9" }
+
+	option = {
+		name = sia.9.a
+		
+	}
+}

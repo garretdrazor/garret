@@ -1,0 +1,294 @@
+SIA_bad_theatry_categories = {
+	SIA_ita_visit = {
+		allowed = {
+			tag = SIA
+		}
+		available = {
+			OR = {
+				has_idea = SIA_idea_credit_ITA
+				has_idea = SIA_idea_credit_ITA_2
+				has_idea = SIA_idea_credit_ITA_3
+			}
+		}
+		icon = eng_blackshirt_speech
+
+		cost = 50
+		days_remove = 14
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision SIA_ita_visit"
+			hidden_effect = {
+				set_country_flag = SIA_ita_one_flag
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision SIA_ita_visit"
+			country_event = { id = sia.6 }
+		}
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 100
+				has_political_power > 50
+			}
+			
+			modifier = {
+				factor = 0
+				has_political_power < 50
+			}
+			
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+				has_country_flag = SIA_ita_one_flag
+			}
+		}
+	}
+	SIA_ger_visit = {
+		allowed = {
+			tag = SIA
+		}
+		available = {
+			OR = {
+				has_idea = SIA_idea_credit_GER
+				has_idea = SIA_idea_credit_GER_2
+				has_idea = SIA_idea_credit_GER_3
+			}
+		}
+		icon = eng_blackshirt_speech
+
+		cost = 50
+		days_remove = 14
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision SIA_ger_visit"
+			hidden_effect = {
+				set_country_flag = SIA_ger_one_flag
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision SIA_ger_visit"
+			country_event = { id = sia.6 }
+		}
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 100
+				has_political_power > 50
+			}
+			
+			modifier = {
+				factor = 0
+				has_political_power < 50
+			}
+			
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+				has_country_flag = SIA_ger_one_flag
+			}
+		}
+	}
+	SIA_jap_visit = {
+		allowed = {
+			tag = SIA
+		}
+		available = {
+			OR = {
+				has_idea = SIA_idea_credit_JAP
+				has_idea = SIA_idea_credit_JAP_2
+				has_idea = SIA_idea_credit_JAP_3
+			}
+		}
+		icon = eng_blackshirt_speech
+
+		cost = 50
+		days_remove = 14
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision SIA_jap_visit"
+			hidden_effect = {
+				set_country_flag = SIA_jap_one_flag
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision SIA_jap_visit"
+			country_event = { id = sia.6 }
+		}
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 100
+				has_political_power > 50
+			}
+			
+			modifier = {
+				factor = 0
+				has_political_power < 50
+			}
+			
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+				has_country_flag = SIA_jap_one_flag
+			}
+		}
+	}
+	SIA_fra_visit = {
+		allowed = {
+			tag = SIA
+		}
+		available = {
+			OR = {
+				has_idea = SIA_idea_credit_FRA
+				has_idea = SIA_idea_credit_FRA_2
+				has_idea = SIA_idea_credit_FRA_3
+			}
+		}
+		icon = eng_blackshirt_speech
+
+		cost = 50
+		days_remove = 14
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision SIA_fra_visit"
+			hidden_effect = {
+				set_country_flag = SIA_fra_one_flag
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision SIA_fra_visit"
+			country_event = { id = sia.6 }
+		}
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 100
+				has_political_power > 50
+			}
+			
+			modifier = {
+				factor = 0
+				has_political_power < 50
+			}
+			
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+				has_country_flag = SIA_fra_one_flag
+			}
+		}
+	}
+	SIA_eng_visit = {
+		allowed = {
+			tag = SIA
+		}
+		available = {
+			OR = {
+				has_idea = SIA_idea_credit_ENG
+				has_idea = SIA_idea_credit_ENG_2
+				has_idea = SIA_idea_credit_ENG_3
+			}
+		}
+		icon = eng_blackshirt_speech
+
+		cost = 50
+		days_remove = 14
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision SIA_eng_visit"
+			hidden_effect = {
+				set_country_flag = SIA_eng_one_flag
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision SIA_eng_visit"
+			country_event = { id = sia.6 }
+		}
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 100
+				has_political_power > 50
+			}
+			
+			modifier = {
+				factor = 0
+				has_political_power < 50
+			}
+			
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+				has_country_flag = SIA_eng_one_flag
+			}
+		}
+	}
+	SIA_usa_visit = {
+		allowed = {
+			tag = SIA
+		}
+		available = {
+			OR = {
+				has_idea = SIA_idea_credit_USA
+				has_idea = SIA_idea_credit_USA_2
+				has_idea = SIA_idea_credit_USA_3
+			}
+		}
+		icon = eng_blackshirt_speech
+
+		cost = 50
+		days_remove = 14
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision SIA_usa_visit"
+			hidden_effect = {
+				set_country_flag = SIA_usa_one_flag
+			}
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision SIA_usa_visit"
+			country_event = { id = sia.6 }
+		}
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 100
+				has_political_power > 50
+			}
+			
+			modifier = {
+				factor = 0
+				has_political_power < 50
+			}
+			
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+				has_country_flag = SIA_usa_one_flag
+			}
+		}
+	}
+}
+
+SIA_crisis_dangerous_categories = {
+	SIA_new_crisis_mission = {
+		allowed = {
+			tag = SIA
+		}
+		available = {
+			NOT = {
+				has_country_flag = SIA_crisis_start_flag
+			}
+		}
+		activation = {
+			date < 1936.01.02
+		}
+		is_good = yes
+		days_mission_timeout = 564
+		icon = GFX_decision_wood_develop
+		timeout_effect = {
+			country_event = { id = sia.5 }
+		}
+	}
+}

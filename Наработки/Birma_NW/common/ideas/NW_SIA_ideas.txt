@@ -20,6 +20,121 @@ ideas = {
 				production_factory_max_efficiency_factor = -0.05
 			}
 		}
+		# Последствия экономического кризиса 
+		SIA_idea_crisis_ekonom_1 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = BRM_idea_half_birma
+			modifier = {
+				consumer_goods_factor = 0.1
+				production_factory_max_efficiency_factor = -0.1
+				political_power_gain = -0.2
+				stability_factor = -0.1
+			}
+		}
+		SIA_idea_crisis_ekonom_2 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = BRM_idea_half_birma
+			modifier = {
+				consumer_goods_factor = 0.08
+				production_factory_max_efficiency_factor = -0.08
+				political_power_gain = -0.16
+				stability_factor = -0.08
+			}
+		}
+		SIA_idea_crisis_ekonom_3 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = BRM_idea_half_birma
+			modifier = {
+				consumer_goods_factor = 0.06
+				production_factory_max_efficiency_factor = -0.06
+				political_power_gain = -0.12
+				stability_factor = -0.6
+			}
+		}
+		SIA_idea_crisis_ekonom_4 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = BRM_idea_half_birma
+			modifier = {
+				consumer_goods_factor = 0.04
+				production_factory_max_efficiency_factor = -0.04
+				political_power_gain = -0.8
+				stability_factor = -0.4
+			}
+		}
+		SIA_idea_crisis_ekonom_5 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = BRM_idea_half_birma
+			modifier = {
+				consumer_goods_factor = 0.02
+				production_factory_max_efficiency_factor = -0.02
+				political_power_gain = -0.4
+				stability_factor = -0.2
+			}
+		}
+		# Китайские ростовщики и рабочие 
+		SIA_idea_chine_workers = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = BRM_idea_half_birma
+			modifier = {
+				consumer_goods_factor = 0.05
+				production_factory_max_efficiency_factor = -0.1
+				political_power_factor = -0.1
+				stability_factor = -0.05
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_min_efficiency_factor = 0.05
+			}
+		}
+		# Rama VIII
+		SIA_idea_rama_viii = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = BRM_idea_half_birma
+			modifier = {
+				stability_factor = -0.05
+				monarchy_drift = -0.01
+			}
+		}
 		# Долги короны
 		SIA_idea_crown_credits = {
 			removal_cost = -1
@@ -55,8 +170,374 @@ ideas = {
 				cic_to_target_factor = 0.06
 			}
 		}
-		# Последствия экономического кризиса 
-		SIA_idea_crisis_ekonom = {
+		# Долги перед Англией
+		SIA_idea_credit_ENG = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				OR = {
+					NOT = { has_war_with = ENG }
+					NOT = { country_exists = ENG }
+				}
+			}
+			picture = BRM_idea_half_birma
+			targeted_modifier = {
+				tag = ENG
+				cic_to_target_factor = 0.06
+			}
+		}
+		SIA_idea_credit_ENG_2 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				OR = {
+					NOT = { has_war_with = ENG }
+					NOT = { country_exists = ENG }
+				}
+			}
+			picture = BRM_idea_half_birma
+			targeted_modifier = {
+				tag = ENG
+				cic_to_target_factor = 0.04
+			}
+		}
+		SIA_idea_credit_ENG_3 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				OR = {
+					NOT = { has_war_with = ENG }
+					NOT = { country_exists = ENG }
+				}
+			}
+			picture = BRM_idea_half_birma
+			targeted_modifier = {
+				tag = ENG
+				cic_to_target_factor = 0.02
+			}
+		}
+		# Долги перед Италией
+		SIA_idea_credit_ITA = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				OR = {
+					NOT = { has_war_with = ITA }
+					NOT = { country_exists = ITA }
+				}
+			}
+			picture = BRM_idea_half_birma
+			targeted_modifier = {
+				tag = ITA
+				cic_to_target_factor = 0.06
+			}
+		}
+		SIA_idea_credit_ITA_2 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				OR = {
+					NOT = { has_war_with = ITA }
+					NOT = { country_exists = ITA }
+				}
+			}
+			picture = BRM_idea_half_birma
+			targeted_modifier = {
+				tag = ITA
+				cic_to_target_factor = 0.04
+			}
+		}
+		SIA_idea_credit_ITA_3 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				OR = {
+					NOT = { has_war_with = ITA }
+					NOT = { country_exists = ITA }
+				}
+			}
+			picture = BRM_idea_half_birma
+			targeted_modifier = {
+				tag = ITA
+				cic_to_target_factor = 0.02
+			}
+		}
+		# Долги перед Францией
+		SIA_idea_credit_FRA = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				OR = {
+					NOT = { has_war_with = FRA }
+					NOT = { country_exists = FRA }
+				}
+			}
+			picture = BRM_idea_half_birma
+			targeted_modifier = {
+				tag = FRA
+				cic_to_target_factor = 0.06
+			}
+		}
+		SIA_idea_credit_FRA_2 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				OR = {
+					NOT = { has_war_with = FRA }
+					NOT = { country_exists = FRA }
+				}
+			}
+			picture = BRM_idea_half_birma
+			targeted_modifier = {
+				tag = FRA
+				cic_to_target_factor = 0.04
+			}
+		}
+		SIA_idea_credit_FRA_3 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				OR = {
+					NOT = { has_war_with = FRA }
+					NOT = { country_exists = FRA }
+				}
+			}
+			picture = BRM_idea_half_birma
+			targeted_modifier = {
+				tag = FRA
+				cic_to_target_factor = 0.02
+			}
+		}
+		# Долги перед Германией
+		SIA_idea_credit_GER = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = BRM_idea_half_birma
+			available = {
+				OR = {
+					NOT = { has_war_with = GER }
+					NOT = { country_exists = GER }
+				}
+			}
+			targeted_modifier = {
+				tag = GER
+				cic_to_target_factor = 0.06
+			}
+		}
+		SIA_idea_credit_GER_2 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				OR = {
+					NOT = { has_war_with = GER }
+					NOT = { country_exists = GER }
+				}
+			}
+			picture = BRM_idea_half_birma
+			targeted_modifier = {
+				tag = GER
+				cic_to_target_factor = 0.04
+			}
+		}
+		SIA_idea_credit_GER_3 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				OR = {
+					NOT = { has_war_with = GER }
+					NOT = { country_exists = GER }
+				}
+			}
+			picture = BRM_idea_half_birma
+			targeted_modifier = {
+				tag = GER
+				cic_to_target_factor = 0.02
+			}
+		}
+		# Долги перед Америкой
+		SIA_idea_credit_USA = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				OR = {
+					NOT = { has_war_with = USA }
+					NOT = { country_exists = USA }
+				}
+			}
+			picture = BRM_idea_half_birma
+			targeted_modifier = {
+				tag = USA
+				cic_to_target_factor = 0.06
+			}
+		}
+		SIA_idea_credit_USA_2 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				OR = {
+					NOT = { has_war_with = USA }
+					NOT = { country_exists = USA }
+				}
+			}
+			picture = BRM_idea_half_birma
+			targeted_modifier = {
+				tag = USA
+				cic_to_target_factor = 0.04
+			}
+		}
+		SIA_idea_credit_USA_3 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				OR = {
+					NOT = { has_war_with = USA }
+					NOT = { country_exists = USA }
+				}
+			}
+			picture = BRM_idea_half_birma
+			targeted_modifier = {
+				tag = USA
+				cic_to_target_factor = 0.02
+			}
+		}
+		# Долги перед Японией
+		SIA_idea_credit_JAP = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				OR = {
+					NOT = { has_war_with = JAP }
+					NOT = { country_exists = JAP }
+				}
+			}
+			picture = BRM_idea_half_birma
+			targeted_modifier = {
+				tag = JAP
+				cic_to_target_factor = 0.06
+			}
+		}
+		SIA_idea_credit_JAP_2 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				OR = {
+					NOT = { has_war_with = JAP }
+					NOT = { country_exists = JAP }
+				}
+			}
+			picture = BRM_idea_half_birma
+			targeted_modifier = {
+				tag = JAP
+				cic_to_target_factor = 0.04
+			}
+		}
+		SIA_idea_credit_JAP_3 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				OR = {
+					NOT = { has_war_with = JAP }
+					NOT = { country_exists = JAP }
+				}
+			}
+			picture = BRM_idea_half_birma
+			targeted_modifier = {
+				tag = JAP
+				cic_to_target_factor = 0.02
+			}
+		}
+		# Кризис бюджета
+		SIA_idea_crisis = {
 			removal_cost = -1
 			allowed = {
 				always = no
@@ -68,42 +549,7 @@ ideas = {
 			modifier = {
 				consumer_goods_factor = 0.1
 				production_factory_max_efficiency_factor = -0.1
-				political_power_gain = -0.2
-				stability_factor = -0.1
-			}
-		}
-		# Китайские ростовщики и рабочие 
-		SIA_idea_chine_workers = {
-			removal_cost = -1
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			picture = BRM_idea_half_birma
-			modifier = {
-				consumer_goods_factor = 0.05
-				production_factory_max_efficiency_factor = -0.1
 				political_power_factor = -0.1
-				stability_factor = -0.05
-				production_factory_max_efficiency_factor = 0.05
-				production_factory_min_efficiency_factor = 0.05
-			}
-		}
-		# Rama VIII
-		SIA_idea_rama_viii = {
-			removal_cost = -1
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			picture = BRM_idea_half_birma
-			modifier = {
-				stability_factor = -0.05
-				monarchy_drift = -0.01
 			}
 		}
 	}
