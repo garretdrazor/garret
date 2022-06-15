@@ -74,7 +74,7 @@ BRM_hungry_marsh_categories = {
 	}
 	
 	visible = {
-		
+		has_country_flag = BRM_start_hangry_marhes_flag
 	}
 }
 

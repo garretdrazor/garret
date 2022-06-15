@@ -1,6 +1,6 @@
 focus_tree = {
 	id = BRM
-	continuous_focus_position = { x = 700 y = 1300 }
+	continuous_focus_position = { x = 3800 y = 1300 }
 	country = {
 		factor = 0
 		modifier = {

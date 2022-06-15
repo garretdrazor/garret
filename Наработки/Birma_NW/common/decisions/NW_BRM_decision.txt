@@ -1,3 +1,4 @@
+# Решения на парламент
 BRM_congress_categories = {
 	BRM_let_democacy_1 = {
 
@@ -290,6 +291,7 @@ BRM_congress_categories = {
 		}
 	}
 }
+ # Формирование правительства
 BRM_party_moves_categories = {
 	BRM_party_moves_mission = {
 		allowed = {
@@ -326,7 +328,7 @@ BRM_party_moves_categories = {
 		}
 	}
 }
-
+ # Поддержка Крестьян
 BRM_peasent_support_categories = {
 	BRM_peasent_invest = {
 		allowed = {
@@ -851,44 +853,202 @@ BRM_peasent_support_categories = {
 		}
 	}
 }
-
+ # Голодные марши
 BRM_hungry_marsh_categories = {
 	BRM_hungry_marsh_mission = {
 		allowed = {
 			tag = BRM
 		}
 		available = {
-			has_country_flag = BRM_parlament_ready_flag
+			has_country_flag = BRM_hangry_marhes_stoped_flag
 		}
 		activation = {
-			has_country_flag = BRM_elections_end_flag
-			NOT = { has_country_flag = BRM_parlament_ready_flag }
+			has_country_flag = BRM_start_hangry_marhes_flag
 		}
 		is_good = yes
 		days_mission_timeout = 15
 		icon = GFX_decision_wood_develop
 		timeout_effect = {
-			random_list = {
-				20 = {
-					country_event = { id = egy.7 }
+			if = {
+				limit = {
+					640 = {
+						is_controlled_by = BRM
+						NOT = {
+							has_dynamic_modifier = { modifier = BRM_hangry_dyn }
+						}
+					}
 				}
-				20 = {
-					country_event = { id = egy.7 }
+				604 = {
+					add_dynamic_modifier = { modifier = BRM_hangry_dyn }
+					force_update_dynamic_modifier = yes
 				}
-				20 = {
-					country_event = { id = egy.7 }
+			}
+			else_if = {
+				limit = {
+					1151 = {
+						is_controlled_by = BRM
+						NOT = {
+							has_dynamic_modifier = { modifier = BRM_hangry_dyn }
+						}
+					}
 				}
-				20 = {
-					country_event = { id = egy.7 }
+				1151 = {
+					add_dynamic_modifier = { modifier = BRM_hangry_dyn }
+					force_update_dynamic_modifier = yes
 				}
-				20 = {
-					country_event = { id = egy.7 }
+			}
+			else_if = {
+				limit = {
+					288 = {
+						is_controlled_by = BRM
+						NOT = {
+							has_dynamic_modifier = { modifier = BRM_hangry_dyn }
+						}
+					}
 				}
+				288 = {
+					add_dynamic_modifier = { modifier = BRM_hangry_dyn }
+					force_update_dynamic_modifier = yes
+				}
+			}
+			else_if = {
+				limit = {
+					1148 = {
+						is_controlled_by = BRM
+						NOT = {
+							has_dynamic_modifier = { modifier = BRM_hangry_dyn }
+						}
+					}
+				}
+				1148 = {
+					add_dynamic_modifier = { modifier = BRM_hangry_dyn }
+					force_update_dynamic_modifier = yes
+				}
+			}
+			else_if = {
+				limit = {
+					1150 = {
+						is_controlled_by = BRM
+						NOT = {
+							has_dynamic_modifier = { modifier = BRM_hangry_dyn }
+						}
+					}
+				}
+				1150 = {
+					add_dynamic_modifier = { modifier = BRM_hangry_dyn }
+					force_update_dynamic_modifier = yes
+				}
+			}
+			else_if = {
+				limit = {
+					288 = {
+						is_controlled_by = BRM
+						NOT = {
+							has_dynamic_modifier = { modifier = BRM_hangry_dyn }
+						}
+					}
+				}
+				288 = {
+					add_dynamic_modifier = { modifier = BRM_hangry_dyn }
+					force_update_dynamic_modifier = yes
+				}
+			}
+			else_if = {
+				limit = {
+					1152 = {
+						is_controlled_by = BRM
+						NOT = {
+							has_dynamic_modifier = { modifier = BRM_hangry_dyn }
+						}
+					}
+				}
+				1152 = {
+					add_dynamic_modifier = { modifier = BRM_hangry_dyn }
+					force_update_dynamic_modifier = yes
+				}
+			}
+			if = {
+				limit = { 
+					has_idea = BRM_idea_brm_strikes
+				}
+				swap_ideas = {
+					remove_idea = BRM_idea_brm_strikes
+					add_idea = BRM_idea_brm_strikes_2
+				}
+			}
+			else_if = {
+				limit = { 
+					has_idea = BRM_idea_brm_strikes_2
+				}
+				swap_ideas = {
+					remove_idea = BRM_idea_brm_strikes_2
+					add_idea = BRM_idea_brm_strikes_3
+				}
+			}
+			else_if = {
+				limit = { 
+					has_idea = BRM_idea_brm_strikes_3
+				}
+				swap_ideas = {
+					remove_idea = BRM_idea_brm_strikes_3
+					add_idea = BRM_idea_brm_strikes_4
+				}
+			}
+			else_if = {
+				limit = { 
+					has_idea = BRM_idea_brm_strikes_4
+				}
+				swap_ideas = {
+					remove_idea = BRM_idea_brm_strikes_4
+					add_idea = BRM_idea_brm_strikes_5
+				}
+			}
+			else_if = {
+				limit = { 
+					has_idea = BRM_idea_brm_strikes_5
+				}
+				swap_ideas = {
+					remove_idea = BRM_idea_brm_strikes_5
+					add_idea = BRM_idea_brm_strikes_6
+				}
+			}
+			else_if = {
+				limit = { 
+					has_idea = BRM_idea_brm_strikes_6
+				}
+				swap_ideas = {
+					remove_idea = BRM_idea_brm_strikes_6
+					add_idea = BRM_idea_brm_strikes_7
+				}
+			}
+			else_if = {
+				limit = { 
+					has_idea = BRM_idea_brm_strikes_7
+				}
+				swap_ideas = {
+					remove_idea = BRM_idea_brm_strikes_7
+					add_idea = BRM_idea_brm_strikes_8
+				}
+			}
+			else_if = {
+				limit = { 
+					has_idea = BRM_idea_brm_strikes_8
+				}
+				swap_ideas = {
+					remove_idea = BRM_idea_brm_strikes_8
+					add_idea = BRM_idea_brm_strikes_9
+				}
+			}
+			else_if = {
+				limit = { 
+					has_idea = BRM_idea_brm_strikes_9
+				}
+				add_stability = -0.05
 			}
 		}
 	}
 }
-
+ # Авиабаза Мингаладон
 BRM_mingaladon_categories = {
 	BRM_fighters_research = {
 

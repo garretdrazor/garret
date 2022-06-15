@@ -355,6 +355,126 @@ ideas = {
 				custom_modifier_tooltip = BRM_brm_strikes_effect_tt
 			}
 		}
+		BRM_idea_brm_strikes_2 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = big_col_app
+			modifier = {
+				production_factory_max_efficiency_factor = -0.075
+				consumer_goods_factor = 0.075
+				custom_modifier_tooltip = BRM_brm_strikes_effect_tt
+			}
+		}
+		BRM_idea_brm_strikes_3 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = big_col_app
+			modifier = {
+				production_factory_max_efficiency_factor = -0.1
+				consumer_goods_factor = 0.1
+				custom_modifier_tooltip = BRM_brm_strikes_effect_tt
+			}
+		}
+		BRM_idea_brm_strikes_4 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = big_col_app
+			modifier = {
+				production_factory_max_efficiency_factor = -0.125
+				consumer_goods_factor = 0.125
+				custom_modifier_tooltip = BRM_brm_strikes_effect_tt
+			}
+		}
+		BRM_idea_brm_strikes_5 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = big_col_app
+			modifier = {
+				production_factory_max_efficiency_factor = -0.15
+				consumer_goods_factor = 0.15
+				custom_modifier_tooltip = BRM_brm_strikes_effect_tt
+			}
+		}
+		BRM_idea_brm_strikes_6 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = big_col_app
+			modifier = {
+				production_factory_max_efficiency_factor = -0.175
+				consumer_goods_factor = 0.175
+				custom_modifier_tooltip = BRM_brm_strikes_effect_tt
+			}
+		}
+		BRM_idea_brm_strikes_7 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = big_col_app
+			modifier = {
+				production_factory_max_efficiency_factor = -0.2
+				consumer_goods_factor = 0.2
+				custom_modifier_tooltip = BRM_brm_strikes_effect_tt
+			}
+		}
+		BRM_idea_brm_strikes_8 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = big_col_app
+			modifier = {
+				production_factory_max_efficiency_factor = -0.225
+				consumer_goods_factor = 0.225
+				custom_modifier_tooltip = BRM_brm_strikes_effect_tt
+			}
+		}
+		BRM_idea_brm_strikes_9 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = big_col_app
+			modifier = {
+				production_factory_max_efficiency_factor = -0.25
+				consumer_goods_factor = 0.25
+				custom_modifier_tooltip = BRM_brm_strikes_effect_tt
+			}
+		}
 		# Соглашение с торговцами опиума
 		BRM_idea_yes_opium = {
 			removal_cost = -1

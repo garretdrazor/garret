@@ -1,5 +1,6 @@
 focus_tree = {
 	id = SIA
+	continuous_focus_position = { x = 2750 y = 670 }
 	country = {
 		factor = 0
 		modifier = {
@@ -177,10 +178,24 @@ focus_tree = {
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_back_border"
-			447 = {
+			724 = {
 				add_building_construction = {
 					type = infrastructure
-					level = 2
+					level = 1
+					instant_build = yes
+				}
+			}
+			289 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			1173 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
 					instant_build = yes
 				}
 			}
