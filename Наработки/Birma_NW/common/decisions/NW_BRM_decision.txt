@@ -878,7 +878,7 @@ BRM_hungry_marsh_categories = {
 						}
 					}
 				}
-				604 = {
+				640 = {
 					add_dynamic_modifier = { modifier = BRM_hangry_dyn }
 					force_update_dynamic_modifier = yes
 				}
@@ -1044,6 +1044,47 @@ BRM_hungry_marsh_categories = {
 					has_idea = BRM_idea_brm_strikes_9
 				}
 				add_stability = -0.05
+			}
+		}
+	}
+}
+
+ # Борьба с такинами
+BRM_takin_fight_categories = {
+	BRM_fighters_research = {
+
+		icon = eng_blackshirt_speech
+
+		cost = 150
+		days_remove = 70
+		modifier = {
+			civilian_factory_use = 3
+		}
+		available = {
+			NOT ={
+				has_country_flag = BRM_fighting_res_flag
+			}
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision BRM_fighters_research"
+			set_country_flag = BRM_fighting_res_flag
+		}
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision BRM_fighters_research"
+			clr_country_flag = BRM_fighting_res_flag
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				category = light_air
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 20
+				has_political_power > 150
 			}
 		}
 	}

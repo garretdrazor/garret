@@ -528,6 +528,17 @@ country_event = {
 		name = brm.24.a
 		unlock_decision_category_tooltip = BRM_hungry_marsh_categories
 		unlock_decision_category_tooltip = BRM_takin_fight_categories
+		if = {
+			limit = {
+				640 = {
+					is_controlled_by = BRM
+				}
+			}
+			640 = {
+				add_dynamic_modifier = { modifier = BRM_hangry_dyn }
+				force_update_dynamic_modifier = yes
+			}
+		}
 		hidden_effect = { set_country_flag = BRM_start_hangry_marhes_flag }
 	}
 }

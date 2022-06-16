@@ -90,7 +90,7 @@ BRM_takin_fight_categories = {
 	}
 	
 	visible = {
-		
+		has_country_flag = BRM_start_hangry_marhes_flag
 	}
 }
 
