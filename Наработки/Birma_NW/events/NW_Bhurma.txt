@@ -96,7 +96,7 @@ country_event = {
 		name = brm.5.a
 		add_stability = 0.01
 		hidden_effect = {
-			country_event = { id = egy.6 days = 8 }
+			country_event = { id = brm.6 days = 8 }
 		}
 		ai_chance = {
 			factor = 50
@@ -116,7 +116,7 @@ country_event = {
 		add_to_variable = { burma_party_white_pop_total = add_popularity_burma_party_white_temp }
 		add_popularity_burma_party_white = yes
 		hidden_effect = {
-			country_event = { id = egy.8 days = 29 }
+			country_event = { id = brm.8 days = 29 }
 		}
 		ai_chance = {
 			factor = 50
@@ -147,7 +147,7 @@ country_event = {
 			promote_leader = yes
 		}
 		hidden_effect = {
-			country_event = { id = egy.7 days = 20 }
+			country_event = { id = brm.7 days = 20 }
 		}
 	}
 }
@@ -540,6 +540,233 @@ country_event = {
 			}
 		}
 		hidden_effect = { set_country_flag = BRM_start_hangry_marhes_flag }
+	}
+}
+
+# Забастовки и марши разогнаны
+country_event = {
+	id = brm.25
+	title = brm.25.t
+	desc = brm.25.d
+	picture = GFX_report_event_brm_25
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event brm.25" }
+
+	option = {
+		name = brm.25.a
+		if = {
+			limit = { 
+				has_idea = BRM_idea_brm_strikes_9
+			}
+			remove_ideas = BRM_idea_brm_strikes_9
+		}
+		else_if = {
+			limit = { 
+				has_idea = BRM_idea_brm_strikes_8
+			}
+			remove_ideas = BRM_idea_brm_strikes_8
+		}
+		else_if = {
+			limit = { 
+				has_idea = BRM_idea_brm_strikes_7
+			}
+			remove_ideas = BRM_idea_brm_strikes_7
+		}
+		else_if = {
+			limit = { 
+				has_idea = BRM_idea_brm_strikes_6
+			}
+			remove_ideas = BRM_idea_brm_strikes_6
+		}
+		else_if = {
+			limit = { 
+				has_idea = BRM_idea_brm_strikes_5
+			}
+			remove_ideas = BRM_idea_brm_strikes_5
+		}
+		else_if = {
+			limit = { 
+				has_idea = BRM_idea_brm_strikes_4
+			}
+			remove_ideas = BRM_idea_brm_strikes_4
+		}
+		else_if = {
+			limit = { 
+				has_idea = BRM_idea_brm_strikes_3
+			}
+			remove_ideas = BRM_idea_brm_strikes_3
+		}
+		else_if = {
+			limit = { 
+				has_idea = BRM_idea_brm_strikes_2
+			}
+			remove_ideas = BRM_idea_brm_strikes_2
+		}
+		else_if = {
+			limit = { 
+				has_idea = BRM_idea_brm_strikes_1
+			}
+			remove_ideas = BRM_idea_brm_strikes_1
+		}
+		if = {
+			limit = {
+				640 = {
+					is_controlled_by = BRM
+					has_dynamic_modifier = { modifier = BRM_hangry_dyn }
+				}
+			}
+			640 = {
+				remove_dynamic_modifier = { modifier = BRM_hangry_dyn }
+				force_update_dynamic_modifier = yes
+			}
+		}
+		if = {
+			limit = {
+				288 = {
+					is_controlled_by = BRM
+					has_dynamic_modifier = { modifier = BRM_hangry_dyn }
+				}
+			}
+			288 = {
+				remove_dynamic_modifier = { modifier = BRM_hangry_dyn }
+				force_update_dynamic_modifier = yes
+			}
+		}
+		if = {
+			limit = {
+				1152 = {
+					is_controlled_by = BRM
+					has_dynamic_modifier = { modifier = BRM_hangry_dyn }
+				}
+			}
+			1152 = {
+				remove_dynamic_modifier = { modifier = BRM_hangry_dyn }
+				force_update_dynamic_modifier = yes
+			}
+		}
+		if = {
+			limit = {
+				1150 = {
+					is_controlled_by = BRM
+					has_dynamic_modifier = { modifier = BRM_hangry_dyn }
+				}
+			}
+			1150 = {
+				remove_dynamic_modifier = { modifier = BRM_hangry_dyn }
+				force_update_dynamic_modifier = yes
+			}
+		}
+		if = {
+			limit = {
+				1148 = {
+					is_controlled_by = BRM
+					has_dynamic_modifier = { modifier = BRM_hangry_dyn }
+				}
+			}
+			1148 = {
+				remove_dynamic_modifier = { modifier = BRM_hangry_dyn }
+				force_update_dynamic_modifier = yes
+			}
+		}
+		if = {
+			limit = {
+				1151 = {
+					is_controlled_by = BRM
+					has_dynamic_modifier = { modifier = BRM_hangry_dyn }
+				}
+			}
+			1151 = {
+				remove_dynamic_modifier = { modifier = BRM_hangry_dyn }
+				force_update_dynamic_modifier = yes
+			}
+		}
+		if = {
+			limit = {
+				640 = {
+					is_controlled_by = BRM
+					has_dynamic_modifier = { modifier = BRM_hangry_dyn }
+				}
+			}
+			640 = {
+				remove_dynamic_modifier = { modifier = BRM_hangry_dyn }
+				force_update_dynamic_modifier = yes
+			}
+		}
+		add_stability = 0.05
+		clr_country_flag = BRM_start_hangry_marhes_flag
+	}
+}
+
+# Новые забастовки студентов
+country_event = {
+	id = brm.26
+	title = brm.26.t
+	desc = brm.26.d
+	picture = GFX_report_event_brm_26
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event brm.26" }
+
+	option = {
+		name = brm.26.a
+		add_stability = -0.05
+		add_popularity = { ideology = communism popularity = 0.03 }
+		
+	}
+}
+
+# Всеобщая забастовка в Рангуне
+country_event = {
+	id = brm.27
+	title = brm.27.t
+	desc = brm.27.d
+	picture = GFX_report_event_brm_27
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event brm.27" }
+
+	option = {
+		name = brm.27.a
+		add_political_power = -50
+		add_popularity = { ideology = communism popularity = 0.02 }
+	}
+}
+
+# Подъём Добайма Асайон
+country_event = {
+	id = brm.28
+	title = brm.28.t
+	desc = brm.28.d
+	picture = GFX_report_event_brm_28
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event brm.28" }
+
+	option = {
+		name = brm.28.a
+		add_political_power = -25
+		add_popularity = { ideology = communism popularity = 0.02 }
+	}
+}
+
+# Подъём Добайма Асайон
+country_event = {
+	id = brm.29
+	title = brm.29.t
+	desc = brm.29.d
+	picture = GFX_report_event_brm_29
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event brm.29" }
+
+	option = {
+		name = brm.29.a
+		
+	}
+	option = {
+		name = brm.29.b
+		
 	}
 }
 

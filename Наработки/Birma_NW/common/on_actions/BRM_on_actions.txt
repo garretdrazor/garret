@@ -33,6 +33,43 @@ on_actions = {
 					country_event = { id = sia.4 days = 929 }
 				}
 			}
+			# Бирма-комми ивенты
+			if = {
+				limit = {
+					has_country_flag = BRM_start_hangry_marhes_flag
+					communism > 0.1
+				}
+				BRM = {
+					country_event = { id = brm.26 }
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = BRM_start_hangry_marhes_flag
+					communism > 0.2
+				}
+				BRM = {
+					country_event = { id = brm.27 }
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = BRM_start_hangry_marhes_flag
+					communism > 0.25
+				}
+				BRM = {
+					country_event = { id = brm.28 }
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = BRM_start_hangry_marhes_flag
+					communism > 0.3
+				}
+				BRM = {
+					country_event = { id = brm.29 }
+				}
+			}
 		}
 	}
 }

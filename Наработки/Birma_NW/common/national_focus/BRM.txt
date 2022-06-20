@@ -136,7 +136,7 @@ focus_tree = {
 			focus = BRM_new_constitution
 		}
 		mutually_exclusive = {
-			focus = BR_sinega
+			focus = BRM_sinega
 			focus = BRM_form_parlament
 		}
 		x = -25
@@ -188,7 +188,7 @@ focus_tree = {
 			focus = BRM_new_constitution
 		}
 		mutually_exclusive = {
-			focus = BR_sinega
+			focus = BRM_sinega
 			focus = BRM_general_association
 		}
 		x = 13
@@ -241,8 +241,8 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = BR_sinega
-		text = BR_sinega
+		id = BRM_sinega
+		text = BRM_sinega
 		icon = GFX_z_goal_win_Ba_Mo
 		cost = 10
 		prerequisite = {
@@ -256,7 +256,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = BRM_new_constitution
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BR_sinega"
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_sinega"
 			
 		}
 	}
@@ -267,7 +267,7 @@ focus_tree = {
 		cost = 10
 		prerequisite = {
 			focus = BRM_general_association
-			focus = BR_sinega
+			focus = BRM_sinega
 			focus = BRM_form_parlament
 		}
 		mutually_exclusive = {
@@ -391,7 +391,7 @@ focus_tree = {
 		cost = 10
 		prerequisite = {
 			focus = BRM_general_association
-			focus = BR_sinega
+			focus = BRM_sinega
 			focus = BRM_form_parlament
 		}
 		mutually_exclusive = {
@@ -1406,11 +1406,11 @@ focus_tree = {
 		icon = GFX_z_goal_agrarian_reform
 		cost = 10
 		prerequisite = {
-			focus = BR_sinega
+			focus = BRM_sinega
 		}
 		x = 0
 		y = 1
-		relative_position_id = BR_sinega
+		relative_position_id = BRM_sinega
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_land_order"
 			
