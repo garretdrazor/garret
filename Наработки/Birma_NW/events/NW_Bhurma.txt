@@ -750,7 +750,7 @@ country_event = {
 	}
 }
 
-# Подъём Добайма Асайон
+# Последний марш
 country_event = {
 	id = brm.29
 	title = brm.29.t
@@ -762,11 +762,78 @@ country_event = {
 
 	option = {
 		name = brm.29.a
+		start_civil_war = {
+			ruling_party = neutrality
+			ideology = communism
+			size = 0.5
+			keep_unit_leaders = {
+				
+			}
+		}
 		
+		hidden_effect = {
+			random_other_country = {
+				limit = {
+					original_tag = ROOT
+					NOT = { tag = ROOT }
+				}
+				add_timed_idea = { idea = focus_synchronization days = 7 }
+				load_focus_tree = nw_bhurma_focus
+			}
+			division_template = {
+				name = "Takin rebels"
+				is_locked = yes
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+				}
+			}
+			1152 = {
+				create_unit = {
+					division = "name = \"Takin rebels\" division_template = \"Takin rebels\" start_experience_factor = 0.2" 
+					owner = ROOT
+				}
+			}
+		}
 	}
 	option = {
 		name = brm.29.b
-		
+		start_civil_war = {
+			ruling_party = communism
+			ideology = neutrality
+			size = 0.5
+			keep_unit_leaders = {
+				
+			}
+		}
+		hidden_effect = {
+			random_other_country = {
+				limit = {
+					original_tag = ROOT
+					NOT = { tag = ROOT }
+				}
+				add_timed_idea = { idea = focus_synchronization days = 7 }
+				load_focus_tree = nw_bhurma_focus
+				division_template = {
+					name = "Takin rebels"
+					is_locked = yes
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+					}
+				}
+				1152 = {
+					create_unit = {
+						division = "name = \"Takin rebels\" division_template = \"Takin rebels\" start_experience_factor = 0.2" 
+						owner = ROOT
+					}
+				}
+			}
+		}
 	}
 }
 
