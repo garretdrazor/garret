@@ -310,19 +310,19 @@ BRM_party_moves_categories = {
 		timeout_effect = {
 			random_list = {
 				20 = {
-					country_event = { id = egy.7 }
+					country_event = { id = brm.13 }
 				}
 				20 = {
-					country_event = { id = egy.7 }
+					country_event = { id = brm.14 }
 				}
 				20 = {
-					country_event = { id = egy.7 }
+					country_event = { id = brm.15 }
 				}
 				20 = {
-					country_event = { id = egy.7 }
+					country_event = { id = brm.16 }
 				}
 				20 = {
-					country_event = { id = egy.7 }
+					country_event = { id = brm.17 }
 				}
 			}
 		}
@@ -1281,6 +1281,109 @@ BRM_takin_fight_categories = {
 
 		ai_will_do = {
 			factor = 1
+		}
+	}
+}
+ # Националистическая деятельность
+BRM_nacionalists_categories = {
+	BRM_raj_carnage = {
+
+		icon = eng_blackshirt_speech
+
+		cost = 30
+		days_remove = 3
+		days_re_enable = 7
+		available = {
+			has_country_flag = BRM_nacionalists2_flag
+		}
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision BRM_raj_carnage"
+			random_list = {
+				60 = {
+					country_event = { id = brm.34 }
+				}
+				40 = {
+					country_event = { id = brm.35 }
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 20
+				has_political_power > 30
+			}
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+	BRM_factory_carnage = {
+
+		icon = eng_blackshirt_speech
+
+		cost = 50
+		days_remove = 5
+		days_re_enable = 14
+		available = {
+			has_country_flag = BRM_nacionalists2_flag
+		}
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision BRM_factory_carnage"
+			add_war_support = 0.01
+			add_stability = -0.01
+			288 = {
+				add_manpower = -50
+				damage_building = {
+					type = industrial_complex
+					damage = 0.5
+				}
+			}
+			set_temp_variable = { add_burma_nacionalist_tension_temp = 8 }
+			add_to_variable = { burma_nacionalist_tension_total = add_burma_nacionalist_tension_temp }
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 20
+				has_political_power > 50
+			}
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+	BRM_stop_right_agression = {
+
+		icon = eng_blackshirt_speech
+
+		cost = 50
+		days_remove = 5
+		days_re_enable = 14
+		available = {
+			check_variable = { burma_nacionalist_tension_total > 10 }
+		}
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision BRM_stop_right_agression"
+			add_stability = 0.01
+			set_temp_variable = { add_burma_nacionalist_tension_temp = -10 }
+			add_to_variable = { burma_nacionalist_tension_total = add_burma_nacionalist_tension_temp }
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 20
+				has_political_power > 50
+				is_historical_focus_on = yes
+			}
 		}
 	}
 }

@@ -346,7 +346,7 @@ ideas = {
 				always = no
 			}
 			allowed_civil_war = {
-				always = yes
+				always = no
 			}
 			picture = big_col_app
 			modifier = {
@@ -361,7 +361,7 @@ ideas = {
 				always = no
 			}
 			allowed_civil_war = {
-				always = yes
+				always = no
 			}
 			picture = big_col_app
 			modifier = {
@@ -376,7 +376,7 @@ ideas = {
 				always = no
 			}
 			allowed_civil_war = {
-				always = yes
+				always = no
 			}
 			picture = big_col_app
 			modifier = {
@@ -391,7 +391,7 @@ ideas = {
 				always = no
 			}
 			allowed_civil_war = {
-				always = yes
+				always = no
 			}
 			picture = big_col_app
 			modifier = {
@@ -406,7 +406,7 @@ ideas = {
 				always = no
 			}
 			allowed_civil_war = {
-				always = yes
+				always = no
 			}
 			picture = big_col_app
 			modifier = {
@@ -421,7 +421,7 @@ ideas = {
 				always = no
 			}
 			allowed_civil_war = {
-				always = yes
+				always = no
 			}
 			picture = big_col_app
 			modifier = {
@@ -436,7 +436,7 @@ ideas = {
 				always = no
 			}
 			allowed_civil_war = {
-				always = yes
+				always = no
 			}
 			picture = big_col_app
 			modifier = {
@@ -451,7 +451,7 @@ ideas = {
 				always = no
 			}
 			allowed_civil_war = {
-				always = yes
+				always = no
 			}
 			picture = big_col_app
 			modifier = {
@@ -466,13 +466,27 @@ ideas = {
 				always = no
 			}
 			allowed_civil_war = {
-				always = yes
+				always = no
 			}
 			picture = big_col_app
 			modifier = {
 				production_factory_max_efficiency_factor = -0.25
 				consumer_goods_factor = 0.25
 				custom_modifier_tooltip = BRM_brm_strikes_effect_tt
+			}
+		}
+		# Пропаганда бирманского национализма
+		BRM_idea_bir_nac = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = big_col_app
+			modifier = {
+				burma_nacionalist_tension_bonus = 0.1
 			}
 		}
 		# Соглашение с торговцами опиума

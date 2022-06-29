@@ -70,6 +70,7 @@ BRM_hungry_marsh_categories = {
 		NOT = {
 			has_global_flag = THE_MOTHER_OF_ORDER_FLAG
 			has_global_flag = WORLD_OF_SPLIT_FLAG
+			has_country_flag = BRM_galon_rebelion_started_flag
 		}
 	}
 	
@@ -86,12 +87,35 @@ BRM_takin_fight_categories = {
 		NOT = {
 			has_global_flag = THE_MOTHER_OF_ORDER_FLAG
 			has_global_flag = WORLD_OF_SPLIT_FLAG
+			has_country_flag = BRM_galon_rebelion_started_flag
 		}
 	}
 	
 	visible = {
 		has_country_flag = BRM_start_hangry_marhes_flag
 	}
+}
+
+# Националистическая деятельность
+BRM_nacionalists_categories = {
+	icon = eng_imperial_conference
+	allowed = {
+		original_tag = BRM
+		NOT = {
+			has_global_flag = THE_MOTHER_OF_ORDER_FLAG
+			has_global_flag = WORLD_OF_SPLIT_FLAG
+		}
+	}
+	
+	visible = {
+		has_country_flag = BRM_nacionalists_flag
+		NOT = {
+			has_country_flag = BRM_galon_rebelion_started_flag
+			has_country_flag = BRM_galon_rebelion_off_flag
+		}
+	}
+	scripted_gui = BRM_nacionalist_tension_ui
+	priority = 99
 }
 
 # Мингалодон

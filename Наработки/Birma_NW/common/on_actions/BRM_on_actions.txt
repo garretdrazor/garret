@@ -21,6 +21,8 @@ on_actions = {
 					country_event = { id = brm.21 days = 470 }
 					country_event = { id = brm.23 days = 757 }
 					country_event = { id = brm.24 days = 775 }
+					country_event = { id = brm.32 days = 853 }
+					country_event = { id = brm.33 days = 873 }
 				}
 				RAJ = {
 					country_event = { id = brm.22 days = 470 }
@@ -68,6 +70,25 @@ on_actions = {
 				}
 				BRM = {
 					country_event = { id = brm.29 }
+				}
+			}
+			if = {
+				limit = {
+					check_variable = { burma_nacionalist_tension_total > 99 }
+				}
+				BRM = {
+					country_event = { id = brm.36 }
+				}
+			}
+			if = {
+				limit = {
+					date > 1938.9.9
+					NOT = {
+						has_country_flag = BRM_galon_rebelion_started_flag
+					}
+				}
+				BRM = {
+					country_event = { id = brm.37 }
 				}
 			}
 		}

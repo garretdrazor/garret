@@ -837,6 +837,233 @@ country_event = {
 	}
 }
 
+# Предложение У Со
+country_event = {
+	id = brm.30
+	title = brm.30.t
+	desc = brm.30.d
+	picture = GFX_report_event_brm_30
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event brm.30" }
+
+	option = {
+		name = brm.30.a
+		
+	}
+	option = {
+		name = brm.30.b
+		
+	}
+}
+
+# У Со присоединился к пробританскому правительству
+country_event = {
+	id = brm.31
+	title = brm.31.t
+	desc = brm.31.d
+	picture = GFX_report_event_brm_31
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event brm.31" }
+
+	option = {
+		name = brm.31.a
+		
+	}
+}
+
+# Подъём правых настроений
+country_event = {
+	id = brm.32
+	title = brm.32.t
+	desc = brm.32.d
+	picture = GFX_report_event_brm_32
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event brm.32" }
+
+	option = {
+		name = brm.32.a
+		unlock_decision_category_tooltip = BRM_nacionalists_categories
+		hidden_effect = {
+			set_variable = { burma_nacionalist_tension_total = 0 }
+			set_country_flag = BRM_nacionalists_flag
+		}
+	}
+}
+
+# Погромы в Индийских кварталах
+country_event = {
+	id = brm.33
+	title = brm.33.t
+	desc = brm.33.d
+	picture = GFX_report_event_brm_33
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event brm.33" }
+
+	option = {
+		name = brm.33.a
+		set_temp_variable = { add_burma_nacionalist_tension_temp = 5 }
+		add_to_variable = { burma_nacionalist_tension_total = add_burma_nacionalist_tension_temp }
+		set_country_flag = BRM_nacionalists2_flag
+	}
+}
+
+# Очередной погром в индийских кварталах
+country_event = {
+	id = brm.34
+	title = brm.34.t
+	desc = brm.34.d
+	picture = GFX_report_event_brm_34
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event brm.34" }
+
+	option = {
+		name = brm.34.a
+		add_war_support = 0.1
+		add_stability = -0.03
+		add_political_power = -10
+		set_temp_variable = { add_burma_nacionalist_tension_temp = 5 }
+		add_to_variable = { burma_nacionalist_tension_total = add_burma_nacionalist_tension_temp }
+		288 = {
+			add_manpower = -250
+		}
+	}
+}
+
+# Кровавые столкновения в индийских кварталах
+country_event = {
+	id = brm.35
+	title = brm.35.t
+	desc = brm.35.d
+	picture = GFX_report_event_brm_35
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event brm.35" }
+
+	option = {
+		name = brm.35.a
+		add_war_support = 0.3
+		add_stability = -0.1
+		add_political_power = -25
+		set_temp_variable = { add_burma_nacionalist_tension_temp = 10 }
+		add_to_variable = { burma_nacionalist_tension_total = add_burma_nacionalist_tension_temp }
+		288 = {
+			add_manpower = -1000
+		}
+	}
+}
+
+# Второе восстание галонов
+country_event = {
+	id = brm.36
+	title = brm.36.t
+	desc = brm.36.d
+	picture = GFX_report_event_brm_36
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event brm.36" }
+
+	option = {
+		name = brm.36.a
+		start_civil_war = {
+			ruling_party = neutrality
+			ideology = fascism
+			size = 0.5
+			keep_unit_leaders = {
+				
+			}
+		}
+		
+		hidden_effect = {
+			set_country_flag = BRM_galon_rebelion_started_flag
+			random_other_country = {
+				limit = {
+					original_tag = ROOT
+					NOT = { tag = ROOT }
+				}
+				add_timed_idea = { idea = focus_synchronization days = 7 }
+				load_focus_tree = nw_bhurma_focus
+			}
+			division_template = {
+				name = "Galon Tat"
+				is_locked = yes
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 0 y = 3 }
+					infantry = { x = 0 y = 4 }
+				}
+			}
+			288 = {
+				create_unit = {
+					division = "name = \"Galon Tat\" division_template = \"Galon Tat\" start_experience_factor = 0.4" 
+					owner = ROOT
+				}
+			}
+		}
+	}
+	option = {
+		name = brm.36.b
+		start_civil_war = {
+			ruling_party = fascism
+			ideology = neutrality
+			size = 0.5
+			keep_unit_leaders = {
+				
+			}
+		}
+		hidden_effect = {
+			random_other_country = {
+				limit = {
+					original_tag = ROOT
+					NOT = { tag = ROOT }
+				}
+				add_timed_idea = { idea = focus_synchronization days = 7 }
+				load_focus_tree = nw_bhurma_focus
+				division_template = {
+					name = "Galon Tat"
+					is_locked = yes
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 0 y = 4 }
+					}
+				}
+				288 = {
+					create_unit = {
+						division = "name = \"Galon Tat\" division_template = \"Galon Tat\" start_experience_factor = 0.4" 
+						owner = ROOT
+					}
+				}
+			}
+		}
+	}
+}
+
+# Погромы прекращены
+country_event = {
+	id = brm.37
+	title = brm.37.t
+	desc = brm.37.d
+	picture = GFX_report_event_brm_37
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event brm.37" }
+
+	option = {
+		name = brm.37.a
+		remove_ideas = BRM_idea_bir_nac
+		set_country_flag = BRM_galon_rebelion_off_flag
+	}
+}
+
 # TEST
 country_event = {
 	id = brm.999
