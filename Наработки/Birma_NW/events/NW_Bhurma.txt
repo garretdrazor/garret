@@ -44,7 +44,7 @@ country_event = {
 	id = brm.3
 	title = brm.3.t
 	desc = brm.3.d
-	picture = GFX_report_event_brm_3
+	picture = GFX_GFX_report_event_brm_3_8
 	is_triggered_only = yes
 	
 	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event brm.3" }
@@ -61,7 +61,7 @@ country_event = {
 	id = brm.4
 	title = brm.4.t
 	desc = brm.4.d
-	picture = GFX_report_event_brm_4
+	picture = GFX_report_event_brm_4_12_19_20
 	is_triggered_only = yes
 	
 	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event brm.4" }
@@ -87,7 +87,7 @@ country_event = {
 	id = brm.5
 	title = brm.5.t
 	desc = brm.5.d
-	picture = GFX_report_event_brm_5
+	picture = GFX_report_event_brm_5_27
 	is_triggered_only = yes
 	
 	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event brm.5" }
@@ -173,7 +173,7 @@ country_event = {
 	id = brm.8
 	title = brm.8.t
 	desc = brm.8.d
-	picture = GFX_report_event_brm_8
+	picture = GFX_GFX_report_event_brm_3_8
 	is_triggered_only = yes
 	
 	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event brm.8" }
@@ -267,7 +267,7 @@ country_event = {
 	id = brm.12
 	title = brm.12.t
 	desc = brm.12.d
-	picture = GFX_report_event_brm_12
+	picture = GFX_report_event_brm_4_12_19_20
 	is_triggered_only = yes
 	
 	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event brm.12" }
@@ -403,7 +403,7 @@ country_event = {
 	id = brm.18
 	title = brm.18.t
 	desc = brm.18.d
-	picture = GFX_report_event_brm_18
+	picture = GFX_report_event_brm_18_21_22
 	is_triggered_only = yes
 	
 	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event brm.18" }
@@ -426,7 +426,7 @@ country_event = {
 	id = brm.19
 	title = brm.19.t
 	desc = brm.19.d
-	picture = GFX_report_event_brm_19
+	picture = GFX_report_event_brm_4_12_19_20
 	is_triggered_only = yes
 	
 	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event brm.19" }
@@ -444,7 +444,7 @@ country_event = {
 	id = brm.20
 	title = brm.20.t
 	desc = brm.20.d
-	picture = GFX_report_event_brm_20
+	picture = GFX_report_event_brm_4_12_19_20
 	is_triggered_only = yes
 	
 	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event brm.20" }
@@ -462,7 +462,7 @@ country_event = {
 	id = brm.21
 	title = brm.21.t
 	desc = brm.21.d
-	picture = GFX_report_event_brm_21
+	picture = GFX_report_event_brm_18_21_22
 	is_triggered_only = yes
 	
 	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event brm.21" }
@@ -482,7 +482,7 @@ country_event = {
 	id = brm.22
 	title = brm.22.t
 	desc = brm.22.d
-	picture = GFX_report_event_brm_22
+	picture = GFX_report_event_brm_18_21_22
 	is_triggered_only = yes
 	
 	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event brm.22" }
@@ -519,7 +519,7 @@ country_event = {
 	id = brm.24
 	title = brm.24.t
 	desc = brm.24.d
-	picture = GFX_report_event_brm_24
+	picture = GFX_report_event_brm_24_29
 	is_triggered_only = yes
 	
 	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event brm.24" }
@@ -721,7 +721,7 @@ country_event = {
 	id = brm.27
 	title = brm.27.t
 	desc = brm.27.d
-	picture = GFX_report_event_brm_27
+	picture = GFX_report_event_brm_5_27
 	is_triggered_only = yes
 	
 	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event brm.27" }
@@ -755,7 +755,7 @@ country_event = {
 	id = brm.29
 	title = brm.29.t
 	desc = brm.29.d
-	picture = GFX_report_event_brm_29
+	picture = GFX_report_event_brm_24_29
 	is_triggered_only = yes
 	
 	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event brm.29" }
@@ -842,7 +842,7 @@ country_event = {
 	id = brm.30
 	title = brm.30.t
 	desc = brm.30.d
-	picture = GFX_report_event_brm_30
+	picture = GFX_report_event_brm_30_31
 	is_triggered_only = yes
 	
 	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event brm.30" }
@@ -862,7 +862,7 @@ country_event = {
 	id = brm.31
 	title = brm.31.t
 	desc = brm.31.d
-	picture = GFX_report_event_brm_31
+	picture = GFX_report_event_brm_30_31
 	is_triggered_only = yes
 	
 	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event brm.31" }
@@ -898,7 +898,7 @@ country_event = {
 	id = brm.33
 	title = brm.33.t
 	desc = brm.33.d
-	picture = GFX_report_event_brm_33
+	picture = GFX_report_event_brm_33_34_35_37
 	is_triggered_only = yes
 	
 	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event brm.33" }
@@ -916,7 +916,7 @@ country_event = {
 	id = brm.34
 	title = brm.34.t
 	desc = brm.34.d
-	picture = GFX_report_event_brm_34
+	picture = GFX_report_event_brm_33_34_35_37
 	is_triggered_only = yes
 	
 	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event brm.34" }
@@ -939,7 +939,7 @@ country_event = {
 	id = brm.35
 	title = brm.35.t
 	desc = brm.35.d
-	picture = GFX_report_event_brm_35
+	picture = GFX_report_event_brm_33_34_35_37
 	is_triggered_only = yes
 	
 	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event brm.35" }
@@ -1052,7 +1052,7 @@ country_event = {
 	id = brm.37
 	title = brm.37.t
 	desc = brm.37.d
-	picture = GFX_report_event_brm_37
+	picture = GFX_report_event_brm_33_34_35_37
 	is_triggered_only = yes
 	
 	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event brm.37" }
