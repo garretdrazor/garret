@@ -18,11 +18,7 @@ focus_tree = {
 		x = 27
 		y = 0
 		available ={
-			NOT = {
-				ROOT = {
-					is_subject_of = RAJ
-				}
-			}
+			has_country_flag = BRM_elections_end_flag
 		}
 			
 		completion_reward = {

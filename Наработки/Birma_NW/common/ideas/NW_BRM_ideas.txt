@@ -26,7 +26,6 @@ ideas = {
 			}
 			picture = BRM_idea_hight_renta
 			modifier = {
-				conscription = -0.01
 				MONTHLY_POPULATION = -0.20
 				research_speed_factor = -0.02
 			}
@@ -91,7 +90,6 @@ ideas = {
 			picture = BRM_idea_no_birma_soldiers
 			modifier = {
 				custom_modifier_tooltip = SPR_military_disloyalty_tt
-				country_lock_all_division_template = yes
 			}
 		}
 		# Студенческие забастовки в Бирме
@@ -340,7 +338,7 @@ ideas = {
 			}
 		}
 		# Массовые забастовки
-		BRM_idea_brm_strikes = {
+		BRM_idea_brm_strikes_1 = {
 			removal_cost = -1
 			allowed = {
 				always = no

@@ -44,7 +44,7 @@ country_event = {
 	id = brm.3
 	title = brm.3.t
 	desc = brm.3.d
-	picture = GFX_GFX_report_event_brm_3_8
+	picture = GFX_report_event_brm_3_8
 	is_triggered_only = yes
 	
 	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event brm.3" }
@@ -173,7 +173,7 @@ country_event = {
 	id = brm.8
 	title = brm.8.t
 	desc = brm.8.d
-	picture = GFX_GFX_report_event_brm_3_8
+	picture = GFX_report_event_brm_3_8
 	is_triggered_only = yes
 	
 	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event brm.8" }
@@ -277,6 +277,7 @@ country_event = {
 		add_political_power = -10
 		set_country_flag = BRM_elections_end_flag
 		unlock_decision_category_tooltip = BRM_party_moves_categories
+		complete_national_focus = BRM_new_constitution
 	}
 }
 
@@ -510,7 +511,7 @@ country_event = {
 	option = {
 		name = brm.23.a
 		add_political_power = -50
-		add_ideas = BRM_idea_brm_strikes
+		add_ideas = BRM_idea_brm_strikes_1
 	}
 }
 
@@ -779,21 +780,21 @@ country_event = {
 				}
 				add_timed_idea = { idea = focus_synchronization days = 7 }
 				load_focus_tree = nw_bhurma_focus
-			}
-			division_template = {
-				name = "Takin rebels"
-				is_locked = yes
-				regiments = {
-					infantry = { x = 0 y = 0 }
-					infantry = { x = 0 y = 1 }
-					infantry = { x = 1 y = 0 }
-					infantry = { x = 1 y = 1 }
+				division_template = {
+					name = "Takin rebels"
+					is_locked = yes
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+					}
 				}
-			}
-			1152 = {
-				create_unit = {
-					division = "name = \"Takin rebels\" division_template = \"Takin rebels\" start_experience_factor = 0.2" 
-					owner = ROOT
+				1152 = {
+					create_unit = {
+						division = "name = \"Takin rebels\" division_template = \"Takin rebels\" start_experience_factor = 0.2" 
+						owner = ROOT
+					}
 				}
 			}
 		}
@@ -816,21 +817,21 @@ country_event = {
 				}
 				add_timed_idea = { idea = focus_synchronization days = 7 }
 				load_focus_tree = nw_bhurma_focus
-				division_template = {
-					name = "Takin rebels"
-					is_locked = yes
-					regiments = {
-						infantry = { x = 0 y = 0 }
-						infantry = { x = 0 y = 1 }
-						infantry = { x = 1 y = 0 }
-						infantry = { x = 1 y = 1 }
-					}
+			}
+			division_template = {
+				name = "Takin rebels"
+				is_locked = yes
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
 				}
-				1152 = {
-					create_unit = {
-						division = "name = \"Takin rebels\" division_template = \"Takin rebels\" start_experience_factor = 0.2" 
-						owner = ROOT
-					}
+			}
+			1152 = {
+				create_unit = {
+					division = "name = \"Takin rebels\" division_template = \"Takin rebels\" start_experience_factor = 0.2" 
+					owner = ROOT
 				}
 			}
 		}

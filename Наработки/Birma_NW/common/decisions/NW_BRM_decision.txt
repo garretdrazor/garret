@@ -955,10 +955,10 @@ BRM_hungry_marsh_categories = {
 			}
 			if = {
 				limit = { 
-					has_idea = BRM_idea_brm_strikes
+					has_idea = BRM_idea_brm_strikes_1
 				}
 				swap_ideas = {
-					remove_idea = BRM_idea_brm_strikes
+					remove_idea = BRM_idea_brm_strikes_1
 					add_idea = BRM_idea_brm_strikes_2
 				}
 			}
