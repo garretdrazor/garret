@@ -618,13 +618,55 @@ ideas = {
 				OR = {
 					has_government = neutrality
 					has_government = monarchy
+					has_government = democratic
 				}
 			}
 			picture = big_col_app
 			modifier = {
 				political_power_gain = 0.1
-				production_speed_industrial_complex_factor = 0.1
-				production_speed_arms_factory_factor = 0.1
+				production_speed_industrial_complex_factor = 0.05
+				production_speed_arms_factory_factor = 0.05
+			}
+		}
+		# Поддержка королевской семьи
+		BRM_idea_royal_support = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				OR = {
+					has_government = neutrality
+					has_government = monarchy
+				}
+			}
+			picture = big_col_app
+			modifier = {
+				political_power_gain = 0.1
+				monarchy_drift = 0.1
+			}
+		}
+		# Союз Пяти Цветков
+		BRM_idea_unite_flowers = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				OR = {
+					has_government = neutrality
+					has_government = monarchy
+				}
+			}
+			picture = big_col_app
+			modifier = {
+				autonomy_gain = 1
 			}
 		}
 	}

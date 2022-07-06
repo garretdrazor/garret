@@ -91,6 +91,15 @@ on_actions = {
 					country_event = { id = brm.37 }
 				}
 			}
+			if = {
+				limit = {
+					has_completed_focus = BRM_unite_five_flowers
+					has_autonomy_state = autonomy_dominion
+				}
+				BRM = {
+					country_event = { id = brm.38 }
+				}
+			}
 		}
 	}
 }

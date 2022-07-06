@@ -30,6 +30,40 @@ characters={
 			}
 		}
 	}
+	BRM_U_Ba_Phe={
+		name="U Ba Phe"
+		portraits={
+			civilian={
+				large="gfx/leaders/BRM/Portrait_U_Ba_Phe.dds"
+			}
+		}
+		country_leader={
+			ideology=despotism
+			traits={ 			}
+			expire="1.1.1.1"
+			id=-1
+			traits={
+				
+			}
+		}
+	}
+	BRM_Taw_Phaya_Gyi={
+		name="Taw Phaya Gyi"
+		portraits={
+			civilian={
+				large="gfx/leaders/BRM/Portrait_Taw_Phaya_Gyi.dds"
+			}
+		}
+		country_leader={
+			ideology=dual_monarchy
+			traits={ 			}
+			expire="1.1.1.1"
+			id=-1
+			traits={
+				
+			}
+		}
+	}
 	BRM_Smith_Dun={
 		name="Smith Dun"
 		portraits={

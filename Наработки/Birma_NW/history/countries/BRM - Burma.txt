@@ -17,6 +17,8 @@ set_convoys = 20
 
 recruit_character = BRM_Hugh_Lansdown_Stephenson
 recruit_character = BRM_Archibald_Douglas_Cochrane
+recruit_character = BRM_U_Ba_Phe
+recruit_character = BRM_Taw_Phaya_Gyi
 recruit_character = BRM_Smith_Dun
 country_lock_all_division_template = yes
 

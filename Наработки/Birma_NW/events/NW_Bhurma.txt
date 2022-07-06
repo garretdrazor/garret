@@ -1065,6 +1065,25 @@ country_event = {
 	}
 }
 
+# Конец забастовок
+country_event = {
+	id = brm.38
+	title = brm.38.t
+	desc = brm.38.d
+	picture = GFX_report_event_brm_38
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event brm.38" }
+
+	option = {
+		name = brm.38.a
+		retire_character = BRM_Archibald_Douglas_Cochrane
+		BRM_U_Ba_Phe = {
+			promote_leader = yes
+		}
+	}
+}
+
 # TEST
 country_event = {
 	id = brm.999

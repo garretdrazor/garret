@@ -175,6 +175,7 @@ focus_tree = {
 			
 		}
 	}
+	# Сформировать правительство
 	focus = {
 		id = BRM_form_parlament
 		text = BRM_form_parlament
@@ -198,9 +199,21 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_form_parlament"
 			add_political_power = -250
 			set_country_flag = BRM_parlament_ready_flag
+			RAJ = {
+				end_puppet = BRM
+			}
+			ENG = {
+				puppet = BRM
+				set_autonomy = {
+					target = BRM
+					autonomous_state = colony
+					freedom_level = 0.5
+				}
+			}
 			custom_effect_tooltip = BRM_brm_data_FFP_tt
 		}
 	}
+	# Объединить Союз Пяти Цветков
 	focus = {
 		id = BRM_unite_five_flowers
 		text = BRM_unite_five_flowers
@@ -209,14 +222,26 @@ focus_tree = {
 		prerequisite = {
 			focus = BRM_form_parlament
 		}
+		available = {
+			OR = {
+				has_government = neutrality
+				has_government = monarchy
+			}
+			has_country_flag = BRM_galon_rebelion_off_flag
+			NOT = {
+				has_country_flag = BRM_start_hangry_marhes_flag
+			}
+		}
 		x = 2
 		y = 2
 		relative_position_id = BRM_form_parlament
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_unite_five_flowers"
-			
+			add_political_power = 100
+			add_ideas = BRM_idea_unite_flowers
 		}
 	}
+	# Заручиться поддержкой королевской семьи
 	focus = {
 		id = BRM_royal_support
 		text = BRM_royal_support
@@ -228,12 +253,18 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = BRM_budda_activists
 		}
+		available = {
+			OR ={
+				has_government = neutrality
+				has_government = monarchy
+			}
+		}
 		x = 4
 		y = 1
 		relative_position_id = BRM_form_parlament
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_royal_support"
-			
+			add_ideas = BRM_idea_royal_support
 		}
 	}
 	focus = {
@@ -2118,6 +2149,7 @@ focus_tree = {
 			OR = {
 				has_government = neutrality
 				has_government = monarchy
+				has_government = democratic
 			}
 		}
 		x = 0
@@ -2128,20 +2160,60 @@ focus_tree = {
 			add_ideas = BRM_idea_industrial_support
 		}
 	}
+	# Новые фабрики
 	focus = {
 		id = BRM_new_factory
 		text = BRM_new_factory
 		icon = GFX_z_goal_prom_country
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = BRM_big_prom_support
+		}
+		available = {
+			OR = {
+				has_government = neutrality
+				has_government = monarchy
+				has_government = democratic
+			}
 		}
 		x = 0
 		y = 1
 		relative_position_id = BRM_big_prom_support
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus BRM_new_factory"
-			
+			random_state = { 
+			random_state = { 
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_state = { 
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_state = { 
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_state = { 
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	focus = {
@@ -2186,6 +2258,12 @@ focus_tree = {
 		cost = 10
 		prerequisite = {
 			focus = BRM_unite_five_flowers
+		}
+		available = {
+			OR = {
+				has_government = neutrality
+				has_government = monarchy
+			}
 		}
 		x = -2
 		y = 2
