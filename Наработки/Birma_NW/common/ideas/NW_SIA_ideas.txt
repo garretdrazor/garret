@@ -20,6 +20,25 @@ ideas = {
 				production_factory_max_efficiency_factor = -0.05
 			}
 		}
+		# Современная аграрная страна 
+		SIA_idea_agrar_2 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = BRM_idea_half_birma
+			modifier = {
+				MONTHLY_POPULATION = 0.25
+				conscription = -0.002
+				consumer_goods_factor = 0.05
+				production_speed_buildings_factor = -0.025
+				research_speed_factor = -0.02
+				production_factory_max_efficiency_factor = -0.025
+			}
+		}
 		# Последствия экономического кризиса 
 		SIA_idea_crisis_ekonom_1 = {
 			removal_cost = -1
@@ -549,6 +568,123 @@ ideas = {
 				consumer_goods_factor = 0.1
 				production_factory_max_efficiency_factor = -0.1
 				political_power_factor = -0.1
+			}
+		}
+		# Смешанные государственно-частные промышленные кампании
+		SIA_idea_ip_ooo = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = BRM_idea_half_birma
+			modifier = {
+				consumer_goods_factor = -0.05
+				line_change_production_efficiency_factor = 0.05
+				conversion_cost_civ_to_mil_factor = 0.25
+				conversion_cost_mil_to_civ_factor = 0.25
+			}
+		}
+		# Тай Ниа Паничако
+		SIA_idea_tai_nia = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = BRM_idea_half_birma
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				local_resources_factor = 0.15
+			}
+		}
+		# Сиамская цементная группа
+		SIA_idea_siam_cement = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = BRM_idea_half_birma
+			modifier = {
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		# Экспорт риса
+		SIA_idea_rice_export = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = BRM_idea_half_birma
+			modifier = {
+				consumer_goods_factor = -0.03
+			}
+		}
+		SIA_idea_rice_export_2 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = BRM_idea_half_birma
+			modifier = {
+				consumer_goods_factor = -0.06
+			}
+		}
+		# Экспорт табака
+		SIA_idea_tabaco_export = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = BRM_idea_half_birma
+			modifier = {
+				consumer_goods_factor = -0.06
+			}
+		}
+		# Группа управления воздушным движением
+		SIA_idea_vvs_taktik = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = BRM_idea_half_birma
+			modifier = {
+				air_fuel_consumption_factor = -0.1
+				experience_gain_air_factor = 0.1
+				air_range_factor = 0.1
+			}
+		}
+		# Аккумуляторный завод ВМФ
+		SIA_idea_accum_naval = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = BRM_idea_half_birma
+			modifier = {
+				industrial_capacity_dockyard = 0.05
 			}
 		}
 	}
