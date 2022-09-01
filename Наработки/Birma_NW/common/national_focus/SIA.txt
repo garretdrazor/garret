@@ -14,7 +14,7 @@ focus_tree = {
 		id = SIA_no_gold_valute
 		text = SIA_no_gold_valute
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		x = 4
 		y = 0
 			
@@ -26,6 +26,7 @@ focus_tree = {
 				mission = SIA_new_crisis_mission
 				days = 100
 			}
+			custom_effect_tooltip = SIA_tt_gold
 		}
 	}
 	# Создание королевских ВВС
@@ -33,7 +34,7 @@ focus_tree = {
 		id = SIA_create_vvs
 		text = SIA_create_vvs
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		x = 13
 		y = 0
 			
@@ -45,13 +46,14 @@ focus_tree = {
 				uses = 1
 				category = air_doctrine
 			}
+			custom_effect_tooltip = SIA_tt_ministers
 		}
 	}
 	focus = {
 		id = SIA_royal_police
 		text = SIA_royal_police
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		x = 19
 		y = 0
 		available ={
@@ -67,7 +69,7 @@ focus_tree = {
 		id = SIA_army_invest
 		text = SIA_army_invest
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		x = 25
 		y = 0
 		available ={
@@ -84,7 +86,7 @@ focus_tree = {
 		id = SIA_accum_factory
 		text = SIA_accum_factory
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		x = 32
 		y = 0
 			
@@ -154,7 +156,7 @@ focus_tree = {
 		id = SIA_deanonce_bad_theatry
 		text = SIA_deanonce_bad_theatry
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_no_gold_valute
 		}
@@ -178,7 +180,7 @@ focus_tree = {
 		id = SIA_back_border
 		text = SIA_back_border
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_no_gold_valute
 		}
@@ -250,6 +252,10 @@ focus_tree = {
 				}
 				remove_ideas = SIA_idea_crisis_ekonom_5
 			}
+			add_days_mission_timeout = {
+				mission = SIA_new_crisis_mission
+				days = 50
+			}
 		}
 	}
 	# Заключить новый договор с Францией
@@ -257,7 +263,7 @@ focus_tree = {
 		id = SIA_new_theatry_with_france
 		text = SIA_new_theatry_with_france
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_deanonce_bad_theatry
 			focus = SIA_back_border
@@ -330,6 +336,7 @@ focus_tree = {
 				}
 				remove_ideas = SIA_idea_crisis_ekonom_5
 			}
+			custom_effect_tooltip = SIA_tt_invest
 		}
 	}
 	# Инвестиции из Великобритании и США
@@ -337,7 +344,7 @@ focus_tree = {
 		id = SIA_usa_invest
 		text = SIA_usa_invest
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_deanonce_bad_theatry
 			focus = SIA_back_border
@@ -422,6 +429,7 @@ focus_tree = {
 				}
 				remove_ideas = SIA_idea_crisis_ekonom_5
 			}
+			custom_effect_tooltip = SIA_tt_invest
 		}
 	}
 	# Привлечь вложения Скандинавских стран
@@ -429,7 +437,7 @@ focus_tree = {
 		id = SIA_scan_invest
 		text = SIA_scan_invest
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_deanonce_bad_theatry
 			focus = SIA_back_border
@@ -510,6 +518,7 @@ focus_tree = {
 				}
 				remove_ideas = SIA_idea_crisis_ekonom_5
 			}
+			custom_effect_tooltip = SIA_tt_invest
 		}
 	}
 	# Итальянские и Германские концессии
@@ -517,7 +526,7 @@ focus_tree = {
 		id = SIA_right_invest
 		text = SIA_right_invest
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_deanonce_bad_theatry
 			focus = SIA_back_border
@@ -594,6 +603,7 @@ focus_tree = {
 				}
 				remove_ideas = SIA_idea_crisis_ekonom_5
 			}
+			custom_effect_tooltip = SIA_tt_invest
 		}
 	}
 	# Пойти на компромисс с Великобританией
@@ -601,7 +611,7 @@ focus_tree = {
 		id = SIA_GB_compromise
 		text = SIA_GB_compromise
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_new_theatry_with_france
 			focus = SIA_usa_invest
@@ -633,17 +643,23 @@ focus_tree = {
 		id = SIA_sugar_factory
 		text = SIA_sugar_factory
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_new_theatry_with_france
 			focus = SIA_usa_invest
 		}
 		x = 0
 		y = 3
+		
+		available = {
+			ROOT ={
+				controls_state = 724
+			}
+		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_sugar_factory"
-			random_state = { 
+			724 = { 
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
@@ -651,8 +667,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			random_state = { 
-				add_extra_state_shared_building_slots = 1
+			724 = { 
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -665,23 +680,34 @@ focus_tree = {
 			}
 		}
 	}
+	# Разделить добычу олова
 	focus = {
 		id = SIA_half_olovo
 		text = SIA_half_olovo
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_GB_compromise
 		}
 		x = 2
 		y = 4
 		available ={
-			
+			ROOT = {
+				controls_state = 289
+			}
 		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_half_olovo"
-			
+			289 = { 
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			remove_resource_rights = 289
 		}
 	}
 	focus = {
@@ -834,7 +860,7 @@ focus_tree = {
 		id = SIA_nacionalization_anather
 		text = SIA_nacionalization_anather
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_new_theatry_with_france
 			focus = SIA_usa_invest
@@ -933,13 +959,15 @@ focus_tree = {
 				GER = { add_opinion_modifier = { target = SIA modifier = SIA_en_us_nationalization } }
 				ITA = { add_opinion_modifier = { target = SIA modifier = SIA_en_us_nationalization } }
 			}
+			remove_resource_rights = 289
+			remove_resource_rights = 1173
 		}
 	}
 	focus = {
 		id = SIA_china_exile
 		text = SIA_china_exile
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_GB_compromise
 			focus = SIA_nacionalization_anather
@@ -963,7 +991,7 @@ focus_tree = {
 		id = SIA_china_nac
 		text = SIA_china_nac
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_GB_compromise
 			focus = SIA_nacionalization_anather
@@ -981,8 +1009,8 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_china_nac"
-			10 = { state_population = -25000 }
-			10 = { 
+			289 = { state_population = -25000 }
+			289 = { 
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
@@ -998,7 +1026,7 @@ focus_tree = {
 		id = SIA_univer_kasetsart
 		text = SIA_univer_kasetsart
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_china_exile
 			focus = SIA_china_nac
@@ -1020,16 +1048,22 @@ focus_tree = {
 		id = SIA_metal_and_rubber
 		text = SIA_metal_and_rubber
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_univer_kasetsart
 		}
 		x = 1
 		y = 6
+		
+		available = {
+			ROOT = {
+				controls_state =724
+			}
+		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_metal_and_rubber"
-			random_state = { 
+			724 = { 
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
@@ -1037,13 +1071,19 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				category = motorized_equipment
+			}
 		}
 	}
+	# Расширение каучуковых плантаций
 	focus = {
 		id = SIA_rubbon_up
 		text = SIA_rubbon_up
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_china_exile
 			focus = SIA_china_nac
@@ -1051,12 +1091,18 @@ focus_tree = {
 		x = 2
 		y = 5
 		available ={
-			
+			ROOT = {
+				controls_state = 724
+			}
 		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_rubbon_up"
-			
+			add_resource = {
+				type = rubber
+				amount = 30
+				state = 724
+			}
 		}
 	}
 	# Сиамская цементная группа
@@ -1064,7 +1110,7 @@ focus_tree = {
 		id = SIA_cement_group
 		text = SIA_cement_group
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_univer_kasetsart
 		}
@@ -1089,7 +1135,7 @@ focus_tree = {
 		id = SIA_univer_Mongkut
 		text = SIA_univer_Mongkut
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_cement_group
 		}
@@ -1104,23 +1150,34 @@ focus_tree = {
 			add_research_slot = 1
 		}
 	}
+	# Модернизация рельсовых систем
 	focus = {
 		id = SIA_up_rail_for_army
 		text = SIA_up_rail_for_army
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_military_parlament
 		}
 		x = 5
 		y = 11
 		available ={
-			
+			ROOT = {
+				controls_state = 1173
+			}
 		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_up_rail_for_army"
-			
+			1173 = { 
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_ideas = SIA_idea_rail_modernization
 		}
 	}
 	focus = {
@@ -1247,7 +1304,7 @@ focus_tree = {
 		id = SIA_rise_export
 		text = SIA_rise_export
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_china_exile
 			focus = SIA_china_nac
@@ -1276,7 +1333,7 @@ focus_tree = {
 		id = SIA_rise_factory
 		text = SIA_rise_factory
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_rise_export
 		}
@@ -1294,8 +1351,8 @@ focus_tree = {
 				}
 			}
 			swap_ideas = {
-				remove_idea = SIA_rise_export
-				add_idea = SIA_rise_export
+				remove_idea = SIA_idea_rice_export
+				add_idea = SIA_idea_rice_export_2
 			}
 		}
 	}
@@ -1336,23 +1393,30 @@ focus_tree = {
 			
 		}
 	}
+	# Железная шахта в Канчанабури
 	focus = {
 		id = SIA_irom_main
 		text = SIA_irom_main
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_univer_kasetsart
 		}
 		x = 7
 		y = 6
 		available ={
-			
+			ROOT = {
+				controls_state = 1173
+			}
 		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_irom_main"
-			
+			add_resource = {
+				type = steel
+				amount = 18
+				state = 1173
+			}
 		}
 	}
 	focus = {
@@ -1379,7 +1443,7 @@ focus_tree = {
 		id = SIA_beer_factory
 		text = SIA_beer_factory
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_scan_invest
 			focus = SIA_right_invest
@@ -1408,7 +1472,7 @@ focus_tree = {
 		id = SIA_ip_ooo
 		text = SIA_ip_ooo
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_nacionalization_anather
 		}
@@ -1425,7 +1489,7 @@ focus_tree = {
 		id = SIA_tai_nia_pachinko
 		text = SIA_tai_nia_pachinko
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_ip_ooo
 		}
@@ -1445,23 +1509,30 @@ focus_tree = {
 			add_ideas = SIA_idea_tai_nia
 		}
 	}
+	# Добыча нефти на севере
 	focus = {
 		id = SIA_north_oil
 		text = SIA_north_oil
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_irom_main
 		}
 		x = 8
 		y = 7
 		available ={
-			
+			ROOT = {
+				controls_state = 1173
+			}
 		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_north_oil"
-			
+			add_resource = {
+				type = oil
+				amount = 30
+				state = 1173
+			}
 		}
 	}
 	# Расширение табачных ферм и создание фабрик
@@ -1469,7 +1540,7 @@ focus_tree = {
 		id = SIA_tabacco_farm_and_factory
 		text = SIA_tabacco_farm_and_factory
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_rise_export
 		}
@@ -1488,11 +1559,12 @@ focus_tree = {
 			}
 		}
 	}
+	# Медицинский факультет Чулалонгкорнского университета
 	focus = {
 		id = SIA_med_air
 		text = SIA_med_air
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_china_exile
 			focus = SIA_china_nac
@@ -1501,12 +1573,15 @@ focus_tree = {
 		y = 5
 		available ={
 			num_of_civilian_factories > 50
+			ROOT = {
+				controls_state = 289
+			}
 		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_med_air"
 			add_research_slot = 1
-			446 = {
+			289 = {
 				add_building_construction = {
 					type = hospital
 					level = 2
@@ -1520,7 +1595,7 @@ focus_tree = {
 		id = SIA_tabacco_export
 		text = SIA_tabacco_export
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_tabacco_farm_and_factory
 		}
@@ -1537,7 +1612,7 @@ focus_tree = {
 		id = SIA_taktik_vvs
 		text = SIA_taktik_vvs
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_create_vvs
 		}
@@ -1559,7 +1634,7 @@ focus_tree = {
 		id = SIA_command_vvs
 		text = SIA_command_vvs
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_create_vvs
 		}
@@ -1589,11 +1664,12 @@ focus_tree = {
 			}
 		}
 	}
+	# Противовоздушная оборона авиабаз
 	focus = {
 		id = SIA_airdef_vvs
 		text = SIA_airdef_vvs
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_taktik_vvs
 			focus = SIA_command_vvs
@@ -1601,58 +1677,99 @@ focus_tree = {
 		x = 12
 		y = 2
 		available ={
-			
+			ROOT = {
+				controls_state = 1173
+				controls_state = 724
+			}
 		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_airdef_vvs"
-			
+			1173 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+			}
+			724 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
+	# Оборудование новых авиабаз
 	focus = {
 		id = SIA_new_airbase_vvs
 		text = SIA_new_airbase_vvs
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_create_vvs
 		}
 		x = 15
 		y = 1
 		available ={
-			
+			ROOT = {
+				controls_state = 1173
+				controls_state = 724
+			}
 		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_new_airbase_vvs"
-			
+			1173 = {
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			724 = {
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
+	# «Батальон специальных операций
 	focus = {
 		id = SIA_airspec_vvs
 		text = SIA_airspec_vvs
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_command_vvs
 			focus = SIA_new_airbase_vvs
 		}
 		x = 14
 		y = 2
-		available ={
-			
-		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_airspec_vvs"
-			
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				category = para_tech
+			}
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				category = cat_scout_plane
+			}
 		}
 	}
+	# Ставка на французские самолёты
 	focus = {
 		id = SIA_franch_air
 		text = SIA_franch_air
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_airdef_vvs
 			focus = SIA_airspec_vvs
@@ -1664,19 +1781,64 @@ focus_tree = {
 		x = 11
 		y = 3
 		available ={
-			
+			country_exists = FRA
+			FRA = {	has_opinion = { target = SIA value < 20 } }
+		}
+		
+		bypass ={
+			OR = {
+				NOT = {
+					country_exists = FRA
+				}
+				FRA = {
+					has_war_with = SIA
+				}
+			}
+			OR = {
+				NOT = {
+					country_exists = JAP
+				}
+				JAP = {
+					has_war_with = SIA
+				}
+			}
+			OR = {
+				NOT = {
+					country_exists = USA
+				}
+				USA = {
+					has_war_with = SIA
+				}
+			}
 		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_franch_air"
-			
+			add_political_power = -100
+			add_offsite_building = {
+				type = arms_factory
+				level = 1
+			}
+			FRA = {
+				create_production_license = {
+					target = SIA
+					equipment = {
+						type = fighter_equipment_1
+						version = 0
+						new_prioritised = no
+					}
+					cost_factor = 0
+				}
+				country_event = { id = sia.10 }
+			}
 		}
 	}
+	# Ставка на японские самолёты
 	focus = {
 		id = SIA_japan_air
 		text = SIA_japan_air
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_airdef_vvs
 			focus = SIA_airspec_vvs
@@ -1688,19 +1850,55 @@ focus_tree = {
 		x = 13
 		y = 3
 		available ={
-			
+			country_exists = JAP
+			JAP = {	has_opinion = { target = SIA value < 20 } }
+		}
+		
+		bypass ={
+			OR = {
+				NOT = {
+					country_exists = FRA
+				}
+				FRA = {
+					has_war_with = SIA
+				}
+			}
+			OR = {
+				NOT = {
+					country_exists = JAP
+				}
+				JAP = {
+					has_war_with = SIA
+				}
+			}
+			OR = {
+				NOT = {
+					country_exists = USA
+				}
+				USA = {
+					has_war_with = SIA
+				}
+			}
 		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_japan_air"
-			
+			add_political_power = -100
+			add_offsite_building = {
+				type = arms_factory
+				level = 1
+			}
+			JAP = {
+				country_event = { id = sia.11 }
+			}
 		}
 	}
+	# Ставка на Американские самолёты
 	focus = {
 		id = SIA_usa_air
 		text = SIA_usa_air
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_airdef_vvs
 			focus = SIA_airspec_vvs
@@ -1712,31 +1910,94 @@ focus_tree = {
 		x = 15
 		y = 3
 		available ={
-			
+			country_exists = USA
+			USA = {	has_opinion = { target = SIA value < 20 } }
+		}
+		
+		bypass ={
+			OR = {
+				NOT = {
+					country_exists = FRA
+				}
+				FRA = {
+					has_war_with = SIA
+				}
+			}
+			OR = {
+				NOT = {
+					country_exists = JAP
+				}
+				JAP = {
+					has_war_with = SIA
+				}
+			}
+			OR = {
+				NOT = {
+					country_exists = USA
+				}
+				USA = {
+					has_war_with = SIA
+				}
+			}
 		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_usa_air"
-			
+			add_political_power = -100
+			add_offsite_building = {
+				type = arms_factory
+				level = 1
+			}
+			USA = {
+				country_event = { id = sia.12 }
+			}
 		}
 	}
+	# Американские авиабазы
 	focus = {
 		id = SIA_usa_base
 		text = SIA_usa_base
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_usa_air
 		}
 		x = 15
 		y = 4
 		available ={
-			
+			country_exists = USA
+			USA = {	has_opinion = { target = SIA value < 20 } }
+			ROOT = {
+				controls_state = 1173
+				controls_state = 289
+			}
+		}
+		
+		bypass ={
+			NOT = {
+				country_exists = USA
+			}
+			USA = {
+				has_war_with = SIA
+			}
 		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_usa_base"
-			
+			1173 = {
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			289 = {
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
 	focus = {
@@ -1782,42 +2043,67 @@ focus_tree = {
 			
 		}
 	}
+	# Перенять японскую тактику
 	focus = {
 		id = SIA_japan_taktik
 		text = SIA_japan_taktik
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_japan_air
 		}
 		x = 13
 		y = 4
 		available ={
-			
+			country_exists = JAP
+			JAP = {	has_opinion = { target = SIA value < 20 } }
+		}
+		
+		bypass ={
+			NOT = {
+				country_exists = JAP
+			}
+			JAP = {
+				has_war_with = SIA
+			}
 		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_japan_taktik"
-			
+			set_rule = {
+				can_use_kamikaze_pilots = yes
+			}
+			add_ideas = SIA_idea_japan_tak_air
 		}
 	}
+	# Изучение французских двигателей
 	focus = {
 		id = SIA_franch_motor
 		text = SIA_franch_motor
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_franch_air
 		}
 		x = 11
 		y = 4
 		available ={
-			
+			country_exists = FRA
+			FRA = {	has_opinion = { target = SIA value < 20 } }
+		}
+		
+		bypass ={
+			NOT = {
+				country_exists = FRA
+			}
+			FRA = {
+				has_war_with = SIA
+			}
 		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_franch_motor"
-			
+			add_ideas = SIA_idea_french_motors
 		}
 	}
 	focus = {
@@ -1964,11 +2250,12 @@ focus_tree = {
 			
 		}
 	}
+	# Подразделение воздушного усиления
 	focus = {
 		id = SIA_power_air
 		text = SIA_power_air
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_usa_base
 			focus = SIA_japan_taktik
@@ -1980,12 +2267,17 @@ focus_tree = {
 		x = 16
 		y = 5
 		available ={
-			
+			has_completed_focus = SIA_airspec_vvs
 		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_power_air"
-			
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				category = para_tech
+			}
+			add_ideas = SIA_idea_PARU
 		}
 	}
 	focus = {
@@ -4140,42 +4432,87 @@ focus_tree = {
 			
 		}
 	}
+	# Очередной кредит на инфраструктуру
 	focus = {
 		id = SIA_infra_credit_gb
 		text = SIA_infra_credit_gb
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_invest_railroad_gb
 		}
 		x = 0
 		y = 5
 		available ={
-			
+			ROOT = {
+				controls_state = 724
+				controls_state = 1173
+				controls_state = 289
+			}
 		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_infra_credit_gb"
-			
+			724 = { 
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			1173 = { 
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			289 = { 
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
+	# Завод по восстановлению транспортных средств
 	focus = {
 		id = SIA_avto_factory
 		text = SIA_avto_factory
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_metal_and_rubber
 		}
 		x = 0
 		y = 7
 		available ={
-			
+			ROOT = {
+				controls_state = 724
+			}
 		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_avto_factory"
-			
+			724 = { 
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				category = motorized_equipment
+			}
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				category = engineers_tech
+			}
 		}
 	}
 	focus = {
@@ -4197,11 +4534,12 @@ focus_tree = {
 			
 		}
 	}
+	# Больница Пхумипона Адульядета
 	focus = {
 		id = SIA_med_air2
 		text = SIA_med_air2
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_med_air
 			focus = SIA_franch_motor
@@ -4211,19 +4549,44 @@ focus_tree = {
 		x = 11
 		y = 6
 		available ={
-			
+			ROOT = {
+				controls_state = 289
+				controls_state = 724
+				controls_state = 1173
+			}
 		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_med_air2"
-			
+			289 = {
+				add_building_construction = {
+					type = hospital
+					level = 2
+					instant_build = yes
+				}
+			}
+			724 = {
+				add_building_construction = {
+					type = hospital
+					level = 1
+					instant_build = yes
+				}
+			}
+			1173 = {
+				add_building_construction = {
+					type = hospital
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
+	# Батальон связи королевских ВВС
 	focus = {
 		id = SIA_radio_air
 		text = SIA_radio_air
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_usa_base
 			focus = SIA_japan_taktik
@@ -4232,12 +4595,25 @@ focus_tree = {
 		x = 13
 		y = 5
 		available ={
-			
+			has_completed_focus = SIA_taktik_vvs
 		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_radio_air"
-			
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				category = radar_tech
+			}
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 2
+				category = signal_company_tech
+			}
+			swap_ideas = {
+				remove_idea = SIA_idea_vvs_taktik
+				add_idea = SIA_idea_vvs_taktik_2
+			}
 		}
 	}
 	focus = {

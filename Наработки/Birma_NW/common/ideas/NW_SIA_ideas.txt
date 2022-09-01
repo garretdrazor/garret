@@ -673,6 +673,23 @@ ideas = {
 				air_range_factor = 0.1
 			}
 		}
+		# Группа управления воздушным движением
+		SIA_idea_vvs_taktik_2 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = BRM_idea_half_birma
+			modifier = {
+				air_fuel_consumption_factor = -0.1
+				experience_gain_air_factor = 0.1
+				air_range_factor = 0.1
+				air_ace_bonuses_factor = 0.1
+			}
+		}
 		# Аккумуляторный завод ВМФ
 		SIA_idea_accum_naval = {
 			removal_cost = -1
@@ -685,6 +702,66 @@ ideas = {
 			picture = BRM_idea_half_birma
 			modifier = {
 				industrial_capacity_dockyard = 0.05
+			}
+		}
+		# Модернизация рельсовых систем
+		SIA_idea_rail_modernization = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = BRM_idea_half_birma
+			modifier = {
+				production_speed_rail_way_factor = 0.25
+			}
+		}
+		# Французские двигатели
+		SIA_idea_french_motors = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = BRM_idea_half_birma
+			modifier = {
+				air_agility_factor = 0.1
+				air_escort_efficiency = 0.1
+				air_maximum_speed_factor = 0.1
+				motorized_speed_factor = 0.5
+			}
+		}
+		# Японская тактика воздушного боя
+		SIA_idea_japan_tak_air = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = BRM_idea_half_birma
+			modifier = {
+				air_ace_bonuses_factor = 0.2
+			}
+		}
+		# PARU
+		SIA_idea_PARU = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = BRM_idea_half_birma
+			modifier = {
+				new_operative_slot_bonus = 1
+				own_operative_intel_extraction_rate = 0.2
 			}
 		}
 	}

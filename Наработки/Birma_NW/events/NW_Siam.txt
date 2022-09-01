@@ -985,3 +985,48 @@ country_event = {
 		
 	}
 }
+# Французские самолёты выиграли тендер
+country_event = {
+	id = sia.10
+	title = sia.10.t
+	desc = sia.10.d
+	picture = GFX_report_event_sia_10
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event sia.10" }
+
+	option = {
+		name = sia.10.a
+		add_political_power = 100
+	}
+}
+# Японские самолёты выиграли тендер
+country_event = {
+	id = sia.11
+	title = sia.11.t
+	desc = sia.11.d
+	picture = GFX_report_event_sia_11
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event sia.11" }
+
+	option = {
+		name = sia.11.a
+		add_political_power = 100
+	}
+}
+# Американские самолёты выиграли тендер
+country_event = {
+	id = sia.12
+	title = sia.12.t
+	desc = sia.12.d
+	picture = GFX_report_event_sia_12
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event sia.12" }
+
+	option = {
+		name = sia.12.a
+		add_political_power = 100
+	}
+}

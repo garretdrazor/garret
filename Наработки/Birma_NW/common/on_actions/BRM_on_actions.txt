@@ -35,6 +35,16 @@ on_actions = {
 					country_event = { id = sia.4 days = 929 }
 				}
 			}
+			# Сиам британские концессии
+			if = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}
+				SIA = {
+					give_resource_rights = { receiver = ENG state = 289 }
+					give_resource_rights = { receiver = ENG state = 1173 }
+				}
+			}
 			# Бирма-комми ивенты
 			if = {
 				limit = {
