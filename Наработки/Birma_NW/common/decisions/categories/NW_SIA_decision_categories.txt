@@ -51,3 +51,24 @@ SIA_royal_naval_ships_categories = {
 		}
 	}
 }
+# Борьба полиции и армии за влияние
+SIA_police_army_conflict_categories = {
+	icon = eng_imperial_conference
+	allowed = {
+		original_tag = SIA
+		NOT = {
+			has_global_flag = THE_MOTHER_OF_ORDER_FLAG
+			has_global_flag = WORLD_OF_SPLIT_FLAG
+		}
+	}
+	visible = {
+		OR = {
+			NOT = {
+				has_completed_focus = SIA_choose_police
+			}
+			NOT = {
+				has_completed_focus = SIA_choose_army
+			}
+		}
+	}
+}

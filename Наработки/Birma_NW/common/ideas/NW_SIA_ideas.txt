@@ -764,5 +764,116 @@ ideas = {
 				own_operative_intel_extraction_rate = 0.2
 			}
 		}
+		# Противостояние полиции и армии
+		SIA_idea_police_army_1 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = BRM_idea_half_birma
+			modifier = {
+				stability_factor = 0.15
+				war_support_factor = -0.15
+				max_dig_in_factor = 0.15
+				compliance_growth_on_our_occupied_states = 0.15
+			}
+		}
+		SIA_idea_police_army_2 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = BRM_idea_half_birma
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = -0.1
+				max_dig_in_factor = 0.1
+				compliance_growth_on_our_occupied_states = 0.1
+			}
+		}
+		SIA_idea_police_army_3 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = BRM_idea_half_birma
+			modifier = {
+				stability_factor = 0.5
+				war_support_factor = -0.5
+				max_dig_in_factor = 0.5
+				compliance_growth_on_our_occupied_states = 0.5
+			}
+		}
+		SIA_idea_police_army_4 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = BRM_idea_half_birma
+			modifier = {
+				stability_factor = -0.5
+				war_support_factor = -0.5
+			}
+		}
+		SIA_idea_police_army_5 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = BRM_idea_half_birma
+			modifier = {
+				stability_factor = -0.5
+				war_support_factor = 0.5
+				army_attack_factor = 0.025
+				training_time_factor = 0.05
+			}
+		}
+		SIA_idea_police_army_6 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = BRM_idea_half_birma
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = 0.1
+				army_attack_factor = 0.05
+				training_time_factor = 0.1
+			}
+		}
+		SIA_idea_police_army_7 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = BRM_idea_half_birma
+			modifier = {
+				stability_factor = -0.15
+				war_support_factor = 0.15
+				army_attack_factor = 0.075
+				training_time_factor = 0.15
+			}
+		}
 	}
 }

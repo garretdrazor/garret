@@ -359,3 +359,72 @@ SIA_crisis_dangerous_categories = {
 		}
 	}
 }
+# Борьба полиции и армии за влияние
+SIA_bad_theatry_categories = {
+	SIA_general_1 = {
+		allowed = {
+			tag = SIA
+		}
+		available = {
+			has_completed_focus = SIA_royal_police
+			NOT = {
+				has_idea = SIA_idea_police_army_1
+			}
+		}
+		icon = eng_blackshirt_speech
+
+		cost = 75
+		days_remove = 7
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision SIA_general_1"
+			recruit_character = SIA_luang_chattrakankosol
+			custom_effect_tooltip = SIA_tt_police_upped
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 100
+				has_political_power > 75
+			}
+			
+			modifier = {
+				factor = 0
+				has_political_power < 75
+			}
+		}
+	}
+	SIA_general_2 = {
+		allowed = {
+			tag = SIA
+		}
+		available = {
+			has_completed_focus = SIA_royal_police
+			NOT = {
+				has_idea = SIA_idea_police_army_1
+			}
+		}
+		icon = eng_blackshirt_speech
+
+		cost = 75
+		days_remove = 7
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision SIA_general_2"
+			recruit_character = SIA_phao_siyanon
+			custom_effect_tooltip = SIA_tt_police_upped
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 100
+				has_political_power > 75
+			}
+			
+			modifier = {
+				factor = 0
+				has_political_power < 75
+			}
+		}
+	}
+}
