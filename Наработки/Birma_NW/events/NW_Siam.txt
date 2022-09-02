@@ -1030,3 +1030,61 @@ country_event = {
 		add_political_power = 100
 	}
 }
+# Первые подлодки прибыли
+country_event = {
+	id = sia.13
+	title = sia.13.t
+	desc = sia.13.d
+	picture = GFX_report_event_sia_13
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event sia.13" }
+
+	option = {
+		name = sia.13.a
+		
+		add_days_mission_timeout = {
+			mission = SIA_new_submarine_mission
+			days = 180
+		}
+		hidden_effect = {
+			set_country_flag = SIA_submarine_1_flag
+		}
+	}
+}
+# Последние подлодки прибыли
+country_event = {
+	id = sia.14
+	title = sia.14.t
+	desc = sia.14.d
+	picture = GFX_report_event_sia_14
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event sia.14" }
+
+	option = {
+		name = sia.14.a
+		
+		hidden_effect = {
+			set_country_flag = SIA_submarine_2_flag
+		}
+	}
+}
+# Линкоры прибыли
+country_event = {
+	id = sia.15
+	title = sia.15.t
+	desc = sia.15.d
+	picture = GFX_report_event_sia_15
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event sia.15" }
+
+	option = {
+		name = sia.15.a
+		
+		hidden_effect = {
+			set_country_flag = SIA_linkor_flag
+		}
+	}
+}

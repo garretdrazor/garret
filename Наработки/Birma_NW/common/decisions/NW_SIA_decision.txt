@@ -1,3 +1,4 @@
+# Дипломатические визиты
 SIA_bad_theatry_categories = {
 	SIA_ita_visit = {
 		allowed = {
@@ -270,7 +271,7 @@ SIA_bad_theatry_categories = {
 		}
 	}
 }
-
+# Опасность кризиса
 SIA_crisis_dangerous_categories = {
 	SIA_new_crisis_mission = {
 		allowed = {
@@ -289,6 +290,72 @@ SIA_crisis_dangerous_categories = {
 		icon = GFX_decision_wood_develop
 		timeout_effect = {
 			country_event = { id = sia.5 }
+		}
+	}
+}
+# Заказы Королевского флота
+SIA_crisis_dangerous_categories = {
+	SIA_new_submarine_mission = {
+		allowed = {
+			tag = SIA
+		}
+		available = {
+			country_exists = JAP
+			ROOT = {
+				NOT = {
+					has_war_with = JAP
+				}
+			}
+		}
+		activation = {
+			has_completed_focus = SIA_underwater
+			NOT = {
+				has_country_flag = SIA_submarine_2_flag
+			}
+		}
+		is_good = yes
+		days_mission_timeout = 420
+		icon = GFX_decision_wood_develop
+		timeout_effect = {
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = SIA_submarine_1_flag
+					}
+				}
+				country_event = { id = sia.13 days = 10}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = SIA_submarine_1_flag
+				}
+			country_event = { id = sia.14 days = 10}
+			}
+		}
+	}
+	SIA_new_linkor_mission = {
+		allowed = {
+			tag = SIA
+		}
+		available = {
+			country_exists = JAP
+			ROOT = {
+				NOT = {
+					has_war_with = JAP
+				}
+			}
+		}
+		activation = {
+			has_completed_focus = SIA_underwater
+			NOT = {
+				has_country_flag = SIA_linkor_flag
+			}
+		}
+		is_good = yes
+		days_mission_timeout = 420
+		icon = GFX_decision_wood_develop
+		timeout_effect = {
+			country_event = { id = sia.15 days = 10}
 		}
 	}
 }
