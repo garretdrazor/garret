@@ -118,7 +118,7 @@ characters={
 			}
 		}
 		corps_commander={
-		    traits = { politically_connected skilled_staffer }
+		    traits = { skilled_staffer }
 			skill=2
 			attack_skill=1
 			defense_skill=2
@@ -143,6 +143,82 @@ characters={
 			defense_skill=3
 			planning_skill=1
 			logistics_skill=2
+		}
+	}
+	SIA_rama_intru={
+		name=SIA_rama_intru
+		portraits={
+			army={
+				small="GFX_idea_generic_army_asia_2"
+			}
+			army={
+				large="gfx/leaders/SIA/Portrait_Rama_Intru.dds"
+			}
+		}
+		corps_commander={
+			traits={ career_officer }
+			skill=2
+			attack_skill=1
+			defense_skill=1
+			planning_skill=3
+			logistics_skill=2
+		}
+	}
+	SIA_Pkhra_Pkhicharnfonkit={
+		name=SIA_Pkhra_Pkhicharnfonkit
+		portraits={
+			army={
+				small="GFX_idea_generic_army_asia_2"
+			}
+			army={
+				large="gfx/leaders/SIA/Portrait_Pkhra_Pkhicharnfonkit.dds"
+			}
+		}
+		corps_commander={
+			traits={ commando panzer_leader }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=4
+		}
+	}
+	SIA_Adul_Aduldeydzharat={
+		name=SIA_Adul_Aduldeydzharat
+		portraits={
+			army={
+				small="GFX_idea_generic_army_asia_2"
+			}
+			army={
+				large="gfx/leaders/SIA/Portrait_Adul_Aduldeydzharat.dds"
+			}
+		}
+		corps_commander={
+			traits={ bearer_of_artillery }
+			skill=3
+			attack_skill=2
+			defense_skill=4
+			planning_skill=3
+			logistics_skill=2
+		}
+	}
+	SIA_Phit_Kriangsakpichit={
+		name=SIA_Phit_Kriangsakpichit
+		portraits={
+			army={
+				small="GFX_idea_generic_army_asia_2"
+			}
+			army={
+				large="gfx/leaders/SIA/Portrait_Phit_Kriangsakpichit.dds"
+			}
+		}
+		corps_commander={
+			traits={ bearer_of_artillery }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=3
 		}
 	}
 }

@@ -399,7 +399,7 @@ SIA_bad_theatry_categories = {
 			tag = SIA
 		}
 		available = {
-			has_completed_focus = SIA_royal_police
+			has_completed_focus = SIA_polit_police
 			NOT = {
 				has_idea = SIA_idea_police_army_1
 			}
@@ -413,6 +413,139 @@ SIA_bad_theatry_categories = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision SIA_general_2"
 			recruit_character = SIA_phao_siyanon
 			custom_effect_tooltip = SIA_tt_police_upped
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 100
+				has_political_power > 75
+			}
+			
+			modifier = {
+				factor = 0
+				has_political_power < 75
+			}
+		}
+	}
+	SIA_general_3 = {
+		allowed = {
+			tag = SIA
+		}
+		available = {
+			has_completed_focus = SIA_spec_buro
+			NOT = {
+				has_idea = SIA_idea_police_army_1
+			}
+		}
+		icon = eng_blackshirt_speech
+
+		cost = 75
+		days_remove = 7
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision SIA_general_3"
+			recruit_character = SIA_rama_intru
+			custom_effect_tooltip = SIA_tt_police_upped
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 100
+				has_political_power > 75
+			}
+			
+			modifier = {
+				factor = 0
+				has_political_power < 75
+			}
+		}
+	}
+	SIA_general_4 = {
+		allowed = {
+			tag = SIA
+		}
+		available = {
+			has_completed_focus = SIA_super_spec_buro
+			NOT = {
+				has_idea = SIA_idea_police_army_1
+			}
+		}
+		icon = eng_blackshirt_speech
+
+		cost = 75
+		days_remove = 7
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision SIA_general_4"
+			recruit_character = SIA_Pkhra_Pkhicharnfonkit
+			custom_effect_tooltip = SIA_tt_police_upped
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 100
+				has_political_power > 75
+			}
+			
+			modifier = {
+				factor = 0
+				has_political_power < 75
+			}
+		}
+	}
+	SIA_general_5 = {
+		allowed = {
+			tag = SIA
+		}
+		available = {
+			has_completed_focus = SIA_artillery_train
+			NOT = {
+				has_idea = SIA_idea_police_army_1
+			}
+		}
+		icon = eng_blackshirt_speech
+
+		cost = 75
+		days_remove = 7
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision SIA_general_5"
+			recruit_character = SIA_Adul_Aduldeydzharat
+			custom_effect_tooltip = SIA_tt_police_upped
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 100
+				has_political_power > 75
+			}
+			
+			modifier = {
+				factor = 0
+				has_political_power < 75
+			}
+		}
+	}
+	SIA_general_6 = {
+		allowed = {
+			tag = SIA
+		}
+		available = {
+			has_completed_focus = SIA_artillery_train
+			has_completed_focus = SIA_create_vvs
+			NOT = {
+				has_idea = SIA_idea_police_army_7
+			}
+		}
+		icon = eng_blackshirt_speech
+
+		cost = 75
+		days_remove = 7
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision SIA_general_6"
+			recruit_character = SIA_Phit_Kriangsakpichit
+			custom_effect_tooltip = SIA_tt_army_upped
 		}
 		ai_will_do = {
 			factor = 5
