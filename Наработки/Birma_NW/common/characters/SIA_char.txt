@@ -213,11 +213,106 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ bearer_of_artillery }
+			traits={ bearer_of_artillery air_chief_ground_support_3 }
 			skill=3
 			attack_skill=3
 			defense_skill=2
 			planning_skill=3
+			logistics_skill=3
+		}
+	}
+	SIA_Fin_Chunkhavan={
+		name=SIA_Fin_Chunkhavan
+		portraits={
+			army={
+				small="GFX_idea_generic_army_asia_2"
+			}
+			army={
+				large="gfx/leaders/SIA/Portrait_Fin_Chunkhavan.dds"
+			}
+		}
+		corps_commander={
+			traits={ Infantry_Leader Infantry_Officer }
+			skill=1
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+		}
+	}
+	SIA_Jaroon_Sereeruengrit={
+		name=SIA_Jaroon_Sereeruengrit
+		portraits={
+			army={
+				small="GFX_idea_generic_army_asia_2"
+			}
+			army={
+				large="gfx/leaders/SIA/Portrait_Jaroon_Sereeruengrit.dds"
+			}
+		}
+		corps_commander={
+			traits={ Organizer }
+			skill=1
+			attack_skill=1
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=2
+		}
+	}
+	SIA_Plaad_Phibunphanuwat={
+		name=SIA_Plaad_Phibunphanuwat
+		portraits={
+			army={
+				small="GFX_idea_generic_army_asia_2"
+			}
+			army={
+				large="gfx/leaders/SIA/Portrait_Plaad_Phibunphanuwat.dds"
+			}
+		}
+		corps_commander={
+			traits={ Career_Officer Camouflage_Expert }
+			skill=2
+			attack_skill=3
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=2
+		}
+	}
+	SIA_Phraya_Songsuradet={
+		name=SIA_Phraya_Songsuradet
+		portraits={
+			army={
+				small="GFX_idea_generic_army_asia_2"
+			}
+			army={
+				large="gfx/leaders/SIA/Portrait_Phraya_Songsuradet.dds"
+			}
+		}
+		corps_commander={
+			traits={ Engineer Engineer_Officer }
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=4
+			logistics_skill=2
+		}
+	}
+	SIA_Phraya_Thephasdin={
+		name=SIA_Phraya_Thephasdin
+		portraits={
+			army={
+				small="GFX_idea_generic_army_asia_2"
+			}
+			army={
+				large="gfx/leaders/SIA/Portrait_Phraya_Thephasdin.dds"
+			}
+		}
+		corps_commander={
+			traits={ War_Hero }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=2
 			logistics_skill=3
 		}
 	}

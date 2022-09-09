@@ -49,6 +49,7 @@ focus_tree = {
 			custom_effect_tooltip = SIA_tt_ministers
 		}
 	}
+	# Королевская полиция
 	focus = {
 		id = SIA_royal_police
 		text = SIA_royal_police
@@ -57,12 +58,61 @@ focus_tree = {
 		x = 19
 		y = 0
 		available ={
-			
+			NOT = {
+				has_idea = SIA_idea_police_army_1
+			}
 		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_royal_police"
+			army_experience = 5
 			
+			custom_effect_tooltip = SIA_tt_police_upped
+			if = {
+				limit = {
+					has_idea = SIA_idea_police_army_6
+				}
+				swap_ideas ={
+					remove_idea = SIA_idea_police_army_6
+					add_idea = SIA_idea_police_army_5
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SIA_idea_police_army_5
+				}
+				swap_ideas ={
+					remove_idea = SIA_idea_police_army_5
+					add_idea = SIA_idea_police_army_4
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SIA_idea_police_army_4
+				}
+				swap_ideas ={
+					remove_idea = SIA_idea_police_army_4
+					add_idea = SIA_idea_police_army_3
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SIA_idea_police_army_3
+				}
+				swap_ideas ={
+					remove_idea = SIA_idea_police_army_3
+					add_idea = SIA_idea_police_army_2
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SIA_idea_police_army_2
+				}
+				swap_ideas ={
+					remove_idea = SIA_idea_police_army_2
+					add_idea = SIA_idea_police_army_1
+				}
+			}
 		}
 	}
 	focus = {
@@ -2106,42 +2156,145 @@ focus_tree = {
 			add_ideas = SIA_idea_french_motors
 		}
 	}
+	# Бюро особого отделения
 	focus = {
 		id = SIA_spec_buro
 		text = SIA_spec_buro
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_royal_police
 		}
 		x = 18
 		y = 1
 		available ={
-			
+			NOT = {
+				has_idea = SIA_idea_police_army_1
+			}
 		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_spec_buro"
+			army_experience = 5
+			add_ideas = SIA_idea_police_spec
 			
+			custom_effect_tooltip = SIA_tt_police_upped
+			if = {
+				limit = {
+					has_idea = SIA_idea_police_army_6
+				}
+				swap_ideas ={
+					remove_idea = SIA_idea_police_army_6
+					add_idea = SIA_idea_police_army_5
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SIA_idea_police_army_5
+				}
+				swap_ideas ={
+					remove_idea = SIA_idea_police_army_5
+					add_idea = SIA_idea_police_army_4
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SIA_idea_police_army_4
+				}
+				swap_ideas ={
+					remove_idea = SIA_idea_police_army_4
+					add_idea = SIA_idea_police_army_3
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SIA_idea_police_army_3
+				}
+				swap_ideas ={
+					remove_idea = SIA_idea_police_army_3
+					add_idea = SIA_idea_police_army_2
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SIA_idea_police_army_2
+				}
+				swap_ideas ={
+					remove_idea = SIA_idea_police_army_2
+					add_idea = SIA_idea_police_army_1
+				}
+			}
 		}
 	}
+	# Политическая полиция
 	focus = {
 		id = SIA_polit_police
 		text = SIA_polit_police
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_spec_buro
 		}
 		x = 17
 		y = 2
 		available ={
-			
+			NOT = {
+				has_idea = SIA_idea_police_army_1
+			}
 		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_polit_police"
-			
+			swap_ideas = {
+				remove_idea = SIA_idea_police_spec
+				add_idea = SIA_idea_police_spec_2
+			}
+			custom_effect_tooltip = SIA_tt_police_upped
+			if = {
+				limit = {
+					has_idea = SIA_idea_police_army_6
+				}
+				swap_ideas ={
+					remove_idea = SIA_idea_police_army_6
+					add_idea = SIA_idea_police_army_5
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SIA_idea_police_army_5
+				}
+				swap_ideas ={
+					remove_idea = SIA_idea_police_army_5
+					add_idea = SIA_idea_police_army_4
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SIA_idea_police_army_4
+				}
+				swap_ideas ={
+					remove_idea = SIA_idea_police_army_4
+					add_idea = SIA_idea_police_army_3
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SIA_idea_police_army_3
+				}
+				swap_ideas ={
+					remove_idea = SIA_idea_police_army_3
+					add_idea = SIA_idea_police_army_2
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SIA_idea_police_army_2
+				}
+				swap_ideas ={
+					remove_idea = SIA_idea_police_army_2
+					add_idea = SIA_idea_police_army_1
+				}
+			}
 		}
 	}
 	focus = {
@@ -2190,6 +2343,7 @@ focus_tree = {
 			
 		}
 	}
+	# Зарубежная деятельность
 	focus = {
 		id = SIA_world_police
 		text = SIA_world_police
@@ -2201,14 +2355,63 @@ focus_tree = {
 		x = 19
 		y = 2
 		available ={
-			
+			NOT = {
+				has_idea = SIA_idea_police_army_1
+			}
 		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_world_police"
-			
+			add_ideas = SIA_idea_police_spec_world
+			custom_effect_tooltip = SIA_tt_police_upped
+			if = {
+				limit = {
+					has_idea = SIA_idea_police_army_6
+				}
+				swap_ideas ={
+					remove_idea = SIA_idea_police_army_6
+					add_idea = SIA_idea_police_army_5
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SIA_idea_police_army_5
+				}
+				swap_ideas ={
+					remove_idea = SIA_idea_police_army_5
+					add_idea = SIA_idea_police_army_4
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SIA_idea_police_army_4
+				}
+				swap_ideas ={
+					remove_idea = SIA_idea_police_army_4
+					add_idea = SIA_idea_police_army_3
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SIA_idea_police_army_3
+				}
+				swap_ideas ={
+					remove_idea = SIA_idea_police_army_3
+					add_idea = SIA_idea_police_army_2
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SIA_idea_police_army_2
+				}
+				swap_ideas ={
+					remove_idea = SIA_idea_police_army_2
+					add_idea = SIA_idea_police_army_1
+				}
+			}
 		}
 	}
+	# Ставка на силы полиции
 	focus = {
 		id = SIA_choose_police
 		text = SIA_choose_police
@@ -2223,12 +2426,23 @@ focus_tree = {
 		x = 19
 		y = 3
 		available ={
-			
+			has_idea = SIA_idea_police_army_1
+			NOT = {
+				has_government = fascism
+			}
+			has_country_flag = SIA_police_1_flag
+			has_country_flag = SIA_police_2_flag
+			has_country_flag = SIA_police_3_flag
+			has_country_flag = SIA_police_4_flag
+			has_country_flag = SIA_police_5_flag
 		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_choose_police"
 			
+			hidden_effect = {
+				set_country_flag = SIA_absolute_police_flag
+			}
 		}
 	}
 	focus = {
@@ -2341,6 +2555,7 @@ focus_tree = {
 			
 		}
 	}
+	# Специализированные подразделения бюро
 	focus = {
 		id = SIA_super_spec_buro
 		text = SIA_super_spec_buro
@@ -2352,12 +2567,60 @@ focus_tree = {
 		x = 20
 		y = 1
 		available ={
-			
+			NOT = {
+				has_idea = SIA_idea_police_army_7
+			}
 		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_super_spec_buro"
-			
+			add_ideas = SIA_idea_police_spec_super
+			custom_effect_tooltip = SIA_tt_police_upped
+			if = {
+				limit = {
+					has_idea = SIA_idea_police_army_6
+				}
+				swap_ideas ={
+					remove_idea = SIA_idea_police_army_6
+					add_idea = SIA_idea_police_army_5
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SIA_idea_police_army_5
+				}
+				swap_ideas ={
+					remove_idea = SIA_idea_police_army_5
+					add_idea = SIA_idea_police_army_4
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SIA_idea_police_army_4
+				}
+				swap_ideas ={
+					remove_idea = SIA_idea_police_army_4
+					add_idea = SIA_idea_police_army_3
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SIA_idea_police_army_3
+				}
+				swap_ideas ={
+					remove_idea = SIA_idea_police_army_3
+					add_idea = SIA_idea_police_army_2
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SIA_idea_police_army_2
+				}
+				swap_ideas ={
+					remove_idea = SIA_idea_police_army_2
+					add_idea = SIA_idea_police_army_1
+				}
+			}
 		}
 	}
 	focus = {

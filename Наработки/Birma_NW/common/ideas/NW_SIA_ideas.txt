@@ -875,5 +875,68 @@ ideas = {
 				training_time_factor = 0.15
 			}
 		}
+		# Особые подразделения полиции
+		SIA_idea_police_spec = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = BRM_idea_half_birma
+			modifier = {
+				compliance_growth_on_our_occupied_states = 0.1
+				resistance_activity = 0.2
+			}
+		}
+		SIA_idea_police_spec_2 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = BRM_idea_half_birma
+			modifier = {
+				compliance_growth_on_our_occupied_states = 0.1
+				resistance_activity = 0.2
+				political_power_gain = 0.1
+				drift_defence_factor = 0.2
+			}
+		}
+		# Зарубежные подразделения полиции
+		SIA_idea_police_spec_world = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = BRM_idea_half_birma
+			modifier = {
+				new_operative_slot_bonus = 2
+				own_operative_intel_extraction_rate = 0.2
+			}
+		}
+		# Специализированные подразделения бюро
+		SIA_idea_police_spec_super = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = BRM_idea_half_birma
+			modifier = {
+				consumer_goods_factor = -0.03
+				industrial_capacity_dockyard = 0.03
+				line_change_production_efficiency_factor = 0.05
+				supply_factor = 0.1
+			}
+		}
 	}
 }
