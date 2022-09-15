@@ -115,6 +115,7 @@ focus_tree = {
 			}
 		}
 	}
+	
 	focus = {
 		id = SIA_army_invest
 		text = SIA_army_invest
@@ -153,6 +154,7 @@ focus_tree = {
 			add_ideas = SIA_idea_accum_naval
 		}
 	}
+	
 	focus = {
 		id = SIA_land_maximum
 		text = SIA_land_maximum
@@ -169,6 +171,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_create_medicine
 		text = SIA_create_medicine
@@ -185,6 +188,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_woman_monks
 		text = SIA_woman_monks
@@ -760,6 +764,7 @@ focus_tree = {
 			remove_resource_rights = 289
 		}
 	}
+	
 	focus = {
 		id = SIA_military_parlament
 		text = SIA_military_parlament
@@ -783,6 +788,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_clearing_generals
 		text = SIA_clearing_generals
@@ -802,6 +808,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_create_idochina
 		text = SIA_create_idochina
@@ -821,6 +828,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_neutral_military
 		text = SIA_neutral_military
@@ -844,6 +852,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_upgrade_indochina
 		text = SIA_upgrade_indochina
@@ -867,6 +876,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_ally_prom
 		text = SIA_ally_prom
@@ -886,6 +896,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_military_ally
 		text = SIA_military_ally
@@ -1013,6 +1024,7 @@ focus_tree = {
 			remove_resource_rights = 1173
 		}
 	}
+	
 	focus = {
 		id = SIA_china_exile
 		text = SIA_china_exile
@@ -1230,6 +1242,7 @@ focus_tree = {
 			add_ideas = SIA_idea_rail_modernization
 		}
 	}
+	
 	focus = {
 		id = SIA_west_armor
 		text = SIA_west_armor
@@ -1249,6 +1262,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_water_infra
 		text = SIA_water_infra
@@ -1268,6 +1282,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_water_def
 		text = SIA_water_def
@@ -1287,6 +1302,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_with_german_inpire
 		text = SIA_with_german_inpire
@@ -1310,6 +1326,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_generals_from_german_impire
 		text = SIA_generals_from_german_impire
@@ -1329,6 +1346,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_military_ally_search
 		text = SIA_military_ally_search
@@ -1406,6 +1424,7 @@ focus_tree = {
 			}
 		}
 	}
+	
 	focus = {
 		id = SIA_east_armor
 		text = SIA_east_armor
@@ -1425,6 +1444,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_share_indochine
 		icon = GFX_goal_unknown
@@ -1469,6 +1489,7 @@ focus_tree = {
 			}
 		}
 	}
+	
 	focus = {
 		id = SIA_share_malasie
 		text = SIA_share_malasie
@@ -2050,6 +2071,7 @@ focus_tree = {
 			}
 		}
 	}
+	
 	focus = {
 		id = SIA_ressurect_commi
 		text = SIA_ressurect_commi
@@ -2074,6 +2096,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_soc_buddism
 		text = SIA_soc_buddism
@@ -2297,6 +2320,7 @@ focus_tree = {
 			}
 		}
 	}
+	
 	focus = {
 		id = SIA_third_path
 		text = SIA_third_path
@@ -2321,6 +2345,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_consensus_with_royalists
 		text = SIA_consensus_with_royalists
@@ -2348,7 +2373,7 @@ focus_tree = {
 		id = SIA_world_police
 		text = SIA_world_police
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_spec_buro
 		}
@@ -2416,7 +2441,7 @@ focus_tree = {
 		id = SIA_choose_police
 		text = SIA_choose_police
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_world_police
 		}
@@ -2445,23 +2470,21 @@ focus_tree = {
 			}
 		}
 	}
+	# Пограничная полиция
 	focus = {
 		id = SIA_border_police
 		text = SIA_border_police
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_choose_police
 		}
 		x = 17
 		y = 4
-		available ={
-			
-		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_border_police"
-			
+			add_ideas = SIA_idea_border_police
 		}
 	}
 	# Подразделение воздушного усиления
@@ -2494,25 +2517,24 @@ focus_tree = {
 			add_ideas = SIA_idea_PARU
 		}
 	}
+	# Разрешить женскую службу в полиции
 	focus = {
 		id = SIA_woman_police
 		text = SIA_woman_police
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_choose_police
 		}
 		x = 19
 		y = 4
-		available ={
-			
-		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_woman_police"
-			
+			add_ideas = SIA_idea_police_woman
 		}
 	}
+	
 	focus = {
 		id = SIA_no_party_with_royal
 		text = SIA_no_party_with_royal
@@ -2535,6 +2557,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_crown_fate
 		text = SIA_crown_fate
@@ -2555,6 +2578,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	# Специализированные подразделения бюро
 	focus = {
 		id = SIA_super_spec_buro
@@ -2623,6 +2647,7 @@ focus_tree = {
 			}
 		}
 	}
+
 	focus = {
 		id = SIA_police_randjers
 		text = SIA_police_randjers
@@ -2642,25 +2667,24 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_police_marsh
 		text = SIA_police_marsh
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_choose_police
 		}
 		x = 21
 		y = 4
-		available ={
-			
-		}
-			
+
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_police_marsh"
-			
+			add_ideas = SIA_idea_police_marsh
 		}
 	}
+	
 	focus = {
 		id = SIA_yellow_book
 		text = SIA_yellow_book
@@ -2680,6 +2704,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_industrial_with_company
 		text = SIA_industrial_with_company
@@ -2699,6 +2724,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_create_work_order
 		text = SIA_create_work_order
@@ -2718,6 +2744,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_create_free_thai
 		text = SIA_create_free_thai
@@ -2737,6 +2764,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_create_ekonomik_soviet
 		text = SIA_create_ekonomik_soviet
@@ -2756,6 +2784,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_create_league
 		text = SIA_create_league
@@ -2778,6 +2807,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_league_indochi
 		text = SIA_league_indochi
@@ -2797,6 +2827,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_league_research
 		text = SIA_league_research
@@ -2816,6 +2847,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_league_malaia
 		text = SIA_league_malaia
@@ -2835,6 +2867,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_GB_colonies
 		text = SIA_GB_colonies
@@ -2854,6 +2887,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_league_bhurma
 		text = SIA_league_bhurma
@@ -2874,6 +2908,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_long_recon
 		text = SIA_long_recon
@@ -2893,6 +2928,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_GB_tank
 		text = SIA_GB_tank
@@ -2915,6 +2951,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_Ger_tank
 		text = SIA_Ger_tank
@@ -2937,6 +2974,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_GB_rifle
 		text = SIA_GB_rifle
@@ -2961,6 +2999,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_siam_rifle
 		text = SIA_siam_rifle
@@ -2985,6 +3024,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_japan_rifle
 		text = SIA_japan_rifle
@@ -3009,6 +3049,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_choose_army
 		text = SIA_choose_army
@@ -3033,6 +3074,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_students_def
 		text = SIA_students_def
@@ -3052,6 +3094,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_general_shtab
 		text = SIA_general_shtab
@@ -3072,6 +3115,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_territory_cammanders
 		text = SIA_territory_cammanders
@@ -3094,6 +3138,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_powder_factory
 		text = SIA_powder_factory
@@ -3115,6 +3160,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_injeners_army
 		text = SIA_injeners_army
@@ -3137,6 +3183,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_border_conflict
 		text = SIA_border_conflict
@@ -3157,6 +3204,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_passive_path
 		text = SIA_passive_path
@@ -3181,6 +3229,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_no_generals_on_parlament
 		text = SIA_no_generals_on_parlament
@@ -3201,6 +3250,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_free_business
 		text = SIA_free_business
@@ -3220,6 +3270,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_rise_after_civil_dem
 		text = SIA_rise_after_civil_dem
@@ -3240,6 +3291,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_med_for_all
 		text = SIA_med_for_all
@@ -3259,6 +3311,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_ekonom_result
 		text = SIA_ekonom_result
@@ -3278,6 +3331,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_money_for_research
 		text = SIA_money_for_research
@@ -3298,6 +3352,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_rifle_factory
 		text = SIA_rifle_factory
@@ -3317,6 +3372,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_other_banks
 		text = SIA_other_banks
@@ -3336,6 +3392,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_royal_academy
 		text = SIA_royal_academy
@@ -3355,6 +3412,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_artillery_train
 		text = SIA_artillery_train
@@ -3374,6 +3432,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_new_trening
 		text = SIA_new_trening
@@ -3396,6 +3455,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_elephant_divisions
 		text = SIA_elephant_divisions
@@ -3415,6 +3475,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_strong_king
 		text = SIA_strong_king
@@ -3434,6 +3495,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_new_uncomm_order
 		text = SIA_new_uncomm_order
@@ -3453,6 +3515,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_faund_demparty
 		text = SIA_faund_demparty
@@ -3475,6 +3538,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_price_order
 		text = SIA_price_order
@@ -3497,6 +3561,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_west_politic
 		text = SIA_west_politic
@@ -3516,6 +3581,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_USA_ally
 		text = SIA_USA_ally
@@ -3540,6 +3606,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_find_dem_ally
 		text = SIA_find_dem_ally
@@ -3563,6 +3630,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_find_lic
 		text = SIA_find_lic
@@ -3582,6 +3650,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_find_war_missions
 		text = SIA_find_war_missions
@@ -3601,6 +3670,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_find_resours
 		text = SIA_find_resours
@@ -3621,6 +3691,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	# Подводные лодки класса Матчану
 	focus = {
 		id = SIA_underwater
@@ -3680,6 +3751,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_royal_vmf
 		text = SIA_royal_vmf
@@ -3699,6 +3771,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_Kentung_road
 		text = SIA_Kentung_road
@@ -3718,6 +3791,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	# Отправить подводников на обучение в Японию
 	focus = {
 		id = SIA_sea_train_in_japan
@@ -3872,6 +3946,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_usa_seaman
 		text = SIA_usa_seaman
@@ -3891,6 +3966,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_blue_army
 		icon = GFX_goal_unknown
@@ -3914,6 +3990,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_weak_constitution
 		text = SIA_weak_constitution
@@ -3933,6 +4010,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_deportament_seaman
 		text = SIA_deportament_seaman
@@ -3952,6 +4030,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_absolute_morachy
 		text = SIA_absolute_morachy
@@ -3971,6 +4050,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_contrrevolution_agents
 		text = SIA_contrrevolution_agents
@@ -3991,6 +4071,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_help_royal_company
 		text = SIA_help_royal_company
@@ -4010,6 +4091,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_royal_cult
 		text = SIA_royal_cult
@@ -4029,6 +4111,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_Rama_VII
 		text = SIA_Rama_VII
@@ -4048,6 +4131,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_new_king
 		text = SIA_new_king
@@ -4067,6 +4151,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_imperalism
 		text = SIA_imperalism
@@ -4089,6 +4174,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_royal_Laos
 		text = SIA_royal_Laos
@@ -4101,6 +4187,7 @@ focus_tree = {
 		y = 17
 
 	}
+	
 	focus = {
 		id = SIA_king_ally
 		text = SIA_king_ally
@@ -4120,6 +4207,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_royal_Cambodja
 		text = SIA_royal_Cambodja
@@ -4139,6 +4227,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_royal_south
 		text = SIA_royal_south
@@ -4158,6 +4247,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_municipalism
 		text = SIA_municipalism
@@ -4177,6 +4267,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_help_west
 		text = SIA_help_west
@@ -4199,6 +4290,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_migrate_order
 		text = SIA_migrate_order
@@ -4218,6 +4310,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_royal_Annam
 		icon = GFX_goal_unknown
@@ -4236,6 +4329,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_nac_irr_system
 		text = SIA_nac_irr_system
@@ -4258,6 +4352,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_royal_Bhurma
 		text = SIA_royal_Bhurma
@@ -4277,6 +4372,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_back_dinasty
 		text = SIA_back_dinasty
@@ -4296,6 +4392,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_back_princes
 		text = SIA_back_princes
@@ -4316,6 +4413,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_Bovorader_reforms
 		text = SIA_Bovorader_reforms
@@ -4335,6 +4433,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_18_corps
 		text = SIA_18_corps
@@ -4358,6 +4457,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_army_burocraty
 		text = SIA_army_burocraty
@@ -4377,6 +4477,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_Uvachon
 		text = SIA_Uvachon
@@ -4396,6 +4497,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_Songcram_cult
 		text = SIA_Songcram_cult
@@ -4415,6 +4517,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_thai_nac_bank
 		text = SIA_thai_nac_bank
@@ -4434,6 +4537,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_ultranac
 		text = SIA_ultranac
@@ -4453,6 +4557,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_Japan_friend
 		text = SIA_Japan_friend
@@ -4472,6 +4577,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_no_japan
 		text = SIA_no_japan
@@ -4494,6 +4600,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_yes_japan
 		text = SIA_yes_japan
@@ -4516,6 +4623,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_war_with_indchi
 		text = SIA_war_with_indchi
@@ -4536,6 +4644,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_thai_viette
 		text = SIA_thai_viette
@@ -4556,6 +4665,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_back_north_malaia
 		text = SIA_back_north_malaia
@@ -4576,6 +4686,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_help_bhurma_thai
 		text = SIA_help_bhurma_thai
@@ -4596,6 +4707,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_great_thai
 		text = SIA_great_thai
@@ -4618,6 +4730,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_back_last_thai
 		text = SIA_back_last_thai
@@ -4637,6 +4750,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_budda_city
 		text = SIA_budda_city
@@ -4656,6 +4770,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_build_oil_factory
 		text = SIA_build_oil_factory
@@ -4675,6 +4790,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_12_culture
 		text = SIA_12_culture
@@ -4694,6 +4810,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_destroy_seri_thai
 		text = SIA_destroy_seri_thai
@@ -4716,6 +4833,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_woman_army
 		text = SIA_woman_army
@@ -4735,6 +4853,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_soc_evolution
 		text = SIA_soc_evolution
@@ -4754,6 +4873,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_invest_railroad_gb
 		text = SIA_invest_railroad_gb
@@ -4976,6 +5096,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_thai_tank
 		text = SIA_thai_tank
@@ -4995,6 +5116,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_new_military_school
 		text = SIA_new_military_school
@@ -5014,6 +5136,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_military_prom
 		text = SIA_military_prom
@@ -5033,6 +5156,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_changmala
 		text = SIA_changmala
@@ -5052,6 +5176,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_proffessional_army
 		text = SIA_proffessional_army
@@ -5071,6 +5196,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_indochina_better
 		text = SIA_indochina_better
@@ -5090,6 +5216,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_rise_country
 		text = SIA_rise_country
@@ -5109,6 +5236,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_ppl_newspaper
 		text = SIA_ppl_newspaper
@@ -5128,6 +5256,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_central_profally
 		text = SIA_central_profally
@@ -5150,6 +5279,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_fiveyear_plan
 		text = SIA_fiveyear_plan
@@ -5169,6 +5299,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_radio_voice
 		text = SIA_radio_voice
@@ -5188,6 +5319,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_rev_yaung
 		text = SIA_rev_yaung
@@ -5207,6 +5339,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_no_king
 		text = SIA_no_king
@@ -5229,6 +5362,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_thai_urbazation
 		text = SIA_thai_urbazation
@@ -5248,6 +5382,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_hmong_soldiers
 		text = SIA_hmong_soldiers
@@ -5267,6 +5402,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_urban_teh
 		text = SIA_urban_teh
@@ -5287,6 +5423,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_west_sssr
 		text = SIA_west_sssr
@@ -5310,6 +5447,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_with_comchina
 		text = SIA_with_comchina
@@ -5332,6 +5470,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_with_SSSR
 		text = SIA_with_SSSR
@@ -5354,6 +5493,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_piece_with_chinese
 		text = SIA_piece_with_chinese
@@ -5373,6 +5513,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_chi_exp
 		text = SIA_chi_exp
@@ -5392,6 +5533,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_comchi_prom
 		text = SIA_comchi_prom
@@ -5411,6 +5553,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_chi_marx
 		text = SIA_chi_marx
@@ -5430,6 +5573,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_sssr_laos
 		text = SIA_sssr_laos
@@ -5449,6 +5593,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_sssr_cambodja
 		text = SIA_sssr_cambodja
@@ -5468,6 +5613,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_sssr_annam
 		text = SIA_sssr_annam
@@ -5488,6 +5634,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_sssr_indochina_again
 		text = SIA_sssr_indochina_again
@@ -5507,6 +5654,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_sssr_bhurma
 		text = SIA_sssr_bhurma
@@ -5526,6 +5674,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_sssr_malaisia
 		text = SIA_sssr_malaisia
@@ -5545,6 +5694,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_sssr_research
 		icon = GFX_goal_unknown
@@ -5563,6 +5713,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_sssr_philippins
 		text = SIA_sssr_philippins
@@ -5582,6 +5733,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_sssr_indonesia
 		text = SIA_sssr_indonesia
@@ -5601,6 +5753,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_central_pom_exp
 		text = SIA_central_pom_exp
@@ -5620,6 +5773,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_SSSR_generals
 		text = SIA_SSSR_generals
@@ -5639,6 +5793,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_ateism
 		text = SIA_ateism
@@ -5658,6 +5813,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_rev_education
 		text = SIA_rev_education
@@ -5677,6 +5833,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_united_thai
 		text = SIA_united_thai
@@ -5697,6 +5854,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_new_constitution
 		text = SIA_new_constitution
@@ -5716,6 +5874,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_create_nac_bank
 		text = SIA_create_nac_bank
@@ -5735,6 +5894,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_league_frank_colonies
 		text = SIA_league_frank_colonies
@@ -5754,6 +5914,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_league_phillipins
 		text = SIA_league_phillipins
@@ -5773,6 +5934,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_league_usa_colonies
 		text = SIA_league_usa_colonies
@@ -5792,6 +5954,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_league_indonesia
 		text = SIA_league_indonesia
@@ -5811,6 +5974,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_league_niderland_colonies
 		text = SIA_league_niderland_colonies
@@ -5830,6 +5994,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_league_one_federation
 		text = SIA_league_one_federation
@@ -5849,6 +6014,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_USA_generals
 		text = SIA_USA_generals
@@ -5868,6 +6034,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_USA_armory
 		text = SIA_USA_armory
@@ -5887,6 +6054,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_USA_research
 		text = SIA_USA_research
@@ -5906,6 +6074,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_USA_base_dem
 		text = SIA_USA_base_dem
@@ -5925,6 +6094,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_USA_lic
 		text = SIA_USA_lic
@@ -5947,6 +6117,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_USA_ekonomik_help
 		text = SIA_USA_ekonomik_help
@@ -5966,6 +6137,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_USA_stop_japan
 		text = SIA_USA_stop_japan
@@ -5986,6 +6158,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_restore_traditions
 		text = SIA_restore_traditions
@@ -6008,6 +6181,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_dem_neutral
 		text = SIA_dem_neutral
@@ -6032,6 +6206,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_royal_scouts
 		text = SIA_royal_scouts
@@ -6051,6 +6226,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_help_seri_thai
 		text = SIA_help_seri_thai
@@ -6073,6 +6249,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_west_modernization
 		text = SIA_west_modernization
@@ -6092,6 +6269,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_new_banknots
 		text = SIA_new_banknots
@@ -6111,6 +6289,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	focus = {
 		id = SIA_new_capital
 		text = SIA_new_capital

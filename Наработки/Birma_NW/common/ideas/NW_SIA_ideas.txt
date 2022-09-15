@@ -938,5 +938,49 @@ ideas = {
 				supply_factor = 0.1
 			}
 		}
+		# Разрешить женскую службу в полиции
+		SIA_idea_police_woman = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = BRM_idea_half_birma
+			modifier = {
+				conscription_factor = 0.08
+			}
+		}
+		# Пограничная полиция
+		SIA_idea_border_police = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = BRM_idea_half_birma
+			modifier = {
+				army_core_defence_factor = 0.1
+				required_garrison_factor = -0.2
+			}
+		}
+		# Марш общественного спокойствия
+		SIA_idea_police_marsh = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = BRM_idea_half_birma
+			modifier = {
+				war_stability_factor = 0.3
+				war_support_factor = 0.3
+			}
+		}
 	}
 }
