@@ -115,7 +115,7 @@ focus_tree = {
 			}
 		}
 	}
-	
+	# Увеличить инвестиции в армию
 	focus = {
 		id = SIA_army_invest
 		text = SIA_army_invest
@@ -124,12 +124,69 @@ focus_tree = {
 		x = 25
 		y = 0
 		available ={
-			
+			threat > 0.15
+			NOT = {
+				has_idea = SIA_idea_police_army_7
+			}
 		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_army_invest"
-			
+			army_experience = 5
+			random_state = { 
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = SIA_tt_army_upped
+			if = {
+				limit = {
+					has_idea = SIA_idea_police_army_2
+				}
+				swap_ideas ={
+					remove_idea = SIA_idea_police_army_2
+					add_idea = SIA_idea_police_army_3
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SIA_idea_police_army_3
+				}
+				swap_ideas ={
+					remove_idea = SIA_idea_police_army_3
+					add_idea = SIA_idea_police_army_4
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SIA_idea_police_army_4
+				}
+				swap_ideas ={
+					remove_idea = SIA_idea_police_army_4
+					add_idea = SIA_idea_police_army_5
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SIA_idea_police_army_5
+				}
+				swap_ideas ={
+					remove_idea = SIA_idea_police_army_5
+					add_idea = SIA_idea_police_army_6
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SIA_idea_police_army_6
+				}
+				swap_ideas ={
+					remove_idea = SIA_idea_police_army_6
+					add_idea = SIA_idea_police_army_7
+				}
+			}
 		}
 	}
 	# Аккумуляторный завод для Королевского ВМФ
