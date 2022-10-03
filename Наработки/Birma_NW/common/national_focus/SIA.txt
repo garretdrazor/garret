@@ -29,6 +29,7 @@ focus_tree = {
 			custom_effect_tooltip = SIA_tt_gold
 		}
 	}
+
 	# Создание королевских ВВС
 	focus = {
 		id = SIA_create_vvs
@@ -49,6 +50,7 @@ focus_tree = {
 			custom_effect_tooltip = SIA_tt_ministers
 		}
 	}
+
 	# Королевская полиция
 	focus = {
 		id = SIA_royal_police
@@ -115,6 +117,7 @@ focus_tree = {
 			}
 		}
 	}
+
 	# Увеличить инвестиции в армию
 	focus = {
 		id = SIA_army_invest
@@ -189,6 +192,7 @@ focus_tree = {
 			}
 		}
 	}
+
 	# Аккумуляторный завод для Королевского ВМФ
 	focus = {
 		id = SIA_accum_factory
@@ -262,6 +266,7 @@ focus_tree = {
 			
 		}
 	}
+
 	# Денонсация неравноправных договоров
 	focus = {
 		id = SIA_deanonce_bad_theatry
@@ -286,6 +291,7 @@ focus_tree = {
 			unlock_decision_category_tooltip = SIA_bad_theatry_categories
 		}
 	}
+
 	# Восстановление таможенной независимости
 	focus = {
 		id = SIA_back_border
@@ -369,6 +375,7 @@ focus_tree = {
 			}
 		}
 	}
+
 	# Заключить новый договор с Францией
 	focus = {
 		id = SIA_new_theatry_with_france
@@ -450,6 +457,7 @@ focus_tree = {
 			custom_effect_tooltip = SIA_tt_invest
 		}
 	}
+
 	# Инвестиции из Великобритании и США
 	focus = {
 		id = SIA_usa_invest
@@ -543,6 +551,7 @@ focus_tree = {
 			custom_effect_tooltip = SIA_tt_invest
 		}
 	}
+
 	# Привлечь вложения Скандинавских стран
 	focus = {
 		id = SIA_scan_invest
@@ -632,6 +641,7 @@ focus_tree = {
 			custom_effect_tooltip = SIA_tt_invest
 		}
 	}
+
 	# Итальянские и Германские концессии
 	focus = {
 		id = SIA_right_invest
@@ -717,6 +727,7 @@ focus_tree = {
 			custom_effect_tooltip = SIA_tt_invest
 		}
 	}
+
 	# Пойти на компромисс с Великобританией
 	focus = {
 		id = SIA_GB_compromise
@@ -749,6 +760,7 @@ focus_tree = {
 			ENG = { add_opinion_modifier = { target = SIA modifier = SIA_eng_compromiss } }
 		}
 	}
+
 	# Постройка сахарного завода
 	focus = {
 		id = SIA_sugar_factory
@@ -791,6 +803,7 @@ focus_tree = {
 			}
 		}
 	}
+
 	# Разделить добычу олова
 	focus = {
 		id = SIA_half_olovo
@@ -973,6 +986,7 @@ focus_tree = {
 			
 		}
 	}
+
 	#Национализация неугодных национальных кампаний
 	focus = {
 		id = SIA_nacionalization_anather
@@ -1105,6 +1119,7 @@ focus_tree = {
 			
 		}
 	}
+
 	# Национализировать имущество китайских ростовщиков
 	focus = {
 		id = SIA_china_nac
@@ -1140,6 +1155,7 @@ focus_tree = {
 			remove_ideas = SIA_idea_chine_workers
 		}
 	}
+
 	# Университет Касетсарт
 	focus = {
 		id = SIA_univer_kasetsart
@@ -1162,6 +1178,7 @@ focus_tree = {
 			}
 		}
 	}
+
 	# Основание Chaiseri Metal and Rubber
 	focus = {
 		id = SIA_metal_and_rubber
@@ -1197,6 +1214,7 @@ focus_tree = {
 			}
 		}
 	}
+
 	# Расширение каучуковых плантаций
 	focus = {
 		id = SIA_rubbon_up
@@ -1224,6 +1242,7 @@ focus_tree = {
 			}
 		}
 	}
+
 	# Сиамская цементная группа
 	focus = {
 		id = SIA_cement_group
@@ -1249,6 +1268,7 @@ focus_tree = {
 			add_ideas = SIA_idea_siam_cement
 		}
 	}
+
 	# Институт имени короля Монгкута
 	focus = {
 		id = SIA_univer_Mongkut
@@ -1269,6 +1289,7 @@ focus_tree = {
 			add_research_slot = 1
 		}
 	}
+
 	# Модернизация рельсовых систем
 	focus = {
 		id = SIA_up_rail_for_army
@@ -1424,6 +1445,7 @@ focus_tree = {
 			
 		}
 	}
+
 	# Экспорт риса
 	focus = {
 		id = SIA_rise_export
@@ -1453,6 +1475,7 @@ focus_tree = {
 			add_ideas = SIA_idea_rice_export
 		}
 	}
+
 	# Рисообрабатывающие фабрики
 	focus = {
 		id = SIA_rise_factory
@@ -1520,6 +1543,7 @@ focus_tree = {
 			
 		}
 	}
+
 	# Железная шахта в Канчанабури
 	focus = {
 		id = SIA_irom_main
@@ -1566,6 +1590,7 @@ focus_tree = {
 			
 		}
 	}
+
 	# Постройка пивоваренного завода
 	focus = {
 		id = SIA_beer_factory
@@ -1595,6 +1620,7 @@ focus_tree = {
 			}
 		}
 	}
+
 	# Смешанные государственно-частные промышленные кампании
 	focus = {
 		id = SIA_ip_ooo
@@ -1612,6 +1638,7 @@ focus_tree = {
 			add_ideas = SIA_idea_ip_ooo
 		}
 	}
+
 	# Основание «Тай Ниа Паничако»
 	focus = {
 		id = SIA_tai_nia_pachinko
@@ -1637,6 +1664,7 @@ focus_tree = {
 			add_ideas = SIA_idea_tai_nia
 		}
 	}
+
 	# Добыча нефти на севере
 	focus = {
 		id = SIA_north_oil
@@ -1663,6 +1691,7 @@ focus_tree = {
 			}
 		}
 	}
+
 	# Расширение табачных ферм и создание фабрик
 	focus = {
 		id = SIA_tabacco_farm_and_factory
@@ -1687,6 +1716,7 @@ focus_tree = {
 			}
 		}
 	}
+
 	# Медицинский факультет Чулалонгкорнского университета
 	focus = {
 		id = SIA_med_air
@@ -1718,6 +1748,7 @@ focus_tree = {
 			}
 		}
 	}
+
 	# Отправить табак на экспорт
 	focus = {
 		id = SIA_tabacco_export
@@ -1735,6 +1766,7 @@ focus_tree = {
 			add_ideas = SIA_idea_tabaco_export
 		}
 	}
+
 	# Тактическая группа управления воздушным движением
 	focus = {
 		id = SIA_taktik_vvs
@@ -1757,6 +1789,7 @@ focus_tree = {
 			add_ideas = SIA_idea_vvs_taktik
 		}
 	}
+	
 	# Командование сил безопасности ВВС
 	focus = {
 		id = SIA_command_vvs
@@ -1792,6 +1825,7 @@ focus_tree = {
 			}
 		}
 	}
+
 	# Противовоздушная оборона авиабаз
 	focus = {
 		id = SIA_airdef_vvs
@@ -1829,6 +1863,7 @@ focus_tree = {
 			}
 		}
 	}
+
 	# Оборудование новых авиабаз
 	focus = {
 		id = SIA_new_airbase_vvs
@@ -1865,6 +1900,7 @@ focus_tree = {
 			}
 		}
 	}
+
 	# «Батальон специальных операций
 	focus = {
 		id = SIA_airspec_vvs
@@ -1892,6 +1928,7 @@ focus_tree = {
 			}
 		}
 	}
+
 	# Ставка на французские самолёты
 	focus = {
 		id = SIA_franch_air
@@ -1961,6 +1998,7 @@ focus_tree = {
 			}
 		}
 	}
+
 	# Ставка на японские самолёты
 	focus = {
 		id = SIA_japan_air
@@ -2021,6 +2059,7 @@ focus_tree = {
 			}
 		}
 	}
+	
 	# Ставка на Американские самолёты
 	focus = {
 		id = SIA_usa_air
@@ -2081,6 +2120,7 @@ focus_tree = {
 			}
 		}
 	}
+	
 	# Американские авиабазы
 	focus = {
 		id = SIA_usa_base
@@ -2173,6 +2213,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	# Перенять японскую тактику
 	focus = {
 		id = SIA_japan_taktik
@@ -2206,6 +2247,7 @@ focus_tree = {
 			add_ideas = SIA_idea_japan_tak_air
 		}
 	}
+	
 	# Изучение французских двигателей
 	focus = {
 		id = SIA_franch_motor
@@ -2236,6 +2278,7 @@ focus_tree = {
 			add_ideas = SIA_idea_french_motors
 		}
 	}
+	
 	# Бюро особого отделения
 	focus = {
 		id = SIA_spec_buro
@@ -2306,6 +2349,7 @@ focus_tree = {
 			}
 		}
 	}
+	
 	# Политическая полиция
 	focus = {
 		id = SIA_polit_police
@@ -2425,6 +2469,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	# Зарубежная деятельность
 	focus = {
 		id = SIA_world_police
@@ -2493,6 +2538,7 @@ focus_tree = {
 			}
 		}
 	}
+	
 	# Ставка на силы полиции
 	focus = {
 		id = SIA_choose_police
@@ -2966,31 +3012,90 @@ focus_tree = {
 		}
 	}
 	
+	# Методы дальней разведки
 	focus = {
 		id = SIA_long_recon
 		text = SIA_long_recon
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_army_invest
 		}
 		x = 22
 		y = 1
 		available ={
-			
+			NOT = {
+				has_idea = SIA_idea_police_army_7
+			}
 		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_long_recon"
-			
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = recon_tech
+			}
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = mot_recon
+			}
+			custom_effect_tooltip = SIA_tt_army_upped
+			if = {
+				limit = {
+					has_idea = SIA_idea_police_army_2
+				}
+				swap_ideas ={
+					remove_idea = SIA_idea_police_army_2
+					add_idea = SIA_idea_police_army_3
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SIA_idea_police_army_3
+				}
+				swap_ideas ={
+					remove_idea = SIA_idea_police_army_3
+					add_idea = SIA_idea_police_army_4
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SIA_idea_police_army_4
+				}
+				swap_ideas ={
+					remove_idea = SIA_idea_police_army_4
+					add_idea = SIA_idea_police_army_5
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SIA_idea_police_army_5
+				}
+				swap_ideas ={
+					remove_idea = SIA_idea_police_army_5
+					add_idea = SIA_idea_police_army_6
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SIA_idea_police_army_6
+				}
+				swap_ideas ={
+					remove_idea = SIA_idea_police_army_6
+					add_idea = SIA_idea_police_army_7
+				}
+			}
 		}
 	}
 	
+	# Использование британской техники
 	focus = {
 		id = SIA_GB_tank
 		text = SIA_GB_tank
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_army_invest
 		}
@@ -3000,20 +3105,79 @@ focus_tree = {
 		x = 24
 		y = 1
 		available ={
-			
+			NOT = {
+				has_idea = SIA_idea_police_army_7
+			}
+			ENG = {
+				country_exists = yes
+				has_opinion = { target = SIA value < 20 }
+				NOT = {
+					has_war_with = SIA
+				}
+			}
 		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_GB_tank"
+			add_political_power = -100
+			add_offsite_building = { type = arms_factory level = 1 }
 			
+			ENG = { country_event = { id = sia.16 } }
+			custom_effect_tooltip = SIA_tt_army_upped
+			if = {
+				limit = {
+					has_idea = SIA_idea_police_army_2
+				}
+				swap_ideas ={
+					remove_idea = SIA_idea_police_army_2
+					add_idea = SIA_idea_police_army_3
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SIA_idea_police_army_3
+				}
+				swap_ideas ={
+					remove_idea = SIA_idea_police_army_3
+					add_idea = SIA_idea_police_army_4
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SIA_idea_police_army_4
+				}
+				swap_ideas ={
+					remove_idea = SIA_idea_police_army_4
+					add_idea = SIA_idea_police_army_5
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SIA_idea_police_army_5
+				}
+				swap_ideas ={
+					remove_idea = SIA_idea_police_army_5
+					add_idea = SIA_idea_police_army_6
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SIA_idea_police_army_6
+				}
+				swap_ideas ={
+					remove_idea = SIA_idea_police_army_6
+					add_idea = SIA_idea_police_army_7
+				}
+			}
 		}
 	}
 	
+	# Использование германской техники
 	focus = {
 		id = SIA_Ger_tank
 		text = SIA_Ger_tank
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_army_invest
 		}
@@ -3023,20 +3187,78 @@ focus_tree = {
 		x = 26
 		y = 1
 		available ={
-			
+			NOT = {
+				has_idea = SIA_idea_police_army_7
+			}
+			GER = {
+				country_exists = yes
+				has_opinion = { target = SIA value < 20 }
+				NOT = {
+					has_war_with = SIA
+				}
+			}
 		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_Ger_tank"
-			
+			add_political_power = -100
+			add_offsite_building = { type = arms_factory level = 1 }
+			GER = { country_event = { id = sia.17 } }
+			custom_effect_tooltip = SIA_tt_army_upped
+			if = {
+				limit = {
+					has_idea = SIA_idea_police_army_2
+				}
+				swap_ideas ={
+					remove_idea = SIA_idea_police_army_2
+					add_idea = SIA_idea_police_army_3
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SIA_idea_police_army_3
+				}
+				swap_ideas ={
+					remove_idea = SIA_idea_police_army_3
+					add_idea = SIA_idea_police_army_4
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SIA_idea_police_army_4
+				}
+				swap_ideas ={
+					remove_idea = SIA_idea_police_army_4
+					add_idea = SIA_idea_police_army_5
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SIA_idea_police_army_5
+				}
+				swap_ideas ={
+					remove_idea = SIA_idea_police_army_5
+					add_idea = SIA_idea_police_army_6
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SIA_idea_police_army_6
+				}
+				swap_ideas ={
+					remove_idea = SIA_idea_police_army_6
+					add_idea = SIA_idea_police_army_7
+				}
+			}
 		}
 	}
 	
+	# Британское вооружение
 	focus = {
 		id = SIA_GB_rifle
 		text = SIA_GB_rifle
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_GB_tank
 			focus = SIA_Ger_tank
@@ -3048,20 +3270,78 @@ focus_tree = {
 		x = 22
 		y = 2
 		available ={
-			
+			NOT = {
+				has_idea = SIA_idea_police_army_7
+			}
+			ENG = {
+				country_exists = yes
+				has_opinion = { target = SIA value < 20 }
+				NOT = {
+					has_war_with = SIA
+				}
+			}
 		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_GB_rifle"
-			
+			add_political_power = -50
+			add_offsite_building = { type = arms_factory level = 1 }
+			ENG = { country_event = { id = sia.18 } }
+			custom_effect_tooltip = SIA_tt_army_upped
+			if = {
+				limit = {
+					has_idea = SIA_idea_police_army_2
+				}
+				swap_ideas ={
+					remove_idea = SIA_idea_police_army_2
+					add_idea = SIA_idea_police_army_3
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SIA_idea_police_army_3
+				}
+				swap_ideas ={
+					remove_idea = SIA_idea_police_army_3
+					add_idea = SIA_idea_police_army_4
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SIA_idea_police_army_4
+				}
+				swap_ideas ={
+					remove_idea = SIA_idea_police_army_4
+					add_idea = SIA_idea_police_army_5
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SIA_idea_police_army_5
+				}
+				swap_ideas ={
+					remove_idea = SIA_idea_police_army_5
+					add_idea = SIA_idea_police_army_6
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SIA_idea_police_army_6
+				}
+				swap_ideas ={
+					remove_idea = SIA_idea_police_army_6
+					add_idea = SIA_idea_police_army_7
+				}
+			}
 		}
 	}
 	
+	# Разработка Сиамской винтовки RS model 66
 	focus = {
 		id = SIA_siam_rifle
 		text = SIA_siam_rifle
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_GB_tank
 			focus = SIA_Ger_tank
@@ -3073,20 +3353,28 @@ focus_tree = {
 		x = 24
 		y = 2
 		available ={
-			
+			NOT = {
+				has_idea = SIA_idea_police_army_7
+			}
+			num_of_factories > 15
 		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_siam_rifle"
-			
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = infantry_weapons
+			}
 		}
 	}
 	
+	# Японское вооружение
 	focus = {
 		id = SIA_japan_rifle
 		text = SIA_japan_rifle
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_GB_tank
 			focus = SIA_Ger_tank
@@ -3098,20 +3386,78 @@ focus_tree = {
 		x = 26
 		y = 2
 		available ={
-			
+			NOT = {
+				has_idea = SIA_idea_police_army_7
+			}
+			JAP = {
+				country_exists = yes
+				has_opinion = { target = SIA value < 20 }
+				NOT = {
+					has_war_with = SIA
+				}
+			}
 		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_japan_rifle"
-			
+			add_political_power = -50
+			add_offsite_building = { type = arms_factory level = 1 }
+			JAP = { country_event = { id = sia.19 } }
+			custom_effect_tooltip = SIA_tt_army_upped
+			if = {
+				limit = {
+					has_idea = SIA_idea_police_army_2
+				}
+				swap_ideas ={
+					remove_idea = SIA_idea_police_army_2
+					add_idea = SIA_idea_police_army_3
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SIA_idea_police_army_3
+				}
+				swap_ideas ={
+					remove_idea = SIA_idea_police_army_3
+					add_idea = SIA_idea_police_army_4
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SIA_idea_police_army_4
+				}
+				swap_ideas ={
+					remove_idea = SIA_idea_police_army_4
+					add_idea = SIA_idea_police_army_5
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SIA_idea_police_army_5
+				}
+				swap_ideas ={
+					remove_idea = SIA_idea_police_army_5
+					add_idea = SIA_idea_police_army_6
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SIA_idea_police_army_6
+				}
+				swap_ideas ={
+					remove_idea = SIA_idea_police_army_6
+					add_idea = SIA_idea_police_army_7
+				}
+			}
 		}
 	}
 	
+	# Ставка на силы армии
 	focus = {
 		id = SIA_choose_army
 		text = SIA_choose_army
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_GB_rifle
 			focus = SIA_siam_rifle
@@ -3123,61 +3469,64 @@ focus_tree = {
 		x = 24
 		y = 3
 		available ={
-			
+			has_idea = SIA_idea_police_army_7
+			has_country_flag = SIA_police_6_flag
+			has_country_flag = SIA_police_7_flag
+			has_country_flag = SIA_police_8_flag
+			has_country_flag = SIA_police_8_flag
 		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_choose_army"
-			
+			hidden_effect = {
+				set_country_flag = SIA_absolute_army_flag
+			}
 		}
 	}
 	
+	# Студенты территориальной обороны
 	focus = {
 		id = SIA_students_def
 		text = SIA_students_def
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_choose_army
 		}
 		x = 23
 		y = 4
-		available ={
-			
-		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_students_def"
-			
+			add_ideas = SIA_idea_military_students
 		}
 	}
 	
+	# Организовать генеральный штаб
 	focus = {
 		id = SIA_general_shtab
 		text = SIA_general_shtab
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_police_marsh
 			focus = SIA_students_def
 		}
 		x = 22
 		y = 5
-		available ={
-			
-		}
-			
+	
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_general_shtab"
-			
+			add_ideas = SIA_idea_genshtab_1
 		}
 	}
 	
+	# Командование территориальной обороны
 	focus = {
 		id = SIA_territory_cammanders
 		text = SIA_territory_cammanders
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_choose_army
 		}
@@ -3186,21 +3535,22 @@ focus_tree = {
 		}
 		x = 24
 		y = 6
-		available ={
-			
-		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_territory_cammanders"
-			
+			swap_ideas = {
+				remove_idea = SIA_idea_genshtab_1
+				add_idea = SIA_idea_genshtab_2
+			}
 		}
 	}
 	
+	# Пороховые заводы
 	focus = {
 		id = SIA_powder_factory
 		text = SIA_powder_factory
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_GB_rifle
 			focus = SIA_siam_rifle
@@ -3214,15 +3564,23 @@ focus_tree = {
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_powder_factory"
-			
+			random_state = { 
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	
+	# Ремонтный и инженерный отдел
 	focus = {
 		id = SIA_injeners_army
 		text = SIA_injeners_army
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_choose_army
 		}
@@ -3231,13 +3589,19 @@ focus_tree = {
 		}
 		x = 25
 		y = 4
-		available ={
-			
-		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_injeners_army"
-			
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = radar_tech
+			}
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = tech_engineers
+			}
 		}
 	}
 	
@@ -3410,6 +3774,7 @@ focus_tree = {
 		}
 	}
 	
+	# Расширение оружейных заводов
 	focus = {
 		id = SIA_rifle_factory
 		text = SIA_rifle_factory
@@ -3426,7 +3791,14 @@ focus_tree = {
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_rifle_factory"
-			
+			random_state = { 
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
 	
@@ -3450,46 +3822,156 @@ focus_tree = {
 		}
 	}
 	
+	# Королевская военная академия Чулачомклао
 	focus = {
 		id = SIA_royal_academy
 		text = SIA_royal_academy
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_army_invest
 		}
 		x = 28
 		y = 1
 		available ={
-			
+			NOT = {
+				has_idea = SIA_idea_police_army_7
+			}
 		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_royal_academy"
-			
+			army_experience = 10
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+			add_ideas = SIA_idea_military_academy
+			custom_effect_tooltip = SIA_tt_army_upped
+			if = {
+				limit = {
+					has_idea = SIA_idea_police_army_2
+				}
+				swap_ideas ={
+					remove_idea = SIA_idea_police_army_2
+					add_idea = SIA_idea_police_army_3
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SIA_idea_police_army_3
+				}
+				swap_ideas ={
+					remove_idea = SIA_idea_police_army_3
+					add_idea = SIA_idea_police_army_4
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SIA_idea_police_army_4
+				}
+				swap_ideas ={
+					remove_idea = SIA_idea_police_army_4
+					add_idea = SIA_idea_police_army_5
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SIA_idea_police_army_5
+				}
+				swap_ideas ={
+					remove_idea = SIA_idea_police_army_5
+					add_idea = SIA_idea_police_army_6
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SIA_idea_police_army_6
+				}
+				swap_ideas ={
+					remove_idea = SIA_idea_police_army_6
+					add_idea = SIA_idea_police_army_7
+				}
+			}
 		}
 	}
 	
+	# Переобучение артиллерийских офицеров
 	focus = {
 		id = SIA_artillery_train
 		text = SIA_artillery_train
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_royal_academy
 		}
 		x = 28
 		y = 2
 		available ={
-			
+			NOT = {
+				has_idea = SIA_idea_police_army_7
+			}
 		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_artillery_train"
-			
+			army_experience = 10
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = artillery
+			}
+			custom_effect_tooltip = SIA_tt_army_upped
+			if = {
+				limit = {
+					has_idea = SIA_idea_police_army_2
+				}
+				swap_ideas ={
+					remove_idea = SIA_idea_police_army_2
+					add_idea = SIA_idea_police_army_3
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SIA_idea_police_army_3
+				}
+				swap_ideas ={
+					remove_idea = SIA_idea_police_army_3
+					add_idea = SIA_idea_police_army_4
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SIA_idea_police_army_4
+				}
+				swap_ideas ={
+					remove_idea = SIA_idea_police_army_4
+					add_idea = SIA_idea_police_army_5
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SIA_idea_police_army_5
+				}
+				swap_ideas ={
+					remove_idea = SIA_idea_police_army_5
+					add_idea = SIA_idea_police_army_6
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SIA_idea_police_army_6
+				}
+				swap_ideas ={
+					remove_idea = SIA_idea_police_army_6
+					add_idea = SIA_idea_police_army_7
+				}
+			}
 		}
 	}
 	
+	# Усовершенствование учебной программы
 	focus = {
 		id = SIA_new_trening
 		text = SIA_new_trening
@@ -3503,21 +3985,19 @@ focus_tree = {
 		}
 		x = 28
 		y = 4
-		available ={
-			
-		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_new_trening"
-			
+			add_ideas = SIA_idea_study_program_up
 		}
 	}
 	
+	# Возрождение слоновьей артиллерии
 	focus = {
 		id = SIA_elephant_divisions
 		text = SIA_elephant_divisions
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_artillery_train
 		}
@@ -3789,6 +4269,7 @@ focus_tree = {
 			custom_effect_tooltip = SIA_tt_submarine
 		}
 	}
+
 	focus = {
 		id = SIA_Sattahip
 		text = SIA_Sattahip
@@ -3891,6 +4372,7 @@ focus_tree = {
 			}
 		}
 	}
+	
 	# Корабли береговой обороны
 	focus = {
 		id = SIA_border_ship
@@ -3931,6 +4413,7 @@ focus_tree = {
 			custom_effect_tooltip = SIA_tt_linkor
 		}
 	}
+	
 	# Учебные патрули
 	focus = {
 		id = SIA_stud_patrul
@@ -3954,6 +4437,7 @@ focus_tree = {
 			}
 		}
 	}
+
 	# Королевская военно-морская верфь
 	focus = {
 		id = SIA_royal_docs

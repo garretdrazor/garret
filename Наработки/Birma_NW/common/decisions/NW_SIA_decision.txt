@@ -283,7 +283,7 @@ SIA_crisis_dangerous_categories = {
 			}
 		}
 		activation = {
-			date < 1936.01.02
+			date > 1936.01.02
 		}
 		is_good = yes
 		days_mission_timeout = 564
@@ -1369,6 +1369,28 @@ SIA_bad_theatry_categories = {
 					add_idea = SIA_idea_police_army_7
 				}
 			}
+		}
+	}
+}
+# Проведение выборов
+SIA_elections_categories = {
+	SIA_election_mission = {
+		allowed = {
+			tag = SIA
+		}
+		available = {
+			NOT = {
+				has_country_flag = SIA_elections_end_flag
+			}
+		}
+		activation = {
+			has_country_flag = SIA_elections_start_flag
+		}
+		is_good = yes
+		days_mission_timeout = 62
+		icon = GFX_decision_wood_develop
+		timeout_effect = {
+			country_event = { id = sia.20 }
 		}
 	}
 }

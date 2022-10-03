@@ -88,6 +88,7 @@ country_event = {
 			idea = SIA_idea_crisis
 			days = 356
 		}
+		hidden_effect = { set_country_flag = SIA_elections_start_flag }
 	}
 }
 
@@ -1086,5 +1087,80 @@ country_event = {
 		hidden_effect = {
 			set_country_flag = SIA_linkor_flag
 		}
+	}
+}
+# Британская техника выиграла тендер
+country_event = {
+	id = sia.16
+	title = sia.16.t
+	desc = sia.16.d
+	picture = GFX_report_event_sia_16
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event sia.16" }
+
+	option = {
+		name = sia.16.a
+		add_political_power = 100
+	}
+}
+# Германская  техника выиграла тендер
+country_event = {
+	id = sia.17
+	title = sia.17.t
+	desc = sia.17.d
+	picture = GFX_report_event_sia_17
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event sia.17" }
+
+	option = {
+		name = sia.17.a
+		add_political_power = 100
+	}
+}
+# Британские винтовки выиграла тендер 
+country_event = {
+	id = sia.18
+	title = sia.18.t
+	desc = sia.18.d
+	picture = GFX_report_event_sia_18
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event sia.18" }
+
+	option = {
+		name = sia.18.a
+		add_political_power = 50
+	}
+}
+# Японские винтовки выиграла тендер 
+country_event = {
+	id = sia.19
+	title = sia.19.t
+	desc = sia.19.d
+	picture = GFX_report_event_sia_19
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event sia.19" }
+
+	option = {
+		name = sia.19.a
+		add_political_power = 50
+	}
+}
+# Японские винтовки выиграла тендер 
+country_event = {
+	id = sia.20
+	title = sia.20.t
+	desc = sia.20.d
+	picture = GFX_report_event_sia_19
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event sia.20" }
+
+	option = {
+		name = sia.20.a
+		add_political_power = 50
 	}
 }
