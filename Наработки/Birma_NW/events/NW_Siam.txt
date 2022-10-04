@@ -1149,7 +1149,7 @@ country_event = {
 		add_political_power = 50
 	}
 }
-# Японские винтовки выиграла тендер 
+# Выборы в палату представителей окончены
 country_event = {
 	id = sia.20
 	title = sia.20.t
@@ -1161,6 +1161,34 @@ country_event = {
 
 	option = {
 		name = sia.20.a
-		add_political_power = 50
+		trigger = {
+			
+		}
+		country_event = { id = sia.21 days = 10}
+		set_country_flag = SIA_pibun_win_flag
+	}
+	option = {
+		name = sia.20.b
+		trigger = {
+			
+		}
+		country_event = { id = sia.21 days = 10}
+		set_country_flag = SIA_praya_win_flag
+	}
+	option = {
+		name = sia.20.c
+		trigger = {
+			
+		}
+		country_event = { id = sia.21 days = 10}
+		set_country_flag = SIA_pridi_win_flag
+	}
+	option = {
+		name = sia.20.e
+		trigger = {
+			
+		}
+		country_event = { id = sia.21 days = 10}
+		set_country_flag = SIA_kuang_win_flag
 	}
 }
