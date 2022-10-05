@@ -13,7 +13,7 @@ focus_tree = {
 	focus = {
 		id = SIA_no_gold_valute
 		text = SIA_no_gold_valute
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_siam_valute_gold
 		cost = 7.2
 		x = 4
 		y = 0
@@ -34,7 +34,7 @@ focus_tree = {
 	focus = {
 		id = SIA_create_vvs
 		text = SIA_create_vvs
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_siam_vvs3
 		cost = 7.2
 		x = 13
 		y = 0
@@ -55,7 +55,7 @@ focus_tree = {
 	focus = {
 		id = SIA_royal_police
 		text = SIA_royal_police
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_siam_police2
 		cost = 7.2
 		x = 19
 		y = 0
@@ -122,7 +122,7 @@ focus_tree = {
 	focus = {
 		id = SIA_army_invest
 		text = SIA_army_invest
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_siam_invest_army
 		cost = 7.2
 		x = 25
 		y = 0
@@ -197,7 +197,7 @@ focus_tree = {
 	focus = {
 		id = SIA_accum_factory
 		text = SIA_accum_factory
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_siam_sea
 		cost = 7.2
 		x = 32
 		y = 0
@@ -220,7 +220,7 @@ focus_tree = {
 	focus = {
 		id = SIA_land_maximum
 		text = SIA_land_maximum
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_nationalization_lands
 		cost = 10
 		x = 23
 		y = 8
@@ -246,7 +246,7 @@ focus_tree = {
 	focus = {
 		id = SIA_create_medicine
 		text = SIA_create_medicine
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_construction_hospitals
 		cost = 10
 		x = 27
 		y = 8
@@ -277,10 +277,11 @@ focus_tree = {
 		}
 	}
 	
+	# Вернуть женское монашество
 	focus = {
 		id = SIA_woman_monks
 		text = SIA_woman_monks
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_equalize_taxes_for_monasteries
 		cost = 10
 		x = 40
 		y = 12
@@ -298,7 +299,7 @@ focus_tree = {
 	focus = {
 		id = SIA_deanonce_bad_theatry
 		text = SIA_deanonce_bad_theatry
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_denunciation_of_the_agreement
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_no_gold_valute
@@ -323,7 +324,7 @@ focus_tree = {
 	focus = {
 		id = SIA_back_border
 		text = SIA_back_border
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_abolition_of_slavery
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_no_gold_valute
@@ -407,7 +408,7 @@ focus_tree = {
 	focus = {
 		id = SIA_new_theatry_with_france
 		text = SIA_new_theatry_with_france
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_economic_integration_france
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_deanonce_bad_theatry
@@ -416,7 +417,7 @@ focus_tree = {
 		x = 1
 		y = 2
 		available ={
-			FRA = {	has_opinion = { target = SIA value < 20 } }
+			FRA = {	has_opinion = { target = SIA value > 20 } }
 			NOT = {
 				has_completed_focus = SIA_nacionalization_anather
 			}
@@ -489,7 +490,7 @@ focus_tree = {
 	focus = {
 		id = SIA_usa_invest
 		text = SIA_usa_invest
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_USA_trade
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_deanonce_bad_theatry
@@ -498,8 +499,8 @@ focus_tree = {
 		x = 3
 		y = 2
 		available ={
-			USA = {	has_opinion = { target = SIA value < 20 } }
-			ENG = {	has_opinion = { target = SIA value < 20 } }
+			USA = {	has_opinion = { target = SIA value > 20 } }
+			ENG = {	has_opinion = { target = SIA value > 20 } }
 			NOT = {
 				has_completed_focus = SIA_nacionalization_anather
 			}
@@ -583,7 +584,7 @@ focus_tree = {
 	focus = {
 		id = SIA_scan_invest
 		text = SIA_scan_invest
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_scandi
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_deanonce_bad_theatry
@@ -592,9 +593,9 @@ focus_tree = {
 		x = 5
 		y = 2
 		available ={
-			DEN = {	has_opinion = { target = SIA value < 20 } }
-			NOR = {	has_opinion = { target = SIA value < 20 } }
-			SWE = {	has_opinion = { target = SIA value < 20 } }
+			DEN = {	has_opinion = { target = SIA value > 20 } }
+			NOR = {	has_opinion = { target = SIA value > 20 } }
+			SWE = {	has_opinion = { target = SIA value > 20 } }
 			NOT = {
 				has_completed_focus = SIA_nacionalization_anather
 			}
@@ -673,7 +674,7 @@ focus_tree = {
 	focus = {
 		id = SIA_right_invest
 		text = SIA_right_invest
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_economic_integration_italy
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_deanonce_bad_theatry
@@ -682,8 +683,8 @@ focus_tree = {
 		x = 7
 		y = 2
 		available ={
-			ITA = {	has_opinion = { target = SIA value < 20 } }
-			GER = {	has_opinion = { target = SIA value < 20 } }
+			ITA = {	has_opinion = { target = SIA value > 20 } }
+			GER = {	has_opinion = { target = SIA value > 20 } }
 			NOT = {
 				has_completed_focus = SIA_nacionalization_anather
 			}
@@ -759,7 +760,7 @@ focus_tree = {
 	focus = {
 		id = SIA_GB_compromise
 		text = SIA_GB_compromise
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_generic_treaty_with_england
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_new_theatry_with_france
@@ -792,7 +793,7 @@ focus_tree = {
 	focus = {
 		id = SIA_sugar_factory
 		text = SIA_sugar_factory
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_sugar_plantation
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_new_theatry_with_france
@@ -835,7 +836,7 @@ focus_tree = {
 	focus = {
 		id = SIA_half_olovo
 		text = SIA_half_olovo
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_gold_mines2
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_GB_compromise
@@ -862,6 +863,7 @@ focus_tree = {
 		}
 	}
 	
+	# Военное правительство Прайи Сонгсурадета
 	focus = {
 		id = SIA_military_parlament
 		text = SIA_military_parlament
@@ -886,10 +888,11 @@ focus_tree = {
 		}
 	}
 	
+	# Чистка среди генералитета
 	focus = {
 		id = SIA_clearing_generals
 		text = SIA_clearing_generals
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_getting_rid_generals
 		cost = 10
 		prerequisite = {
 			focus = SIA_military_parlament
@@ -906,10 +909,11 @@ focus_tree = {
 		}
 	}
 	
+	# Создание Индокитайского блока поддержки
 	focus = {
 		id = SIA_create_idochina
 		text = SIA_create_idochina
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_Sign_advisory_agreement
 		cost = 10
 		prerequisite = {
 			focus = SIA_clearing_generals
@@ -926,10 +930,11 @@ focus_tree = {
 		}
 	}
 	
+	# Сохранять нейтралитет
 	focus = {
 		id = SIA_neutral_military
 		text = SIA_neutral_military
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_neutrality
 		cost = 10
 		prerequisite = {
 			focus = SIA_create_idochina
@@ -950,10 +955,11 @@ focus_tree = {
 		}
 	}
 	
+	# Укрепление Индокитайского блока поддержи
 	focus = {
 		id = SIA_upgrade_indochina
 		text = SIA_upgrade_indochina
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_Sign_advisory_agreement
 		cost = 10
 		prerequisite = {
 			focus = SIA_create_idochina
@@ -974,10 +980,11 @@ focus_tree = {
 		}
 	}
 	
+	# Открытие совместных предприятий
 	focus = {
 		id = SIA_ally_prom
 		text = SIA_ally_prom
-		icon = GFX_goal_unknown
+		icon = GFX_z_promka_11
 		cost = 10
 		prerequisite = {
 			focus = SIA_upgrade_indochina
@@ -994,10 +1001,11 @@ focus_tree = {
 		}
 	}
 	
+	# Военный союз
 	focus = {
 		id = SIA_military_ally
 		text = SIA_military_ally
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_Sign_advisory_agreement
 		cost = 10
 		prerequisite = {
 			focus = SIA_upgrade_indochina
@@ -1018,7 +1026,7 @@ focus_tree = {
 	focus = {
 		id = SIA_nacionalization_anather
 		text = SIA_nacionalization_anather
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_nationalization_heavy_industry
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_new_theatry_with_france
@@ -1123,10 +1131,11 @@ focus_tree = {
 		}
 	}
 	
+	# Принять беженцев из Китая
 	focus = {
 		id = SIA_china_exile
 		text = SIA_china_exile
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_chinese_soldiers
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_GB_compromise
@@ -1151,7 +1160,7 @@ focus_tree = {
 	focus = {
 		id = SIA_china_nac
 		text = SIA_china_nac
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_nationalization_lands
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_GB_compromise
@@ -1187,7 +1196,7 @@ focus_tree = {
 	focus = {
 		id = SIA_univer_kasetsart
 		text = SIA_univer_kasetsart
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_siam_kasetsart_institute
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_china_exile
@@ -1214,7 +1223,7 @@ focus_tree = {
 	focus = {
 		id = SIA_metal_and_rubber
 		text = SIA_metal_and_rubber
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_tragedy_of_shared_resources
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_univer_kasetsart
@@ -1250,7 +1259,7 @@ focus_tree = {
 	focus = {
 		id = SIA_rubbon_up
 		text = SIA_rubbon_up
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_cotton_ceilon
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_china_exile
@@ -1278,7 +1287,7 @@ focus_tree = {
 	focus = {
 		id = SIA_cement_group
 		text = SIA_cement_group
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_siam_cement_group
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_univer_kasetsart
@@ -1304,7 +1313,7 @@ focus_tree = {
 	focus = {
 		id = SIA_univer_Mongkut
 		text = SIA_univer_Mongkut
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_siam_mongkut_institute
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_cement_group
@@ -1325,7 +1334,7 @@ focus_tree = {
 	focus = {
 		id = SIA_up_rail_for_army
 		text = SIA_up_rail_for_army
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_railway_green
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_military_parlament
@@ -1352,10 +1361,11 @@ focus_tree = {
 		}
 	}
 	
+	# Укрепить границы на востоке
 	focus = {
 		id = SIA_west_armor
 		text = SIA_west_armor
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_nested_fortifications
 		cost = 10
 		prerequisite = {
 			focus = SIA_up_rail_for_army
@@ -1372,10 +1382,11 @@ focus_tree = {
 		}
 	}
 	
+	# Строительство новых мостов
 	focus = {
 		id = SIA_water_infra
 		text = SIA_water_infra
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_new_brigdes
 		cost = 10
 		prerequisite = {
 			focus = SIA_up_rail_for_army
@@ -1392,10 +1403,11 @@ focus_tree = {
 		}
 	}
 	
+	# Укрепить защиту с моря
 	focus = {
 		id = SIA_water_def
 		text = SIA_water_def
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_nested_fortifications
 		cost = 10
 		prerequisite = {
 			focus = SIA_water_infra
@@ -1412,10 +1424,11 @@ focus_tree = {
 		}
 	}
 	
+	# Возродить связи с Германской империей
 	focus = {
 		id = SIA_with_german_inpire
 		text = SIA_with_german_inpire
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_germany
 		cost = 10
 		prerequisite = {
 			focus = SIA_create_idochina
@@ -1436,10 +1449,11 @@ focus_tree = {
 		}
 	}
 	
+	# Военные советники из Германской Империи
 	focus = {
 		id = SIA_generals_from_german_impire
 		text = SIA_generals_from_german_impire
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_germany
 		cost = 10
 		prerequisite = {
 			focus = SIA_with_german_inpire
@@ -1456,10 +1470,11 @@ focus_tree = {
 		}
 	}
 	
+	# Научное сотрудничество
 	focus = {
 		id = SIA_military_ally_search
 		text = SIA_military_ally_search
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_generic_technology_sharing_tmo
 		cost = 10
 		prerequisite = {
 			focus = SIA_military_ally
@@ -1481,7 +1496,7 @@ focus_tree = {
 	focus = {
 		id = SIA_rise_export
 		text = SIA_rise_export
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_white_rice
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_china_exile
@@ -1511,7 +1526,7 @@ focus_tree = {
 	focus = {
 		id = SIA_rise_factory
 		text = SIA_rise_factory
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_white_rice
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_rise_export
@@ -1536,10 +1551,11 @@ focus_tree = {
 		}
 	}
 	
+	# Укрепить границы на западе и юге
 	focus = {
 		id = SIA_east_armor
 		text = SIA_east_armor
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_nested_fortifications
 		cost = 10
 		prerequisite = {
 			focus = SIA_up_rail_for_army
@@ -1556,9 +1572,10 @@ focus_tree = {
 		}
 	}
 	
+	# Поделить Индокитайские колонии
 	focus = {
 		id = SIA_share_indochine
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_ind_free
 		cost = 10
 		prerequisite = {
 			focus = SIA_with_german_inpire
@@ -1579,7 +1596,7 @@ focus_tree = {
 	focus = {
 		id = SIA_irom_main
 		text = SIA_irom_main
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_gold_mines
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_univer_kasetsart
@@ -1602,10 +1619,11 @@ focus_tree = {
 		}
 	}
 	
+	# Поделить Малайзию
 	focus = {
 		id = SIA_share_malasie
 		text = SIA_share_malasie
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_mal_free
 		cost = 10
 		prerequisite = {
 			focus = SIA_with_german_inpire
@@ -1626,7 +1644,7 @@ focus_tree = {
 	focus = {
 		id = SIA_beer_factory
 		text = SIA_beer_factory
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_pivo_army
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_scan_invest
@@ -1656,7 +1674,7 @@ focus_tree = {
 	focus = {
 		id = SIA_ip_ooo
 		text = SIA_ip_ooo
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_prom_fabric
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_nacionalization_anather
@@ -1674,7 +1692,7 @@ focus_tree = {
 	focus = {
 		id = SIA_tai_nia_pachinko
 		text = SIA_tai_nia_pachinko
-		icon = GFX_goal_unknown
+		icon = GFX_z_promka_12
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_ip_ooo
@@ -1700,7 +1718,7 @@ focus_tree = {
 	focus = {
 		id = SIA_north_oil
 		text = SIA_north_oil
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_oil_derrick
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_irom_main
@@ -1727,7 +1745,7 @@ focus_tree = {
 	focus = {
 		id = SIA_tabacco_farm_and_factory
 		text = SIA_tabacco_farm_and_factory
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_save_farms
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_rise_export
@@ -1802,7 +1820,7 @@ focus_tree = {
 	focus = {
 		id = SIA_taktik_vvs
 		text = SIA_taktik_vvs
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_siam_vvs4
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_create_vvs
@@ -1825,7 +1843,7 @@ focus_tree = {
 	focus = {
 		id = SIA_command_vvs
 		text = SIA_command_vvs
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_siam_vvs
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_create_vvs
@@ -1861,7 +1879,7 @@ focus_tree = {
 	focus = {
 		id = SIA_airdef_vvs
 		text = SIA_airdef_vvs
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_generic_defensive_strategy
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_taktik_vvs
@@ -1899,7 +1917,7 @@ focus_tree = {
 	focus = {
 		id = SIA_new_airbase_vvs
 		text = SIA_new_airbase_vvs
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_generic_airports_focus_2
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_create_vvs
@@ -1936,7 +1954,7 @@ focus_tree = {
 	focus = {
 		id = SIA_airspec_vvs
 		text = SIA_airspec_vvs
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_siam_spec
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_command_vvs
@@ -1964,7 +1982,7 @@ focus_tree = {
 	focus = {
 		id = SIA_franch_air
 		text = SIA_franch_air
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_close_air_support
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_airdef_vvs
@@ -1978,7 +1996,7 @@ focus_tree = {
 		y = 3
 		available ={
 			country_exists = FRA
-			FRA = {	has_opinion = { target = SIA value < 20 } }
+			FRA = {	has_opinion = { target = SIA value > 20 } }
 		}
 		
 		bypass ={
@@ -2034,7 +2052,7 @@ focus_tree = {
 	focus = {
 		id = SIA_japan_air
 		text = SIA_japan_air
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_generic_airports_focus_2
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_airdef_vvs
@@ -2048,7 +2066,7 @@ focus_tree = {
 		y = 3
 		available ={
 			country_exists = JAP
-			JAP = {	has_opinion = { target = SIA value < 20 } }
+			JAP = {	has_opinion = { target = SIA value > 20 } }
 		}
 		
 		bypass ={
@@ -2095,7 +2113,7 @@ focus_tree = {
 	focus = {
 		id = SIA_usa_air
 		text = SIA_usa_air
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_aircraft_development
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_airdef_vvs
@@ -2109,7 +2127,7 @@ focus_tree = {
 		y = 3
 		available ={
 			country_exists = USA
-			USA = {	has_opinion = { target = SIA value < 20 } }
+			USA = {	has_opinion = { target = SIA value > 20 } }
 		}
 		
 		bypass ={
@@ -2156,7 +2174,7 @@ focus_tree = {
 	focus = {
 		id = SIA_usa_base
 		text = SIA_usa_base
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_bases_for_british_air_force
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_usa_air
@@ -2165,7 +2183,7 @@ focus_tree = {
 		y = 4
 		available ={
 			country_exists = USA
-			USA = {	has_opinion = { target = SIA value < 20 } }
+			USA = {	has_opinion = { target = SIA value > 20 } }
 			ROOT = {
 				controls_state = 1173
 				controls_state = 289
@@ -2200,6 +2218,7 @@ focus_tree = {
 		}
 	}
 	
+	# Восстановить коммунистическую партию Сиама
 	focus = {
 		id = SIA_ressurect_commi
 		text = SIA_ressurect_commi
@@ -2225,10 +2244,11 @@ focus_tree = {
 		}
 	}
 	
+	# Буддийская социалистическая линия
 	focus = {
 		id = SIA_soc_buddism
 		text = SIA_soc_buddism
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_buddism_communism
 		cost = 10
 		prerequisite = {
 			focus = SIA_ressurect_commi
@@ -2258,7 +2278,7 @@ focus_tree = {
 		y = 4
 		available ={
 			country_exists = JAP
-			JAP = {	has_opinion = { target = SIA value < 20 } }
+			JAP = {	has_opinion = { target = SIA value > 20 } }
 		}
 		
 		bypass ={
@@ -2292,7 +2312,7 @@ focus_tree = {
 		y = 4
 		available ={
 			country_exists = FRA
-			FRA = {	has_opinion = { target = SIA value < 20 } }
+			FRA = {	has_opinion = { target = SIA value > 20 } }
 		}
 		
 		bypass ={
@@ -2314,7 +2334,7 @@ focus_tree = {
 	focus = {
 		id = SIA_spec_buro
 		text = SIA_spec_buro
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_siam_police1
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_royal_police
@@ -2385,7 +2405,7 @@ focus_tree = {
 	focus = {
 		id = SIA_polit_police
 		text = SIA_polit_police
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_political_commissars
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_spec_buro
@@ -2453,6 +2473,7 @@ focus_tree = {
 		}
 	}
 	
+	# Третий путь
 	focus = {
 		id = SIA_third_path
 		text = SIA_third_path
@@ -2478,10 +2499,11 @@ focus_tree = {
 		}
 	}
 	
+	# Достичь консенсуса с роялистами
 	focus = {
 		id = SIA_consensus_with_royalists
 		text = SIA_consensus_with_royalists
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_monarchism_14
 		cost = 10
 		prerequisite = {
 			focus = SIA_third_path
@@ -2505,7 +2527,7 @@ focus_tree = {
 	focus = {
 		id = SIA_world_police
 		text = SIA_world_police
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_world
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_spec_buro
@@ -2604,11 +2626,12 @@ focus_tree = {
 			}
 		}
 	}
+	
 	# Пограничная полиция
 	focus = {
 		id = SIA_border_police
 		text = SIA_border_police
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_siam_police3
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_choose_police
@@ -2621,11 +2644,12 @@ focus_tree = {
 			add_ideas = SIA_idea_border_police
 		}
 	}
+	
 	# Подразделение воздушного усиления
 	focus = {
 		id = SIA_power_air
 		text = SIA_power_air
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_siam_vvs2
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_usa_base
@@ -2651,6 +2675,7 @@ focus_tree = {
 			add_ideas = SIA_idea_PARU
 		}
 	}
+	
 	# Разрешить женскую службу в полиции
 	focus = {
 		id = SIA_woman_police
@@ -2669,10 +2694,11 @@ focus_tree = {
 		}
 	}
 	
+	# Подавить крыло роялистов в партии
 	focus = {
 		id = SIA_no_party_with_royal
 		text = SIA_no_party_with_royal
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_generic_king_power
 		cost = 10
 		prerequisite = {
 			focus = SIA_third_path
@@ -2692,10 +2718,11 @@ focus_tree = {
 		}
 	}
 	
+	# Судьба короны
 	focus = {
 		id = SIA_crown_fate
 		text = SIA_crown_fate
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_neutrality_question
 		cost = 10
 		prerequisite = {
 			focus = SIA_consensus_with_royalists
@@ -2781,11 +2808,12 @@ focus_tree = {
 			}
 		}
 	}
-
+	
+	# Создание подразделений рейнджеров
 	focus = {
 		id = SIA_police_randjers
 		text = SIA_police_randjers
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_siam_rangers
 		cost = 10
 		prerequisite = {
 			focus = SIA_super_spec_buro
@@ -2802,10 +2830,11 @@ focus_tree = {
 		}
 	}
 	
+	# Марш сохранения общественного спокойствия
 	focus = {
 		id = SIA_police_marsh
 		text = SIA_police_marsh
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_brutality_is_bringing_people_together
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_choose_police
@@ -2819,10 +2848,11 @@ focus_tree = {
 		}
 	}
 	
+	# Воскресить Проект «Жёлтой книги»
 	focus = {
 		id = SIA_yellow_book
 		text = SIA_yellow_book
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_coran_constitution
 		cost = 10
 		prerequisite = {
 			focus = SIA_third_path
@@ -2839,10 +2869,11 @@ focus_tree = {
 		}
 	}
 	
+	# Индустриализация путём публичных кампаний
 	focus = {
 		id = SIA_industrial_with_company
 		text = SIA_industrial_with_company
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_industrial_soviet
 		cost = 10
 		prerequisite = {
 			focus = SIA_yellow_book
@@ -2859,10 +2890,11 @@ focus_tree = {
 		}
 	}
 	
+	# Создание рабочего законодательства
 	focus = {
 		id = SIA_create_work_order
 		text = SIA_create_work_order
-		icon = GFX_goal_unknown
+		icon = GFX_z_focus_the_workers
 		cost = 10
 		prerequisite = {
 			focus = SIA_industrial_with_company
@@ -2879,10 +2911,11 @@ focus_tree = {
 		}
 	}
 	
+	# Создание свободного тайского движения
 	focus = {
 		id = SIA_create_free_thai
 		text = SIA_create_free_thai
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_freedom_through_equality
 		cost = 10
 		prerequisite = {
 			focus = SIA_create_work_order
@@ -2899,10 +2932,11 @@ focus_tree = {
 		}
 	}
 	
+	# Создание национального экономического совета
 	focus = {
 		id = SIA_create_ekonomik_soviet
 		text = SIA_create_ekonomik_soviet
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_smoothing_out_economic_differences
 		cost = 10
 		prerequisite = {
 			focus = SIA_yellow_book
@@ -2919,6 +2953,7 @@ focus_tree = {
 		}
 	}
 	
+	# Создать Юго-Восточную лигу
 	focus = {
 		id = SIA_create_league
 		text = SIA_create_league
@@ -2942,6 +2977,7 @@ focus_tree = {
 		}
 	}
 	
+	# Пригласить страны бывшего Индокитая
 	focus = {
 		id = SIA_league_indochi
 		text = SIA_league_indochi
@@ -2962,10 +2998,11 @@ focus_tree = {
 		}
 	}
 	
+	# Научная группа Юго-Восточной Лиги
 	focus = {
 		id = SIA_league_research
 		text = SIA_league_research
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_generic_technology_sharing_tmo
 		cost = 10
 		prerequisite = {
 			focus = SIA_create_league
@@ -2982,6 +3019,7 @@ focus_tree = {
 		}
 	}
 	
+	# Пригласить Малайю
 	focus = {
 		id = SIA_league_malaia
 		text = SIA_league_malaia
@@ -3002,6 +3040,7 @@ focus_tree = {
 		}
 	}
 	
+	# Освободить колонии Великобритании
 	focus = {
 		id = SIA_GB_colonies
 		text = SIA_GB_colonies
@@ -3022,6 +3061,7 @@ focus_tree = {
 		}
 	}
 	
+	# Пригласить Бирму
 	focus = {
 		id = SIA_league_bhurma
 		text = SIA_league_bhurma
@@ -3141,7 +3181,7 @@ focus_tree = {
 			}
 			ENG = {
 				country_exists = yes
-				has_opinion = { target = SIA value < 20 }
+				has_opinion = { target = SIA value > 20 }
 				NOT = {
 					has_war_with = SIA
 				}
@@ -3207,7 +3247,7 @@ focus_tree = {
 	focus = {
 		id = SIA_Ger_tank
 		text = SIA_Ger_tank
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_german_two_main_tanks
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_army_invest
@@ -3223,7 +3263,7 @@ focus_tree = {
 			}
 			GER = {
 				country_exists = yes
-				has_opinion = { target = SIA value < 20 }
+				has_opinion = { target = SIA value > 20 }
 				NOT = {
 					has_war_with = SIA
 				}
@@ -3288,7 +3328,7 @@ focus_tree = {
 	focus = {
 		id = SIA_GB_rifle
 		text = SIA_GB_rifle
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_supplies_of_weapons_from_allies
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_GB_tank
@@ -3306,7 +3346,7 @@ focus_tree = {
 			}
 			ENG = {
 				country_exists = yes
-				has_opinion = { target = SIA value < 20 }
+				has_opinion = { target = SIA value > 20 }
 				NOT = {
 					has_war_with = SIA
 				}
@@ -3371,7 +3411,7 @@ focus_tree = {
 	focus = {
 		id = SIA_siam_rifle
 		text = SIA_siam_rifle
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_artisanal_production_of_weapons
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_GB_tank
@@ -3404,7 +3444,7 @@ focus_tree = {
 	focus = {
 		id = SIA_japan_rifle
 		text = SIA_japan_rifle
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_trade_weapons
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_GB_tank
@@ -3422,7 +3462,7 @@ focus_tree = {
 			}
 			JAP = {
 				country_exists = yes
-				has_opinion = { target = SIA value < 20 }
+				has_opinion = { target = SIA value > 20 }
 				NOT = {
 					has_war_with = SIA
 				}
@@ -3519,7 +3559,7 @@ focus_tree = {
 	focus = {
 		id = SIA_students_def
 		text = SIA_students_def
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_generic_student_organizations
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_choose_army
@@ -3580,7 +3620,7 @@ focus_tree = {
 	focus = {
 		id = SIA_powder_factory
 		text = SIA_powder_factory
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_Armored_control
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_GB_rifle
@@ -3640,7 +3680,7 @@ focus_tree = {
 	focus = {
 		id = SIA_border_conflict
 		text = SIA_border_conflict
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_generic_treaty_with_england
 		cost = 10
 		prerequisite = {
 			focus = SIA_land_maximum
@@ -3660,7 +3700,7 @@ focus_tree = {
 	focus = {
 		id = SIA_auto_ministr
 		text = SIA_border_conflict
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_mobile_war
 		cost = 10
 		prerequisite = {
 			focus = SIA_land_maximum
@@ -3676,11 +3716,11 @@ focus_tree = {
 		}
 	}
 	
-	
+	# Умеренный путь
 	focus = {
 		id = SIA_passive_path
 		text = SIA_passive_path
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_generic_neutrality
 		cost = 10
 		prerequisite = {
 			focus = SIA_create_medicine
@@ -3702,10 +3742,11 @@ focus_tree = {
 		}
 	}
 	
+	# Убрать военных из Ассамблеи
 	focus = {
 		id = SIA_no_generals_on_parlament
 		text = SIA_no_generals_on_parlament
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_getting_rid_generals
 		cost = 10
 		prerequisite = {
 			focus = SIA_third_path
@@ -3723,10 +3764,11 @@ focus_tree = {
 		}
 	}
 	
+	# Свободный бизнес
 	focus = {
 		id = SIA_free_business
 		text = SIA_free_business
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_support_businessmen_2
 		cost = 10
 		prerequisite = {
 			focus = SIA_passive_path
@@ -3743,10 +3785,11 @@ focus_tree = {
 		}
 	}
 	
+	# Восстановление после гражданской войны
 	focus = {
 		id = SIA_rise_after_civil_dem
 		text = SIA_rise_after_civil_dem
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_coop_resourses
 		cost = 10
 		prerequisite = {
 			focus = SIA_yellow_book
@@ -3764,10 +3807,11 @@ focus_tree = {
 		}
 	}
 	
+	# Общее медицинское и пенсионное страхование
 	focus = {
 		id = SIA_med_for_all
 		text = SIA_med_for_all
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_med
 		cost = 10
 		prerequisite = {
 			focus = SIA_yellow_book
@@ -3784,10 +3828,11 @@ focus_tree = {
 		}
 	}
 	
+	# Результаты иностранных инвестиций
 	focus = {
 		id = SIA_ekonom_result
 		text = SIA_ekonom_result
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_invest_in_the_construction_industry
 		cost = 10
 		prerequisite = {
 			focus = SIA_free_business
@@ -3804,10 +3849,11 @@ focus_tree = {
 		}
 	}
 	
+	# Вложить средства в науку
 	focus = {
 		id = SIA_money_for_research
 		text = SIA_money_for_research
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_private_money
 		cost = 10
 		prerequisite = {
 			focus = SIA_med_for_all
@@ -3829,7 +3875,7 @@ focus_tree = {
 	focus = {
 		id = SIA_rifle_factory
 		text = SIA_rifle_factory
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_peasant_army
 		cost = 10
 		prerequisite = {
 			focus = SIA_powder_factory
@@ -3853,10 +3899,11 @@ focus_tree = {
 		}
 	}
 	
+	# Открытие филиалов иностранных банков
 	focus = {
 		id = SIA_other_banks
 		text = SIA_other_banks
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_bank2
 		cost = 10
 		prerequisite = {
 			focus = SIA_ekonom_result
@@ -3877,7 +3924,7 @@ focus_tree = {
 	focus = {
 		id = SIA_royal_academy
 		text = SIA_royal_academy
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_siam_royal_academy
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_army_invest
@@ -3952,7 +3999,7 @@ focus_tree = {
 	focus = {
 		id = SIA_artillery_train
 		text = SIA_artillery_train
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_artillery
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_royal_academy
@@ -4026,7 +4073,7 @@ focus_tree = {
 	focus = {
 		id = SIA_new_trening
 		text = SIA_new_trening
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_conscription
 		cost = 10
 		prerequisite = {
 			focus = SIA_artillery_train
@@ -4047,7 +4094,7 @@ focus_tree = {
 	focus = {
 		id = SIA_elephant_divisions
 		text = SIA_elephant_divisions
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_elephants
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_artillery_train
@@ -4064,10 +4111,11 @@ focus_tree = {
 		}
 	}
 	
+	# Усилить роль монарха в новой конституции
 	focus = {
 		id = SIA_strong_king
 		text = SIA_strong_king
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_monarchism_14
 		cost = 10
 		prerequisite = {
 			focus = SIA_passive_path
@@ -4084,10 +4132,11 @@ focus_tree = {
 		}
 	}
 	
+	# Новый антикоммунистический закон
 	focus = {
 		id = SIA_new_uncomm_order
 		text = SIA_new_uncomm_order
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_break_commi
 		cost = 10
 		prerequisite = {
 			focus = SIA_strong_king
@@ -4104,10 +4153,11 @@ focus_tree = {
 		}
 	}
 	
+	# Основание демократической партии Сиама
 	focus = {
 		id = SIA_faund_demparty
 		text = SIA_faund_demparty
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_democratic_side
 		cost = 10
 		prerequisite = {
 			focus = SIA_ekonom_result
@@ -4127,10 +4177,11 @@ focus_tree = {
 		}
 	}
 	
+	# Закон о ценах потребительских товаров
 	focus = {
 		id = SIA_price_order
 		text = SIA_price_order
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_print_valute
 		cost = 10
 		prerequisite = {
 			focus = SIA_other_banks
@@ -4150,10 +4201,11 @@ focus_tree = {
 		}
 	}
 	
+	# Продолжить политику западнизации
 	focus = {
 		id = SIA_west_politic
 		text = SIA_west_politic
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_white_flag
 		cost = 10
 		prerequisite = {
 			focus = SIA_faund_demparty
@@ -4170,10 +4222,11 @@ focus_tree = {
 		}
 	}
 	
+	# Альянс с США
 	focus = {
 		id = SIA_USA_ally
 		text = SIA_USA_ally
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_usa
 		cost = 10
 		prerequisite = {
 			focus = SIA_create_ekonomik_soviet
@@ -4195,10 +4248,11 @@ focus_tree = {
 		}
 	}
 	
+	# Поиск союзников в свободном мире
 	focus = {
 		id = SIA_find_dem_ally
 		text = SIA_find_dem_ally
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_new_world_tour
 		cost = 10
 		prerequisite = {
 			focus = SIA_west_politic
@@ -4219,10 +4273,11 @@ focus_tree = {
 		}
 	}
 	
+	# Договориться о лицензиях
 	focus = {
 		id = SIA_find_lic
 		text = SIA_find_lic
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_Woodhead_comission
 		cost = 10
 		prerequisite = {
 			focus = SIA_find_dem_ally
@@ -4239,10 +4294,11 @@ focus_tree = {
 		}
 	}
 	
+	# Союзная военная миссия
 	focus = {
 		id = SIA_find_war_missions
 		text = SIA_find_war_missions
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_bet_on_militia
 		cost = 10
 		prerequisite = {
 			focus = SIA_find_dem_ally
@@ -4259,10 +4315,11 @@ focus_tree = {
 		}
 	}
 	
+	# Совместная добыча ресурсов
 	focus = {
 		id = SIA_find_resours
 		text = SIA_find_resours
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_coop_resourses
 		cost = 10
 		prerequisite = {
 			focus = SIA_find_lic
@@ -4284,7 +4341,7 @@ focus_tree = {
 	focus = {
 		id = SIA_underwater
 		text = SIA_underwater
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_siam_submarine
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_accum_factory
@@ -4293,7 +4350,7 @@ focus_tree = {
 		y = 1
 		available ={
 			country_exists = JAP
-			JAP = {	has_opinion = { target = SIA value < 20 } }
+			JAP = {	has_opinion = { target = SIA value > 20 } }
 		}
 		
 		bypass ={
@@ -4320,11 +4377,12 @@ focus_tree = {
 			custom_effect_tooltip = SIA_tt_submarine
 		}
 	}
-
+	
+	# Военно-морская база Саттахип
 	focus = {
 		id = SIA_Sattahip
 		text = SIA_Sattahip
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_siam_sea_base
 		cost = 10
 		prerequisite = {
 			focus = SIA_underwater
@@ -4341,6 +4399,7 @@ focus_tree = {
 		}
 	}
 	
+	# Королевская военно-воздушная дивизия
 	focus = {
 		id = SIA_royal_vmf
 		text = SIA_royal_vmf
@@ -4361,10 +4420,11 @@ focus_tree = {
 		}
 	}
 	
+	# Дорога в Кентунг
 	focus = {
 		id = SIA_Kentung_road
 		text = SIA_Kentung_road
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_city_road_cei
 		cost = 10
 		prerequisite = {
 			focus = SIA_passive_path
@@ -4394,7 +4454,7 @@ focus_tree = {
 		y = 1
 		available ={
 			country_exists = JAP
-			JAP = {	has_opinion = { target = SIA value < 20 } }
+			JAP = {	has_opinion = { target = SIA value > 20 } }
 		}
 		
 		bypass ={
@@ -4437,7 +4497,7 @@ focus_tree = {
 		y = 1
 		available ={
 			country_exists = JAP
-			JAP = {	has_opinion = { target = SIA value < 20 } }
+			JAP = {	has_opinion = { target = SIA value > 20 } }
 		}
 		
 		bypass ={
@@ -4493,7 +4553,7 @@ focus_tree = {
 	focus = {
 		id = SIA_royal_docs
 		text = SIA_royal_docs
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_siam_sea_dockyard
 		cost = 10
 		prerequisite = {
 			focus = SIA_border_ship
@@ -4518,10 +4578,12 @@ focus_tree = {
 			}
 		}
 	}
+
+	# Расшить королевский корпус морской пехоты
 	focus = {
 		id = SIA_royal_seaman
 		text = SIA_royal_seaman
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_siam_seals_2
 		cost = 10
 		prerequisite = {
 			focus = SIA_stud_patrul
@@ -4539,10 +4601,11 @@ focus_tree = {
 		}
 	}
 	
+	# Сотрудничество с США для обучения морской пехоты
 	focus = {
 		id = SIA_usa_seaman
 		text = SIA_usa_seaman
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_siam_seals3
 		cost = 10
 		prerequisite = {
 			focus = SIA_royal_seaman
@@ -4559,9 +4622,10 @@ focus_tree = {
 		}
 	}
 	
+	# Синяя армия
 	focus = {
 		id = SIA_blue_army
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_nepal_army
 		cost = 10
 		prerequisite = {
 			focus = SIA_land_maximum
@@ -4583,10 +4647,11 @@ focus_tree = {
 		}
 	}
 	
+	# Ослабить конституцию для королевской власти
 	focus = {
 		id = SIA_weak_constitution
 		text = SIA_weak_constitution
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_denunciation_of_the_agreement3
 		cost = 10
 		prerequisite = {
 			focus = SIA_blue_army
@@ -4603,10 +4668,11 @@ focus_tree = {
 		}
 	}
 	
+	# Департамент морской пехоты
 	focus = {
 		id = SIA_deportament_seaman
 		text = SIA_deportament_seaman
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_siam_seals
 		cost = 10
 		prerequisite = {
 			focus = SIA_royal_seaman
@@ -4623,10 +4689,11 @@ focus_tree = {
 		}
 	}
 	
+	# Установить абсолютную власть Чакри
 	focus = {
 		id = SIA_absolute_morachy
 		text = SIA_absolute_morachy
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_monarchism_15
 		cost = 10
 		prerequisite = {
 			focus = SIA_blue_army
@@ -4643,10 +4710,11 @@ focus_tree = {
 		}
 	}
 	
+	# Контрреволюционная агентурная сеть
 	focus = {
 		id = SIA_contrrevolution_agents
 		text = SIA_contrrevolution_agents
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_generic_political_commissars
 		cost = 10
 		prerequisite = {
 			focus = SIA_weak_constitution
@@ -4664,6 +4732,7 @@ focus_tree = {
 		}
 	}
 	
+	# Поддержка королевских кампаний
 	focus = {
 		id = SIA_help_royal_company
 		text = SIA_help_royal_company
@@ -4684,6 +4753,7 @@ focus_tree = {
 		}
 	}
 	
+	# Королевский культ
 	focus = {
 		id = SIA_royal_cult
 		text = SIA_royal_cult
@@ -4704,6 +4774,7 @@ focus_tree = {
 		}
 	}
 	
+	# Вернуть на трон Раму VII
 	focus = {
 		id = SIA_Rama_VII
 		text = SIA_Rama_VII
@@ -4724,6 +4795,7 @@ focus_tree = {
 		}
 	}
 	
+	# Коронация нового короля
 	focus = {
 		id = SIA_new_king
 		text = SIA_new_king
@@ -4744,6 +4816,7 @@ focus_tree = {
 		}
 	}
 	
+	# Империализм
 	focus = {
 		id = SIA_imperalism
 		text = SIA_imperalism
@@ -4767,6 +4840,7 @@ focus_tree = {
 		}
 	}
 	
+	# Захват Лаоса
 	focus = {
 		id = SIA_royal_Laos
 		text = SIA_royal_Laos
@@ -4780,6 +4854,7 @@ focus_tree = {
 
 	}
 	
+	# Союз с королями реваншистами
 	focus = {
 		id = SIA_king_ally
 		text = SIA_king_ally
@@ -4800,6 +4875,7 @@ focus_tree = {
 		}
 	}
 	
+	# Вернуть Камбоджу под свою руку
 	focus = {
 		id = SIA_royal_Cambodja
 		text = SIA_royal_Cambodja
@@ -4820,6 +4896,7 @@ focus_tree = {
 		}
 	}
 	
+	# Южный вопрос
 	focus = {
 		id = SIA_royal_south
 		text = SIA_royal_south
@@ -4840,6 +4917,7 @@ focus_tree = {
 		}
 	}
 	
+	# Муниципализм
 	focus = {
 		id = SIA_municipalism
 		text = SIA_municipalism
@@ -4860,6 +4938,7 @@ focus_tree = {
 		}
 	}
 	
+	# Поддержание западного побережья
 	focus = {
 		id = SIA_help_west
 		text = SIA_help_west
@@ -4883,10 +4962,11 @@ focus_tree = {
 		}
 	}
 	
+	# Миграционный закон
 	focus = {
 		id = SIA_migrate_order
 		text = SIA_migrate_order
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_migrants
 		cost = 10
 		prerequisite = {
 			focus = SIA_help_west
@@ -4903,6 +4983,7 @@ focus_tree = {
 		}
 	}
 	
+	# Интегрировать север Аннама
 	focus = {
 		id = SIA_royal_Annam
 		icon = GFX_goal_unknown
@@ -4922,10 +5003,11 @@ focus_tree = {
 		}
 	}
 	
+	# Общенациональная ирригационная система
 	focus = {
 		id = SIA_nac_irr_system
 		text = SIA_nac_irr_system
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_irrigation_system
 		cost = 10
 		prerequisite = {
 			focus = SIA_migrate_order
@@ -4945,6 +5027,7 @@ focus_tree = {
 		}
 	}
 	
+	# Вернуть земли в Бирме
 	focus = {
 		id = SIA_royal_Bhurma
 		text = SIA_royal_Bhurma
@@ -4965,6 +5048,7 @@ focus_tree = {
 		}
 	}
 	
+	# Вернуть династию Чакри
 	focus = {
 		id = SIA_back_dinasty
 		text = SIA_back_dinasty
@@ -4985,6 +5069,7 @@ focus_tree = {
 		}
 	}
 	
+	# Вернуть военные посты принцам
 	focus = {
 		id = SIA_back_princes
 		text = SIA_back_princes
@@ -5006,6 +5091,7 @@ focus_tree = {
 		}
 	}
 	
+	# Реформирование армии принцем Боворадетом
 	focus = {
 		id = SIA_Bovorader_reforms
 		text = SIA_Bovorader_reforms
@@ -5026,10 +5112,11 @@ focus_tree = {
 		}
 	}
 	
+	# Восстание восемнадцати трупов
 	focus = {
 		id = SIA_18_corps
 		text = SIA_18_corps
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_step_on_skull
 		cost = 10
 		prerequisite = {
 			focus = SIA_land_maximum
@@ -5050,6 +5137,7 @@ focus_tree = {
 		}
 	}
 	
+	# Военная бюрократия Пибуна Сонгкрама
 	focus = {
 		id = SIA_army_burocraty
 		text = SIA_army_burocraty
@@ -5070,6 +5158,7 @@ focus_tree = {
 		}
 	}
 	
+	# Ювачон
 	focus = {
 		id = SIA_Uvachon
 		text = SIA_Uvachon
@@ -5090,6 +5179,7 @@ focus_tree = {
 		}
 	}
 	
+	# Культ личности Сонгкрама
 	focus = {
 		id = SIA_Songcram_cult
 		text = SIA_Songcram_cult
@@ -5110,6 +5200,7 @@ focus_tree = {
 		}
 	}
 	
+	# Национальный банк Тайланда
 	focus = {
 		id = SIA_thai_nac_bank
 		text = SIA_thai_nac_bank
@@ -5130,6 +5221,7 @@ focus_tree = {
 		}
 	}
 	
+	# Политика ультранационализма
 	focus = {
 		id = SIA_ultranac
 		text = SIA_ultranac
@@ -5150,6 +5242,7 @@ focus_tree = {
 		}
 	}
 	
+	# Договор о дружбе с Японией
 	focus = {
 		id = SIA_Japan_friend
 		text = SIA_Japan_friend
@@ -5170,6 +5263,7 @@ focus_tree = {
 		}
 	}
 	
+	# Отказаться от сотрудничества с Японией
 	focus = {
 		id = SIA_no_japan
 		text = SIA_no_japan
@@ -5193,6 +5287,7 @@ focus_tree = {
 		}
 	}
 	
+	# Военное сотрудничество с Японией
 	focus = {
 		id = SIA_yes_japan
 		text = SIA_yes_japan
@@ -5216,6 +5311,7 @@ focus_tree = {
 		}
 	}
 	
+	# Вторжение в Индокитай
 	focus = {
 		id = SIA_war_with_indchi
 		text = SIA_war_with_indchi
@@ -5237,6 +5333,7 @@ focus_tree = {
 		}
 	}
 	
+	# Тайфикация Вьетнамских народов
 	focus = {
 		id = SIA_thai_viette
 		text = SIA_thai_viette
@@ -5258,6 +5355,7 @@ focus_tree = {
 		}
 	}
 	
+	# Вернуть себе север Малайи
 	focus = {
 		id = SIA_back_north_malaia
 		text = SIA_back_north_malaia
@@ -5279,6 +5377,7 @@ focus_tree = {
 		}
 	}
 	
+	# Спасти тайцев из Бирмы
 	focus = {
 		id = SIA_help_bhurma_thai
 		text = SIA_help_bhurma_thai
@@ -5300,6 +5399,7 @@ focus_tree = {
 		}
 	}
 	
+	# Провозглашение Великого Тайланда!
 	focus = {
 		id = SIA_great_thai
 		text = SIA_great_thai
@@ -5323,6 +5423,7 @@ focus_tree = {
 		}
 	}
 	
+	# Вернуть родину тайцев
 	focus = {
 		id = SIA_back_last_thai
 		text = SIA_back_last_thai
@@ -5343,6 +5444,7 @@ focus_tree = {
 		}
 	}
 	
+	# Постройка буддистского города
 	focus = {
 		id = SIA_budda_city
 		text = SIA_budda_city
@@ -5363,10 +5465,11 @@ focus_tree = {
 		}
 	}
 	
+	# Строительство нефтеперегонного завода
 	focus = {
 		id = SIA_build_oil_factory
 		text = SIA_build_oil_factory
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_oil
 		cost = 10
 		prerequisite = {
 			focus = SIA_18_corps
@@ -5383,6 +5486,7 @@ focus_tree = {
 		}
 	}
 	
+	# Двенадцать культурных мандатов
 	focus = {
 		id = SIA_12_culture
 		text = SIA_12_culture
@@ -5403,6 +5507,7 @@ focus_tree = {
 		}
 	}
 	
+	# Уничтожить Сери Тай
 	focus = {
 		id = SIA_destroy_seri_thai
 		text = SIA_destroy_seri_thai
@@ -5426,6 +5531,7 @@ focus_tree = {
 		}
 	}
 	
+	# Создание женской армии
 	focus = {
 		id = SIA_woman_army
 		text = SIA_woman_army
@@ -5446,10 +5552,11 @@ focus_tree = {
 		}
 	}
 	
+	# Социальная эволюция
 	focus = {
 		id = SIA_soc_evolution
 		text = SIA_soc_evolution
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_social_laws_2
 		cost = 10
 		prerequisite = {
 			focus = SIA_woman_army
@@ -5466,10 +5573,11 @@ focus_tree = {
 		}
 	}
 	
+	# Новые инвестиции в железную дорогу
 	focus = {
 		id = SIA_invest_railroad_gb
 		text = SIA_invest_railroad_gb
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_four_track_railway
 		cost = 10
 		prerequisite = {
 			focus = SIA_GB_compromise
@@ -5485,11 +5593,12 @@ focus_tree = {
 			
 		}
 	}
+	
 	# Очередной кредит на инфраструктуру
 	focus = {
 		id = SIA_infra_credit_gb
 		text = SIA_infra_credit_gb
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_city_road_cei
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_invest_railroad_gb
@@ -5529,11 +5638,12 @@ focus_tree = {
 			}
 		}
 	}
+	
 	# Завод по восстановлению транспортных средств
 	focus = {
 		id = SIA_avto_factory
 		text = SIA_avto_factory
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_military_mobilisation
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_metal_and_rubber
@@ -5568,6 +5678,8 @@ focus_tree = {
 			}
 		}
 	}
+	
+	# Модернизация рельсовых систем
 	focus = {
 		id = SIA_modern_rail
 		text = SIA_modern_rail
@@ -5587,6 +5699,7 @@ focus_tree = {
 			
 		}
 	}
+	
 	# Больница Пхумипона Адульядета
 	focus = {
 		id = SIA_med_air2
@@ -5634,6 +5747,7 @@ focus_tree = {
 			}
 		}
 	}
+	
 	# Батальон связи королевских ВВС
 	focus = {
 		id = SIA_radio_air
@@ -5669,6 +5783,8 @@ focus_tree = {
 			}
 		}
 	}
+	
+	# Проведение военных реформ
 	focus = {
 		id = SIA_military_reform
 		text = SIA_military_reform
@@ -5689,6 +5805,7 @@ focus_tree = {
 		}
 	}
 	
+	# Развитие тайской бронетехники
 	focus = {
 		id = SIA_thai_tank
 		text = SIA_thai_tank
@@ -5709,6 +5826,7 @@ focus_tree = {
 		}
 	}
 	
+	# Новые военные школы
 	focus = {
 		id = SIA_new_military_school
 		text = SIA_new_military_school
@@ -5729,10 +5847,11 @@ focus_tree = {
 		}
 	}
 	
+	# Милитаризация промышленности
 	focus = {
 		id = SIA_military_prom
 		text = SIA_military_prom
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_private_military_company
 		cost = 10
 		prerequisite = {
 			focus = SIA_thai_tank
@@ -5749,6 +5868,7 @@ focus_tree = {
 		}
 	}
 	
+	# Боевая школа Чангмая
 	focus = {
 		id = SIA_changmala
 		text = SIA_changmala
@@ -5769,6 +5889,7 @@ focus_tree = {
 		}
 	}
 	
+	# Профессиональная армия
 	focus = {
 		id = SIA_proffessional_army
 		text = SIA_proffessional_army
@@ -5789,6 +5910,7 @@ focus_tree = {
 		}
 	}
 	
+	# Расширить индокитайский блок поддержки
 	focus = {
 		id = SIA_indochina_better
 		text = SIA_indochina_better
@@ -5809,6 +5931,7 @@ focus_tree = {
 		}
 	}
 	
+	# Восстановление страны
 	focus = {
 		id = SIA_rise_country
 		text = SIA_rise_country
@@ -5829,6 +5952,7 @@ focus_tree = {
 		}
 	}
 	
+	# Широкое распространение газеты «Массы»
 	focus = {
 		id = SIA_ppl_newspaper
 		text = SIA_ppl_newspaper
@@ -5849,6 +5973,7 @@ focus_tree = {
 		}
 	}
 	
+	# Создание центрального профсоюза
 	focus = {
 		id = SIA_central_profally
 		text = SIA_central_profally
@@ -5872,10 +5997,11 @@ focus_tree = {
 		}
 	}
 	
+	# Перейти на пятилетнее планирование
 	focus = {
 		id = SIA_fiveyear_plan
 		text = SIA_fiveyear_plan
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_Start_the_first_five_year_plan
 		cost = 10
 		prerequisite = {
 			focus = SIA_central_profally
@@ -5892,10 +6018,11 @@ focus_tree = {
 		}
 	}
 	
+	# Радио «Голос таиландского народа»
 	focus = {
 		id = SIA_radio_voice
 		text = SIA_radio_voice
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_radio_portative
 		cost = 10
 		prerequisite = {
 			focus = SIA_ppl_newspaper
@@ -5912,10 +6039,11 @@ focus_tree = {
 		}
 	}
 	
+	# «Революционная молодёжь»
 	focus = {
 		id = SIA_rev_yaung
 		text = SIA_rev_yaung
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_rev_militia1
 		cost = 10
 		prerequisite = {
 			focus = SIA_ppl_newspaper
@@ -5932,10 +6060,11 @@ focus_tree = {
 		}
 	}
 	
+	# Свергнуть короля и принцев
 	focus = {
 		id = SIA_no_king
 		text = SIA_no_king
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_communist_purge_wealthy
 		cost = 10
 		prerequisite = {
 			focus = SIA_radio_voice
@@ -5955,10 +6084,11 @@ focus_tree = {
 		}
 	}
 	
+	# Провести урбанизацию для тайцев
 	focus = {
 		id = SIA_thai_urbazation
 		text = SIA_thai_urbazation
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_soviet_civil_city1
 		cost = 10
 		prerequisite = {
 			focus = SIA_ppl_newspaper
@@ -5975,10 +6105,11 @@ focus_tree = {
 		}
 	}
 	
+	# Набор среди хмонгов
 	focus = {
 		id = SIA_hmong_soldiers
 		text = SIA_hmong_soldiers
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_generic_communists_soldiers
 		cost = 10
 		prerequisite = {
 			focus = SIA_thai_urbazation
@@ -5995,10 +6126,11 @@ focus_tree = {
 		}
 	}
 	
+	# Использование техники в сельском хозяйстве
 	focus = {
 		id = SIA_urban_teh
 		text = SIA_urban_teh
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_collectivization_of_agriculture
 		cost = 10
 		prerequisite = {
 			focus = SIA_thai_urbazation
@@ -6016,10 +6148,11 @@ focus_tree = {
 		}
 	}
 	
+	# Социалистический союз восточных азиатских республик
 	focus = {
 		id = SIA_west_sssr
 		text = SIA_west_sssr
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_socialist
 		cost = 10
 		prerequisite = {
 			focus = SIA_no_king
@@ -6040,10 +6173,11 @@ focus_tree = {
 		}
 	}
 	
+	# Сблизиться с коммунистами Китая
 	focus = {
 		id = SIA_with_comchina
 		text = SIA_with_comchina
-		icon = GFX_goal_unknown
+		icon = GFX_z_focus_tro_china
 		cost = 10
 		prerequisite = {
 			focus = SIA_no_king
@@ -6063,10 +6197,11 @@ focus_tree = {
 		}
 	}
 	
+	# Связаться с СССР
 	focus = {
 		id = SIA_with_SSSR
 		text = SIA_with_SSSR
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_create_new_ussr
 		cost = 10
 		prerequisite = {
 			focus = SIA_no_king
@@ -6086,10 +6221,11 @@ focus_tree = {
 		}
 	}
 	
+	# Примириться с китайцами в рабочем классе
 	focus = {
 		id = SIA_piece_with_chinese
 		text = SIA_piece_with_chinese
-		icon = GFX_goal_unknown
+		icon = GFX_z_focus_the_workers
 		cost = 10
 		prerequisite = {
 			focus = SIA_with_comchina
@@ -6106,10 +6242,11 @@ focus_tree = {
 		}
 	}
 	
+	# Опыт Китая в партизанской и оборонительной войне
 	focus = {
 		id = SIA_chi_exp
 		text = SIA_chi_exp
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_foreign_expeditions
 		cost = 10
 		prerequisite = {
 			focus = SIA_with_comchina
@@ -6126,10 +6263,11 @@ focus_tree = {
 		}
 	}
 	
+	# Совместные предприятия
 	focus = {
 		id = SIA_comchi_prom
 		text = SIA_comchi_prom
-		icon = GFX_goal_unknown
+		icon = GFX_z_promka_13
 		cost = 10
 		prerequisite = {
 			focus = SIA_piece_with_chinese
@@ -6146,10 +6284,11 @@ focus_tree = {
 		}
 	}
 	
+	# Китаизация марксизма
 	focus = {
 		id = SIA_chi_marx
 		text = SIA_chi_marx
-		icon = GFX_goal_unknown
+		icon = GFX_z_focus_tro_china
 		cost = 10
 		prerequisite = {
 			focus = SIA_chi_exp
@@ -6166,6 +6305,7 @@ focus_tree = {
 		}
 	}
 	
+	# Сделать Лаос частью союза
 	focus = {
 		id = SIA_sssr_laos
 		text = SIA_sssr_laos
@@ -6186,6 +6326,7 @@ focus_tree = {
 		}
 	}
 	
+	# Ультиматум Камбодже
 	focus = {
 		id = SIA_sssr_cambodja
 		text = SIA_sssr_cambodja
@@ -6206,6 +6347,7 @@ focus_tree = {
 		}
 	}
 	
+	# Пригласить Вьетнам
 	focus = {
 		id = SIA_sssr_annam
 		text = SIA_sssr_annam
@@ -6227,6 +6369,7 @@ focus_tree = {
 		}
 	}
 	
+	# Объединить Индокитайский союз
 	focus = {
 		id = SIA_sssr_indochina_again
 		text = SIA_sssr_indochina_again
@@ -6247,6 +6390,7 @@ focus_tree = {
 		}
 	}
 	
+	# Попробовать примириться с Бирмой
 	focus = {
 		id = SIA_sssr_bhurma
 		text = SIA_sssr_bhurma
@@ -6267,6 +6411,7 @@ focus_tree = {
 		}
 	}
 	
+	# Сжечь султанаты Малайи
 	focus = {
 		id = SIA_sssr_malaisia
 		text = SIA_sssr_malaisia
@@ -6287,6 +6432,7 @@ focus_tree = {
 		}
 	}
 	
+	# Развить азиатскую науку
 	focus = {
 		id = SIA_sssr_research
 		icon = GFX_goal_unknown
@@ -6306,6 +6452,7 @@ focus_tree = {
 		}
 	}
 	
+	# Добраться до Филиппин
 	focus = {
 		id = SIA_sssr_philippins
 		text = SIA_sssr_philippins
@@ -6326,6 +6473,7 @@ focus_tree = {
 		}
 	}
 	
+	# Свобода для Индонезии
 	focus = {
 		id = SIA_sssr_indonesia
 		text = SIA_sssr_indonesia
@@ -6346,10 +6494,11 @@ focus_tree = {
 		}
 	}
 	
+	# Перенять опыт централизованного производства
 	focus = {
 		id = SIA_central_pom_exp
 		text = SIA_central_pom_exp
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_planning_central
 		cost = 10
 		prerequisite = {
 			focus = SIA_with_SSSR
@@ -6366,10 +6515,11 @@ focus_tree = {
 		}
 	}
 	
+	# Военные советники из СССР
 	focus = {
 		id = SIA_SSSR_generals
 		text = SIA_SSSR_generals
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_sov_ammunitions4
 		cost = 10
 		prerequisite = {
 			focus = SIA_with_SSSR
@@ -6386,6 +6536,7 @@ focus_tree = {
 		}
 	}
 	
+	# Принять атеистическую политику СССР
 	focus = {
 		id = SIA_ateism
 		text = SIA_ateism
@@ -6406,10 +6557,11 @@ focus_tree = {
 		}
 	}
 	
+	# Революционное образование
 	focus = {
 		id = SIA_rev_education
 		text = SIA_rev_education
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_red_dragon
 		cost = 10
 		prerequisite = {
 			focus = SIA_ateism
@@ -6426,6 +6578,7 @@ focus_tree = {
 		}
 	}
 	
+	# Объединить тайский народ под знаменем революции
 	focus = {
 		id = SIA_united_thai
 		text = SIA_united_thai
@@ -6447,10 +6600,11 @@ focus_tree = {
 		}
 	}
 	
+	# Новая конституция
 	focus = {
 		id = SIA_new_constitution
 		text = SIA_new_constitution
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_establish_the_constitution_of_the_peoples_republic
 		cost = 10
 		prerequisite = {
 			focus = SIA_med_for_all
@@ -6467,10 +6621,11 @@ focus_tree = {
 		}
 	}
 	
+	# Создание Национального Банка
 	focus = {
 		id = SIA_create_nac_bank
 		text = SIA_create_nac_bank
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_peoples_bank_2
 		cost = 10
 		prerequisite = {
 			focus = SIA_new_constitution
@@ -6487,6 +6642,7 @@ focus_tree = {
 		}
 	}
 	
+	# Освободить протектораты Франции
 	focus = {
 		id = SIA_league_frank_colonies
 		text = SIA_league_frank_colonies
@@ -6507,6 +6663,7 @@ focus_tree = {
 		}
 	}
 	
+	# Пригласить Филиппины
 	focus = {
 		id = SIA_league_phillipins
 		text = SIA_league_phillipins
@@ -6527,6 +6684,7 @@ focus_tree = {
 		}
 	}
 	
+	# Лишить США колонии
 	focus = {
 		id = SIA_league_usa_colonies
 		text = SIA_league_usa_colonies
@@ -6547,6 +6705,7 @@ focus_tree = {
 		}
 	}
 	
+	# Пригласить Индонезию
 	focus = {
 		id = SIA_league_indonesia
 		text = SIA_league_indonesia
@@ -6567,6 +6726,7 @@ focus_tree = {
 		}
 	}
 	
+	# Уничтожить остатки голландского колонизма
 	focus = {
 		id = SIA_league_niderland_colonies
 		text = SIA_league_niderland_colonies
@@ -6587,6 +6747,7 @@ focus_tree = {
 		}
 	}
 	
+	# Создание Федерации Государств Юго-Восточной Азии
 	focus = {
 		id = SIA_league_one_federation
 		text = SIA_league_one_federation
@@ -6607,6 +6768,7 @@ focus_tree = {
 		}
 	}
 	
+	# Военные советники из штатов
 	focus = {
 		id = SIA_USA_generals
 		text = SIA_USA_generals
@@ -6627,6 +6789,7 @@ focus_tree = {
 		}
 	}
 	
+	# Поддержка оружейной отрасли из Америки
 	focus = {
 		id = SIA_USA_armory
 		text = SIA_USA_armory
@@ -6647,6 +6810,7 @@ focus_tree = {
 		}
 	}
 	
+	# Научный блок с США
 	focus = {
 		id = SIA_USA_research
 		text = SIA_USA_research
@@ -6667,6 +6831,7 @@ focus_tree = {
 		}
 	}
 	
+	# Предоставить военную базу США
 	focus = {
 		id = SIA_USA_base_dem
 		text = SIA_USA_base_dem
@@ -6687,6 +6852,7 @@ focus_tree = {
 		}
 	}
 	
+	# Получить лицензии на современную технику
 	focus = {
 		id = SIA_USA_lic
 		text = SIA_USA_lic
@@ -6710,6 +6876,7 @@ focus_tree = {
 		}
 	}
 	
+	# Экономическая помощь США
 	focus = {
 		id = SIA_USA_ekonomik_help
 		text = SIA_USA_ekonomik_help
@@ -6730,6 +6897,7 @@ focus_tree = {
 		}
 	}
 	
+	# Остановить империализм Японии
 	focus = {
 		id = SIA_USA_stop_japan
 		text = SIA_USA_stop_japan
@@ -6751,6 +6919,7 @@ focus_tree = {
 		}
 	}
 	
+	# Политика восстановления тайских традиций
 	focus = {
 		id = SIA_restore_traditions
 		text = SIA_restore_traditions
@@ -6774,6 +6943,7 @@ focus_tree = {
 		}
 	}
 	
+	# Придерживаться нейтралитета
 	focus = {
 		id = SIA_dem_neutral
 		text = SIA_dem_neutral
@@ -6799,6 +6969,7 @@ focus_tree = {
 		}
 	}
 	
+	# Расширить набор в скаутские организации
 	focus = {
 		id = SIA_royal_scouts
 		text = SIA_royal_scouts
@@ -6819,6 +6990,7 @@ focus_tree = {
 		}
 	}
 	
+	# Тайное сотрудничество с Сери Тай
 	focus = {
 		id = SIA_help_seri_thai
 		text = SIA_help_seri_thai
@@ -6842,10 +7014,11 @@ focus_tree = {
 		}
 	}
 	
+	# Модернизация в западном стиле
 	focus = {
 		id = SIA_west_modernization
 		text = SIA_west_modernization
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_yemen_modernization
 		cost = 10
 		prerequisite = {
 			focus = SIA_thai_nac_bank
@@ -6862,6 +7035,7 @@ focus_tree = {
 		}
 	}
 	
+	# Выпуск новых банкнот
 	focus = {
 		id = SIA_new_banknots
 		text = SIA_new_banknots
@@ -6882,10 +7056,11 @@ focus_tree = {
 		}
 	}
 	
+	# Организация новой столицы
 	focus = {
 		id = SIA_new_capital
 		text = SIA_new_capital
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_germany_is_capital_of_world
 		cost = 10
 		prerequisite = {
 			focus = SIA_great_thai

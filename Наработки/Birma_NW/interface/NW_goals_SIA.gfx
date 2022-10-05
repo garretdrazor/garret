@@ -1,0 +1,116 @@
+spriteTypes = {	
+	
+	frameAnimatedSpriteType = {
+		name = "GFX_ongoing_multi_focus_goal"
+		texturefile = "gfx/interface/ongoing_multi_focus_goal.dds"
+		noOfFrames = 3
+		animation_rate_fps = 1
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+		alwaystransparent = yes
+		effectFile = "gfx/FX/buttonstate_blendframes.lua"
+	}
+	
+	
+	SpriteType = { 
+		name = "GFX_z_goal_siam_cement_group"
+		texturefile = "gfx/interface/goals/z_goal_siam_cement_group.dds"
+	}
+	
+	SpriteType = { 
+		name = "GFX_z_goal_siam_invest_army"
+		texturefile = "gfx/interface/goals/z_goal_siam_invest_army.dds"
+	}
+	
+	SpriteType = { 
+		name = "GFX_z_goal_siam_kasetsart_institute"
+		texturefile = "gfx/interface/goals/z_goal_siam_kasetsart_institute.dds"
+	}
+	
+	SpriteType = { 
+		name = "GFX_z_goal_siam_mongkut_institute"
+		texturefile = "gfx/interface/goals/z_goal_siam_mongkut_institute.dds"
+	}
+	
+	SpriteType = { 
+		name = "GFX_z_goal_siam_police1"
+		texturefile = "gfx/interface/goals/z_goal_siam_police1.dds"
+	}
+	
+	SpriteType = { 
+		name = "GFX_z_goal_siam_police2"
+		texturefile = "gfx/interface/goals/z_goal_siam_police2.dds"
+	}
+	
+	SpriteType = { 
+		name = "GFX_z_goal_siam_police3"
+		texturefile = "gfx/interface/goals/z_goal_siam_police3.dds"
+	}
+	
+	SpriteType = { 
+		name = "GFX_z_goal_siam_rangers"
+		texturefile = "gfx/interface/goals/z_goal_siam_rangers.dds"
+	}
+	
+	SpriteType = { 
+		name = "GFX_z_goal_siam_royal_academy"
+		texturefile = "gfx/interface/goals/z_goal_siam_royal_academy.dds"
+	}
+	
+	SpriteType = { 
+		name = "GFX_z_goal_siam_sea_base"
+		texturefile = "gfx/interface/goals/z_goal_siam_sea_base.dds"
+	}
+	
+	SpriteType = { 
+		name = "GFX_z_goal_siam_sea_dockyard"
+		texturefile = "gfx/interface/goals/z_goal_siam_sea_dockyard.dds"
+	}
+	
+	SpriteType = { 
+		name = "GFX_z_goal_siam_seals"
+		texturefile = "gfx/interface/goals/z_goal_siam_seals.dds"
+	}
+	
+	SpriteType = { 
+		name = "GFX_z_goal_siam_seals_2"
+		texturefile = "gfx/interface/goals/z_goal_siam_seals_2.dds"
+	}
+	
+	SpriteType = { 
+		name = "GFX_z_goal_siam_seals3"
+		texturefile = "gfx/interface/goals/z_goal_siam_seals3.dds"
+	}
+	
+	SpriteType = { 
+		name = "GFX_z_goal_siam_spec"
+		texturefile = "gfx/interface/goals/z_goal_siam_spec.dds"
+	}
+	
+	SpriteType = { 
+		name = "GFX_z_goal_siam_valute_gold"
+		texturefile = "gfx/interface/goals/z_goal_siam_valute_gold.dds"
+	}
+	
+	SpriteType = { 
+		name = "GFX_z_goal_siam_vvs"
+		texturefile = "gfx/interface/goals/z_goal_siam_vvs.dds"
+	}
+	
+	SpriteType = { 
+		name = "GFX_z_goal_siam_vvs2"
+		texturefile = "gfx/interface/goals/z_goal_siam_vvs2.dds"
+	}
+	
+	SpriteType = { 
+		name = "GFX_z_goal_siam_vvs3"
+		texturefile = "gfx/interface/goals/z_goal_siam_vvs3.dds"
+	}
+	
+	SpriteType = { 
+		name = "GFX_z_goal_siam_vvs4"
+		texturefile = "gfx/interface/goals/z_goal_siam_vvs4.dds"
+	}
+	
+}

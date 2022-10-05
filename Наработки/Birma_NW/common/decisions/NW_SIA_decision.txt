@@ -10,21 +10,28 @@ SIA_bad_theatry_categories = {
 				has_idea = SIA_idea_credit_ITA_2
 				has_idea = SIA_idea_credit_ITA_3
 			}
+			NOT = {
+				has_country_flag = SIA_visit_flag
+			}
 		}
 		icon = eng_blackshirt_speech
 
-		cost = 50
+		cost = 75
 		days_remove = 14
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision SIA_ita_visit"
 			hidden_effect = {
 				set_country_flag = SIA_ita_one_flag
+				set_country_flag = SIA_visit_flag
 			}
 		}
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision SIA_ita_visit"
-			country_event = { id = sia.6 }
+			ITA = { country_event = { id = sia.6 } }
+			hidden_effect = {
+				remove_country_flag = SIA_visit_flag
+			}
 		}
 		ai_will_do = {
 			factor = 100
@@ -55,21 +62,28 @@ SIA_bad_theatry_categories = {
 				has_idea = SIA_idea_credit_GER_2
 				has_idea = SIA_idea_credit_GER_3
 			}
+			NOT = {
+				has_country_flag = SIA_visit_flag
+			}
 		}
 		icon = eng_blackshirt_speech
 
-		cost = 50
+		cost = 75
 		days_remove = 14
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision SIA_ger_visit"
 			hidden_effect = {
 				set_country_flag = SIA_ger_one_flag
+				set_country_flag = SIA_visit_flag
 			}
 		}
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision SIA_ger_visit"
-			country_event = { id = sia.6 }
+			GER = { country_event = { id = sia.6 } }
+			hidden_effect = {
+				remove_country_flag = SIA_visit_flag
+			}
 		}
 		ai_will_do = {
 			factor = 100
@@ -100,21 +114,28 @@ SIA_bad_theatry_categories = {
 				has_idea = SIA_idea_credit_JAP_2
 				has_idea = SIA_idea_credit_JAP_3
 			}
+			NOT = {
+				has_country_flag = SIA_visit_flag
+			}
 		}
 		icon = eng_blackshirt_speech
 
-		cost = 50
+		cost = 75
 		days_remove = 14
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision SIA_jap_visit"
 			hidden_effect = {
 				set_country_flag = SIA_jap_one_flag
+				set_country_flag = SIA_visit_flag
 			}
 		}
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision SIA_jap_visit"
-			country_event = { id = sia.6 }
+			JAP = { country_event = { id = sia.6 } }
+			hidden_effect = {
+				remove_country_flag = SIA_visit_flag
+			}
 		}
 		ai_will_do = {
 			factor = 100
@@ -145,21 +166,28 @@ SIA_bad_theatry_categories = {
 				has_idea = SIA_idea_credit_FRA_2
 				has_idea = SIA_idea_credit_FRA_3
 			}
+			NOT = {
+				has_country_flag = SIA_visit_flag
+			}
 		}
 		icon = eng_blackshirt_speech
 
-		cost = 50
+		cost = 75
 		days_remove = 14
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision SIA_fra_visit"
 			hidden_effect = {
 				set_country_flag = SIA_fra_one_flag
+				set_country_flag = SIA_visit_flag
 			}
 		}
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision SIA_fra_visit"
-			country_event = { id = sia.6 }
+			FRA = { country_event = { id = sia.6 } }
+			hidden_effect = {
+				remove_country_flag = SIA_visit_flag
+			}
 		}
 		ai_will_do = {
 			factor = 100
@@ -190,21 +218,28 @@ SIA_bad_theatry_categories = {
 				has_idea = SIA_idea_credit_ENG_2
 				has_idea = SIA_idea_credit_ENG_3
 			}
+			NOT = {
+				has_country_flag = SIA_visit_flag
+			}
 		}
 		icon = eng_blackshirt_speech
 
-		cost = 50
+		cost = 75
 		days_remove = 14
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision SIA_eng_visit"
 			hidden_effect = {
 				set_country_flag = SIA_eng_one_flag
+				set_country_flag = SIA_visit_flag
 			}
 		}
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision SIA_eng_visit"
-			country_event = { id = sia.6 }
+			ENG = { country_event = { id = sia.6 } }
+			hidden_effect = {
+				remove_country_flag = SIA_visit_flag
+			}
 		}
 		ai_will_do = {
 			factor = 100
@@ -235,21 +270,28 @@ SIA_bad_theatry_categories = {
 				has_idea = SIA_idea_credit_USA_2
 				has_idea = SIA_idea_credit_USA_3
 			}
+			NOT = {
+				has_country_flag = SIA_visit_flag
+			}
 		}
 		icon = eng_blackshirt_speech
 
-		cost = 50
+		cost = 75
 		days_remove = 14
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision SIA_usa_visit"
 			hidden_effect = {
 				set_country_flag = SIA_usa_one_flag
+				set_country_flag = SIA_visit_flag
 			}
 		}
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision SIA_usa_visit"
-			country_event = { id = sia.6 }
+			USA = { country_event = { id = sia.6 } }
+			hidden_effect = {
+				remove_country_flag = SIA_visit_flag
+			}
 		}
 		ai_will_do = {
 			factor = 100
@@ -360,7 +402,7 @@ SIA_crisis_dangerous_categories = {
 	}
 }
 # Борьба полиции и армии за влияние
-SIA_bad_theatry_categories = {
+SIA_police_army_conflict_categories = {
 	SIA_general_1 = {
 		allowed = {
 			tag = SIA

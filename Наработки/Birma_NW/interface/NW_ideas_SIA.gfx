@@ -1,0 +1,9 @@
+spriteTypes = {	
+
+	#GENERIC
+	
+	spriteType = {
+		name = "GFX_idea_generic_adviser_to_revolution"
+		texturefile = "gfx/interface/ideas/generic_adviser_to_revolution.dds"
+	}
+}
