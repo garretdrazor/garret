@@ -20,7 +20,7 @@ ideas = {
 				production_factory_max_efficiency_factor = -0.05
 			}
 		}
-		# Современная аграрная страна 
+		# Аграрная страна 
 		SIA_idea_agrar_2 = {
 			removal_cost = -1
 			allowed = {
@@ -157,8 +157,8 @@ ideas = {
 				production_factory_start_efficiency_factor = 0.05
 			}
 		}
-		# Rama VIII
-		SIA_idea_rama_viii = {
+		# Rama VII
+		SIA_idea_rama_vii = {
 			removal_cost = -1
 			allowed = {
 				always = no
