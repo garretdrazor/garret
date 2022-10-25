@@ -1076,5 +1076,20 @@ ideas = {
 				conscription_factor = 0.05
 			}
 		}
+		# Министерство транспорта
+		SIA_idea_auto_ministr = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = BRM_idea_half_birma
+			modifier = {
+				production_speed_infrastructure_factor = 0.2
+				repair_speed_infrastructure_factor = 0.4
+			}
+		}
 	}
 }
