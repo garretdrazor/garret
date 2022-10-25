@@ -3706,13 +3706,17 @@ focus_tree = {
 			focus = SIA_land_maximum
 			focus = SIA_create_medicine
 		}
-		x = 28
+		x = 30
 		y = 9
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_border_conflict"
-			add_stability = 0.01
-			add_political_power = 100
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				category = motorized_equipment
+			}
+			add_ideas = SIA_idea_auto_ministr
 		}
 	}
 	
