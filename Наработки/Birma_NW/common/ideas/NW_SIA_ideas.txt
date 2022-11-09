@@ -10,7 +10,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = idea_Siam_agrar_1
+			picture = Siam_agrar_1
 			modifier = {
 				MONTHLY_POPULATION = 0.25
 				conscription = -0.003
@@ -29,7 +29,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = idea_Siam_agrar_2
+			picture = Siam_agrar_2
 			modifier = {
 				MONTHLY_POPULATION = 0.35
 				conscription = -0.002
@@ -48,7 +48,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = idea_Siam_agrar_3
+			picture = Siam_agrar_3
 			modifier = {
 				MONTHLY_POPULATION = 0.6
 				conscription = -0.001
@@ -67,7 +67,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = idea_
+			picture = usa_great_depression_3
 			modifier = {
 				consumer_goods_factor = 0.1
 				production_factory_max_efficiency_factor = -0.1
@@ -83,7 +83,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = idea_
+			picture = usa_great_depression_3
 			modifier = {
 				consumer_goods_factor = 0.08
 				production_factory_max_efficiency_factor = -0.08
@@ -99,7 +99,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = idea_
+			picture = usa_great_depression_2
 			modifier = {
 				consumer_goods_factor = 0.06
 				production_factory_max_efficiency_factor = -0.06
@@ -115,7 +115,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = idea_
+			picture = usa_great_depression_2
 			modifier = {
 				consumer_goods_factor = 0.04
 				production_factory_max_efficiency_factor = -0.04
@@ -131,7 +131,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = idea_
+			picture = great_depression
 			modifier = {
 				consumer_goods_factor = 0.02
 				production_factory_max_efficiency_factor = -0.02
@@ -148,7 +148,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = idea_siam_chine_workers
+			picture = siam_chine_workers
 			modifier = {
 				consumer_goods_factor = 0.05
 				political_power_factor = -0.1
@@ -166,7 +166,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = idea_siam_Rama7
+			picture = siam_Rama7
 			modifier = {
 				stability_factor = -0.05
 				monarchy_drift = -0.01
@@ -181,7 +181,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = idea_siam_need_crown
+			picture = siam_need_crown
 			targeted_modifier = {
 				tag = ENG
 				cic_to_target_factor = 0.06
@@ -222,7 +222,7 @@ ideas = {
 					NOT = { country_exists = ENG }
 				}
 			}
-			picture = idea_siam_gb3
+			picture = siam_gb3
 			targeted_modifier = {
 				tag = ENG
 				cic_to_target_factor = 0.06
@@ -242,7 +242,7 @@ ideas = {
 					NOT = { country_exists = ENG }
 				}
 			}
-			picture = idea_siam_gb2
+			picture = siam_gb2
 			targeted_modifier = {
 				tag = ENG
 				cic_to_target_factor = 0.04
@@ -262,7 +262,7 @@ ideas = {
 					NOT = { country_exists = ENG }
 				}
 			}
-			picture = idea_siam_gb1
+			picture = siam_gb1
 			targeted_modifier = {
 				tag = ENG
 				cic_to_target_factor = 0.02
@@ -283,7 +283,7 @@ ideas = {
 					NOT = { country_exists = ITA }
 				}
 			}
-			picture = idea_siam_ita3
+			picture = siam_ita3
 			targeted_modifier = {
 				tag = ITA
 				cic_to_target_factor = 0.06
@@ -303,7 +303,7 @@ ideas = {
 					NOT = { country_exists = ITA }
 				}
 			}
-			picture = idea_siam_ita2
+			picture = siam_ita2
 			targeted_modifier = {
 				tag = ITA
 				cic_to_target_factor = 0.04
@@ -323,7 +323,7 @@ ideas = {
 					NOT = { country_exists = ITA }
 				}
 			}
-			picture = idea_siam_ita1
+			picture = siam_ita1
 			targeted_modifier = {
 				tag = ITA
 				cic_to_target_factor = 0.02
@@ -344,7 +344,7 @@ ideas = {
 					NOT = { country_exists = FRA }
 				}
 			}
-			picture = idea_siam_fra3
+			picture = siam_fra3
 			targeted_modifier = {
 				tag = FRA
 				cic_to_target_factor = 0.06
@@ -364,7 +364,7 @@ ideas = {
 					NOT = { country_exists = FRA }
 				}
 			}
-			picture = idea_siam_fra2
+			picture = siam_fra2
 			targeted_modifier = {
 				tag = FRA
 				cic_to_target_factor = 0.04
@@ -384,7 +384,7 @@ ideas = {
 					NOT = { country_exists = FRA }
 				}
 			}
-			picture = idea_siam_fra1
+			picture = siam_fra1
 			targeted_modifier = {
 				tag = FRA
 				cic_to_target_factor = 0.02
@@ -399,7 +399,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = idea_siam_ger3
+			picture = siam_ger3
 			available = {
 				OR = {
 					NOT = { has_war_with = GER }
@@ -425,7 +425,7 @@ ideas = {
 					NOT = { country_exists = GER }
 				}
 			}
-			picture = idea_siam_ger2
+			picture = siam_ger2
 			targeted_modifier = {
 				tag = GER
 				cic_to_target_factor = 0.04
@@ -445,7 +445,7 @@ ideas = {
 					NOT = { country_exists = GER }
 				}
 			}
-			picture = idea_siam_ger1
+			picture = siam_ger1
 			targeted_modifier = {
 				tag = GER
 				cic_to_target_factor = 0.02
@@ -466,7 +466,7 @@ ideas = {
 					NOT = { country_exists = USA }
 				}
 			}
-			picture = idea_siam_usa3
+			picture = siam_usa3
 			targeted_modifier = {
 				tag = USA
 				cic_to_target_factor = 0.06
@@ -486,7 +486,7 @@ ideas = {
 					NOT = { country_exists = USA }
 				}
 			}
-			picture = idea_siam_usa2
+			picture = siam_usa2
 			targeted_modifier = {
 				tag = USA
 				cic_to_target_factor = 0.04
@@ -506,7 +506,7 @@ ideas = {
 					NOT = { country_exists = USA }
 				}
 			}
-			picture = idea_siam_usa1
+			picture = siam_usa1
 			targeted_modifier = {
 				tag = USA
 				cic_to_target_factor = 0.02
@@ -527,7 +527,7 @@ ideas = {
 					NOT = { country_exists = JAP }
 				}
 			}
-			picture = idea_siam_jap3
+			picture = siam_jap3
 			targeted_modifier = {
 				tag = JAP
 				cic_to_target_factor = 0.06
@@ -547,7 +547,7 @@ ideas = {
 					NOT = { country_exists = JAP }
 				}
 			}
-			picture = idea_siam_jap2
+			picture = siam_jap2
 			targeted_modifier = {
 				tag = JAP
 				cic_to_target_factor = 0.04
@@ -567,7 +567,7 @@ ideas = {
 					NOT = { country_exists = JAP }
 				}
 			}
-			picture = idea_siam_jap1
+			picture = siam_jap1
 			targeted_modifier = {
 				tag = JAP
 				cic_to_target_factor = 0.02
@@ -582,7 +582,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = idea_siam_crisis
+			picture = siam_crisis
 			modifier = {
 				consumer_goods_factor = 0.1
 				production_factory_max_efficiency_factor = -0.1
@@ -598,7 +598,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = idea_
+			picture = idea_generic_supply_depot
 			modifier = {
 				consumer_goods_factor = -0.05
 				line_change_production_efficiency_factor = 0.05
@@ -615,7 +615,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = idea_
+			picture = idea_man_five_year_plan_industry
 			modifier = {
 				production_speed_buildings_factor = 0.1
 				local_resources_factor = 0.15
@@ -630,7 +630,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = idea_siam_cement
+			picture = siam_cement
 			modifier = {
 				production_speed_buildings_factor = 0.1
 			}
@@ -644,7 +644,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = idea_siam_rice1
+			picture = siam_rice1
 			modifier = {
 				consumer_goods_factor = -0.03
 			}
@@ -657,7 +657,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = idea_siam_rice2
+			picture = siam_rice2
 			modifier = {
 				consumer_goods_factor = -0.06
 			}
@@ -671,7 +671,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = idea_siam_tabaco
+			picture = siam_tabaco
 			modifier = {
 				consumer_goods_factor = -0.06
 			}
@@ -685,7 +685,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = idea_siam_air_group
+			picture = siam_air_group
 			modifier = {
 				air_fuel_consumption_factor = -0.1
 				experience_gain_air_factor = 0.1
@@ -701,7 +701,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = idea_siam_air_group
+			picture = siam_air_group
 			modifier = {
 				air_fuel_consumption_factor = -0.1
 				experience_gain_air_factor = 0.1
@@ -792,7 +792,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = idea_
+			picture = army_police_7
 			modifier = {
 				stability_factor = 0.15
 				war_support_factor = -0.15
@@ -808,7 +808,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = idea_
+			picture = army_police_6
 			modifier = {
 				stability_factor = 0.1
 				war_support_factor = -0.1
@@ -824,12 +824,12 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = idea_
+			picture = army_police_5
 			modifier = {
-				stability_factor = 0.5
-				war_support_factor = -0.5
-				max_dig_in_factor = 0.5
-				compliance_growth_on_our_occupied_states = 0.5
+				stability_factor = 0.05
+				war_support_factor = -0.05
+				max_dig_in_factor = 0.05
+				compliance_growth_on_our_occupied_states = 0.05
 			}
 		}
 		SIA_idea_police_army_4 = {
@@ -840,10 +840,10 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = idea_
+			picture = army_police_4
 			modifier = {
-				stability_factor = -0.5
-				war_support_factor = -0.5
+				stability_factor = -0.05
+				war_support_factor = -0.05
 			}
 		}
 		SIA_idea_police_army_5 = {
@@ -854,10 +854,10 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = idea_
+			picture = army_police_3
 			modifier = {
-				stability_factor = -0.5
-				war_support_factor = 0.5
+				stability_factor = -0.05
+				war_support_factor = 0.05
 				army_attack_factor = 0.025
 				training_time_factor = 0.05
 			}
@@ -870,7 +870,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = idea_
+			picture = army_police_2
 			modifier = {
 				stability_factor = -0.1
 				war_support_factor = 0.1
@@ -886,7 +886,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			picture = idea_
+			picture = army_police_1
 			modifier = {
 				stability_factor = -0.15
 				war_support_factor = 0.15

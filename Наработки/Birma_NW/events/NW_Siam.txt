@@ -88,7 +88,10 @@ country_event = {
 			idea = SIA_idea_crisis
 			days = 356
 		}
-		hidden_effect = { set_country_flag = SIA_elections_start_flag }
+		hidden_effect = {
+			set_country_flag = SIA_elections_start_flag
+			set_country_flag = SIA_crisis_start_flag
+		}
 	}
 }
 

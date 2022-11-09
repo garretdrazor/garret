@@ -320,16 +320,14 @@ SIA_crisis_dangerous_categories = {
 			tag = SIA
 		}
 		available = {
-			NOT = {
-				has_country_flag = SIA_crisis_start_flag
-			}
+			has_country_flag = SIA_crisis_start_flag
 		}
 		activation = {
-			date > 1936.01.02
+			date > 1936.01.01
 		}
 		is_good = yes
 		days_mission_timeout = 564
-		icon = GFX_decision_wood_develop
+		icon = GFX_decision_thai_crisis
 		timeout_effect = {
 			country_event = { id = sia.5 }
 		}
@@ -413,7 +411,7 @@ SIA_police_army_conflict_categories = {
 				has_idea = SIA_idea_police_army_1
 			}
 		}
-		icon = eng_blackshirt_speech
+		icon = decision_thai_army_1
 
 		cost = 75
 		days_remove = 7
@@ -494,7 +492,7 @@ SIA_police_army_conflict_categories = {
 				has_idea = SIA_idea_police_army_1
 			}
 		}
-		icon = eng_blackshirt_speech
+		icon = decision_thai_army_2
 
 		cost = 75
 		days_remove = 7
@@ -575,7 +573,7 @@ SIA_police_army_conflict_categories = {
 				has_idea = SIA_idea_police_army_1
 			}
 		}
-		icon = eng_blackshirt_speech
+		icon = decision_thai_army_3
 
 		cost = 75
 		days_remove = 7
@@ -897,7 +895,7 @@ SIA_police_army_conflict_categories = {
 				has_idea = SIA_idea_police_army_7
 			}
 		}
-		icon = eng_blackshirt_speech
+		icon = decision_thai_army_7
 
 		cost = 75
 		days_remove = 7
@@ -1296,7 +1294,7 @@ SIA_police_army_conflict_categories = {
 				has_idea = SIA_idea_police_army_7
 			}
 		}
-		icon = eng_blackshirt_speech
+		icon = decision_thai_army_12
 
 		cost = 40
 		days_remove = 7
@@ -1359,7 +1357,7 @@ SIA_police_army_conflict_categories = {
 				has_idea = SIA_idea_police_army_1
 			}
 		}
-		icon = eng_blackshirt_speech
+		icon = decision_thai_army_13
 
 		cost = 40
 		days_remove = 7
