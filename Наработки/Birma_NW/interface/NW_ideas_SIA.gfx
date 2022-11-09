@@ -3,7 +3,123 @@ spriteTypes = {
 	#GENERIC
 	
 	spriteType = {
+		name = "GFX_idea_Siam_agrar_1"
+		texturefile = "gfx/interface/ideas/SIA/Siam_agrar_1.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Siam_agrar_2"
+		texturefile = "gfx/interface/ideas/SIA/Siam_agrar_2.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Siam_agrar_3"
+		texturefile = "gfx/interface/ideas/SIA/Siam_agrar_3.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_siam_crisis"
+		texturefile = "gfx/interface/ideas/SIA/siam_crisis.dds"
+	}
+	spriteType = {
 		name = "GFX_idea_generic_adviser_to_revolution"
-		texturefile = "gfx/interface/ideas/generic_adviser_to_revolution.dds"
+		texturefile = "gfx/interface/ideas/SIA/generic_adviser_to_revolution.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_adviser_to_revolution"
+		texturefile = "gfx/interface/ideas/SIA/generic_adviser_to_revolution.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_adviser_to_revolution"
+		texturefile = "gfx/interface/ideas/SIA/generic_adviser_to_revolution.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_adviser_to_revolution"
+		texturefile = "gfx/interface/ideas/SIA/generic_adviser_to_revolution.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_adviser_to_revolution"
+		texturefile = "gfx/interface/ideas/SIA/generic_adviser_to_revolution.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_adviser_to_revolution"
+		texturefile = "gfx/interface/ideas/SIA/generic_adviser_to_revolution.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_adviser_to_revolution"
+		texturefile = "gfx/interface/ideas/SIA/generic_adviser_to_revolution.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_adviser_to_revolution"
+		texturefile = "gfx/interface/ideas/SIA/generic_adviser_to_revolution.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_adviser_to_revolution"
+		texturefile = "gfx/interface/ideas/SIA/generic_adviser_to_revolution.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_adviser_to_revolution"
+		texturefile = "gfx/interface/ideas/SIA/generic_adviser_to_revolution.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_adviser_to_revolution"
+		texturefile = "gfx/interface/ideas/SIA/generic_adviser_to_revolution.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_adviser_to_revolution"
+		texturefile = "gfx/interface/ideas/SIA/generic_adviser_to_revolution.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_adviser_to_revolution"
+		texturefile = "gfx/interface/ideas/SIA/generic_adviser_to_revolution.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_adviser_to_revolution"
+		texturefile = "gfx/interface/ideas/SIA/generic_adviser_to_revolution.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_adviser_to_revolution"
+		texturefile = "gfx/interface/ideas/SIA/generic_adviser_to_revolution.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_adviser_to_revolution"
+		texturefile = "gfx/interface/ideas/SIA/generic_adviser_to_revolution.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_adviser_to_revolution"
+		texturefile = "gfx/interface/ideas/SIA/generic_adviser_to_revolution.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_adviser_to_revolution"
+		texturefile = "gfx/interface/ideas/SIA/generic_adviser_to_revolution.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_adviser_to_revolution"
+		texturefile = "gfx/interface/ideas/SIA/generic_adviser_to_revolution.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_adviser_to_revolution"
+		texturefile = "gfx/interface/ideas/SIA/generic_adviser_to_revolution.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_adviser_to_revolution"
+		texturefile = "gfx/interface/ideas/SIA/generic_adviser_to_revolution.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_adviser_to_revolution"
+		texturefile = "gfx/interface/ideas/SIA/generic_adviser_to_revolution.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_adviser_to_revolution"
+		texturefile = "gfx/interface/ideas/SIA/generic_adviser_to_revolution.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_adviser_to_revolution"
+		texturefile = "gfx/interface/ideas/SIA/generic_adviser_to_revolution.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_adviser_to_revolution"
+		texturefile = "gfx/interface/ideas/SIA/generic_adviser_to_revolution.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_adviser_to_revolution"
+		texturefile = "gfx/interface/ideas/SIA/generic_adviser_to_revolution.dds"
 	}
 }
