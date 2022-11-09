@@ -30,7 +30,7 @@ SIA_bad_theatry_categories = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision SIA_ita_visit"
 			ITA = { country_event = { id = sia.6 } }
 			hidden_effect = {
-				remove_country_flag = SIA_visit_flag
+				clr_country_flag = SIA_visit_flag
 			}
 		}
 		ai_will_do = {
@@ -82,7 +82,7 @@ SIA_bad_theatry_categories = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision SIA_ger_visit"
 			GER = { country_event = { id = sia.6 } }
 			hidden_effect = {
-				remove_country_flag = SIA_visit_flag
+				clr_country_flag = SIA_visit_flag
 			}
 		}
 		ai_will_do = {
@@ -134,7 +134,7 @@ SIA_bad_theatry_categories = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision SIA_jap_visit"
 			JAP = { country_event = { id = sia.6 } }
 			hidden_effect = {
-				remove_country_flag = SIA_visit_flag
+				clr_country_flag = SIA_visit_flag
 			}
 		}
 		ai_will_do = {
@@ -186,7 +186,7 @@ SIA_bad_theatry_categories = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision SIA_fra_visit"
 			FRA = { country_event = { id = sia.6 } }
 			hidden_effect = {
-				remove_country_flag = SIA_visit_flag
+				clr_country_flag = SIA_visit_flag
 			}
 		}
 		ai_will_do = {
@@ -238,7 +238,7 @@ SIA_bad_theatry_categories = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision SIA_eng_visit"
 			ENG = { country_event = { id = sia.6 } }
 			hidden_effect = {
-				remove_country_flag = SIA_visit_flag
+				clr_country_flag = SIA_visit_flag
 			}
 		}
 		ai_will_do = {
@@ -290,7 +290,7 @@ SIA_bad_theatry_categories = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision SIA_usa_visit"
 			USA = { country_event = { id = sia.6 } }
 			hidden_effect = {
-				remove_country_flag = SIA_visit_flag
+				clr_country_flag = SIA_visit_flag
 			}
 		}
 		ai_will_do = {
@@ -411,7 +411,7 @@ SIA_police_army_conflict_categories = {
 				has_idea = SIA_idea_police_army_1
 			}
 		}
-		icon = decision_thai_army_1
+		icon = GFX_decision_thai_army_1
 
 		cost = 75
 		days_remove = 7
@@ -492,7 +492,7 @@ SIA_police_army_conflict_categories = {
 				has_idea = SIA_idea_police_army_1
 			}
 		}
-		icon = decision_thai_army_2
+		icon = GFX_decision_thai_army_2
 
 		cost = 75
 		days_remove = 7
@@ -573,7 +573,7 @@ SIA_police_army_conflict_categories = {
 				has_idea = SIA_idea_police_army_1
 			}
 		}
-		icon = decision_thai_army_3
+		icon = GFX_decision_thai_army_3
 
 		cost = 75
 		days_remove = 7
@@ -895,7 +895,7 @@ SIA_police_army_conflict_categories = {
 				has_idea = SIA_idea_police_army_7
 			}
 		}
-		icon = decision_thai_army_7
+		icon = GFX_decision_thai_army_7
 
 		cost = 75
 		days_remove = 7
@@ -1294,7 +1294,7 @@ SIA_police_army_conflict_categories = {
 				has_idea = SIA_idea_police_army_7
 			}
 		}
-		icon = decision_thai_army_12
+		icon = GFX_decision_thai_army_12
 
 		cost = 40
 		days_remove = 7
@@ -1357,7 +1357,7 @@ SIA_police_army_conflict_categories = {
 				has_idea = SIA_idea_police_army_1
 			}
 		}
-		icon = decision_thai_army_13
+		icon = GFX_decision_thai_army_13
 
 		cost = 40
 		days_remove = 7

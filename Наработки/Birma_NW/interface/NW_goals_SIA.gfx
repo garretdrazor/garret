@@ -113,4 +113,9 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/z_goal_siam_vvs4.dds"
 	}
 	
+	SpriteType = { 
+		name = "GFX_z_goal_siam_submarine"
+		texturefile = "gfx/interface/goals/z_goal_siam_submarine.dds"
+	}
+	
 }

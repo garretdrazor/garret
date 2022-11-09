@@ -16,7 +16,7 @@ SIA_bad_theatry_categories = {
 
 # Опасность кризиса
 SIA_crisis_dangerous_categories = {
-	icon = decision_category_thai_crisis
+	icon = GFX_decision_category_thai_crisis
 	allowed = {
 		original_tag = SIA
 		NOT = {
@@ -53,7 +53,7 @@ SIA_royal_naval_ships_categories = {
 }
 # Борьба полиции и армии за влияние
 SIA_police_army_conflict_categories = {
-	icon = decision_category_police_vs_army_thai
+	icon = GFX_decision_category_police_vs_army_thai
 	allowed = {
 		original_tag = SIA
 		NOT = {

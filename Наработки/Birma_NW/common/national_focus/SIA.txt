@@ -1179,7 +1179,7 @@ focus_tree = {
 		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_china_nac"
-			289 = { state_population = -25000 }
+			289 = { add_manpower = -25000 }
 			289 = { 
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -2039,7 +2039,6 @@ focus_tree = {
 					equipment = {
 						type = fighter_equipment_1
 						version = 0
-						new_prioritised = no
 					}
 					cost_factor = 0
 				}
@@ -2104,6 +2103,14 @@ focus_tree = {
 				level = 1
 			}
 			JAP = {
+				create_production_license = {
+					target = SIA
+					equipment = {
+						type = fighter_equipment_1
+						version = 0
+					}
+					cost_factor = 0
+				}
 				country_event = { id = sia.11 }
 			}
 		}
@@ -2165,6 +2172,14 @@ focus_tree = {
 				level = 1
 			}
 			USA = {
+				create_production_license = {
+					target = SIA
+					equipment = {
+						type = fighter_equipment_1
+						version = 0
+					}
+					cost_factor = 0
+				}
 				country_event = { id = sia.12 }
 			}
 		}
