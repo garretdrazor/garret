@@ -14,7 +14,7 @@ SIA_bad_theatry_categories = {
 				has_country_flag = SIA_visit_flag
 			}
 		}
-		icon = eng_blackshirt_speech
+		icon = GFX_thai_visit_ita
 
 		cost = 75
 		days_remove = 14
@@ -66,7 +66,7 @@ SIA_bad_theatry_categories = {
 				has_country_flag = SIA_visit_flag
 			}
 		}
-		icon = eng_blackshirt_speech
+		icon = GFX_thai_visit_ger
 
 		cost = 75
 		days_remove = 14
@@ -118,7 +118,7 @@ SIA_bad_theatry_categories = {
 				has_country_flag = SIA_visit_flag
 			}
 		}
-		icon = eng_blackshirt_speech
+		icon = GFX_thai_visit_jap
 
 		cost = 75
 		days_remove = 14
@@ -170,7 +170,7 @@ SIA_bad_theatry_categories = {
 				has_country_flag = SIA_visit_flag
 			}
 		}
-		icon = eng_blackshirt_speech
+		icon = GFX_thai_visit_fra
 
 		cost = 75
 		days_remove = 14
@@ -222,7 +222,7 @@ SIA_bad_theatry_categories = {
 				has_country_flag = SIA_visit_flag
 			}
 		}
-		icon = eng_blackshirt_speech
+		icon = GFX_thai_visit_gb
 
 		cost = 75
 		days_remove = 14
@@ -274,7 +274,7 @@ SIA_bad_theatry_categories = {
 				has_country_flag = SIA_visit_flag
 			}
 		}
-		icon = eng_blackshirt_speech
+		icon = GFX_thai_visit_usa
 
 		cost = 75
 		days_remove = 14
@@ -326,7 +326,7 @@ SIA_crisis_dangerous_categories = {
 			date > 1936.01.01
 		}
 		is_good = yes
-		days_mission_timeout = 564
+		days_mission_timeout = 588
 		icon = GFX_decision_thai_crisis
 		timeout_effect = {
 			country_event = { id = sia.5 }
@@ -334,7 +334,7 @@ SIA_crisis_dangerous_categories = {
 	}
 }
 # Заказы Королевского флота
-SIA_crisis_dangerous_categories = {
+SIA_royal_naval_ships_categories = {
 	SIA_new_submarine_mission = {
 		allowed = {
 			tag = SIA
@@ -355,7 +355,7 @@ SIA_crisis_dangerous_categories = {
 		}
 		is_good = yes
 		days_mission_timeout = 420
-		icon = GFX_decision_wood_develop
+		icon = GFX_build_submarine
 		timeout_effect = {
 			if = {
 				limit = {
@@ -393,7 +393,7 @@ SIA_crisis_dangerous_categories = {
 		}
 		is_good = yes
 		days_mission_timeout = 420
-		icon = GFX_decision_wood_develop
+		icon = GFX_decision_generic_merge_plant_ship
 		timeout_effect = {
 			country_event = { id = sia.15 days = 10}
 		}

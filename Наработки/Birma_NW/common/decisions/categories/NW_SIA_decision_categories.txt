@@ -1,6 +1,6 @@
 # Дипломатические визиты
 SIA_bad_theatry_categories = {
-	icon = eng_imperial_conference
+	icon = GFX_thai_visit_cat
 	allowed = {
 		original_tag = SIA
 		NOT = {
@@ -32,7 +32,7 @@ SIA_crisis_dangerous_categories = {
 }
 # Заказы Королевского флота
 SIA_royal_naval_ships_categories = {
-	icon = eng_imperial_conference
+	icon = GFX_thai_vmf_cat
 	allowed = {
 		original_tag = SIA
 		NOT = {

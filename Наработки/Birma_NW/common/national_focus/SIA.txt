@@ -127,7 +127,6 @@ focus_tree = {
 		x = 25
 		y = 0
 		available ={
-			threat > 0.15
 			NOT = {
 				has_idea = SIA_idea_police_army_7
 			}
@@ -2760,7 +2759,7 @@ focus_tree = {
 		id = SIA_super_spec_buro
 		text = SIA_super_spec_buro
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_royal_police
 		}
@@ -2829,7 +2828,7 @@ focus_tree = {
 		id = SIA_police_randjers
 		text = SIA_police_randjers
 		icon = GFX_z_goal_siam_rangers
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_super_spec_buro
 		}
@@ -3895,7 +3894,7 @@ focus_tree = {
 		id = SIA_rifle_factory
 		text = SIA_rifle_factory
 		icon = GFX_z_goal_peasant_army
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_powder_factory
 		}
@@ -4093,7 +4092,7 @@ focus_tree = {
 		id = SIA_new_trening
 		text = SIA_new_trening
 		icon = GFX_z_goal_conscription
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_artillery_train
 		}
@@ -4549,7 +4548,7 @@ focus_tree = {
 		id = SIA_stud_patrul
 		text = SIA_stud_patrul
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_underwater
 			focus = SIA_border_ship
@@ -4573,7 +4572,7 @@ focus_tree = {
 		id = SIA_royal_docs
 		text = SIA_royal_docs
 		icon = GFX_z_goal_siam_sea_dockyard
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_border_ship
 		}
@@ -4603,7 +4602,7 @@ focus_tree = {
 		id = SIA_royal_seaman
 		text = SIA_royal_seaman
 		icon = GFX_z_goal_siam_seals_2
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_stud_patrul
 			focus = SIA_royal_docs
@@ -4625,7 +4624,7 @@ focus_tree = {
 		id = SIA_usa_seaman
 		text = SIA_usa_seaman
 		icon = GFX_z_goal_siam_seals3
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_royal_seaman
 		}
@@ -4692,7 +4691,7 @@ focus_tree = {
 		id = SIA_deportament_seaman
 		text = SIA_deportament_seaman
 		icon = GFX_z_goal_siam_seals
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_royal_seaman
 		}
@@ -5136,7 +5135,7 @@ focus_tree = {
 		id = SIA_18_corps
 		text = SIA_18_corps
 		icon = GFX_z_goal_step_on_skull
-		cost = 10
+		cost = 7.6
 		prerequisite = {
 			focus = SIA_land_maximum
 			focus = SIA_create_medicine
@@ -5152,7 +5151,9 @@ focus_tree = {
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_18_corps"
-			
+			add_stability = -0.1
+			add_political_power = 100
+			country_event = { id = sia.30 }
 		}
 	}
 	
@@ -5597,7 +5598,7 @@ focus_tree = {
 		id = SIA_invest_railroad_gb
 		text = SIA_invest_railroad_gb
 		icon = GFX_z_goal_four_track_railway
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_GB_compromise
 		}
@@ -5703,7 +5704,7 @@ focus_tree = {
 		id = SIA_modern_rail
 		text = SIA_modern_rail
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 7.2
 		prerequisite = {
 			focus = SIA_metal_and_rubber
 		}

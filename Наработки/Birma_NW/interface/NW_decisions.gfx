@@ -36,4 +36,40 @@ spriteTypes = {
 		name = "GFX_decision_thai_crisis"
 		texturefile = "gfx/interface/decisions/decision_thai_crisis.dds"
 	}
+	spriteType = {
+		name = "GFX_build_submarine"
+		texturefile = "gfx/interface/decisions/build_submarine.dds"
+	}
+	spriteType = {
+		name = "GFX_thai_visit_cat"
+		texturefile = "gfx/interface/decisions/thai_visit_cat.dds"
+	}
+	spriteType = {
+		name = "GFX_thai_visit_fra"
+		texturefile = "gfx/interface/decisions/thai_visit_fra.dds"
+	}
+	spriteType = {
+		name = "GFX_thai_visit_gb"
+		texturefile = "gfx/interface/decisions/thai_visit_gb.dds"
+	}
+	spriteType = {
+		name = "GFX_thai_visit_ger"
+		texturefile = "gfx/interface/decisions/thai_visit_ger.dds"
+	}
+	spriteType = {
+		name = "GFX_thai_visit_ita"
+		texturefile = "gfx/interface/decisions/thai_visit_ita.dds"
+	}
+	spriteType = {
+		name = "GFX_thai_visit_jap"
+		texturefile = "gfx/interface/decisions/thai_visit_jap.dds"
+	}
+	spriteType = {
+		name = "GFX_thai_visit_usa"
+		texturefile = "gfx/interface/decisions/thai_visit_usa.dds"
+	}
+	spriteType = {
+		name = "GFX_thai_vmf_cat"
+		texturefile = "gfx/interface/decisions/thai_vmf_cat.dds"
+	}
 }
