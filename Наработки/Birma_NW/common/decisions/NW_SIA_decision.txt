@@ -1139,7 +1139,7 @@ SIA_police_army_conflict_categories = {
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision SIA_general_10"
-			recruit_character = Phraya_Songsuradet
+			recruit_character = SIA_Phraya_Songsuradet
 			custom_effect_tooltip = SIA_tt_army_upped
 			custom_effect_tooltip = SIA_tt_Songsuradet_back
 			set_country_flag = SIA_Songsuradet_back_flag

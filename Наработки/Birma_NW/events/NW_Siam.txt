@@ -1195,3 +1195,20 @@ country_event = {
 		set_country_flag = SIA_kuang_win_flag
 	}
 }
+# Подавление восстания
+country_event = {
+	id = sia.30
+	title = sia.30.t
+	desc = sia.30.d
+	picture = GFX_report_event_sia_30
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event sia.30" }
+
+	option = {
+		name = sia.30.a
+		add_popularity = { ideology = fascism popularity = 0.01 }
+		retire_character = SIA_Phraya_Songsuradet
+		retire_character = SIA_Phraya_Thephasdin
+	}
+}
