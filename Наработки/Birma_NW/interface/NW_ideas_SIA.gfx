@@ -150,4 +150,8 @@ spriteTypes = {
 		name = "GFX_idea_army_police_7"
 		texturefile = "gfx/interface/ideas/SIA/army_police_7.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_Luang_Wichitwathakan"
+		texturefile = "gfx/interface/ideas/SIA/Luang_Wichitwathakan.dds"
+	}
 }

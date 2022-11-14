@@ -13,10 +13,11 @@ country_event = {
 	option = {
 		name = sia.1.a
 		add_stability = 0.02
-		add_popularity = { ideology = democratic popularity = 0.01 }
+		add_popularity = { ideology = neutrality popularity = 0.01 }
 		add_political_power = 15
 	}
 }
+
  # Церемония захоронения мемориальной доски Народной партии
 country_event = {
 	id = sia.2
@@ -30,7 +31,7 @@ country_event = {
 	option = {
 		name = sia.2.a
 		add_stability = 0.02
-		add_popularity = { ideology = democratic popularity = 0.01 }
+		add_popularity = { ideology = neutrality popularity = 0.01 }
 		add_political_power = 15
 	}
 }
@@ -48,7 +49,7 @@ country_event = {
 	option = {
 		name = sia.3.a
 		add_stability = -0.05
-		add_popularity = { ideology = democratic popularity = -0.1 }
+		add_popularity = { ideology = neutrality popularity = -0.1 }
 		add_political_power = -50
 	}
 }
@@ -66,7 +67,7 @@ country_event = {
 	option = {
 		name = sia.4.a
 		add_stability = 0.02
-		add_popularity = { ideology = democratic popularity = 0.01 }
+		add_popularity = { ideology = neutrality popularity = 0.01 }
 		add_political_power = 15
 	}
 }
@@ -580,6 +581,7 @@ country_event = {
 		SIA = { country_event = { id = sia.9 } }
 	}
 }
+ 
  # Правительство ИМЯ_СТРАНЫ уменьшило процентную ставку на треть
 country_event = {
 	id = sia.7
@@ -795,6 +797,7 @@ country_event = {
 		}
 	}
 }
+
 # Правительство ИМЯ_СТРАНЫ отменило процентную ставку
 country_event = {
 	id = sia.8
@@ -974,6 +977,7 @@ country_event = {
 		}
 	}
 }
+
 # Правительство ИМЯ_СТРАНЫ отказало в уменьшении процентной ставки
 country_event = {
 	id = sia.9
@@ -989,6 +993,7 @@ country_event = {
 		
 	}
 }
+
 # Французские самолёты выиграли тендер
 country_event = {
 	id = sia.10
@@ -1004,6 +1009,7 @@ country_event = {
 		add_political_power = 100
 	}
 }
+
 # Японские самолёты выиграли тендер
 country_event = {
 	id = sia.11
@@ -1019,6 +1025,7 @@ country_event = {
 		add_political_power = 100
 	}
 }
+
 # Американские самолёты выиграли тендер
 country_event = {
 	id = sia.12
@@ -1034,6 +1041,7 @@ country_event = {
 		add_political_power = 100
 	}
 }
+
 # Первые подлодки прибыли
 country_event = {
 	id = sia.13
@@ -1056,6 +1064,7 @@ country_event = {
 		}
 	}
 }
+
 # Последние подлодки прибыли
 country_event = {
 	id = sia.14
@@ -1074,6 +1083,7 @@ country_event = {
 		}
 	}
 }
+
 # Линкоры прибыли
 country_event = {
 	id = sia.15
@@ -1092,6 +1102,7 @@ country_event = {
 		}
 	}
 }
+
 # Британская техника выиграла тендер
 country_event = {
 	id = sia.16
@@ -1107,6 +1118,7 @@ country_event = {
 		add_political_power = 100
 	}
 }
+
 # Германская  техника выиграла тендер
 country_event = {
 	id = sia.17
@@ -1122,6 +1134,7 @@ country_event = {
 		add_political_power = 100
 	}
 }
+
 # Британские винтовки выиграла тендер 
 country_event = {
 	id = sia.18
@@ -1137,6 +1150,7 @@ country_event = {
 		add_political_power = 50
 	}
 }
+
 # Японские винтовки выиграла тендер 
 country_event = {
 	id = sia.19
@@ -1152,6 +1166,7 @@ country_event = {
 		add_political_power = 50
 	}
 }
+
 # Выборы в палату представителей окончены
 country_event = {
 	id = sia.20
@@ -1195,6 +1210,7 @@ country_event = {
 		set_country_flag = SIA_kuang_win_flag
 	}
 }
+
 # Подавление восстания
 country_event = {
 	id = sia.30
@@ -1211,4 +1227,81 @@ country_event = {
 		retire_character = SIA_Phraya_Songsuradet
 		retire_character = SIA_Phraya_Thephasdin
 	}
+}
+
+# Успех ультранационалистической политики в *Имя стейта*
+
+# Провал ультранационалистической политики в *Имя стейта*
+
+# Речь Пибуна
+country_event = {
+	id = sia.33
+	title = sia.33.t
+	desc = sia.33.d
+	picture = GFX_report_event_sia_33
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event sia.33" }
+
+	option = {
+		name = sia.33.a
+		add_popularity = { ideology = fascism popularity = 0.05 }
+		add_war_support = 0.05
+	}
+}
+
+# Культурная революция
+country_event = {
+	id = sia.34
+	title = sia.34.t
+	desc = sia.34.d
+	picture = GFX_report_event_sia_34
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event sia.34" }
+
+	option = {
+		name = sia.34.a
+		add_stability = -0.03
+		
+	}
+}
+
+# Сиам предлагает дружбу
+country_event = {
+	id = sia.35
+	title = sia.35.t
+	desc = sia.35.d
+	picture = GFX_report_event_sia_35
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event sia.35" }
+
+	option = {
+		name = sia.35.a
+		add_opinion_modifier = { target = SIA modifier = SIA_be_friend }
+		SIA = { add_opinion_modifier = { target = SIA modifier = SIA_jap_be_friend } }
+	}
+	
+	option = {
+		name = sia.35.b
+		
+	}
+}
+
+# Деятельность свободного тайского движения
+country_event = {
+	id = sia.36
+	title = sia.36.t
+	desc = sia.36.d
+	picture = GFX_report_event_sia_36
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event sia.36" }
+
+	option = {
+		name = sia.36.a
+		
+	}
+	
 }

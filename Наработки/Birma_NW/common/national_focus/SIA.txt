@@ -5260,13 +5260,13 @@ focus_tree = {
 		}
 		x = 43
 		y = 12
-		available ={
-			
-		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_Uvachon"
-			
+			swap_ideas = {
+				remove_idea = SIA_idea_army_bur
+				add_idea = SIA_idea_army_bur_2
+			}
 		}
 	}
 	
@@ -5281,13 +5281,14 @@ focus_tree = {
 		}
 		x = 42
 		y = 13
-		available ={
-			
-		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_Songcram_cult"
-			
+			swap_ideas = {
+				remove_idea = SIA_idea_army_bur_2
+				add_idea = SIA_idea_army_bur_3
+			}
+			hidden_effect = { country_event = { id = sia.33 days = 15} }
 		}
 	}
 	
@@ -5302,13 +5303,10 @@ focus_tree = {
 		}
 		x = 41
 		y = 14
-		available ={
-			
-		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_thai_nac_bank"
-			
+			add_ideas = SIA_idea_nac_bank
 		}
 	}
 	
@@ -5345,12 +5343,40 @@ focus_tree = {
 		x = 45
 		y = 12
 		available ={
-			
+			country_exists = JAP
+			JAP = {	has_opinion = { target = SIA value > 20 } }
+		}
+		
+		bypass ={
+			OR = {
+				NOT = {
+					country_exists = FRA
+				}
+				FRA = {
+					has_war_with = SIA
+				}
+			}
+			OR = {
+				NOT = {
+					country_exists = JAP
+				}
+				JAP = {
+					has_war_with = SIA
+				}
+			}
+			OR = {
+				NOT = {
+					country_exists = USA
+				}
+				USA = {
+					has_war_with = SIA
+				}
+			}
 		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_Japan_friend"
-			
+			country_event = { id = sia.35}
 		}
 	}
 	
@@ -5393,12 +5419,28 @@ focus_tree = {
 		x = 46
 		y = 13
 		available ={
-			
+			country_exists = JAP
+			JAP = {	has_opinion = { target = SIA value > 50 } }
+			JAP = { is_faction_leader = yes }
+		}
+		
+		bypass ={
+			OR = {
+				NOT = {
+					country_exists = JAP
+				}
+				JAP = {
+					has_war_with = SIA
+				}
+				ROOT = {
+					is_ally_with = JAP
+				}
+			}
 		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_yes_japan"
-			
+			JAP = { country_event = { id = generic.2 } }
 		}
 	}
 	
@@ -5568,12 +5610,51 @@ focus_tree = {
 		x = 47
 		y = 11
 		available ={
-			
+			country_exists = JAP
+			JAP = {	has_opinion = { target = SIA value > 20 } }
+		}
+		
+		bypass ={
+			OR = {
+				NOT = {
+					country_exists = FRA
+				}
+				FRA = {
+					has_war_with = SIA
+				}
+			}
+			OR = {
+				NOT = {
+					country_exists = JAP
+				}
+				JAP = {
+					has_war_with = SIA
+				}
+			}
+			OR = {
+				NOT = {
+					country_exists = USA
+				}
+				USA = {
+					has_war_with = SIA
+				}
+			}
 		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_build_oil_factory"
-			
+			add_tech_bonus = {
+				bonus = 0.75
+				uses = 2
+				category = synth_resources
+			}
+			289 = {
+				add_building_construction = {
+					type = fuel_silo
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	
@@ -5588,13 +5669,19 @@ focus_tree = {
 		}
 		x = 47
 		y = 12
-		available ={
-			
-		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_12_culture"
-			
+			random_state = { 
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			hidden_effect = { country_event = { id = sia.34 days = 15} }
+			add_ideas = SIA_idea_culture_mandat
 		}
 	}
 	
@@ -5633,13 +5720,13 @@ focus_tree = {
 		}
 		x = 48
 		y = 13
-		available ={
-			
-		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_woman_army"
-			
+			swap_ideas = {
+				remove_idea = SIA_idea_culture_mandat
+				add_idea = SIA_idea_culture_mandat_2
+			}
 		}
 	}
 	
@@ -5654,13 +5741,14 @@ focus_tree = {
 		}
 		x = 48
 		y = 15
-		available ={
-			
-		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_soc_evolution"
-			
+			add_stability = 0.1
+			swap_ideas = {
+				remove_idea = SIA_idea_culture_mandat_2
+				add_idea = SIA_idea_culture_mandat_3
+			}
 		}
 	}
 	
@@ -7116,13 +7204,25 @@ focus_tree = {
 		}
 		x = 42
 		y = 15
-		available ={
-			
-		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_west_modernization"
-			
+			random_state = { 
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_state = { 
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	
@@ -7131,19 +7231,16 @@ focus_tree = {
 		id = SIA_new_banknots
 		text = SIA_new_banknots
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = SIA_thai_nac_bank
 		}
 		x = 41
 		y = 16
-		available ={
-			
-		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_new_banknots"
-			
+			add_political_power = 100
 		}
 	}
 	

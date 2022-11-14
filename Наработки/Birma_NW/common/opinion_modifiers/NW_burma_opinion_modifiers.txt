@@ -10,4 +10,6 @@ opinion_modifiers = {
 	SIA_ge_it_invest = { value = 25 }
 	SIA_ge_it_nationalization = { value = -25 }
 	SIA_eng_compromiss = { value = 25 }
+	SIA_jap_be_friend = { value = 25 }
+	SIA_be_friend = { value = 25 }
 }

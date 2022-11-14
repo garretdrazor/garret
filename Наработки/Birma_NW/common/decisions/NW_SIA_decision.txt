@@ -826,6 +826,9 @@ SIA_police_army_conflict_categories = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision SIA_general_6"
 			recruit_character = SIA_Phit_Kriangsakpichit
 			custom_effect_tooltip = SIA_tt_army_upped
+			hidden_effect = {
+				set_country_flag = SIA_police_6_flag
+			}
 			if = {
 				limit = {
 					has_idea = SIA_idea_police_army_2
@@ -904,6 +907,9 @@ SIA_police_army_conflict_categories = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision SIA_general_7"
 			recruit_character = SIA_Fin_Chunkhavan
 			custom_effect_tooltip = SIA_tt_army_upped
+			hidden_effect = {
+				set_country_flag = SIA_police_7_flag
+			}
 			if = {
 				limit = {
 					has_idea = SIA_idea_police_army_2
@@ -982,6 +988,9 @@ SIA_police_army_conflict_categories = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision SIA_general_8"
 			recruit_character = SIA_Jaroon_Sereeruengrit
 			custom_effect_tooltip = SIA_tt_army_upped
+			hidden_effect = {
+				set_country_flag = SIA_police_8_flag
+			}
 			if = {
 				limit = {
 					has_idea = SIA_idea_police_army_2
@@ -1060,6 +1069,9 @@ SIA_police_army_conflict_categories = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision SIA_general_9"
 			recruit_character = SIA_Plaad_Phibunphanuwat
 			custom_effect_tooltip = SIA_tt_army_upped
+			hidden_effect = {
+				set_country_flag = SIA_police_9_flag
+			}
 			if = {
 				limit = {
 					has_idea = SIA_idea_police_army_2

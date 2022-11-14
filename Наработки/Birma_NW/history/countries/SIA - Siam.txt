@@ -100,6 +100,7 @@ recruit_character = SIA_rama_vii
 recruit_character = SIA_pridi_banomyong
 recruit_character = SIA_luang_chattrakankosol
 recruit_character = SIA_phao_siyanon
+recruit_character = SIA_Luang_Wichitwathakan
 
 1939.1.1 = {
 	set_popularities = {

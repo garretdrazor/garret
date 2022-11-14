@@ -258,6 +258,19 @@ characters={
 			planning_skill=3
 			logistics_skill=2
 		}
+		advisor={
+			slot = political_advisor
+			idea_token = SIA_Jaroon_Sereeruengrit
+			allowed  = {
+				original_tag  = SIA
+			}
+			available = {
+				has_country_flag = SIA_police_8_flag
+			}
+			traits = {
+				railroad_enthusiast
+			}
+		}
 	}
 	SIA_Plaad_Phibunphanuwat={
 		name=SIA_Plaad_Phibunphanuwat
@@ -314,6 +327,163 @@ characters={
 			defense_skill=2
 			planning_skill=2
 			logistics_skill=3
+		}
+	}
+	# Чисто министры
+	SIA_Luang_Wichitwathakan={
+		name=SIA_Luang_Wichitwathakan
+		portraits={
+			army = {
+				small = GFX_idea_Luang_Wichitwathakan
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SIA_Luang_Wichitwathakan
+			allowed  = {
+				original_tag  = SIA
+			}
+			available = {
+				has_government = fascism
+				has_completed_focus = SIA_ultranac
+			}
+			traits = {
+				nac_arhitektor
+			}
+		}
+	}
+	SIA_Rangsit_Prayurasakdi={
+		name=SIA_Rangsit_Prayurasakdi
+		portraits={
+			army = {
+				small = GFX_idea_Rangsit_Prayurasakdi
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SIA_Rangsit_Prayurasakdi
+			allowed  = {
+				original_tag  = SIA
+			}
+			available = {
+				NOT = {
+					has_completed_focus = SIA_no_king
+				}
+			}
+			traits = {
+				medicine_minister
+			}
+		}
+	}
+	SIA_Phraya_Pensawat={
+		name=SIA_Phraya_Pensawat
+		portraits={
+			army = {
+				small = GFX_idea_Phraya_Pensawat
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SIA_Phraya_Pensawat
+			allowed  = {
+				original_tag  = SIA
+			}
+			traits = {
+				minister_of_internal_affairs
+			}
+		}
+	}
+	SIA_Thawan_Thamrongnawasawat={
+		name=SIA_Thawan_Thamrongnawasawat
+		portraits={
+			army = {
+				small = GFX_idea_Thawan_Thamrongnawasawat
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SIA_Thawan_Thamrongnawasawat
+			allowed  = {
+				original_tag  = SIA
+			}
+			available = {
+				has_government = fascism
+			}
+			traits = {
+				prince_of_terror
+			}
+		}
+	}
+	SIA_Thawi_Bunyaket={
+		name=SIA_Thawi_Bunyaket
+		portraits={
+			army = {
+				small = GFX_idea_Thawi_Bunyaket
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SIA_Thawi_Bunyaket
+			allowed  = {
+				original_tag  = SIA
+			}
+			available = {
+				NOT = {
+					has_completed_focus = SIA_destroy_seri_thai
+				}
+			}
+			traits = {
+				education_minister
+			}
+		}
+	}
+	SIA_Direk_Jayanama={
+		name=SIA_Direk_Jayanama
+		portraits={
+			army = {
+				small = GFX_idea_Direk_Jayanama
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SIA_Direk_Jayanama
+			allowed  = {
+				original_tag  = SIA
+			}
+			available = {
+				NOT = {
+					has_completed_focus = SIA_destroy_seri_thai
+				}
+			}
+			traits = {
+				silent_workhorse
+			}
+		}
+	}
+	SIA_Pridi_Banomyong={
+		name=SIA_Pridi_Banomyong 
+		portraits={
+			army = {
+				small = GFX_idea_Pridi_Banomyong
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SIA_Pridi_Banomyong
+			allowed  = {
+				original_tag  = SIA
+			}
+			available = {
+				NOT = {
+					has_completed_focus = SIA_destroy_seri_thai
+					has_government = communism
+					has_government = monarchy
+				}
+				
+			}
+			traits = {
+				foreign_secretary
+			}
 		}
 	}
 }
