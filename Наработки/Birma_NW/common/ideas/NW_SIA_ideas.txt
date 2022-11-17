@@ -172,6 +172,20 @@ ideas = {
 				monarchy_drift = -0.01
 			}
 		}
+		SIA_idea_rama_vii_2 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = siam_Rama7
+			modifier = {
+				stability_factor = 0.05
+				monarchy_drift = 0.01
+			}
+		}
 		# Долги короны
 		SIA_idea_crown_credits = {
 			removal_cost = -1

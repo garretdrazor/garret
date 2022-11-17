@@ -97,6 +97,9 @@ characters={
 			civilian={
 				large="gfx/leaders/SIA/Portrait_Pridi_Banomyong.dds"
 			}
+			army = {
+				small = GFX_idea_Pridi_Banomyong
+			}
 		}
 		country_leader={
 			desc="POLITICS_Pridi_Banomyong_DESC"
@@ -104,6 +107,24 @@ characters={
 			ideology=socialism
 			expire="1965.1.1.1"
 			id=-1
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SIA_Pridi_Banomyong
+			allowed  = {
+				original_tag  = SIA
+			}
+			available = {
+				NOT = {
+					has_completed_focus = SIA_destroy_seri_thai
+					has_government = communism
+					has_government = monarchy
+				}
+				
+			}
+			traits = {
+				foreign_secretary
+			}
 		}
 	}
 	#генералы
@@ -457,32 +478,6 @@ characters={
 			}
 			traits = {
 				silent_workhorse
-			}
-		}
-	}
-	SIA_Pridi_Banomyong={
-		name=SIA_Pridi_Banomyong 
-		portraits={
-			army = {
-				small = GFX_idea_Pridi_Banomyong
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = SIA_Pridi_Banomyong
-			allowed  = {
-				original_tag  = SIA
-			}
-			available = {
-				NOT = {
-					has_completed_focus = SIA_destroy_seri_thai
-					has_government = communism
-					has_government = monarchy
-				}
-				
-			}
-			traits = {
-				foreign_secretary
 			}
 		}
 	}

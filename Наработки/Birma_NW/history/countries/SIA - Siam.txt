@@ -101,6 +101,12 @@ recruit_character = SIA_pridi_banomyong
 recruit_character = SIA_luang_chattrakankosol
 recruit_character = SIA_phao_siyanon
 recruit_character = SIA_Luang_Wichitwathakan
+recruit_character = SIA_Rangsit_Prayurasakdi
+recruit_character = SIA_Phraya_Pensawat
+recruit_character = SIA_Thawan_Thamrongnawasawat
+recruit_character = SIA_Thawi_Bunyaket
+recruit_character = SIA_Direk_Jayanama
+recruit_character = SIA_Pridi_Banomyong
 
 1939.1.1 = {
 	set_popularities = {

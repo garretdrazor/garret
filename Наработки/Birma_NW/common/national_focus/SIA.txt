@@ -2520,7 +2520,7 @@ focus_tree = {
 		id = SIA_third_path
 		text = SIA_third_path
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = SIA_land_maximum
 			focus = SIA_create_medicine
@@ -2537,7 +2537,7 @@ focus_tree = {
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_third_path"
-			
+			country_event = { id = sia.36 }
 		}
 	}
 	
@@ -2555,13 +2555,15 @@ focus_tree = {
 		}
 		x = 18
 		y = 11
-		available ={
-			
+		bypass = {
+			has_completed_focus = SIA_yellow_book
 		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_consensus_with_royalists"
-			
+			add_political_power = -200
+			add_popularity = { ideology = monarchy popularity = 0.1 }
+			custom_effect_tooltip = SIA_tt_with_royalists
 		}
 	}
 	
@@ -2750,13 +2752,15 @@ focus_tree = {
 		}
 		x = 20
 		y = 11
-		available ={
-			
+		bypass = {
+			has_completed_focus = SIA_yellow_book
 		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_no_party_with_royal"
-			
+			add_political_power = 100
+			add_popularity = { ideology = democratic popularity = 0.1 }
+			custom_effect_tooltip = SIA_tt_without_royalists
 		}
 	}
 	
@@ -2772,13 +2776,21 @@ focus_tree = {
 		}
 		x = 19
 		y = 12
-		available ={
-			
-		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_crown_fate"
-			
+			if = {
+				limit = { 
+					has_completed_focus = SIA_consensus_with_royalists
+				}
+				country_event = { id = sia.37 }
+			}
+			else_if = {
+				limit = { 
+					has_completed_focus = SIA_no_party_with_royal
+				}
+				country_event = { id = sia.38 }
+			}
 		}
 	}
 	
@@ -5336,7 +5348,7 @@ focus_tree = {
 		id = SIA_Japan_friend
 		text = SIA_Japan_friend
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = SIA_ultranac
 		}
@@ -5385,7 +5397,7 @@ focus_tree = {
 		id = SIA_no_japan
 		text = SIA_no_japan
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = SIA_Japan_friend
 		}
@@ -5395,12 +5407,16 @@ focus_tree = {
 		x = 44
 		y = 13
 		available ={
-			
+			ROOT = {
+				is_subject = no
+			}
 		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_no_japan"
-			
+			set_rule ={
+				can_create_factions = yes
+			}
 		}
 	}
 	
@@ -5409,7 +5425,7 @@ focus_tree = {
 		id = SIA_yes_japan
 		text = SIA_yes_japan
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = SIA_Japan_friend
 		}

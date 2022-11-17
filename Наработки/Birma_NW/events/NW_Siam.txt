@@ -1289,7 +1289,7 @@ country_event = {
 	}
 }
 
-# Деятельность свободного тайского движения
+# Заявление Приди
 country_event = {
 	id = sia.36
 	title = sia.36.t
@@ -1301,7 +1301,65 @@ country_event = {
 
 	option = {
 		name = sia.36.a
-		
+		add_popularity = { ideology = monarchy popularity = 0.05 }
+		add_popularity = { ideology = democratic popularity = 0.05 }
+	}
+	
+}
+
+# Приди становится Регентом
+country_event = {
+	id = sia.37
+	title = sia.37.t
+	desc = sia.37.d
+	picture = GFX_report_event_sia_37
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event sia.37" }
+
+	option = {
+		name = sia.37.a
+		add_popularity = { ideology = democratic popularity = 0.01 }
+		swap_ideas = {
+			remove_idea = SIA_idea_rama_vii
+			add_idea = SIA_idea_rama_vii_2
+		}
+	}
+	
+}
+
+# Заявление Приди
+country_event = {
+	id = sia.38
+	title = sia.38.t
+	desc = sia.38.d
+	picture = GFX_report_event_sia_38
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event sia.38" }
+
+	option = {
+		name = sia.38.a
+		add_popularity = { ideology = monarchy popularity = 0.05 }
+		add_popularity = { ideology = democratic popularity = 0.05 }
+	}
+	
+}
+
+# Заявление Приди
+country_event = {
+	id = sia.39
+	title = sia.39.t
+	desc = sia.39.d
+	picture = GFX_report_event_sia_39
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event sia.39" }
+
+	option = {
+		name = sia.39.a
+		add_popularity = { ideology = monarchy popularity = 0.05 }
+		add_popularity = { ideology = democratic popularity = 0.05 }
 	}
 	
 }
