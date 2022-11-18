@@ -1220,5 +1220,144 @@ ideas = {
 				research_speed_factor = 0.02
 			}
 		}
+		# Создание кооперативов
+		SIA_idea_coop_1 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = idea_
+			modifier = {
+				consumer_goods_factor = 0.05
+				stability_factor = 0.05
+				production_factory_max_efficiency_factor = 0.03
+			}
+		}
+		# Сельскохозяйственные кооперативы
+		SIA_idea_coop_2 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = idea_
+			modifier = {
+				MONTHLY_POPULATION = 0.2
+				stability_factor = 0.1
+				production_factory_max_efficiency_factor = 0.06
+				
+			}
+		}
+		# Синяя армия
+		SIA_idea_blue_army = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = idea_
+			modifier = {
+				conscription = 0.01
+			}
+		}
+		# Социальное обеспечение
+		SIA_idea_Pridi_soc_1 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = idea_
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.05
+				stability_factor = 0.05
+			}
+		}
+		SIA_idea_Pridi_soc_2 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = idea_
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+				stability_factor = 0.05
+			}
+		}
+		# Третья конституция
+		SIA_idea_third_constitution = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = idea_
+			modifier = {
+				democratic_drift = 0.01
+				drift_defence_factor = 0.25
+			}
+		}
+		# Индустриализация сельского хозяйства
+		SIA_idea_agrar_teh = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = idea_
+			modifier = {
+				consumer_goods_factor = 0.05
+				MONTHLY_POPULATION = 0.15
+				global_building_slots_factor = 0.1
+			}
+		}
+		# Движение за свободу тайцев
+		SIA_idea_free_thai = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = idea_
+			modifier = {
+				conscription = 0.02
+			}
+		}
+		# Национальный экономический совет
+		SIA_idea_nac_economic_soviet = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = idea_
+			modifier = {
+				consumer_goods_factor = -0.05
+				min_export = 0.25
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_start_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
 	}
 }

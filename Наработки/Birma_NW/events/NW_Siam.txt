@@ -1324,6 +1324,7 @@ country_event = {
 			remove_idea = SIA_idea_rama_vii
 			add_idea = SIA_idea_rama_vii_2
 		}
+		add_country_leader_trait = thai_regent
 	}
 	
 }
@@ -1340,8 +1341,10 @@ country_event = {
 
 	option = {
 		name = sia.38.a
-		add_popularity = { ideology = monarchy popularity = 0.05 }
-		add_popularity = { ideology = democratic popularity = 0.05 }
+		add_political_power = 100
+		remove_ideas = SIA_idea_rama_vii
+		add_country_leader_trait = thai_republik_father
+		set_cosmetic_tag = SIA_Pridi_republik_democratic
 	}
 	
 }
@@ -1358,8 +1361,102 @@ country_event = {
 
 	option = {
 		name = sia.39.a
-		add_popularity = { ideology = monarchy popularity = 0.05 }
-		add_popularity = { ideology = democratic popularity = 0.05 }
+		add_political_power = 100
+		remove_ideas = SIA_idea_rama_vii
+		add_country_leader_trait = thai_republik_father
+		set_cosmetic_tag = SIA_Pridi_republik_democratic
+	}
+	
+}
+
+# Рассмотрение законопроекта «Жёлтой книги» в правительстве
+country_event = {
+	id = sia.40
+	title = sia.40.t
+	desc = sia.40.d
+	picture = GFX_report_event_sia_40
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event sia.40" }
+
+	option = {
+		name = sia.40.a
+		add_popularity = { ideology = democratic popularity = 0.1 }
+	}
+	
+}
+
+# Провал законопроекта «Жёлтой книги» в правительстве
+country_event = {
+	id = sia.41
+	title = sia.41.t
+	desc = sia.41.d
+	picture = GFX_report_event_sia_41
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event sia.41" }
+
+	option = {
+		name = sia.41.a
+		add_stability = -0.05
+		country_event = { id = sia.20 days = 35 }
+	}
+	
+}
+
+# Законопроект «Жёлтой книги» принят большинством
+country_event = {
+	id = sia.42
+	title = sia.42.t
+	desc = sia.42.d
+	picture = GFX_report_event_sia_42
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event sia.42" }
+
+	option = {
+		name = sia.42.a
+		add_stability = -0.05
+		set_country_flag = SIA_morchy_disagreement_flag
+	}
+	
+}
+
+# Восстание монархистов
+country_event = {
+	id = sia.43
+	title = sia.43.t
+	desc = sia.43.d
+	picture = GFX_report_event_sia_43
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event sia.43" }
+
+	option = {
+		name = sia.43.a
+		
+	}
+	option = {
+		name = sia.43.b
+		start_civil_war = {
+			ruling_party = monarchy
+			size = 0.5
+			keep_unit_leaders = {
+				
+			}
+		}
+		hidden_effect = {
+			random_other_country = {
+				limit = {
+					original_tag = ROOT
+					NOT = { tag = ROOT }
+				}
+				add_timed_idea = { idea = focus_synchronization days = 7 }
+				load_focus_tree = NW_siam_tree
+				unlock_national_focus = SIA_blue_army
+			}
+		}
+		set_country_flag = SIA_royal_rebellion_flag
 	}
 	
 }

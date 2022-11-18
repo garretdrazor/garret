@@ -313,6 +313,7 @@ SIA_bad_theatry_categories = {
 		}
 	}
 }
+
 # Опасность кризиса
 SIA_crisis_dangerous_categories = {
 	SIA_new_crisis_mission = {
@@ -333,6 +334,7 @@ SIA_crisis_dangerous_categories = {
 		}
 	}
 }
+
 # Заказы Королевского флота
 SIA_royal_naval_ships_categories = {
 	SIA_new_submarine_mission = {
@@ -399,6 +401,7 @@ SIA_royal_naval_ships_categories = {
 		}
 	}
 }
+
 # Борьба полиции и армии за влияние
 SIA_police_army_conflict_categories = {
 	SIA_general_1 = {
@@ -1424,6 +1427,7 @@ SIA_police_army_conflict_categories = {
 		}
 	}
 }
+
 # Проведение выборов
 SIA_elections_categories = {
 	SIA_election_mission = {
@@ -1443,6 +1447,77 @@ SIA_elections_categories = {
 		icon = GFX_decision_wood_develop
 		timeout_effect = {
 			country_event = { id = sia.20 }
+		}
+	}
+}
+
+# Реализация проекта «Жёлтая книга»
+SIA_yellow_book_categories = {
+	SIA_nation_lands = {
+		allowed = {
+			tag = SIA
+		}
+		
+		icon = GFX_thai_visit_ita
+
+		cost = 50
+		days_remove = 30
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision SIA_nation_lands"
+			every_core_state = { 
+				add_extra_state_shared_building_slots = 1
+			}
+			add_stability = -0.1
+			hidden_effect = {
+				set_country_flag = SIA_nation_lands_flag
+			}
+		}
+	}
+	SIA_create_coop = {
+		allowed = {
+			tag = SIA
+		}
+		
+		icon = GFX_thai_visit_ita
+
+		cost = 50
+		days_remove = 30
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision SIA_create_coop"
+			every_core_state = { 
+				add_extra_state_shared_building_slots = -1
+			}
+			add_ideas = SIA_idea_coop_1
+			hidden_effect = {
+				set_country_flag = SIA_create_coop_flag
+			}
+		}
+	}
+	SIA_create_coop_2 = {
+		allowed = {
+			tag = SIA
+		}
+		
+		available = {
+			has_country_flag = SIA_nation_lands_flag
+			has_country_flag = SIA_create_coop_flag
+		}
+		icon = GFX_thai_visit_ita
+
+		cost = 50
+		days_remove = 30
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision SIA_create_coop_2"
+			swap_ideas = {
+				remove_idea = SIA_idea_coop_1
+				add_idea = SIA_idea_coop_2
+			}
+			hidden_effect = {
+				set_country_flag = SIA_create_coop_flag
+			}
 		}
 	}
 }
