@@ -138,14 +138,6 @@ characters={
 				large="gfx/leaders/SIA/Portrait_Luang_Chattrakankosol.dds"
 			}
 		}
-		corps_commander={
-		    traits = { skilled_staffer }
-			skill=2
-			attack_skill=1
-			defense_skill=2
-			planning_skill=2
-			logistics_skill=2
-		}
 	}
 	SIA_phao_siyanon={
 		name=SIA_phao_siyanon
@@ -156,14 +148,6 @@ characters={
 			army={
 				large="gfx/leaders/SIA/Portrait_Phao_Siyanon.dds"
 			}
-		}
-		corps_commander={
-			traits={ politically_connected }
-			skill=2
-			attack_skill=2
-			defense_skill=3
-			planning_skill=1
-			logistics_skill=2
 		}
 	}
 	SIA_rama_intru={
@@ -176,14 +160,6 @@ characters={
 				large="gfx/leaders/SIA/Portrait_Rama_Intru.dds"
 			}
 		}
-		corps_commander={
-			traits={ career_officer }
-			skill=2
-			attack_skill=1
-			defense_skill=1
-			planning_skill=3
-			logistics_skill=2
-		}
 	}
 	SIA_Pkhra_Pkhicharnfonkit={
 		name=SIA_Pkhra_Pkhicharnfonkit
@@ -194,14 +170,6 @@ characters={
 			army={
 				large="gfx/leaders/SIA/Portrait_Pkhra_Pkhicharnfonkit.dds"
 			}
-		}
-		corps_commander={
-			traits={ commando panzer_leader }
-			skill=3
-			attack_skill=3
-			defense_skill=2
-			planning_skill=2
-			logistics_skill=4
 		}
 	}
 	SIA_Adul_Aduldeydzharat={
@@ -214,14 +182,6 @@ characters={
 				large="gfx/leaders/SIA/Portrait_Adul_Aduldeydzharat.dds"
 			}
 		}
-		corps_commander={
-			traits={ bearer_of_artillery }
-			skill=3
-			attack_skill=2
-			defense_skill=4
-			planning_skill=3
-			logistics_skill=2
-		}
 	}
 	SIA_Phit_Kriangsakpichit={
 		name=SIA_Phit_Kriangsakpichit
@@ -232,14 +192,6 @@ characters={
 			army={
 				large="gfx/leaders/SIA/Portrait_Phit_Kriangsakpichit.dds"
 			}
-		}
-		corps_commander={
-			traits={ bearer_of_artillery air_chief_ground_support_3 }
-			skill=3
-			attack_skill=3
-			defense_skill=2
-			planning_skill=3
-			logistics_skill=3
 		}
 	}
 	SIA_Fin_Chunkhavan={
@@ -252,14 +204,6 @@ characters={
 				large="gfx/leaders/SIA/Portrait_Fin_Chunkhavan.dds"
 			}
 		}
-		corps_commander={
-			traits={ Infantry_Leader Infantry_Officer }
-			skill=1
-			attack_skill=2
-			defense_skill=2
-			planning_skill=2
-			logistics_skill=2
-		}
 	}
 	SIA_Jaroon_Sereeruengrit={
 		name=SIA_Jaroon_Sereeruengrit
@@ -270,14 +214,6 @@ characters={
 			army={
 				large="gfx/leaders/SIA/Portrait_Jaroon_Sereeruengrit.dds"
 			}
-		}
-		corps_commander={
-			traits={ Organizer }
-			skill=1
-			attack_skill=1
-			defense_skill=2
-			planning_skill=3
-			logistics_skill=2
 		}
 		advisor={
 			slot = political_advisor
@@ -303,14 +239,6 @@ characters={
 				large="gfx/leaders/SIA/Portrait_Plaad_Phibunphanuwat.dds"
 			}
 		}
-		corps_commander={
-			traits={ Career_Officer Camouflage_Expert }
-			skill=2
-			attack_skill=3
-			defense_skill=2
-			planning_skill=1
-			logistics_skill=2
-		}
 	}
 	SIA_Phraya_Songsuradet={
 		name=SIA_Phraya_Songsuradet
@@ -322,14 +250,6 @@ characters={
 				large="gfx/leaders/SIA/Portrait_Phraya_Songsuradet.dds"
 			}
 		}
-		corps_commander={
-			traits={ Engineer Engineer_Officer }
-			skill=3
-			attack_skill=3
-			defense_skill=3
-			planning_skill=4
-			logistics_skill=2
-		}
 	}
 	SIA_Phraya_Thephasdin={
 		name=SIA_Phraya_Thephasdin
@@ -340,14 +260,6 @@ characters={
 			army={
 				large="gfx/leaders/SIA/Portrait_Phraya_Thephasdin.dds"
 			}
-		}
-		corps_commander={
-			traits={ War_Hero }
-			skill=3
-			attack_skill=3
-			defense_skill=2
-			planning_skill=2
-			logistics_skill=3
 		}
 	}
 	# Чисто министры

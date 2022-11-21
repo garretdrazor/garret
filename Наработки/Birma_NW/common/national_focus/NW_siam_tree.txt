@@ -428,7 +428,7 @@ focus_tree = {
 		x = 1
 		y = 2
 		available ={
-			FRA = {	has_opinion = { target = SIA value > 20 } }
+			FRA = {	has_opinion = { target = SIA value > 50 } }
 			NOT = {
 				has_completed_focus = SIA_nacionalization_anather
 			}
@@ -510,8 +510,8 @@ focus_tree = {
 		x = 3
 		y = 2
 		available ={
-			USA = {	has_opinion = { target = SIA value > 20 } }
-			ENG = {	has_opinion = { target = SIA value > 20 } }
+			USA = {	has_opinion = { target = SIA value > 50 } }
+			ENG = {	has_opinion = { target = SIA value > 50 } }
 			NOT = {
 				has_completed_focus = SIA_nacionalization_anather
 			}
@@ -604,9 +604,9 @@ focus_tree = {
 		x = 5
 		y = 2
 		available ={
-			DEN = {	has_opinion = { target = SIA value > 20 } }
-			NOR = {	has_opinion = { target = SIA value > 20 } }
-			SWE = {	has_opinion = { target = SIA value > 20 } }
+			DEN = {	has_opinion = { target = SIA value > 50 } }
+			NOR = {	has_opinion = { target = SIA value > 50 } }
+			SWE = {	has_opinion = { target = SIA value > 50 } }
 			NOT = {
 				has_completed_focus = SIA_nacionalization_anather
 			}
@@ -694,8 +694,8 @@ focus_tree = {
 		x = 7
 		y = 2
 		available ={
-			ITA = {	has_opinion = { target = SIA value > 20 } }
-			GER = {	has_opinion = { target = SIA value > 20 } }
+			ITA = {	has_opinion = { target = SIA value > 50 } }
+			GER = {	has_opinion = { target = SIA value > 50 } }
 			NOT = {
 				has_completed_focus = SIA_nacionalization_anather
 			}
@@ -2011,7 +2011,7 @@ focus_tree = {
 		y = 3
 		available ={
 			country_exists = FRA
-			FRA = {	has_opinion = { target = SIA value > 20 } }
+			FRA = {	has_opinion = { target = SIA value > 50 } }
 		}
 		
 		bypass ={
@@ -2084,7 +2084,7 @@ focus_tree = {
 		y = 3
 		available ={
 			country_exists = JAP
-			JAP = {	has_opinion = { target = SIA value > 20 } }
+			JAP = {	has_opinion = { target = SIA value > 50 } }
 		}
 		
 		bypass ={
@@ -2157,7 +2157,7 @@ focus_tree = {
 		y = 3
 		available ={
 			country_exists = USA
-			USA = {	has_opinion = { target = SIA value > 20 } }
+			USA = {	has_opinion = { target = SIA value > 50 } }
 		}
 		
 		bypass ={
@@ -2225,7 +2225,7 @@ focus_tree = {
 		y = 4
 		available ={
 			country_exists = USA
-			USA = {	has_opinion = { target = SIA value > 20 } }
+			USA = {	has_opinion = { target = SIA value > 50 } }
 			ROOT = {
 				controls_state = 1173
 				controls_state = 289
@@ -2320,7 +2320,7 @@ focus_tree = {
 		y = 4
 		available ={
 			country_exists = JAP
-			JAP = {	has_opinion = { target = SIA value > 20 } }
+			JAP = {	has_opinion = { target = SIA value > 50 } }
 		}
 		
 		bypass ={
@@ -2354,7 +2354,7 @@ focus_tree = {
 		y = 4
 		available ={
 			country_exists = FRA
-			FRA = {	has_opinion = { target = SIA value > 20 } }
+			FRA = {	has_opinion = { target = SIA value > 50 } }
 		}
 		
 		bypass ={
@@ -2936,7 +2936,7 @@ focus_tree = {
 				country_event = { id = sia.40 days = 35 }
 			}
 			country_event = { id = sia.41 days = 35 }
-		
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_yellow_book"
 			random_state = {
@@ -3076,13 +3076,96 @@ focus_tree = {
 		}
 		x = 21
 		y = 15
-		available ={
-			
-		}
+		
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_create_league"
-			
+			set_rule = {
+				can_create_factions = yes
+				can_declare_war_on_same_ideology = yes
+				can_guarantee_other_ideologies = yes
+				can_send_volunteers = yes
+			}
+			create_faction = SIA_SOUTHERN_WEST_LEAGUE
+			add_ideas = SIA_idea_thai_soc_dem_vol
+			FIC = { add_opinion_modifier = { target = SIA modifier = SIA_antikolonial } }
+			VIN = { add_opinion_modifier = { target = SIA modifier = SIA_antikolonial } }
+			CAM = { add_opinion_modifier = { target = SIA modifier = SIA_antikolonial } }
+			LAO = { add_opinion_modifier = { target = SIA modifier = SIA_antikolonial } }
+			BRM = { add_opinion_modifier = { target = SIA modifier = SIA_antikolonial } }
+			MAL = { add_opinion_modifier = { target = SIA modifier = SIA_antikolonial } }
+			INS = { add_opinion_modifier = { target = SIA modifier = SIA_antikolonial } }
+			PHI = { add_opinion_modifier = { target = SIA modifier = SIA_antikolonial } }
+			if = {
+				limit = {
+					ENG = {
+						NOT = {
+							OR = {
+								has_government = communism
+								has_government = trozkism
+								has_government = anarchism
+							}
+						}
+					}
+				}
+				ENG = { add_opinion_modifier = { target = SIA modifier = SIA_antikolonial_vs } }
+			}
+			else_if = {
+				limit = {
+					FRA = {
+						NOT = {
+							OR = {
+								has_government = communism
+								has_government = trozkism
+								has_government = anarchism
+							}
+						}
+					}
+				}
+				FRA = { add_opinion_modifier = { target = SIA modifier = SIA_antikolonial_vs } }
+			}
+			else_if = {
+				limit = {
+					JAP = {
+						NOT = {
+							OR = {
+								has_government = communism
+								has_government = trozkism
+								has_government = anarchism
+							}
+						}
+					}
+				}
+				JAP = { add_opinion_modifier = { target = SIA modifier = SIA_antikolonial_vs } }
+			}
+			else_if = {
+				limit = {
+					HOL = {
+						NOT = {
+							OR = {
+								has_government = communism
+								has_government = trozkism
+								has_government = anarchism
+							}
+						}
+					}
+				}
+				HOL = { add_opinion_modifier = { target = SIA modifier = SIA_antikolonial_vs } }
+			}
+			else_if = {
+				limit = {
+					POR = {
+						NOT = {
+							OR = {
+								has_government = communism
+								has_government = trozkism
+								has_government = anarchism
+							}
+						}
+					}
+				}
+				POR = { add_opinion_modifier = { target = SIA modifier = SIA_antikolonial_vs } }
+			}
 		}
 	}
 	
@@ -3098,12 +3181,64 @@ focus_tree = {
 		x = 19
 		y = 16
 		available ={
-			
+			OR = {
+				FIC = {
+					is_subject = no
+				}
+				CAM = {
+					is_subject = no
+				}
+				LAO = {
+					is_subject = no
+				}
+				VIN = {
+					is_subject = no
+				}
+			}
 		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_league_indochi"
-			
+			if = {
+				limit = {
+					FIC = {
+						is_subject = no
+					}
+				}
+				FIC = {
+					country_event = { id = generic.5 }
+				}
+			}
+			else_if = {
+				limit = {
+					CAM = {
+						is_subject = no
+					}
+				}
+				CAM = {
+					country_event = { id = generic.5 }
+				}
+			}
+			else_if = {
+				limit = {
+					LAO = {
+						is_subject = no
+					}
+				}
+				LAO = {
+					country_event = { id = generic.5 }
+				}
+			}
+			else_if = {
+				limit = {
+					VIN = {
+						is_subject = no
+					}
+				}
+				VIN = {
+					country_event = { id = generic.5 }
+				}
+			}
 		}
 	}
 	
@@ -3119,7 +3254,10 @@ focus_tree = {
 		x = 21
 		y = 16
 		available ={
-			
+			ROOT = {
+				is_faction_leader = yes
+				num_faction_members > 3
+			}
 		}
 			
 		completion_reward = {
@@ -3140,12 +3278,20 @@ focus_tree = {
 		x = 20
 		y = 17
 		available ={
-			
+			MAL = {
+				country_exists = yes
+				is_subject = no
+			}
 		}
-			
+		
+		bypass = {
+			MAL = {
+				country_exists = no
+			}
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_league_malaia"
-			
+			MAL = { country_event = { id = generic.5 } }
 		}
 	}
 	
@@ -3161,12 +3307,58 @@ focus_tree = {
 		x = 22
 		y = 17
 		available ={
-			
+			OR = {
+				MAL = {
+					country_exists = yes
+					is_subject = yes
+				}
+				BRM = {
+					country_exists = yes
+					is_subject = yes
+				}
+			}
+		}
+		bypass ={
+			MAL = {
+				OR = {
+					country_exists = no
+					is_subject = no
+				}
+			}
+			BRM = {
+				OR = {
+					country_exists = no
+					is_subject = no
+				}
+			}
 		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_GB_colonies"
-			
+			if = {
+				limit = {
+					MAL = {
+						country_exists = yes
+						is_subject = yes
+					}
+				}
+				create_wargoal = {
+					type = liberate_wargoal
+					target = MAL
+				}
+			}
+			else_if = {
+				limit = {
+					BRM = {
+						country_exists = yes
+						is_subject = yes
+					}
+				}
+				create_wargoal = {
+					type = liberate_wargoal
+					target = BRM
+				}
+			}
 		}
 	}
 	
@@ -3183,12 +3375,20 @@ focus_tree = {
 		x = 21
 		y = 18
 		available ={
-			
+			BRM = {
+				country_exists = yes
+				is_subject = no
+			}
 		}
-			
+		
+		bypass = {
+			BRM = {
+				country_exists = no
+			}
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_league_bhurma"
-			
+			BRM = { country_event = { id = generic.5 } }
 		}
 	}
 	
@@ -3290,7 +3490,7 @@ focus_tree = {
 			}
 			ENG = {
 				country_exists = yes
-				has_opinion = { target = SIA value > 20 }
+				has_opinion = { target = SIA value > 50 }
 				NOT = {
 					has_war_with = SIA
 				}
@@ -3376,7 +3576,7 @@ focus_tree = {
 			}
 			GER = {
 				country_exists = yes
-				has_opinion = { target = SIA value > 20 }
+				has_opinion = { target = SIA value > 50 }
 				NOT = {
 					has_war_with = SIA
 				}
@@ -3463,7 +3663,7 @@ focus_tree = {
 			}
 			ENG = {
 				country_exists = yes
-				has_opinion = { target = SIA value > 20 }
+				has_opinion = { target = SIA value > 50 }
 				NOT = {
 					has_war_with = SIA
 				}
@@ -3587,7 +3787,7 @@ focus_tree = {
 			}
 			JAP = {
 				country_exists = yes
-				has_opinion = { target = SIA value > 20 }
+				has_opinion = { target = SIA value > 50 }
 				NOT = {
 					has_war_with = SIA
 				}
@@ -4079,14 +4279,14 @@ focus_tree = {
 			NOT = {
 				has_idea = SIA_idea_police_army_7
 			}
-			add_days_mission_timeout = {
-				mission = SIA_new_crisis_mission
-				days = -50
-			}
 		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_royal_academy"
+			add_days_mission_timeout = {
+				mission = SIA_new_crisis_mission
+				days = -50
+			}
 			army_experience = 10
 			add_doctrine_cost_reduction = {
 				cost_reduction = 0.5
@@ -4498,7 +4698,7 @@ focus_tree = {
 		y = 1
 		available ={
 			country_exists = JAP
-			JAP = {	has_opinion = { target = SIA value > 20 } }
+			JAP = {	has_opinion = { target = SIA value > 50 } }
 		}
 		
 		bypass ={
@@ -4609,7 +4809,7 @@ focus_tree = {
 		y = 1
 		available ={
 			country_exists = JAP
-			JAP = {	has_opinion = { target = SIA value > 20 } }
+			JAP = {	has_opinion = { target = SIA value > 50 } }
 		}
 		
 		bypass ={
@@ -4652,7 +4852,7 @@ focus_tree = {
 		y = 1
 		available ={
 			country_exists = JAP
-			JAP = {	has_opinion = { target = SIA value > 20 } }
+			JAP = {	has_opinion = { target = SIA value > 50 } }
 		}
 		
 		bypass ={
@@ -5418,7 +5618,7 @@ focus_tree = {
 		y = 12
 		available ={
 			country_exists = JAP
-			JAP = {	has_opinion = { target = SIA value > 20 } }
+			JAP = {	has_opinion = { target = SIA value > 50 } }
 		}
 		
 		bypass ={
@@ -5689,7 +5889,7 @@ focus_tree = {
 		y = 11
 		available ={
 			country_exists = JAP
-			JAP = {	has_opinion = { target = SIA value > 20 } }
+			JAP = {	has_opinion = { target = SIA value > 50 } }
 		}
 		
 		bypass ={
@@ -6615,12 +6815,20 @@ focus_tree = {
 		x = 11
 		y = 16
 		available ={
-			
+			VIN = {
+				country_exists = yes
+				is_subject = no
+			}
 		}
-			
+		
+		bypass = {
+			VIN = {
+				country_exists = no
+			}
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_sssr_annam"
-			
+			VIN = { country_event = { id = generic.5 } }
 		}
 	}
 	
@@ -6903,12 +7111,95 @@ focus_tree = {
 		x = 23
 		y = 16
 		available ={
-			
+			OR = {
+				FIC = {
+					is_subject = yes
+				}
+				CAM = {
+					is_subject = yes
+				}
+				LAO = {
+					is_subject = yes
+				}
+				VIN = {
+					is_subject = yes
+				}
+			}
+		}
+		
+		bypass ={
+			FIC = {
+				OR ={
+					is_subject = no
+					country_exists = no
+				}
+			}
+			CAM = {
+				OR ={
+					is_subject = no
+					country_exists = no
+				}
+			}
+			LAO = {
+				OR ={
+					is_subject = no
+					country_exists = no
+				}
+			}
+			VIN = {
+				OR ={
+					is_subject = no
+					country_exists = no
+				}
+			}
 		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_league_frank_colonies"
-			
+			if = {
+				limit = {
+					FIC = {
+						is_subject = yes
+					}
+				}
+				create_wargoal = {
+					type = liberate_wargoal
+					target = FIC
+				}
+			}
+			else_if = {
+				limit = {
+					CAM = {
+						is_subject = yes
+					}
+				}
+				create_wargoal = {
+					type = liberate_wargoal
+					target = CAM
+				}
+			}
+			else_if = {
+				limit = {
+					LAO = {
+						is_subject = yes
+					}
+				}
+				create_wargoal = {
+					type = liberate_wargoal
+					target = LAO
+				}
+			}
+			else_if = {
+				limit = {
+					VIN = {
+						is_subject = yes
+					}
+				}
+				create_wargoal = {
+					type = liberate_wargoal
+					target = VIN
+				}
+			}
 		}
 	}
 	
@@ -6924,12 +7215,20 @@ focus_tree = {
 		x = 19
 		y = 18
 		available ={
-			
+			PHI = {
+				country_exists = yes
+				is_subject = no
+			}
 		}
-			
+		
+		bypass = {
+			PHI = {
+				country_exists = no
+			}
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_league_phillipins"
-			
+			PHI = { country_event = { id = generic.5 } }
 		}
 	}
 	
@@ -6945,12 +7244,32 @@ focus_tree = {
 		x = 23
 		y = 18
 		available ={
-			
+			PHI = {
+				country_exists = yes
+				is_subject = yes
+			}
+		}
+		bypass ={
+			PHI = {
+				country_exists = no
+				is_subject = no
+			}
 		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_league_usa_colonies"
-			
+			if = {
+				limit = {
+					PHI = {
+						country_exists = yes
+						is_subject = yes
+					}
+				}
+				create_wargoal = {
+					type = liberate_wargoal
+					target = PHI
+				}
+			}
 		}
 	}
 	
@@ -6966,12 +7285,20 @@ focus_tree = {
 		x = 20
 		y = 19
 		available ={
-			
+			MAL = {
+				country_exists = yes
+				is_subject = no
+			}
 		}
-			
+		
+		bypass = {
+			MAL = {
+				country_exists = no
+			}
+		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_league_indonesia"
-			
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_league_malaia"
+			MAL = { country_event = { id = generic.5 } }
 		}
 	}
 	
@@ -6987,12 +7314,32 @@ focus_tree = {
 		x = 22
 		y = 19
 		available ={
-			
+			INS = {
+				country_exists = yes
+				is_subject = yes
+			}
+		}
+		bypass ={
+			INS = {
+				country_exists = no
+				is_subject = no
+			}
 		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_league_niderland_colonies"
-			
+			if = {
+				limit = {
+					INS = {
+						country_exists = yes
+						is_subject = yes
+					}
+				}
+				create_wargoal = {
+					type = liberate_wargoal
+					target = INS
+				}
+			}
 		}
 	}
 	
@@ -7008,7 +7355,10 @@ focus_tree = {
 		x = 21
 		y = 20
 		available ={
-			
+			ROOT = {
+				is_faction_leader = yes
+				num_faction_members > 1
+			}
 		}
 			
 		completion_reward = {
@@ -7159,12 +7509,53 @@ focus_tree = {
 		x = 24
 		y = 19
 		available ={
-			
+			JAP = {
+				country_exists = yes
+				is_subject = no
+			}
 		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_USA_stop_japan"
-			
+			if = {
+				limit = {
+					SIA = {
+						is_ally_with = USA
+						has_completed_focus = SIA_USA_ally
+					}
+					JAP = {
+						has_war_with = USA
+					}
+				}
+				create_wargoal = {
+					type = topple_government
+					target = JAP
+				}
+			}
+			else_if = {
+				limit = {
+					SIA = {
+						has_completed_focus = SIA_create_league
+					}
+					JAP = {
+						OR = {
+							has_war_with = LAO
+							has_war_with = VIN
+							has_war_with = BRM
+							has_war_with = MAL
+							has_war_with = INS
+							has_war_with = CAM
+							has_war_with = FIC
+							has_war_with = PHI
+							has_war_with = ARK
+						}
+					}
+				}
+				create_wargoal = {
+					type = topple_government
+					target = JAP
+				}
+			}
 		}
 	}
 	

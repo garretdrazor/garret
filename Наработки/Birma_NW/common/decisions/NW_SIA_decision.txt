@@ -421,54 +421,62 @@ SIA_police_army_conflict_categories = {
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision SIA_general_1"
-			recruit_character = SIA_luang_chattrakankosol
-			hidden_effect = {
-				set_country_flag = SIA_police_1_flag
+			add_corps_commander_role = {
+				Character = SIA_luang_chattrakankosol
+				traits = { skilled_staffer }
+				skill=2
+				attack_skill=1
+				defense_skill=2
+				planning_skill=2
+				logistics_skill=2
 			}
 			custom_effect_tooltip = SIA_tt_police_upped
-			if = {
-				limit = {
-					has_idea = SIA_idea_police_army_6
+			hidden_effect = {
+				set_country_flag = SIA_police_1_flag
+				if = {
+					limit = {
+						has_idea = SIA_idea_police_army_6
+					}
+					swap_ideas ={
+						remove_idea = SIA_idea_police_army_6
+						add_idea = SIA_idea_police_army_5
+					}
 				}
-				swap_ideas ={
-					remove_idea = SIA_idea_police_army_6
-					add_idea = SIA_idea_police_army_5
+				else_if = {
+					limit = {
+						has_idea = SIA_idea_police_army_5
+					}
+					swap_ideas ={
+						remove_idea = SIA_idea_police_army_5
+						add_idea = SIA_idea_police_army_4
+					}
 				}
-			}
-			else_if = {
-				limit = {
-					has_idea = SIA_idea_police_army_5
+				else_if = {
+					limit = {
+						has_idea = SIA_idea_police_army_4
+					}
+					swap_ideas ={
+						remove_idea = SIA_idea_police_army_4
+						add_idea = SIA_idea_police_army_3
+					}
 				}
-				swap_ideas ={
-					remove_idea = SIA_idea_police_army_5
-					add_idea = SIA_idea_police_army_4
+				else_if = {
+					limit = {
+						has_idea = SIA_idea_police_army_3
+					}
+					swap_ideas ={
+						remove_idea = SIA_idea_police_army_3
+						add_idea = SIA_idea_police_army_2
+					}
 				}
-			}
-			else_if = {
-				limit = {
-					has_idea = SIA_idea_police_army_4
-				}
-				swap_ideas ={
-					remove_idea = SIA_idea_police_army_4
-					add_idea = SIA_idea_police_army_3
-				}
-			}
-			else_if = {
-				limit = {
-					has_idea = SIA_idea_police_army_3
-				}
-				swap_ideas ={
-					remove_idea = SIA_idea_police_army_3
-					add_idea = SIA_idea_police_army_2
-				}
-			}
-			else_if = {
-				limit = {
-					has_idea = SIA_idea_police_army_2
-				}
-				swap_ideas ={
-					remove_idea = SIA_idea_police_army_2
-					add_idea = SIA_idea_police_army_1
+				else_if = {
+					limit = {
+						has_idea = SIA_idea_police_army_2
+					}
+					swap_ideas ={
+						remove_idea = SIA_idea_police_army_2
+						add_idea = SIA_idea_police_army_1
+					}
 				}
 			}
 		}
@@ -502,54 +510,62 @@ SIA_police_army_conflict_categories = {
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision SIA_general_2"
-			recruit_character = SIA_phao_siyanon
-			hidden_effect = {
-				set_country_flag = SIA_police_2_flag
+			add_corps_commander_role = {
+				Character = SIA_phao_siyanon
+				traits={ politically_connected }
+				skill=2
+				attack_skill=2
+				defense_skill=3
+				planning_skill=1
+				logistics_skill=2
 			}
 			custom_effect_tooltip = SIA_tt_police_upped
-			if = {
-				limit = {
-					has_idea = SIA_idea_police_army_6
+			hidden_effect = {
+				set_country_flag = SIA_police_2_flag
+				if = {
+					limit = {
+						has_idea = SIA_idea_police_army_6
+					}
+					swap_ideas ={
+						remove_idea = SIA_idea_police_army_6
+						add_idea = SIA_idea_police_army_5
+					}
 				}
-				swap_ideas ={
-					remove_idea = SIA_idea_police_army_6
-					add_idea = SIA_idea_police_army_5
+				else_if = {
+					limit = {
+						has_idea = SIA_idea_police_army_5
+					}
+					swap_ideas ={
+						remove_idea = SIA_idea_police_army_5
+						add_idea = SIA_idea_police_army_4
+					}
 				}
-			}
-			else_if = {
-				limit = {
-					has_idea = SIA_idea_police_army_5
+				else_if = {
+					limit = {
+						has_idea = SIA_idea_police_army_4
+					}
+					swap_ideas ={
+						remove_idea = SIA_idea_police_army_4
+						add_idea = SIA_idea_police_army_3
+					}
 				}
-				swap_ideas ={
-					remove_idea = SIA_idea_police_army_5
-					add_idea = SIA_idea_police_army_4
+				else_if = {
+					limit = {
+						has_idea = SIA_idea_police_army_3
+					}
+					swap_ideas ={
+						remove_idea = SIA_idea_police_army_3
+						add_idea = SIA_idea_police_army_2
+					}
 				}
-			}
-			else_if = {
-				limit = {
-					has_idea = SIA_idea_police_army_4
-				}
-				swap_ideas ={
-					remove_idea = SIA_idea_police_army_4
-					add_idea = SIA_idea_police_army_3
-				}
-			}
-			else_if = {
-				limit = {
-					has_idea = SIA_idea_police_army_3
-				}
-				swap_ideas ={
-					remove_idea = SIA_idea_police_army_3
-					add_idea = SIA_idea_police_army_2
-				}
-			}
-			else_if = {
-				limit = {
-					has_idea = SIA_idea_police_army_2
-				}
-				swap_ideas ={
-					remove_idea = SIA_idea_police_army_2
-					add_idea = SIA_idea_police_army_1
+				else_if = {
+					limit = {
+						has_idea = SIA_idea_police_army_2
+					}
+					swap_ideas ={
+						remove_idea = SIA_idea_police_army_2
+						add_idea = SIA_idea_police_army_1
+					}
 				}
 			}
 		}
@@ -583,54 +599,62 @@ SIA_police_army_conflict_categories = {
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision SIA_general_3"
-			recruit_character = SIA_rama_intru
-			hidden_effect = {
-				set_country_flag = SIA_police_3_flag
+			add_corps_commander_role = {
+				Character = SIA_rama_intru
+				traits={ career_officer }
+				skill=2
+				attack_skill=1
+				defense_skill=1
+				planning_skill=3
+				logistics_skill=2
 			}
 			custom_effect_tooltip = SIA_tt_police_upped
-			if = {
-				limit = {
-					has_idea = SIA_idea_police_army_6
+			hidden_effect = {
+				set_country_flag = SIA_police_3_flag
+				if = {
+					limit = {
+						has_idea = SIA_idea_police_army_6
+					}
+					swap_ideas ={
+						remove_idea = SIA_idea_police_army_6
+						add_idea = SIA_idea_police_army_5
+					}
 				}
-				swap_ideas ={
-					remove_idea = SIA_idea_police_army_6
-					add_idea = SIA_idea_police_army_5
+				else_if = {
+					limit = {
+						has_idea = SIA_idea_police_army_5
+					}
+					swap_ideas ={
+						remove_idea = SIA_idea_police_army_5
+						add_idea = SIA_idea_police_army_4
+					}
 				}
-			}
-			else_if = {
-				limit = {
-					has_idea = SIA_idea_police_army_5
+				else_if = {
+					limit = {
+						has_idea = SIA_idea_police_army_4
+					}
+					swap_ideas ={
+						remove_idea = SIA_idea_police_army_4
+						add_idea = SIA_idea_police_army_3
+					}
 				}
-				swap_ideas ={
-					remove_idea = SIA_idea_police_army_5
-					add_idea = SIA_idea_police_army_4
+				else_if = {
+					limit = {
+						has_idea = SIA_idea_police_army_3
+					}
+					swap_ideas ={
+						remove_idea = SIA_idea_police_army_3
+						add_idea = SIA_idea_police_army_2
+					}
 				}
-			}
-			else_if = {
-				limit = {
-					has_idea = SIA_idea_police_army_4
-				}
-				swap_ideas ={
-					remove_idea = SIA_idea_police_army_4
-					add_idea = SIA_idea_police_army_3
-				}
-			}
-			else_if = {
-				limit = {
-					has_idea = SIA_idea_police_army_3
-				}
-				swap_ideas ={
-					remove_idea = SIA_idea_police_army_3
-					add_idea = SIA_idea_police_army_2
-				}
-			}
-			else_if = {
-				limit = {
-					has_idea = SIA_idea_police_army_2
-				}
-				swap_ideas ={
-					remove_idea = SIA_idea_police_army_2
-					add_idea = SIA_idea_police_army_1
+				else_if = {
+					limit = {
+						has_idea = SIA_idea_police_army_2
+					}
+					swap_ideas ={
+						remove_idea = SIA_idea_police_army_2
+						add_idea = SIA_idea_police_army_1
+					}
 				}
 			}
 		}
@@ -664,54 +688,62 @@ SIA_police_army_conflict_categories = {
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision SIA_general_4"
-			recruit_character = SIA_Pkhra_Pkhicharnfonkit
-			hidden_effect = {
-				set_country_flag = SIA_police_4_flag
+			add_corps_commander_role = {
+				Character = SIA_Pkhra_Pkhicharnfonkit
+				traits={ commando panzer_leader }
+				skill=3
+				attack_skill=3
+				defense_skill=2
+				planning_skill=2
+				logistics_skill=4
 			}
 			custom_effect_tooltip = SIA_tt_police_upped
-			if = {
-				limit = {
-					has_idea = SIA_idea_police_army_6
+			hidden_effect = {
+				set_country_flag = SIA_police_4_flag
+				if = {
+					limit = {
+						has_idea = SIA_idea_police_army_6
+					}
+					swap_ideas ={
+						remove_idea = SIA_idea_police_army_6
+						add_idea = SIA_idea_police_army_5
+					}
 				}
-				swap_ideas ={
-					remove_idea = SIA_idea_police_army_6
-					add_idea = SIA_idea_police_army_5
+				else_if = {
+					limit = {
+						has_idea = SIA_idea_police_army_5
+					}
+					swap_ideas ={
+						remove_idea = SIA_idea_police_army_5
+						add_idea = SIA_idea_police_army_4
+					}
 				}
-			}
-			else_if = {
-				limit = {
-					has_idea = SIA_idea_police_army_5
+				else_if = {
+					limit = {
+						has_idea = SIA_idea_police_army_4
+					}
+					swap_ideas ={
+						remove_idea = SIA_idea_police_army_4
+						add_idea = SIA_idea_police_army_3
+					}
 				}
-				swap_ideas ={
-					remove_idea = SIA_idea_police_army_5
-					add_idea = SIA_idea_police_army_4
+				else_if = {
+					limit = {
+						has_idea = SIA_idea_police_army_3
+					}
+					swap_ideas ={
+						remove_idea = SIA_idea_police_army_3
+						add_idea = SIA_idea_police_army_2
+					}
 				}
-			}
-			else_if = {
-				limit = {
-					has_idea = SIA_idea_police_army_4
-				}
-				swap_ideas ={
-					remove_idea = SIA_idea_police_army_4
-					add_idea = SIA_idea_police_army_3
-				}
-			}
-			else_if = {
-				limit = {
-					has_idea = SIA_idea_police_army_3
-				}
-				swap_ideas ={
-					remove_idea = SIA_idea_police_army_3
-					add_idea = SIA_idea_police_army_2
-				}
-			}
-			else_if = {
-				limit = {
-					has_idea = SIA_idea_police_army_2
-				}
-				swap_ideas ={
-					remove_idea = SIA_idea_police_army_2
-					add_idea = SIA_idea_police_army_1
+				else_if = {
+					limit = {
+						has_idea = SIA_idea_police_army_2
+					}
+					swap_ideas ={
+						remove_idea = SIA_idea_police_army_2
+						add_idea = SIA_idea_police_army_1
+					}
 				}
 			}
 		}
@@ -745,54 +777,62 @@ SIA_police_army_conflict_categories = {
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision SIA_general_5"
-			recruit_character = SIA_Adul_Aduldeydzharat
+			add_corps_commander_role = {
+				Character = SIA_Adul_Aduldeydzharat
+				traits={ bearer_of_artillery }
+				skill=3
+				attack_skill=2
+				defense_skill=4
+				planning_skill=3
+				logistics_skill=2
+			}
 			custom_effect_tooltip = SIA_tt_police_upped
 			hidden_effect = {
 				set_country_flag = SIA_police_5_flag
-			}
-			if = {
-				limit = {
-					has_idea = SIA_idea_police_army_6
+				if = {
+					limit = {
+						has_idea = SIA_idea_police_army_6
+					}
+					swap_ideas ={
+						remove_idea = SIA_idea_police_army_6
+						add_idea = SIA_idea_police_army_5
+					}
 				}
-				swap_ideas ={
-					remove_idea = SIA_idea_police_army_6
-					add_idea = SIA_idea_police_army_5
+				else_if = {
+					limit = {
+						has_idea = SIA_idea_police_army_5
+					}
+					swap_ideas ={
+						remove_idea = SIA_idea_police_army_5
+						add_idea = SIA_idea_police_army_4
+					}
 				}
-			}
-			else_if = {
-				limit = {
-					has_idea = SIA_idea_police_army_5
+				else_if = {
+					limit = {
+						has_idea = SIA_idea_police_army_4
+					}
+					swap_ideas ={
+						remove_idea = SIA_idea_police_army_4
+						add_idea = SIA_idea_police_army_3
+					}
 				}
-				swap_ideas ={
-					remove_idea = SIA_idea_police_army_5
-					add_idea = SIA_idea_police_army_4
+				else_if = {
+					limit = {
+						has_idea = SIA_idea_police_army_3
+					}
+					swap_ideas ={
+						remove_idea = SIA_idea_police_army_3
+						add_idea = SIA_idea_police_army_2
+					}
 				}
-			}
-			else_if = {
-				limit = {
-					has_idea = SIA_idea_police_army_4
-				}
-				swap_ideas ={
-					remove_idea = SIA_idea_police_army_4
-					add_idea = SIA_idea_police_army_3
-				}
-			}
-			else_if = {
-				limit = {
-					has_idea = SIA_idea_police_army_3
-				}
-				swap_ideas ={
-					remove_idea = SIA_idea_police_army_3
-					add_idea = SIA_idea_police_army_2
-				}
-			}
-			else_if = {
-				limit = {
-					has_idea = SIA_idea_police_army_2
-				}
-				swap_ideas ={
-					remove_idea = SIA_idea_police_army_2
-					add_idea = SIA_idea_police_army_1
+				else_if = {
+					limit = {
+						has_idea = SIA_idea_police_army_2
+					}
+					swap_ideas ={
+						remove_idea = SIA_idea_police_army_2
+						add_idea = SIA_idea_police_army_1
+					}
 				}
 			}
 		}
@@ -827,54 +867,62 @@ SIA_police_army_conflict_categories = {
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision SIA_general_6"
-			recruit_character = SIA_Phit_Kriangsakpichit
+			add_corps_commander_role = {
+				Character = SIA_Phit_Kriangsakpichit
+				traits={ bearer_of_artillery air_chief_ground_support_3 }
+				skill=3
+				attack_skill=3
+				defense_skill=2
+				planning_skill=3
+				logistics_skill=3
+			}
 			custom_effect_tooltip = SIA_tt_army_upped
 			hidden_effect = {
 				set_country_flag = SIA_police_6_flag
-			}
-			if = {
-				limit = {
-					has_idea = SIA_idea_police_army_2
-				}
-				swap_ideas ={
+				if = {
+					limit = {
+						has_idea = SIA_idea_police_army_2
+					}
+					swap_ideas ={
 					remove_idea = SIA_idea_police_army_2
 					add_idea = SIA_idea_police_army_3
+					}
 				}
-			}
-			else_if = {
-				limit = {
-					has_idea = SIA_idea_police_army_3
+				else_if = {
+					limit = {
+						has_idea = SIA_idea_police_army_3
+					}
+					swap_ideas ={
+						remove_idea = SIA_idea_police_army_3
+						add_idea = SIA_idea_police_army_4
+					}
 				}
-				swap_ideas ={
-					remove_idea = SIA_idea_police_army_3
-					add_idea = SIA_idea_police_army_4
+				else_if = {
+					limit = {
+						has_idea = SIA_idea_police_army_4
+					}
+					swap_ideas ={
+						remove_idea = SIA_idea_police_army_4
+						add_idea = SIA_idea_police_army_5
+					}
 				}
-			}
-			else_if = {
-				limit = {
-					has_idea = SIA_idea_police_army_4
+				else_if = {
+					limit = {
+						has_idea = SIA_idea_police_army_5
+					}
+					swap_ideas ={
+						remove_idea = SIA_idea_police_army_5
+						add_idea = SIA_idea_police_army_6
+					}
 				}
-				swap_ideas ={
-					remove_idea = SIA_idea_police_army_4
-					add_idea = SIA_idea_police_army_5
-				}
-			}
-			else_if = {
-				limit = {
-					has_idea = SIA_idea_police_army_5
-				}
-				swap_ideas ={
-					remove_idea = SIA_idea_police_army_5
-					add_idea = SIA_idea_police_army_6
-				}
-			}
-			else_if = {
-				limit = {
-					has_idea = SIA_idea_police_army_6
-				}
-				swap_ideas ={
-					remove_idea = SIA_idea_police_army_6
-					add_idea = SIA_idea_police_army_7
+				else_if = {
+					limit = {
+						has_idea = SIA_idea_police_army_6
+					}
+					swap_ideas ={
+						remove_idea = SIA_idea_police_army_6
+						add_idea = SIA_idea_police_army_7
+					}
 				}
 			}
 		}
@@ -908,54 +956,62 @@ SIA_police_army_conflict_categories = {
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision SIA_general_7"
-			recruit_character = SIA_Fin_Chunkhavan
+			add_corps_commander_role = {
+				Character = SIA_Fin_Chunkhavan
+				traits={ Infantry_Leader Infantry_Officer }
+				skill=1
+				attack_skill=2
+				defense_skill=2
+				planning_skill=2
+				logistics_skill=2
+			}
 			custom_effect_tooltip = SIA_tt_army_upped
 			hidden_effect = {
 				set_country_flag = SIA_police_7_flag
-			}
-			if = {
-				limit = {
-					has_idea = SIA_idea_police_army_2
+				if = {
+					limit = {
+						has_idea = SIA_idea_police_army_2
+					}
+					swap_ideas ={
+						remove_idea = SIA_idea_police_army_2
+						add_idea = SIA_idea_police_army_3
+					}
 				}
-				swap_ideas ={
-					remove_idea = SIA_idea_police_army_2
-					add_idea = SIA_idea_police_army_3
+				else_if = {
+					limit = {
+						has_idea = SIA_idea_police_army_3
+					}
+					swap_ideas ={
+						remove_idea = SIA_idea_police_army_3
+						add_idea = SIA_idea_police_army_4
+					}
 				}
-			}
-			else_if = {
-				limit = {
-					has_idea = SIA_idea_police_army_3
+				else_if = {
+					limit = {
+						has_idea = SIA_idea_police_army_4
+					}
+					swap_ideas ={
+						remove_idea = SIA_idea_police_army_4
+						add_idea = SIA_idea_police_army_5
+					}
 				}
-				swap_ideas ={
-					remove_idea = SIA_idea_police_army_3
-					add_idea = SIA_idea_police_army_4
+				else_if = {
+					limit = {
+						has_idea = SIA_idea_police_army_5
+					}
+					swap_ideas ={
+						remove_idea = SIA_idea_police_army_5
+						add_idea = SIA_idea_police_army_6
+					}
 				}
-			}
-			else_if = {
-				limit = {
-					has_idea = SIA_idea_police_army_4
-				}
-				swap_ideas ={
-					remove_idea = SIA_idea_police_army_4
-					add_idea = SIA_idea_police_army_5
-				}
-			}
-			else_if = {
-				limit = {
-					has_idea = SIA_idea_police_army_5
-				}
-				swap_ideas ={
-					remove_idea = SIA_idea_police_army_5
-					add_idea = SIA_idea_police_army_6
-				}
-			}
-			else_if = {
-				limit = {
-					has_idea = SIA_idea_police_army_6
-				}
-				swap_ideas ={
-					remove_idea = SIA_idea_police_army_6
-					add_idea = SIA_idea_police_army_7
+				else_if = {
+					limit = {
+						has_idea = SIA_idea_police_army_6
+					}
+					swap_ideas ={
+						remove_idea = SIA_idea_police_army_6
+						add_idea = SIA_idea_police_army_7
+					}
 				}
 			}
 		}
@@ -989,54 +1045,62 @@ SIA_police_army_conflict_categories = {
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision SIA_general_8"
-			recruit_character = SIA_Jaroon_Sereeruengrit
+			add_corps_commander_role = {
+				Character = SIA_Jaroon_Sereeruengrit
+				traits={ Organizer }
+				skill=1
+				attack_skill=1
+				defense_skill=2
+				planning_skill=3
+				logistics_skill=2
+			}
 			custom_effect_tooltip = SIA_tt_army_upped
 			hidden_effect = {
 				set_country_flag = SIA_police_8_flag
-			}
-			if = {
-				limit = {
-					has_idea = SIA_idea_police_army_2
+				if = {
+					limit = {
+						has_idea = SIA_idea_police_army_2
+					}
+					swap_ideas ={
+						remove_idea = SIA_idea_police_army_2
+						add_idea = SIA_idea_police_army_3
+					}
 				}
-				swap_ideas ={
-					remove_idea = SIA_idea_police_army_2
-					add_idea = SIA_idea_police_army_3
+				else_if = {
+					limit = {
+						has_idea = SIA_idea_police_army_3
+					}
+					swap_ideas ={
+						remove_idea = SIA_idea_police_army_3
+						add_idea = SIA_idea_police_army_4
+					}
 				}
-			}
-			else_if = {
-				limit = {
-					has_idea = SIA_idea_police_army_3
+				else_if = {
+					limit = {
+						has_idea = SIA_idea_police_army_4
+					}
+					swap_ideas ={
+						remove_idea = SIA_idea_police_army_4
+						add_idea = SIA_idea_police_army_5
+					}
 				}
-				swap_ideas ={
-					remove_idea = SIA_idea_police_army_3
-					add_idea = SIA_idea_police_army_4
+				else_if = {
+					limit = {
+						has_idea = SIA_idea_police_army_5
+					}
+					swap_ideas ={
+						remove_idea = SIA_idea_police_army_5
+						add_idea = SIA_idea_police_army_6
+					}
 				}
-			}
-			else_if = {
-				limit = {
-					has_idea = SIA_idea_police_army_4
-				}
-				swap_ideas ={
-					remove_idea = SIA_idea_police_army_4
-					add_idea = SIA_idea_police_army_5
-				}
-			}
-			else_if = {
-				limit = {
-					has_idea = SIA_idea_police_army_5
-				}
-				swap_ideas ={
-					remove_idea = SIA_idea_police_army_5
-					add_idea = SIA_idea_police_army_6
-				}
-			}
-			else_if = {
-				limit = {
-					has_idea = SIA_idea_police_army_6
-				}
-				swap_ideas ={
-					remove_idea = SIA_idea_police_army_6
-					add_idea = SIA_idea_police_army_7
+				else_if = {
+					limit = {
+						has_idea = SIA_idea_police_army_6
+					}
+					swap_ideas ={
+						remove_idea = SIA_idea_police_army_6
+						add_idea = SIA_idea_police_army_7
+					}
 				}
 			}
 		}
@@ -1070,54 +1134,62 @@ SIA_police_army_conflict_categories = {
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision SIA_general_9"
-			recruit_character = SIA_Plaad_Phibunphanuwat
+			add_corps_commander_role = {
+				Character = SIA_Plaad_Phibunphanuwat
+				traits={ Career_Officer Camouflage_Expert }
+				skill=2
+				attack_skill=3
+				defense_skill=2
+				planning_skill=1
+				logistics_skill=2
+			}
 			custom_effect_tooltip = SIA_tt_army_upped
 			hidden_effect = {
 				set_country_flag = SIA_police_9_flag
-			}
-			if = {
-				limit = {
-					has_idea = SIA_idea_police_army_2
+				if = {
+					limit = {
+						has_idea = SIA_idea_police_army_2
+					}
+					swap_ideas ={
+						remove_idea = SIA_idea_police_army_2
+						add_idea = SIA_idea_police_army_3
+					}
 				}
-				swap_ideas ={
-					remove_idea = SIA_idea_police_army_2
-					add_idea = SIA_idea_police_army_3
+				else_if = {
+					limit = {
+						has_idea = SIA_idea_police_army_3
+					}
+					swap_ideas ={
+						remove_idea = SIA_idea_police_army_3
+						add_idea = SIA_idea_police_army_4
+					}
 				}
-			}
-			else_if = {
-				limit = {
-					has_idea = SIA_idea_police_army_3
+				else_if = {
+					limit = {
+						has_idea = SIA_idea_police_army_4
+					}
+					swap_ideas ={
+						remove_idea = SIA_idea_police_army_4
+						add_idea = SIA_idea_police_army_5
+					}
 				}
-				swap_ideas ={
-					remove_idea = SIA_idea_police_army_3
-					add_idea = SIA_idea_police_army_4
+				else_if = {
+					limit = {
+						has_idea = SIA_idea_police_army_5
+					}
+					swap_ideas ={
+						remove_idea = SIA_idea_police_army_5
+						add_idea = SIA_idea_police_army_6
+					}
 				}
-			}
-			else_if = {
-				limit = {
-					has_idea = SIA_idea_police_army_4
-				}
-				swap_ideas ={
-					remove_idea = SIA_idea_police_army_4
-					add_idea = SIA_idea_police_army_5
-				}
-			}
-			else_if = {
-				limit = {
-					has_idea = SIA_idea_police_army_5
-				}
-				swap_ideas ={
-					remove_idea = SIA_idea_police_army_5
-					add_idea = SIA_idea_police_army_6
-				}
-			}
-			else_if = {
-				limit = {
-					has_idea = SIA_idea_police_army_6
-				}
-				swap_ideas ={
-					remove_idea = SIA_idea_police_army_6
-					add_idea = SIA_idea_police_army_7
+				else_if = {
+					limit = {
+						has_idea = SIA_idea_police_army_6
+					}
+					swap_ideas ={
+						remove_idea = SIA_idea_police_army_6
+						add_idea = SIA_idea_police_army_7
+					}
 				}
 			}
 		}
@@ -1154,53 +1226,63 @@ SIA_police_army_conflict_categories = {
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision SIA_general_10"
-			recruit_character = SIA_Phraya_Songsuradet
+			add_corps_commander_role = {
+				Character = SIA_Phraya_Songsuradet
+				traits={ Engineer Engineer_Officer }
+				skill=3
+				attack_skill=3
+				defense_skill=3
+				planning_skill=4
+				logistics_skill=2
+			}
 			custom_effect_tooltip = SIA_tt_army_upped
 			custom_effect_tooltip = SIA_tt_Songsuradet_back
-			set_country_flag = SIA_Songsuradet_back_flag
-			if = {
-				limit = {
-					has_idea = SIA_idea_police_army_2
+			hidden_effect = {
+				set_country_flag = SIA_Songsuradet_back_flag
+				if = {
+					limit = {
+						has_idea = SIA_idea_police_army_2
+					}
+					swap_ideas ={
+						remove_idea = SIA_idea_police_army_2
+						add_idea = SIA_idea_police_army_3
+					}
 				}
-				swap_ideas ={
-					remove_idea = SIA_idea_police_army_2
-					add_idea = SIA_idea_police_army_3
+				else_if = {
+					limit = {
+						has_idea = SIA_idea_police_army_3
+					}
+					swap_ideas ={
+						remove_idea = SIA_idea_police_army_3
+						add_idea = SIA_idea_police_army_4
+					}
 				}
-			}
-			else_if = {
-				limit = {
-					has_idea = SIA_idea_police_army_3
+				else_if = {
+					limit = {
+						has_idea = SIA_idea_police_army_4
+					}
+					swap_ideas ={
+						remove_idea = SIA_idea_police_army_4
+						add_idea = SIA_idea_police_army_5
+					}
 				}
-				swap_ideas ={
-					remove_idea = SIA_idea_police_army_3
-					add_idea = SIA_idea_police_army_4
+				else_if = {
+					limit = {
+						has_idea = SIA_idea_police_army_5
+					}
+					swap_ideas ={
+						remove_idea = SIA_idea_police_army_5
+						add_idea = SIA_idea_police_army_6
+					}
 				}
-			}
-			else_if = {
-				limit = {
-					has_idea = SIA_idea_police_army_4
-				}
-				swap_ideas ={
-					remove_idea = SIA_idea_police_army_4
-					add_idea = SIA_idea_police_army_5
-				}
-			}
-			else_if = {
-				limit = {
-					has_idea = SIA_idea_police_army_5
-				}
-				swap_ideas ={
-					remove_idea = SIA_idea_police_army_5
-					add_idea = SIA_idea_police_army_6
-				}
-			}
-			else_if = {
-				limit = {
-					has_idea = SIA_idea_police_army_6
-				}
-				swap_ideas ={
-					remove_idea = SIA_idea_police_army_6
-					add_idea = SIA_idea_police_army_7
+				else_if = {
+					limit = {
+						has_idea = SIA_idea_police_army_6
+					}
+					swap_ideas ={
+						remove_idea = SIA_idea_police_army_6
+						add_idea = SIA_idea_police_army_7
+					}
 				}
 			}
 		}
@@ -1237,53 +1319,63 @@ SIA_police_army_conflict_categories = {
 
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision SIA_general_11"
-			recruit_character = SIA_Phraya_Thephasdin
+			add_corps_commander_role = {
+				Character = SIA_Phraya_Thephasdin
+				traits={ War_Hero }
+				skill=3
+				attack_skill=3
+				defense_skill=2
+				planning_skill=2
+				logistics_skill=3
+			}
 			custom_effect_tooltip = SIA_tt_army_upped
 			custom_effect_tooltip = SIA_tt_Thephasdin
-			set_country_flag = SIA_Thephasdin_flag
-			if = {
-				limit = {
-					has_idea = SIA_idea_police_army_2
+			hidden_effect = {
+				set_country_flag = SIA_Thephasdin_flag
+				if = {
+					limit = {
+						has_idea = SIA_idea_police_army_2
+					}
+					swap_ideas ={
+						remove_idea = SIA_idea_police_army_2
+						add_idea = SIA_idea_police_army_3
+					}
 				}
-				swap_ideas ={
-					remove_idea = SIA_idea_police_army_2
-					add_idea = SIA_idea_police_army_3
+				else_if = {
+					limit = {
+						has_idea = SIA_idea_police_army_3
+					}
+					swap_ideas ={
+						remove_idea = SIA_idea_police_army_3
+						add_idea = SIA_idea_police_army_4
+					}
 				}
-			}
-			else_if = {
-				limit = {
-					has_idea = SIA_idea_police_army_3
+				else_if = {
+					limit = {
+						has_idea = SIA_idea_police_army_4
+					}
+					swap_ideas ={
+						remove_idea = SIA_idea_police_army_4
+						add_idea = SIA_idea_police_army_5
+					}
 				}
-				swap_ideas ={
-					remove_idea = SIA_idea_police_army_3
-					add_idea = SIA_idea_police_army_4
+				else_if = {
+					limit = {
+						has_idea = SIA_idea_police_army_5
+					}
+					swap_ideas ={
+						remove_idea = SIA_idea_police_army_5
+						add_idea = SIA_idea_police_army_6
+					}
 				}
-			}
-			else_if = {
-				limit = {
-					has_idea = SIA_idea_police_army_4
-				}
-				swap_ideas ={
-					remove_idea = SIA_idea_police_army_4
-					add_idea = SIA_idea_police_army_5
-				}
-			}
-			else_if = {
-				limit = {
-					has_idea = SIA_idea_police_army_5
-				}
-				swap_ideas ={
-					remove_idea = SIA_idea_police_army_5
-					add_idea = SIA_idea_police_army_6
-				}
-			}
-			else_if = {
-				limit = {
-					has_idea = SIA_idea_police_army_6
-				}
-				swap_ideas ={
-					remove_idea = SIA_idea_police_army_6
-					add_idea = SIA_idea_police_army_7
+				else_if = {
+					limit = {
+						has_idea = SIA_idea_police_army_6
+					}
+					swap_ideas ={
+						remove_idea = SIA_idea_police_army_6
+						add_idea = SIA_idea_police_army_7
+					}
 				}
 			}
 		}

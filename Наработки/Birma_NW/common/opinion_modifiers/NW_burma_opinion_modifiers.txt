@@ -12,4 +12,6 @@ opinion_modifiers = {
 	SIA_eng_compromiss = { value = 25 }
 	SIA_jap_be_friend = { value = 25 }
 	SIA_be_friend = { value = 25 }
+	SIA_antikolonial = { value = 50 }
+	SIA_antikolonial_vs = { value = -50 }
 }

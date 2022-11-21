@@ -1359,5 +1359,20 @@ ideas = {
 				production_factory_efficiency_gain_factor = 0.05
 			}
 		}
+		# Добровольцы Юго-Восточной лиги
+		SIA_idea_thai_soc_dem_vol = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = idea_
+			modifier = {
+				send_volunteer_size = 3
+				send_volunteers_tension = -0.75
+			}
+		}
 	}
 }
