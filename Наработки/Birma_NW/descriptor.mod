@@ -4,6 +4,6 @@ tags={
 }
 name="Birma"
 dependencies={
-	"New Ways alpha DEV BUILD"
+	"New Ways REBOOT DEV BUILD"
 }
-supported_version="1.11.9"
+supported_version="1.12.*"
