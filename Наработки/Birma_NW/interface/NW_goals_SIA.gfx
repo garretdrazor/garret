@@ -118,4 +118,24 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/z_goal_siam_submarine.dds"
 	}
 	
+	SpriteType = { 
+		name = "GFX_z_goal_siam_civil_rise"
+		texturefile = "gfx/interface/goals/z_goal_siam_civil_rise.dds"
+	}
+	
+	SpriteType = { 
+		name = "GFX_z_goal_siam_crown_fate"
+		texturefile = "gfx/interface/goals/z_goal_siam_crown_fate.dds"
+	}
+	
+	SpriteType = { 
+		name = "GFX_z_goal_siam_nac_bank"
+		texturefile = "gfx/interface/goals/z_goal_siam_nac_bank.dds"
+	}
+	
+	SpriteType = { 
+		name = "GFX_z_goal_siam_third_path"
+		texturefile = "gfx/interface/goals/z_goal_siam_third_path.dds"
+	}
+	
 }
