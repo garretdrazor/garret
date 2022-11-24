@@ -321,8 +321,13 @@ focus_tree = {
 		x = 3
 		y = 1
 			
+		select_effect = {
+			country_event = { id = sia.44 }
+		}
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_deanonce_bad_theatry"
+			hidden_effect = { country_event = { id = sia.45 } }
 			remove_ideas = SIA_idea_crown_credits
 			add_ideas = SIA_idea_credit_ENG
 			add_ideas = SIA_idea_credit_USA
@@ -927,7 +932,7 @@ focus_tree = {
 	focus = {
 		id = SIA_create_idochina
 		text = SIA_create_idochina
-		icon = GFX_z_goal_Sign_advisory_agreement
+		icon = GFX_z_goal_siam_indchi_support_create
 		cost = 10
 		prerequisite = {
 			focus = SIA_clearing_generals
@@ -1784,7 +1789,7 @@ focus_tree = {
 	focus = {
 		id = SIA_med_air
 		text = SIA_med_air
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_siam_hospital_2
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_china_exile
@@ -1893,7 +1898,7 @@ focus_tree = {
 	focus = {
 		id = SIA_airdef_vvs
 		text = SIA_airdef_vvs
-		icon = GFX_z_goal_generic_defensive_strategy
+		icon = GFX_z_goal_siam_anti_air
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_taktik_vvs
@@ -1935,7 +1940,7 @@ focus_tree = {
 	focus = {
 		id = SIA_new_airbase_vvs
 		text = SIA_new_airbase_vvs
-		icon = GFX_z_goal_generic_airports_focus_2
+		icon = GFX_z_goal_siam_new_bases
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_create_vvs
@@ -1968,7 +1973,7 @@ focus_tree = {
 		}
 	}
 
-	# «Батальон специальных операций
+	# Батальон специальных операций
 	focus = {
 		id = SIA_airspec_vvs
 		text = SIA_airspec_vvs
@@ -2000,7 +2005,7 @@ focus_tree = {
 	focus = {
 		id = SIA_franch_air
 		text = SIA_franch_air
-		icon = GFX_z_goal_close_air_support
+		icon = GFX_focus_generic_armored_air_support
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_airdef_vvs
@@ -2073,7 +2078,7 @@ focus_tree = {
 	focus = {
 		id = SIA_japan_air
 		text = SIA_japan_air
-		icon = GFX_z_goal_generic_airports_focus_2
+		icon = GFX_focus_jap_zero
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_airdef_vvs
@@ -2146,7 +2151,7 @@ focus_tree = {
 	focus = {
 		id = SIA_usa_air
 		text = SIA_usa_air
-		icon = GFX_z_goal_aircraft_development
+		icon = GFX_focus_usa_escort_fighters
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_airdef_vvs
@@ -2219,7 +2224,7 @@ focus_tree = {
 	focus = {
 		id = SIA_usa_base
 		text = SIA_usa_base
-		icon = GFX_z_goal_bases_for_british_air_force
+		icon = GFX_z_goal_generic_airports_focus_2
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_usa_air
@@ -2314,7 +2319,7 @@ focus_tree = {
 	focus = {
 		id = SIA_japan_taktik
 		text = SIA_japan_taktik
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_japanese_imperial_glory
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_japan_air
@@ -2348,7 +2353,7 @@ focus_tree = {
 	focus = {
 		id = SIA_franch_motor
 		text = SIA_franch_motor
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_introduction_of_motorization
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_franch_air
@@ -2523,7 +2528,7 @@ focus_tree = {
 		id = SIA_third_path
 		text = SIA_third_path
 		icon = GFX_z_goal_siam_third_path
-		cost = 5
+		cost = 7.8
 		prerequisite = {
 			focus = SIA_land_maximum
 			focus = SIA_create_medicine
@@ -2548,7 +2553,7 @@ focus_tree = {
 	focus = {
 		id = SIA_consensus_with_royalists
 		text = SIA_consensus_with_royalists
-		icon = GFX_z_goal_monarchism_14
+		icon = GFX_z_goal_siam_with_royal
 		cost = 10
 		prerequisite = {
 			focus = SIA_third_path
@@ -2643,7 +2648,7 @@ focus_tree = {
 	focus = {
 		id = SIA_choose_police
 		text = SIA_choose_police
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_siam_police_power
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_world_police
@@ -2727,7 +2732,7 @@ focus_tree = {
 	focus = {
 		id = SIA_woman_police
 		text = SIA_woman_police
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_women_in_military
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_choose_police
@@ -2745,7 +2750,7 @@ focus_tree = {
 	focus = {
 		id = SIA_no_party_with_royal
 		text = SIA_no_party_with_royal
-		icon = GFX_z_goal_generic_king_power
+		icon = GFX_z_goal_siam_no_royal
 		cost = 10
 		prerequisite = {
 			focus = SIA_third_path
@@ -2812,7 +2817,7 @@ focus_tree = {
 	focus = {
 		id = SIA_super_spec_buro
 		text = SIA_super_spec_buro
-		icon = GFX_goal_unknown
+		icon = GFX_focus_eng_special_air_service
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_royal_police
@@ -3019,6 +3024,10 @@ focus_tree = {
 		x = 21
 		y = 13
 			
+		available = {
+			has_country_flag = SIA_create_coop_flag
+		}
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_create_work_order"
 			swap_ideas = {
@@ -3032,13 +3041,17 @@ focus_tree = {
 	focus = {
 		id = SIA_create_free_thai
 		text = SIA_create_free_thai
-		icon = GFX_z_goal_freedom_through_equality
+		icon = GFX_z_goal_siam_free_thai
 		cost = 10
 		prerequisite = {
 			focus = SIA_create_work_order
 		}
 		x = 20
 		y = 14
+			
+		available = {
+			has_country_flag = SIA_create_coop_flag
+		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_create_free_thai"
@@ -3069,7 +3082,7 @@ focus_tree = {
 	focus = {
 		id = SIA_create_league
 		text = SIA_create_league
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_siam_create_ASEAN
 		cost = 10
 		prerequisite = {
 			focus = SIA_create_ekonomik_soviet
@@ -3399,7 +3412,7 @@ focus_tree = {
 	focus = {
 		id = SIA_long_recon
 		text = SIA_long_recon
-		icon = GFX_goal_unknown
+		icon = GFX_focus_eng_special_air_service
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_army_invest
@@ -3477,7 +3490,7 @@ focus_tree = {
 	focus = {
 		id = SIA_GB_tank
 		text = SIA_GB_tank
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_army_tanks
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_army_invest
@@ -3859,7 +3872,7 @@ focus_tree = {
 	focus = {
 		id = SIA_choose_army
 		text = SIA_choose_army
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_siam_army_power
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_GB_rifle
@@ -3909,7 +3922,7 @@ focus_tree = {
 	focus = {
 		id = SIA_general_shtab
 		text = SIA_general_shtab
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_siam_genshtab
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_police_marsh
@@ -3928,7 +3941,7 @@ focus_tree = {
 	focus = {
 		id = SIA_territory_cammanders
 		text = SIA_territory_cammanders
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_Woodhead_comission
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_choose_army
@@ -3986,7 +3999,7 @@ focus_tree = {
 	focus = {
 		id = SIA_injeners_army
 		text = SIA_injeners_army
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_paired_power_plant
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_choose_army
@@ -4060,8 +4073,8 @@ focus_tree = {
 	focus = {
 		id = SIA_passive_path
 		text = SIA_passive_path
-		icon = GFX_z_goal_generic_neutrality
-		cost = 10
+		icon = GFX_z_goal_siam_lught_path
+		cost = 7.8
 		prerequisite = {
 			focus = SIA_create_medicine
 			focus = SIA_land_maximum
@@ -4078,7 +4091,9 @@ focus_tree = {
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_passive_path"
-			
+			add_popularity = { ideology = democratic popularity = 0.05 }
+			add_popularity = { ideology = monarchy popularity = 0.05 }
+			country_event = { id = sia.48 }
 		}
 	}
 	
@@ -4094,13 +4109,12 @@ focus_tree = {
 		}
 		x = 25
 		y = 11
-		available ={
-			
-		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_no_generals_on_parlament"
-			
+			add_popularity = { ideology = democratic popularity = 0.1 }
+			add_political_power = 150
+			add_war_support = -0.1
 		}
 	}
 	
@@ -4160,6 +4174,7 @@ focus_tree = {
 		y = 12
 		available ={
 			NOT = { has_civil_war = yes }
+			has_country_flag = SIA_create_coop_flag
 		}
 			
 		completion_reward = {
@@ -4208,13 +4223,10 @@ focus_tree = {
 		}
 		x = 25
 		y = 13
-		available ={
-			
-		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_money_for_research"
-			
+			add_ideas = SIA_idea_cash_for_educations
 		}
 	}
 	
@@ -4590,12 +4602,16 @@ focus_tree = {
 		x = 25
 		y = 15
 		available ={
-			
+			USA = {
+				country_exists = yes
+				is_subject = no
+				is_faction_leader = yes
+			}
 		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_USA_ally"
-			
+			USA = { country_event = { id = generic.2 } }
 		}
 	}
 	
@@ -4761,7 +4777,7 @@ focus_tree = {
 	focus = {
 		id = SIA_royal_vmf
 		text = SIA_royal_vmf
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_paratrooper
 		cost = 10
 		prerequisite = {
 			focus = SIA_Sattahip
@@ -4803,7 +4819,7 @@ focus_tree = {
 	focus = {
 		id = SIA_sea_train_in_japan
 		text = SIA_sea_train_in_japan
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_midget_submarines
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_accum_factory
@@ -4846,7 +4862,7 @@ focus_tree = {
 	focus = {
 		id = SIA_border_ship
 		text = SIA_border_ship
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_navy_cruiser
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_accum_factory
@@ -4891,7 +4907,7 @@ focus_tree = {
 	focus = {
 		id = SIA_stud_patrul
 		text = SIA_stud_patrul
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_navy_submarine
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_underwater
@@ -5490,7 +5506,7 @@ focus_tree = {
 		id = SIA_18_corps
 		text = SIA_18_corps
 		icon = GFX_z_goal_step_on_skull
-		cost = 7.6
+		cost = 7.8
 		prerequisite = {
 			focus = SIA_land_maximum
 			focus = SIA_create_medicine
@@ -6171,7 +6187,7 @@ focus_tree = {
 	focus = {
 		id = SIA_med_air2
 		text = SIA_med_air2
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_siam_hospital_1
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_med_air
@@ -6219,7 +6235,7 @@ focus_tree = {
 	focus = {
 		id = SIA_radio_air
 		text = SIA_radio_air
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_radio_portative
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_usa_base
@@ -6381,7 +6397,7 @@ focus_tree = {
 	focus = {
 		id = SIA_indochina_better
 		text = SIA_indochina_better
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_siam_indchi_support
 		cost = 10
 		prerequisite = {
 			focus = SIA_military_ally
@@ -7085,6 +7101,10 @@ focus_tree = {
 		x = 23
 		y = 13
 			
+		available = {
+			has_country_flag = SIA_create_coop_flag
+		}
+			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_new_constitution"
 			add_ideas = SIA_idea_third_constitution
@@ -7357,7 +7377,7 @@ focus_tree = {
 	focus = {
 		id = SIA_league_one_federation
 		text = SIA_league_one_federation
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_siam_ASEAN
 		cost = 10
 		prerequisite = {
 			focus = SIA_league_bhurma
@@ -7389,12 +7409,12 @@ focus_tree = {
 		x = 25
 		y = 16
 		available ={
-			
+			is_in_faction_with = USA
 		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_USA_generals"
-			
+			add_ideas = SIA_idea_USA_comanders
 		}
 	}
 	

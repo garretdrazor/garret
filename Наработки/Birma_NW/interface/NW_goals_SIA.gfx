@@ -137,5 +137,66 @@ spriteTypes = {
 		name = "GFX_z_goal_siam_third_path"
 		texturefile = "gfx/interface/goals/z_goal_siam_third_path.dds"
 	}
+	SpriteType = { 
+		name = "GFX_z_goal_siam_ASEAN"
+		texturefile = "gfx/interface/goals/z_goal_siam_ASEAN.dds"
+	}
+	SpriteType = { 
+		name = "GFX_z_goal_siam_create_ASEAN"
+		texturefile = "gfx/interface/goals/z_goal_siam_create_ASEAN.dds"
+	}
+	SpriteType = { 
+		name = "GFX_z_goal_siam_free_thai"
+		texturefile = "gfx/interface/goals/z_goal_siam_free_thai.dds"
+	}
+	SpriteType = { 
+		name = "GFX_z_goal_siam_lught_path"
+		texturefile = "gfx/interface/goals/z_goal_siam_lught_path.dds"
+	}
+	SpriteType = { 
+		name = "GFX_z_goal_siam_no_royal"
+		texturefile = "gfx/interface/goals/z_goal_siam_no_royal.dds"
+	}
+	SpriteType = { 
+		name = "GFX_z_goal_siam_with_royal"
+		texturefile = "gfx/interface/goals/z_goal_siam_with_royal.dds"
+	}
+	SpriteType = { 
+		name = "GFX_z_goal_siam_anti_air"
+		texturefile = "gfx/interface/goals/z_goal_siam_anti_air.dds"
+	}
+	SpriteType = { 
+		name = "GFX_z_goal_siam_army_power"
+		texturefile = "gfx/interface/goals/z_goal_siam_army_power.dds"
+	}
+	SpriteType = { 
+		name = "GFX_z_goal_siam_genshtab"
+		texturefile = "gfx/interface/goals/z_goal_siam_genshtab.dds"
+	}
+	SpriteType = { 
+		name = "GFX_z_goal_siam_hospital_1"
+		texturefile = "gfx/interface/goals/z_goal_siam_hospital_1.dds"
+	}
+	SpriteType = { 
+		name = "GFX_z_goal_siam_indchi_support"
+		texturefile = "gfx/interface/goals/z_goal_siam_indchi_support.dds"
+	}
+	SpriteType = { 
+		name = "GFX_z_goal_siam_indchi_support_create"
+		texturefile = "gfx/interface/goals/z_goal_siam_indchi_support_create.dds"
+	}
+	SpriteType = { 
+		name = "GFX_z_goal_siam_police_power"
+		texturefile = "gfx/interface/goals/z_goal_siam_police_power.dds"
+	}
+	SpriteType = { 
+		name = "GFX_z_goal_siam_new_bases"
+		texturefile = "gfx/interface/goals/z_goal_siam_new_bases.dds"
+	}
+	SpriteType = { 
+		name = "GFX_z_goal_siam_hospital_2"
+		texturefile = "gfx/interface/goals/z_goal_siam_hospital_2.dds"
+	}
+	
 	
 }

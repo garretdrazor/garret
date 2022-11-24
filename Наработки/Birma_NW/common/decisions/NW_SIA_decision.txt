@@ -1584,6 +1584,7 @@ SIA_yellow_book_categories = {
 			add_ideas = SIA_idea_coop_1
 			hidden_effect = {
 				set_country_flag = SIA_create_coop_flag
+				country_event = { id = sia.46 }
 			}
 		}
 	}
@@ -1609,6 +1610,7 @@ SIA_yellow_book_categories = {
 			}
 			hidden_effect = {
 				set_country_flag = SIA_create_coop_flag
+				country_event = { id = sia.47 }
 			}
 		}
 	}

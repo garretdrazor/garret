@@ -9,7 +9,7 @@ add_ideas = {
 	SIA_idea_crown_credits
 	SIA_idea_crisis_ekonom_1
 	SIA_idea_chine_workers
-	SIA_idea_rama_vii
+	SIA_idea_rama_viii
 	SIA_idea_police_army_4
 }
 # Starting tech

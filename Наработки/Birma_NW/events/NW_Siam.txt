@@ -1321,8 +1321,8 @@ country_event = {
 		name = sia.37.a
 		add_popularity = { ideology = democratic popularity = 0.01 }
 		swap_ideas = {
-			remove_idea = SIA_idea_rama_vii
-			add_idea = SIA_idea_rama_vii_2
+			remove_idea = SIA_idea_rama_viii
+			add_idea = SIA_idea_rama_viii_2
 		}
 		add_country_leader_trait = thai_regent
 	}
@@ -1342,7 +1342,7 @@ country_event = {
 	option = {
 		name = sia.38.a
 		add_political_power = 100
-		remove_ideas = SIA_idea_rama_vii
+		remove_ideas = SIA_idea_rama_viii
 		add_country_leader_trait = thai_republik_father
 		set_cosmetic_tag = SIA_Pridi_republik_democratic
 	}
@@ -1362,7 +1362,7 @@ country_event = {
 	option = {
 		name = sia.39.a
 		add_political_power = 100
-		remove_ideas = SIA_idea_rama_vii
+		remove_ideas = SIA_idea_rama_viii
 		add_country_leader_trait = thai_republik_father
 		set_cosmetic_tag = SIA_Pridi_republik_democratic
 	}
@@ -1457,6 +1457,117 @@ country_event = {
 			}
 		}
 		set_country_flag = SIA_royal_rebellion_flag
+	}
+	
+}
+
+# Миссия по восстановлению абсолютного суверенитета нации
+country_event = {
+	id = sia.44
+	title = sia.44.t
+	desc = sia.44.d
+	picture = GFX_report_event_sia_44
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event sia.44" }
+
+	option = {
+		name = sia.44.a
+		add_advisor_role = {
+			character = SIA_Pridi_Banomyong
+			activate = yes
+			advisor={
+				slot = political_advisor
+				idea_token = SIA_Pridi_Banomyong
+				allowed  = {
+					original_tag  = SIA
+				}
+				available = {
+					NOT = {
+						has_completed_focus = SIA_destroy_seri_thai
+						has_government = communism
+						has_government = monarchy
+					}
+				}
+				traits = {
+					foreign_secretary
+				}
+			}
+		}
+	}
+	
+}
+
+# План Приди
+country_event = {
+	id = sia.45
+	title = sia.45.t
+	desc = sia.45.d
+	picture = GFX_report_event_sia_45
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event sia.45" }
+
+	option = {
+		name = sia.45.a
+		add_stability = 0.01
+		add_political_power = 25
+	}
+	
+}
+
+# Демократия как образ жизни
+country_event = {
+	id = sia.46
+	title = sia.46.t
+	desc = sia.46.d
+	picture = GFX_report_event_sia_46
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event sia.46" }
+
+	option = {
+		name = sia.46.a
+		add_popularity = { ideology = democratic popularity = 0.03 }
+	}
+	
+}
+
+# Шесть принципов правительства Приди
+country_event = {
+	id = sia.47
+	title = sia.47.t
+	desc = sia.47.d
+	picture = GFX_report_event_sia_47
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event sia.47" }
+
+	option = {
+		name = sia.47.a
+		add_popularity = { ideology = democratic popularity = 0.03 }
+		
+	}
+	
+}
+
+# Возвращение Рамы VII
+country_event = {
+	id = sia.48
+	title = sia.48.t
+	desc = sia.48.d
+	picture = GFX_report_event_sia_48
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event sia.48" }
+
+	option = {
+		name = sia.48.a
+		add_popularity = { ideology = communism popularity = 0.03 }
+		swap_ideas = {
+			remove_idea = SIA_idea_rama_viii
+			add_idea = SIA_idea_rama_vii
+		}
 	}
 	
 }
