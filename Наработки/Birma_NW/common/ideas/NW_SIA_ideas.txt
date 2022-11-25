@@ -201,6 +201,21 @@ ideas = {
 				monarchy_drift = 0.01
 			}
 		}
+		SIA_idea_rama_vii_2 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = siam_Rama7
+			modifier = {
+				stability_factor = 0.1
+				monarchy_drift = 0.01
+				political_power_factor = 0.05
+			}
+		}
 		# Долги короны
 		SIA_idea_crown_credits = {
 			removal_cost = -1
@@ -1417,13 +1432,53 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			available ={
-				is_in_faction_with = USA
-			}
 			picture = idea_
 			modifier = {
 				research_speed_factor = 0.05
 				consumer_goods_factor = 0.03
+			}
+		}
+		# Иностранные банки
+		SIA_idea_other_banks = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = idea_
+			modifier = {
+				consumer_goods_factor = -0.08
+				political_power_gain = -0.15
+			}
+		}
+		# Антикоммунистический закон
+		SIA_idea_uncomm_order = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = idea_
+			modifier = {
+				communism_drift = -0.1
+			}
+		}
+		# Закон о потребительских товарах
+		SIA_idea_ppl_goods = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = idea_
+			modifier = {
+				consumer_goods_factor = -0.05
 			}
 		}
 	}
