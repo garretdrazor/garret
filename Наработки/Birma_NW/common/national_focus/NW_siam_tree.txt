@@ -6114,13 +6114,23 @@ focus_tree = {
 		}
 		x = 0
 		y = 4
-		available ={
-			
-		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_invest_railroad_gb"
-			
+			build_railway = {
+				level = 1
+				controller_priority = {
+					base = 1
+					modifier = {
+						tag = SIA
+						add = 2
+					}
+				}
+				fallback = yes
+				path = { 1279 12131 7236 4371 1337 4312 12201 1281 1308 4275 }
+				start_province = 1279
+				target_province = 4275
+			}
 		}
 	}
 	
