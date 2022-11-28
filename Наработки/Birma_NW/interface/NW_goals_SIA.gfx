@@ -197,6 +197,34 @@ spriteTypes = {
 		name = "GFX_z_goal_siam_hospital_2"
 		texturefile = "gfx/interface/goals/z_goal_siam_hospital_2.dds"
 	}
+	SpriteType = { 
+		name = "GFX_z_goal_siam_blue_army"
+		texturefile = "gfx/interface/goals/z_goal_siam_blue_army.dds"
+	}
+	SpriteType = { 
+		name = "GFX_z_goal_siam_dem_party"
+		texturefile = "gfx/interface/goals/z_goal_siam_dem_party.dds"
+	}
+	SpriteType = { 
+		name = "GFX_z_goal_siam_great_thai"
+		texturefile = "gfx/interface/goals/z_goal_siam_great_thai.dds"
+	}
+	SpriteType = { 
+		name = "GFX_z_goal_siam_imperialism"
+		texturefile = "gfx/interface/goals/z_goal_siam_imperialism.dds"
+	}
+	SpriteType = { 
+		name = "GFX_z_goal_siam_mon_const"
+		texturefile = "gfx/interface/goals/z_goal_siam_mon_const.dds"
+	}
+	SpriteType = { 
+		name = "GFX_z_goal_siam_Rama7"
+		texturefile = "gfx/interface/goals/z_goal_siam_Rama7.dds"
+	}
+	SpriteType = { 
+		name = "GFX_z_goal_siam_uvachon"
+		texturefile = "gfx/interface/goals/z_goal_siam_uvachon.dds"
+	}
 	
 	
 }
