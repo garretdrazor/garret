@@ -99,6 +99,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/SIA/siam_Rama7.dds"
 	}
 	spriteType = {
+		name = "GFX_idea_siam_Rama8"
+		texturefile = "gfx/interface/ideas/SIA/siam_Rama8.dds"
+	}
+	spriteType = {
 		name = "GFX_idea_siam_rice1"
 		texturefile = "gfx/interface/ideas/SIA/siam_rice1.dds"
 	}
@@ -153,5 +157,9 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_Luang_Wichitwathakan"
 		texturefile = "gfx/interface/ideas/SIA/Luang_Wichitwathakan.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Prince_Boworadet"
+		texturefile = "gfx/interface/ideas/SIA/Prince_Boworadet.dds"
 	}
 }

@@ -17,7 +17,14 @@ focus_tree = {
 		cost = 7.2
 		x = 4
 		y = 0
-			
+		
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_no_gold_valute }
+			}
+		}
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_no_gold_valute"
 			add_stability = -0.05
@@ -38,7 +45,14 @@ focus_tree = {
 		cost = 7.2
 		x = 13
 		y = 0
-			
+		
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_create_vvs }
+			}
+		}
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_create_vvs"
 			air_experience = 10
@@ -66,6 +80,13 @@ focus_tree = {
 		available ={
 			NOT = {
 				has_idea = SIA_idea_police_army_1
+			}
+		}
+		
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_royal_police }
 			}
 		}
 			
@@ -133,6 +154,13 @@ focus_tree = {
 		available ={
 			NOT = {
 				has_idea = SIA_idea_police_army_7
+			}
+		}
+		
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_army_invest }
 			}
 		}
 			
@@ -208,7 +236,14 @@ focus_tree = {
 		cost = 7.2
 		x = 32
 		y = 0
-			
+		
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_accum_factory }
+			}
+		}
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_accum_factory"
 			random_core_state = { 
@@ -235,7 +270,14 @@ focus_tree = {
 		cost = 10
 		x = 23
 		y = 8
-			
+		
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_land_maximum }
+			}
+		}
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_land_maximum"
 			add_political_power = 25
@@ -262,6 +304,13 @@ focus_tree = {
 		x = 27
 		y = 8
 			
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_create_medicine }
+			}
+		}
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_create_medicine"
 			1173 = {
@@ -321,6 +370,13 @@ focus_tree = {
 		x = 3
 		y = 1
 			
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_deanonce_bad_theatry }
+			}
+		}
+			
 		select_effect = {
 			country_event = { id = sia.44 }
 		}
@@ -352,7 +408,14 @@ focus_tree = {
 		}
 		x = 5
 		y = 1
-			
+		
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_back_border }
+			}
+		}
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_back_border"
 			724 = {
@@ -443,6 +506,13 @@ focus_tree = {
 				has_completed_focus = SIA_nacionalization_anather
 			}
 		}
+		
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_new_theatry_with_france }
+			}
+		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_new_theatry_with_france"
@@ -524,6 +594,13 @@ focus_tree = {
 			ENG = {	has_opinion = { target = SIA value > 50 } }
 			NOT = {
 				has_completed_focus = SIA_nacionalization_anather
+			}
+		}
+		
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_usa_invest }
 			}
 		}
 			
@@ -621,6 +698,13 @@ focus_tree = {
 				has_completed_focus = SIA_nacionalization_anather
 			}
 		}
+		
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_scan_invest }
+			}
+		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_scan_invest"
@@ -710,6 +794,13 @@ focus_tree = {
 				has_completed_focus = SIA_nacionalization_anather
 			}
 		}
+		
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_right_invest }
+			}
+		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_right_invest"
@@ -795,6 +886,14 @@ focus_tree = {
 		x = 2
 		y = 3
 			
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_GB_compromise }
+			}
+		}
+			
+			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_GB_compromise"
 			random_core_state = { 
@@ -826,6 +925,13 @@ focus_tree = {
 		available = {
 			ROOT ={
 				controls_state = 724
+			}
+		}
+		
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_sugar_factory }
 			}
 		}
 			
@@ -867,6 +973,13 @@ focus_tree = {
 		available ={
 			ROOT = {
 				controls_state = 289
+			}
+		}
+		
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_half_olovo }
 			}
 		}
 			
@@ -1061,6 +1174,13 @@ focus_tree = {
 		x = 6
 		y = 3
 			
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_nacionalization_anather }
+			}
+		}
+			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_nacionalization_anather"
 			if = {
@@ -1170,6 +1290,13 @@ focus_tree = {
 		available ={
 			
 		}
+		
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_china_exile }
+			}
+		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_china_exile"
@@ -1195,6 +1322,13 @@ focus_tree = {
 		available ={
 			NOT = {
 				has_government = communism
+			}
+		}
+		
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_china_nac }
 			}
 		}
 		
@@ -1229,6 +1363,13 @@ focus_tree = {
 		available = {
 			has_completed_focus = SIA_land_maximum
 		}
+		
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_univer_kasetsart }
+			}
+		}
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_univer_kasetsart"
@@ -1255,6 +1396,13 @@ focus_tree = {
 		available = {
 			ROOT = {
 				controls_state =724
+			}
+		}
+		
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_metal_and_rubber }
 			}
 		}
 			
@@ -1293,6 +1441,12 @@ focus_tree = {
 				controls_state = 724
 			}
 		}
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_rubbon_up }
+			}
+		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_rubbon_up"
@@ -1315,6 +1469,13 @@ focus_tree = {
 		}
 		x = 4
 		y = 6
+			
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_cement_group }
+			}
+		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_cement_group"
@@ -1343,6 +1504,13 @@ focus_tree = {
 		y = 7
 		available ={
 			num_of_civilian_factories > 30
+		}
+		
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_univer_Mongkut }
+			}
 		}
 			
 		completion_reward = {
@@ -1536,6 +1704,13 @@ focus_tree = {
 				}
 			}
 		}
+		
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_rise_export }
+			}
+		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_rise_export"
@@ -1554,7 +1729,14 @@ focus_tree = {
 		}
 		x = 6
 		y = 7
-			
+		
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_rise_factory }
+			}
+		}
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_rise_factory"
 			random_core_state = { 
@@ -1629,6 +1811,13 @@ focus_tree = {
 				controls_state = 1173
 			}
 		}
+		
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_irom_main }
+			}
+		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_irom_main"
@@ -1674,6 +1863,13 @@ focus_tree = {
 		x = 8
 		y = 3
 			
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_beer_factory }
+			}
+		}
+			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_beer_factory"
 			random_core_state = { 
@@ -1703,6 +1899,13 @@ focus_tree = {
 		x = 8
 		y = 4
 			
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_ip_ooo }
+			}
+		}
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_ip_ooo"
 			add_ideas = SIA_idea_ip_ooo
@@ -1728,6 +1931,13 @@ focus_tree = {
 				has_government = communism
 			}
 		}
+		
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_tai_nia_pachinko }
+			}
+		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_tai_nia_pachinko"
@@ -1749,6 +1959,13 @@ focus_tree = {
 		available ={
 			ROOT = {
 				controls_state = 1173
+			}
+		}
+		
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_north_oil }
 			}
 		}
 			
@@ -1774,6 +1991,13 @@ focus_tree = {
 		x = 9
 		y = 6
 			
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_tabacco_farm_and_factory }
+			}
+		}
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_tabacco_farm_and_factory"
 			random_core_state = { 
@@ -1803,6 +2027,13 @@ focus_tree = {
 			num_of_civilian_factories > 50
 			ROOT = {
 				controls_state = 289
+			}
+		}
+		
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = GFX_z_goal_siam_hospital_2 }
 			}
 		}
 			
@@ -1848,6 +2079,13 @@ focus_tree = {
 		}
 		x = 11
 		y = 1
+		
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_taktik_vvs }
+			}
+		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_taktik_vvs"
@@ -1871,7 +2109,14 @@ focus_tree = {
 		}
 		x = 13
 		y = 1
-			
+		
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_command_vvs }
+			}
+		}
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_command_vvs"
 			hidden_effect = {
@@ -1912,6 +2157,13 @@ focus_tree = {
 			ROOT = {
 				controls_state = 1173
 				controls_state = 724
+			}
+		}
+		
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_airdef_vvs }
 			}
 		}
 			
@@ -1955,6 +2207,13 @@ focus_tree = {
 				controls_state = 724
 			}
 		}
+		
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_new_airbase_vvs }
+			}
+		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_new_airbase_vvs"
@@ -1987,7 +2246,14 @@ focus_tree = {
 		}
 		x = 14
 		y = 2
-			
+		
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_airspec_vvs }
+			}
+		}
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_airspec_vvs"
 			add_tech_bonus = {
@@ -2025,6 +2291,10 @@ focus_tree = {
 		}
 		
 		bypass ={
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_franch_air }
+			}
 			OR = {
 				NOT = {
 					country_exists = FRA
@@ -2098,6 +2368,10 @@ focus_tree = {
 		}
 		
 		bypass ={
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_japan_air }
+			}
 			OR = {
 				NOT = {
 					country_exists = FRA
@@ -2171,6 +2445,10 @@ focus_tree = {
 		}
 		
 		bypass ={
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_usa_air }
+			}
 			OR = {
 				NOT = {
 					country_exists = FRA
@@ -2243,6 +2521,10 @@ focus_tree = {
 		}
 		
 		bypass ={
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_usa_base }
+			}
 			NOT = {
 				country_exists = USA
 			}
@@ -2334,6 +2616,10 @@ focus_tree = {
 		}
 		
 		bypass ={
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_japan_taktik }
+			}
 			NOT = {
 				country_exists = JAP
 			}
@@ -2368,6 +2654,10 @@ focus_tree = {
 		}
 		
 		bypass ={
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_franch_motor }
+			}
 			NOT = {
 				country_exists = FRA
 			}
@@ -2396,6 +2686,13 @@ focus_tree = {
 		available ={
 			NOT = {
 				has_idea = SIA_idea_police_army_1
+			}
+		}
+		
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_spec_buro }
 			}
 		}
 			
@@ -2467,6 +2764,13 @@ focus_tree = {
 		available ={
 			NOT = {
 				has_idea = SIA_idea_police_army_1
+			}
+		}
+		
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_polit_police }
 			}
 		}
 			
@@ -2593,6 +2897,13 @@ focus_tree = {
 				has_idea = SIA_idea_police_army_1
 			}
 		}
+		
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_world_police }
+			}
+		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_world_police"
@@ -2671,6 +2982,13 @@ focus_tree = {
 			has_country_flag = SIA_police_4_flag
 			has_country_flag = SIA_police_5_flag
 		}
+		
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_choose_police }
+			}
+		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_choose_police"
@@ -2692,7 +3010,14 @@ focus_tree = {
 		}
 		x = 17
 		y = 4
-			
+		
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_border_police }
+			}
+		}
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_border_police"
 			add_ideas = SIA_idea_border_police
@@ -2718,6 +3043,13 @@ focus_tree = {
 		available ={
 			has_completed_focus = SIA_airspec_vvs
 		}
+		
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_power_air }
+			}
+		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_power_air"
@@ -2741,7 +3073,14 @@ focus_tree = {
 		}
 		x = 19
 		y = 4
-			
+		
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_woman_police }
+			}
+		}
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_woman_police"
 			add_ideas = SIA_idea_police_woman
@@ -2831,6 +3170,13 @@ focus_tree = {
 				has_idea = SIA_idea_police_army_7
 			}
 		}
+		
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_super_spec_buro }
+			}
+		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_super_spec_buro"
@@ -2898,6 +3244,13 @@ focus_tree = {
 		available ={
 			
 		}
+		
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_police_randjers }
+			}
+		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_police_randjers"
@@ -2916,7 +3269,14 @@ focus_tree = {
 		}
 		x = 21
 		y = 4
-
+		
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_police_marsh }
+			}
+		}
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_police_marsh"
 			add_ideas = SIA_idea_police_marsh
@@ -3426,6 +3786,13 @@ focus_tree = {
 				has_idea = SIA_idea_police_army_7
 			}
 		}
+		
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_long_recon }
+			}
+		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_long_recon"
@@ -3514,6 +3881,13 @@ focus_tree = {
 				}
 			}
 		}
+		
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_GB_tank }
+			}
+		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_GB_tank"
@@ -3598,6 +3972,13 @@ focus_tree = {
 				NOT = {
 					has_war_with = SIA
 				}
+			}
+		}
+		
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_Ger_tank }
 			}
 		}
 			
@@ -3687,6 +4068,13 @@ focus_tree = {
 				}
 			}
 		}
+		
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_GB_rifle }
+			}
+		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_GB_rifle"
@@ -3768,6 +4156,13 @@ focus_tree = {
 			}
 			num_of_factories > 15
 		}
+		
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_siam_rifle }
+			}
+		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_siam_rifle"
@@ -3809,6 +4204,13 @@ focus_tree = {
 				NOT = {
 					has_war_with = SIA
 				}
+			}
+		}
+		
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_japan_rifle }
 			}
 		}
 			
@@ -3893,6 +4295,13 @@ focus_tree = {
 			has_country_flag = SIA_police_8_flag
 			has_country_flag = SIA_police_8_flag
 		}
+		
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_choose_army }
+			}
+		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_choose_army"
@@ -3913,7 +4322,14 @@ focus_tree = {
 		}
 		x = 23
 		y = 4
-			
+		
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_students_def }
+			}
+		}
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_students_def"
 			add_ideas = SIA_idea_military_students
@@ -3932,7 +4348,14 @@ focus_tree = {
 		}
 		x = 22
 		y = 5
-	
+		
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_general_shtab }
+			}
+		}
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_general_shtab"
 			add_ideas = SIA_idea_genshtab_1
@@ -3953,7 +4376,14 @@ focus_tree = {
 		}
 		x = 24
 		y = 6
-			
+		
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_territory_cammanders }
+			}
+		}
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_territory_cammanders"
 			swap_ideas = {
@@ -3976,8 +4406,12 @@ focus_tree = {
 		}
 		x = 26
 		y = 3
-		available ={
-			
+		
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_powder_factory }
+			}
 		}
 			
 		completion_reward = {
@@ -4012,6 +4446,13 @@ focus_tree = {
 		x = 25
 		y = 4
 			
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_injeners_army }
+			}
+		}
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_injeners_army"
 			add_tech_bonus = {
@@ -4039,6 +4480,13 @@ focus_tree = {
 		}
 		x = 24
 		y = 9
+		
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_border_conflict }
+			}
+		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_border_conflict"
@@ -4059,6 +4507,13 @@ focus_tree = {
 		}
 		x = 26
 		y = 9
+			
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_auto_ministr }
+			}
+		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_border_conflict"
@@ -4253,7 +4708,14 @@ focus_tree = {
 		}
 		x = 26
 		y = 5
-			
+		
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_rifle_factory }
+			}
+		}
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_rifle_factory"
 			random_core_state = { 
@@ -4305,6 +4767,13 @@ focus_tree = {
 		available ={
 			NOT = {
 				has_idea = SIA_idea_police_army_7
+			}
+		}
+		
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_royal_academy }
 			}
 		}
 			
@@ -4386,6 +4855,13 @@ focus_tree = {
 				has_idea = SIA_idea_police_army_7
 			}
 		}
+		
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_artillery_train }
+			}
+		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_artillery_train"
@@ -4458,7 +4934,14 @@ focus_tree = {
 		}
 		x = 28
 		y = 4
-			
+		
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_new_trening }
+			}
+		}
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_new_trening"
 			add_ideas = SIA_idea_study_program_up
@@ -4478,6 +4961,13 @@ focus_tree = {
 		y = 3
 		available ={
 			
+		}
+		
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_elephant_divisions }
+			}
 		}
 			
 		completion_reward = {
@@ -4754,6 +5244,10 @@ focus_tree = {
 		}
 		
 		bypass ={
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_underwater }
+			}
 			OR = {
 				NOT = {
 					country_exists = JAP
@@ -4793,8 +5287,12 @@ focus_tree = {
 		}
 		x = 30
 		y = 2
-		available ={
-			
+		
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_Sattahip }
+			}
 		}
 			
 		completion_reward = {
@@ -4819,6 +5317,13 @@ focus_tree = {
 		y = 3
 		available ={
 			
+		}
+		
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_royal_vmf }
+			}
 		}
 			
 		completion_reward = {
@@ -4879,6 +5384,10 @@ focus_tree = {
 		}
 		
 		bypass ={
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_sea_train_in_japan }
+			}
 			OR = {
 				NOT = {
 					country_exists = JAP
@@ -4922,6 +5431,10 @@ focus_tree = {
 		}
 		
 		bypass ={
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_border_ship }
+			}
 			OR = {
 				NOT = {
 					country_exists = JAP
@@ -4962,7 +5475,14 @@ focus_tree = {
 		}
 		x = 32
 		y = 2
-			
+		
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_stud_patrul }
+			}
+		}
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_stud_patrul"
 			navy_experience = 10
@@ -4988,6 +5508,13 @@ focus_tree = {
 		available ={
 			ROOT ={
 				controls_state = 1173
+			}
+		}
+		
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_royal_docs }
 			}
 		}
 			
@@ -5023,6 +5550,13 @@ focus_tree = {
 		available ={
 			
 		}
+		
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_royal_seaman }
+			}
+		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_royal_seaman"
@@ -5043,6 +5577,13 @@ focus_tree = {
 		y = 4
 		available ={
 			
+		}
+		
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_usa_seaman }
+			}
 		}
 			
 		completion_reward = {
@@ -5067,6 +5608,7 @@ focus_tree = {
 		x = 37
 		y = 10
 		available ={
+			has_government = monarchy
 			has_country_flag = SIA_royal_rebellion_flag
 		}
 			
@@ -5080,7 +5622,7 @@ focus_tree = {
 	focus = {
 		id = SIA_weak_constitution
 		text = SIA_weak_constitution
-		icon = GFX_z_goal_siam_mon_const
+		icon = GFX_z_goal_generic_king_goverment
 		cost = 10
 		prerequisite = {
 			focus = SIA_blue_army
@@ -5114,6 +5656,13 @@ focus_tree = {
 		available ={
 			
 		}
+		
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_deportament_seaman }
+			}
+		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_deportament_seaman"
@@ -5125,7 +5674,7 @@ focus_tree = {
 	focus = {
 		id = SIA_absolute_morachy
 		text = SIA_absolute_morachy
-		icon = GFX_z_goal_monarchism_15
+		icon = GFX_z_goal_generic_king_power
 		cost = 10
 		prerequisite = {
 			focus = SIA_blue_army
@@ -5172,7 +5721,7 @@ focus_tree = {
 	focus = {
 		id = SIA_help_royal_company
 		text = SIA_help_royal_company
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_monarchists_factories
 		cost = 10
 		prerequisite = {
 			focus = SIA_contrrevolution_agents
@@ -5193,7 +5742,7 @@ focus_tree = {
 	focus = {
 		id = SIA_royal_cult
 		text = SIA_royal_cult
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_monarchism_1
 		cost = 10
 		prerequisite = {
 			focus = SIA_help_royal_company
@@ -5221,13 +5770,15 @@ focus_tree = {
 		}
 		x = 37
 		y = 11
-		available ={
-			
-		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_Rama_VII"
-			
+			remove_ideas = SIA_idea_rama_viii
+			promote_character = {
+				character = SIA_rama_vii
+				ideology = monarchy_ideology
+			}
+			country_event = { id = sia.51 }
 		}
 	}
 	
@@ -5236,19 +5787,19 @@ focus_tree = {
 		id = SIA_new_king
 		text = SIA_new_king
 		icon = GFX_goal_unknown
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = SIA_Rama_VII
 		}
 		x = 36
 		y = 12
-		available ={
-			
-		}
-			
-		completion_reward = {
+		
+		select_effect = {
+			hidden_effect = {
+				set_country_flag = SIA_New_kings_flag
+			}
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_new_king"
-			
+			country_event = { id = sia.58 }
 		}
 	}
 	
@@ -5357,7 +5908,7 @@ focus_tree = {
 	focus = {
 		id = SIA_municipalism
 		text = SIA_municipalism
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_invest_in_the_construction_industry
 		cost = 10
 		prerequisite = {
 			focus = SIA_blue_army
@@ -5378,7 +5929,7 @@ focus_tree = {
 	focus = {
 		id = SIA_help_west
 		text = SIA_help_west
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_monarchism_13
 		cost = 10
 		prerequisite = {
 			focus = SIA_Rama_VII
@@ -5488,7 +6039,7 @@ focus_tree = {
 	focus = {
 		id = SIA_back_dinasty
 		text = SIA_back_dinasty
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_monarchism_principles_of_dualism
 		cost = 10
 		prerequisite = {
 			focus = SIA_blue_army
@@ -5509,7 +6060,7 @@ focus_tree = {
 	focus = {
 		id = SIA_back_princes
 		text = SIA_back_princes
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_monarchy_power
 		cost = 10
 		prerequisite = {
 			focus = SIA_strong_king
@@ -5531,7 +6082,7 @@ focus_tree = {
 	focus = {
 		id = SIA_Bovorader_reforms
 		text = SIA_Bovorader_reforms
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_YEM_reform_army_mutawakkili_kingdom
 		cost = 10
 		prerequisite = {
 			focus = SIA_back_princes
@@ -5731,7 +6282,7 @@ focus_tree = {
 	focus = {
 		id = SIA_no_japan
 		text = SIA_no_japan
-		icon = GFX_goal_unknown
+		icon = GFX_focus_AST_war_japan
 		cost = 5
 		prerequisite = {
 			focus = SIA_Japan_friend
@@ -5759,7 +6310,7 @@ focus_tree = {
 	focus = {
 		id = SIA_yes_japan
 		text = SIA_yes_japan
-		icon = GFX_goal_unknown
+		icon = GFX_focus_chi_collaboration_with_the_japanese
 		cost = 5
 		prerequisite = {
 			focus = SIA_Japan_friend
@@ -5932,7 +6483,7 @@ focus_tree = {
 	focus = {
 		id = SIA_budda_city
 		text = SIA_budda_city
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_increase_taxes_for_monasteries
 		cost = 10
 		prerequisite = {
 			focus = SIA_great_thai
@@ -6013,7 +6564,7 @@ focus_tree = {
 	focus = {
 		id = SIA_12_culture
 		text = SIA_12_culture
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_self_management
 		cost = 10
 		prerequisite = {
 			focus = SIA_ultranac
@@ -6064,7 +6615,7 @@ focus_tree = {
 	focus = {
 		id = SIA_woman_army
 		text = SIA_woman_army
-		icon = GFX_goal_unknown
+		icon = GFX_focus_SOV_womens_fascist_movement
 		cost = 10
 		prerequisite = {
 			focus = SIA_12_culture
@@ -6115,6 +6666,13 @@ focus_tree = {
 		x = 0
 		y = 4
 			
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_invest_railroad_gb }
+			}
+		}
+			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_invest_railroad_gb"
 			build_railway = {
@@ -6150,6 +6708,13 @@ focus_tree = {
 				controls_state = 724
 				controls_state = 1173
 				controls_state = 289
+			}
+		}
+		
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_infra_credit_gb }
 			}
 		}
 			
@@ -6195,6 +6760,13 @@ focus_tree = {
 				controls_state = 724
 			}
 		}
+		
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_avto_factory }
+			}
+		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_avto_factory"
@@ -6234,6 +6806,13 @@ focus_tree = {
 			
 		}
 			
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_modern_rail }
+			}
+		}
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_modern_rail"
 			
@@ -6259,6 +6838,13 @@ focus_tree = {
 				controls_state = 289
 				controls_state = 724
 				controls_state = 1173
+			}
+		}
+		
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_med_air2 }
 			}
 		}
 			
@@ -6305,6 +6891,13 @@ focus_tree = {
 			has_completed_focus = SIA_taktik_vvs
 		}
 			
+		bypass = {
+			hidden_trigger = {
+				has_idea = focus_synchronization
+				SIA = { has_completed_focus = SIA_radio_air }
+			}
+		}
+		
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_radio_air"
 			add_tech_bonus = {
@@ -7487,12 +8080,19 @@ focus_tree = {
 		x = 24
 		y = 17
 		available ={
-			
+			is_in_faction_with = USA
 		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_USA_armory"
-			
+			random_core_state = { 
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
 	
@@ -7574,12 +8174,19 @@ focus_tree = {
 		x = 26
 		y = 19
 		available ={
-			
+			is_in_faction_with = USA
 		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_USA_ekonomik_help"
-			
+			random_core_state = { 
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
 	
@@ -7650,7 +8257,7 @@ focus_tree = {
 	focus = {
 		id = SIA_restore_traditions
 		text = SIA_restore_traditions
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_elections_congress
 		cost = 10
 		prerequisite = {
 			focus = SIA_faund_demparty
@@ -7671,7 +8278,7 @@ focus_tree = {
 	focus = {
 		id = SIA_dem_neutral
 		text = SIA_dem_neutral
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_neutrality
 		cost = 10
 		prerequisite = {
 			focus = SIA_west_politic
@@ -7697,7 +8304,7 @@ focus_tree = {
 	focus = {
 		id = SIA_royal_scouts
 		text = SIA_royal_scouts
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_generic_king_army
 		cost = 10
 		prerequisite = {
 			focus = SIA_Bovorader_reforms
@@ -7775,7 +8382,7 @@ focus_tree = {
 	focus = {
 		id = SIA_new_banknots
 		text = SIA_new_banknots
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_private_money
 		cost = 5
 		prerequisite = {
 			focus = SIA_thai_nac_bank

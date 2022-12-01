@@ -1481,5 +1481,26 @@ ideas = {
 				consumer_goods_factor = -0.05
 			}
 		}
+		
+		# Кризис короны
+		SIA_idea_crown_crisis = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				NOT = {
+					has_country_flag = SIA_New_kings_flag
+				}
+			}
+			picture = idea_
+			modifier = {
+				political_power_gain = -0.5
+				stability_factor = -0.1
+			}
+		}
 	}
 }

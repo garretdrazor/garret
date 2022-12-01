@@ -63,16 +63,34 @@ characters={
 			id=-1
 		}
 	}
+	SIA_rama_viii={
+		name=SIA_rama_viii
+		portraits={
+			civilian={
+				large="gfx/leaders/SIA/Portrait_Rama_VIII.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_PHRAYA_PHAHON_DESC"
+			ideology=monarchy_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
 	SIA_Prince_Boworadet={
 		name=SIA_Prince_Boworadet
 		portraits={
 			civilian={
 				large="gfx/leaders/SIA/Portrait_Prince_Boworadet.dds"
 			}
+			army = {
+				small = GFX_idea_Prince_Boworadet
+			}
 		}
 		country_leader={
 			desc="POLITICS_Prince_Boworadet_DESC"
-			ideology=dual_monarchy
+			traits = { thai_monarchy_bastion }
+			ideology=monarchy_ideology
 			expire="1965.1.1.1"
 			id=-1
 		}
@@ -85,8 +103,9 @@ characters={
 			}
 		}
 		country_leader={
-			desc="POLITICS_PHRAYA_PHAHON_DESC"
-			ideology=dual_monarchy
+			desc="POLITICS_RAMA_VII_DESC"
+			traits = { thai_king }
+			ideology=monarchy_ideology
 			expire="1965.1.1.1"
 			id=-1
 		}

@@ -96,7 +96,7 @@ set_politics = {
 
 recruit_character = SIA_phraya_phahon
 recruit_character = SIA_plaek_phibunsongkhram
-recruit_character = SIA_rama_vii
+recruit_character = SIA_rama_viii
 recruit_character = SIA_pridi_banomyong
 recruit_character = SIA_luang_chattrakankosol
 recruit_character = SIA_phao_siyanon
