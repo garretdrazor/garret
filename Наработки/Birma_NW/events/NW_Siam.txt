@@ -1870,6 +1870,216 @@ country_event = {
 	option = {
 		name = sia.58.a
 		add_political_power = -100
-		country_event = { id = sia.60 days = 35 }
+		country_event = { id = sia.64 days = 35 }
+	}
+}
+
+# Возвращение Рамы VIII в страну
+country_event = {
+	id = sia.59
+	title = sia.59.t
+	desc = sia.59.d
+	picture = GFX_report_event_sia_59
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event sia.59" }
+
+	option = {
+		name = sia.59.a
+		add_ideas = SIA_idea_rama_viii_2
+		country_event = { id = sia.59 days = 14 }
+		hidden_effect = { set_country_flag = SIA_Rama8_coronation_flag }
+	}
+}
+
+# ПУЛЬСАР на Коронацию 8 рамы
+country_event = {
+	id = sia.60
+	title = sia.60.t
+	desc = sia.60.d
+	picture = GFX_report_event_sia_60
+	is_triggered_only = yes
+	hidden = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event sia.60" }
+
+	option = {
+		name = sia.60.a
+		if = {
+			limit = { has_country_flag = SIA_Rama8_coronation_flag }
+			country_event = { id = sia.61 }
+		}
+	}
+	option = {
+		name = sia.60.b
+		
+	}
+}
+
+# Коронации Рамы VIII
+country_event = {
+	id = sia.61
+	title = sia.61.t
+	desc = sia.61.d
+	picture = GFX_report_event_sia_61
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event sia.61" }
+
+	option = {
+		name = sia.61.a
+		add_stability = 0.05
+		promote_character = {
+			character = SIA_rama_viii
+			ideology = monarchy_ideology
+		}
+		hidden_effect = {
+			country_event = { id = sia.62 days = 993 }
+		}
+	}
+}
+
+# Смерть Рамы VIII
+country_event = {
+	id = sia.62
+	title = sia.62.t
+	desc = sia.62.d
+	picture = GFX_report_event_sia_62
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event sia.62" }
+
+	option = {
+		name = sia.62.a
+		add_stability = -0.15
+		retire_character = SIA_rama_viii
+		promote_character = {
+			character = SIA_rama_ix
+			ideology = monarchy_ideology
+		}
+		hidden_effect = {
+			country_event = { id = sia.63 days = 120 }
+		}
+	}
+}
+
+# Заявление Рамы IX
+country_event = {
+	id = sia.63
+	title = sia.63.t
+	desc = sia.63.d
+	picture = GFX_report_event_sia_63
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event sia.63" }
+
+	option = {
+		name = sia.63.a
+		add_stability = 0.05
+		add_political_power = 50
+	}
+}
+
+# Коронация Рамы IX
+country_event = {
+	id = sia.64
+	title = sia.64.t
+	desc = sia.64.d
+	picture = GFX_report_event_sia_64
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event sia.64" }
+
+	option = {
+		name = sia.64.a
+		promote_character = {
+			character = SIA_rama_ix_2
+			ideology = monarchy_ideology
+		}
+		hidden_effect = {
+			country_event = { id = sia.65 days = 60 }
+		}
+	}
+}
+
+# Прибытие принца Биры
+country_event = {
+	id = sia.65
+	title = sia.65.t
+	desc = sia.65.d
+	picture = GFX_report_event_sia_65
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event sia.65" }
+
+	option = {
+		name = sia.65.a
+		add_stability = 0.01
+		hidden_effect = {
+			country_event = { id = sia.66 days = 90 }
+		}
+	}
+}
+
+# Строительство гоночной трассы
+country_event = {
+	id = sia.66
+	title = sia.66.t
+	desc = sia.66.d
+	picture = GFX_report_event_sia_66
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event sia.66" }
+
+	option = {
+		name = sia.66.a
+		289 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+}
+
+# Мать короля
+country_event = {
+	id = sia.67
+	title = sia.67.t
+	desc = sia.67.d
+	picture = GFX_report_event_sia_67
+	is_triggered_only = yes
+	
+	trigger = {
+		tag = SIA
+		has_country_leader = {
+			character = SIA_rama_ix_2
+			ruling_only = yes
+		}
+		divisions_in_state = {
+			state = 16
+		}
+		NOT = {
+			has_global_flag = family_find
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_global_flag = family_find
+		}
+	}
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event sia.67" }
+
+	option = {
+		name = sia.67.a
+		add_political_power = 100
+		add_stability = 0.1
 	}
 }

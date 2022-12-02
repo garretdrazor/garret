@@ -1502,5 +1502,85 @@ ideas = {
 				stability_factor = -0.1
 			}
 		}
+		# Муниципализм
+		SIA_idea_municipalism_1 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				NOT = {
+					has_country_flag = SIA_New_kings_flag
+				}
+			}
+			picture = idea_
+			modifier = {
+				political_power_gain = 0.1
+				global_building_slots_factor = 0.05
+			}
+		}
+		SIA_idea_municipalism_2 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				NOT = {
+					has_country_flag = SIA_New_kings_flag
+				}
+			}
+			picture = idea_
+			modifier = {
+				political_power_gain = 0.15
+				global_building_slots_factor = 0.05
+				MONTHLY_POPULATION = 0.1
+			}
+		}
+		SIA_idea_municipalism_3 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				NOT = {
+					has_country_flag = SIA_New_kings_flag
+				}
+			}
+			picture = idea_
+			modifier = {
+				political_power_gain = 0.15
+				global_building_slots_factor = 0.05
+				MONTHLY_POPULATION = 0.2
+				conscription_factor = 0.05
+			}
+		}
+		SIA_idea_top_rice_trade = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				NOT = {
+					has_country_flag = SIA_New_kings_flag
+				}
+			}
+			picture = idea_
+			modifier = {
+				consumer_goods_factor = -0.05
+				trade_opinion_factor = 0.20
+			}
+		}
 	}
 }

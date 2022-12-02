@@ -72,6 +72,7 @@ characters={
 		}
 		country_leader={
 			desc="POLITICS_PHRAYA_PHAHON_DESC"
+			traits = { inexperienced_monarch thai_king }
 			ideology=monarchy_ideology
 			expire="1965.1.1.1"
 			id=-1
@@ -104,6 +105,36 @@ characters={
 		}
 		country_leader={
 			desc="POLITICS_RAMA_VII_DESC"
+			traits = { thai_king }
+			ideology=monarchy_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	SIA_rama_ix={
+		name=SIA_rama_ix
+		portraits={
+			civilian={
+				large="gfx/leaders/SIA/Portrait_Rama_ix.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_RAMA_IX_DESC"
+			traits = { thai_king inexperienced_monarch }
+			ideology=monarchy_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	SIA_rama_ix_2={
+		name=SIA_rama_ix_2
+		portraits={
+			civilian={
+				large="gfx/leaders/SIA/Portrait_Rama_ix_2.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_RAMA_IX_2_DESC"
 			traits = { thai_king }
 			ideology=monarchy_ideology
 			expire="1965.1.1.1"
@@ -391,6 +422,30 @@ characters={
 			}
 			traits = {
 				silent_workhorse
+			}
+		}
+	}
+	SIA_Prince_Chai_Nat={
+		name=SIA_Prince_Chai_Nat
+		portraits={
+			army = {
+				small = GFX_idea_Prince_Chai_Nat
+			}
+		}
+	}
+	SIA_Prince_Naris={
+		name=SIA_Prince_Naris
+		portraits={
+			army = {
+				small = GFX_idea_Prince_Naris
+			}
+		}
+	}
+	SIA_Prince_Damrong_Ratchanubab={
+		name=SIA_Prince_Damrong_Ratchanubab
+		portraits={
+			army = {
+				small = GFX_idea_Prince_Damrong_Ratchanubab
 			}
 		}
 	}

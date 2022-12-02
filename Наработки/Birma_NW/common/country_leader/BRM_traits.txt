@@ -32,4 +32,17 @@ leader_traits = {
 		random = no
 		stability_factor = 0.1
 	}
+	
+	prince_master = {
+		random = no
+		consumer_goods_factor = -0.03
+		production_speed_buildings_factor = 0.05
+		experience_gain_army_factor = 0.1
+	}
+	
+	enlightenment_ministr = {
+		random = no
+		research_speed_factor = 0.03
+		stability_factor = 0.1
+	}
 }
