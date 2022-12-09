@@ -814,6 +814,8 @@
  SIA_idea_municipalism_2:0 "Муниципализм"
  SIA_idea_municipalism_3:0 "Муниципализм"
  SIA_idea_top_rice_trade:0 "Ведущая торговля рисом"
+ SIA_idea_absolute_king:0 "Абсолютная власть короля"
+ SIA_idea_dual_king:0 "Двоевластие"
  # Решения
  SIA_crisis_dangerous_categories:0 "Опасность кризиса"
  SIA_crisis_dangerous_categories_desc:0 "Наш бюджет трещит по швам и новый кризис не за горами. Очевидно, что он ударит по действующему кабинету и премьер-министру. Это может вызвать за собой политический кризис, который застопорит работу страны."

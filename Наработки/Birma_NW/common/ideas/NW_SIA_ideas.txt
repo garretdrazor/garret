@@ -1511,11 +1511,6 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			available = {
-				NOT = {
-					has_country_flag = SIA_New_kings_flag
-				}
-			}
 			picture = idea_
 			modifier = {
 				political_power_gain = 0.1
@@ -1529,11 +1524,6 @@ ideas = {
 			}
 			allowed_civil_war = {
 				always = yes
-			}
-			available = {
-				NOT = {
-					has_country_flag = SIA_New_kings_flag
-				}
 			}
 			picture = idea_
 			modifier = {
@@ -1550,11 +1540,6 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			available = {
-				NOT = {
-					has_country_flag = SIA_New_kings_flag
-				}
-			}
 			picture = idea_
 			modifier = {
 				political_power_gain = 0.15
@@ -1563,7 +1548,7 @@ ideas = {
 				conscription_factor = 0.05
 			}
 		}
-		SIA_idea_top_rice_trade = {
+		SIA_idea_absolute_king = {
 			removal_cost = -1
 			allowed = {
 				always = no
@@ -1571,15 +1556,28 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			available = {
-				NOT = {
-					has_country_flag = SIA_New_kings_flag
-				}
+			picture = idea_
+			modifier = {
+				stability_factor = -0.1
+				political_power_factor = 0.05
+				justify_war_goal_time = -0.25
+				generate_wargoal_tension = -0.25
+			}
+		}
+		SIA_idea_dual_king = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
 			}
 			picture = idea_
 			modifier = {
-				consumer_goods_factor = -0.05
-				trade_opinion_factor = 0.20
+				stability_factor = 0.1
+				political_power_factor = -0.05
+				drift_defence_factor = 0.25
+				army_core_defence_factor = 0.1
 			}
 		}
 	}

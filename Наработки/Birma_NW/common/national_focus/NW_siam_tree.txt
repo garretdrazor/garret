@@ -5629,13 +5629,11 @@ focus_tree = {
 		}
 		x = 33
 		y = 11
-		available ={
-			
-		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_weak_constitution"
-			
+			set_country_leader_ideology = dual_monarchy
+			add_ideas = SIA_idea_dual_king
 		}
 	}
 	
@@ -5682,13 +5680,11 @@ focus_tree = {
 		
 		x = 35
 		y = 11
-		available ={
-
-		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_absolute_morachy"
-			
+			set_country_leader_ideology = absolute_monarchy
+			add_ideas = SIA_idea_absolute_king
 		}
 	}
 	
