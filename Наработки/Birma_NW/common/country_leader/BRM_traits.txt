@@ -45,4 +45,11 @@ leader_traits = {
 		research_speed_factor = 0.03
 		stability_factor = 0.1
 	}
+	army_instruktor = {
+		random = no
+		training_time_factor = -0.1
+		research_bonus = {
+			cat_war_of_attrition = 0.10
+		}
+	}
 }

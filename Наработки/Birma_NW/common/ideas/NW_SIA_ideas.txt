@@ -1297,6 +1297,38 @@ ideas = {
 				conscription = 0.01
 			}
 		}
+		SIA_idea_blue_army_2 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = idea_
+			modifier = {
+				conscription = 0.01
+				army_org_factor = 0.1
+				max_planning_factor = 0.1
+				training_time_factor = 0.1
+			}
+		}
+		SIA_idea_blue_army_3 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = idea_
+			modifier = {
+				conscription = 0.035
+				army_org_factor = 0.1
+				max_planning_factor = 0.1
+				max_training = 0.8
+			}
+		}
 		# Социальное обеспечение
 		SIA_idea_Pridi_soc_1 = {
 			removal_cost = -1
@@ -1548,6 +1580,7 @@ ideas = {
 				conscription_factor = 0.05
 			}
 		}
+		# Абсолютная власть короля
 		SIA_idea_absolute_king = {
 			removal_cost = -1
 			allowed = {
@@ -1564,6 +1597,7 @@ ideas = {
 				generate_wargoal_tension = -0.25
 			}
 		}
+		# Двоевластие
 		SIA_idea_dual_king = {
 			removal_cost = -1
 			allowed = {
@@ -1578,6 +1612,21 @@ ideas = {
 				political_power_factor = -0.05
 				drift_defence_factor = 0.25
 				army_core_defence_factor = 0.1
+			}
+		}
+		# Агенты контрреволюции
+		SIA_idea_counterrev_agent = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = idea_
+			modifier = {
+				new_operative_slot_bonus = 1
+				boost_resistance_factor = -0.2
 			}
 		}
 	}

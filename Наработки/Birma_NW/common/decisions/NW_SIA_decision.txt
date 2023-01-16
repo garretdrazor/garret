@@ -1527,9 +1527,7 @@ SIA_elections_categories = {
 			tag = SIA
 		}
 		available = {
-			NOT = {
-				has_country_flag = SIA_elections_end_flag
-			}
+			has_country_flag = SIA_elections_end_flag
 		}
 		activation = {
 			has_country_flag = SIA_elections_start_flag
@@ -1538,6 +1536,7 @@ SIA_elections_categories = {
 		days_mission_timeout = 62
 		icon = GFX_decision_wood_develop
 		timeout_effect = {
+			set_country_flag = SIA_election_mission_end_flag
 			country_event = { id = sia.20 }
 		}
 	}

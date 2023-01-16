@@ -953,10 +953,10 @@ bookmarks = {
 				SIA_idea_crisis_ekonom_1
 			}
 			focuses = {
-				SIA_great_thai
-				SIA_Rama_VII
 				SIA_league_one_federation
-				SIA_ressurect_commi
+				SIA_imperalism
+				SIA_great_thai
+				SIA_create_idochina
 			}
 		}
 		

@@ -92,6 +92,11 @@ country_event = {
 		hidden_effect = {
 			set_country_flag = SIA_elections_start_flag
 			set_country_flag = SIA_crisis_start_flag
+			
+			set_variable = { plaek_phibunsongkhram_level_support_var = 40 }
+			set_variable = { phraya_songsuradet_level_support_var = 10 }
+			set_variable = { pridi_banomyong_level_support_var = 30 }
+			set_variable = { khuang_aphaiwong_level_support_var = 20 }
 		}
 	}
 }
@@ -1180,7 +1185,9 @@ country_event = {
 	option = {
 		name = sia.20.a
 		trigger = {
-			
+			check_variable = { var = plaek_phibunsongkhram_level_support_var value = phraya_songsuradet_level_support_var compare = greater_than_or_equals }
+			check_variable = { var = plaek_phibunsongkhram_level_support_var value = pridi_banomyong_level_support_var compare = greater_than_or_equals }
+			check_variable = { var = plaek_phibunsongkhram_level_support_var value = khuang_aphaiwong_level_support_var compare = greater_than_or_equals }
 		}
 		country_event = { id = sia.21 days = 10}
 		set_country_flag = SIA_pibun_win_flag
@@ -1188,7 +1195,9 @@ country_event = {
 	option = {
 		name = sia.20.b
 		trigger = {
-			
+			check_variable = { var = phraya_songsuradet_level_support_var value = plaek_phibunsongkhram_level_support_var compare = greater_than_or_equals }
+			check_variable = { var = phraya_songsuradet_level_support_var value = pridi_banomyong_level_support_var compare = greater_than_or_equals }
+			check_variable = { var = phraya_songsuradet_level_support_var value = khuang_aphaiwong_level_support_var compare = greater_than_or_equals }
 		}
 		country_event = { id = sia.21 days = 10}
 		set_country_flag = SIA_praya_win_flag
@@ -1196,7 +1205,9 @@ country_event = {
 	option = {
 		name = sia.20.c
 		trigger = {
-			
+			check_variable = { var = pridi_banomyong_level_support_var value = plaek_phibunsongkhram_level_support_var compare = greater_than_or_equals }
+			check_variable = { var = pridi_banomyong_level_support_var value = phraya_songsuradet_level_support_var compare = greater_than_or_equals }
+			check_variable = { var = pridi_banomyong_level_support_var value = khuang_aphaiwong_level_support_var compare = greater_than_or_equals }
 		}
 		country_event = { id = sia.21 days = 10}
 		set_country_flag = SIA_pridi_win_flag
@@ -1204,7 +1215,9 @@ country_event = {
 	option = {
 		name = sia.20.e
 		trigger = {
-			
+			check_variable = { var = khuang_aphaiwong_level_support_var value = plaek_phibunsongkhram_level_support_var compare = greater_than_or_equals }
+			check_variable = { var = khuang_aphaiwong_level_support_var value = phraya_songsuradet_level_support_var compare = greater_than_or_equals }
+			check_variable = { var = khuang_aphaiwong_level_support_var value = pridi_banomyong_level_support_var compare = greater_than_or_equals }
 		}
 		country_event = { id = sia.21 days = 10}
 		set_country_flag = SIA_kuang_win_flag

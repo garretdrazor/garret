@@ -449,4 +449,37 @@ characters={
 			}
 		}
 	}
+	SIA_Prince_Narisara_Nuwattiwong={
+		name=SIA_Prince_Narisara_Nuwattiwong
+		portraits={
+			army = {
+				small = GFX_idea_Prince_Narisara_Nuwattiwong
+			}
+			army={
+				large="gfx/leaders/SIA/Portrait_Prince_Narisara_Nuwattiwong.dds"
+			}
+		}
+	}
+	SIA_Prince_Mahra_Chakri={
+		name=SIA_Prince_Mahra_Chakri
+		portraits={
+			army = {
+				small = GFX_idea_Prince_Mahra_Chakri
+			}
+			army={
+				large="gfx/leaders/SIA/Portrait_Mahra_Chakri.dds"
+			}
+		}
+	}
+	SIA_Prince_Tosasiriwong={
+		name=SIA_Prince_Tosasiriwong
+		portraits={
+			army = {
+				small = GFX_idea_Prince_Tosasiriwong
+			}
+			army={
+				large="gfx/leaders/SIA/Portrait_Prince_Tosasiriwong.dds"
+			}
+		}
+	}
 }

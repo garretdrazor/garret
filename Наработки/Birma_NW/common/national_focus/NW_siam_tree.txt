@@ -5700,13 +5700,10 @@ focus_tree = {
 		}
 		x = 34
 		y = 12
-		available ={
-			
-		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_contrrevolution_agents"
-			
+			add_ideas = SIA_idea_counterrev_agent
 		}
 	}
 	
@@ -5721,13 +5718,25 @@ focus_tree = {
 		}
 		x = 35
 		y = 13
-		available ={
-			
-		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_help_royal_company"
-			
+			random_core_state = { 
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_core_state = { 
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	
@@ -6115,13 +6124,106 @@ focus_tree = {
 		}
 		x = 31
 		y = 12
-		available ={
-			
-		}
+		
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_back_princes"
-			
+			add_war_support = 0.l
+			add_advisor_role = {
+				character = SIA_Prince_Narisara_Nuwattiwong
+				activate = yes
+				advisor={
+					slot = navy_chief
+					idea_token = SIA_Prince_Narisara_Nuwattiwong
+					allowed  = {
+						original_tag  = SIA
+					}
+					available = {
+						has_completed_focus = SIA_back_princes
+					}
+					traits = {
+						navy_chief_decisive_battle_3
+					}
+				}
+			}
+			add_corps_commander_role = {
+				Character = SIA_Prince_Narisara_Nuwattiwong
+				traits={ naval_invader }
+				skill=3
+				attack_skill=3
+				defense_skill=2
+				planning_skill=2
+				logistics_skill=3
+			}
+			add_advisor_role = {
+				character = SIA_Prince_Mahra_Chakri
+				activate = yes
+				advisor={
+					slot = army_chief
+					idea_token = SIA_Prince_Mahra_Chakri
+					allowed  = {
+						original_tag  = SIA
+					}
+					available = {
+						has_completed_focus = SIA_back_princes
+					}
+					traits = {
+						navy_fleet_logistics_3
+					}
+				}
+			}
+			add_corps_commander_role = {
+				Character = SIA_Prince_Mahra_Chakri
+				traits={ organisational_leader }
+				skill=2
+				attack_skill=1
+				defense_skill=2
+				planning_skill=3
+				logistics_skill=3
+			}
+			add_advisor_role = {
+				character = SIA_Prince_Tosasiriwong
+				activate = yes
+				advisor={
+					slot = army_chief
+					idea_token = SIA_Prince_Tosasiriwong
+					allowed  = {
+						original_tag  = SIA
+					}
+					available = {
+						has_completed_focus = SIA_back_princes
+					}
+					traits = {
+						army_infantry_3
+					}
+				}
+			}
+			add_advisor_role = {
+				character = SIA_Prince_Tosasiriwong
+				activate = yes
+				advisor={
+					slot = theorist
+					idea_token = SIA_Prince_Tosasiriwong
+					allowed  = {
+						original_tag  = SIA
+					}
+					available = {
+						has_completed_focus = SIA_back_princes
+					}
+					traits = {
+						army_instruktor
+					}
+				}
+			}
+			add_corps_commander_role = {
+				Character = SIA_Prince_Tosasiriwong
+				traits={ infantry_officer }
+				skill=2
+				attack_skill=3
+				defense_skill=2
+				planning_skill=1
+				logistics_skill=2
+			}
 		}
 	}
 	
@@ -6136,13 +6238,13 @@ focus_tree = {
 		}
 		x = 33
 		y = 13
-		available ={
-			
-		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_Bovorader_reforms"
-			
+			swap_ideas = {
+				remove_idea = SIA_idea_blue_army
+				add_idea = SIA_idea_blue_army_2
+			}
 		}
 	}
 	
@@ -8358,13 +8460,13 @@ focus_tree = {
 		}
 		x = 33
 		y = 14
-		available ={
-			
-		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_royal_scouts"
-			
+			swap_ideas = {
+				remove_idea = SIA_idea_blue_army_2
+				add_idea = SIA_idea_blue_army_3
+			}
 		}
 	}
 	
