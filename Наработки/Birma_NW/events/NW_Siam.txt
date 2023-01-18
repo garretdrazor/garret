@@ -1177,7 +1177,7 @@ country_event = {
 	id = sia.20
 	title = sia.20.t
 	desc = sia.20.d
-	picture = GFX_report_event_sia_19
+	picture = GFX_report_event_sia_20
 	is_triggered_only = yes
 	
 	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event sia.20" }
@@ -1221,6 +1221,180 @@ country_event = {
 		}
 		country_event = { id = sia.21 days = 10}
 		set_country_flag = SIA_kuang_win_flag
+	}
+}
+
+# Заявление премьер-министра
+country_event = {
+	id = sia.21
+	title = sia.21.t
+	desc = sia.21.d
+	picture = GFX_report_event_sia_21
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event sia.21" }
+
+	option = {
+		name = sia.21.a
+		remove_unit_leader_role = {
+			Character = SIA_phraya_phahon
+		}
+		if = {
+			limit = {
+				has_country_flag = SIA_pibun_win_flag
+			}
+			country_event = { id = sia.22 days = 14}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = SIA_praya_win_flag
+			}
+			country_event = { id = sia.24 days = 14}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = SIA_pridi_win_flag
+			}
+			country_event = { id = sia.25 days = 14}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = SIA_kuang_win_flag
+			}
+			country_event = { id = sia.26 days = 14}
+		}
+	}
+}
+
+# Заседание во дворце Парускван 1
+country_event = {
+	id = sia.22
+	title = sia.22.t
+	desc = sia.22.d
+	picture = GFX_report_event_sia_22
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event sia.22" }
+
+	option = {
+		name = sia.22.a
+		add_popularity = { ideology = fascism popularity = 0.35 }
+		set_politics = {
+			ruling_party = fascism
+		}
+		set_country_flag = SIA_pibun_can_kill
+		country_event = { id = sia.22 days = 10}
+	}
+}
+
+# Требование Прайи Сонгсурадета
+country_event = {
+	id = sia.23
+	title = sia.23.t
+	desc = sia.23.d
+	picture = GFX_report_event_sia_23
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event sia.23" }
+
+	option = {
+		name = sia.23.a
+		if = {
+			limit = {
+				has_country_flag = SIA_tt_Songsuradet_back
+				has_country_flag = SIA_tt_Thephasdin
+			}
+			remove_unit_leader_role = {
+				Character = SIA_Phraya_Songsuradet
+				Character = SIA_Phraya_Thephasdin
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = SIA_tt_Songsuradet_back
+			}
+			remove_unit_leader_role = {
+				Character = SIA_Phraya_Songsuradet
+			}
+		}
+		else_if = {
+			limit = {
+				has_country_flag = SIA_tt_Thephasdin
+			}
+			remove_unit_leader_role = {
+				Character = SIA_Phraya_Thephasdin
+			}
+		}
+		set_country_flag = SIA_no_opposition_flag
+	}
+}
+
+# Заседание во дворце Парускван 2
+country_event = {
+	id = sia.24
+	title = sia.24.t
+	desc = sia.24.d
+	picture = GFX_report_event_sia_24
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event sia.24" }
+
+	option = {
+		name = sia.24.a
+		add_country_leader_role = {
+			character = SIA_Phraya_Songsuradet
+			promote_leader = yes
+			country_leader = {
+				ideology = centrism
+				expire = "1965.1.1.1"
+				traits = { war_industrialist }
+			}
+		}
+		set_country_flag = SIA_songsuradet_can_kill
+	}
+}
+
+# Заседание во дворце Парускван 3
+country_event = {
+	id = sia.25
+	title = sia.25.t
+	desc = sia.25.d
+	picture = GFX_report_event_sia_25
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event sia.25" }
+
+	option = {
+		name = sia.25.a
+		add_popularity = { ideology = democratic popularity = 0.35 }
+		set_politics = {
+			ruling_party = democratic
+		}
+		set_country_flag = SIA_pridi_can_kill
+	}
+}
+
+# Заседание во дворце Парускван 4
+country_event = {
+	id = sia.26
+	title = sia.26.t
+	desc = sia.26.d
+	picture = GFX_report_event_sia_26
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event sia.26" }
+
+	option = {
+		name = sia.26.a
+		add_popularity = { ideology = democratic popularity = 0.35 }
+		set_politics = {
+			ruling_party = democratic
+		}
+		promote_character = {
+			character = SIA_Khuang_Aphaiwong
+			ideology = conservatism
+		}
+		set_country_flag = SIA_kuang_can_kill
 	}
 }
 

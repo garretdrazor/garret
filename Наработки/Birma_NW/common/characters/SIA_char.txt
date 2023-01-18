@@ -159,6 +159,24 @@ characters={
 			id=-1
 		}
 	}
+	SIA_Khuang_Aphaiwong={
+		name=SIA_Khuang_Aphaiwong
+		portraits={
+			civilian={
+				large="gfx/leaders/SIA/Portrait_Khuang_Aphaiwong.dds"
+			}
+			army = {
+				small = GFX_idea_Khuang_Aphaiwong
+			}
+		}
+		country_leader={
+			desc="POLITICS_Khuang_Aphaiwong_DESC"
+			traits = {  }
+			ideology=conservatism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
 	#генералы
 	SIA_luang_chattrakankosol={
 		name=SIA_luang_chattrakankosol

@@ -28,7 +28,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_no_gold_valute"
 			add_stability = -0.05
-			add_political_power = 300
+			add_political_power = 200
 			add_days_mission_timeout = {
 				mission = SIA_new_crisis_mission
 				days = 100
@@ -1010,7 +1010,7 @@ focus_tree = {
 		x = 3
 		y = 10
 		available ={
-			
+			has_country_flag = SIA_songsuradet_can_kill
 		}
 			
 		completion_reward = {
@@ -2843,7 +2843,7 @@ focus_tree = {
 		x = 22
 		y = 10
 		available ={
-			
+			has_country_flag = SIA_pridi_can_kill
 		}
 			
 		completion_reward = {
@@ -4540,7 +4540,7 @@ focus_tree = {
 		x = 28
 		y = 10
 		available ={
-			
+			has_country_flag = SIA_kuang_can_kill
 		}
 			
 		completion_reward = {
@@ -6264,7 +6264,7 @@ focus_tree = {
 		x = 45
 		y = 10
 		available ={
-			
+			has_country_flag = SIA_pibun_can_kill
 		}
 			
 		completion_reward = {

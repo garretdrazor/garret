@@ -1218,6 +1218,9 @@ SIA_police_army_conflict_categories = {
 			NOT = {
 				has_idea = SIA_idea_police_army_7
 			}
+			NOT = {
+				has_idea = SIA_no_opposition_flag
+			}
 		}
 		icon = eng_blackshirt_speech
 
@@ -1310,6 +1313,9 @@ SIA_police_army_conflict_categories = {
 			has_completed_focus = SIA_royal_academy
 			NOT = {
 				has_idea = SIA_idea_police_army_7
+			}
+			NOT = {
+				has_idea = SIA_no_opposition_flag
 			}
 		}
 		icon = eng_blackshirt_speech
