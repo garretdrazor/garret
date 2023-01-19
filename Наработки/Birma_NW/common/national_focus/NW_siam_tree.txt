@@ -6060,15 +6060,11 @@ focus_tree = {
 			}
 			add_advisor_role = {
 				character = SIA_Prince_Chai_Nat
-				activate = yes
 				advisor={
 					slot = political_advisor
 					idea_token = SIA_Prince_Chai_Nat
 					allowed  = {
 						original_tag  = SIA
-					}
-					available = {
-						has_completed_focus = SIA_back_dinasty
 					}
 					traits = {
 						medicine_minister
@@ -6077,15 +6073,11 @@ focus_tree = {
 			}
 			add_advisor_role = {
 				character = SIA_Prince_Naris
-				activate = yes
 				advisor={
 					slot = political_advisor
 					idea_token = SIA_Prince_Naris
 					allowed  = {
 						original_tag  = SIA
-					}
-					available = {
-						has_completed_focus = SIA_back_dinasty
 					}
 					traits = {
 						prince_master
@@ -6094,15 +6086,11 @@ focus_tree = {
 			}
 			add_advisor_role = {
 				character = SIA_Prince_Damrong_Ratchanubab
-				activate = yes
 				advisor={
 					slot = political_advisor
 					idea_token = SIA_Prince_Damrong_Ratchanubab
 					allowed  = {
 						original_tag  = SIA
-					}
-					available = {
-						has_completed_focus = SIA_back_dinasty
 					}
 					traits = {
 						enlightenment_ministr
@@ -6131,15 +6119,11 @@ focus_tree = {
 			add_war_support = 0.l
 			add_advisor_role = {
 				character = SIA_Prince_Narisara_Nuwattiwong
-				activate = yes
 				advisor={
 					slot = navy_chief
 					idea_token = SIA_Prince_Narisara_Nuwattiwong
 					allowed  = {
 						original_tag  = SIA
-					}
-					available = {
-						has_completed_focus = SIA_back_princes
 					}
 					traits = {
 						navy_chief_decisive_battle_3
@@ -6157,15 +6141,11 @@ focus_tree = {
 			}
 			add_advisor_role = {
 				character = SIA_Prince_Mahra_Chakri
-				activate = yes
 				advisor={
 					slot = army_chief
 					idea_token = SIA_Prince_Mahra_Chakri
 					allowed  = {
 						original_tag  = SIA
-					}
-					available = {
-						has_completed_focus = SIA_back_princes
 					}
 					traits = {
 						navy_fleet_logistics_3
@@ -6183,15 +6163,11 @@ focus_tree = {
 			}
 			add_advisor_role = {
 				character = SIA_Prince_Tosasiriwong
-				activate = yes
 				advisor={
 					slot = army_chief
 					idea_token = SIA_Prince_Tosasiriwong
 					allowed  = {
 						original_tag  = SIA
-					}
-					available = {
-						has_completed_focus = SIA_back_princes
 					}
 					traits = {
 						army_infantry_3
@@ -6200,15 +6176,11 @@ focus_tree = {
 			}
 			add_advisor_role = {
 				character = SIA_Prince_Tosasiriwong
-				activate = yes
 				advisor={
 					slot = theorist
 					idea_token = SIA_Prince_Tosasiriwong
 					allowed  = {
 						original_tag  = SIA
-					}
-					available = {
-						has_completed_focus = SIA_back_princes
 					}
 					traits = {
 						army_instruktor
