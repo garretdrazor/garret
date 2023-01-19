@@ -33,6 +33,8 @@ on_actions = {
 					country_event = { id = sia.2 days = 344 }
 					country_event = { id = sia.3 days = 573 }
 					country_event = { id = sia.4 days = 929 }
+					country_event = { id = sia.68 days = 1043 }
+					country_event = { id = sia.70 days = 1073 }
 					country_event = { id = sia.52 days = 1805 }
 					country_event = { id = sia.60 days = 2819 }
 				}

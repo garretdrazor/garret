@@ -92,11 +92,29 @@ country_event = {
 		hidden_effect = {
 			set_country_flag = SIA_elections_start_flag
 			set_country_flag = SIA_crisis_start_flag
-			
 			set_variable = { plaek_phibunsongkhram_level_support_var = 40 }
 			set_variable = { phraya_songsuradet_level_support_var = 10 }
 			set_variable = { pridi_banomyong_level_support_var = 30 }
 			set_variable = { khuang_aphaiwong_level_support_var = 20 }
+			if = {
+				limit = {
+					has_idea = SIA_idea_police_army_7
+				}
+				country_event = { id = sia.27 days = 7}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = SIA_Songsuradet_back_flag
+				}
+				country_event = { id = sia.28 days = 1}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = SIA_Songsuradet_back_flag
+					has_country_flag = SIA_Thephasdin_flag
+				}
+				country_event = { id = sia.29 days = 5}
+			}
 		}
 	}
 }
@@ -1301,8 +1319,8 @@ country_event = {
 		name = sia.23.a
 		if = {
 			limit = {
-				has_country_flag = SIA_tt_Songsuradet_back
-				has_country_flag = SIA_tt_Thephasdin
+				has_country_flag = SIA_Songsuradet_back_flag
+				has_country_flag = SIA_Thephasdin_flag
 			}
 			remove_unit_leader_role = {
 				Character = SIA_Phraya_Songsuradet
@@ -1311,7 +1329,7 @@ country_event = {
 		}
 		else_if = {
 			limit = {
-				has_country_flag = SIA_tt_Songsuradet_back
+				has_country_flag = SIA_Songsuradet_back_flag
 			}
 			remove_unit_leader_role = {
 				Character = SIA_Phraya_Songsuradet
@@ -1319,7 +1337,7 @@ country_event = {
 		}
 		else_if = {
 			limit = {
-				has_country_flag = SIA_tt_Thephasdin
+				has_country_flag = SIA_Thephasdin_flag
 			}
 			remove_unit_leader_role = {
 				Character = SIA_Phraya_Thephasdin
@@ -1387,14 +1405,75 @@ country_event = {
 	option = {
 		name = sia.26.a
 		add_popularity = { ideology = democratic popularity = 0.35 }
+		SIA_Khuang_Aphaiwong = {
+			promote_character = yes
+		}
 		set_politics = {
 			ruling_party = democratic
 		}
-		promote_character = {
-			character = SIA_Khuang_Aphaiwong
-			ideology = conservatism
-		}
 		set_country_flag = SIA_kuang_can_kill
+	}
+}
+
+# Переворот Сонгкрама
+country_event = {
+	id = sia.27
+	title = sia.27.t
+	desc = sia.27.d
+	picture = GFX_report_event_sia_27
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event sia.27" }
+
+	option = {
+		name = sia.27.a
+		add_stability = -0.1
+		add_popularity = { ideology = fascism popularity = 0.35 }
+		set_politics = {
+			ruling_party = fascism
+		}
+		set_country_flag = SIA_pibun_can_kill
+		country_event = { id = sia.22 days = 10}
+		hidden_effect = {
+			set_country_flag = SIA_elections_end_flag
+		}
+	}
+}
+
+# Популярность Сонгсурадета
+country_event = {
+	id = sia.28
+	title = sia.28.t
+	desc = sia.28.d
+	picture = GFX_report_event_sia_28
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event sia.28" }
+
+	option = {
+		name = sia.28.a
+		add_to_variable = { phraya_songsuradet_level_support_var = 15 }
+		add_to_variable = { plaek_phibunsongkhram_level_support_var = -5 }
+        add_to_variable = { pridi_banomyong_level_support_var = -5 }
+        add_to_variable = { khuang_aphaiwong_level_support_var = -5 }
+	}
+}
+
+# Популярность Сонгсурадета
+country_event = {
+	id = sia.29
+	title = sia.29.t
+	desc = sia.29.d
+	picture = GFX_report_event_sia_29
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event sia.29" }
+
+	option = {
+		name = sia.29.a
+		add_to_variable = { phraya_songsuradet_level_support_var = 10 }
+		add_to_variable = { plaek_phibunsongkhram_level_support_var = -5 }
+        add_to_variable = { khuang_aphaiwong_level_support_var = -5 }
 	}
 }
 
@@ -2268,5 +2347,89 @@ country_event = {
 		name = sia.67.a
 		add_political_power = 100
 		add_stability = 0.1
+	}
+}
+
+# ПУЛЬСАР на Покушение на министра обороны
+country_event = {
+	id = sia.68
+	title = sia.68.t
+	desc = sia.68.d
+	picture = GFX_report_event_sia_68
+	is_triggered_only = yes
+	hidden = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event sia.68" }
+
+	option = {
+		name = sia.68.a
+		if = {
+			limit = {
+				has_character = SIA_plaek_phibunsongkhram
+			}
+			country_event = { id = sia.69 }
+		}
+	}
+	option = {
+		name = sia.68.b
+		
+	}
+}
+
+# Покушение на министра обороны
+country_event = {
+	id = sia.69
+	title = sia.69.t
+	desc = sia.69.d
+	picture = GFX_report_event_sia_69
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event sia.69" }
+
+	option = {
+		name = sia.69.a
+		add_stability = -0.01
+	}
+}
+
+# ПУЛЬСАР на Покушение на министра обороны
+country_event = {
+	id = sia.70
+	title = sia.70.t
+	desc = sia.70.d
+	picture = GFX_report_event_sia_70
+	is_triggered_only = yes
+	hidden = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event sia.70" }
+
+	option = {
+		name = sia.70.a
+		if = {
+			limit = {
+				has_character = SIA_plaek_phibunsongkhram
+			}
+			country_event = { id = sia.71 }
+		}
+	}
+	option = {
+		name = sia.70.b
+		
+	}
+}
+
+# Покушение на министра обороны
+country_event = {
+	id = sia.71
+	title = sia.71.t
+	desc = sia.71.d
+	picture = GFX_report_event_sia_71
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event sia.71" }
+
+	option = {
+		name = sia.71.a
+		add_stability = -0.01
 	}
 }

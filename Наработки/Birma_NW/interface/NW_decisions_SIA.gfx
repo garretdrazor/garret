@@ -21,8 +21,36 @@ spriteTypes = {
 		texturefile = "gfx/interface/decisions/decision_thai_army_3.dds"
 	}
 	spriteType = {
+		name = "GFX_decision_thai_army_4"
+		texturefile = "gfx/interface/decisions/decision_thai_army_4.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_thai_army_5"
+		texturefile = "gfx/interface/decisions/decision_thai_army_5.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_thai_army_6"
+		texturefile = "gfx/interface/decisions/decision_thai_army_6.dds"
+	}
+	spriteType = {
 		name = "GFX_decision_thai_army_7"
 		texturefile = "gfx/interface/decisions/decision_thai_army_7.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_thai_army_8"
+		texturefile = "gfx/interface/decisions/decision_thai_army_8.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_thai_army_9"
+		texturefile = "gfx/interface/decisions/decision_thai_army_9.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_thai_army_10"
+		texturefile = "gfx/interface/decisions/decision_thai_army_10.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_thai_army_11"
+		texturefile = "gfx/interface/decisions/decision_thai_army_11.dds"
 	}
 	spriteType = {
 		name = "GFX_decision_thai_army_12"

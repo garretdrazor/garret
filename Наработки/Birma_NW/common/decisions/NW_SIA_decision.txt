@@ -413,6 +413,9 @@ SIA_police_army_conflict_categories = {
 			NOT = {
 				has_idea = SIA_idea_police_army_1
 			}
+			NOT = {
+				has_country_flag = SIA_police_1_flag
+			}
 		}
 		icon = GFX_decision_thai_army_1
 
@@ -501,6 +504,9 @@ SIA_police_army_conflict_categories = {
 			has_completed_focus = SIA_polit_police
 			NOT = {
 				has_idea = SIA_idea_police_army_1
+			}
+			NOT = {
+				has_country_flag = SIA_police_2_flag
 			}
 		}
 		icon = GFX_decision_thai_army_2
@@ -591,6 +597,9 @@ SIA_police_army_conflict_categories = {
 			NOT = {
 				has_idea = SIA_idea_police_army_1
 			}
+			NOT = {
+				has_country_flag = SIA_police_3_flag
+			}
 		}
 		icon = GFX_decision_thai_army_3
 
@@ -680,8 +689,11 @@ SIA_police_army_conflict_categories = {
 			NOT = {
 				has_idea = SIA_idea_police_army_1
 			}
+			NOT = {
+				has_country_flag = SIA_police_4_flag
+			}
 		}
-		icon = eng_blackshirt_speech
+		icon = GFX_decision_thai_army_4
 
 		cost = 75
 		days_remove = 7
@@ -768,6 +780,9 @@ SIA_police_army_conflict_categories = {
 			has_completed_focus = SIA_artillery_train
 			NOT = {
 				has_idea = SIA_idea_police_army_1
+			}
+			NOT = {
+				has_country_flag = SIA_police_5_flag
 			}
 		}
 		icon = eng_blackshirt_speech
@@ -859,8 +874,11 @@ SIA_police_army_conflict_categories = {
 			NOT = {
 				has_idea = SIA_idea_police_army_7
 			}
+			NOT = {
+				has_country_flag = SIA_police_6_flag
+			}
 		}
-		icon = eng_blackshirt_speech
+		icon = GFX_decision_thai_army_6
 
 		cost = 75
 		days_remove = 7
@@ -947,6 +965,9 @@ SIA_police_army_conflict_categories = {
 			has_completed_focus = SIA_royal_academy
 			NOT = {
 				has_idea = SIA_idea_police_army_7
+			}
+			NOT = {
+				has_country_flag = SIA_police_7_flag
 			}
 		}
 		icon = GFX_decision_thai_army_7
@@ -1037,8 +1058,11 @@ SIA_police_army_conflict_categories = {
 			NOT = {
 				has_idea = SIA_idea_police_army_7
 			}
+			NOT = {
+				has_country_flag = SIA_police_8_flag
+			}
 		}
-		icon = eng_blackshirt_speech
+		icon = GFX_decision_thai_army_8
 
 		cost = 75
 		days_remove = 7
@@ -1125,6 +1149,9 @@ SIA_police_army_conflict_categories = {
 			has_completed_focus = SIA_royal_academy
 			NOT = {
 				has_idea = SIA_idea_police_army_7
+			}
+			NOT = {
+				has_country_flag = SIA_police_9_flag
 			}
 		}
 		icon = eng_blackshirt_speech
@@ -1221,8 +1248,11 @@ SIA_police_army_conflict_categories = {
 			NOT = {
 				has_idea = SIA_no_opposition_flag
 			}
+			NOT = {
+				has_country_flag = SIA_Songsuradet_back_flag
+			}
 		}
-		icon = eng_blackshirt_speech
+		icon = GFX_decision_thai_army_10
 
 		cost = 75
 		days_remove = 7
@@ -1240,6 +1270,25 @@ SIA_police_army_conflict_categories = {
 			}
 			custom_effect_tooltip = SIA_tt_army_upped
 			custom_effect_tooltip = SIA_tt_Songsuradet_back
+			if = {
+				limit = {
+					has_country_flag = SIA_elections_start_flag
+					NOT = {
+						has_country_flag = SIA_elections_end_flag
+					}
+				}
+				country_event = { id = sia.28 days = 1}
+			}
+			else_if = {
+				limit = {
+					has_country_flag = SIA_elections_start_flag
+					has_country_flag = SIA_Thephasdin_flag
+					NOT = {
+						has_country_flag = SIA_elections_end_flag
+					}
+				}
+				country_event = { id = sia.29 days = 5}
+			}
 			hidden_effect = {
 				set_country_flag = SIA_Songsuradet_back_flag
 				if = {
@@ -1317,6 +1366,9 @@ SIA_police_army_conflict_categories = {
 			NOT = {
 				has_idea = SIA_no_opposition_flag
 			}
+			NOT = {
+				has_country_flag = SIA_Thephasdin_flag
+			}
 		}
 		icon = eng_blackshirt_speech
 
@@ -1336,6 +1388,15 @@ SIA_police_army_conflict_categories = {
 			}
 			custom_effect_tooltip = SIA_tt_army_upped
 			custom_effect_tooltip = SIA_tt_Thephasdin
+			if = {
+				limit = {
+					has_country_flag = SIA_elections_start_flag
+					NOT = {
+						has_country_flag = SIA_elections_end_flag
+					}
+				}
+				country_event = { id = sia.29 days = 1}
+			}
 			hidden_effect = {
 				set_country_flag = SIA_Thephasdin_flag
 				if = {

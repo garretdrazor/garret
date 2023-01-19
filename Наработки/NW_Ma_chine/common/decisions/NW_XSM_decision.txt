@@ -680,7 +680,6 @@ XSM_fight_vs_salafit_category = {
 			factor = 10
 		}
 	}
-	
 	XSM_ihveni_bam = {
 		icon = GFX_decision_muslim_propaganda
 		on_map_mode = map_only
@@ -1313,6 +1312,7 @@ XSM_patron_art_category = {
 			factor = 10
 		}
 	}
+}
 
 political_actions = {
 	XSM_leave_gubernator = {
