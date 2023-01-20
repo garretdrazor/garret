@@ -48,8 +48,6 @@ leader_traits = {
 	army_instruktor = {
 		random = no
 		training_time_factor = -0.1
-		research_bonus = {
-			cat_war_of_attrition = 0.10
-		}
+		cat_war_of_attrition_cost_factor = 0.1
 	}
 }

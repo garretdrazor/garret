@@ -251,7 +251,7 @@ characters={
 				small="GFX_idea_generic_army_asia_2"
 			}
 			army={
-				large="gfx/leaders/SIA/Portrait_Fin_Chunkhavan.dds"
+				large="gfx/leaders/SIA/Portrait_Phin_Choonhawan.dds"
 			}
 		}
 	}
@@ -297,7 +297,7 @@ characters={
 				small="GFX_idea_generic_army_asia_2"
 			}
 			army={
-				large="gfx/leaders/SIA/Portrait_Phraya_Songsuradet.dds"
+				large="gfx/leaders/SIA/Portrait_Siam_Phraya_Songsuradet.dds"
 			}
 		}
 	}
@@ -474,7 +474,7 @@ characters={
 				small = GFX_idea_Prince_Narisara_Nuwattiwong
 			}
 			army={
-				large="gfx/leaders/SIA/Portrait_Prince_Narisara_Nuwattiwong.dds"
+				large="gfx/leaders/SIA/Portrait_Narisara Nuwattiwong.dds"
 			}
 		}
 	}
@@ -485,7 +485,7 @@ characters={
 				small = GFX_idea_Prince_Mahra_Chakri
 			}
 			army={
-				large="gfx/leaders/SIA/Portrait_Mahra_Chakri.dds"
+				large="gfx/leaders/SIA/Portrait_Prince_Maha_Chakri_Sirindhorn.dds"
 			}
 		}
 	}
@@ -496,7 +496,7 @@ characters={
 				small = GFX_idea_Prince_Tosasiriwong
 			}
 			army={
-				large="gfx/leaders/SIA/Portrait_Prince_Tosasiriwong.dds"
+				large="gfx/leaders/SIA/Portrait_Prince_Thosasiriwong.dds"
 			}
 		}
 	}

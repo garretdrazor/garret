@@ -2409,7 +2409,11 @@ country_event = {
 			limit = {
 				has_character = SIA_plaek_phibunsongkhram
 			}
-			country_event = { id = sia.71 }
+			SIA_plaek_phibunsongkhram = {
+			    unit_leader_event = {
+				    id = sia.71
+				}	
+		    }
 		}
 	}
 	option = {
@@ -2419,7 +2423,7 @@ country_event = {
 }
 
 # Покушение на министра обороны
-country_event = {
+unit_leader_event = {
 	id = sia.71
 	title = sia.71.t
 	desc = sia.71.d
@@ -2431,5 +2435,11 @@ country_event = {
 	option = {
 		name = sia.71.a
 		add_stability = -0.01
+		SIA_plaek_phibunsongkhram = {
+			add_timed_unit_leader_trait = {
+				trait = sick
+				days = 30
+			}
+		}
 	}
 }
