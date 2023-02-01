@@ -1,0 +1,630 @@
+SAF_decisions_tag_1 = { # Объединить голландский мир	
+	SAF_decisions_tag_1_1 = { # Объединить голландский мир	
+		
+		allowed = { original_tag = SAF }
+		
+		available = {
+			has_completed_focus = SAF_UzDgGkqF
+			controls_state = 7 
+		}
+		
+		visible = {  }
+		
+		
+		fire_only_once = yes
+
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		complete_effect  = {
+			set_cosmetic_tag = SAF_holland
+			every_state = { limit = { is_core_of = HOL } add_core_of = ROOT }
+		}	
+	}
+}
+SAF_decisions_tag_2 = { # Сформировать Великую Южную Африку
+	SAF_decisions_tag_2_1 = { # Интегрировать Юго-Западную Африку
+		
+		allowed = { original_tag = SAF }
+		
+		available = {
+			has_completed_focus = SAF_WzbNsUFi
+			has_full_control_of_state = 541
+			has_full_control_of_state = 1112
+			has_full_control_of_state = 1113
+			has_full_control_of_state = 1114
+		}
+		
+		visible = {  }
+		
+		
+		cost = 50
+		
+		fire_only_once = yes
+		
+		days_remove = 120
+
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		remove_effect  = {
+			every_state = { limit = { is_core_of = NMB } add_core_of = SAF }
+		}
+	}
+	SAF_decisions_tag_2_2 = { # Детронизировать Лесото
+		
+		allowed = { original_tag = SAF }
+		
+		available = {
+			controls_state = 1106 
+		}
+		
+		visible = {  }
+		
+		
+		cost = 50
+		
+		fire_only_once = yes
+		
+		days_remove = 120
+
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		remove_effect  = {
+			1106 = { add_core_of = SAF }
+		}
+	}
+	SAF_decisions_tag_2_3 = { # Детронизировать Свазиленд
+		
+		allowed = { original_tag = SAF }
+		
+		available = {
+			controls_state = 1105  
+		}
+		
+		visible = {  }
+		
+		
+		cost = 50
+		
+		fire_only_once = yes
+		
+		days_remove = 120
+
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		remove_effect  = {
+			1105 = { add_core_of = SAF }
+		}	
+	}
+	SAF_decisions_tag_2_4 = { # Подчинить племена Бечуаналенда	
+		
+		allowed = { original_tag = SAF }
+		
+		available = {
+			controls_state = 542 
+		}
+		
+		visible = {  }
+		
+		
+		cost = 50
+		
+		fire_only_once = yes
+		
+		days_remove = 120
+
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		remove_effect  = {
+			542 = { add_core_of = SAF }
+		}	
+	}
+	SAF_decisions_tag_2_5 = { # Интегрировать Мозамбик
+		
+		allowed = { original_tag = SAF }
+		
+		available = {
+			controls_state = 544 
+		}
+		
+		visible = {  }
+		
+		
+		cost = 50
+		
+		fire_only_once = yes
+		
+		days_remove = 120
+
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		remove_effect  = {
+			544 = { add_core_of = SAF }
+		}	
+	}
+	SAF_decisions_tag_2_6 = { # Интегрировать Южную Родезию
+		
+		allowed = { original_tag = SAF }
+		
+		available = {
+			545 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT } } }
+			1110 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT } } }
+		}
+		
+		visible = {  }
+		
+		
+		cost = 50
+		
+		fire_only_once = yes
+		
+		days_remove = 120
+
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		remove_effect  = {
+			set_cosmetic_tag = SAF_great
+			545 = { add_core_of = SAF }
+			1110 = { add_core_of = SAF }
+		}	
+	}
+}
+
+SAF_decisions_tag_3 = { # Африканерское ополчение
+	SAF_decisions_tag_3_1 = { # Поднять ополчение в Трансваале
+		
+		allowed = { original_tag = SAF }
+		
+		available = {
+		has_full_control_of_state = 1107
+		}
+		
+		visible = {  }
+		
+		
+		cost = 50
+		
+		fire_only_once = yes
+		
+		days_remove = 30
+
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		remove_effect  = { 
+		custom_effect_tooltip = SAF_tooltip_4 hidden_effect = { load_oob = SAF_1_div_oob }
+		}	
+	}
+	SAF_decisions_tag_3_2 = { # Поднять ополчение в Свободном государстве
+		
+		allowed = { original_tag = SAF }
+		
+		available = {
+		controls_state = 1107 
+		}
+		
+		visible = {  }
+		
+		
+		cost = 50
+		
+		fire_only_once = yes
+		
+		days_remove = 30
+
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		remove_effect  = {
+		custom_effect_tooltip = SAF_tooltip_5 hidden_effect = { load_oob = SAF_2_div_oob }
+		}	
+	}
+	SAF_decisions_tag_3_3 = { # Поднять ополчение в Капской провинции
+		
+		allowed = { original_tag = SAF }
+		
+		available = {
+		controls_state = 1108  
+		}
+		
+		visible = {  }
+		
+		
+		cost = 50
+		
+		fire_only_once = yes
+		
+		days_remove = 30
+
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		remove_effect  = {
+		custom_effect_tooltip = SAF_tooltip_6 hidden_effect = { load_oob = SAF_3_div_oob }
+		}	
+	}
+	SAF_decisions_tag_3_4 = { # Поднять ополчение в Натале
+		
+		allowed = { original_tag = SAF }
+		
+		available = {
+		controls_state = 1109 
+		}
+		
+		visible = {  }
+		
+		
+		cost = 50
+		
+		fire_only_once = yes
+		
+		days_remove = 30
+
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		remove_effect  = {
+		custom_effect_tooltip = SAF_tooltip_7 hidden_effect = { load_oob = SAF_4_div_oob }
+		}	
+	}
+}
+
+SAF_decisions_tag_4 = { # Внедрение в Южную Родезию
+	SAF_decisions_tag_4_1 = { # Подготовить убийства британских чиновников
+		
+		allowed = { original_tag = SAF }
+		
+		available = {
+		}
+		
+		visible = { ZIM = { is_puppet_of = ENG } }
+		
+		
+		cost = 50
+		
+		fire_only_once = no
+		
+		days_remove = 20
+
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		remove_effect  = { 
+		ZIM = { add_popularity = { ideology = fascism popularity = 0.05 } add_autonomy_ratio = { value = 0.2 } }
+		}	
+	}
+	SAF_decisions_tag_4_2 = { # Расширить антиколониальную пропаганду
+		
+		allowed = { original_tag = SAF }
+		
+		available = {
+		}
+		
+		visible = { ZIM = { is_puppet_of = ENG } }
+		
+		
+		cost = 50
+		
+		fire_only_once = yes
+
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		complete_effect  = {
+		ZIM = { add_ideas = SAF_idea_28 }
+		}	
+	}
+	SAF_decisions_tag_4_3 = { # Распространить нацистские идеи в Южной Родезии
+		
+		allowed = { original_tag = SAF }
+		
+		available = {
+		}
+		
+		visible = {  }
+		
+		
+		cost = 40
+		
+		fire_only_once = yes
+
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		complete_effect  = {
+		ZIM = { add_ideas = SAF_idea_27 }
+		}	
+	}
+	SAF_decisions_tag_4_4 = { # Внедрить агента в правительство Южной Родезии
+		
+		allowed = { original_tag = SAF }
+		
+		available = {
+		}
+		
+		visible = { ZIM = { is_puppet = no } }
+		
+		
+		cost = 50
+		
+		fire_only_once = no
+		
+		days_remove = 30
+
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		remove_effect  = {
+		add_popularity = { ideology = fascism popularity = 0.1 }
+		}	
+	}
+	SAF_decisions_tag_4_5 = { # Провести референдум в Южной Родезии
+		
+		allowed = { original_tag = SAF }
+		
+		available = {
+		}
+		
+		visible = { ZIM = { fascism > 0.5  is_puppet = no } }
+		
+		
+		cost = 50
+		
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1
+		}
+		
+		complete_effect  = {
+			annex_country = {
+				target = ZIM
+				transfer_troops = no
+			}
+		}
+	}
+}
+
+SAF_decisions_tag_5 = { # Развёртывание дивизий серорубашечников
+	SAF_decisions_tag_5_1 = { # Призвать на службу серорубашечников-англоафриканцев 
+		
+		allowed = { original_tag = SAF }
+		
+		available = {
+			controls_state = 1108
+		}
+		
+		visible = {  }
+		
+		
+		cost = 50
+		
+		fire_only_once = yes
+
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		complete_effect  = {
+			custom_effect_tooltip = SAF_tooltip_13
+			hidden_effect = { load_oob = SAF_5_div_oob }
+		}	
+	}
+	SAF_decisions_tag_5_2 = { # Призвать на службу серорубашечников-африканеров 
+		
+		allowed = { original_tag = SAF }
+		
+		available = {
+			controls_state = 1107
+		}
+		
+		visible = {  }
+		
+		
+		cost = 50
+		
+		fire_only_once = yes
+
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		complete_effect  = {
+		custom_effect_tooltip = SAF_tooltip_14 hidden_effect = { load_oob = SAF_6_div_oob }
+		}	
+	}
+}
+
+SAF_decisions_tag_6 = { # Обеление Африки
+	SAF_decisions_tag_6_1 = { # Начать выселение цветных меньшинств из провинции
+		
+		allowed = { original_tag = SAF }
+		available = { }
+		visible = { any_owned_state = { has_state_flag = SAF_flag_2 } }
+		cost = 75
+		days_remove = 300
+		fire_only_once = yes
+		ai_will_do = { factor = 1 }
+		complete_effect  = { 
+        random_state = {
+				limit = {
+					is_controlled_by = ROOT
+					has_state_flag = SAF_flag_2
+				}
+				set_state_flag = SAF_flag_3
+				add_province_modifier = { static_modifiers = { SAF_stat_modif_3 } province = { all_provinces = yes } }
+			}
+		}
+		remove_effect  = { 
+		random_owned_state = { 
+		limit = { is_controlled_by = ROOT has_state_flag = SAF_flag_3 } 
+		set_state_flag = SAF_flag_4 clr_state_flag = SAF_flag_2 clr_state_flag = SAF_flag_3
+		remove_province_modifier = { static_modifiers = { SAF_stat_modif_2 SAF_stat_modif_3 } }
+		}	
+	}
+	}
+	SAF_decisions_tag_6_2 = { # Заселить регион белыми фермерами
+		
+		allowed = { original_tag = SAF }
+		available = { controls_state = 1108 }
+		visible = {  }
+		cost = 50
+		days_remove = 182
+		fire_only_once = yes
+		ai_will_do = { factor = 1 }
+		complete_effect  = { add_ideas = SAF_idea_34
+        random_state = {
+				limit = {
+					is_controlled_by = ROOT
+					has_state_flag = SAF_flag_4
+				}
+				set_state_flag = SAF_flag_5
+				add_province_modifier = { static_modifiers = { SAF_stat_modif_4 } province = { all_provinces = yes } }
+			}
+		}
+		remove_effect  = { remove_ideas = SAF_idea_34
+		random_owned_state = { 
+		limit = { is_controlled_by = ROOT has_state_flag = SAF_flag_5 } 
+		remove_province_modifier = { static_modifiers = { SAF_stat_modif_4 } } clr_state_flag = SAF_flag_5
+		add_extra_state_shared_building_slots = 1 add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+		}	
+	}	
+	}
+}
+
+SAF_decisions_tag_7 = { # Развёртывание дивизий серорубашечников
+	SAF_decisions_tag_7_1 = { # Строительство дамбы Кариба
+		
+		allowed = {  }
+		
+		available = {
+		}
+		
+		visible = {  }
+		
+		
+		cost = 50
+		
+		fire_only_once = yes
+
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		complete_effect  = { 
+		country_event = { id = south_afrika.46 }
+		}	
+	}
+	SAF_decisions_tag_7_2 = { # Строительство дамбы Осборн
+		
+		allowed = {  }
+		
+		available = {
+		}
+		
+		visible = {  }
+		
+		
+		cost = 50
+		
+		fire_only_once = yes
+
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		complete_effect  = {
+		country_event = { id = south_afrika.50 }
+		}	
+	}
+	SAF_decisions_tag_7_3 = { # Расширение железорудных приисков
+		
+		allowed = {  }
+		
+		available = {
+		}
+		
+		visible = {  }
+		
+		
+		cost = 50
+		days_remove = 100
+		fire_only_once = yes
+
+		modifier = {
+			civilian_factory_use = 2
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		remove_effect  = { 
+		add_resource = { type = steel amount = 8 state = 1110 }
+		add_resource = { type = steel amount = 6 state = 545 }
+		}	
+	}
+	SAF_decisions_tag_7_4 = { # Строительство ювелирного завода в Солсбери
+		
+		allowed = { original_tag = SAF }
+		
+		available = {
+		}
+		
+		visible = {  }
+		
+		
+		cost = 50
+		days_remove = 90
+		fire_only_once = yes
+
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		remove_effect  = {
+		545 = { add_extra_state_shared_building_slots = 1 add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+		}	
+	}
+}

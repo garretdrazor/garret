@@ -1,0 +1,18 @@
+leader_traits = {
+	nature_ekonomist = {
+		random = no
+		production_speed_buildings_factor = 0.1
+	}
+
+	new_order = { # Новый порядок
+		random = no
+		political_power_factor = 0.05
+	}
+	
+	liberal_writter_1 = { # Либеральный писатель
+		random = no
+		compliance_growth = 0.2
+		political_power_factor = 0.05
+		fascism_drift = -0.01
+	}
+}

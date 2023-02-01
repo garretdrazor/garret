@@ -1,0 +1,28 @@
+﻿division_template = {
+					name = "Division of Gray Shirts"
+					is_locked = yes
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+					}
+				}
+
+units = {
+	
+	division = {
+		name = "1st Division of Gray Shirts"
+		location = 12589 
+		division_template = "Division of Gray Shirts"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2st Division of Gray Shirts"
+		location = 12589 
+		division_template = "Division of Gray Shirts"
+		start_experience_factor = 0.3
+	}
+		
+
+}

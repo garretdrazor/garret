@@ -1,0 +1,34 @@
+﻿division_template = {
+					name = "Afrikaner Militia of Natal"
+					is_locked = yes
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+					}
+				}
+
+units = {
+	
+	division = {
+		name = "10st Afrikaner Militia Unit"
+		location = 1468
+		division_template = "Afrikaner Militia of Natal"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "11st Afrikaner Militia Unit"
+		location = 1468
+		division_template = "Afrikaner Militia of Natal"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "12st Afrikaner Militia Unit"
+		location = 1468
+		division_template = "Afrikaner Militia of Natal"
+		start_experience_factor = 0.3
+	}
+		
+
+}

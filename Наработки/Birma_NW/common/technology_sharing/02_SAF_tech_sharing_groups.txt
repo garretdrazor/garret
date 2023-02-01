@@ -1,0 +1,36 @@
+technology_sharing_group = {
+
+	id = SAF_group_1
+	name = SAF_group_1_name
+	desc = default_group_desc
+	picture = GFX_technology_sharing_default
+    
+	research_sharing_per_country_bonus = 0.1
+	
+	categories = {
+	}
+
+    available = {
+    	SAF = { is_in_faction_with = GER }
+    	GER = { is_faction_leader = yes }
+    }
+}
+
+technology_sharing_group = {
+
+	id = SAF_group_2
+	name = SAF_group_2_name
+	desc = default_group_desc
+	picture = GFX_technology_sharing_default
+    
+	research_sharing_per_country_bonus = 0.1
+	
+	categories = {
+	}
+
+    available = {
+    	SAF = { is_in_faction_with = SOV }
+    	SOV = { is_faction_leader = yes }
+    }
+}
+

@@ -1,0 +1,23 @@
+spriteTypes = {	
+
+	spriteType = {
+		name = "GFX_idea_Frederick_Kreswell"
+		texturefile = "gfx/interface/ideas/SAF/Frederick_Kreswell.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_j_b_m_hertzog"
+		texturefile = "gfx/interface/ideas/SAF/j_b_m_hertzog.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Oswald_Pirow"
+		texturefile = "gfx/interface/ideas/SAF/Oswald_Pirow.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Sarah_Millin"
+		texturefile = "gfx/interface/ideas/SAF/Sarah_Millin.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Yan_Kemp"
+		texturefile = "gfx/interface/ideas/SAF/Yan_Kemp.dds"
+	}
+}

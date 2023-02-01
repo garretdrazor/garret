@@ -48,7 +48,7 @@ country_event = {
 
 	option = {
 		name = sia.3.a
-		add_stability = -0.05
+		add_stability = -0.1
 		add_popularity = { ideology = neutrality popularity = -0.1 }
 		add_political_power = -50
 	}
@@ -66,7 +66,7 @@ country_event = {
 
 	option = {
 		name = sia.4.a
-		add_stability = 0.02
+		add_stability = 0.01
 		add_popularity = { ideology = neutrality popularity = 0.01 }
 		add_political_power = 15
 	}
@@ -85,6 +85,7 @@ country_event = {
 	option = {
 		name = sia.5.a
 		unlock_decision_category_tooltip = SIA_elections_categories
+		add_stability = -0.1
 		add_timed_idea = {
 			idea = SIA_idea_crisis
 			days = 356
@@ -1013,7 +1014,7 @@ country_event = {
 
 	option = {
 		name = sia.9.a
-		
+		add_stability = -0.01
 	}
 }
 
@@ -1254,6 +1255,7 @@ country_event = {
 
 	option = {
 		name = sia.21.a
+		add_stability = -0.05
 		remove_unit_leader_role = {
 			Character = SIA_phraya_phahon
 		}
@@ -1492,12 +1494,42 @@ country_event = {
 		add_popularity = { ideology = fascism popularity = 0.01 }
 		retire_character = SIA_Phraya_Songsuradet
 		retire_character = SIA_Phraya_Thephasdin
+		retire_character = SIA_Rangsit_Prayurasakdi
+		retire_character = SIA_Phraya_Pensawat
 	}
 }
 
-# Успех ультранационалистической политики в *Имя стейта*
+# Успех ультранационалистической политики
+country_event = {
+	id = sia.31
+	title = sia.31.t
+	desc = sia.31.d
+	picture = GFX_report_event_sia_31
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event sia.31" }
 
-# Провал ультранационалистической политики в *Имя стейта*
+	option = {
+		name = sia.31.a
+		
+	}
+}
+
+# Провал ультранационалистической политики
+country_event = {
+	id = sia.32
+	title = sia.32.t
+	desc = sia.32.d
+	picture = GFX_report_event_sia_32
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event sia.32" }
+
+	option = {
+		name = sia.32.a
+		
+	}
+}
 
 # Речь Пибуна
 country_event = {
@@ -1528,7 +1560,7 @@ country_event = {
 
 	option = {
 		name = sia.34.a
-		add_stability = -0.03
+		add_stability = -0.05
 		
 	}
 }

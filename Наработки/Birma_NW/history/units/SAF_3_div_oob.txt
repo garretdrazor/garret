@@ -1,0 +1,34 @@
+﻿division_template = {
+					name = "Afrikaner Militia of Cape"
+					is_locked = yes
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+					}
+				}
+
+units = {
+	
+	division = {
+		name = "7st Afrikaner Militia Unit"
+		location = 12589
+		division_template = "Afrikaner Militia of Cape"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "8st Afrikaner Militia Unit"
+		location = 12589
+		division_template = "Afrikaner Militia of Cape"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "9st Afrikaner Militia Unit"
+		location = 12589
+		division_template = "Afrikaner Militia of Cape"
+		start_experience_factor = 0.3
+	}
+		
+
+}

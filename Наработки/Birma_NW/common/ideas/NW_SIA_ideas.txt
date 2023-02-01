@@ -1629,5 +1629,34 @@ ideas = {
 				boost_resistance_factor = -0.2
 			}
 		}
+		# Королевская морская пехота
+		SIA_idea_sea_recruit_1 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = idea_
+			modifier = {
+				special_forces_min = 5
+			}
+		}
+		# Королевская морская пехота
+		SIA_idea_sea_recruit_2 = {
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = idea_
+			modifier = {
+				amphibious_invasion = 0.25
+				special_forces_min = 5
+			}
+		}
 	}
 }

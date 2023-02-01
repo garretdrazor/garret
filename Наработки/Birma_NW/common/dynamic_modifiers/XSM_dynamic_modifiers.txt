@@ -9,5 +9,4 @@ XSM_salafit_influence_dyn = {
 	enable = { controller = { original_tag = XSM } }
 	icon = GFX_decision_hearth_salafir
 	stability_weekly = -0.0041
-	
 }

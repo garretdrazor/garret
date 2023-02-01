@@ -995,6 +995,23 @@ bookmarks = {
 				XSM_Ma
 			}
 		}
+		"SAF"={
+			minor = yes
+			history = "SAF_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				SAF_idea_3
+				SAF_idea_2
+				SAF_idea_5
+				SAF_idea_1
+			}
+			focuses = {
+				SAF_fwcXxplv
+				SAF_DcbSIrhJ
+				SAF_rJWPBCYE
+				SAF_KaMXJHdo
+			}
+		}
 		
 		effect = {
 			randomize_weather = 22345 # <- Obligatory in every bookmark !

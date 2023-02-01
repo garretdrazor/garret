@@ -489,7 +489,7 @@ focus_tree = {
 	focus = {
 		id = SIA_new_theatry_with_france
 		text = SIA_new_theatry_with_france
-		icon = GFX_z_goal_economic_integration_france
+		icon = GFX_z_goal_siam_fra_invest
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_deanonce_bad_theatry
@@ -578,7 +578,7 @@ focus_tree = {
 	focus = {
 		id = SIA_usa_invest
 		text = SIA_usa_invest
-		icon = GFX_z_goal_USA_trade
+		icon = GFX_z_goal_siam_eng_invest
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_deanonce_bad_theatry
@@ -679,7 +679,7 @@ focus_tree = {
 	focus = {
 		id = SIA_scan_invest
 		text = SIA_scan_invest
-		icon = GFX_z_goal_scandi
+		icon = GFX_z_goal_siam_scan_invest
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_deanonce_bad_theatry
@@ -776,7 +776,7 @@ focus_tree = {
 	focus = {
 		id = SIA_right_invest
 		text = SIA_right_invest
-		icon = GFX_z_goal_economic_integration_italy
+		icon = GFX_z_goal_siam_fas_invest
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_deanonce_bad_theatry
@@ -869,7 +869,7 @@ focus_tree = {
 	focus = {
 		id = SIA_GB_compromise
 		text = SIA_GB_compromise
-		icon = GFX_z_goal_generic_treaty_with_england
+		icon = GFX_z_goal_siam_compromise
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_new_theatry_with_france
@@ -1157,7 +1157,7 @@ focus_tree = {
 	focus = {
 		id = SIA_nacionalization_anather
 		text = SIA_nacionalization_anather
-		icon = GFX_z_goal_nationalization_heavy_industry
+		icon = GFX_z_goal_siam_nac
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_new_theatry_with_france
@@ -1382,7 +1382,7 @@ focus_tree = {
 	focus = {
 		id = SIA_metal_and_rubber
 		text = SIA_metal_and_rubber
-		icon = GFX_z_goal_tragedy_of_shared_resources
+		icon = GFX_z_goal_siam_Chaiseri
 		cost = 7.2
 		prerequisite = {
 			focus = SIA_univer_kasetsart
@@ -2030,7 +2030,7 @@ focus_tree = {
 		bypass = {
 			hidden_trigger = {
 				has_idea = focus_synchronization
-				SIA = { has_completed_focus = GFX_z_goal_siam_hospital_2 }
+				SIA = { has_completed_focus = SIA_med_air }
 			}
 		}
 			
@@ -5294,6 +5294,14 @@ focus_tree = {
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_Sattahip"
+			289 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = naval_base
+					level = 3
+					instant_build = yes
+				}
+			}
 			add_days_mission_timeout = {
 				mission = SIA_new_crisis_mission
 				days = -50
@@ -5325,7 +5333,16 @@ focus_tree = {
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_royal_vmf"
-			
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				category = light_fighter
+			}
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 2
+				category = operational_integrity_tree
+			}
 		}
 	}
 	
@@ -5532,7 +5549,7 @@ focus_tree = {
 		}
 	}
 
-	# Расшить королевский корпус морской пехоты
+	# Расширить королевский корпус морской пехоты
 	focus = {
 		id = SIA_royal_seaman
 		text = SIA_royal_seaman
@@ -5557,7 +5574,12 @@ focus_tree = {
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_royal_seaman"
-			
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				category = marine_tech
+			}
+			add_ideas = SIA_idea_sea_recruit_1
 		}
 	}
 	
@@ -5573,7 +5595,8 @@ focus_tree = {
 		x = 32
 		y = 4
 		available ={
-			
+			country_exists = USA
+			USA = {	has_opinion = { target = SIA value > 50 } }
 		}
 		
 		bypass = {
@@ -5585,7 +5608,17 @@ focus_tree = {
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_usa_seaman"
-			
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				category = marine_tech
+			}
+			add_tech_bonus = {
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = tp_tech
+			}
 		}
 	}
 	
@@ -5648,9 +5681,6 @@ focus_tree = {
 		}
 		x = 34
 		y = 4
-		available ={
-			
-		}
 		
 		bypass = {
 			hidden_trigger = {
@@ -5661,7 +5691,16 @@ focus_tree = {
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_deportament_seaman"
-			
+			add_tech_bonus = {
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = tp_tech
+			}
+			swap_ideas = {
+				remove_idea = SIA_idea_sea_recruit_1
+				add_idea = SIA_idea_sea_recruit_2
+			}
 		}
 	}
 	
@@ -6340,13 +6379,13 @@ focus_tree = {
 		}
 		x = 45
 		y = 11
-		available ={
-			
-		}
 			
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SIA_ultranac"
-			
+			add_war_support = 0.05
+			set_cosmetic_tag = SIA_thai_cosmetic
+			unlock_decision_category_tooltip = SIA_thaification_categories
+			unlock_decision_category_tooltip = SIA_ultranac_categories
 		}
 	}
 	

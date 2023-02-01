@@ -1,0 +1,54 @@
+SAF_decisions_tag_1 = { # Объединить голландский мир
+	picture = GFX_decision_cat_picture_naval_treaties
+	allowed = { original_tag = SAF }
+	visible = { any_owned_state = { is_core_of = HOL } }
+}
+
+SAF_decisions_tag_2 = { # Сформировать Великую Южную Африку
+	picture = GFX_decision_cat_picture_naval_treaties
+	allowed = { original_tag = SAF }
+	visible = { has_completed_focus = SAF_NqyGEPQB NOT = { OR = { has_government = communism has_government = trozkism has_government = anarchism } } }
+}
+
+SAF_decisions_tag_3 = { # Африканерское ополчение
+	picture = GFX_decision_cat_picture_naval_treaties
+	allowed = { original_tag = SAF }
+	visible = { has_war_with = ENG has_idea = SAF_idea_23 }
+}
+
+SAF_decisions_tag_4 = { # Внедрение в Южную Родезию
+	picture = GFX_decision_cat_picture_naval_treaties
+	allowed = { original_tag = SAF }
+	visible = { has_government = fascism has_completed_focus = SAF_pZEDkCOB ZIM = { exists = yes } }
+}
+SAF_decisions_tag_5 = { # Развёртывание дивизий серорубашечников
+	picture = GFX_decision_cat_picture_naval_treaties
+	allowed = { original_tag = SAF }
+	visible = { has_government = fascism has_completed_focus = SAF_jXfZgUAF }
+}
+SAF_decisions_tag_6 = { # Обеление Африки
+	picture = GFX_decision_cat_picture_naval_treaties
+	allowed = { original_tag = SAF }
+	visible = { has_government = fascism has_completed_focus = SAF_QNUPaSwo }
+}
+SAF_decisions_tag_7 = { # Развитие Южной Родезии
+	picture = GFX_decision_cat_picture_naval_treaties
+	allowed = { original_tag = SAF }
+	visible = { is_puppet = no controls_state = 545 controls_state = 1110 }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

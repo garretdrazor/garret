@@ -1,0 +1,741 @@
+ideas = {
+country = {
+	
+SAF_idea_1 = { # Конфликт культур англичан и африканеров
+	allowed = {	always = no	}
+	allowed_civil_war = { always = yes }
+	picture = anglo-afro_conflict
+	removal_cost = -1
+	modifier = { 
+		stability_factor = -0.05
+		fascism_drift = 0.005
+		democratic_acceptance = -80
+	}
+}
+SAF_idea_2 = { # Тяжёлая социальная обстановка
+	allowed = { always = no	}
+	allowed_civil_war = { always = yes }
+	picture = hight_social
+	removal_cost = -1
+	modifier = { 
+		communism_drift = 0.01
+		anarchism_drift = 0.01 
+		production_factory_max_efficiency_factor = -0.1 
+		production_speed_buildings_factor = -0.2 
+	}
+}
+SAF_idea_3 = { # Память об англо-бурской войне
+	allowed = {	always = no	}
+	allowed_civil_war = { always = yes }
+	picture = anglo_bur_war
+	removal_cost = -1
+	modifier = {
+		ai_focus_aggressive_factor = -0.5
+		war_support_factor = -0.1
+	}
+	rule = { can_decline_call_to_war = yes }
+}
+SAF_idea_4 = { # Африканерский патриотизм
+	allowed = {	always = no	}
+	allowed_civil_war = { always = yes }
+	picture = generic_morale_bonus
+	removal_cost = -1
+	modifier = { 
+		army_core_attack_factor = 0.1
+		army_core_defence_factor = 0.1
+	}
+}
+SAF_idea_5 = { # Еврейская иммиграция
+	allowed = {	original_tag = SAF NOT = { has_government = fascism } }
+	allowed_civil_war = { always = yes }
+	picture = jews_exile
+	removal_cost = -1
+	modifier = { 
+		fascism_drift = 0.001
+		MONTHLY_POPULATION = 0.05
+		drift_defence_factor = -0.1
+	}
+}
+SAF_idea_6 = { # Легализация чёрных профсоюзов
+	allowed = {	always = no	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = {
+		political_power_factor = 0.25
+		conscription = 0.02
+		production_factory_max_efficiency_factor = 0.1
+		industrial_capacity_factory = 0.1 
+	}
+}
+SAF_idea_7 = { # Уступки работникам порта
+	allowed = {	always = no	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = {
+		production_speed_buildings_factor = -0.5
+	}
+}
+SAF_idea_8 = { # Недовольство в Кейптауне
+	allowed = {	always = no	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = {
+		industrial_capacity_factory = -0.3
+	}
+}
+SAF_idea_9 = { # Разгон работников порта серорубашечниками
+	allowed = {	always = no	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = {
+		fascism_drift = 0.03
+		production_speed_buildings_factor = -0.25
+	}
+}
+SAF_idea_10 = { # Южноафриканская сталь
+	allowed = {	always = no	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = { 
+		local_resources_factor = 0.2
+	}
+}
+SAF_idea_11 = { # Забастовка шахтёров
+	allowed = {	always = no	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = { 
+		communism_drift = 0.02
+		anarchism_drift = 0.02
+		trozkism_drift = 0.02
+		stability_weekly = -0.003 
+		production_factory_max_efficiency_factor = -0.3 
+		industrial_capacity_factory = -0.3
+   }
+}
+SAF_idea_12 = { # Забастовка чёрных шахтёров
+	allowed = {	always = no	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = { 
+		communism_drift = 0.015
+		trozkism_drift = 0.015
+		stability_factor = -0.1
+		production_factory_max_efficiency_factor = -0.15 
+		industrial_capacity_factory = -0.1
+		political_power_factor = -0.2 
+	}
+}
+SAF_idea_13 = { # Разгон рабочих митингов серорубашечниками
+	allowed = {	always = no	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = { 
+		fascism_drift = 0.03
+		production_factory_max_efficiency_factor = -0.1
+	}
+}
+SAF_idea_14 = { # Последствия проведения международной выставки
+	allowed = { always = no}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = {
+		democratic_acceptance = -30
+	}
+}
+SAF_idea_15 = { # Развитая золотодобыча
+	allowed = {	always = no	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = { 
+		political_power_factor = 0.2
+		production_speed_buildings_factor = 0.1
+	}
+}
+SAF_idea_16 = { # Дешёвая негритянская сила 
+	allowed = {	always = no	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = { 
+		production_speed_buildings_factor = 0.1
+		industrial_capacity_factory = 0.15
+	}
+}
+SAF_idea_17 = { # Поддержка сельского хозяйства
+	allowed = {	always = no	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = { 
+		MONTHLY_POPULATION = 0.1
+	}
+}
+SAF_idea_18 = { # Протекционистская политика в сельском хозяйстве 
+	allowed = {	always = no	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = {
+		MONTHLY_POPULATION = 0.1
+		industrial_capacity_factory = 0.1
+	}
+}
+SAF_idea_19 = { # Развитое сельское хозяйство
+	allowed = {	always = no	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = { 
+		MONTHLY_POPULATION = 0.1
+		industrial_capacity_factory = 0.1
+		production_speed_buildings_factor = 0.7
+		production_factory_max_efficiency_factor = 0.1
+	}
+}
+SAF_idea_20 = { # Еврейская иммиграция
+	allowed = {	original_tag = SAF NOT = { has_government = fascism }	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = {
+		MONTHLY_POPULATION = 0.05
+	}
+}
+SAF_idea_21 = { # Экономические последствия обретения независимости Южной Африки
+	allowed = {	always = no	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = {
+		production_speed_buildings_factor = -0.17
+	}
+}
+SAF_idea_22 = { # Штурмовые отряды Оссевабрандвага
+	allowed = {	always = no	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = { 
+		fascism_drift = 0.005
+		stability_factor = -0.1
+	}
+}
+SAF_idea_23 = { # Месть за англо-бурскую войну
+	allowed = {	has_war_with = ENG	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = { 
+		war_support_factor = 0.3
+		army_core_attack_factor = 0.3 
+		army_core_defence_factor = 0.3 
+		training_time_army_factor = -0.15 
+	}
+}
+SAF_idea_24 = { # Нацистская благотворительная акция
+	allowed = {	always = no	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = {
+		fascism_drift = 0.2
+	}
+}
+SAF_idea_25 = { # Пропаганда Африканер Бредербонд
+	allowed = {	always = no	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = {
+		fascism_drift = 0.1
+	}
+}
+SAF_idea_26 = { # Рост популярности нацистов среди англоафриканцев
+	allowed = {	always = no	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = {
+		fascism_drift = 0.1
+	}
+}
+SAF_idea_27 = { # Распространение нацистских идей
+	allowed = {	always = no	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = {
+		fascism_drift = 0.1
+	}
+}
+SAF_idea_28 = { # Поддержка антиколониализма со стороны Южной Африки
+	allowed = {	always = no	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = {
+		fascism_drift = 0.05
+		autonomy_gain = 5
+	}
+}
+SAF_idea_29 = { # Установление тоталитарного режима
+	allowed = {	always = no	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = { 
+		fascism_drift = 0.1
+		autonomy_gain = 2
+		political_power_factor = 1
+	}
+}
+SAF_idea_30 = { # Вооружённые отряды серорубашечников
+	allowed = {	has_government = fascism	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = { 
+		training_time_army_factor = -0.1
+		army_org_factor = 0.15 
+		conscription = 0.01 
+	}
+}
+SAF_idea_31 = { # Чёрная республика
+	allowed = {	always = no	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = { 
+		trozkism_drift = 0.05 
+		army_speed_factor = 0.3
+	}
+}
+SAF_idea_32 = { # Защита угнетённых
+	allowed = {	always = no	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = {
+		non_core_manpower = 0.02
+	}
+}
+SAF_idea_33 = { # Провозглашение народной республики
+	allowed = {	always = no	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = {
+		communism_drift = 0.05
+	}
+}
+SAF_idea_34 = { # Заселение отдаленных регионов белыми фермерами
+	allowed = {	always = no	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = {
+		MONTHLY_POPULATION = -0.05
+	}
+}
+SAF_idea_35 = { # Стремление к объединению с ЮАС
+	allowed = {	always = no	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = {
+		autonomy_gain = 6
+	}
+}
+SAF_idea_36 = { # Реализация устремлений Смэтса
+	allowed = {	always = no	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = { 
+		political_power_factor = 0.1
+		non_core_manpower = 0.02
+		army_core_attack_factor = 0.05
+		army_core_defence_factor = 0.05
+	}
+}
+SAF_idea_37 = { # Централизация Южной Африки
+	allowed = {	always = no	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = {
+		autonomy_gain = -5
+	}
+}
+SAF_idea_38 = { # Строительство плотины Кариба
+	allowed = {	always = no	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = {
+		consumer_goods_factor = 0.15 
+	}
+}
+SAF_idea_39 = { # Последствия трагедии на дамбе Кариба
+	allowed = {	always = no	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = { 
+		production_factory_max_efficiency_factor = -0.15 
+		industrial_capacity_factory = -0.1
+		political_power_factor = -0.2 
+	}
+}
+SAF_idea_40 = { # Дамба Кариба
+	allowed = {	always = no	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = {
+		consumer_goods_factor = -0.05
+	}
+}
+SAF_idea_41 = { # Дамба Осборн
+	allowed = {	always = no	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = {
+		consumer_goods_factor = -0.05
+	}
+}
+SAF_idea_42 = { # ГЭС Южной Родезии
+	allowed = {	always = no	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = {
+		consumer_goods_factor = -0.1
+	}
+}
+SAF_idea_43 = { # Строительство плотины Осборн
+	allowed = {	always = no	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = {
+		consumer_goods_factor = 0.15
+	}
+}
+SAF_idea_44 = { # Изувеченная память
+	allowed = {	always = no	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = { 
+		stability_factor = 0.1
+		drift_defence_factor = 0.3
+		fascism_drift = -0.01
+		neutrality_drift = -0.01
+	}
+}
+SAF_idea_45 = { # Поддержка англофилии
+	allowed = {	always = no	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = { 
+		monarchy_drift = 0.05
+		war_support_factor = 0.1
+	}
+}
+SAF_idea_46 = { # Синдикалистская революция
+	allowed = {	always = no	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = {
+		anarchism_drift = 0.05
+	}
+ }
+SAF_idea_47 = { # Правительство радикалов
+	allowed = {	always = no	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = {
+		fascism_drift = 0.05
+	}
+}
+SAF_idea_48 = { # Правительство Малана
+	allowed = {	always = no	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = {
+		democratic_drift = 0.05
+	}
+}
+SAF_idea_49 = { # Подготовка к обороне
+	allowed = {	always = no	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = { 
+		production_speed_arms_factory_factor = 0.2
+		conversion_cost_civ_to_mil_factor = -0.2
+		equipment_conversion_speed = 0.2
+	}
+}
+SAF_idea_50 = { # Африканерский национализм
+	allowed = {	always = no	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = { 
+		army_core_attack_factor = 0.2
+		army_core_defence_factor = 0.2
+	}
+}
+SAF_idea_51 = { # Разгром чёрных профсоюзов
+	allowed = {	always = no	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = { 
+		communism_drift = -0.05
+		anarchism_drift = -0.05
+		local_resources_factor = 0.2
+	}
+}
+SAF_idea_52 = { # Cовет коренных народов
+	allowed = {	always = no	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = {
+		non_core_manpower = 0.10
+	}
+}
+SAF_idea_53 = { # Советские советники
+	allowed = {	always = no	}
+	allowed_civil_war = { always = yes }
+	removal_cost = -1
+	modifier = {  }
+	research_bonus = {
+		infantry_weapons = 0.15
+		land_doctrine = 0.15
+	}
+}
+SAF_idea_54 = { # Национализация горнодобывающей промышленности
+	allowed = {	always = no	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = { local_resources_factor = 0.4 }
+}
+SAF_idea_55 = { # Единство угнетённых 
+	allowed = {	always = no	}
+	allowed_civil_war = { always = yes }
+	removal_cost = -1
+	modifier = { 
+		conscription = 0.05
+	}
+}
+SAF_idea_56 = { # Единство Южной Африки
+	allowed = {	always = no	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = { 
+		conscription = 0.02
+		war_support_factor = 0.1
+		stability_factor = 0.1
+	}
+}
+SAF_idea_57 = { # Образование для белых
+	allowed = {	always = no	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = { 
+		research_speed_factor = 0.1
+	}
+}
+SAF_idea_58 = { # Африканер Бредербонд 
+	allowed = {	always = no	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = { 
+		conscription = 0.04
+	war_support_factor = 0.10
+	}
+}
+SAF_idea_59 = { # Вооружённые отряды «Стормьямс» 
+	allowed = {	always = no	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = { 
+		training_time_factor = -0.2
+	}
+}
+SAF_idea_60 = { # Связи с сионистами
+	allowed = {	always = no	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = { 
+		MONTHLY_POPULATION = 0.05
+		conscription = 0.01
+		production_speed_buildings_factor = 0.1
+	}
+}
+SAF_idea_61 = { # Лояльность Вестминстеру
+	allowed = {	always = no	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = {
+		production_speed_buildings_factor = 0.1
+	}
+}
+SAF_idea_62 = { # Уступки националистам
+	allowed = {	always = no	}
+	cancel = { is_puppet = no }
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = {
+		autonomy_gain = 2
+	}
+}
+SAF_idea_63 = { # Популярность троцкизма среди чёрных
+	allowed = {	always = no	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = { trozkism_drift = 0.1 }
+}
+SAF_idea_64 = { # Впечатляющая популярность троцкизма среди чёрных
+	allowed = {	always = no	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = {
+		trozkism_drift = 0.2
+	}
+}
+SAF_idea_65 = { # Политика родной земли
+	allowed = {	always = no	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = { 
+		army_core_attack_factor = 0.05
+		army_core_defence_factor = 0.05
+		weekly_manpower = 300
+	}
+}
+SAF_idea_66 = { # Изгнание буров
+	allowed = {	always = no	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = {
+		MONTHLY_POPULATION = -0.5
+	}
+}
+SAF_idea_67 = { # Коммунисты привлекают чёрных националистов
+	allowed = {	always = no	}
+	allowed_civil_war = { always = yes }
+	removal_cost = -1
+	modifier = { 
+		communism_drift = 0.01
+		stability_weekly = -0.1
+	}
+}
+SAF_idea_68 = { # Бремя белого человека
+	allowed = {	always = no	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = { 
+		war_support_factor = 0.10
+		political_power_factor = 0.1
+		justify_war_goal_time = -0.25
+	}
+}
+SAF_idea_69 = { # Привлечение чёрных мигрантов
+	allowed = {	always = no	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = { 
+		MONTHLY_POPULATION = 5.0
+		stability_factor = -0.025
+	}
+}
+SAF_idea_70 = { # Связи с западными демократиями
+	allowed = {	always = no	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = {
+		democratic_drift = 0.05
+	}
+}
+SAF_idea_71 = { # Сотрудничество с великим державами
+	allowed = {	always = no	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = { 
+		political_power_factor = 0.1
+		political_advisor_cost_factor = -0.4
+		opinion_gain_monthly_factor = 0.15
+	}
+}
+SAF_idea_72 = { # Расширение автономии
+	allowed = {	always = no	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = {
+		autonomy_gain = 1.0
+	}
+}
+SAF_idea_73 = { # Снижение автономии
+	allowed = {
+		always = no
+		NOT = {	has_autonomy_state = autonomy_free	}
+	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = {
+		autonomy_gain = -1.0
+	}
+}
+SAF_idea_73 = { # Доки Кейптауна
+	allowed = {
+		always = no
+		NOT = {	has_autonomy_state = autonomy_free	}
+	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = {
+		min_export = 0.1
+	}
+}
+}    
+}  

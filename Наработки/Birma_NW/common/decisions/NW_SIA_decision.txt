@@ -1609,6 +1609,242 @@ SIA_elections_categories = {
 	}
 }
 
+# Тайфикация
+SIA_thaification_categories = {
+	SIA_thaification_of_Laos = {
+		allowed = {
+			tag = SIA
+		}
+		
+		available = {
+			has_completed_focus = SIA_war_with_indchi
+			SIA = {
+				controls_state = 1181
+				controls_state = 670
+				controls_state = 1180
+			}
+		}
+		
+		icon = GFX_thai_visit_ita
+
+		cost = 50
+		days_remove = 90
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision SIA_thaification_of_Laos"
+			add_state_core = 1181
+			add_state_core = 670
+			add_state_core = 1180
+		}
+	}
+	SIA_thaification_of_Camboja = {
+		allowed = {
+			tag = SIA
+		}
+		
+		available = {
+			has_completed_focus = SIA_war_with_indchi
+			SIA = {
+				controls_state = 1179
+				controls_state = 741
+			}
+		}
+		
+		icon = GFX_thai_visit_ita
+
+		cost = 50
+		days_remove = 90
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision SIA_thaification_of_Camboja"
+			add_state_core = 1179
+			add_state_core = 741
+		}
+	}
+	SIA_thaification_of_Annam = {
+		allowed = {
+			tag = SIA
+		}
+		
+		available = {
+			has_completed_focus = SIA_thai_viette
+			SIA = {
+				controls_state = 286
+				controls_state = 671
+			}
+		}
+		
+		icon = GFX_thai_visit_ita
+
+		cost = 50
+		days_remove = 90
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision SIA_thaification_of_Annam"
+			add_state_core = 286
+			add_state_core = 671
+		}
+	}
+	SIA_thaification_of_Malasia = {
+		allowed = {
+			tag = SIA
+		}
+		
+		available = {
+			has_completed_focus = SIA_back_north_malaia
+			SIA = {
+				controls_state = 1183
+				controls_state = 336
+				controls_state = 1184
+			}
+		}
+		
+		icon = GFX_thai_visit_ita
+
+		cost = 50
+		days_remove = 90
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision SIA_thaification_of_Malasia"
+			add_state_core = 1181
+			add_state_core = 336
+			add_state_core = 1184
+		}
+	}
+	SIA_thaification_of_Bhurma = {
+		allowed = {
+			tag = SIA
+		}
+		
+		available = {
+			has_completed_focus = SIA_help_bhurma_thai
+			SIA = {
+				controls_state = 1150
+				controls_state = 1151
+				controls_state = 640
+			}
+		}
+		
+		icon = GFX_thai_visit_ita
+
+		cost = 50
+		days_remove = 90
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision SIA_thaification_of_Bhurma"
+			add_state_core = 1150
+			add_state_core = 1151
+			add_state_core = 640
+		}
+	}
+	SIA_thaification_of_Guansi = {
+		allowed = {
+			tag = SIA
+		}
+		
+		available = {
+			has_completed_focus = SIA_back_last_thai
+			SIA = {
+				controls_state = 594
+				controls_state = 599
+			}
+		}
+		
+		icon = GFX_thai_visit_ita
+
+		cost = 50
+		days_remove = 90
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision SIA_thaification_of_Guansi"
+			add_state_core = 594
+			add_state_core = 599
+		}
+	}
+}
+
+# Проведение националистической политики
+SIA_ultranac_categories = {
+	SIA_ultranac = {
+		icon = eng_propaganda_campaigns
+		on_map_mode = map_and_decisions_view
+		state_target = yes
+		target_array = ROOT.core_states
+		allowed = {
+			tag = SIA
+		}
+		available = {
+			has_completed_focus = SIA_war_with_indchi
+			FROM = {
+				is_fully_controlled_by = ROOT
+				NOT = {
+					has_dynamic_modifier = { modifier = SIA_nac_up_dyn }
+				}
+			}
+		}
+		visible = {
+			FROM = {
+				is_owned_by = ROOT
+				NOT = {
+					has_dynamic_modifier = { modifier = SIA_nac_up_dyn }
+				}
+			}
+		}
+		target_trigger = {
+			FROM = {
+				is_owned_by = ROOT
+				NOT = {
+					has_dynamic_modifier = { modifier = SIA_nac_up_dyn }
+				}
+			}
+		}
+		target_array = ROOT.owned_controlled_states
+		target_root_trigger = {
+			OR = {
+				has_completed_focus = SIA_war_with_indchi
+			}
+		}
+		cost = 50
+		days_remove = 30
+		cancel_trigger = {
+			hidden_trigger = {
+				NOT = { FROM = { is_fully_controlled_by = ROOT } }
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision SIA_ultranac"
+			if = {
+				limit = {
+					NOT = {
+						has_idea = SIA_Luang_Wichitwathakan
+					}
+				}
+				random_list = {
+					50 = {
+						country_event = { id = sia.31 days = 1 }
+					}
+					50 = {
+						country_event = { id = sia.32 days = 1 }
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SIA_Luang_Wichitwathakan
+				}
+				random_list = {
+					65 = {
+						country_event = { id = sia.31 days = 1 }
+					}
+					35 = {
+						country_event = { id = sia.32 days = 1 }
+					}
+				}
+			}
+		}
+	}
+}
+
 # Реализация проекта «Жёлтая книга»
 SIA_yellow_book_categories = {
 	SIA_nation_lands = {

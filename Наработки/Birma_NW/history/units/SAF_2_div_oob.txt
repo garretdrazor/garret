@@ -1,0 +1,34 @@
+﻿division_template = {
+					name = "Afrikaner Militia of the Free State"
+					is_locked = yes
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+					}
+				}
+
+units = {
+	
+	division = {
+		name = "4st Afrikaner Militia Unit"
+		location = 14227
+		division_template = "Afrikaner Militia of the Free State"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "5st Afrikaner Militia Unit"
+		location = 14227
+		division_template = "Afrikaner Militia of the Free State"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "6st Afrikaner Militia Unit"
+		location = 14227
+		division_template = "Afrikaner Militia of the Free State"
+		start_experience_factor = 0.3
+	}
+		
+
+}

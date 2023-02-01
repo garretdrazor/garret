@@ -1,7 +1,7 @@
 ﻿capital = 289
 
 oob = "SIA_1936"
-set_stability = 0.5
+set_stability = 0.7
 set_war_support = 0.3
 set_research_slots = 2
 add_ideas = {
@@ -11,6 +11,8 @@ add_ideas = {
 	SIA_idea_chine_workers
 	SIA_idea_rama_viii
 	SIA_idea_police_army_4
+	limited_conscription
+	limited_exports
 }
 # Starting tech
 set_technology = {

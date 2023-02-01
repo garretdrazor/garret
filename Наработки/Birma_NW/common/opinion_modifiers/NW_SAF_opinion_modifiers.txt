@@ -1,0 +1,20 @@
+opinion_modifiers = {
+
+	
+	SAF_opinion_modifiers_1 = { value = -15 }
+	SAF_opinion_modifiers_2 = { value = 10 }
+	SAF_opinion_modifiers_3 = { value = 15 }
+	SAF_opinion_modifiers_4 = { value = 20 }
+	SAF_opinion_modifiers_5 = { value = -50 }
+	SAF_opinion_modifiers_6 = { value = -100 }
+	SAF_opinion_modifiers_7 = { value = 15 }
+	SAF_opinion_modifiers_8 = { value = 15 }
+	SAF_opinion_modifiers_9 = { value = 35 }
+	SAF_opinion_modifiers_10 = { value = 50 }
+	SAF_opinion_modifiers_11 = { value = 25 }
+	SAF_opinion_modifiers_12 = { value = 11111111 }
+	SAF_opinion_modifiers_13 = { value = 11111111 }
+	SAF_opinion_modifiers_14 = { value = 11111111 }
+	
+	
+}

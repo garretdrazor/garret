@@ -225,6 +225,33 @@ spriteTypes = {
 		name = "GFX_z_goal_siam_uvachon"
 		texturefile = "gfx/interface/goals/z_goal_siam_uvachon.dds"
 	}
-	
+	SpriteType = { 
+		name = "GFX_z_goal_siam_eng_invest"
+		texturefile = "gfx/interface/goals/z_goal_siam_eng_invest.dds"
+	}
+	SpriteType = { 
+		name = "GFX_z_goal_siam_fra_invest"
+		texturefile = "gfx/interface/goals/z_goal_siam_fra_invest.dds"
+	}
+	SpriteType = { 
+		name = "GFX_z_goal_siam_scan_invest"
+		texturefile = "gfx/interface/goals/z_goal_siam_scan_invest.dds"
+	}
+	SpriteType = { 
+		name = "GFX_z_goal_siam_nac"
+		texturefile = "gfx/interface/goals/z_goal_siam_nac.dds"
+	}
+	SpriteType = { 
+		name = "GFX_z_goal_siam_fas_invest"
+		texturefile = "gfx/interface/goals/z_goal_siam_fas_invest.dds"
+	}
+	SpriteType = { 
+		name = "GFX_z_goal_siam_compromise"
+		texturefile = "gfx/interface/goals/z_goal_siam_compromise.dds"
+	}
+	SpriteType = { 
+		name = "GFX_z_goal_siam_Chaiseri"
+		texturefile = "gfx/interface/goals/z_goal_siam_Chaiseri.dds"
+	}
 	
 }

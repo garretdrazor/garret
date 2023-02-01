@@ -1,0 +1,5 @@
+#SAF_black_region_dyn = {
+#	enable = { controller = { original_tag = SAF } }
+#	icon = GFX_state_elephants_modifier
+#	local_manpower = -0.9
+#}
