@@ -1,5 +1,4 @@
 version="0.1"
-replace_path="map"
 tags={
 	"National Focuses"
 }

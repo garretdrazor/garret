@@ -355,7 +355,7 @@ country_event = { # Смерть Барри Герцога
 		days = 1
 	}
 	
-	option = { # Николас Хавенга займёт его место
+	option = { # Мы сохраним память о нём 
 		name = south_afrika.13.a
 		ai_chance = { factor = 1 }
 		create_country_leader = {
@@ -368,11 +368,33 @@ country_event = { # Смерть Барри Герцога
 				nature_ekonomist # Прирождённый экономист
 			}
 		}
+		set_country_flag = SAF_flag_15
+		set_country_flag = SAF_flag_18
+		if = { limit = { has_completed_focus = SAF_WLbUSFyZ } set_party_name = { ideology = neutrality name = SAF_neutrality_party_1 long_name = SAF_neutrality_party_1 } }
+	}
+	
+	option = { # Николас Хавенга займёт его место
+		name = south_afrika.13.b
+		ai_chance = { factor = 1 }
+		add_political_power = -20
+		create_country_leader = {
+			name = "Nicolaas Havenga"
+			desc = "POLITICS_SAF_Nicolaas_Havenga_DESC"
+			picture = "Portrait_SAF_Nicolaas_Havenga.dds"
+			expire = "1965.1.1"
+			ideology = moderatism
+			traits = {
+				nature_ekonomist # Прирождённый экономист
+			}
+		}
+		set_country_flag = SAF_flag_15
+		set_country_flag = SAF_flag_18
 		if = { limit = { has_completed_focus = SAF_WLbUSFyZ } set_party_name = { ideology = neutrality name = SAF_neutrality_party_1 long_name = SAF_neutrality_party_1 } }
 	}
 	option = { # Освальд Пироу является лучшим преемником 
-		name = south_afrika.13.b
+		name = south_afrika.13.c
 		ai_chance = { factor = 1 }
+		add_political_power = -20
 		create_country_leader = {
 			name = "Oswald Pirow"
 			desc = "POLITICS_SAF_Oswald_Pirow_DESC"
@@ -383,6 +405,37 @@ country_event = { # Смерть Барри Герцога
 				new_order # Новый порядок
 			}
 		}
+		set_country_flag = SAF_flag_16
+		set_country_flag = SAF_flag_18
+		if = { limit = { has_completed_focus = SAF_WLbUSFyZ } set_party_name = { ideology = neutrality name = SAF_neutrality_party_2 long_name = SAF_neutrality_party_2 } }
+	}
+	option = { # Возглавить правительство должна та, что преобразила страну
+		name = south_afrika.13.e
+		ai_chance = { factor = 1 }
+		add_political_power = -20
+		add_popularity = { ideology = democratic popularity = 0.5 }
+		set_politics = { ruling_party = democratic }
+		create_country_leader = {
+			name = "Sarah Milin"
+			picture = "Portrait_South_Africa_Sarah_Milin.dds"
+			expire = "1965.1.1"
+			ideology = liberalism
+			traits = {
+				liberal_writter_1 
+			}
+		}
+		create_country_leader = {
+			name = "Nicolaas Havenga"
+			desc = "POLITICS_SAF_Nicolaas_Havenga_DESC"
+			picture = "Portrait_SAF_Nicolaas_Havenga.dds"
+			expire = "1965.1.1"
+			ideology = moderatism
+			traits = {
+				nature_ekonomist # Прирождённый экономист
+			}
+		}
+		set_country_flag = SAF_flag_17
+		set_country_flag = SAF_flag_18
 		if = { limit = { has_completed_focus = SAF_WLbUSFyZ } set_party_name = { ideology = neutrality name = SAF_neutrality_party_2 long_name = SAF_neutrality_party_2 } }
 	}
 }
@@ -411,6 +464,7 @@ country_event = { # Месть за наших предков
 		name = south_afrika.14.a
 		swap_ideas = { remove_idea = SAF_idea_3 add_idea = SAF_idea_23 }
 		unlock_decision_category_tooltip = SAF_decisions_tag_3
+		add_war_support = 0.1
 	}
 }
 
@@ -432,7 +486,6 @@ country_event = { # Война с Южной Африкой затянулась
 			OR = {
 				NOT = { is_core_of = SAF }
 				NOT = { is_owned_by = SAF }
-				is_controlled_by = SAF
 			}
 		}
 		SAF = { OR = { is_in_faction = no is_faction_leader = yes } }
@@ -603,9 +656,9 @@ country_event = { # Британия отказывается вернуть Ю�
 		name = south_afrika.21.a
 		ai_chance = { factor = 10 }
 		create_wargoal = {
-				type = annex_everything
-				target = ENG
-			}
+			type = annex_everything
+			target = ENG
+		}
 	}
 	option = { # Раз они такие настойчивые…
 		name = south_afrika.21.b
@@ -666,10 +719,11 @@ country_event = { # Образование Белой рабочей парти�
 		name = south_afrika.23.a
 		custom_effect_tooltip = SAF_tooltip_10
 		set_party_name = { ideology = fascism name = SAF_fascism_party_2 long_name = SAF_fascism_party_2 }
-		hidden_effect = { if = { limit = { NOT = { has_completed_focus = SAF_keLFamxQ } } country_event = { days = 25 id = south_afrika.24 } }  
-		if = { limit = { NOT = { has_completed_focus = SAF_rHIQosqA } } country_event = { days = 20 id = south_afrika.25 } }
+		hidden_effect = { if = { limit = { NOT = { has_completed_focus = SAF_keLFamxQ } } country_event = { days = 20 id = south_afrika.24 } }  
+		if = { limit = { NOT = { has_completed_focus = SAF_rHIQosqA } } country_event = { days = 30 id = south_afrika.25 } }
         if = { limit = { NOT = { has_completed_focus = SAF_KTQHGDCv } } country_event = { days = 40 id = south_afrika.26 } }
-        if = { limit = { communism > 0.05 } country_event = { days = 50 id = south_afrika.27 } }		}  
+        if = { limit = { OR = { communism > 0.05 trozkism > 0.05 } country_event = { days = 50 id = south_afrika.27 } }		}  
+			}
 	}
 }
 
@@ -915,7 +969,7 @@ country_event = { # Южная Африка требует передать ко
 	option = { # Они хотят расчленить нашу колониальную империю?
 		name = south_afrika.32.b
 		ai_chance = { factor = 1 }
-		add_stability = -0.05 
+		add_stability = -0.03
 		SAF = { country_event = { days = 5 id = south_afrika.34 } }
 		if = { limit = { NOT = { country_exists = BOT } OR = { ENG = { controls_state = 1110 } any_other_country = { is_puppet_of = ENG controls_state = 1110 } } } release = BOT country_event = { id = south_afrika.33 } }
 		if = { limit = { NOT = { country_exists = BOT OR = { ENG = { controls_state = 1110 } any_other_country = { is_puppet_of = ENG controls_state = 1110 } } } } release = BOT declare_war_on = { target = BOT type = annex_everything } }
@@ -1599,7 +1653,7 @@ country_event = { # Южная Африка хочет купить Мозамб
 		ai_chance = { factor = 1 }
 		add_political_power = 50
 		add_offsite_building = { type = industrial_complex level = 2 }
-		FROM = { transfer_state = 544 }
+		FROM = { transfer_state = 544 transfer_state = 983 }
 		hidden_effect = { FROM = { country_event = { id = south_afrika.60 } } }
 	}
 	option = { # Нет, даже и не спрашивайте
@@ -1816,7 +1870,7 @@ country_event = { # Южная Африка предлагает мир
 	}
 }
 
-country_event = { # Майские выборы в парламент 1938 года
+country_event = { # Объединённая национальная партия побеждает на выборах
 	id = south_afrika.69
 	title = south_afrika.69.t
 	desc = south_afrika.69.d
@@ -1830,25 +1884,19 @@ country_event = { # Майские выборы в парламент 1938 го�
 		tag = SAF
 		date > 1938.5.18
 		NOT = { has_completed_focus = SAF_JPMvjnrI }
+		set_temp_variable = { temp1 = party_popularity_100@neutrality }
+		add_to_temp_variable = { temp1 = party_popularity_100@democratic }
+		check_variable = { temp1 > party_popularity_100@fascism }
 	}
 
 	mean_time_to_happen = {
 		days = 1
 	}
 
-	option = { # Объединённая национальная партия побеждает на выборах
+	option = { # Да здравствует Южная Африка! 
 		name = south_afrika.69.a
 		ai_chance = { factor = 1 }
-		trigger = { neutrality > 50 } 
 		add_political_power = 50
-	}
-	option = { # Белая рабочая партия побеждает на выборах
-		name = south_afrika.69.b
-		ai_chance = { factor = 1 }
-		trigger = { neutrality < 50 }
-		set_country_flag = SAF_flag_10
-		add_popularity = { ideology = fascism popularity = 0.1 }
-	    set_politics = { ruling_party = fascism }
 	}
 }
 
@@ -1864,7 +1912,7 @@ country_event = { # Парламент отклонил принятие зак�
 
 	option = { # Тогда принимайте отставку премьер-министра!
 		name = south_afrika.70.a
-		ai_chance = { factor = 1 }
+		ai_chance = { factor = 1 modifier = { factor = 1 is_historical_focus_on = yes } }
 		set_politics = { ruling_party = democratic }
 		unlock_national_focus = SAF_GiSnNgCW
 		remove_ideas = SAF_idea_3 
@@ -2051,5 +2099,37 @@ country_event = { # Несоответствие идеологии и дейс�
 			traits = {
 			}
 		}
+	}
+}
+
+country_event = { # Белая рабочая партия побеждает на выборах
+	id = south_afrika.78
+	title = south_afrika.78.t
+	desc = south_afrika.78.d
+	picture = GFX_report_event_gathering_protest
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event south_afrika.78" }
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = SAF
+		date > 1938.5.18
+		NOT = { has_completed_focus = SAF_JPMvjnrI }
+		set_temp_variable = { temp1 = party_popularity_100@neutrality }
+		add_to_temp_variable = { temp1 = party_popularity_100@democratic }
+		check_variable = { temp1 < party_popularity_100@fascism }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = { # Да здравствует Южная Африка!
+		name = south_afrika.78.a
+		ai_chance = { factor = 1 }
+		set_country_flag = SAF_flag_10
+		add_popularity = { ideology = fascism popularity = 0.1 }
+	    set_politics = { ruling_party = fascism }
 	}
 }

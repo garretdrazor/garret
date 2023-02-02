@@ -17,6 +17,9 @@ characters={
 			}
 			available = {
 				NOT = {
+					has_country_flag = SAF_flag_18
+				}
+				NOT = {
 					has_government = neutrality
 				}
 			}
@@ -580,6 +583,11 @@ characters={
 			allowed = {
 				original_tag = SAF
 			}
+			available = {
+				NOT = {
+					has_country_flag = SAF_flag_15
+				}
+			}
 			traits = {
 				captain_of_industry 
 			}
@@ -642,6 +650,9 @@ characters={
 				original_tag = SAF
 			}
 			available = {
+				NOT = {
+					has_country_flag = SAF_flag_15
+				}
 				OR = {
 					NOT = {
 						has_government = communism
@@ -693,6 +704,9 @@ characters={
 				original_tag = SAF
 			}
 			available = {
+				NOT = {
+					has_country_flag = SAF_flag_17
+				}
 				NOT = {
 					has_government = fascism
 				}

@@ -1,12 +1,12 @@
 focus_tree = {
 	id = NW_saf_tree
 	country = {
-		factor = 1000
+		factor = 0
 		modifier = {
-			add = 0
+			add = 10
 			tag = SAF
 		}
-    }
+	}
 continuous_focus_position = { x = 0 y = 1800 }
 
 
@@ -362,7 +362,7 @@ continuous_focus_position = { x = 0 y = 1800 }
 	}
 
 	
-	focus = { # Купить Мозамбика
+	focus = { # Купить Мозамбик
 		id = SAF_XAJWUPha
 		icon = GFX_z_goal_buy_mozambik
 		x = 6
@@ -372,10 +372,11 @@ continuous_focus_position = { x = 0 y = 1800 }
 		prerequisite = { focus = SAF_LgrdsjiO }
         bypass = {
 			OR = {
-                controls_state = 544
+                ROOT = { controls_state = 544 controls_state = 983 }
                 any_other_country = {
-                        is_in_faction_with = ROOT
-                        controls_state = 544
+                    is_in_faction_with = ROOT
+                    controls_state = 544
+					controls_state = 983
 				}
             }
 		}
@@ -385,10 +386,12 @@ continuous_focus_position = { x = 0 y = 1800 }
         completion_reward = {
             log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SAF_XAJWUPha"
             add_state_claim = 544
+			add_state_claim = 983
             if = {
 				limit = {
 					MZB = {
 						controls_state = 544
+						controls_state = 983
 					}
 				}
 				create_wargoal = { type = annex_everything target = MZB }
@@ -398,12 +401,14 @@ continuous_focus_position = { x = 0 y = 1800 }
 					NOT = {
 						MZB = {
 							controls_state = 544
+							controls_state = 983
 						}
 					}
 				}
 				random_other_country = {
 					limit = {
-						controls_state = 544 
+						controls_state = 544
+						controls_state = 983
 					}
 					country_event = { id = south_afrika.59 }
 				}
@@ -467,14 +472,28 @@ continuous_focus_position = { x = 0 y = 1800 }
 		
 		mutually_exclusive = { focus = SAF_gdoCHKbE }
 		ai_will_do = {
-			factor = 1
+			factor = 10
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+				date < 1939.1.1
+			}
 		}
         completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SAF_JPMvjnrI"        
 			custom_effect_tooltip = SAF_tooltip_11
 			if = { limit = { has_country_leader = { name = "J. B. M. Hertzog" ruling_only = yes } } custom_effect_tooltip = SAF_tooltip_12 }
-			if = { limit = { OR = { democratic > 0.2 threat < 0.2 ENG = { has_government = democratic } } } country_event = { id = south_afrika.70 } }
-			if = { limit = { OR = { democratic < 0.2 threat > 0.2 ENG = { NOT = { has_government = democratic } } } } country_event = { id = south_afrika.71 } }
+			if = {
+				limit = {
+					set_temp_variable = { temp1 = party_popularity_100@monarchy }
+					add_to_temp_variable = { temp1 = party_popularity_100@democratic }
+					check_variable = { temp1 > party_popularity_100@neutrality }
+				}
+				country_event = { id = south_afrika.70 }
+			}
+			else = {
+				country_event = { id = south_afrika.71 }
+			}
         }
 	}
 
@@ -2188,6 +2207,9 @@ continuous_focus_position = { x = 0 y = 1800 }
 		ai_will_do = {
 			factor = 1
 		}
+		completion_reward = {
+			add_ideas = SAF_idea_76
+		}
 	}
 
 	
@@ -2201,6 +2223,28 @@ continuous_focus_position = { x = 0 y = 1800 }
 		prerequisite = { focus = SAF_RJApeuma }
 		ai_will_do = {
 			factor = 1
+		}
+		
+		available = {
+			is_in_tech_sharing_group = commonwealth_research
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			SAF = {
+   				modify_tech_sharing_bonus = {
+         			id = commonwealth_research
+         			bonus = 0.1  # we get 20% higher bonus from this group
+    			}
+			}
 		}
 	}
 
@@ -2237,6 +2281,10 @@ continuous_focus_position = { x = 0 y = 1800 }
 		ai_will_do = {
 			factor = 1
 		}
+		
+		completion_reward = {
+			add_ideas = SAF_idea_75
+		}
 	}
 
 	
@@ -2245,11 +2293,87 @@ continuous_focus_position = { x = 0 y = 1800 }
 		icon = GFX_z_goal_generic_latest_artillery
 		x = 8
 		y = 5
-		cost = 10
 		
 		prerequisite = { focus = SAF_RJApeuma }
+		
+		cost = 10
+
 		ai_will_do = {
 			factor = 1
+		}
+		
+		available = {
+			controls_state = 681
+			controls_state = 1108
+			controls_state = 719
+		}
+			
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			681 = {
+				add_building_construction = {
+					type = coastal_bunker
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+					}
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					province = {
+						all_provinces = yes							
+						limit_to_naval_base = yes
+					}
+					level = 2
+					instant_build = yes
+				}
+			}
+			1108 = {
+				add_building_construction = {
+					type = coastal_bunker
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+					}
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					province = {
+						all_provinces = yes							
+						limit_to_naval_base = yes
+					}
+					level = 2
+					instant_build = yes
+				}
+			}
+			719 = {
+				add_building_construction = {
+					type = coastal_bunker
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+					}
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					province = {
+						all_provinces = yes							
+						limit_to_naval_base = yes
+					}
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
 
@@ -2273,9 +2397,8 @@ continuous_focus_position = { x = 0 y = 1800 }
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SAF_RJApeuma"
 			add_ideas = SAF_idea_61
 			army_experience = 10
-			add_tech_bonus = {
-				name = land_doc_bonus
-				bonus = 1
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
 				uses = 2
 				category = land_doctrine
 			}
@@ -2403,7 +2526,7 @@ continuous_focus_position = { x = 0 y = 1800 }
 		ai_will_do = {
 			factor = 1
 		}
-        completion_reward = { 
+        completion_reward = {
 			add_political_power = 100
 			add_popularity = { ideology = neutrality popularity = -0.1 }
 			hidden_effect = { set_party_name = { ideology = neutrality name = SAF_neutrality_party_3 long_name = SAF_neutrality_party_3 } }
@@ -2418,8 +2541,11 @@ continuous_focus_position = { x = 0 y = 1800 }
 		y = 2
 		cost = 5
         available = { 
-        BPL = { has_completed_focus = BPL_concessions_jewish_leaders }
-        OR = { has_idea = SAF_idea_5 has_idea = SAF_idea_20 }
+			BPL = { has_completed_focus = BPL_concessions_jewish_leaders }
+			OR = {
+				has_idea = SAF_idea_5
+				has_idea = SAF_idea_20
+			}
         }
 		
 		prerequisite = { focus = SAF_GiSnNgCW }
@@ -2456,7 +2582,12 @@ continuous_focus_position = { x = 0 y = 1800 }
 		y = 4
 		cost = 10
         available = {
-			OR = { neutrality > 0.25 fascism > 0.25 }
+			set_temp_variable = { temp1 = party_popularity_100@neutrality }
+			add_to_temp_variable = { temp1 = party_popularity_100@fascism }
+			check_variable = { temp1 > 40 }
+			custom_trigger_tooltip = {
+				tooltip = SAF_tooltip_21
+			}
         }
 		
 		prerequisite = { focus = SAF_GiSnNgCW }
@@ -2493,7 +2624,10 @@ continuous_focus_position = { x = 0 y = 1800 }
 		ai_will_do = {
 			factor = 1
 		}
-        completion_reward = { remove_ideas = SAF_idea_22 add_popularity = { ideology = fascism popularity = -0.1 } }
+        completion_reward = {
+			remove_ideas = SAF_idea_22
+			add_popularity = { ideology = fascism popularity = -0.1 }
+		}
 	}
 
 	
