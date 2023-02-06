@@ -1177,7 +1177,7 @@ country_event = { # Верные нам подданные выступают п
 		name = south_afrika.40.b
 		ai_chance = { factor = 1 }
 		SAF = { add_stability = -0.05 }
-			}
+	}
 }
 
 country_event = { # Пробританские силы поднимают восстание
@@ -1250,6 +1250,9 @@ country_event = { # Профсоюз работников промышленно
 		ai_chance = { factor = 1 }
 		set_politics = { ruling_party = anarchism elections_allowed = no } add_popularity = { ideology = anarchism popularity = 0.1 }
 		if = { limit = { has_idea = SAF_idea_22 } start_civil_war = { ideology = fascism size = 0.3 } }
+		hidden_effect = {
+			set_country_flag = SAF_flag_19
+		}
 	}
 }
 
@@ -1579,6 +1582,7 @@ country_event = { # Подтасовка на выборах
 	option = { # Всё же мы за демократию
 		name = south_afrika.57.b
 		ai_chance = { factor = 1 modifier = { factor = 0 is_historical_focus_on = yes } }
+		custom_effect_tooltip = SAF_tooltip_1
 	}
 }
 
@@ -2131,5 +2135,172 @@ country_event = { # Белая рабочая партия побеждает н
 		set_country_flag = SAF_flag_10
 		add_popularity = { ideology = fascism popularity = 0.1 }
 	    set_politics = { ruling_party = fascism }
+	}
+}
+
+country_event = { # Контроль над чёрным населением
+	id = south_afrika.79
+	title = south_afrika.79.t
+	desc = south_afrika.79.d
+	picture = GFX_report_event_gathering_protest
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event south_afrika.79" }
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+	
+	option = { # Это успех
+		name = south_afrika.79.a
+		ai_chance = { factor = 1 }
+		add_ideas = SAF_idea_78
+		1107 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+        }
+	}
+}
+
+country_event = { # Коммунисты устроили митинги в крупных городах
+	id = south_afrika.80
+	title = south_afrika.80.t
+	desc = south_afrika.80.d
+	picture = GFX_report_event_gathering_protest
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event south_afrika.80" }
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+	
+	option = { # Пускай выражают свою дикость 
+		name = south_afrika.80.a
+		ai_chance = { factor = 1 }
+		trigger = {
+			NOT = {
+				has_country_flag = SAF_flag_21
+				has_country_flag = SAF_flag_22
+				has_country_flag = SAF_flag_23
+				has_country_flag = SAF_flag_24
+			}
+		}
+		add_timed_idea = { idea = SAF_idea_80 days = 20 }
+		add_stability = -0.1
+	}
+	option = { # А для кого мы создали десятки независимых государств? 
+		name = south_afrika.80.b
+		ai_chance = { factor = 1 }
+		name = south_afrika.80.a
+		ai_chance = { factor = 1 }
+		trigger = {
+			has_country_flag = SAF_flag_21
+			has_country_flag = SAF_flag_22
+			has_country_flag = SAF_flag_23
+			has_country_flag = SAF_flag_24
+		}
+		add_timed_idea = { idea = SAF_idea_81 days = 20 }
+		add_stability = -0.05
+	}
+	option = { # Загнать их обратно в гетто! 
+		name = south_afrika.80.c
+		ai_chance = { factor = 1 }
+		add_political_power = 50
+		every_owned_state = { limit = { is_core_of = SAF } add_manpower = -10000 }
+		add_stability = -0.05
+	}
+}
+country_event = { # Коммунистическая партия Южной Африки объявила о создании революционного правительства
+	id = south_afrika.81
+	title = south_afrika.81.t
+	desc = south_afrika.81.d
+	picture = GFX_report_event_gathering_protest
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event south_afrika.81" }
+	
+	is_triggered_only = yes
+
+	option = { # Ну давайте, нападайте! 
+		name = south_afrika.81.a
+		ai_chance = { factor = 10 }
+		start_civil_war = {
+			ideology = communism
+			states = {
+				681
+				275
+				719
+				1109
+			}
+		}
+	}
+	option = { # Их слишком много… 
+		name = south_afrika.81.b
+		ai_chance = { factor = 1 }
+		set_country_flag = SAF_flag_25
+		set_politics = { ruling_party = communism elections_allowed = no } add_popularity = { ideology = communism popularity = 0.25 }
+		start_civil_war = {
+			ideology = neutrality
+			states = { 
+				1107 1113 541 1112 1111 1114 
+			}
+		}
+	}
+}
+country_event = { # Африканский национальный конгресс объявил о создании нового правительства
+	id = south_afrika.82
+	title = south_afrika.82.t
+	desc = south_afrika.82.d
+	picture = GFX_report_event_gathering_protest
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event south_afrika.82" }
+	
+	is_triggered_only = yes
+
+	option = { # Обнажите свою смелость 
+		name = south_afrika.82.a
+		ai_chance = { factor = 10 }
+		start_civil_war = {
+			ideology = democratic
+			set_cosmetic_tag = SAF_black_revolt
+			promote_character = {
+				character = SAF_pixley_ka_isaka_seme
+				ideology = national_liberalism
+			}
+			set_party_name = {
+				ideology = democratic
+				long_name = SAF_african_nac_congress_long
+				name = SAF_african_nac_congress
+			}
+			states = {
+				681
+				275
+				719
+				1109
+			}
+		}
+	}
+	option = { # Их слишком много… 
+		name = south_afrika.82.b
+		ai_chance = { factor = 1 }
+		set_country_flag = SAF_flag_25
+		set_politics = { ruling_party = democratic elections_allowed = no }
+		add_popularity = { ideology = democratic popularity = 0.25 }
+		set_cosmetic_tag = SAF_black_revolt
+		promote_character = {
+			character = SAF_pixley_ka_isaka_seme
+			ideology = national_liberalism
+		}
+		set_party_name = {
+			ideology = democratic
+			long_name = SAF_african_nac_congress_long
+			name = SAF_african_nac_congress
+		}
+		start_civil_war = {
+			ideology = neutrality
+			states = { 
+				1107 1113 541 1112 1111 1114 
+			}
+		}
 	}
 }

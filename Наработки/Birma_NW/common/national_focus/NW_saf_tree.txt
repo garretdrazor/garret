@@ -543,7 +543,7 @@ continuous_focus_position = { x = 0 y = 1800 }
 		x = 11
 		y = 4
 		cost = 10
-        available = { 
+        available = {
 			OR = { ENG = { controls_state = 542 } BOT = { is_puppet_of = ENG controls_state = 542 } }
 			OR = { ENG = { controls_state = 1105 } ESW = { is_puppet_of = ENG controls_state = 1105 } }
 			OR = { ENG = { controls_state = 1106 } LES = { is_puppet_of = ENG controls_state = 1106 } }
@@ -631,7 +631,8 @@ continuous_focus_position = { x = 0 y = 1800 }
 			is_faction_leader = yes
 			MZB = { 
 				is_in_faction = no 
-				NOT = { has_war_with = ROOT } 
+				NOT = { has_war_with = ROOT }
+				has_government = neutrality
             }
 			NOT = {
 				any_other_country = {
@@ -670,7 +671,7 @@ continuous_focus_position = { x = 0 y = 1800 }
 		}
         completion_reward = { 
         log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SAF_QSiDIusz"
-			create_wargoal = { type = annex_everything target = LIB }
+			create_wargoal = { type = puppet_wargoal_focus target = LIB }
         }
 	}
 
@@ -763,7 +764,7 @@ continuous_focus_position = { x = 0 y = 1800 }
 		y = 8
 		cost = 10
 		
-		prerequisite = { 
+		prerequisite = {
 			focus = SAF_qNxpkQPD 
 			focus = SAF_XAJWUPha 
 			focus = SAF_eKbFiyLY 
@@ -771,6 +772,12 @@ continuous_focus_position = { x = 0 y = 1800 }
 		mutually_exclusive = { focus = SAF_gJmvdOxK }
 		ai_will_do = {
 			factor = 1
+		}
+		available = {
+			NOT = {
+				has_civil_war = yes
+				has_country_flag = SAF_flag_25
+			}
 		}
         completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SAF_cnzxSQNy"
@@ -849,7 +856,7 @@ continuous_focus_position = { x = 0 y = 1800 }
 		}
         completion_reward = { 
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SAF_ERtuqsHN"
-			create_wargoal = { type = annex_everything target = ETH }
+			create_wargoal = { type = puppet_wargoal_focus target = ETH }
         }
 	}
 
@@ -1501,10 +1508,11 @@ continuous_focus_position = { x = 0 y = 1800 }
 		y = 11
 		cost = 10
         available = {
-        is_faction_leader = yes
-			ANG = { 
-            is_in_faction = no 
-            NOT = { has_war_with = ROOT } 
+			is_faction_leader = yes
+			ANG = {
+				is_in_faction = no 
+				NOT = { has_war_with = ROOT } 
+				has_government = neutrality
             }
 			NOT = {
 				any_other_country = {
@@ -1512,7 +1520,8 @@ continuous_focus_position = { x = 0 y = 1800 }
 					has_war_with = ANG
 				}
 			}
-            }
+        }
+		
 		
 		prerequisite = { focus = SAF_rJWPBCYE }
 		ai_will_do = {
@@ -1759,7 +1768,7 @@ continuous_focus_position = { x = 0 y = 1800 }
 	}
 
 	
-	focus = { # Присоединение Мадагаскара
+	focus = { # Выкупить Мадагаскар
 		id = SAF_knsFmNSr
 		icon = GFX_focus_generic_self_management
 		x = 19
@@ -1808,7 +1817,7 @@ continuous_focus_position = { x = 0 y = 1800 }
 		}
         completion_reward = { 
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SAF_EfUeQbGY"
-			create_wargoal = { type = annex_everything target = COG }
+			create_wargoal = { type = puppet_wargoal_focus target = COG }
         }
 	}
 
@@ -1824,6 +1833,7 @@ continuous_focus_position = { x = 0 y = 1800 }
 			COG = { 
 				is_in_faction = no 
 				NOT = { has_war_with = ROOT } 
+				has_government = neutrality
             }
 			NOT = {
 				any_other_country = {
@@ -1872,9 +1882,21 @@ continuous_focus_position = { x = 0 y = 1800 }
 		
 		prerequisite = { focus = SAF_rJWPBCYE }
 		mutually_exclusive = { focus = SAF_zUDFVsQd }
+		available = {
+			OR = {
+				has_government = neutrality
+				has_government = fascism
+			}
+			NOT = { ZIM = { has_government = fascism is_subject = yes} }
+		}
 		ai_will_do = {
 			factor = 1
 		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SAF_Uhasiwpr"  
+			create_wargoal = { type = puppet_wargoal_focus target = ZIM }
+        }
+
 	}
 
 	
@@ -2022,6 +2044,11 @@ continuous_focus_position = { x = 0 y = 1800 }
 		ai_will_do = {
 			factor = 1
 		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SAF_poLwWlsO"   
+			add_ideas = SAF_idea_77
+			unlock_decision_category_tooltip = SAF_decisions_tag_8
+        }
 	}
 
 	
@@ -2146,13 +2173,13 @@ continuous_focus_position = { x = 0 y = 1800 }
 		x = 16
 		y = 2
 		cost = 5
-        available = { has_government = anarchism }
+        available = { has_government = anarchism has_country_flag = SAF_flag_19 }
 		
 		prerequisite = { focus = SAF_WLbUSFyZ }
-		mutually_exclusive = { 
+		mutually_exclusive = {
 			focus = SAF_mZNAUFyJ 
 		}
-		mutually_exclusive = { 
+		mutually_exclusive = {
 			focus = SAF_hlLEBknD 
 		}
 		ai_will_do = {
@@ -2690,7 +2717,7 @@ continuous_focus_position = { x = 0 y = 1800 }
 		} 
         completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SAF_uTVbUWHr"   
-			every_state = { limit = { is_on_continent = africa } add_claim_by = SAF }
+			every_state = { limit = { is_on_continent = africa NOT = { is_core_of = MOR is_core_of = ALG is_core_of = LBA is_core_of = EGY is_core_of = WES is_core_of = SUD } } add_claim_by = SAF }
         }
         
 	}
@@ -2748,9 +2775,6 @@ continuous_focus_position = { x = 0 y = 1800 }
 			add_research_slot = -1
 			remove_ideas = SAF_idea_3
 			remove_ideas = SAF_idea_4
-			275 = { remove_province_modifier = { static_modifiers = { SAF_stat_modif_2 } } }
-			681 = { remove_province_modifier = { static_modifiers = { SAF_stat_modif_2 } } }
-			719 = { remove_province_modifier = { static_modifiers = { SAF_stat_modif_2 } } }
 			if = { limit = { NMB = { is_puppet_of = ROOT } } set_autonomy = { target = NMB autonomy_state = autonomy_free } }
 			if = { limit = { NMB = { exists = no } } release_autonomy = { target = NMB autonomy_state = autonomy_puppet } }
         }
@@ -2839,7 +2863,7 @@ continuous_focus_position = { x = 0 y = 1800 }
 	}
 
 	
-	focus = { # Принять законы о защите расы 
+	focus = { # Принять закон о защите расы 
 		id = SAF_qNxpkQPD
 		icon = GFX_z_goal_race_defend
 		x = 21
@@ -2850,6 +2874,60 @@ continuous_focus_position = { x = 0 y = 1800 }
 		ai_will_do = {
 			factor = 1
 		}
+		select_effect = {
+			if = {
+				limit = {
+					NOT = {
+						has_completed_focus = SAF_VAxgEdtp
+					}
+				}
+				country_event = { id = south_afrika.80 days = 15 }
+			}
+		}
+		completion_reward = {
+			custom_effect_tooltip = SAF_tooltip_23
+			add_ideas = SAF_idea_79
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = SAF_flag_21
+						has_country_flag = SAF_flag_22
+						has_country_flag = SAF_flag_23
+						has_country_flag = SAF_flag_24
+					}
+					set_temp_variable = { temp1 = party_popularity_100@communism }
+					add_to_temp_variable = { temp1 = party_popularity_100@trozkism }
+					check_variable = { temp1 > 10 }
+				}
+				country_event = { id = south_afrika.81 }
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_country_flag = SAF_flag_21
+						has_country_flag = SAF_flag_22
+						has_country_flag = SAF_flag_23
+						has_country_flag = SAF_flag_24
+					}
+					set_temp_variable = { temp1 = party_popularity_100@communism }
+					add_to_temp_variable = { temp1 = party_popularity_100@trozkism }
+					check_variable = { temp1 < 10 }
+				}
+				country_event = { id = south_afrika.82 }
+			}
+			if = {
+				limit = {
+					has_idea = SAF_idea_5
+				}
+				remove_ideas = SAF_idea_5
+			}
+			else_if = {
+				limit = {
+					has_idea = SAF_idea_20
+				}
+				remove_ideas = SAF_idea_20
+			}
+        }
 	}
 
 	
@@ -2966,7 +3044,11 @@ continuous_focus_position = { x = 0 y = 1800 }
 			is_faction_leader = yes
 			ZIM = { 
 				is_in_faction = no 
-				NOT = { has_war_with = ROOT has_government = communism has_government = fascism } 
+				NOT = { has_war_with = ROOT }
+				OR = {
+					has_government = fascism
+					has_government = democratic
+				}
             }
 			NOT = {
 				any_other_country = {

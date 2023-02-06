@@ -218,6 +218,7 @@ recruit_character = SAF_yan_cemp
 recruit_character = SAF_Oswald_Pirow
 recruit_character = SAF_Federik_Cresswell
 recruit_character = SAF_Sarah_Millin
+recruit_character = SAF_pixley_ka_isaka_seme
 
 1940.1.1 = {
 	oob = "OOB_zero"

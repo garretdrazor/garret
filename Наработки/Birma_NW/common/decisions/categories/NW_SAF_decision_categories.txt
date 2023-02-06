@@ -37,6 +37,12 @@ SAF_decisions_tag_7 = { # Развитие Южной Родезии
 	visible = { is_puppet = no controls_state = 545 controls_state = 1110 }
 }
 
+SAF_decisions_tag_8 = { # Создание бантустанов
+	picture = GFX_decision_cat_picture_naval_treaties
+	allowed = { original_tag = SAF }
+	visible = { has_completed_focus = SAF_poLwWlsO }
+}
+
 
 
 
