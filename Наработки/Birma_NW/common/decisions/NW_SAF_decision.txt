@@ -805,3 +805,249 @@ SAF_decisions_tag_8 = { # Создание бантустанов
 		}
 	}
 }
+
+SAF_decisions_tag_9 = { # Освобождение народов Африки от колониализма
+	SAF_decisions_tag_9_1 = { #	Создать бантустаны в Капской провинции 
+		
+		allowed = { original_tag = SAF }
+		available = { NOT = { has_country_flag = SAF_flag_20 } }
+		visible = { controls_state = 681 }
+		cost = 20
+		days_remove = 60
+		fire_only_once = yes
+		ai_will_do = { factor = 1 }
+		complete_effect  = { 
+			hidden_effect = {
+				set_country_flag = SAF_flag_20
+			}
+		}
+		remove_effect  = { 
+			hidden_effect = {
+				clr_country_flag = SAF_flag_20
+			}
+			681 = { add_extra_state_shared_building_slots = 2 }
+			set_country_flag = SAF_flag_21
+			if = {
+				limit = {
+					has_country_flag = SAF_flag_22
+					has_country_flag = SAF_flag_23
+				}
+				country_event = { id = south_afrika.79 }
+			}
+			else_if = {
+				limit = {
+					has_country_flag = SAF_flag_22
+					has_country_flag = SAF_flag_24
+				}
+				country_event = { id = south_afrika.79 }
+			}
+			else_if = {
+				limit = {
+					has_country_flag = SAF_flag_23
+					has_country_flag = SAF_flag_24
+				}
+				country_event = { id = south_afrika.79 }
+			}
+		}
+	}
+}
+
+SAF_decisions_tag_10 = { # Внесение поправок в Закон об обороне Южной Африки
+	SAF_decisions_tag_10_1 = { # Начать набор из цветных мысов и индейцев 
+		
+		allowed = { original_tag = SAF }
+		available = { threat > 0.1 }
+		custom_cost_trigger = {
+			set_temp_variable = { command_power_temp_cost = 100 }
+			command_power > command_power_temp_cost
+		}
+		custom_cost_text = command_power_cost
+		days_remove = 60
+		fire_only_once = yes
+		ai_will_do = { factor = 1 }
+		complete_effect  = {
+			hidden_effect = {
+				add_command_power = -100
+			}
+		}
+		remove_effect  = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision SAF_decisions_tag_10_1"
+			swap_ideas = {
+				remove_idea = SAF_idea_86
+				add_idea = SAF_idea_87
+			}
+			hidden_effect = {
+				set_country_flag = SAF_flag_26
+			}
+		}
+	}
+	SAF_decisions_tag_10_2 = { # Начать агитацию среди чернокожих 
+		
+		allowed = { original_tag = SAF }
+		available = { threat > 0.2 }
+		custom_cost_trigger = {
+			set_temp_variable = { command_power_temp_cost = 100 }
+			command_power > command_power_temp_cost
+		}
+		custom_cost_text = command_power_cost
+		days_remove = 60
+		fire_only_once = yes
+		ai_will_do = { factor = 1 }
+		complete_effect  = {
+			hidden_effect = {
+				add_command_power = -100
+			}
+		}
+		remove_effect  = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision SAF_decisions_tag_10_2"
+			country_event = { id = south_afrika.83 }
+		}
+	}
+	SAF_decisions_tag_10_3 = { # Привлечь частные кампании 
+		
+		allowed = { original_tag = SAF }
+		available = { has_idea = SAF_idea_16 threat > 0.2 }
+		cost = 150
+		days_remove = 60
+		fire_only_once = yes
+		ai_will_do = { factor = 1 }
+		remove_effect  = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision SAF_decisions_tag_10_3"
+			country_event = { id = south_afrika.84 }
+		}
+	}
+	SAF_decisions_tag_10_4 = { # Обратиться к вождям за новобранцами 
+		
+		allowed = { original_tag = SAF }
+		available = { threat > 0.2 }
+		cost = 150
+		days_remove = 60
+		fire_only_once = yes
+		ai_will_do = { factor = 1 }
+		remove_effect  = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision SAF_decisions_tag_10_4"
+			country_event = { id = south_afrika.85 }
+		}
+	}
+	SAF_decisions_tag_10_5 = { # Повышение зарплаты чернокожим солдатам 
+		
+		allowed = { original_tag = SAF }
+		available = { NOT = { has_idea = SAF_idea_93 } }
+		visible = { OR = { has_idea = SAF_idea_91 has_idea = SAF_idea_92 has_idea = SAF_idea_93 } }
+		cost = 50
+		days_remove = 7
+		ai_will_do = { factor = 1 }
+		remove_effect  = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision SAF_decisions_tag_10_5"
+			if = {
+				limit = {
+					has_idea = SAF_idea_91
+				}
+				swap_ideas = {
+					remove_idea = SAF_idea_91
+					add_idea = SAF_idea_92
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SAF_idea_92
+				}
+				swap_ideas = {
+					remove_idea = SAF_idea_92
+					add_idea = SAF_idea_93
+				}
+			}
+		}
+	}
+	SAF_decisions_tag_10_6 = { # Понижение зарплаты чернокожим солдатам 
+		
+		allowed = { original_tag = SAF }
+		available = { NOT = { has_idea = SAF_idea_91 } }
+		visible = { OR = { has_idea = SAF_idea_91 has_idea = SAF_idea_92 has_idea = SAF_idea_93 } }
+		cost = 50
+		days_remove = 7
+		ai_will_do = { factor = 1 }
+		remove_effect  = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision SAF_decisions_tag_10_5"
+			if = {
+				limit = {
+					has_idea = SAF_idea_93
+				}
+				swap_ideas = {
+					remove_idea = SAF_idea_93
+					add_idea = SAF_idea_92
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SAF_idea_92
+				}
+				swap_ideas = {
+					remove_idea = SAF_idea_92
+					add_idea = SAF_idea_91
+				}
+			}
+		}
+	}
+	SAF_decisions_tag_10_7 = { # Начать общий набор
+		
+		allowed = { original_tag = SAF }
+		available = { has_idea = SAF_idea_90 has_completed_focus = SAF_gJmvdOxK }
+		custom_cost_trigger = {
+			set_temp_variable = { command_power_temp_cost = 100 }
+			command_power > command_power_temp_cost
+		}
+		custom_cost_text = command_power_cost
+		days_remove = 30
+		fire_only_once = yes
+		ai_will_do = { factor = 1 }
+		complete_effect  = {
+			hidden_effect = {
+				add_command_power = -100
+			}
+		}
+		remove_effect  = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision SAF_decisions_tag_10_7"
+			remove_ideas = SAF_idea_90
+		}
+	}
+	SAF_decisions_tag_10_8 = { # Подготовка наступательной стратегии 
+		
+		allowed = { original_tag = SAF }
+		available = { has_completed_focus = SAF_UAK_education_2 has_war_support > 0.5 }
+		custom_cost_trigger = {
+			set_temp_variable = { command_power_temp_cost = 100 }
+			command_power > command_power_temp_cost
+		}
+		custom_cost_text = command_power_cost
+		days_remove = 90
+		fire_only_once = yes
+		ai_will_do = { factor = 1 }
+		complete_effect  = {
+			hidden_effect = {
+				add_command_power = -100
+			}
+		}
+		remove_effect  = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision SAF_decisions_tag_10_8"
+			swap_ideas = {
+				remove_idea = SAF_idea_84
+				add_idea = SAF_idea_85
+			}
+			set_country_flag = SAF_flag_27
+		}
+	}
+	SAF_decisions_tag_10_9 = { # Отменить закон об обороне 
+		
+		allowed = { original_tag = SAF }
+		available = { has_country_flag = SAF_flag_27 has_war_support > 0.99 NOT = { has_completed_focus = SAF_GiSnNgCW } }
+		cost = 300
+		days_remove = 90
+		fire_only_once = yes
+		ai_will_do = { factor = 1 }
+		remove_effect  = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision SAF_decisions_tag_10_9"
+			remove_ideas = SAF_idea_85
+		}
+	}
+}

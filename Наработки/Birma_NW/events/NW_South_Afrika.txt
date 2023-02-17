@@ -923,7 +923,6 @@ country_event = { # Статус цветных
 		name = south_afrika.30.b
 		ai_chance = { factor = 2 }
 		add_political_power = -50
-		681 = { remove_province_modifier = { static_modifiers = { SAF_stat_modif_1 } } }
 		hidden_effect = { country_event = { days 15 id = south_afrika.31 } }
 	}
 }
@@ -941,7 +940,6 @@ country_event = { # Статус индийцев
 	option = { # Разве индийцы равны нам?
 		name = south_afrika.31.a
 		ai_chance = { factor = 1 }
-		1109 = { add_province_modifier = { static_modifiers = { SAF_stat_modif_2 } province = { all_provinces = yes } } }
 	}
 	option = { # Не надо доходить до крайностей
 		name = south_afrika.31.b
@@ -2018,8 +2016,10 @@ country_event = { # Кризис концепции родной земли
 	option = { # Перепишите, не недобитые троцкисты, а дальновидные коммунисты
 		name = south_afrika.74.b
 		ai_chance = { factor = 1 }
+		add_popularity = { ideology = communism popularity = -0.05 }
 		hidden_effect = { country_event = { days = 5 id = south_afrika.75 } }
 		set_country_flag = SAF_flag_13
+		custom_effect_tooltip = SAF_tooltip_24
 		retire_country_leader = yes
 		create_country_leader = {
 			name = "William H. Andrews"
@@ -2200,7 +2200,7 @@ country_event = { # Коммунисты устроили митинги в кр
 			has_country_flag = SAF_flag_23
 			has_country_flag = SAF_flag_24
 		}
-		add_timed_idea = { idea = SAF_idea_81 days = 20 }
+		add_timed_idea = { idea = SAF_idea_80_1 days = 20 }
 		add_stability = -0.05
 	}
 	option = { # Загнать их обратно в гетто! 
@@ -2239,6 +2239,7 @@ country_event = { # Коммунистическая партия Южной А�
 		ai_chance = { factor = 1 }
 		set_country_flag = SAF_flag_25
 		set_politics = { ruling_party = communism elections_allowed = no } add_popularity = { ideology = communism popularity = 0.25 }
+		unlock_national_focus = SAF_gJmvdOxK
 		start_civil_war = {
 			ideology = neutrality
 			states = { 
@@ -2284,6 +2285,7 @@ country_event = { # Африканский национальный конгре
 		name = south_afrika.82.b
 		ai_chance = { factor = 1 }
 		set_country_flag = SAF_flag_25
+		unlock_national_focus = SAF_gJmvdOxK
 		set_politics = { ruling_party = democratic elections_allowed = no }
 		add_popularity = { ideology = democratic popularity = 0.25 }
 		set_cosmetic_tag = SAF_black_revolt
@@ -2302,5 +2304,163 @@ country_event = { # Африканский национальный конгре
 				1107 1113 541 1112 1111 1114 
 			}
 		}
+	}
+}
+country_event = { # Агитация в вооружённые силы
+	id = south_afrika.83
+	title = south_afrika.83.t
+	desc = south_afrika.83.d
+	picture = GFX_report_event_gathering_protest
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event south_afrika.83" }
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+	
+	option = { # Мы можем признать умеренный успех
+		name = south_afrika.83.a
+		ai_chance = { factor = 1 }
+		if = {
+			limit = {
+				has_idea = SAF_idea_87
+			}
+			swap_ideas = {
+				remove_idea = SAF_idea_87
+				add_idea = SAF_idea_88
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = SAF_idea_88
+			}
+			swap_ideas = {
+				remove_idea = SAF_idea_88
+				add_idea = SAF_idea_89
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = SAF_idea_89
+			}
+			swap_ideas = {
+				remove_idea = SAF_idea_89
+				add_idea = SAF_idea_90
+			}
+		}
+	}
+}
+country_event = { # Найм чернокожих из частных кампаний
+	id = south_afrika.84
+	title = south_afrika.84.t
+	desc = south_afrika.84.d
+	picture = GFX_report_event_gathering_protest
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event south_afrika.84" }
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+	
+	option = { # Набирать солдат из числа рабочих – обоюдоострое копьё 
+		name = south_afrika.84.a
+		ai_chance = { factor = 1 }
+		swap_ideas = {
+			remove_idea = SAF_idea_16
+			add_idea = SAF_idea_16_1
+		}
+		if = {
+			limit = {
+				has_idea = SAF_idea_87
+			}
+			swap_ideas = {
+				remove_idea = SAF_idea_87
+				add_idea = SAF_idea_88
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = SAF_idea_88
+			}
+			swap_ideas = {
+				remove_idea = SAF_idea_88
+				add_idea = SAF_idea_89
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = SAF_idea_89
+			}
+			swap_ideas = {
+				remove_idea = SAF_idea_89
+				add_idea = SAF_idea_90
+			}
+		}
+	}
+}
+country_event = { # Подкуп вождей
+	id = south_afrika.85
+	title = south_afrika.85.t
+	desc = south_afrika.85.d
+	picture = GFX_report_event_gathering_protest
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event south_afrika.85" }
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+	
+	option = { # Они послужат нам лучше 
+		name = south_afrika.85.a
+		ai_chance = { factor = 1 }
+		if = {
+			limit = {
+				has_idea = SAF_idea_87
+			}
+			swap_ideas = {
+				remove_idea = SAF_idea_87
+				add_idea = SAF_idea_88
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = SAF_idea_88
+			}
+			swap_ideas = {
+				remove_idea = SAF_idea_88
+				add_idea = SAF_idea_89
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = SAF_idea_89
+			}
+			swap_ideas = {
+				remove_idea = SAF_idea_89
+				add_idea = SAF_idea_90
+			}
+		}
+	}
+}
+country_event = { # Обманутые ожидания Туземного корпуса
+	id = south_afrika.86
+	title = south_afrika.86.t
+	desc = south_afrika.86.d
+	picture = GFX_report_event_gathering_protest
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event south_afrika.86" }
+	
+	fire_only_once = yes
+	trigger = {
+		original_tag = SAF
+		has_idea = SAF_idea_88
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = { # Очевидно, разница в зарплате будет влиять на настроения чернокожих
+		name = south_afrika.86.a
+		ai_chance = { factor = 1 }
+		add_ideas = SAF_idea_91
+		custom_effect_tooltip = SAF_tooltip_26
 	}
 }

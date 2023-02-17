@@ -35,16 +35,6 @@ SAF_idea_3 = { # Память об англо-бурской войне
 	}
 	rule = { can_decline_call_to_war = yes }
 }
-SAF_idea_4 = { # Африканерский патриотизм
-	allowed = {	always = no	}
-	allowed_civil_war = { always = yes }
-	picture = generic_morale_bonus
-	removal_cost = -1
-	modifier = { 
-		army_core_attack_factor = 0.1
-		army_core_defence_factor = 0.1
-	}
-}
 SAF_idea_5 = { # Еврейская иммиграция
 	allowed = {	original_tag = SAF NOT = { has_government = fascism } }
 	allowed_civil_war = { always = yes }
@@ -172,6 +162,16 @@ SAF_idea_16 = { # Дешёвая негритянская сила
 		industrial_capacity_factory = 0.15
 	}
 }
+SAF_idea_16_1 = { # Дешёвая негритянская сила 
+	allowed = {	always = no	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = { 
+		production_speed_buildings_factor = 0.5
+		industrial_capacity_factory = 0.075
+	}
+}
 SAF_idea_17 = { # Поддержка сельского хозяйства
 	allowed = {	always = no	}
 	allowed_civil_war = { always = yes }
@@ -297,7 +297,7 @@ SAF_idea_29 = { # Установление тоталитарного режим
 	modifier = { 
 		fascism_drift = 0.1
 		autonomy_gain = 2
-		political_power_factor = 1
+		political_power_gain = 1
 	}
 }
 SAF_idea_30 = { # Вооружённые отряды серорубашечников
@@ -306,8 +306,8 @@ SAF_idea_30 = { # Вооружённые отряды серорубашечни
 	picture = green_marshes
 	removal_cost = -1
 	modifier = { 
-		training_time_army_factor = -0.1
-		army_org_factor = 0.15 
+		training_time_army_factor = -0.2
+		army_org_factor = 0.08 
 		conscription = 0.01 
 	}
 }
@@ -318,7 +318,7 @@ SAF_idea_31 = { # Чёрная республика
 	removal_cost = -1
 	modifier = { 
 		trozkism_drift = 0.05 
-		army_speed_factor = 0.3
+		army_speed_factor = 0.1
 	}
 }
 SAF_idea_32 = { # Защита угнетённых
@@ -500,8 +500,8 @@ SAF_idea_50 = { # Африканерский национализм
 	picture = green_marshes
 	removal_cost = -1
 	modifier = { 
-		army_core_attack_factor = 0.2
-		army_core_defence_factor = 0.2
+		army_core_attack_factor = 0.1
+		army_core_defence_factor = 0.1
 	}
 }
 SAF_idea_51 = { # Разгром чёрных профсоюзов
@@ -642,7 +642,7 @@ SAF_idea_65 = { # Политика родной земли
 	modifier = { 
 		army_core_attack_factor = 0.05
 		army_core_defence_factor = 0.05
-		weekly_manpower = 300
+		weekly_manpower = 100
 	}
 }
 SAF_idea_66 = { # Изгнание буров
@@ -660,7 +660,7 @@ SAF_idea_67 = { # Коммунисты привлекают чёрных нац�
 	removal_cost = -1
 	modifier = { 
 		communism_drift = 0.01
-		stability_weekly = -0.1
+		stability_factor = -0.1
 	}
 }
 SAF_idea_68 = { # Бремя белого человека
@@ -699,9 +699,9 @@ SAF_idea_71 = { # Сотрудничество с великим держава�
 	picture = green_marshes
 	removal_cost = -1
 	modifier = { 
-		political_power_factor = 0.1
-		political_advisor_cost_factor = -0.4
-		opinion_gain_monthly_factor = 0.15
+		political_power_gain = 0.1
+		political_advisor_cost_factor = -0.25
+		opinion_gain_monthly_factor = 0.25
 	}
 }
 SAF_idea_72 = { # Расширение автономии
@@ -876,7 +876,7 @@ SAF_idea_80 = { # Митинги африканских националисто
 		trozkism_drift = 0.025
 	}
 }
-SAF_idea_80 = { # Митинги африканских националистов 2
+SAF_idea_80_1 = { # Митинги африканских националистов 2
 	allowed = {
 		always = no
 	}
@@ -888,5 +888,165 @@ SAF_idea_80 = { # Митинги африканских националисто
 		trozkism_drift = 0.01
 	}
 }
-} 
+SAF_idea_81 = { # Закон об обороне Южной Африки
+	allowed = {
+		always = no
+	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = {
+		custom_modifier_tooltip = SAF_tooltip_25
+		army_attack_factor = -0.2
+		army_core_defence_factor = 0.2
+		command_power_gain_mult = -0.2
+		army_org_factor = -0.1
+		training_time_army_factor = 0.2
+	}
+}
+SAF_idea_82 = { # Закон об обороне Южной Африки
+	allowed = {
+		always = no
+	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = {
+		custom_modifier_tooltip = SAF_tooltip_25
+		army_attack_factor = -0.2
+		army_core_defence_factor = 0.2
+		army_org_factor = -0.1
+		training_time_army_factor = 0.2
+	}
+}
+SAF_idea_83 = { # Закон об обороне Южной Африки
+	allowed = {
+		always = no
+	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = {
+		custom_modifier_tooltip = SAF_tooltip_25
+		army_attack_factor = -0.2
+		army_core_defence_factor = 0.2
+		training_time_army_factor = 0.2
+	}
+}
+SAF_idea_84 = { # Закон об обороне Южной Африки
+	allowed = {
+		always = no
+	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = {
+		custom_modifier_tooltip = SAF_tooltip_25
+		army_attack_factor = -0.2
+		army_core_defence_factor = 0.2
+	}
+}
+SAF_idea_85 = { # Закон об обороне Южной Африки
+	allowed = {
+		always = no
+	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = {
+		custom_modifier_tooltip = SAF_tooltip_25
+	}
+}
+SAF_idea_86 = { # Влияние расовой политики на армию
+	allowed = {
+		always = no
+	}
+	allowed_civil_war = { always = yes }
+	picture = anglo-afro_conflict
+	removal_cost = -1
+	modifier = {
+		conscription_factor = -0.8
+	}
+}
+SAF_idea_87 = { # Влияние расовой политики на армию
+	allowed = {
+		always = no
+	}
+	allowed_civil_war = { always = yes }
+	picture = anglo-afro_conflict
+	removal_cost = -1
+	modifier = {
+		conscription_factor = -0.68
+	}
+}
+SAF_idea_88 = { # Влияние расовой политики на армию
+	allowed = {
+		always = no
+	}
+	allowed_civil_war = { always = yes }
+	picture = anglo-afro_conflict
+	removal_cost = -1
+	modifier = {
+		conscription_factor = -0.63
+	}
+}
+SAF_idea_89 = { # Влияние расовой политики на армию
+	allowed = {
+		always = no
+	}
+	allowed_civil_war = { always = yes }
+	picture = anglo-afro_conflict
+	removal_cost = -1
+	modifier = {
+		conscription_factor = -0.58
+	}
+}
+SAF_idea_90 = { # Влияние расовой политики на армию
+	allowed = {
+		always = no
+	}
+	allowed_civil_war = { always = yes }
+	picture = anglo-afro_conflict
+	removal_cost = -1
+	modifier = {
+		conscription_factor = -0.53
+	}
+}
+SAF_idea_91 = { # Низкая зарплата чернокожих солдат
+	allowed = {
+		always = no
+	}
+	allowed_civil_war = { always = yes }
+	picture = anglo-afro_conflict
+	removal_cost = -1
+	modifier = {
+		war_support_factor = -0.1
+	}
+}
+SAF_idea_92 = { # Средняя зарплата чернокожих солдат
+	allowed = {
+		always = no
+	}
+	allowed_civil_war = { always = yes }
+	picture = anglo-afro_conflict
+	removal_cost = -1
+	modifier = {
+		war_support_factor = -0.05
+		stability_factor = -0.05
+		political_power_gain = -0.05
+	}
+}
+SAF_idea_93 = { # Равная белым зарплата чернокожих солдат
+	allowed = {
+		always = no
+	}
+	allowed_civil_war = { always = yes }
+	picture = anglo-afro_conflict
+	removal_cost = -1
+	modifier = {
+		stability_factor = -0.1
+		political_power_gain = -0.1
+	}
+}
+}
 }
