@@ -889,10 +889,10 @@ continuous_focus_position = { x = 1000 y = 1800 }
 		id = SAF_ZqjstIBi
 		icon = GFX_z_goal_foreign_expeditions
 		relative_position_id = SAF_gJmvdOxK
-		x = 1
+		x = 6
 		y = 1
 		cost = 10
-        available = { has_government = democratic } 
+        available = { has_government = democratic NOT = { has_completed_focus = SAF_EsrbxCit has_completed_focus = SAF_KaMXJHdo } } 
 		
 		prerequisite = { focus = SAF_gJmvdOxK }
 		ai_will_do = {
@@ -915,7 +915,7 @@ continuous_focus_position = { x = 1000 y = 1800 }
 		id = SAF_woman_in_congress
 		icon = GFX_z_goal_foreign_expeditions
 		relative_position_id = SAF_ZqjstIBi
-		x = -3
+		x = 3
 		y = 1
 		cost = 10
         available = { has_government = democratic } 
@@ -929,11 +929,30 @@ continuous_focus_position = { x = 1000 y = 1800 }
         }
 	}
 	
+	focus = { # Женская лига Африканского национального конгресса
+		id = SAF_woman_in_ANK
+		icon = GFX_z_goal_foreign_expeditions
+		relative_position_id = SAF_ZqjstIBi
+		x = 3
+		y = 3
+		cost = 10
+        available = { has_government = democratic } 
+		
+		prerequisite = { focus = SAF_woman_in_congress }
+		prerequisite = { focus = SAF_all_voice }
+		ai_will_do = {
+			factor = 1
+		}
+        completion_reward = {
+			
+        }
+	}
+	
 	focus = { # Путь мирной пропаганды
 		id = SAF_piece_propaganda
 		icon = GFX_z_goal_foreign_expeditions
 		relative_position_id = SAF_ZqjstIBi
-		mutually_exclusive = { focus = SAF_EsrbxCit focus = SAF_dem_radical }
+		mutually_exclusive = { focus = SAF_dem_radical }
 		x = -1
 		y = 1
 		cost = 10
@@ -952,7 +971,7 @@ continuous_focus_position = { x = 1000 y = 1800 }
 		id = SAF_dem_radical
 		icon = GFX_z_goal_foreign_expeditions
 		relative_position_id = SAF_ZqjstIBi
-		mutually_exclusive = { focus = SAF_EsrbxCit focus = SAF_piece_propaganda }
+		mutually_exclusive = { focus = SAF_piece_propaganda }
 		x = 1
 		y = 1
 		cost = 10
@@ -971,12 +990,30 @@ continuous_focus_position = { x = 1000 y = 1800 }
 		id = SAF_repress_commi
 		icon = GFX_z_goal_foreign_expeditions
 		relative_position_id = SAF_ZqjstIBi
-		x = 3
+		x = -3
 		y = 1
 		cost = 10
         available = { has_government = democratic } 
 		
 		prerequisite = { focus = SAF_ZqjstIBi }
+		ai_will_do = {
+			factor = 1
+		}
+        completion_reward = {
+			
+        }
+	}
+	
+	focus = { # Восстановить уничтоженные профсоюзы
+		id = SAF_rise_profally
+		icon = GFX_z_goal_foreign_expeditions
+		relative_position_id = SAF_ZqjstIBi
+		x = -3
+		y = 3
+		cost = 10
+        available = { has_government = democratic }
+		
+		prerequisite = { focus = SAF_repress_commi }
 		ai_will_do = {
 			factor = 1
 		}
@@ -1396,11 +1433,113 @@ continuous_focus_position = { x = 1000 y = 1800 }
         }
 	}
 	
+	focus = { # Копьё Нации
+		id = SAF_spear_of_nation
+		icon = GFX_z_goal_foreign_expeditions
+		relative_position_id = SAF_gJmvdOxK
+		x = 0
+		y = 1
+		cost = 10
+		
+		prerequisite = { focus = SAF_gJmvdOxK }
+		ai_will_do = {
+			factor = 1
+		}
+        completion_reward = {
+			
+        }
+	}
+	
+	focus = { # Набрать новых командующих
+		id = SAF_new_commanders
+		icon = GFX_z_goal_foreign_expeditions
+		relative_position_id = SAF_spear_of_nation
+		x = 0
+		y = 2
+		cost = 10
+		
+		prerequisite = { focus = SAF_spear_of_nation }
+		ai_will_do = {
+			factor = 1
+		}
+        completion_reward = {
+			
+        }
+	}
+	
+	focus = { # Провести набор среди населения
+		id = SAF_citizen_in_army
+		icon = GFX_z_goal_foreign_expeditions
+		relative_position_id = SAF_spear_of_nation
+		x = -1
+		y = 1
+		cost = 10
+		
+		prerequisite = { focus = SAF_spear_of_nation }
+		ai_will_do = {
+			factor = 1
+		}
+        completion_reward = {
+			
+        }
+	}
+	
+	focus = { # Разработать тактику боевых групп
+		id = SAF_battle_group
+		icon = GFX_z_goal_foreign_expeditions
+		relative_position_id = SAF_spear_of_nation
+		x = -1
+		y = 3
+		cost = 10
+		
+		prerequisite = { focus = SAF_citizen_in_army }
+		ai_will_do = {
+			factor = 1
+		}
+        completion_reward = {
+			
+        }
+	}
+	
+	focus = { # Подготовиться к партизанской войне
+		id = SAF_partizans_war
+		icon = GFX_z_goal_foreign_expeditions
+		relative_position_id = SAF_spear_of_nation
+		x = 1
+		y = 1
+		cost = 10
+		
+		prerequisite = { focus = SAF_spear_of_nation }
+		ai_will_do = {
+			factor = 1
+		}
+        completion_reward = {
+			
+        }
+	}
+	
+	focus = { # Обучение методам саботажа
+		id = SAF_sabotaj
+		icon = GFX_z_goal_foreign_expeditions
+		relative_position_id = SAF_spear_of_nation
+		x = 1
+		y = 3
+		cost = 10
+		
+		prerequisite = { focus = SAF_partizans_war }
+		ai_will_do = {
+			factor = 1
+		}
+        completion_reward = {
+			
+        }
+	}
+	
 	focus = { # Принять Хартию Свободы 
 		id = SAF_free_hartya
 		icon = GFX_z_goal_foreign_expeditions
 		relative_position_id = SAF_gJmvdOxK
-		x = 8
+		x = 13
 		y = 1
 		cost = 10
         available = { has_government = democratic has_government = trozkism } 
@@ -1419,7 +1558,7 @@ continuous_focus_position = { x = 1000 y = 1800 }
 		id = SAF_free_republic_Azania
 		icon = GFX_z_goal_foreign_expeditions
 		relative_position_id = SAF_gJmvdOxK
-		x = 12
+		x = 17
 		y = 1
 		cost = 10
         available = { has_government = democratic has_government = trozkism } 
@@ -1437,9 +1576,9 @@ continuous_focus_position = { x = 1000 y = 1800 }
 	focus = { # Национализация частных активов 
 		id = SAF_nacionalization_individual
 		icon = GFX_z_goal_foreign_expeditions
-		relative_position_id = SAF_gJmvdOxK
-		x = 6
-		y = 2
+		relative_position_id = SAF_free_hartya
+		x = 0
+		y = 1
 		cost = 10
 		
 		prerequisite = { focus = SAF_free_hartya }
@@ -1454,9 +1593,9 @@ continuous_focus_position = { x = 1000 y = 1800 }
 	focus = { # Дать всем равные права и голоса! 
 		id = SAF_all_voice
 		icon = GFX_z_goal_foreign_expeditions
-		relative_position_id = SAF_gJmvdOxK
-		x = 8
-		y = 2
+		relative_position_id = SAF_free_hartya
+		x = -2
+		y = 1
 		cost = 10
 		
 		prerequisite = { focus = SAF_free_hartya }
@@ -1471,9 +1610,9 @@ continuous_focus_position = { x = 1000 y = 1800 }
 	focus = { # Землю безземельным! 
 		id = SAF_lands_for_nolander
 		icon = GFX_z_goal_foreign_expeditions
-		relative_position_id = SAF_gJmvdOxK
-		x = 10
-		y = 2
+		relative_position_id = SAF_free_hartya
+		x = 2
+		y = 1
 		cost = 10
 		
 		prerequisite = { focus = SAF_free_hartya focus = SAF_free_republic_Azania }
@@ -1488,9 +1627,9 @@ continuous_focus_position = { x = 1000 y = 1800 }
 	focus = { # Ослабить оковы рабочих! 
 		id = SAF_freedom_for_workers
 		icon = GFX_z_goal_foreign_expeditions
-		relative_position_id = SAF_gJmvdOxK
-		x = 6
-		y = 3
+		relative_position_id = SAF_free_hartya
+		x = 0
+		y = 2
 		cost = 10
 		
 		prerequisite = { focus = SAF_nacionalization_individual }
@@ -1505,9 +1644,9 @@ continuous_focus_position = { x = 1000 y = 1800 }
 	focus = { # Образование для всех! 
 		id = SAF_education_for_all
 		icon = GFX_z_goal_foreign_expeditions
-		relative_position_id = SAF_gJmvdOxK
-		x = 8
-		y = 3
+		relative_position_id = SAF_free_hartya
+		x = -2
+		y = 2
 		cost = 10
 		
 		prerequisite = { focus = SAF_all_voice }
@@ -1522,9 +1661,9 @@ continuous_focus_position = { x = 1000 y = 1800 }
 	focus = { # Помочь аграриям 
 		id = SAF_agrar_help
 		icon = GFX_z_goal_foreign_expeditions
-		relative_position_id = SAF_gJmvdOxK
-		x = 10
-		y = 3
+		relative_position_id = SAF_free_hartya
+		x = 2
+		y = 2
 		cost = 10
 		
 		prerequisite = { focus = SAF_lands_for_nolander }
@@ -1539,9 +1678,9 @@ continuous_focus_position = { x = 1000 y = 1800 }
 	focus = { # Помочь угнетённым народам Африки 
 		id = SAF_help_all_africa
 		icon = GFX_z_goal_foreign_expeditions
-		relative_position_id = SAF_gJmvdOxK
-		x = 7
-		y = 4
+		relative_position_id = SAF_free_hartya
+		x = -1
+		y = 3
 		cost = 10
 		
 		prerequisite = { focus = SAF_education_for_all }
@@ -1557,9 +1696,9 @@ continuous_focus_position = { x = 1000 y = 1800 }
 	focus = { # Государственный план массового образования  
 		id = SAF_education_massive
 		icon = GFX_z_goal_foreign_expeditions
-		relative_position_id = SAF_gJmvdOxK
-		x = 9
-		y = 4
+		relative_position_id = SAF_free_hartya
+		x = 1
+		y = 3
 		cost = 10
 		
 		prerequisite = { focus = SAF_education_for_all focus = SAF_education_for_all }
@@ -1574,9 +1713,9 @@ continuous_focus_position = { x = 1000 y = 1800 }
 	focus = { # Изгнать угнетателей!
 		id = SAF_white_exile
 		icon = GFX_z_goal_foreign_expeditions
-		relative_position_id = SAF_gJmvdOxK
-		x = 12
-		y = 2
+		relative_position_id = SAF_free_republic_Azania
+		x = 0
+		y = 1
 		cost = 10
 		
 		prerequisite = { focus = SAF_free_republic_Azania }
@@ -1591,9 +1730,9 @@ continuous_focus_position = { x = 1000 y = 1800 }
 	focus = { # Народно-освободительная армия Азании 
 		id = SAF_azanya_army
 		icon = GFX_z_goal_foreign_expeditions
-		relative_position_id = SAF_gJmvdOxK
-		x = 14
-		y = 2
+		relative_position_id = SAF_free_republic_Azania
+		x = 2
+		y = 1
 		cost = 10
 		
 		prerequisite = { focus = SAF_free_republic_Azania }
@@ -1608,9 +1747,9 @@ continuous_focus_position = { x = 1000 y = 1800 }
 	focus = { # Африканское правительство 
 		id = SAF_african_goverment
 		icon = GFX_z_goal_foreign_expeditions
-		relative_position_id = SAF_gJmvdOxK
-		x = 12
-		y = 3
+		relative_position_id = SAF_free_republic_Azania
+		x = 0
+		y = 2
 		cost = 10
 		
 		prerequisite = { focus = SAF_white_exile }
@@ -1625,9 +1764,9 @@ continuous_focus_position = { x = 1000 y = 1800 }
 	focus = { # Обитель для чёрных 
 		id = SAF_EGmiweKH
 		icon = GFX_z_goal_brutality_is_bringing_people_together
-		relative_position_id = SAF_gJmvdOxK
-		x = 14
-		y = 3
+		relative_position_id = SAF_free_republic_Azania
+		x = 2
+		y = 2
 		cost = 5
 		
 		prerequisite = { focus = SAF_azanya_army }
@@ -1644,9 +1783,9 @@ continuous_focus_position = { x = 1000 y = 1800 }
 	focus = { # Реконструкция трущоб  
 		id = SAF_repair_city
 		icon = GFX_z_goal_foreign_expeditions
-		relative_position_id = SAF_gJmvdOxK
-		x = 11
-		y = 4
+		relative_position_id = SAF_free_republic_Azania
+		x = -1
+		y = 3
 		cost = 10
 		
 		prerequisite = { focus = SAF_african_goverment focus = SAF_education_for_all }
@@ -1661,9 +1800,9 @@ continuous_focus_position = { x = 1000 y = 1800 }
 	focus = { # Объединение континента
 		id = SAF_our_africa
 		icon = GFX_z_goal_foreign_expeditions
-		relative_position_id = SAF_gJmvdOxK
-		x = 13
-		y = 4
+		relative_position_id = SAF_free_republic_Azania
+		x = 1
+		y = 3
 		cost = 10
 		
 		prerequisite = { focus = SAF_african_goverment }
@@ -1680,17 +1819,15 @@ continuous_focus_position = { x = 1000 y = 1800 }
 		id = SAF_EsrbxCit
 		icon = GFX_z_goal_SAF_ppl_republic
 		relative_position_id = SAF_gJmvdOxK
-		x = 18
+		x = 23
 		y = 1
 		cost = 5
         available = {
 			has_government = communism
+			NOT = { has_completed_focus = SAF_ZqjstIBi }
 		}
 		
 		prerequisite = { focus = SAF_gJmvdOxK }
-		mutually_exclusive = { 
-			focus = SAF_ZqjstIBi 
-		}
 		mutually_exclusive = { 
 			focus = SAF_KaMXJHdo 
 		}
@@ -1747,6 +1884,42 @@ continuous_focus_position = { x = 1000 y = 1800 }
 			factor = 1
 		}
         completion_reward = { 
+			
+        }
+	}
+
+	focus = { # Создание женской секции партии 
+		id = SAF_woman_in_commy
+		icon = GFX_z_goal_right_of_assignment
+		relative_position_id = SAF_EsrbxCit
+		x = 4
+		y = 1
+		cost = 10
+		
+		prerequisite = { focus = SAF_EsrbxCit }
+		ai_will_do = {
+			factor = 1
+		}
+        completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SAF_woman_in_commy"    
+			
+        }
+	}
+	
+	focus = { # Женские профсоюзы
+		id = SAF_woman_profally
+		icon = GFX_z_goal_right_of_assignment
+		relative_position_id = SAF_EsrbxCit
+		x = 4
+		y = 2
+		cost = 10
+		
+		prerequisite = { focus = SAF_woman_in_commy }
+		ai_will_do = {
+			factor = 1
+		}
+        completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SAF_woman_profally"    
 			
         }
 	}
@@ -2275,16 +2448,17 @@ continuous_focus_position = { x = 1000 y = 1800 }
 		id = SAF_KaMXJHdo
 		icon = GFX_z_national_greatness
 		relative_position_id = SAF_gJmvdOxK
-		x = 25
+		x = 31
 		y = 1
 		cost = 5
         available = { 
 			has_government = trozkism
 			NOT = { has_country_flag = SAF_flag_13 }
+			NOT = { has_completed_focus = SAF_ZqjstIBi }
         }
 		
 		prerequisite = { focus = SAF_gJmvdOxK }
-		mutually_exclusive = { focus = SAF_EsrbxCit focus = SAF_ZqjstIBi }
+		mutually_exclusive = { focus = SAF_EsrbxCit }
 		ai_will_do = {
 			factor = 1
 		}
@@ -2347,7 +2521,6 @@ continuous_focus_position = { x = 1000 y = 1800 }
 		cost = 10
 		
 		prerequisite = { focus = SAF_KaMXJHdo }
-		mutually_exclusive = { focus = SAF_IewkKyfi }
 		ai_will_do = {
 			factor = 1
 		}
@@ -2534,7 +2707,6 @@ continuous_focus_position = { x = 1000 y = 1800 }
 		cost = 10
 		
 		prerequisite = { focus = SAF_nMRlpUxv }
-		mutually_exclusive = { focus = SAF_IewkKyfi }
 		ai_will_do = {
 			factor = 1
 		}
@@ -2552,7 +2724,6 @@ continuous_focus_position = { x = 1000 y = 1800 }
 		cost = 10
 		
 		prerequisite = { focus = SAF_nMRlpUxv }
-		mutually_exclusive = { focus = SAF_IewkKyfi }
 		ai_will_do = {
 			factor = 1
 		}
@@ -4419,17 +4590,21 @@ continuous_focus_position = { x = 1000 y = 1800 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SAF_elizabeth_1"        
 			air_experience = 10
-			1108 = {
+			if = {
 				limit = {
-					free_building_slots = {
-						building = air_base
-						size > 1
+					1108 = {
+						free_building_slots = {
+							building = air_base
+							size > 2
+						}
 					}
 				}
-				add_building_construction = {
-					type = air_base
-					level = 2
-					instant_build = yes
+				1108 = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
 				}
 			}
         }
@@ -4443,17 +4618,21 @@ continuous_focus_position = { x = 1000 y = 1800 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SAF_iron_place"        
 			air_experience = 10
-			1108 = {
+			if = {
 				limit = {
-					free_building_slots = {
-						building = air_base
-						size > 1
+					1108 = {
+						free_building_slots = {
+							building = air_base
+							size > 2
+						}
 					}
 				}
-				add_building_construction = {
-					type = air_base
-					level = 2
-					instant_build = yes
+				1108 = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
 				}
 			}
         }
@@ -4885,17 +5064,21 @@ continuous_focus_position = { x = 1000 y = 1800 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SAF_elizabeth_2"        
 			air_experience = 10
-			1108 = {
+			if = {
 				limit = {
-					free_building_slots = {
-						building = air_base
-						size > 1
+					1108 = {
+						free_building_slots = {
+							building = air_base
+							size > 2
+						}
 					}
 				}
-				add_building_construction = {
-					type = air_base
-					level = 2
-					instant_build = yes
+				1108 = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
 				}
 			}
         }

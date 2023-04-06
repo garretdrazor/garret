@@ -722,8 +722,8 @@ country_event = { # Образование Белой рабочей парти�
 		hidden_effect = { if = { limit = { NOT = { has_completed_focus = SAF_keLFamxQ } } country_event = { days = 20 id = south_afrika.24 } }  
 		if = { limit = { NOT = { has_completed_focus = SAF_rHIQosqA } } country_event = { days = 30 id = south_afrika.25 } }
         if = { limit = { NOT = { has_completed_focus = SAF_KTQHGDCv } } country_event = { days = 40 id = south_afrika.26 } }
-        if = { limit = { OR = { communism > 0.05 trozkism > 0.05 } country_event = { days = 50 id = south_afrika.27 } }		}  
-			}
+        if = { limit = { OR = { communism > 0.05 trozkism > 0.05 } } country_event = { days = 50 id = south_afrika.27 }	} 
+		}
 	}
 }
 
@@ -917,13 +917,13 @@ country_event = { # Статус цветных
 	option = { # Цветные – те же чёрные
 		name = south_afrika.30.a
 		ai_chance = { factor = 1 }
-		hidden_effect = { country_event = { days 15 id = south_afrika.31 } }
+		hidden_effect = { country_event = { days = 15 id = south_afrika.31 } }
 	}
 	option = { # Всё-таки не стоит их дискриминировать
 		name = south_afrika.30.b
 		ai_chance = { factor = 2 }
 		add_political_power = -50
-		hidden_effect = { country_event = { days 15 id = south_afrika.31 } }
+		hidden_effect = { country_event = { days = 15 id = south_afrika.31 } }
 	}
 }
 
