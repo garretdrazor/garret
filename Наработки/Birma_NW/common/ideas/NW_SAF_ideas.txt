@@ -19,7 +19,7 @@ SAF_idea_2 = { # Тяжёлая социальная обстановка
 	removal_cost = -1
 	modifier = { 
 		communism_drift = 0.01
-		anarchism_drift = 0.01 
+		trozkism_drift = 0.01 
 		production_factory_max_efficiency_factor = -0.1 
 		production_speed_buildings_factor = -0.2 
 	}
@@ -44,18 +44,6 @@ SAF_idea_5 = { # Еврейская иммиграция
 		fascism_drift = 0.001
 		MONTHLY_POPULATION = 0.05
 		drift_defence_factor = -0.1
-	}
-}
-SAF_idea_6 = { # Легализация чёрных профсоюзов
-	allowed = {	always = no	}
-	allowed_civil_war = { always = yes }
-	picture = green_marshes
-	removal_cost = -1
-	modifier = {
-		political_power_factor = 0.25
-		conscription = 0.02
-		production_factory_max_efficiency_factor = 0.1
-		industrial_capacity_factory = 0.1 
 	}
 }
 SAF_idea_7 = { # Уступки работникам порта
@@ -170,37 +158,6 @@ SAF_idea_16_1 = { # Дешёвая негритянская сила
 	modifier = { 
 		production_speed_buildings_factor = 0.5
 		industrial_capacity_factory = 0.075
-	}
-}
-SAF_idea_17 = { # Поддержка сельского хозяйства
-	allowed = {	always = no	}
-	allowed_civil_war = { always = yes }
-	picture = green_marshes
-	removal_cost = -1
-	modifier = { 
-		MONTHLY_POPULATION = 0.1
-	}
-}
-SAF_idea_18 = { # Протекционистская политика в сельском хозяйстве 
-	allowed = {	always = no	}
-	allowed_civil_war = { always = yes }
-	picture = green_marshes
-	removal_cost = -1
-	modifier = {
-		MONTHLY_POPULATION = 0.1
-		industrial_capacity_factory = 0.1
-	}
-}
-SAF_idea_19 = { # Развитое сельское хозяйство
-	allowed = {	always = no	}
-	allowed_civil_war = { always = yes }
-	picture = green_marshes
-	removal_cost = -1
-	modifier = { 
-		MONTHLY_POPULATION = 0.1
-		industrial_capacity_factory = 0.1
-		production_speed_buildings_factor = 0.7
-		production_factory_max_efficiency_factor = 0.1
 	}
 }
 SAF_idea_20 = { # Еврейская иммиграция
