@@ -2464,3 +2464,41 @@ country_event = { # Обманутые ожидания Туземного ко�
 		custom_effect_tooltip = SAF_tooltip_26
 	}
 }
+
+country_event = { # Не результативность закона о заработной плате
+	id = south_afrika.87
+	title = south_afrika.87.t
+	desc = south_afrika.87.d
+	picture = GFX_report_event_gathering_protest
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event south_afrika.87" }
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+	
+	option = { # Мы не этого добивались 
+		name = south_afrika.87.a
+		add_stability = -0.1
+	}
+}
+
+country_event = { # Не результативность закона о заработной плате
+	id = south_afrika.88
+	title = south_afrika.88.t
+	desc = south_afrika.88.d
+	picture = GFX_report_event_gathering_protest
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event south_afrika.88" }
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+	
+	option = { # Мы не этого добивались 
+		name = south_afrika.88.a
+		add_stability = -0.05
+		swap_ideas = {
+			remove_idea = SAF_idea_100_2
+			add_idea = SAF_idea_100
+		}
+	}
+}

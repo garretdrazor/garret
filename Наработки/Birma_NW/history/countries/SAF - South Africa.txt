@@ -10,6 +10,7 @@ oob = "SAF_1936"
 	add_ideas = SAF_idea_5
 	add_ideas = SAF_idea_81
 	add_ideas = SAF_idea_86
+	add_ideas = SAF_idea_100
 	set_research_slots = 3
 	add_to_tech_sharing_group = commonwealth_research
 	add_opinion_modifier = { target = ENG modifier = SAF_anti_british_sentiment }

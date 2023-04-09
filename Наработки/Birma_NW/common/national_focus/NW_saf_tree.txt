@@ -272,13 +272,10 @@ continuous_focus_position = { x = 4500 y = 700 }
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
         completion_reward = {
-			every_owned_state = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-            } 
+			1108 = { 
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }    
+			}
         }
 	}
 	
@@ -358,9 +355,10 @@ continuous_focus_position = { x = 4500 y = 700 }
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
         completion_reward = {
-			remove_ideas = SAF_idea_2 add_stability = 0.1
-			add_popularity = { ideology = communism popularity = -0.05 }
-			add_popularity = { ideology = trozkism popularity = -0.10 }
+			swap_ideas = {
+				remove_idea = SAF_idea_2
+				add_idea = SAF_idea_2_2
+			}
 		}
 	}
 	
@@ -373,17 +371,45 @@ continuous_focus_position = { x = 4500 y = 700 }
 		relative_position_id = SAF_keLFamxQ
 		cost = 7.2
 		
-        available = {
-			NOT = {
-				has_government = fascism
-			}
-		}
 		prerequisite = { focus = SAF_keLFamxQ }
 		ai_will_do = {
 			factor = 1
 		}
         completion_reward = {
-			add_research_slot = 1
+			if = {
+				limit = {
+					has_idea = SAF_idea_2
+				}
+				swap_ideas = {
+					remove_idea = SAF_idea_2
+					add_idea = SAF_idea_2_2
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SAF_idea_2_2
+				}
+				swap_ideas = {
+					remove_idea = SAF_idea_2_2
+					add_idea = SAF_idea_2_3
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SAF_idea_2_3
+				}
+				swap_ideas = {
+					remove_idea = SAF_idea_2_3
+					add_idea = SAF_idea_2_4
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SAF_idea_2_4
+				}
+				remove_ideas = SAF_idea_2_4
+			}
+			custom_effect_tooltip = SAF_tooltip_28
 		}
 	}
 	
@@ -407,7 +433,41 @@ continuous_focus_position = { x = 4500 y = 700 }
 			factor = 1
 		}
         completion_reward = {
-			add_research_slot = 1
+			add_political_power = -200
+			add_ideas = SAF_idea_101
+			if = {
+				limit = {
+					has_idea = SAF_idea_2
+				}
+				swap_ideas = {
+					remove_idea = SAF_idea_2
+					add_idea = SAF_idea_2_2
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SAF_idea_2_2
+				}
+				swap_ideas = {
+					remove_idea = SAF_idea_2_2
+					add_idea = SAF_idea_2_3
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SAF_idea_2_3
+				}
+				swap_ideas = {
+					remove_idea = SAF_idea_2_3
+					add_idea = SAF_idea_2_4
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SAF_idea_2_4
+				}
+				remove_ideas = SAF_idea_2_4
+			}
 		}
 	}
 	
@@ -431,7 +491,20 @@ continuous_focus_position = { x = 4500 y = 700 }
 			factor = 1
 		}
         completion_reward = {
-			
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	
@@ -453,7 +526,49 @@ continuous_focus_position = { x = 4500 y = 700 }
 			factor = 1
 		}
         completion_reward = {
-			
+			if = {
+				limit = {
+					has_idea = SAF_idea_2
+				}
+				swap_ideas = {
+					remove_idea = SAF_idea_2
+					add_idea = SAF_idea_2_2
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SAF_idea_2_2
+				}
+				swap_ideas = {
+					remove_idea = SAF_idea_2_2
+					add_idea = SAF_idea_2_3
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SAF_idea_2_3
+				}
+				swap_ideas = {
+					remove_idea = SAF_idea_2_3
+					add_idea = SAF_idea_2_4
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SAF_idea_2_4
+				}
+				remove_ideas = SAF_idea_2_4
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_completed_focus = SAF_education_massive
+						}
+					}
+					country_event = { days = 60 id = south_afrika.87 }
+				}
+			}
 		}
 	}
 	
@@ -557,7 +672,7 @@ continuous_focus_position = { x = 4500 y = 700 }
 	focus = { # Дешёвая негритянская сила 
 		id = SAF_RrbQhHlk
 		icon = GFX_z_goal_black_workers
-		x = -2
+		x = -3
 		y = 5
 		relative_position_id = SAF_keLFamxQ
 		cost = 7.2
@@ -682,6 +797,11 @@ continuous_focus_position = { x = 4500 y = 700 }
 		
 		prerequisite = { focus = SAF_keLFamxQ }
 		mutually_exclusive = { focus = SAF_XuyRpQqg }
+		available = {
+			NOT = {
+				has_completed_focus = SAF_gJmvdOxK
+			}
+		}
 		ai_will_do = {
 			factor = 1
 		}
@@ -694,6 +814,7 @@ continuous_focus_position = { x = 4500 y = 700 }
 				uses = 2
 				category = industry
 			}
+			custom_effect_tooltip = SAF_tooltip_29
         }
 	}
 	
@@ -711,8 +832,48 @@ continuous_focus_position = { x = 4500 y = 700 }
 			factor = 1
 		}
         completion_reward = {
-			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SAF_ivqLXIdB"    
-			
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SAF_ivqLXIdB"
+			random_owned_state = { add_extra_state_shared_building_slots = -2 }
+			if = {
+				limit = {
+					has_idea = SAF_idea_100
+				}
+				swap_ideas = {
+					remove_idea = SAF_idea_100
+					add_idea = SAF_idea_100_2
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SAF_idea_100_1
+				}
+				swap_ideas = {
+					remove_idea = SAF_idea_100_1
+					add_idea = SAF_idea_100_3
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SAF_idea_100_2
+				}
+				remove_ideas = SAF_idea_100_2
+			}
+			else_if = {
+				limit = {
+					has_idea = SAF_idea_100_3
+				}
+				remove_ideas = SAF_idea_100_3
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_completed_focus = SAF_education_massive
+						}
+					}
+					country_event = { days = 30 id = south_afrika.88 }
+				}
+			}
         }
 	}
 	
@@ -731,7 +892,37 @@ continuous_focus_position = { x = 4500 y = 700 }
 		}
         completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SAF_ivqLXIdB"    
-			
+			if = {
+				limit = {
+					has_idea = SAF_idea_100
+				}
+				swap_ideas = {
+					remove_idea = SAF_idea_100
+					add_idea = SAF_idea_100_1
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SAF_idea_100_1
+				}
+				swap_ideas = {
+					remove_idea = SAF_idea_100_1
+					add_idea = SAF_idea_100_2
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SAF_idea_100_2
+				}
+				remove_idea = SAF_idea_100_2
+				add_idea = SAF_idea_100_3
+			}
+			else_if = {
+				limit = {
+					has_idea = SAF_idea_100_3
+				}
+				remove_ideas = SAF_idea_100_3
+			}
         }
 	}
 	
@@ -750,7 +941,10 @@ continuous_focus_position = { x = 4500 y = 700 }
 		}
         completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SAF_ivqLXIdB"    
-			
+			random_owned_state = { 
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }    
+			}
         }
 	}
 	
@@ -769,7 +963,37 @@ continuous_focus_position = { x = 4500 y = 700 }
 		}
         completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SAF_ivqLXIdB"    
-			
+			if = {
+				limit = {
+					has_idea = SAF_idea_100
+				}
+				swap_ideas = {
+					remove_idea = SAF_idea_100
+					add_idea = SAF_idea_100_1
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SAF_idea_100_1
+				}
+				swap_ideas = {
+					remove_idea = SAF_idea_100_1
+					add_idea = SAF_idea_100_2
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SAF_idea_100_2
+				}
+				remove_idea = SAF_idea_100_2
+				add_idea = SAF_idea_100_3
+			}
+			else_if = {
+				limit = {
+					has_idea = SAF_idea_100_3
+				}
+				remove_ideas = SAF_idea_100_3
+			}
         }
 	}
 	
@@ -2282,65 +2506,6 @@ continuous_focus_position = { x = 4500 y = 700 }
 	}
 
 	
-	focus = { # Признать африкаанс диалектом голландского языка 
-		id = SAF_UzDgGkqF
-		icon = GFX_focus_hol_oranje_boven
-		x = 38
-		y = 7
-		cost = 10
-		
-		prerequisite = { focus = SAF_JOEsaXVg }
-		mutually_exclusive = { focus = SAF_NqyGEPQB }
-		ai_will_do = {
-			factor = 1
-		}
-        completion_reward = {
-			add_popularity = { ideology = democratic popularity = 0.05 }
-			add_war_support = 0.1 
-			if = { limit = { HOL = { exists = yes } } HOL = { add_opinion_modifier = { target = SAF modifier = SAF_opinion_modifiers_4 } } } 
-        }
-	}
-
-	
-	focus = { # Установить связи с Африканер Бредербонд 
-		id = SAF_rHIQosqA
-		icon = GFX_z_goal_selfgovernment
-		x = 40
-		y = 8
-		cost = 10
-		
-		prerequisite = { focus = SAF_NqyGEPQB }
-		ai_will_do = {
-			factor = 1
-		}
-		search_filters = { FOCUS_FILTER_MANPOWER }
-        completion_reward = { 
-			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SAF_rHIQosqA"
-			swap_ideas = { remove_idea = SAF_idea_1 add_idea = SAF_idea_58 }
-        }
-	}
-
-	
-	focus = { # Отметить столетие Великого трека 
-		id = SAF_NqyGEPQB
-		icon = GFX_goal_generic_propaganda
-		x = 40
-		y = 7
-		cost = 10
-		
-		prerequisite = { focus = SAF_JOEsaXVg }
-		mutually_exclusive = { focus = SAF_UzDgGkqF }
-		ai_will_do = {
-			factor = 1
-		}
-        completion_reward = { 
-			add_autonomy_ratio = { value = 0.05 }
-			add_popularity = { ideology = fascism popularity = 0.05 }
-			add_political_power = 50
-        }
-	}
-
-	
 	focus = { # Восстание чёрного населения 
 		id = SAF_gJmvdOxK
 		icon = GFX_z_goal_black_rise_FAF
@@ -2361,28 +2526,9 @@ continuous_focus_position = { x = 4500 y = 700 }
 	}
 
 	
-	focus = { # Прекратить дискриминацию англофонов 
-		id = SAF_KTQHGDCv
-		icon = GFX_z_goal_great_depression_end
-		x = 38
-		y = 8
-		cost = 10
-		
-		prerequisite = { focus = SAF_UzDgGkqF }
-		ai_will_do = {
-			factor = 1
-		}
-		search_filters = { FOCUS_FILTER_MANPOWER }
-        completion_reward = { 
-			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SAF_KTQHGDCv"
-			swap_ideas = { remove_idea = SAF_idea_1 add_idea = SAF_idea_56 }
-        }
-	}
-
-	
 	focus = { # Изгнать буров 
 		id = SAF_ZqjstIBi
-		icon = GFX_z_goal_foreign_expeditions
+		icon = GFX_z_goal_saf_no_more_burs
 		relative_position_id = SAF_gJmvdOxK
 		x = 6
 		y = 1
@@ -2408,7 +2554,7 @@ continuous_focus_position = { x = 4500 y = 700 }
 	
 	focus = { # Разрешить женщинам вступать в конгресс
 		id = SAF_woman_in_congress
-		icon = GFX_z_goal_foreign_expeditions
+		icon = GFX_z_goal_saf_woman_in_ANK
 		relative_position_id = SAF_ZqjstIBi
 		x = 3
 		y = 1
@@ -2426,7 +2572,7 @@ continuous_focus_position = { x = 4500 y = 700 }
 	
 	focus = { # Женская лига Африканского национального конгресса
 		id = SAF_woman_in_ANK
-		icon = GFX_z_goal_foreign_expeditions
+		icon = GFX_z_goal_saf_woman_ank
 		relative_position_id = SAF_ZqjstIBi
 		x = 3
 		y = 3
@@ -2445,7 +2591,7 @@ continuous_focus_position = { x = 4500 y = 700 }
 	
 	focus = { # Путь мирной пропаганды
 		id = SAF_piece_propaganda
-		icon = GFX_z_goal_foreign_expeditions
+		icon = GFX_z_goal_saf_piece_path
 		relative_position_id = SAF_ZqjstIBi
 		mutually_exclusive = { focus = SAF_dem_radical }
 		x = -1
@@ -2464,7 +2610,7 @@ continuous_focus_position = { x = 4500 y = 700 }
 	
 	focus = { # Умеренная радикализация партии 
 		id = SAF_dem_radical
-		icon = GFX_z_goal_foreign_expeditions
+		icon = GFX_z_goal_saf_radical_path
 		relative_position_id = SAF_ZqjstIBi
 		mutually_exclusive = { focus = SAF_piece_propaganda }
 		x = 1
@@ -2483,7 +2629,7 @@ continuous_focus_position = { x = 4500 y = 700 }
 	
 	focus = { # Репрессировать коммунистов
 		id = SAF_repress_commi
-		icon = GFX_z_goal_foreign_expeditions
+		icon = GFX_z_goal_saf_repress_commi
 		relative_position_id = SAF_ZqjstIBi
 		x = -3
 		y = 1
@@ -2501,7 +2647,7 @@ continuous_focus_position = { x = 4500 y = 700 }
 	
 	focus = { # Восстановить уничтоженные профсоюзы
 		id = SAF_rise_profally
-		icon = GFX_z_goal_foreign_expeditions
+		icon = GFX_z_goal_saf_ally_rise
 		relative_position_id = SAF_ZqjstIBi
 		x = -3
 		y = 3
@@ -2519,7 +2665,7 @@ continuous_focus_position = { x = 4500 y = 700 }
 	
 	focus = { # Межконфессиональная африканская федерация министров 
 		id = SAF_afro_federation
-		icon = GFX_z_goal_foreign_expeditions
+		icon = GFX_z_goal_saf_ANK
 		relative_position_id = SAF_ZqjstIBi
 		x = -2
 		y = 2
@@ -2537,7 +2683,7 @@ continuous_focus_position = { x = 4500 y = 700 }
 	
 	focus = { # Будущее малых протекторатов
 		id = SAF_litle_protectorats
-		icon = GFX_z_goal_foreign_expeditions
+		icon = GFX_z_goal_saf_small_protectorart
 		relative_position_id = SAF_ZqjstIBi
 		x = 0
 		y = 2
@@ -2555,7 +2701,7 @@ continuous_focus_position = { x = 4500 y = 700 }
 	
 	focus = { # Молодежная лига Африканского национального конгресса 
 		id = SAF_yuang_party
-		icon = GFX_z_goal_foreign_expeditions
+		icon = GFX_z_goal_saf_yuang_league
 		relative_position_id = SAF_ZqjstIBi
 		x = 2
 		y = 2
@@ -2573,7 +2719,7 @@ continuous_focus_position = { x = 4500 y = 700 }
 	
 	focus = { # Искать союз с западными демократиями 
 		id = SAF_EPbjRlyL 
-		icon = GFX_z_goal_democratic_side
+		icon = GFX_z_goal_saf_east_dem
 		relative_position_id = SAF_ZqjstIBi
 		x = -1
 		y = 3
@@ -2593,7 +2739,7 @@ continuous_focus_position = { x = 4500 y = 700 }
 	
 	focus = { # Демократический союз африканских народов Южной Африки 
 		id = SAF_CafyrKzX 
-		icon = GFX_z_goal_LAC
+		icon = GFX_z_goal_saf_dem_ally
 		relative_position_id = SAF_ZqjstIBi
 		x = 1
 		y = 3
@@ -2613,7 +2759,7 @@ continuous_focus_position = { x = 4500 y = 700 }
 	
 	focus = { # Пригласить Намибию 
 		id = SAF_ArsiTXvc
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_z_goal_saf_invite_dem_namibia
 		relative_position_id = SAF_ZqjstIBi
 		x = 1
 		y = 5
@@ -2647,7 +2793,7 @@ continuous_focus_position = { x = 4500 y = 700 }
 	
 	focus = { # Пригласить Эфиопию 
 		id = SAF_nGVfvEWo
-		icon = GFX_z_goal_invite_efiop
+		icon = GFX_z_z_goal_saf_invite_efiop
 		relative_position_id = SAF_ZqjstIBi
 		x = 4
 		y = 4
@@ -2682,7 +2828,7 @@ continuous_focus_position = { x = 4500 y = 700 }
 	
 	focus = { # Освободить Конго 
 		id = SAF_xMhqOyjs
-		icon = GFX_z_goal_invite_kongo
+		icon = GFX_z_goal_saf_free_kongo
 		relative_position_id = SAF_ZqjstIBi
 		x = 0
 		y = 6
@@ -2705,7 +2851,7 @@ continuous_focus_position = { x = 4500 y = 700 }
 	
 	focus = { # Пригласить Конго 
 		id = SAF_xerYlOKH
-		icon = GFX_z_goal_invite_kongo
+		icon = GFX_z_goal_saf_invite_dem_kongo
 		relative_position_id = SAF_ZqjstIBi
 		x = 2
 		y = 6
@@ -2742,7 +2888,7 @@ continuous_focus_position = { x = 4500 y = 700 }
 	
 	focus = { # Сотрудничество с великими державами 
 		id = SAF_gSfKlBVN
-		icon = GFX_z_goal_authoritarian_democracy_focus
+		icon = GFX_z_goal_saf_with_great_country
 		relative_position_id = SAF_ZqjstIBi
 		x = 0
 		y = 4
@@ -2769,7 +2915,7 @@ continuous_focus_position = { x = 4500 y = 700 }
 	}
 	focus = { # Сокращение научного отставания 
 		id = SAF_EuVOckJQ
-		icon = GFX_goal_generic_scientific_exchange
+		icon = GFX_z_goal_saf_education
 		relative_position_id = SAF_ZqjstIBi
 		x = -2
 		y = 4
@@ -2790,7 +2936,7 @@ continuous_focus_position = { x = 4500 y = 700 }
 	
 	focus = { # Инвестиции от союзников 
 		id = SAF_ally_invest
-		icon = GFX_goal_generic_scientific_exchange
+		icon = GFX_z_goal_saf_dem_invest
 		relative_position_id = SAF_ZqjstIBi
 		x = -1
 		y = 5
@@ -2808,7 +2954,7 @@ continuous_focus_position = { x = 4500 y = 700 }
 	
 	focus = { # Пригласить Либерию 
 		id = SAF_DYCSKVLO
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_z_goal_saf_invite_dem_liberia
 		relative_position_id = SAF_ZqjstIBi
 		x = 2
 		y = 4
@@ -2842,7 +2988,7 @@ continuous_focus_position = { x = 4500 y = 700 }
 	
 	focus = { # Освободить Мозамбик
 		id = SAF_dem_free_moz
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_z_goal_saf_free_mozambik
 		relative_position_id = SAF_ZqjstIBi
 		x = 3
 		y = 5
@@ -2867,7 +3013,7 @@ continuous_focus_position = { x = 4500 y = 700 }
 	
 	focus = { # Освободить Анголу
 		id = SAF_dem_free_angola
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_z_goal_saf_Free_angola
 		relative_position_id = SAF_ZqjstIBi
 		x = 4
 		y = 6
@@ -2892,7 +3038,7 @@ continuous_focus_position = { x = 4500 y = 700 }
 	
 	focus = { # Пригласить Южную Родезию 
 		id = SAF_dem_free_rodezia
-		icon = GFX_z_goal_pretor_rodezia2
+		icon = GFX_z_goal_saf_dem_invite_rodezia
 		relative_position_id = SAF_ZqjstIBi
 		x = 5
 		y = 5
@@ -4495,35 +4641,33 @@ continuous_focus_position = { x = 4500 y = 700 }
 			if = { limit = { ANG = { NOT = { has_government = neutrality } } } create_wargoal = { type = annex_everything target = ANG } }
         }
 	}
-
 	
-	focus = { # Создать совет коренных народов 
-		id = SAF_JOEsaXVg
-		icon = GFX_z_goal_piece_with_tribes
-		x = 39
-		y = 6
+	
+	focus = { # Провести имперскую выставку 
+		id = SAF_RWThmSGP
+		icon = GFX_focus_spa_save_the_alcazar
+		x = 36
+		y = 5
 		cost = 7.2
+        available = { is_subject_of = ENG }
 		
-		prerequisite = { 
-			focus = SAF_tipADdBI 
-			focus = SAF_RWThmSGP 
-		}
+		mutually_exclusive = { focus = SAF_tipADdBI }
 		ai_will_do = {
 			factor = 1
 		}
-		search_filters = { FOCUS_FILTER_MANPOWER }
-        completion_reward = {
-			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SAF_VAxgEdtp"  
-			add_political_power = 100        
-			add_ideas = SAF_idea_52
+        completion_reward = { 
+			every_country = { limit = { is_subject_of = ENG } country_event = { id = south_afrika.3 } }
+			add_popularity = { ideology = monarchy popularity = 0.05 }
+			add_war_support = 0.1
+			hidden_effect = { if = { limit = { date < 1939.1.1 fascism > 0.1 } country_event = { days = 30 id = south_afrika.5 } } }
         }
 	}
-
+	
 	
 	focus = { # Отказать в проведении имперской выставки 
 		id = SAF_tipADdBI
 		icon = GFX_focus_renounce_the_treaty_of_trianon
-		x = 40
+		x = 38
 		y = 5
 		cost = 7.2
         available = { is_subject_of = ENG }
@@ -4540,25 +4684,110 @@ continuous_focus_position = { x = 4500 y = 700 }
 			hidden_effect = { if = { limit = { date < 1939.1.1 fascism > 0.1 } country_event = { days = 30 id = south_afrika.5 } } }
         }
 	}
+	
+	
+	focus = { # Создать совет коренных народов 
+		id = SAF_JOEsaXVg
+		icon = GFX_z_goal_piece_with_tribes
+		x = 1
+		y = 1
+		relative_position_id = SAF_RWThmSGP
+		cost = 7.2
+		
+		prerequisite = { 
+			focus = SAF_tipADdBI 
+			focus = SAF_RWThmSGP 
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = { FOCUS_FILTER_MANPOWER }
+        completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SAF_VAxgEdtp"  
+			add_political_power = 100        
+			add_ideas = SAF_idea_52
+        }
+	}
+	
+	
+	focus = { # Признать африкаанс диалектом голландского языка 
+		id = SAF_UzDgGkqF
+		icon = GFX_focus_hol_oranje_boven
+		x = 0
+		y = 2
+		relative_position_id = SAF_RWThmSGP
+		cost = 10
+		
+		prerequisite = { focus = SAF_JOEsaXVg }
+		mutually_exclusive = { focus = SAF_NqyGEPQB }
+		ai_will_do = {
+			factor = 1
+		}
+        completion_reward = {
+			add_popularity = { ideology = democratic popularity = 0.05 }
+			add_war_support = 0.1 
+			if = { limit = { HOL = { exists = yes } } HOL = { add_opinion_modifier = { target = SAF modifier = SAF_opinion_modifiers_4 } } } 
+        }
+	}
+	
+	
+	focus = { # Прекратить дискриминацию англофонов 
+		id = SAF_KTQHGDCv
+		icon = GFX_z_goal_great_depression_end
+		x = 0
+		y = 3
+		relative_position_id = SAF_RWThmSGP
+		cost = 10
+		
+		prerequisite = { focus = SAF_UzDgGkqF }
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = { FOCUS_FILTER_MANPOWER }
+        completion_reward = { 
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SAF_KTQHGDCv"
+			swap_ideas = { remove_idea = SAF_idea_1 add_idea = SAF_idea_56 }
+        }
+	}
 
 	
-	focus = { # Провести имперскую выставку 
-		id = SAF_RWThmSGP
-		icon = GFX_focus_spa_save_the_alcazar
-		x = 38
-		y = 5
-		cost = 7.2
-        available = { is_subject_of = ENG }
+	focus = { # Установить связи с Африканер Бредербонд 
+		id = SAF_rHIQosqA
+		icon = GFX_z_goal_selfgovernment
+		x = 2
+		y = 2
+		relative_position_id = SAF_RWThmSGP
+		cost = 10
 		
-		mutually_exclusive = { focus = SAF_tipADdBI }
+		prerequisite = { focus = SAF_NqyGEPQB }
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = { FOCUS_FILTER_MANPOWER }
+        completion_reward = { 
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SAF_rHIQosqA"
+			swap_ideas = { remove_idea = SAF_idea_1 add_idea = SAF_idea_58 }
+        }
+	}
+
+	
+	focus = { # Отметить столетие Великого трека 
+		id = SAF_NqyGEPQB
+		icon = GFX_goal_generic_propaganda
+		x = 2
+		y = 3
+		relative_position_id = SAF_RWThmSGP
+		cost = 10
+		
+		prerequisite = { focus = SAF_JOEsaXVg }
+		mutually_exclusive = { focus = SAF_UzDgGkqF }
 		ai_will_do = {
 			factor = 1
 		}
         completion_reward = { 
-			every_country = { limit = { is_subject_of = ENG } country_event = { id = south_afrika.3 } }
-			add_popularity = { ideology = monarchy popularity = 0.05 }
-			add_war_support = 0.1
-			hidden_effect = { if = { limit = { date < 1939.1.1 fascism > 0.1 } country_event = { days = 30 id = south_afrika.5 } } }
+			add_autonomy_ratio = { value = 0.05 }
+			add_popularity = { ideology = fascism popularity = 0.05 }
+			add_political_power = 50
         }
 	}
 	
@@ -4605,8 +4834,8 @@ continuous_focus_position = { x = 4500 y = 700 }
 		id = SAF_nac_rezerv
 		icon = GFX_z_goal_regular_army
 		cost = 7.2
-		x = 7
-		y = 9
+		x = 42
+		y = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SAF_nac_rezerv"        
 			army_experience = 10

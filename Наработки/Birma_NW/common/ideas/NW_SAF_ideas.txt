@@ -24,6 +24,42 @@ SAF_idea_2 = { # Тяжёлая социальная обстановка
 		production_speed_buildings_factor = -0.2 
 	}
 }
+SAF_idea_2_2 = { # Тяжёлая социальная обстановка
+	allowed = { always = no	}
+	allowed_civil_war = { always = yes }
+	picture = hight_social
+	removal_cost = -1
+	modifier = { 
+		communism_drift = 0.0075
+		trozkism_drift = 0.0075 
+		production_factory_max_efficiency_factor = -0.075 
+		production_speed_buildings_factor = -0.15
+	}
+}
+SAF_idea_2_3 = { # Тяжёлая социальная обстановка
+	allowed = { always = no	}
+	allowed_civil_war = { always = yes }
+	picture = hight_social
+	removal_cost = -1
+	modifier = { 
+		communism_drift = 0.005
+		trozkism_drift = 0.005
+		production_factory_max_efficiency_factor = -0.05
+		production_speed_buildings_factor = -0.1
+	}
+}
+SAF_idea_2_4 = { # Тяжёлая социальная обстановка
+	allowed = { always = no	}
+	allowed_civil_war = { always = yes }
+	picture = hight_social
+	removal_cost = -1
+	modifier = { 
+		communism_drift = 0.0025
+		trozkism_drift = 0.0025
+		production_factory_max_efficiency_factor = -0.025
+		production_speed_buildings_factor = -0.5
+	}
+}
 SAF_idea_3 = { # Память об англо-бурской войне
 	allowed = {	always = no	}
 	allowed_civil_war = { always = yes }
@@ -521,9 +557,14 @@ SAF_idea_57 = { # Образование для белых
 	allowed = {	always = no	}
 	allowed_civil_war = { always = yes }
 	picture = green_marshes
+	available = {
+		NOT = {
+			has_completed_focus = SAF_gJmvdOxK
+		}
+	}
 	removal_cost = -1
 	modifier = { 
-		research_speed_factor = 0.1
+		research_speed_factor = 0.06
 	}
 }
 SAF_idea_58 = { # Африканер Бредербонд 
@@ -1072,6 +1113,59 @@ SAF_idea_99 = { # Мобильное депо ВВС
 		air_agility_factor = 0.1
 		air_ace_generation_chance_factor = 0.1
 		ace_effectiveness_factor = 0.1
+	}
+}
+SAF_idea_100 = { # Проблемы в аграрном секторе
+	allowed = { always = no	}
+	allowed_civil_war = { always = yes }
+	picture = hight_social
+	removal_cost = -1
+	modifier = { 
+		political_power_factor = -0.1
+		stability_factor = -0.1
+		global_building_slots_factor = -0.2
+	}
+}
+SAF_idea_100_1 = { # Проблемы в аграрном секторе
+	allowed = { always = no	}
+	allowed_civil_war = { always = yes }
+	picture = hight_social
+	removal_cost = -1
+	modifier = { 
+		political_power_factor = -0.075
+		stability_factor = -0.075
+		global_building_slots_factor = -0.15
+	}
+}
+SAF_idea_100_2 = { # Проблемы в аграрном секторе
+	allowed = { always = no	}
+	allowed_civil_war = { always = yes }
+	picture = hight_social
+	removal_cost = -1
+	modifier = { 
+		political_power_factor = -0.05
+		stability_factor = -0.05
+		global_building_slots_factor = -0.1
+	}
+}
+SAF_idea_100_3 = { # Проблемы в аграрном секторе
+	allowed = { always = no	}
+	allowed_civil_war = { always = yes }
+	picture = hight_social
+	removal_cost = -1
+	modifier = { 
+		political_power_factor = -0.025
+		stability_factor = -0.025
+		global_building_slots_factor = -0.05
+	}
+}
+SAF_idea_101 = { # Сеть школ для чёрных
+	allowed = { always = no	}
+	allowed_civil_war = { always = yes }
+	picture = hight_social
+	removal_cost = -1
+	modifier = { 
+		research_speed_factor = 0.03
 	}
 }
 }
