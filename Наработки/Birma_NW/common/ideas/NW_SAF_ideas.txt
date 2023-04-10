@@ -1179,5 +1179,45 @@ SAF_idea_102 = { # uMkhonto we Sizwe
 		cat_asymmetric_warfare_cost_factor = -0.1
 	}
 }
+SAF_idea_103 = { # Хартия свободы тро
+	allowed = { always = no	}
+	allowed_civil_war = { always = yes }
+	picture = hight_social
+	removal_cost = -1
+	modifier = { 
+		democratic_drift = 0.05
+	}
+}
+SAF_idea_103_1 = { # Хартия свободы тро
+	allowed = { always = no	}
+	allowed_civil_war = { always = yes }
+	picture = hight_social
+	removal_cost = -1
+	modifier = { 
+		democratic_drift = 0.1
+	}
+}
+SAF_idea_104 = { # Хартия свободы дем
+	allowed = { always = no	}
+	allowed_civil_war = { always = yes }
+	picture = hight_social
+	removal_cost = -1
+	modifier = { 
+		trozkism_drift = 0.05
+		drift_defence_factor = -0.15
+		conscription_factor = 0.08
+	}
+}
+SAF_idea_104_1 = { # Хартия свободы дем
+	allowed = { always = no	}
+	allowed_civil_war = { always = yes }
+	picture = hight_social
+	removal_cost = -1
+	modifier = { 
+		trozkism_drift = 0.1
+		drift_defence_factor = -0.15
+		conscription_factor = 0.08
+	}
+}
 }
 }

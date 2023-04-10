@@ -185,7 +185,7 @@ characters={
 					limit = {
 						has_dlc = "Together for Victory"
 					}
-					has_completed_focus = SAF_support_the_afrikaner_broederbond 
+					has_government = fascism
 				}
 				if = {
 					limit = {
@@ -502,7 +502,10 @@ characters={
 					limit = {
 						has_dlc = "Together for Victory"
 					}
-					has_completed_focus = SAF_support_the_policy_of_appeasement 
+					has_government = democratic
+					NOT = {
+						has_completed_focus = SAF_gJmvdOxK
+					}
 				}
 				if = {
 					limit = {
@@ -545,7 +548,7 @@ characters={
 					limit = {
 						has_dlc = "Together for Victory"
 					}
-					has_completed_focus = SAF_empower_the_workers 
+					has_completed_focus = SAF_free_hartya
 				}
 				if = {
 					limit = {
@@ -557,7 +560,7 @@ characters={
 				}
 			}
 			traits = {
-				communist_revolutionary 
+				foreign_secretary 
 			}
 			do_effect = {
 				NOT = {
@@ -719,5 +722,44 @@ characters={
 			}
 		}
 	}
-	#Illusive Gentleman auto-generated
+	#Генералы восстания
+	
+	#Генералы восстания чёрные
+	
+	SAF_Job_Maseko={
+		name=SAF_Job_Maseko
+		portraits={
+			army={
+				large="GFX_SAF_Job_Maseko"
+				small=GFX_portrait_SAF_Job_Maseko_small
+			}
+		}
+	}
+	SAF_Lucas_Majozi={
+		name=SAF_Lucas_Majozi
+		portraits={
+			army={
+				large="GFX_SAF_Lucas_Majozi"
+				small=GFX_portrait_SAF_Lucas_Majozi_small
+			}
+		}
+	}
+	SAF_Berry_Gazi={
+		name=SAF_Berry_Gazi
+		portraits={
+			army={
+				large="GFX_SAF_Berry_Gazi"
+				small=GFX_portrait_SAF_Berry_Gazi_small
+			}
+		}
+	}
+	SAF_Reuben_Moloi={
+		name=SAF_Reuben_Moloi
+		portraits={
+			army={
+				large="GFX_SAF_Reuben_Moloi"
+				small=GFX_portrait_SAF_Reuben_Moloi_small
+			}
+		}
+	}
 }

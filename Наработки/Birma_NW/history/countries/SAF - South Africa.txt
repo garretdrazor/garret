@@ -221,6 +221,10 @@ recruit_character = SAF_Oswald_Pirow
 recruit_character = SAF_Federik_Cresswell
 recruit_character = SAF_Sarah_Millin
 recruit_character = SAF_pixley_ka_isaka_seme
+recruit_character = SAF_Job_Maseko
+recruit_character = SAF_Lucas_Majozi
+recruit_character = SAF_Berry_Gazi
+recruit_character = SAF_Reuben_Moloi
 
 1940.1.1 = {
 	oob = "OOB_zero"

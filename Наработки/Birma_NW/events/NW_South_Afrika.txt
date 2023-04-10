@@ -1944,49 +1944,6 @@ country_event = { # Парламент принял закон о нейтрал
 	}
 }
 
-country_event = { # Победа революции в Родезии
-	id = south_afrika.72
-	title = south_afrika.72.t
-	desc = south_afrika.72.d
-	picture = GFX_report_event_gathering_protest
-	
-	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event south_afrika.72" }
-	
-	fire_only_once = yes
-	
-	trigger = {
-		original_tag = ZIM
-		has_government = anarchism controls_state = 1110 has_war = no
-	    SAF = { has_completed_focus = SAF_HAgqImMZ }
-	}
-
-	mean_time_to_happen = {
-		days = 1
-	}
-
-	option = { # Увы и ах
-		name = south_afrika.72.a
-		SAF = { country_event = { id = south_afrika.73 }
-        annex_country = { target = ROOT transfer_troops = yes }
-		}
-	}
-}
-
-country_event = { # Победа революции в Родезии
-	id = south_afrika.73
-	title = south_afrika.73.t
-	desc = south_afrika.73.d
-	picture = GFX_report_event_gathering_protest
-	
-	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event south_afrika.73" }
-	
-	is_triggered_only = yes 
-
-	option = { # Отлично
-		name = south_afrika.73.a
-	}
-}
-
 country_event = { # Кризис концепции родной земли
 	id = south_afrika.74
 	title = south_afrika.74.t
@@ -2607,5 +2564,33 @@ country_event = { # Я готов умереть
 	option = { # За Свободную Южную Африку!
 		name = south_afrika.92.a
 		add_war_support = 0.1
+	}
+}
+
+country_event = { # Принятие Хартии Свободы
+	id = south_afrika.93
+	title = south_afrika.93.t
+	desc = south_afrika.93.d
+	picture = GFX_report_event_gathering_protest
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event south_afrika.93" }
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+	
+	option = { # За Свободную Южную Африку!
+		name = south_afrika.93.a
+		if = {
+			limit = {
+				has_government = democratic
+			}
+			add_popularity = { ideology = democratic popularity = 0.1 }
+		}
+		else_if = {
+			limit = {
+				has_government = trozkism
+			}
+			add_popularity = { ideology = trozkism popularity = 0.1 }
+		}
 	}
 }
