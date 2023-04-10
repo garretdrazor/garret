@@ -22,11 +22,12 @@ continuous_focus_position = { x = 4500 y = 700 }
 		search_filters = { FOCUS_FILTER_INDUSTRY }
         completion_reward = {
 			
+			custom_effect_tooltip = SAF_tooltip_30
 		}
 	}
 	
 	
-	focus = { # Занять лидирующее место в алмазной отрасли 
+	focus = { # Упрочнить лидирующее место в алмазной отрасли 
 		id = SAF_brilliant
 		icon = GFX_z_goal_electrotrain
 		x = -2
@@ -42,6 +43,57 @@ continuous_focus_position = { x = 4500 y = 700 }
 		search_filters = { FOCUS_FILTER_INDUSTRY }
         completion_reward = {
 			
+			custom_effect_tooltip = SAF_tooltip_31
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_completed_focus = SAF_mountain_def
+						}
+					}
+					random_list = {
+						66 = {
+							random_list = {
+								33 = {
+									country_event = { id = south_afrika.89 }
+								}
+								33 = {
+									country_event = { id = south_afrika.90 }
+								}
+								34 = {
+									country_event = { id = south_afrika.91 }
+								}
+							}
+						}
+						34 = {
+							
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						has_completed_focus = SAF_mountain_def
+					}
+					random_list = {
+						34 = {
+							random_list = {
+								33 = {
+									country_event = { id = south_afrika.89 }
+								}
+								33 = {
+									country_event = { id = south_afrika.90 }
+								}
+								34 = {
+									country_event = { id = south_afrika.91 }
+								}
+							}
+						}
+						66 = {
+							
+						}
+					}
+				}
+			}
 		}
 	}
 	
@@ -61,7 +113,58 @@ continuous_focus_position = { x = 4500 y = 700 }
 		
 		search_filters = { FOCUS_FILTER_INDUSTRY }
         completion_reward = {
+			custom_effect_tooltip = SAF_tooltip_34
 			
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_completed_focus = SAF_mountain_def
+						}
+					}
+					random_list = {
+						66 = {
+							random_list = {
+								33 = {
+									country_event = { id = south_afrika.89 }
+								}
+								33 = {
+									country_event = { id = south_afrika.90 }
+								}
+								34 = {
+									country_event = { id = south_afrika.91 }
+								}
+							}
+						}
+						34 = {
+							
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						has_completed_focus = SAF_mountain_def
+					}
+					random_list = {
+						34 = {
+							random_list = {
+								33 = {
+									country_event = { id = south_afrika.89 }
+								}
+								33 = {
+									country_event = { id = south_afrika.90 }
+								}
+								34 = {
+									country_event = { id = south_afrika.91 }
+								}
+							}
+						}
+						66 = {
+							
+						}
+					}
+				}
+			}
 		}
 	}
 	
@@ -81,6 +184,58 @@ continuous_focus_position = { x = 4500 y = 700 }
 		
 		search_filters = { FOCUS_FILTER_INDUSTRY }
         completion_reward = {
+			custom_effect_tooltip = SAF_tooltip_33
+			
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_completed_focus = SAF_mountain_def
+						}
+					}
+					random_list = {
+						66 = {
+							random_list = {
+								33 = {
+									country_event = { id = south_afrika.89 }
+								}
+								33 = {
+									country_event = { id = south_afrika.90 }
+								}
+								34 = {
+									country_event = { id = south_afrika.91 }
+								}
+							}
+						}
+						34 = {
+							
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						has_completed_focus = SAF_mountain_def
+					}
+					random_list = {
+						34 = {
+							random_list = {
+								33 = {
+									country_event = { id = south_afrika.89 }
+								}
+								33 = {
+									country_event = { id = south_afrika.90 }
+								}
+								34 = {
+									country_event = { id = south_afrika.91 }
+								}
+							}
+						}
+						66 = {
+							
+						}
+					}
+				}
+			}
 			hidden_effect = {
 				if = {
 					limit = {
@@ -111,6 +266,57 @@ continuous_focus_position = { x = 4500 y = 700 }
 		search_filters = { FOCUS_FILTER_INDUSTRY }
         completion_reward = {
 			
+			custom_effect_tooltip = SAF_tooltip_32
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_completed_focus = SAF_mountain_def
+						}
+					}
+					random_list = {
+						66 = {
+							random_list = {
+								33 = {
+									country_event = { id = south_afrika.89 }
+								}
+								33 = {
+									country_event = { id = south_afrika.90 }
+								}
+								34 = {
+									country_event = { id = south_afrika.91 }
+								}
+							}
+						}
+						34 = {
+							
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						has_completed_focus = SAF_mountain_def
+					}
+					random_list = {
+						34 = {
+							random_list = {
+								33 = {
+									country_event = { id = south_afrika.89 }
+								}
+								33 = {
+									country_event = { id = south_afrika.90 }
+								}
+								34 = {
+									country_event = { id = south_afrika.91 }
+								}
+							}
+						}
+						66 = {
+							
+						}
+					}
+				}
+			}
 		}
 	}
 	
@@ -132,6 +338,57 @@ continuous_focus_position = { x = 4500 y = 700 }
 		search_filters = { FOCUS_FILTER_INDUSTRY }
         completion_reward = {
 			
+			custom_effect_tooltip = SAF_tooltip_35
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_completed_focus = SAF_mountain_def
+						}
+					}
+					random_list = {
+						66 = {
+							random_list = {
+								33 = {
+									country_event = { id = south_afrika.89 }
+								}
+								33 = {
+									country_event = { id = south_afrika.90 }
+								}
+								34 = {
+									country_event = { id = south_afrika.91 }
+								}
+							}
+						}
+						34 = {
+							
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						has_completed_focus = SAF_mountain_def
+					}
+					random_list = {
+						34 = {
+							random_list = {
+								33 = {
+									country_event = { id = south_afrika.89 }
+								}
+								33 = {
+									country_event = { id = south_afrika.90 }
+								}
+								34 = {
+									country_event = { id = south_afrika.91 }
+								}
+							}
+						}
+						66 = {
+							
+						}
+					}
+				}
+			}
 		}
 	}
 	
@@ -151,7 +408,60 @@ continuous_focus_position = { x = 4500 y = 700 }
 		
 		search_filters = { FOCUS_FILTER_INDUSTRY }
         completion_reward = {
-			
+			275 = { 
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = industrial_complex level = 2 instant_build = yes }    
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_completed_focus = SAF_mountain_def
+						}
+					}
+					random_list = {
+						66 = {
+							random_list = {
+								33 = {
+									country_event = { id = south_afrika.89 }
+								}
+								33 = {
+									country_event = { id = south_afrika.90 }
+								}
+								34 = {
+									country_event = { id = south_afrika.91 }
+								}
+							}
+						}
+						34 = {
+							
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						has_completed_focus = SAF_mountain_def
+					}
+					random_list = {
+						34 = {
+							random_list = {
+								33 = {
+									country_event = { id = south_afrika.89 }
+								}
+								33 = {
+									country_event = { id = south_afrika.90 }
+								}
+								34 = {
+									country_event = { id = south_afrika.91 }
+								}
+							}
+						}
+						66 = {
+							
+						}
+					}
+				}
+			}
 		}
 	}
 	
@@ -215,7 +525,34 @@ continuous_focus_position = { x = 4500 y = 700 }
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
         completion_reward = {
-			
+			build_railway = {
+				level = 1
+				controller_priority = {
+					base = 1
+					modifier = {
+						tag = SAF
+						add = 2
+					}
+				}
+				fallback = yes
+				path = { 1509 14228 14241 }
+				start_province = 681
+				target_province = 681
+			}
+			build_railway = {
+				level = 1
+				controller_priority = {
+					base = 1
+					modifier = {
+						tag = SAF
+						add = 2
+					}
+				}
+				fallback = yes
+				path = { 1468 14033 14241 8178 14247 }
+				start_province = 1109
+				target_province = 1105
+			}
 		}
 	}
 	
@@ -234,7 +571,48 @@ continuous_focus_position = { x = 4500 y = 700 }
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
         completion_reward = {
-			
+			build_railway = {
+				level = 1
+				controller_priority = {
+					base = 1
+					modifier = {
+						tag = SAF
+						add = 2
+					}
+				}
+				fallback = yes
+				path = { 2213 14245 10668 }
+				start_province = 1107
+				target_province = 1107
+			}
+			build_railway = {
+				level = 1
+				controller_priority = {
+					base = 1
+					modifier = {
+						tag = SAF
+						add = 2
+					}
+				}
+				fallback = yes
+				path = { 12648 14224 }
+				start_province = 1107
+				target_province = 1106
+			}
+			build_railway = {
+				level = 1
+				controller_priority = {
+					base = 1
+					modifier = {
+						tag = SAF
+						add = 2
+					}
+				}
+				fallback = yes
+				path = { 14278 1688 14282 }
+				start_province = 275
+				target_province = 1110
+			}
 		}
 	}
 	
@@ -294,13 +672,18 @@ continuous_focus_position = { x = 4500 y = 700 }
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
         completion_reward = {
-			every_owned_state = {
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				category = radar_tech
+			}
+			1108 = {
 				add_building_construction = {
-					type = infrastructure
+					type = radar_station
 					level = 1
 					instant_build = yes
 				}
-            } 
+			}
         }
 	}
 	
@@ -3080,14 +3463,15 @@ continuous_focus_position = { x = 4500 y = 700 }
 		relative_position_id = SAF_gJmvdOxK
 		x = 0
 		y = 1
-		cost = 10
+		cost = 3
 		
 		prerequisite = { focus = SAF_gJmvdOxK }
 		ai_will_do = {
 			factor = 1
 		}
         completion_reward = {
-			
+			add_ideas = SAF_idea_102
+			country_event = { id = south_afrika.92 }
         }
 	}
 	
@@ -3097,7 +3481,7 @@ continuous_focus_position = { x = 4500 y = 700 }
 		relative_position_id = SAF_spear_of_nation
 		x = 0
 		y = 2
-		cost = 10
+		cost = 3
 		
 		prerequisite = { focus = SAF_spear_of_nation }
 		ai_will_do = {
@@ -3114,7 +3498,7 @@ continuous_focus_position = { x = 4500 y = 700 }
 		relative_position_id = SAF_spear_of_nation
 		x = -1
 		y = 1
-		cost = 10
+		cost = 3
 		
 		prerequisite = { focus = SAF_spear_of_nation }
 		ai_will_do = {
@@ -3131,14 +3515,18 @@ continuous_focus_position = { x = 4500 y = 700 }
 		relative_position_id = SAF_spear_of_nation
 		x = -1
 		y = 3
-		cost = 10
+		cost = 3
 		
 		prerequisite = { focus = SAF_citizen_in_army }
 		ai_will_do = {
 			factor = 1
 		}
         completion_reward = {
-			
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.75
+				uses = 1
+				category = cat_asymmetric_warfare
+			}
         }
 	}
 	
@@ -3148,14 +3536,18 @@ continuous_focus_position = { x = 4500 y = 700 }
 		relative_position_id = SAF_spear_of_nation
 		x = 1
 		y = 1
-		cost = 10
+		cost = 3
 		
 		prerequisite = { focus = SAF_spear_of_nation }
 		ai_will_do = {
 			factor = 1
 		}
         completion_reward = {
-			
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.75
+				uses = 1
+				category = cat_asymmetric_warfare
+			}
         }
 	}
 	
@@ -3165,14 +3557,18 @@ continuous_focus_position = { x = 4500 y = 700 }
 		relative_position_id = SAF_spear_of_nation
 		x = 1
 		y = 3
-		cost = 10
+		cost = 3
 		
 		prerequisite = { focus = SAF_partizans_war }
 		ai_will_do = {
 			factor = 1
 		}
         completion_reward = {
-			
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.75
+				uses = 1
+				category = cat_asymmetric_warfare
+			}
         }
 	}
 	
