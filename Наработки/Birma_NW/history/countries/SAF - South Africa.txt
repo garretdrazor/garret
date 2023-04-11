@@ -216,6 +216,8 @@ recruit_character = SAF_nicolaas_havenga
 recruit_character = SAF_sir_patrick_duncan
 recruit_character = SAF_abram_fischer
 #новые
+recruit_character = SAF_Zacharias_Richard_Mahabane
+recruit_character = SAF_Alfred_Bitini_Xuma
 recruit_character = SAF_yan_cemp
 recruit_character = SAF_Oswald_Pirow
 recruit_character = SAF_Federik_Cresswell

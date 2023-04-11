@@ -2923,7 +2923,7 @@ continuous_focus_position = { x = 4500 y = 700 }
 			factor = 1
 		}
         completion_reward = {
-			add_popularity = { ideology = democratic popularity = 0.2 }
+			add_popularity = { ideology = democratic popularity = 0.1 }
 			release = NMB
 			add_research_slot = -1
 			remove_ideas = SAF_idea_1
@@ -2941,7 +2941,7 @@ continuous_focus_position = { x = 4500 y = 700 }
 		relative_position_id = SAF_ZqjstIBi
 		x = 3
 		y = 1
-		cost = 10
+		cost = 5
         available = { has_government = democratic } 
 		
 		prerequisite = { focus = SAF_ZqjstIBi }
@@ -2949,7 +2949,10 @@ continuous_focus_position = { x = 4500 y = 700 }
 			factor = 1
 		}
         completion_reward = {
-			
+			add_timed_idea = {
+				idea = SAF_idea_112
+				days = 180
+			}
         }
 	}
 	
@@ -2968,7 +2971,7 @@ continuous_focus_position = { x = 4500 y = 700 }
 			factor = 1
 		}
         completion_reward = {
-			
+			add_ideas = SAF_idea_113
         }
 	}
 	
@@ -2977,6 +2980,13 @@ continuous_focus_position = { x = 4500 y = 700 }
 		icon = GFX_z_goal_saf_piece_path
 		relative_position_id = SAF_ZqjstIBi
 		mutually_exclusive = { focus = SAF_dem_radical }
+		available = {
+			has_government = democratic
+			has_country_leader = {
+				character = SAF_Zacharias_Richard_Mahabane
+				ruling_only = yes
+			}
+		}
 		x = -1
 		y = 1
 		cost = 10
@@ -2987,7 +2997,7 @@ continuous_focus_position = { x = 4500 y = 700 }
 			factor = 1
 		}
         completion_reward = {
-			
+			add_ideas = SAF_idea_114
         }
 	}
 	
@@ -2999,7 +3009,13 @@ continuous_focus_position = { x = 4500 y = 700 }
 		x = 1
 		y = 1
 		cost = 10
-        available = { has_government = democratic } 
+        available = {
+			has_government = democratic
+			has_country_leader = {
+				character = SAF_Alfred_Bitini_Xuma
+				ruling_only = yes
+			}
+		}
 		
 		prerequisite = { focus = SAF_ZqjstIBi }
 		ai_will_do = {
@@ -3016,7 +3032,7 @@ continuous_focus_position = { x = 4500 y = 700 }
 		relative_position_id = SAF_ZqjstIBi
 		x = -3
 		y = 1
-		cost = 10
+		cost = 5
         available = { has_government = democratic } 
 		
 		prerequisite = { focus = SAF_ZqjstIBi }
@@ -3024,7 +3040,10 @@ continuous_focus_position = { x = 4500 y = 700 }
 			factor = 1
 		}
         completion_reward = {
-			
+			add_timed_idea = {
+				idea = SAF_idea_110
+				days = 180
+			}
         }
 	}
 	
@@ -3035,14 +3054,14 @@ continuous_focus_position = { x = 4500 y = 700 }
 		x = -3
 		y = 3
 		cost = 10
-        available = { has_government = democratic }
+        available = { has_government = democratic NOT = { has_idea = SAF_idea_110 } }
 		
 		prerequisite = { focus = SAF_repress_commi }
 		ai_will_do = {
 			factor = 1
 		}
         completion_reward = {
-			
+			add_ideas = SAF_idea_111
         }
 	}
 	
@@ -3053,7 +3072,13 @@ continuous_focus_position = { x = 4500 y = 700 }
 		x = -2
 		y = 2
 		cost = 10
-        available = { has_government = democratic } 
+        available = {
+			has_government = democratic
+			has_country_leader = {
+				character = SAF_Zacharias_Richard_Mahabane
+				ruling_only = yes
+			}
+		}
 		
 		prerequisite = { focus = SAF_piece_propaganda }
 		ai_will_do = {
@@ -3089,7 +3114,13 @@ continuous_focus_position = { x = 4500 y = 700 }
 		x = 2
 		y = 2
 		cost = 10
-        available = { has_government = democratic } 
+        available = {
+			has_government = democratic
+			has_country_leader = {
+				character = SAF_Alfred_Bitini_Xuma
+				ruling_only = yes
+			}
+		}
 		
 		prerequisite = { focus = SAF_dem_radical }
 		ai_will_do = {
@@ -3861,7 +3892,7 @@ continuous_focus_position = { x = 4500 y = 700 }
         }
 	}
 	
-	focus = { # Изгнать угнетателей!
+	focus = { # Прогнать угнетателей!
 		id = SAF_white_exile
 		icon = GFX_z_goal_foreign_expeditions
 		relative_position_id = SAF_free_republic_Azania

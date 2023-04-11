@@ -2679,3 +2679,51 @@ country_event = { # Изгнание белых из Народной Респу
 		}
 	}
 }
+
+country_event = { # Выборы президента
+	id = south_afrika.98
+	title = south_afrika.98.t
+	desc = south_afrika.98.d
+	picture = GFX_report_event_gathering_protest
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event south_afrika.98" }
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+	
+	option = { # Президент Махабане! 
+		name = south_afrika.98.a
+		promote_character = {
+			character = SAF_Zacharias_Richard_Mahabane
+			ideology = socialism
+		}
+		add_advisor_role = {
+			character = SAF_Alfred_Bitini_Xuma
+			advisor = {
+				slot = political_advisor
+				idea_token = SAF_Alfred_Bitini_Xuma
+				traits = {
+					leader_youth_organization
+				}
+			}
+		}
+	}
+	
+	option = { # Президент Ксума!
+		name = south_afrika.98.b
+		promote_character = {
+			character = SAF_Alfred_Bitini_Xuma
+			ideology = socialism
+		}
+		add_advisor_role = {
+			character = SAF_Zacharias_Richard_Mahabane
+			advisor = {
+				slot = political_advisor
+				idea_token = SAF_Zacharias_Richard_Mahabane
+				traits = {
+					leader_youth_organization
+				}
+			}
+		}
+	}
+}

@@ -615,7 +615,45 @@ characters={
 			}
 		}
 	}
-	
+	#Новые лидеры
+	SAF_Zacharias_Richard_Mahabane = {
+		name=SAF_Zacharias_Richard_Mahabane
+		portraits={
+			civilian={
+				large=GFX_portrait_Zacharias_Richard_Mahabane
+			}
+			army={
+				small="GFX_idea_Zacharias_Richard_Mahabane"
+			}
+		}
+		country_leader={
+			ideology=socialism
+			expire="1965.1.1.1"
+			id=-1
+			traits = {
+				pastor 
+			}
+		}
+	}
+	SAF_Alfred_Bitini_Xuma = {
+		name=SAF_Alfred_Bitini_Xuma
+		portraits={
+			civilian={
+				large=GFX_portrait_Alfred_Bitini_Xuma
+			}
+			army={
+				small="GFX_idea_Alfred_Bitini_Xuma"
+			}
+		}
+		country_leader={
+			ideology=socialism
+			expire="1965.1.1.1"
+			id=-1
+			traits = {
+				gallant_doctor 
+			}
+		}
+	}
 	#Новые министры
 	SAF_yan_cemp={
 		name=SAF_yan_cemp
