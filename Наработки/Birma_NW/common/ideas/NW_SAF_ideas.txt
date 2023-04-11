@@ -192,8 +192,20 @@ SAF_idea_16_1 = { # Дешёвая негритянская сила
 	picture = green_marshes
 	removal_cost = -1
 	modifier = { 
-		production_speed_buildings_factor = 0.5
+		production_speed_buildings_factor = 0.05
 		industrial_capacity_factory = 0.075
+	}
+}
+SAF_idea_16_2 = { # Дешёвая негритянская сила 
+	allowed = {	always = no	}
+	allowed_civil_war = { always = yes }
+	picture = green_marshes
+	removal_cost = -1
+	modifier = { 
+		production_speed_buildings_factor = 0.025
+		industrial_capacity_factory = 0.05
+		production_factory_efficiency_gain_factor = 0.05 
+		MONTHLY_POPULATION = 0.1
 	}
 }
 SAF_idea_20 = { # Еврейская иммиграция
@@ -1179,6 +1191,18 @@ SAF_idea_102 = { # uMkhonto we Sizwe
 		cat_asymmetric_warfare_cost_factor = -0.1
 	}
 }
+SAF_idea_102_2 = { # Народно-освободительная армия Азании
+	allowed = { always = no	}
+	allowed_civil_war = { always = yes }
+	picture = hight_social
+	removal_cost = -1
+	modifier = { 
+		conscription = 0.02
+		army_core_attack_factor = 0.1
+		compliance_growth = 0.15
+		cat_asymmetric_warfare_cost_factor = -0.1
+	}
+}
 SAF_idea_103 = { # Хартия свободы тро
 	allowed = { always = no	}
 	allowed_civil_war = { always = yes }
@@ -1217,6 +1241,56 @@ SAF_idea_104_1 = { # Хартия свободы дем
 		trozkism_drift = 0.1
 		drift_defence_factor = -0.15
 		conscription_factor = 0.08
+	}
+}
+SAF_idea_105 = { # План массового образования
+	allowed = { always = no	}
+	allowed_civil_war = { always = yes }
+	picture = hight_social
+	removal_cost = -1
+	modifier = { 
+		research_speed_factor = 0.03
+		production_speed_hospital_factor = 0.15
+	}
+}
+SAF_idea_106 = { # Реконструкция трущоб
+	allowed = { always = no	}
+	allowed_civil_war = { always = yes }
+	picture = hight_social
+	removal_cost = -1
+	modifier = { 
+		production_speed_buildings_factor = 0.25
+		consumer_goods_factor = 0.1
+		MONTHLY_POPULATION = 0.2
+	}
+}
+SAF_idea_107 = { # Помощь аграриям
+	allowed = { always = no	}
+	allowed_civil_war = { always = yes }
+	picture = hight_social
+	removal_cost = -1
+	modifier = { 
+		consumer_goods_factor = 0.1
+	}
+}
+SAF_idea_108 = { # Республика Азания
+	allowed = { always = no	}
+	allowed_civil_war = { always = yes }
+	picture = hight_social
+	removal_cost = -1
+	modifier = { 
+		army_core_defence_factor = 0.05
+		army_core_attack_factor = 0.05
+	}
+}
+SAF_idea_109 = { # Чёрное правительство
+	allowed = { always = no	}
+	allowed_civil_war = { always = yes }
+	picture = hight_social
+	removal_cost = -1
+	modifier = { 
+		political_advisor_cost_factor = -0.5
+		stability_factor = 0.1
 	}
 }
 }

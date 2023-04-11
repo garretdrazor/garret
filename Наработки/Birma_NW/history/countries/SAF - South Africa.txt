@@ -225,6 +225,13 @@ recruit_character = SAF_Job_Maseko
 recruit_character = SAF_Lucas_Majozi
 recruit_character = SAF_Berry_Gazi
 recruit_character = SAF_Reuben_Moloi
+recruit_character = SAF_Mattheus_Uys_Krige
+recruit_character = SAF_Josie_Mpama
+recruit_character = SAF_Thabo_Edwin_Mofutsanyana
+recruit_character = SAF_Walter_Max_Ulyate_Sisulu
+recruit_character = SAF_Pixley_ka_Isaka_Seme
+recruit_character = SAF_Madie_Hall_Xuma
+recruit_character = SAF_Albert_John_Lutuli
 
 1940.1.1 = {
 	oob = "OOB_zero"

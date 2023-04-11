@@ -20,4 +20,32 @@ spriteTypes = {
 		name = "GFX_idea_Yan_Kemp"
 		texturefile = "gfx/interface/ideas/SAF/Yan_Kemp.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_Mattheus_Uys_Krige"
+		texturefile = "gfx/interface/ideas/SAF/Mattheus_Uys_Krige.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Albert_John_Lutuli"
+		texturefile = "gfx/interface/ideas/SAF/Albert_John_Lutuli.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Josie_Mpama"
+		texturefile = "gfx/interface/ideas/SAF/Josie_Mpama.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Madie_Hall_Xuma"
+		texturefile = "gfx/interface/ideas/SAF/Madie_Hall_Xuma.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Pixley_ka_Isaka_Seme"
+		texturefile = "gfx/interface/ideas/SAF/Pixley_ka_Isaka_Seme.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Thabo_Edwin_Mofutsanyana"
+		texturefile = "gfx/interface/ideas/SAF/Thabo_Edwin_Mofutsanyana.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Walter_Max_Ulyate_Sisulu"
+		texturefile = "gfx/interface/ideas/SAF/Walter_Max_Ulyate_Sisulu.dds"
+	}
 }

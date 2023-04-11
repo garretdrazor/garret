@@ -3669,7 +3669,7 @@ continuous_focus_position = { x = 4500 y = 700 }
 		x = 17
 		y = 1
 		cost = 10
-        available = { has_government = democratic has_government = trozkism } 
+        available = { has_completed_focus = SAF_YrGOMBuZ } 
 		
 		prerequisite = { focus = SAF_gJmvdOxK }
 		mutually_exclusive = { focus = SAF_free_hartya }
@@ -3677,7 +3677,8 @@ continuous_focus_position = { x = 4500 y = 700 }
 			factor = 1
 		}
         completion_reward = {
-			
+			add_ideas = SAF_idea_108
+			country_event = { id = south_afrika.95 }
         }
 	}
 	
@@ -3743,13 +3744,23 @@ continuous_focus_position = { x = 4500 y = 700 }
 		x = 2
 		y = 1
 		cost = 10
-		
+		available = {
+			has_completed_focus = SAF_agarar_up
+			has_completed_focus = SAF_market_order
+		}
 		prerequisite = { focus = SAF_free_hartya focus = SAF_free_republic_Azania }
 		ai_will_do = {
 			factor = 1
 		}
         completion_reward = {
-			
+			add_stability = 0.1
+			every_core_state = {
+				add_extra_state_shared_building_slots = -1
+			}
+			swap_ideas = {
+				remove_idea = SAF_idea_100_2
+				add_idea = SAF_idea_100_3
+			}
         }
 	}
 	
@@ -3760,13 +3771,20 @@ continuous_focus_position = { x = 4500 y = 700 }
 		x = 0
 		y = 2
 		cost = 10
+			available = {
+				has_idea = SAF_idea_16_1
+			}
 		
 		prerequisite = { focus = SAF_nacionalization_individual }
 		ai_will_do = {
 			factor = 1
 		}
         completion_reward = {
-			
+			add_stability = 0.05
+			swap_ideas = {
+				remove_idea = SAF_idea_16_1
+				add_idea = SAF_idea_16_2
+			}
         }
 	}
 	
@@ -3801,7 +3819,10 @@ continuous_focus_position = { x = 4500 y = 700 }
 			factor = 1
 		}
         completion_reward = {
-			
+			add_stability = 0.05
+			add_timed_idea = { idea = SAF_idea_107 days = 180 }
+			hidden_effect = { country_event = { id = south_afrika.93 } }
+			custom_effect_tooltip = SAF_tooltip_37
         }
 	}
 	
@@ -3836,7 +3857,7 @@ continuous_focus_position = { x = 4500 y = 700 }
 			factor = 1
 		}
         completion_reward = {
-			
+			add_ideas = SAF_idea_105
         }
 	}
 	
@@ -3847,13 +3868,92 @@ continuous_focus_position = { x = 4500 y = 700 }
 		x = 0
 		y = 1
 		cost = 10
-		
+		available = {
+			1111 = {
+				controller = {
+					OR = {
+						tag = ROOT
+						is_subject_of = ROOT
+					}
+				}
+			}
+			681 = {
+				controller = {
+					OR = {
+						tag = ROOT
+						is_subject_of = ROOT
+					}
+				}
+			}
+			1108 = {
+				controller = {
+					OR = {
+						tag = ROOT
+						is_subject_of = ROOT
+					}
+				}
+			}
+			719 = {
+				controller = {
+					OR = {
+						tag = ROOT
+						is_subject_of = ROOT
+					}
+				}
+			}
+			1109 = {
+				controller = {
+					OR = {
+						tag = ROOT
+						is_subject_of = ROOT
+					}
+				}
+			}
+			1107 = {
+				controller = {
+					OR = {
+						tag = ROOT
+						is_subject_of = ROOT
+					}
+				}
+			}
+			275 = {
+				controller = {
+					OR = {
+						tag = ROOT
+						is_subject_of = ROOT
+					}
+				}
+			}
+		}
 		prerequisite = { focus = SAF_free_republic_Azania }
 		ai_will_do = {
 			factor = 1
 		}
         completion_reward = {
-			
+			1111 = {
+				add_manpower = -2000
+			}
+			681 = {
+				add_manpower = -167800
+			}
+			1108 = {
+				add_manpower = -160200
+			}
+			719 = {
+				add_manpower = -592000
+			}
+			1109 = {
+				add_manpower = -200000
+			}
+			1107 = {
+				add_manpower = -336000
+			}
+			275 = {
+				add_manpower = -400000
+			}
+			ENG ={ country_event = { id = south_afrika.96 } }
+			HOL ={ country_event = { id = south_afrika.97 } }
         }
 	}
 	
@@ -3865,12 +3965,16 @@ continuous_focus_position = { x = 4500 y = 700 }
 		y = 1
 		cost = 10
 		
+		available = { has_idea = SAF_idea_102 }
 		prerequisite = { focus = SAF_free_republic_Azania }
 		ai_will_do = {
 			factor = 1
 		}
         completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = SAF_idea_102
+				add_idea = SAF_idea_102_2
+			}
         }
 	}
 	
@@ -3882,12 +3986,13 @@ continuous_focus_position = { x = 4500 y = 700 }
 		y = 2
 		cost = 10
 		
+		available = { has_completed_focus = SAF_power_of_more }
 		prerequisite = { focus = SAF_white_exile }
 		ai_will_do = {
 			factor = 1
 		}
         completion_reward = {
-			
+			add_ideas = SAF_idea_109
         }
 	}
 	
@@ -3923,7 +4028,8 @@ continuous_focus_position = { x = 4500 y = 700 }
 			factor = 1
 		}
         completion_reward = { 
-			
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SAF_repair_city"
+			add_timed_idea = { idea = SAF_idea_106 days = 1520 }
         }
 	}
 	

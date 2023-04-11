@@ -2594,3 +2594,88 @@ country_event = { # Принятие Хартии Свободы
 		}
 	}
 }
+
+country_event = { # «Успех аграрной политики
+	id = south_afrika.94
+	title = south_afrika.94.t
+	desc = south_afrika.94.d
+	picture = GFX_report_event_gathering_protest
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event south_afrika.94" }
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+	
+	option = { # Прекрасно! 
+		name = south_afrika.94.a
+		remove_ideas = SAF_idea_100_3
+		every_core_state = {
+			add_extra_state_shared_building_slots = 1
+		}
+	}
+}
+
+country_event = { # Новая Республика
+	id = south_afrika.95
+	title = south_afrika.95.t
+	desc = south_afrika.95.d
+	picture = GFX_report_event_gathering_protest
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event south_afrika.95" }
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+	
+	option = { # За Свободную  Африку!
+		name = south_afrika.95.a
+		add_popularity = { ideology = communism popularity = 0.05 }
+		add_war_support = 0.5
+	}
+}
+
+country_event = { # Изгнание белых из Народной Республики Азания
+	id = south_afrika.96
+	title = south_afrika.96.t
+	desc = south_afrika.96.d
+	picture = GFX_report_event_gathering_protest
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event south_afrika.96" }
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+	
+	option = { # Добро пожаловать домой!
+		name = south_afrika.96.a
+		126 = {
+			add_manpower = 371600
+		}
+	}
+}
+
+country_event = { # Изгнание белых из Народной Республики Азания
+	id = south_afrika.97
+	title = south_afrika.97.t
+	desc = south_afrika.97.d
+	picture = GFX_report_event_gathering_protest
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event south_afrika.97" }
+	
+	fire_only_once = yes
+	is_triggered_only = yes 
+	
+	option = { # Добро пожаловать домой!
+		name = south_afrika.97.a
+		7 = {
+			add_manpower = 520240
+		}
+		35 = {
+			add_manpower = 260120
+		}
+		976 = {
+			add_manpower = 260120
+		}
+		36 = {
+			add_manpower = 260120
+		}
+	}
+}

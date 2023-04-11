@@ -722,6 +722,154 @@ characters={
 			}
 		}
 	}
+	
+	SAF_Mattheus_Uys_Krige={
+		name=SAF_Mattheus_Uys_Krige
+		portraits={
+			army={
+				small="GFX_idea_Mattheus_Uys_Krige"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SAF_Mattheus_Uys_Krige
+			allowed = {
+				original_tag = SAF
+			}
+			available = {
+				has_completed_focus = SAF_free_hartya
+			}
+			traits = {
+				anti_fascist
+			}
+		}
+	}
+	SAF_Josie_Mpama={
+		name=SAF_Josie_Mpama
+		portraits={
+			army={
+				small="GFX_idea_Josie_Mpama"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SAF_Josie_Mpama
+			allowed = {
+				original_tag = SAF
+			}
+			available = {
+				has_completed_focus = SAF_woman_in_commy
+			}
+			traits = {
+				profally_woman
+			}
+		}
+	}
+	SAF_Thabo_Edwin_Mofutsanyana={
+		name=SAF_Thabo_Edwin_Mofutsanyana
+		portraits={
+			army={
+				small="GFX_idea_Thabo_Edwin_Mofutsanyana"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SAF_Thabo_Edwin_Mofutsanyana
+			allowed = {
+				original_tag = SAF
+			}
+			available = {
+				has_completed_focus = SAF_YrGOMBuZ
+			}
+			traits = {
+				communist_revolutionary
+			}
+		}
+	}
+	SAF_Walter_Max_Ulyate_Sisulu={
+		name=SAF_Walter_Max_Ulyate_Sisulu
+		portraits={
+			army={
+				small="GFX_idea_Walter_Max_Ulyate_Sisulu"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SAF_Walter_Max_Ulyate_Sisulu
+			allowed = {
+				original_tag = SAF
+			}
+			available = {
+				has_completed_focus = SAF_repair_city
+			}
+			traits = {
+				dwelling_minister
+			}
+		}
+	}
+	SAF_Pixley_ka_Isaka_Seme={
+		name=SAF_Pixley_ka_Isaka_Seme
+		portraits={
+			army={
+				small="GFX_idea_Pixley_ka_Isaka_Seme"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SAF_Pixley_ka_Isaka_Seme
+			allowed = {
+				original_tag = SAF
+			}
+			available = {
+				has_completed_focus = SAF_litle_protectorats
+			}
+			traits = {
+				outstanding_lawyer
+			}
+		}
+	}
+	SAF_Madie_Hall_Xuma={
+		name=SAF_Madie_Hall_Xuma
+		portraits={
+			army={
+				small="GFX_idea_Madie_Hall_Xuma"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SAF_Madie_Hall_Xuma
+			allowed = {
+				original_tag = SAF
+			}
+			available = {
+				has_completed_focus = SAF_woman_in_ANK
+			}
+			traits = {
+				mather_of_SAF
+			}
+		}
+	}
+	SAF_Albert_John_Lutuli={
+		name=SAF_Albert_John_Lutuli
+		portraits={
+			army={
+				small="GFX_idea_Albert_John_Lutuli"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SAF_Albert_John_Lutuli
+			allowed = {
+				original_tag = SAF
+			}
+			available = {
+				has_completed_focus = SAF_gJmvdOxK
+			}
+			traits = {
+				education_minister
+			}
+		}
+	}
 	#Генералы восстания
 	
 	#Генералы восстания чёрные
