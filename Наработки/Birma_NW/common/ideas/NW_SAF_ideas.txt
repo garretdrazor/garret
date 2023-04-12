@@ -1336,9 +1336,68 @@ SAF_idea_114 = { # Путь мирной пропаганды
 	allowed_civil_war = { always = yes }
 	picture = hight_social
 	removal_cost = -1
-	modifier = { 
-		production_speed_hospital_factor = 0.1
-		drift_defence_factor = 0.15
+	modifier = {
+		trade_opinion_factor = 0.15
+		trade_laws_cost_factor = -0.25
+		economy_cost_factor = -0.25
+		mobilization_laws_cost_factor = -0.25
+	}
+}
+SAF_idea_115 = { # Путь мирной пропаганды 2
+	allowed = { always = no	}
+	allowed_civil_war = { always = yes }
+	picture = hight_social
+	removal_cost = -1
+	modifier = {
+		trade_opinion_factor = 0.15
+		trade_laws_cost_factor = -0.25
+		economy_cost_factor = -0.25
+		mobilization_laws_cost_factor = -0.25
+		stability_factor = 0.1
+		production_speed_industrial_complex_factor = 0.1
+		compliance_growth = 0.2
+	}
+}
+SAF_idea_116 = { # Поддержка радикальных взглядов
+	allowed = { always = no	}
+	allowed_civil_war = { always = yes }
+	picture = hight_social
+	removal_cost = -1
+	modifier = {
+		production_speed_arms_factory_factor = 0.1
+		generate_wargoal_tension = -0.2
+	}
+}
+SAF_idea_117 = { # Поддержка радикальных взглядов
+	allowed = { always = no	}
+	allowed_civil_war = { always = yes }
+	picture = hight_social
+	removal_cost = -1
+	modifier = {
+		production_speed_arms_factory_factor = 0.1
+		generate_wargoal_tension = -0.2
+		war_support_factor = 0.1
+		conscription = 0.02
+	}
+}
+SAF_idea_118 = { # Обширная агитация
+	allowed = { always = no	}
+	allowed_civil_war = { always = yes }
+	picture = hight_social
+	removal_cost = -1
+	modifier = {
+		consumer_goods_factor = 0.3
+		political_power_gain = - 0.5
+	}
+}
+SAF_idea_119 = { # Небольшая агитация
+	allowed = { always = no	}
+	allowed_civil_war = { always = yes }
+	picture = hight_social
+	removal_cost = -1
+	modifier = {
+		consumer_goods_factor = 0.15
+		political_power_gain = - 0.25
 	}
 }
 }

@@ -2252,7 +2252,7 @@ continuous_focus_position = { x = 4500 y = 700 }
         select_effect = {
 			country_event = { id = south_afrika.57 days = 25 }
 		}
-        completion_reward = { 
+        completion_reward = {
 			country_event = { id = south_afrika.58 }
         }
 	}
@@ -2990,7 +2990,6 @@ continuous_focus_position = { x = 4500 y = 700 }
 		x = -1
 		y = 1
 		cost = 10
-        available = { has_government = democratic } 
 		
 		prerequisite = { focus = SAF_ZqjstIBi }
 		ai_will_do = {
@@ -3022,7 +3021,7 @@ continuous_focus_position = { x = 4500 y = 700 }
 			factor = 1
 		}
         completion_reward = {
-			
+			add_ideas = SAF_idea_116
         }
 	}
 	
@@ -3085,7 +3084,10 @@ continuous_focus_position = { x = 4500 y = 700 }
 			factor = 1
 		}
         completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = SAF_idea_114
+				add_idea = SAF_idea_115
+			}
         }
 	}
 	
@@ -3095,16 +3097,20 @@ continuous_focus_position = { x = 4500 y = 700 }
 		relative_position_id = SAF_ZqjstIBi
 		x = 0
 		y = 2
-		cost = 10
+		cost = 12.9
         available = { has_government = democratic } 
 		
 		prerequisite = { focus = SAF_piece_propaganda focus = SAF_dem_radical }
 		ai_will_do = {
 			factor = 1
 		}
-        completion_reward = {
-			
-        }
+		
+		select_effect = {
+			country_event = { id = south_afrika.98 }
+		}
+		completion_reward = {
+			custom_effect_tooltip = SAF_tooltip_41
+		}
 	}
 	
 	focus = { # Молодежная лига Африканского национального конгресса 
@@ -3127,7 +3133,10 @@ continuous_focus_position = { x = 4500 y = 700 }
 			factor = 1
 		}
         completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = SAF_idea_116
+				add_idea = SAF_idea_117
+			}
         }
 	}
 	
@@ -3166,8 +3175,15 @@ continuous_focus_position = { x = 4500 y = 700 }
 		}
         completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SAF_CafyrKzX"
-			set_rule = { can_create_factions = yes }
 			create_faction = SAF_faction_6
+			set_rule = { can_create_factions = yes }
+			custom_effect_tooltip = can_generate_democratic_liberate_wargoal_democrat_tt
+			hidden_effect = {
+				set_rule = { can_declare_war_on_same_ideology = yes }
+				set_rule = { can_only_justify_war_on_threat_country = no }
+			}
+			custom_effect_tooltip = can_generate_democratic_liberate_wargoal_tt
+			set_country_flag = can_generate_democratic_liberate_wargoal_flag
         }
 	}
 	
@@ -3318,13 +3334,7 @@ continuous_focus_position = { x = 4500 y = 700 }
 		}
         completion_reward = { 
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SAF_gSfKlBVN"
-			add_ideas = SAF_idea_71
-			1108 = { 
-				add_extra_state_shared_building_slots = 3 
-				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
-				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
-				add_building_construction = { type = dockyard level = 1 instant_build = yes }        
-			}
+			
 		}
 	}
 	focus = { # Сокращение научного отставания 
@@ -3356,13 +3366,22 @@ continuous_focus_position = { x = 4500 y = 700 }
 		y = 5
 		cost = 10
 		
+		available = {
+			any_other_country = { is_major = yes is_in_faction_with = ROOT }
+        }
+		
 		prerequisite = { focus = SAF_EPbjRlyL }
 		ai_will_do = {
 			factor = 1
 		}
         completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SAF_EuVOckJQ"        
-			
+			1108 = {
+				add_extra_state_shared_building_slots = 3 
+				add_building_construction = { type = arms_factory level = 1 instant_build = yes }
+				add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+				add_building_construction = { type = dockyard level = 1 instant_build = yes }        
+			}
         }
 	}
 	
