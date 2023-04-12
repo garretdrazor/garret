@@ -650,8 +650,6 @@ SAF_idea_65 = { # Политика родной земли
 	picture = green_marshes
 	removal_cost = -1
 	modifier = { 
-		army_core_attack_factor = 0.05
-		army_core_defence_factor = 0.05
 		weekly_manpower = 100
 	}
 }

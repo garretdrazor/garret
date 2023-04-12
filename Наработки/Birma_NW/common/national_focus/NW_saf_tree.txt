@@ -4111,6 +4111,7 @@ continuous_focus_position = { x = 4500 y = 700 }
         available = {
 			has_government = communism
 			NOT = { has_completed_focus = SAF_ZqjstIBi }
+			has_country_flag = SAF_flag_12
 		}
 		
 		prerequisite = { focus = SAF_gJmvdOxK }
@@ -4133,14 +4134,12 @@ continuous_focus_position = { x = 4500 y = 700 }
 		y = 1
 		cost = 10
         available = { 
-			NOT = { has_country_flag = SAF_flag_13 }
 			275 = { is_fully_controlled_by = ROOT }
 			681 = { is_fully_controlled_by = ROOT }
 			719 = { is_fully_controlled_by = ROOT }
         }
 		
 		prerequisite = { focus = SAF_EsrbxCit }
-		mutually_exclusive = { focus = SAF_YOolyfSX }
 		ai_will_do = {
 			factor = 1
 		}
@@ -4153,19 +4152,15 @@ continuous_focus_position = { x = 4500 y = 700 }
         }
 	}
 	
-	focus = { # Межрасовый союз 
-		id = SAF_YOolyfSX
+	focus = { # Ввести однопартийную систему
+		id = SAF_one_party
 		icon = GFX_z_goal_profsoyuzy_dlya_chyornykh
 		relative_position_id = SAF_EsrbxCit
 		x = 0
 		y = 1
 		cost = 10
-        available = { 
-			NOT = { has_country_flag = SAF_flag_12 }
-        }
 		
 		prerequisite = { focus = SAF_EsrbxCit }
-		mutually_exclusive = { focus = SAF_YrGOMBuZ }
 		ai_will_do = {
 			factor = 1
 		}
@@ -4739,7 +4734,6 @@ continuous_focus_position = { x = 4500 y = 700 }
 		cost = 5
         available = { 
 			has_government = trozkism
-			NOT = { has_country_flag = SAF_flag_13 }
 			NOT = { has_completed_focus = SAF_ZqjstIBi }
         }
 		

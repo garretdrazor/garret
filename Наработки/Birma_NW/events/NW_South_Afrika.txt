@@ -1975,18 +1975,7 @@ country_event = { # Кризис концепции родной земли
 		ai_chance = { factor = 1 }
 		add_popularity = { ideology = communism popularity = -0.05 }
 		hidden_effect = { country_event = { days = 5 id = south_afrika.75 } }
-		set_country_flag = SAF_flag_13
 		custom_effect_tooltip = SAF_tooltip_24
-		retire_country_leader = yes
-		create_country_leader = {
-			name = "William H. Andrews"
-			desc = "POLITICS_SAF_William_H_Andrews_DESC"
-			picture = "Portrait_SAF_William_H_Andrews.dds"
-			expire = "1965.1.1"
-			ideology = leninism
-			traits = {
-			}
-		}
 	}
 }
 
@@ -2005,6 +1994,7 @@ country_event = { # Троцкисты переманивают к себе чё
 		ai_chance = { factor = 1 }
 		add_political_power = -100
 		add_timed_idea = { idea = SAF_idea_63 days = 20 }
+		set_country_flag = SAF_flag_12
 	}
 	option = { # А что поделать?
 		name = south_afrika.75.b
