@@ -853,10 +853,6 @@ country_event = { # Даниель Франсуа Малан заключает 
 		fascism > 0.25
 	}
 
-	mean_time_to_happen = {
-		days = 1
-	}
-
 	option = { # Ясно… 
 		name = south_afrika.28.a
 		add_popularity = { ideology = neutrality popularity = -0.1 }
@@ -879,10 +875,6 @@ country_event = { # Раскол в Объединённой националь�
 		NOT = { date > 1938.1.1 has_completed_focus = SAF_JPMvjnrI }
 		fascism > 0.4
 		NOT = { ENG = { has_government = fascism } }
-	}
-
-	mean_time_to_happen = {
-		days = 1
 	}
 
 	option = { # Пусть уходят 

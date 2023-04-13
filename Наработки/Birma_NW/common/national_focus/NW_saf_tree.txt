@@ -2916,7 +2916,7 @@ continuous_focus_position = { x = 4500 y = 700 }
 		x = 6
 		y = 1
 		cost = 10
-        available = { has_government = democratic NOT = { has_completed_focus = SAF_EsrbxCit has_completed_focus = SAF_KaMXJHdo } } 
+        available = { has_government = democratic NOT = { has_completed_focus = SAF_EsrbxCit has_completed_focus = SAF_KaMXJHdo has_civil_war = yes } } 
 		
 		prerequisite = { focus = SAF_gJmvdOxK }
 		ai_will_do = {
@@ -4110,7 +4110,7 @@ continuous_focus_position = { x = 4500 y = 700 }
 		cost = 5
         available = {
 			has_government = communism
-			NOT = { has_completed_focus = SAF_ZqjstIBi }
+			NOT = { has_completed_focus = SAF_ZqjstIBi has_civil_war = yes}
 			has_country_flag = SAF_flag_12
 		}
 		
@@ -4123,6 +4123,7 @@ continuous_focus_position = { x = 4500 y = 700 }
 		}
         completion_reward = {
 			add_timed_idea = { idea = SAF_idea_33 days = 180 }
+			custom_effect_tooltip = SAF_tooltip_42
 		}
 	}
 	
@@ -4748,7 +4749,7 @@ continuous_focus_position = { x = 4500 y = 700 }
 		cost = 5
         available = { 
 			has_government = trozkism
-			NOT = { has_completed_focus = SAF_ZqjstIBi }
+			NOT = { has_completed_focus = SAF_ZqjstIBi has_civil_war = yes }
         }
 		
 		prerequisite = { focus = SAF_gJmvdOxK }
