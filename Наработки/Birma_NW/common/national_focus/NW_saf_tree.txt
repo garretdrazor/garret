@@ -1297,8 +1297,10 @@ continuous_focus_position = { x = 4500 y = 700 }
 				limit = {
 					has_idea = SAF_idea_100_2
 				}
-				remove_idea = SAF_idea_100_2
-				add_idea = SAF_idea_100_3
+				swap_ideas = {
+					remove_idea = SAF_idea_100_2
+					add_idea = SAF_idea_100_3
+				}
 			}
 			else_if = {
 				limit = {
@@ -1368,8 +1370,10 @@ continuous_focus_position = { x = 4500 y = 700 }
 				limit = {
 					has_idea = SAF_idea_100_2
 				}
-				remove_idea = SAF_idea_100_2
-				add_idea = SAF_idea_100_3
+				swap_ideas = {
+					remove_idea = SAF_idea_100_2
+					add_idea = SAF_idea_100_3
+				}
 			}
 			else_if = {
 				limit = {
@@ -1459,9 +1463,6 @@ continuous_focus_position = { x = 4500 y = 700 }
 		}
         completion_reward = { 
 			custom_effect_tooltip = SAF_tooltip_15
-			hidden_effect = {
-				unlock_decision_category_tooltip = SAF_decisions_tag_6
-			}
         }
 	}
 	
@@ -2889,7 +2890,7 @@ continuous_focus_position = { x = 4500 y = 700 }
 	}
 
 	
-	focus = { # Восстание чёрного населения 
+	focus = { # Восстание против апартеида
 		id = SAF_gJmvdOxK
 		icon = GFX_z_goal_black_rise_FAF
 		x = 3
@@ -2905,6 +2906,9 @@ continuous_focus_position = { x = 4500 y = 700 }
 		mutually_exclusive = { focus = SAF_cnzxSQNy }
 		ai_will_do = {
 			factor = 1
+		}
+		completion_reward = { 
+			custom_effect_tooltip = TUR_focus_autocomplete_tt
 		}
 	}
 
@@ -4124,6 +4128,7 @@ continuous_focus_position = { x = 4500 y = 700 }
         completion_reward = {
 			add_timed_idea = { idea = SAF_idea_33 days = 180 }
 			custom_effect_tooltip = SAF_tooltip_42
+			
 		}
 	}
 	
@@ -4159,14 +4164,26 @@ continuous_focus_position = { x = 4500 y = 700 }
 		relative_position_id = SAF_EsrbxCit
 		x = 0
 		y = 1
-		cost = 10
+		cost = 5
 		
 		prerequisite = { focus = SAF_EsrbxCit }
 		ai_will_do = {
 			factor = 1
 		}
-        completion_reward = { 
-			
+        select_effect = {
+			custom_effect_tooltip = SAF_tooltip_43
+			hidden_effect = {
+				country_event = { id = south_afrika.108 days = 10 }
+				country_event = { id = south_afrika.109 days = 40 }
+				country_event = { id = south_afrika.110 days = 70 }
+				country_event = { id = south_afrika.111 days = 84 }
+				country_event = { id = south_afrika.112 days = 115 }
+				country_event = { id = south_afrika.113 days = 140 }
+				country_event = { id = south_afrika.114 days = 180 }
+			}
+        }
+		completion_reward = {
+			custom_effect_tooltip = SAF_tooltip_43
         }
 	}
 

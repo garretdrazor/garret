@@ -40,4 +40,21 @@ leader_traits = {
 		random = no
 		stability_factor = 0.1
 	}
+	giant_fighter = { # Гигант борьбы
+		random = no
+		resistance_activity = 0.25
+		resistance_growth_on_our_occupied_states = 0.25
+		max_dig_in_factor = 0.1
+	}
+	lenin_school_student = { # Ученик международной ленинской школы СССР
+		random = no
+		communism_drift = 0.05
+		communism_acceptance = 100
+	}
+	Coalition_Goverment_SAF = { # Коалиционное правительство
+		random = no
+		democratic_acceptance = 100
+		communism_acceptance = 100
+		political_power_factor = -0.25
+	}
 }

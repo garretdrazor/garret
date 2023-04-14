@@ -26,11 +26,6 @@ SAF_decisions_tag_5 = { # Развёртывание дивизий серору
 	allowed = { original_tag = SAF }
 	visible = { has_government = fascism has_completed_focus = SAF_jXfZgUAF }
 }
-SAF_decisions_tag_6 = { # Обеление Африки
-	picture = GFX_decision_cat_picture_naval_treaties
-	allowed = { original_tag = SAF }
-	visible = { has_government = fascism has_completed_focus = SAF_QNUPaSwo }
-}
 SAF_decisions_tag_7 = { # Развитие Южной Родезии
 	picture = GFX_decision_cat_picture_naval_treaties
 	allowed = { original_tag = SAF }

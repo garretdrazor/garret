@@ -187,13 +187,15 @@ set_politics = {
 	}
 }
 
+recruit_character = SAF_Thabo_Edwin_Mofutsanyana
 recruit_character = SAF_moses_kotane
+recruit_character = SAF_j_b_m_hertzog
 recruit_character = SAF_jan_smuts
+recruit_character = SAF_Revolution_Coalition_Goverment_dem
+recruit_character = SAF_d_f_malan
 recruit_character = SAF_george_edwin_brink
 recruit_character = SAF_guy_hallifax
-recruit_character = SAF_j_b_m_hertzog
 recruit_character = SAF_c_f_stallard
-recruit_character = SAF_louis_weichardt
 recruit_character = SAF_rachel_simons
 recruit_character = SAF_isaac_pierre_de_villiers
 recruit_character = SAF_christoffel_venter
@@ -215,6 +217,8 @@ recruit_character = SAF_e_g_jansen
 recruit_character = SAF_nicolaas_havenga
 recruit_character = SAF_sir_patrick_duncan
 recruit_character = SAF_abram_fischer
+recruit_character = SAF_Louis_Theodor_Weichardt
+recruit_character = SAF_Johannes_Van_Rensburg
 #новые
 recruit_character = SAF_Zacharias_Richard_Mahabane
 recruit_character = SAF_Alfred_Bitini_Xuma
@@ -222,18 +226,18 @@ recruit_character = SAF_yan_cemp
 recruit_character = SAF_Oswald_Pirow
 recruit_character = SAF_Federik_Cresswell
 recruit_character = SAF_Sarah_Millin
-recruit_character = SAF_pixley_ka_isaka_seme
 recruit_character = SAF_Job_Maseko
 recruit_character = SAF_Lucas_Majozi
 recruit_character = SAF_Berry_Gazi
 recruit_character = SAF_Reuben_Moloi
 recruit_character = SAF_Mattheus_Uys_Krige
 recruit_character = SAF_Josie_Mpama
-recruit_character = SAF_Thabo_Edwin_Mofutsanyana
 recruit_character = SAF_Walter_Max_Ulyate_Sisulu
 recruit_character = SAF_Pixley_ka_Isaka_Seme
 recruit_character = SAF_Madie_Hall_Xuma
 recruit_character = SAF_Albert_John_Lutuli
+recruit_character = SAF_Revolution_Coalition_Goverment_com
+
 
 1940.1.1 = {
 	oob = "OOB_zero"

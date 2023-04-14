@@ -2163,6 +2163,18 @@ country_event = { # Коммунистическая партия Южной А�
 	option = { # Ну давайте, нападайте! 
 		name = south_afrika.81.a
 		ai_chance = { factor = 10 }
+		add_country_leader_role = {
+			character = SAF_Revolution_Coalition_Goverment_com
+			promote_leader = yes
+			country_leader = {
+				ideology=marxism
+				expire="1965.1.1.1"
+				id=-1
+				traits = {
+					Coalition_Goverment_SAF
+				}
+			}
+		}
 		start_civil_war = {
 			ideology = communism
 			states = {
@@ -2178,11 +2190,29 @@ country_event = { # Коммунистическая партия Южной А�
 		ai_chance = { factor = 1 }
 		set_country_flag = SAF_flag_25
 		set_politics = { ruling_party = communism elections_allowed = no } add_popularity = { ideology = communism popularity = 0.25 }
+		add_country_leader_role = {
+			character = SAF_Revolution_Coalition_Goverment_com
+			promote_leader = yes
+			country_leader = {
+				ideology=marxism
+				expire="1965.1.1.1"
+				id=-1
+				traits = {
+					Coalition_Goverment_SAF
+				}
+			}
+		}
 		unlock_national_focus = SAF_gJmvdOxK
 		start_civil_war = {
 			ideology = neutrality
 			states = { 
-				1107 1113 541 1112 1111 1114 
+				1107
+				1108
+				1111
+				1114
+				541
+				1113
+				1112
 			}
 		}
 	}
@@ -2197,50 +2227,110 @@ country_event = { # Африканский национальный конгре
 	
 	is_triggered_only = yes
 
+
 	option = { # Обнажите свою смелость 
 		name = south_afrika.82.a
 		ai_chance = { factor = 10 }
-		start_civil_war = {
-			ideology = democratic
-			set_cosmetic_tag = SAF_black_revolt
-			promote_character = {
-				character = SAF_pixley_ka_isaka_seme
-				ideology = national_liberalism
-			}
-			set_party_name = {
-				ideology = democratic
-				long_name = SAF_african_nac_congress_long
-				name = SAF_african_nac_congress
-			}
-			states = {
-				681
-				275
-				719
-				1109
-			}
-		}
-	}
-	option = { # Их слишком много… 
-		name = south_afrika.82.b
-		ai_chance = { factor = 1 }
-		set_country_flag = SAF_flag_25
-		unlock_national_focus = SAF_gJmvdOxK
-		set_politics = { ruling_party = democratic elections_allowed = no }
-		add_popularity = { ideology = democratic popularity = 0.25 }
-		set_cosmetic_tag = SAF_black_revolt
-		promote_character = {
-			character = SAF_pixley_ka_isaka_seme
-			ideology = national_liberalism
-		}
 		set_party_name = {
 			ideology = democratic
 			long_name = SAF_african_nac_congress_long
 			name = SAF_african_nac_congress
 		}
 		start_civil_war = {
-			ideology = neutrality
+			ideology = democratic
+			hidden_effect = {
+				set_popularities = {
+					democratic = 40
+					communism = 35
+					trozkism = 25
+				}
+			}
+			set_cosmetic_tag = SAF_black_revolt
+			states = {
+				681
+				275
+				719
+				1109
+			}
+			set_capital = {state = 1109}
+			hidden_effect = { load_focus_tree = NW_saf_tree }
+			ROOT = { SAF_Revolution_Coalition_Goverment_dem = { set_nationality = PREV.PREV } }
+			promote_character = SAF_Revolution_Coalition_Goverment_dem
+			keep_all_characters = yes
+		}
+	}
+	option = { # Их слишком много… 
+		name = south_afrika.82.b
+		ai_chance = { factor = 1 }
+#		trigger = { has_government = fascism }
+		set_country_flag = SAF_flag_25
+		unlock_national_focus = SAF_gJmvdOxK
+		set_politics = { ruling_party = democratic elections_allowed = no }
+		hidden_effect = {
+			set_popularities = {
+				democratic = 40
+				communism = 35
+				trozkism = 25
+			}
+		}
+		set_cosmetic_tag = SAF_black_revolt
+		set_capital = {state = 1109}
+		retire_ideology_leader = democratic
+		set_party_name = {
+			ideology = democratic
+			long_name = SAF_african_nac_congress_long
+			name = SAF_african_nac_congress
+		}
+		start_civil_war = {
+			ideology = fascism
 			states = { 
-				1107 1113 541 1112 1111 1114 
+				1107
+				1108
+				1111
+				1114
+				541
+				1113
+				1112
+			}
+			hidden_effect = { load_focus_tree = NW_saf_tree }
+		}
+	}
+	option = { # Их слишком много… 
+		name = south_afrika.82.c
+		ai_chance = { factor = 1 }
+#		trigger = { has_government = democratic }
+		set_country_flag = SAF_flag_25
+		unlock_national_focus = SAF_gJmvdOxK
+		set_politics = { ruling_party = democratic elections_allowed = no }
+		set_cosmetic_tag = SAF_black_revolt
+		set_capital = {state = 1109}
+		start_civil_war = {
+			ideology = democratic
+			states = { 
+				1107
+				1108
+				1111
+				1114
+				541
+				1113
+				1112
+			}
+			hidden_effect = { load_focus_tree = NW_saf_tree }
+			ROOT = { SAF_d_f_malan = { set_nationality = PREV.PREV } }
+			promote_character = SAF_d_f_malan
+			keep_all_characters = yes
+		}
+		retire_ideology_leader = democratic
+		set_party_name = {
+			ideology = democratic
+			long_name = SAF_african_nac_congress_long
+			name = SAF_african_nac_congress
+		}
+		hidden_effect = {
+			set_popularities = {
+				democratic = 40
+				communism = 35
+				trozkism = 25
 			}
 		}
 	}
@@ -2768,7 +2858,7 @@ country_event = { # Басутоленд решил войти в наш сос�
 		LES = {
 			remove_state_core = 1106
 		}
-		ENG = { id = south_afrika.106 }
+		ENG = { country_event = { id = south_afrika.106 } }
 	}
 }
 
@@ -2790,7 +2880,7 @@ country_event = { # Свазиленд решил войти в наш сост�
 			remove_state_core = 1105
 		}
 		add_state_core = 1105
-		ENG = { id = south_afrika.106 }
+		ENG = { country_event = { id = south_afrika.106 } }
 	}
 }
 
@@ -2812,7 +2902,7 @@ country_event = { # Бечуаленд решил войти в наш сост�
 			remove_state_core = 542
 		}
 		add_state_core = 542
-		ENG = { id = south_afrika.106 }
+		ENG = { country_event = { id = south_afrika.106 } }
 	}
 }
 
@@ -2829,7 +2919,7 @@ country_event = { # Басутоленд объявил себя независ�
 	
 	option = { # Это их право 
 		name = south_afrika.103.a
-		ENG = { release = LES id = south_afrika.107 }
+		ENG = { release = LES country_event = { id = south_afrika.107 } }
 	}
 }
 
@@ -2846,7 +2936,7 @@ country_event = { # Свазиленд объявил себя независи�
 	
 	option = { # Это их право 
 		name = south_afrika.104.a
-		ENG = { release = ESW id = south_afrika.107 }
+		ENG = { release = ESW country_event = { id = south_afrika.107 } }
 	}
 }
 
@@ -2863,7 +2953,7 @@ country_event = { # Бечуаленд объявил себя независи�
 	
 	option = { # Это их право 
 		name = south_afrika.105.a
-		ENG = { release = BOT id = south_afrika.107 }
+		ENG = { release = BOT country_event = { id = south_afrika.107 } }
 	}
 }
 
@@ -2898,5 +2988,139 @@ country_event = { # Малый протектора объявил о своей
 	option = { # Мы ничего с этим не сделаем
 		name = south_afrika.107.a
 		add_political_power = -10
+	}
+}
+
+country_event = { # Переманивание членов АНК в компартию
+	id = south_afrika.108
+	title = south_afrika.108.t
+	desc = south_afrika.108.d
+	picture = GFX_report_event_gathering_protest
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event south_afrika.108" }
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { # Это усилит наши позиции 
+		name = south_afrika.108.a
+		add_popularity = { ideology = democratic popularity = -0.02 }
+		add_popularity = { ideology = communism popularity = -0.02 }
+	}
+}
+
+country_event = { # Замена членов комитета сочувствующих АНК
+	id = south_afrika.109
+	title = south_afrika.109.t
+	desc = south_afrika.109.d
+	picture = GFX_report_event_gathering_protest
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event south_afrika.109" }
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { # Пока что мы остановимся 
+		name = south_afrika.109.a
+		add_popularity = { ideology = democratic popularity = -0.02 }
+		add_popularity = { ideology = communism popularity = -0.02 }
+	}
+}
+
+country_event = { # Отстранение генерального секретаря
+	id = south_afrika.110
+	title = south_afrika.110.t
+	desc = south_afrika.110.d
+	picture = GFX_report_event_gathering_protest
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event south_afrika.110" }
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { # Это вынужденная мера 
+		name = south_afrika.110.a
+		add_stability = -0.05
+	}
+}
+
+country_event = { # Назначение нового генерального секретаря
+	id = south_afrika.111
+	title = south_afrika.111.t
+	desc = south_afrika.111.d
+	picture = GFX_report_event_gathering_protest
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event south_afrika.111" }
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { # Слава партии!
+		name = south_afrika.111.a
+		promote_character = SAF_moses_kotane
+	}
+}
+
+country_event = { # Введение однопартийной системы
+	id = south_afrika.112
+	title = south_afrika.112.t
+	desc = south_afrika.112.d
+	picture = GFX_report_event_gathering_protest
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event south_afrika.112" }
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { # Мы объединяем страну 
+		name = south_afrika.112.a
+		set_party_name = { ideology = democratic name = anarchism_party_banned }
+		set_party_name = { ideology = fascism name = anarchism_party_banned }
+		set_party_name = { ideology = neutrality name = anarchism_party_banned }
+		set_party_name = { ideology = technocracy name = anarchism_party_banned }
+		set_party_name = { ideology = trozkism name = anarchism_party_banned }
+		set_party_name = { ideology = monarchy name = anarchism_party_banned }
+		set_party_name = { ideology = anarchism name = anarchism_party_banned }
+	}
+}
+
+country_event = { # Митинги АНК
+	id = south_afrika.113
+	title = south_afrika.113.t
+	desc = south_afrika.113.d
+	picture = GFX_report_event_gathering_protest
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event south_afrika.113" }
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { # Выборы? Выбор очевиден – разогнать митингующих!  
+		name = south_afrika.113.a
+		add_stability = -0.05
+		add_popularity = { ideology = communism popularity = -0.05 }
+		add_ideas = SAF_idea_120
+	}
+}
+
+country_event = { # Запрет АНК
+	id = south_afrika.114
+	title = south_afrika.114.t
+	desc = south_afrika.114.d
+	picture = GFX_report_event_gathering_protest
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event south_afrika.114" }
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { # Давно пора было пойти на это 
+		name = south_afrika.113.a
+		add_political_power = -100
+		add_ideas = SAF_idea_124
+		swap_ideas = {
+			remove_idea = SAF_idea_120
+			add_idea = SAF_idea_121
+		}
 	}
 }

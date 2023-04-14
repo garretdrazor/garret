@@ -724,7 +724,7 @@ SAF_idea_72 = { # Расширение автономии
 SAF_idea_73 = { # Снижение автономии
 	allowed = {
 		always = no
-		NOT = {	has_autonomy_state = autonomy_free	}
+		NOT = {	is_subject = yes	}
 	}
 	allowed_civil_war = { always = yes }
 	picture = green_marshes
@@ -736,7 +736,6 @@ SAF_idea_73 = { # Снижение автономии
 SAF_idea_74 = { # Доки Кейптауна
 	allowed = {
 		always = no
-		NOT = {	has_autonomy_state = autonomy_free	}
 	}
 	allowed_civil_war = { always = yes }
 	picture = green_marshes
@@ -748,7 +747,6 @@ SAF_idea_74 = { # Доки Кейптауна
 SAF_idea_75 = { # Капский корпус
 	allowed = {
 		always = no
-		NOT = {	has_autonomy_state = autonomy_free	}
 	}
 	allowed_civil_war = { always = yes }
 	picture = green_marshes
@@ -1385,7 +1383,7 @@ SAF_idea_118 = { # Обширная агитация
 	removal_cost = -1
 	modifier = {
 		consumer_goods_factor = 0.3
-		political_power_gain = - 0.5
+		political_power_gain = -0.5
 	}
 }
 SAF_idea_119 = { # Небольшая агитация
@@ -1395,7 +1393,68 @@ SAF_idea_119 = { # Небольшая агитация
 	removal_cost = -1
 	modifier = {
 		consumer_goods_factor = 0.15
-		political_power_gain = - 0.25
+		political_power_gain = -0.25
+	}
+}
+SAF_idea_120 = { # Митинги АНК
+	allowed = { always = no	}
+	allowed_civil_war = { always = yes }
+	picture = hight_social
+	removal_cost = -1
+	modifier = {
+		stability_factor = -0.2
+		MONTHLY_POPULATION = -0.1
+		production_factory_efficiency_gain_factor = -0.2
+		production_factory_max_efficiency_factor = -0.2
+	}
+}
+
+SAF_idea_121 = { # Митинги АНК
+	allowed = { always = no	}
+	allowed_civil_war = { always = yes }
+	picture = hight_social
+	removal_cost = -1
+	modifier = {
+		stability_factor = -0.15
+		MONTHLY_POPULATION = -0.75
+		production_factory_efficiency_gain_factor = -0.15
+		production_factory_max_efficiency_factor = -0.15
+	}
+}
+
+SAF_idea_122 = { # Митинги АНК
+	allowed = { always = no	}
+	allowed_civil_war = { always = yes }
+	picture = hight_social
+	removal_cost = -1
+	modifier = {
+		stability_factor = -0.1
+		MONTHLY_POPULATION = -0.5
+		production_factory_efficiency_gain_factor = -0.1
+		production_factory_max_efficiency_factor = -0.1
+	}
+}
+
+SAF_idea_123 = { # Митинги АНК
+	allowed = { always = no	}
+	allowed_civil_war = { always = yes }
+	picture = hight_social
+	removal_cost = -1
+	modifier = {
+		stability_factor = -0.05
+		MONTHLY_POPULATION = -0.25
+		production_factory_efficiency_gain_factor = -0.05
+		production_factory_max_efficiency_factor = -0.05
+	}
+}
+
+SAF_idea_124 = { # Запрет АНК
+	allowed = { always = no	}
+	allowed_civil_war = { always = yes }
+	picture = hight_social
+	removal_cost = -1
+	modifier = {
+		democratic_drift = -0.1
 	}
 }
 }

@@ -473,64 +473,6 @@ SAF_decisions_tag_5 = { # Развёртывание дивизий серору
 	}
 }
 
-SAF_decisions_tag_6 = { # Обеление Африки
-	SAF_decisions_tag_6_1 = { # Начать выселение цветных меньшинств из провинции
-		
-		allowed = { original_tag = SAF }
-		available = { }
-		visible = { any_owned_state = { has_state_flag = SAF_flag_2 } }
-		cost = 75
-		days_remove = 300
-		fire_only_once = yes
-		ai_will_do = { factor = 1 }
-		complete_effect  = { 
-			random_state = {
-				limit = {
-					is_controlled_by = ROOT
-					has_state_flag = SAF_flag_2
-				}
-				set_state_flag = SAF_flag_3
-				add_province_modifier = { static_modifiers = { SAF_stat_modif_3 } province = { all_provinces = yes } }
-			}
-		}
-		remove_effect  = { 
-			random_owned_state = { 
-				limit = { is_controlled_by = ROOT has_state_flag = SAF_flag_3 } 
-				set_state_flag = SAF_flag_4 clr_state_flag = SAF_flag_2 clr_state_flag = SAF_flag_3
-				remove_province_modifier = { static_modifiers = { SAF_stat_modif_2 SAF_stat_modif_3 } }
-			}
-		}
-	}
-	SAF_decisions_tag_6_2 = { # Заселить регион белыми фермерами
-		
-		allowed = { original_tag = SAF }
-		available = { controls_state = 1108 }
-		visible = {  }
-		cost = 50
-		days_remove = 182
-		fire_only_once = yes
-		ai_will_do = { factor = 1 }
-		complete_effect  = { add_ideas = SAF_idea_34
-			random_state = {
-				limit = {
-					is_controlled_by = ROOT
-					has_state_flag = SAF_flag_4
-				}
-				set_state_flag = SAF_flag_5
-				add_province_modifier = { static_modifiers = { SAF_stat_modif_4 } province = { all_provinces = yes } }
-			}
-		}
-		remove_effect  = {
-			remove_ideas = SAF_idea_34
-			random_owned_state = { 
-				limit = { is_controlled_by = ROOT has_state_flag = SAF_flag_5 } 
-				remove_province_modifier = { static_modifiers = { SAF_stat_modif_4 } } clr_state_flag = SAF_flag_5
-				add_extra_state_shared_building_slots = 1 add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
-			}	
-		}	
-	}
-}
-
 SAF_decisions_tag_7 = { # Развёртывание дивизий серорубашечников
 	SAF_decisions_tag_7_1 = { # Строительство дамбы Кариба
 		

@@ -3,7 +3,7 @@ characters={
 		name=SAF_j_b_m_hertzog
 		portraits={
 			civilian={
-				large="GFX_SAF_james_hertzog"
+				large="gfx/leaders/SAF/Portrait_South_Africa_Barry_Hertzog.dds"
 			}
 			army={
 				small="GFX_idea_j_b_m_hertzog"
@@ -28,7 +28,8 @@ characters={
 			}
 		}
 		country_leader={
-			ideology=conservatism
+			desc="POLITICS_J_B_M_HERTZOG_DESC"
+			ideology=moderatism
 			expire="1965.1.1.1"
 			id=-1
 		}
@@ -59,9 +60,74 @@ characters={
 		}
 		
 		country_leader={
-			ideology=fascism_ideology
+			ideology=national_conservatism
 			expire="1965.1.1.1"
 			id=-1
+		}
+	}
+
+	SAF_Thabo_Edwin_Mofutsanyana={
+		name=SAF_Thabo_Edwin_Mofutsanyana
+		portraits={
+			army={
+				small="GFX_idea_Thabo_Edwin_Mofutsanyana"
+			}
+			civilian={
+				large="GFX_SAF_Thabo_Edwin_Mofutsanyana"
+			}
+		}
+		country_leader={
+			ideology=marxism
+			expire="1965.1.1.1"
+			id=-1
+			traits = {
+				lenin_school_student 
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SAF_Thabo_Edwin_Mofutsanyana
+			allowed = {
+				original_tag = SAF
+			}
+			available = {
+				has_completed_focus = SAF_YrGOMBuZ
+				NOT = {
+					has_country_leader = {
+						character = SAF_Thabo_Edwin_Mofutsanyana
+						ruling_only = yes
+					}
+				}
+			}
+			traits = {
+				communist_revolutionary
+			}
+		}
+	}
+	
+	SAF_Revolution_Coalition_Goverment_dem={
+		name=SAF_Revolution_Coalition_Goverment_dem
+		portraits={
+			civilian={
+				large="GFX_SAF_Revolution_Coalition_Goverment"
+			}
+		}
+		country_leader={
+			ideology=socialism
+			expire="1965.1.1.1"
+			id=-1
+			traits = {
+				Coalition_Goverment_SAF
+			}
+		}
+	}
+	
+	SAF_Revolution_Coalition_Goverment_com={
+		name=SAF_Revolution_Coalition_Goverment_com
+		portraits={
+			civilian={
+				large="GFX_SAF_Revolution_Coalition_Goverment"
+			}
 		}
 	}
 
@@ -76,20 +142,9 @@ characters={
 			ideology=marxism
 			expire="1965.1.1.1"
 			id=-1
-		}
-	}
-
-	SAF_pixley_ka_isaka_seme={
-		name=SAF_pixley_ka_isaka_seme
-		portraits={
-			civilian={
-				large=GFX_portrait_SAF_pixley_ka_isaka_seme
+			traits = {
+				giant_fighter 
 			}
-		}
-		country_leader={
-			ideology=national_liberalism
-			expire="1965.1.1.1"
-			id=-1
 		}
 	}
 
@@ -654,6 +709,136 @@ characters={
 			}
 		}
 	}
+	SAF_c_f_stallard={
+		name=SAF_c_f_stallard
+		portraits={
+			civilian={
+				large="gfx/leaders/Africa/Portrait_Africa_Generic_Monarchy_1.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_C_F_STALLARD_DESC"
+			ideology=monarchy_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	SAF_isaac_pierre_de_villiers={
+		name=SAF_isaac_pierre_de_villiers
+		portraits={
+			army={
+				small="GFX_"
+			}
+			army={
+				large="gfx/leaders/SAF/Portrait_Isaac_Pierre_de_Villiers.dds"
+			}
+		}
+		corps_commander={
+			traits={ art_leader old_guard }
+			skill=3
+			attack_skill=2
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	SAF_christoffel_venter={
+		name=SAF_christoffel_venter
+		portraits={
+			army={
+				small="GFX_"
+			}
+			army={
+				large="gfx/leaders/SAF/Portrait_Christoffel_Venter.dds"
+			}
+		}
+		corps_commander={
+			traits={ commando }
+			skill=2
+			attack_skill=2
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	SAF_daniel_hermanus_pienaar={
+		name=SAF_daniel_hermanus_pienaar
+		portraits={
+			army={
+				small="GFX_"
+			}
+			army={
+				large="gfx/leaders/SAF/Portrait_Daniel_Pienaar.dds"
+			}
+		}
+		corps_commander={
+			traits={ art_leader desert_fox }
+			skill=2
+			attack_skill=2
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	SAF_basil_schonland={
+		name=SAF_basil_schonland
+		portraits={
+			army={
+				small="GFX_"
+			}
+			army={
+				large="gfx/leaders/SAF/Portrait_Basil_Schonland.dds"
+			}
+		}
+		corps_commander={
+			traits={ trait_engineer }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	
+	#Правые лидеры
+	SAF_Louis_Theodor_Weichardt = {
+		name=SAF_Louis_Theodor_Weichardt
+		portraits={
+			civilian={
+				large=GFX_portrait_SAF_Louis_Theodor_Weichardt
+			}
+		}
+		country_leader={
+			ideology=nazism
+			expire="1965.1.1.1"
+			id=-1
+			traits = {
+				
+			}
+		}
+	}
+	
+	SAF_Johannes_Van_Rensburg = {
+		name=SAF_Johannes_Van_Rensburg
+		portraits={
+			civilian={
+				large=GFX_portrait_SAF_Johannes_Van_Rensburg
+			}
+		}
+		country_leader={
+			ideology=nazism
+			expire="1965.1.1.1"
+			id=-1
+			traits = {
+				
+			}
+		}
+	}
+	
 	#Новые министры
 	SAF_yan_cemp={
 		name=SAF_yan_cemp
@@ -800,27 +985,6 @@ characters={
 			}
 			traits = {
 				profally_woman
-			}
-		}
-	}
-	SAF_Thabo_Edwin_Mofutsanyana={
-		name=SAF_Thabo_Edwin_Mofutsanyana
-		portraits={
-			army={
-				small="GFX_idea_Thabo_Edwin_Mofutsanyana"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = SAF_Thabo_Edwin_Mofutsanyana
-			allowed = {
-				original_tag = SAF
-			}
-			available = {
-				has_completed_focus = SAF_YrGOMBuZ
-			}
-			traits = {
-				communist_revolutionary
 			}
 		}
 	}
