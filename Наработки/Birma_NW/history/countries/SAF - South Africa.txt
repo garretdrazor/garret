@@ -196,7 +196,6 @@ recruit_character = SAF_d_f_malan
 recruit_character = SAF_george_edwin_brink
 recruit_character = SAF_guy_hallifax
 recruit_character = SAF_c_f_stallard
-recruit_character = SAF_rachel_simons
 recruit_character = SAF_isaac_pierre_de_villiers
 recruit_character = SAF_christoffel_venter
 recruit_character = SAF_daniel_hermanus_pienaar
@@ -220,6 +219,8 @@ recruit_character = SAF_abram_fischer
 recruit_character = SAF_Louis_Theodor_Weichardt
 recruit_character = SAF_Johannes_Van_Rensburg
 #новые
+recruit_character = SAF_William_Henry_Andrews
+recruit_character = SAF_Benjamin_Jennings_Caddy
 recruit_character = SAF_Zacharias_Richard_Mahabane
 recruit_character = SAF_Alfred_Bitini_Xuma
 recruit_character = SAF_yan_cemp

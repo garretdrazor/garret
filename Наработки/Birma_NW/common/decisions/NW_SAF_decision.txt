@@ -993,3 +993,77 @@ SAF_decisions_tag_10 = { # Внесение поправок в Закон об 
 		}
 	}
 }
+SAF_decisions_tag_11 = { # Создание чёрной республики
+	SAF_decisions_tag_11_1 = { # Обучение квалифицированных рабочих
+		
+		allowed = { original_tag = SAF }
+		cost = 75
+		days_remove = 180
+		fire_only_once = yes
+		ai_will_do = { factor = 1 }
+		complete_effect = {
+			add_timed_idea = { idea = SAF_idea_33 days = 180 }
+		}
+		remove_effect  = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision SAF_decisions_tag_11_1"
+			set_temp_variable = { SAF_black_republik_temp = 5 }
+			add_to_variable = { SAF_black_republik_total = SAF_black_republik_temp }
+			custom_effect_tooltip = SAF_black_republik_tt
+			clamp_variable = { var = SAF_black_republik_total min = 0 max = 100 }
+			custom_effect_tooltip = SAF_tooltip_44
+		}
+	}
+	SAF_decisions_tag_11_2 = { # Подготовить офицерскую школу
+		
+		allowed = { original_tag = SAF }
+		cost = 75
+		days_remove = 90
+		fire_only_once = yes
+		ai_will_do = { factor = 1 }
+
+		remove_effect  = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision SAF_decisions_tag_11_2"
+			set_country_flag = SAF_flag_28
+			add_ideas = SAF_idea_126
+			set_temp_variable = { SAF_black_republik_temp = 5 }
+			add_to_variable = { SAF_black_republik_total = SAF_black_republik_temp }
+			custom_effect_tooltip = SAF_black_republik_tt
+			clamp_variable = { var = SAF_black_republik_total min = 0 max = 100 }
+			custom_effect_tooltip = SAF_tooltip_45
+		}
+	}
+	SAF_decisions_tag_11_3 = { # Обучить аграриев из числа чернокожих
+		
+		allowed = { original_tag = SAF }
+		cost = 75
+		days_remove = 90
+		fire_only_once = yes
+		ai_will_do = { factor = 1 }
+
+		remove_effect  = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision SAF_decisions_tag_11_3"
+			set_temp_variable = { SAF_black_republik_temp = 5 }
+			add_to_variable = { SAF_black_republik_total = SAF_black_republik_temp }
+			custom_effect_tooltip = SAF_black_republik_tt
+			clamp_variable = { var = SAF_black_republik_total min = 0 max = 100 }
+			custom_effect_tooltip = SAF_tooltip_46
+		}
+	}
+	SAF_decisions_tag_11_4 = { # Обучить аграриев из числа чернокожих
+		
+		allowed = { original_tag = SAF }
+		cost = 75
+		days_remove = 30
+		fire_only_once = yes
+		ai_will_do = { factor = 1 }
+
+		remove_effect  = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision SAF_decisions_tag_11_3"
+			set_temp_variable = { SAF_black_republik_temp = 5 }
+			add_to_variable = { SAF_black_republik_total = SAF_black_republik_temp }
+			custom_effect_tooltip = SAF_black_republik_tt
+			clamp_variable = { var = SAF_black_republik_total min = 0 max = 100 }
+			custom_effect_tooltip = SAF_tooltip_47
+		}
+	}
+}

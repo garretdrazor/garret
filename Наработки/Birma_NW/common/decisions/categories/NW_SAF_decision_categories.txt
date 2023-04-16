@@ -46,12 +46,17 @@ SAF_decisions_tag_9 = { # Освобождение народов Африки �
 
 SAF_decisions_tag_10 = { # Внесение поправок в Закон об обороне Южной Африки
 	picture = GFX_decision_cat_picture_naval_treaties
-	priority = 2000
+	priority = 1900
 	allowed = { original_tag = SAF }
 	visible = { OR = { has_idea = SAF_idea_81 has_idea = SAF_idea_82 has_idea = SAF_idea_83 has_idea = SAF_idea_84 has_idea = SAF_idea_85 has_idea = SAF_idea_86 has_idea = SAF_idea_87 has_idea = SAF_idea_88 has_idea = SAF_idea_89 has_idea = SAF_idea_90 } }
 }
 
-
+SAF_decisions_tag_11 = { # Создание чёрной республики
+	picture = GFX_decision_cat_picture_naval_treaties
+	priority = 2000
+	allowed = { original_tag = SAF }
+	visible = { has_completed_focus = SAF_EsrbxCit NOT = { check_variable = { SAF_black_republik_total < 100 } }
+}
 
 
 

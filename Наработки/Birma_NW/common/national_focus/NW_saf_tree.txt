@@ -1884,7 +1884,7 @@ continuous_focus_position = { x = 4500 y = 700 }
 		x = 3
 		y = 1
 		relative_position_id = SAF_JPMvjnrI
-		cost = 10
+		cost = 5
 		
 		prerequisite = { focus = SAF_JPMvjnrI }
 		mutually_exclusive = { focus = SAF_GiSnNgCW }
@@ -2225,7 +2225,9 @@ continuous_focus_position = { x = 4500 y = 700 }
 		y = 1
 		relative_position_id = SAF_hlLEBknD
 		cost = 5
-		
+		available = {
+			check_variable = { SAF_black_republik_total > 24 }
+		}
 		prerequisite = { focus = SAF_hlLEBknD }
 		ai_will_do = {
 			factor = 1
@@ -2244,7 +2246,7 @@ continuous_focus_position = { x = 4500 y = 700 }
 		x = 0
 		y = 2
 		relative_position_id = SAF_hlLEBknD
-		cost = 10
+		cost = 5
 		
 		prerequisite = { focus = SAF_DScNQdRU }
 		ai_will_do = {
@@ -2265,7 +2267,7 @@ continuous_focus_position = { x = 4500 y = 700 }
 		x = -3
 		y = 3
 		relative_position_id = SAF_hlLEBknD
-		cost = 10
+		cost = 5
         available = { has_country_leader = { name = "J. B. M. Hertzog" } }
 		
 		prerequisite = { focus = SAF_dyBFbGmt }
@@ -2308,7 +2310,7 @@ continuous_focus_position = { x = 4500 y = 700 }
 		x = 0
 		y = 3
 		relative_position_id = SAF_hlLEBknD
-		cost = 10
+		cost = 5
         available = { has_country_leader = { name = "Johannes Van Rensburg" } }
 		
 		prerequisite = { focus = SAF_dyBFbGmt }
@@ -2370,7 +2372,7 @@ continuous_focus_position = { x = 4500 y = 700 }
 		x = 1
 		y = 2
 		relative_position_id = SAF_pqzYoTbK
-		cost = 10
+		cost = 5
 		
 		prerequisite = { focus = SAF_poLwWlsO }
 		ai_will_do = {
@@ -3815,6 +3817,15 @@ continuous_focus_position = { x = 4500 y = 700 }
 				remove_idea = SAF_idea_100_2
 				add_idea = SAF_idea_100_3
 			}
+			if = {
+				limit = {
+					has_government = communism
+				}
+				set_temp_variable = { SAF_black_republik_temp = 10 }
+				add_to_variable = { SAF_black_republik_total = SAF_black_republik_temp }
+				custom_effect_tooltip = SAF_black_republik_tt
+				clamp_variable = { var = SAF_black_republik_total min = 0 max = 100 }
+			}
         }
 	}
 	
@@ -3923,6 +3934,8 @@ continuous_focus_position = { x = 4500 y = 700 }
 		y = 1
 		cost = 10
 		available = {
+			has_idea = SAF_idea_121
+			has_completed_focus = SAF_power_of_more
 			1111 = {
 				controller = {
 					OR = {
@@ -4008,6 +4021,14 @@ continuous_focus_position = { x = 4500 y = 700 }
 			}
 			ENG ={ country_event = { id = south_afrika.96 } }
 			HOL ={ country_event = { id = south_afrika.97 } }
+			swap_ideas = {
+				remove_idea = SAF_idea_121
+				add_idea = SAF_idea_123
+			}
+			set_temp_variable = { SAF_black_republik_temp = 10 }
+			add_to_variable = { SAF_black_republik_total = SAF_black_republik_temp }
+			custom_effect_tooltip = SAF_black_republik_tt
+			clamp_variable = { var = SAF_black_republik_total min = 0 max = 100 }
         }
 	}
 	
@@ -4019,7 +4040,7 @@ continuous_focus_position = { x = 4500 y = 700 }
 		y = 1
 		cost = 10
 		
-		available = { has_idea = SAF_idea_102 }
+		available = { has_idea = SAF_idea_102 has_country_flag = SAF_flag_28 }
 		prerequisite = { focus = SAF_free_republic_Azania }
 		ai_will_do = {
 			factor = 1
@@ -4029,6 +4050,10 @@ continuous_focus_position = { x = 4500 y = 700 }
 				remove_idea = SAF_idea_102
 				add_idea = SAF_idea_102_2
 			}
+			set_temp_variable = { SAF_black_republik_temp = 10 }
+			add_to_variable = { SAF_black_republik_total = SAF_black_republik_temp }
+			custom_effect_tooltip = SAF_black_republik_tt
+			clamp_variable = { var = SAF_black_republik_total min = 0 max = 100 }
         }
 	}
 	
@@ -4046,7 +4071,12 @@ continuous_focus_position = { x = 4500 y = 700 }
 			factor = 1
 		}
         completion_reward = {
+			remove_ideas = SAF_idea_123
 			add_ideas = SAF_idea_109
+			set_temp_variable = { SAF_black_republik_temp = 10 }
+			add_to_variable = { SAF_black_republik_total = SAF_black_republik_temp }
+			custom_effect_tooltip = SAF_black_republik_tt
+			clamp_variable = { var = SAF_black_republik_total min = 0 max = 100 }
         }
 	}
 	
@@ -4125,10 +4155,12 @@ continuous_focus_position = { x = 4500 y = 700 }
 		ai_will_do = {
 			factor = 1
 		}
+		select_effect = {
+			country_event = { id = south_afrika.115 }
+		}
         completion_reward = {
 			add_timed_idea = { idea = SAF_idea_33 days = 180 }
 			custom_effect_tooltip = SAF_tooltip_42
-			
 		}
 	}
 	
@@ -4150,7 +4182,6 @@ continuous_focus_position = { x = 4500 y = 700 }
 			factor = 1
 		}
         completion_reward = { 
-			release = NMB
 			add_research_slot = -1
 			remove_ideas = SAF_idea_1
 			remove_ideas = SAF_idea_3
@@ -4230,7 +4261,9 @@ continuous_focus_position = { x = 4500 y = 700 }
 		x = 2
 		y = 1
 		cost = 10
-		
+		available = { 
+			check_variable = { SAF_black_republik_total > 29 }
+        }
 		prerequisite = { focus = SAF_EsrbxCit }
 		ai_will_do = {
 			factor = 1
@@ -4252,7 +4285,11 @@ continuous_focus_position = { x = 4500 y = 700 }
 		y = 2
 		cost = 10
         available = { 
-			
+			check_variable = { SAF_black_republik_total > 19 }
+			has_country_leader = {
+				character = SAF_moses_kotane
+				ruling_only = yes
+			}
         }
 		
 		prerequisite = { focus = SAF_YrGOMBuZ }
@@ -4260,7 +4297,7 @@ continuous_focus_position = { x = 4500 y = 700 }
 			factor = 1
 		}
         completion_reward = { 
-			
+			country_event = { id = south_afrika.117 }
         }
 	}
 	
@@ -4272,7 +4309,7 @@ continuous_focus_position = { x = 4500 y = 700 }
 		y = 2
 		cost = 10
         available = { 
-			
+			check_variable = { SAF_black_republik_total > 39 }
         }
 		
 		prerequisite = { focus = SAF_NYKcglJC }
@@ -4291,7 +4328,9 @@ continuous_focus_position = { x = 4500 y = 700 }
 		x = 2
 		y = 2
 		cost = 10
-		
+		available = { 
+			check_variable = { SAF_black_republik_total > 49 }
+        }
 		prerequisite = { focus = SAF_NYKcglJC }
 		ai_will_do = {
 			factor = 1
@@ -5426,7 +5465,7 @@ continuous_focus_position = { x = 4500 y = 700 }
 		id = SAF_rHIQosqA
 		icon = GFX_z_goal_selfgovernment
 		x = 2
-		y = 2
+		y = 3
 		relative_position_id = SAF_RWThmSGP
 		cost = 10
 		
@@ -5446,7 +5485,7 @@ continuous_focus_position = { x = 4500 y = 700 }
 		id = SAF_NqyGEPQB
 		icon = GFX_goal_generic_propaganda
 		x = 2
-		y = 3
+		y = 2
 		relative_position_id = SAF_RWThmSGP
 		cost = 10
 		

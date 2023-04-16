@@ -2257,6 +2257,42 @@ country_event = { # Африканский национальный конгре
 			ROOT = { SAF_Revolution_Coalition_Goverment_dem = { set_nationality = PREV.PREV } }
 			promote_character = SAF_Revolution_Coalition_Goverment_dem
 			keep_all_characters = yes
+			SAF_isaac_pierre_de_villiers={
+				remove_unit_leader = yes
+			}
+			SAF_basil_schonland={
+				remove_unit_leader = yes
+			}
+			SAF_daniel_hermanus_pienaar={
+				remove_unit_leader = yes
+			}
+			SAF_christoffel_venter={
+				remove_unit_leader = yes
+			}
+			SAF_george_edwin_brink={
+				remove_unit_leader = yes
+			}
+			SAF_guy_hallifax={
+				remove_unit_leader = yes
+			}
+			add_field_marshal_role = {
+				Character = SAF_William_Henry_Andrews
+				traits={ Guerilla_Fighter }
+				skill=2
+				attack_skill=2
+				defense_skill=2
+				planning_skill=2
+				logistics_skill=2
+			}
+			add_corps_commander_role = {
+				Character = SAF_Benjamin_Jennings_Caddy
+				traits={ Guerilla_Fighter }
+				skill=1
+				attack_skill=2
+				defense_skill=1
+				planning_skill=2
+				logistics_skill=2
+			}
 		}
 	}
 	option = { # Их слишком много… 
@@ -2293,6 +2329,42 @@ country_event = { # Африканский национальный конгре
 				1112
 			}
 			hidden_effect = { load_focus_tree = NW_saf_tree }
+		}
+		add_field_marshal_role = {
+			Character = SAF_William_Henry_Andrews
+			traits={ Guerilla_Fighter }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+		}
+		add_corps_commander_role = {
+			Character = SAF_Benjamin_Jennings_Caddy
+			traits={ Guerilla_Fighter }
+			skill=1
+			attack_skill=2
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=2
+		}
+		SAF_isaac_pierre_de_villiers={
+			remove_unit_leader = yes
+		}
+		SAF_basil_schonland={
+			remove_unit_leader = yes
+		}
+		SAF_daniel_hermanus_pienaar={
+			remove_unit_leader = yes
+		}
+		SAF_christoffel_venter={
+			remove_unit_leader = yes
+		}
+		SAF_george_edwin_brink={
+			remove_unit_leader = yes
+		}
+		SAF_guy_hallifax={
+			remove_unit_leader = yes
 		}
 	}
 	option = { # Их слишком много… 
@@ -2332,6 +2404,42 @@ country_event = { # Африканский национальный конгре
 				communism = 35
 				trozkism = 25
 			}
+		}
+		add_field_marshal_role = {
+			Character = SAF_William_Henry_Andrews
+			traits={ Guerilla_Fighter }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+		}
+		add_corps_commander_role = {
+			Character = SAF_Benjamin_Jennings_Caddy
+			traits={ Guerilla_Fighter }
+			skill=1
+			attack_skill=2
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=2
+		}
+		SAF_isaac_pierre_de_villiers={
+			remove_unit_leader = yes
+		}
+		SAF_basil_schonland={
+			remove_unit_leader = yes
+		}
+		SAF_daniel_hermanus_pienaar={
+			remove_unit_leader = yes
+		}
+		SAF_christoffel_venter={
+			remove_unit_leader = yes
+		}
+		SAF_george_edwin_brink={
+			remove_unit_leader = yes
+		}
+		SAF_guy_hallifax={
+			remove_unit_leader = yes
 		}
 	}
 }
@@ -2667,7 +2775,7 @@ country_event = { # Принятие Хартии Свободы
 	}
 }
 
-country_event = { # «Успех аграрной политики
+country_event = { # Успех аграрной политики
 	id = south_afrika.94
 	title = south_afrika.94.t
 	desc = south_afrika.94.d
@@ -2683,6 +2791,15 @@ country_event = { # «Успех аграрной политики
 		remove_ideas = SAF_idea_100_3
 		every_core_state = {
 			add_extra_state_shared_building_slots = 1
+		}
+		if = {
+			limit = {
+				has_government = communism
+			}
+			set_temp_variable = { SAF_black_republik_temp = 10 }
+			add_to_variable = { SAF_black_republik_total = SAF_black_republik_temp }
+			custom_effect_tooltip = SAF_black_republik_tt
+			clamp_variable = { var = SAF_black_republik_total min = 0 max = 100 }
 		}
 	}
 }
@@ -3115,12 +3232,57 @@ country_event = { # Запрет АНК
 	is_triggered_only = yes
 	
 	option = { # Давно пора было пойти на это 
-		name = south_afrika.113.a
+		name = south_afrika.114.a
 		add_political_power = -100
 		add_ideas = SAF_idea_124
 		swap_ideas = {
 			remove_idea = SAF_idea_120
 			add_idea = SAF_idea_121
 		}
+	}
+}
+
+country_event = { # Установление постоянного правительства
+	id = south_afrika.115
+	title = south_afrika.115.t
+	desc = south_afrika.115.d
+	picture = GFX_report_event_gathering_protest
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event south_afrika.115" }
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { # Слава партии!
+		name = south_afrika.115.a
+		promote_character = SAF_Thabo_Edwin_Mofutsanyana
+	}
+}
+
+country_event = { # Завершено строительство чёрной республики
+	id = south_afrika.116
+	title = south_afrika.116.t
+	desc = south_afrika.116.d
+	picture = GFX_report_event_generic_read_white
+	
+	trigger = {
+	    tag = SAF
+		has_completed_focus = SAF_free_republic_Azania
+		check_variable = { SAF_black_republik_total > 99 }
+	}
+	
+	fire_only_once = yes
+	
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event south_afrika.116" }
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = { # Кажется, это всё надумано
+		name = south_afrika.116.a
+		set_cosmetic_tag = SAF_Black_republik_Azanya
+		add_ideas = SAF_idea_127
 	}
 }

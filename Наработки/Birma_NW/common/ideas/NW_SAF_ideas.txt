@@ -1416,7 +1416,7 @@ SAF_idea_121 = { # Митинги АНК
 	removal_cost = -1
 	modifier = {
 		stability_factor = -0.15
-		MONTHLY_POPULATION = -0.75
+		MONTHLY_POPULATION = -0.075
 		production_factory_efficiency_gain_factor = -0.15
 		production_factory_max_efficiency_factor = -0.15
 	}
@@ -1429,7 +1429,7 @@ SAF_idea_122 = { # Митинги АНК
 	removal_cost = -1
 	modifier = {
 		stability_factor = -0.1
-		MONTHLY_POPULATION = -0.5
+		MONTHLY_POPULATION = -0.05
 		production_factory_efficiency_gain_factor = -0.1
 		production_factory_max_efficiency_factor = -0.1
 	}
@@ -1442,7 +1442,7 @@ SAF_idea_123 = { # Митинги АНК
 	removal_cost = -1
 	modifier = {
 		stability_factor = -0.05
-		MONTHLY_POPULATION = -0.25
+		MONTHLY_POPULATION = -0.025
 		production_factory_efficiency_gain_factor = -0.05
 		production_factory_max_efficiency_factor = -0.05
 	}
@@ -1455,6 +1455,35 @@ SAF_idea_124 = { # Запрет АНК
 	removal_cost = -1
 	modifier = {
 		democratic_drift = -0.1
+	}
+}
+
+SAF_idea_125 = { # Подготовка новых рабочих
+	allowed = { always = no	}
+	allowed_civil_war = { always = yes }
+	picture = hight_social
+	removal_cost = -1
+	modifier = {
+		production_factory_efficiency_gain_factor = -0.15
+	}
+}
+SAF_idea_126 = { # Военная школа освободительной армии
+	allowed = { always = no	}
+	allowed_civil_war = { always = yes }
+	picture = hight_social
+	removal_cost = -1
+	modifier = {
+		army_leader_start_level = 1 
+	}
+}
+SAF_idea_127 = { # Чёрная республика
+	allowed = { always = no	}
+	allowed_civil_war = { always = yes }
+	picture = hight_social
+	removal_cost = -1
+	modifier = {
+		acclimatization_hot_climate_gain_factor = 0.25
+		conscription = 0.03
 	}
 }
 }

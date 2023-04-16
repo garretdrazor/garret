@@ -301,6 +301,7 @@ characters={
 			idea_token = SAF_james_mitchell_baker
 			allowed = {
 				original_tag = SAF
+				NOT = { has_completed_focus = SAF_KaMXJHdo }
 			}
 			traits = {
 				army_chief_maneuver_2
@@ -324,6 +325,7 @@ characters={
 			idea_token = SAF_leonard_beyers
 			allowed = {
 				original_tag = SAF
+				NOT = { has_completed_focus = SAF_KaMXJHdo }
 			}
 			traits = {
 				army_chief_defensive_2
@@ -350,6 +352,7 @@ characters={
 			idea_token = SAF_pierre_oliver_knoll
 			allowed = {
 				original_tag = SAF
+				NOT = { has_completed_focus = SAF_KaMXJHdo }
 			}
 			traits = {
 				navy_chief_maneuver_2
@@ -373,6 +376,7 @@ characters={
 			idea_token = SAF_cornelis_van_zuigenbrogge
 			allowed = {
 				original_tag = SAF
+				NOT = { has_completed_focus = SAF_KaMXJHdo }
 			}
 			traits = {
 				navy_chief_commerce_raiding_2
@@ -399,6 +403,7 @@ characters={
 			idea_token = SAF_adolf_malan
 			allowed = {
 				original_tag = SAF
+				NOT = { has_completed_focus = SAF_KaMXJHdo }
 			}
 			traits = {
 				air_chief_all_weather_2
@@ -422,6 +427,7 @@ characters={
 			idea_token = SAF_pierre_van_ryneveld
 			allowed = {
 				original_tag = SAF
+				NOT = { has_completed_focus = SAF_KaMXJHdo }
 			}
 			traits = {
 				air_chief_ground_support_2
@@ -449,6 +455,7 @@ characters={
 			ledger = army
 			allowed = {
 				original_tag = SAF
+				NOT = { has_completed_focus = SAF_KaMXJHdo }
 			}
 			traits = {
 				army_regrouping_2
@@ -473,6 +480,7 @@ characters={
 			ledger = army
 			allowed = {
 				original_tag = SAF
+				NOT = { has_completed_focus = SAF_KaMXJHdo }
 			}
 			traits = {
 				army_armored_2
@@ -497,6 +505,7 @@ characters={
 			ledger = navy
 			allowed = {
 				original_tag = SAF
+				NOT = { has_completed_focus = SAF_KaMXJHdo }
 			}
 			traits = {
 				air_naval_strike_2
@@ -521,6 +530,7 @@ characters={
 			ledger = navy
 			allowed = {
 				original_tag = SAF
+				NOT = { has_completed_focus = SAF_KaMXJHdo }
 			}
 			traits = {
 				navy_screen_2
@@ -640,6 +650,7 @@ characters={
 			idea_token = SAF_nicolaas_havenga
 			allowed = {
 				original_tag = SAF
+				NOT = { has_completed_focus = SAF_KaMXJHdo }
 			}
 			available = {
 				NOT = {
@@ -664,6 +675,7 @@ characters={
 			idea_token = SAF_e_g_jansen
 			allowed = {
 				original_tag = SAF
+				NOT = { has_completed_focus = SAF_KaMXJHdo }
 			}
 			traits = {
 				colonial_agitator 
@@ -879,17 +891,7 @@ characters={
 				NOT = {
 					has_country_flag = SAF_flag_15
 				}
-				OR = {
-					NOT = {
-						has_government = communism
-					}
-					NOT = {
-						has_government = anarchism
-					}
-					NOT = {
-						has_government = trozkism
-					}
-				}
+				NOT = { has_completed_focus = SAF_KaMXJHdo }
 			}
 			traits = {
 				silent_workhorse 
@@ -909,6 +911,7 @@ characters={
 			idea_token = SAF_Federik_Cresswell
 			allowed = {
 				original_tag = SAF
+				NOT = { has_completed_focus = SAF_KaMXJHdo }
 			}
 			traits = {
 				war_minister 
@@ -935,6 +938,12 @@ characters={
 				}
 				NOT = {
 					has_government = fascism
+				}
+				NOT = {
+					has_government = communism
+				}
+				NOT = {
+					has_government = trozkism
 				}
 				NOT = {
 					has_completed_focus = SAF_fwcXxplv
@@ -1073,7 +1082,24 @@ characters={
 		}
 	}
 	#Генералы восстания
-	
+	SAF_William_Henry_Andrews={
+		name=SAF_William_Henry_Andrews
+		portraits={
+			army={
+				large="gfx/leaders/SAF/Portrait_William_Henry_Andrews.dds"
+				small=GFX_portrait_SAF_William_Henry_Andrews_small
+			}
+		}
+	}
+	SAF_Benjamin_Jennings_Caddy={
+		name=SAF_Benjamin_Jennings_Caddy
+		portraits={
+			army={
+				large="GFX_SAF_Benjamin_Jennings_Caddy"
+				small=GFX_portrait_SAF_Benjamin_Jennings_Caddy
+			}
+		}
+	}
 	#Генералы восстания чёрные
 	
 	SAF_Job_Maseko={
