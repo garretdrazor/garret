@@ -129,6 +129,14 @@ characters={
 				large="GFX_SAF_Revolution_Coalition_Goverment"
 			}
 		}
+		country_leader={
+			ideology=marxism
+			expire="1965.1.1.1"
+			id=-1
+			traits = {
+				Coalition_Goverment_SAF
+			}
+		}
 	}
 
 	SAF_moses_kotane={

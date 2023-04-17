@@ -188,6 +188,7 @@ set_politics = {
 }
 
 recruit_character = SAF_Thabo_Edwin_Mofutsanyana
+recruit_character = SAF_Revolution_Coalition_Goverment_com
 recruit_character = SAF_moses_kotane
 recruit_character = SAF_j_b_m_hertzog
 recruit_character = SAF_jan_smuts
@@ -237,7 +238,7 @@ recruit_character = SAF_Walter_Max_Ulyate_Sisulu
 recruit_character = SAF_Pixley_ka_Isaka_Seme
 recruit_character = SAF_Madie_Hall_Xuma
 recruit_character = SAF_Albert_John_Lutuli
-recruit_character = SAF_Revolution_Coalition_Goverment_com
+
 
 
 1940.1.1 = {
