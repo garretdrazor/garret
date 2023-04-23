@@ -1,0 +1,42 @@
+scripted_gui = {
+    SAF_drill_bit_decision_ui = {
+    
+        context_type = decision_category
+		window_name = "SAF_drill_bit_decision_ui"
+		
+		visible = {
+			always = yes
+		}
+		
+		ai_enabled = {
+			always = no
+		}
+		
+		triggers = {
+			### RATTE
+			add_one_civ_click_enabled = {
+				num_of_civilian_factories_available_for_projects > 0
+			}
+			subtract_one_civ_click_enabled = {
+				check_variable = { SAF_drill_bit_var > 0 }
+			}
+		}
+		
+		effects = {
+			add_one_civ_click = {
+				add_to_variable = { SAF_drill_bit_var = 1 }
+				set_variable = { SAF_drill_bit_minus_var = SAF_drill_bit_var }
+				multiply_variable = { SAF_drill_bit_minus_var = -1 }
+				force_update_dynamic_modifier = yes
+				sync_factories = yes
+			}
+			subtract_one_civ_click = {
+				subtract_from_variable = { SAF_drill_bit_var = 1 }
+				set_variable = { SAF_drill_bit_minus_var = SAF_drill_bit_var }
+				multiply_variable = { SAF_drill_bit_minus_var = -1 }
+				force_update_dynamic_modifier = yes
+				sync_factories = yes
+			}
+		}
+	}
+}

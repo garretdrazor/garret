@@ -3,3 +3,18 @@
 #	icon = GFX_state_elephants_modifier
 #	local_manpower = -0.9
 #}
+
+SAF_drill_bit_dyn = {	#hidden
+	drill_bit_modifiers = SAF_drill_bit_var
+	industrial_factory_donations = SAF_drill_bit_minus_var
+}
+SAF_gold_mining_dyn = {
+	icon = GFX_idea_gold
+	
+	political_power_gain = SAF_gold_mining_var
+}
+SAF_diamond_mining_dyn = {
+	icon = GFX_excavation_idea
+	
+	consumer_goods_factor = SAF_diamond_mining_var
+}

@@ -1067,3 +1067,154 @@ SAF_decisions_tag_11 = { # Создание чёрной республики
 		}
 	}
 }
+
+SAF_deepen_deposits_category = {
+	SAF_deepen_gold_bearing_rafs = {
+		icon = steel
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SAF_deepen_gold_bearing_rafs_trigger_tt
+				check_variable = { SAF_gold_mining_var < 0.4 }
+			}
+		}
+		custom_cost_trigger = {
+			set_temp_variable = { drill_bit_temp_cost = 200 }
+			check_variable = { drill_bit_total > drill_bit_temp_cost }
+		}
+		custom_cost_text = drill_bit_cost
+		days_remove = 50
+		
+		complete_effect = {
+			add_to_variable = { drill_bit_total = -200 }
+		}
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision SAF_deepen_gold_bearing_rafs"
+			add_to_variable = { SAF_gold_mining_var = 0.05 }
+			custom_effect_tooltip = SAF_gold_mining_var_tt
+			hidden_effect = {
+				if = {
+					limit = { NOT = { has_dynamic_modifier = { modifier = SAF_gold_mining_dyn } } }
+					add_dynamic_modifier = { modifier = SAF_gold_mining_dyn }
+				}
+				else = { force_update_dynamic_modifier = yes }
+			}
+		}
+		
+		ai_will_do = {
+			factor = 25
+		}
+	}
+	SAF_start_mining_on_new_chromium_deposits = {
+		icon = chromium
+		fire_only_once = yes
+		available = {
+			FROM = {
+				is_controlled_by = ROOT
+			}
+		}
+		custom_cost_trigger = {
+			set_temp_variable = { drill_bit_temp_cost = 200 }
+			check_variable = { drill_bit_total > drill_bit_temp_cost }
+		}
+		custom_cost_text = drill_bit_cost
+		days_remove = 50
+		
+		on_map_mode = map_and_decisions_view
+		state_target = yes
+		targets = { 1109 1107 1108 681 }
+		
+		complete_effect = {
+			add_to_variable = { drill_bit_total = -200 }
+		}
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision SAF_start_mining_on_new_chromium_deposits"
+			FROM = {
+				add_resource = { type = chromium amount = 16 }
+			}
+		}
+		
+		ai_will_do = {
+			factor = 25
+		}
+	}
+	SAF_open_new_diamond_processing_enterprises = {
+		icon = generic_industrial
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SAF_deepen_gold_bearing_rafs_trigger_tt
+				check_variable = { SAF_diamond_mining_var < 0.08 }
+			}
+		}
+		custom_cost_trigger = {
+			set_temp_variable = { drill_bit_temp_cost = 500 }
+			check_variable = { drill_bit_total > drill_bit_temp_cost }
+		}
+		custom_cost_text = drill_bit_cost
+		days_remove = 50
+		
+		complete_effect = {
+			add_to_variable = { drill_bit_total = -500 }
+		}
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision SAF_open_new_diamond_processing_enterprises"
+			add_to_variable = { SAF_diamond_mining_var = -0.02 }
+			custom_effect_tooltip = SAF_diamond_mining_var_tt
+			hidden_effect = {
+				if = {
+					limit = { NOT = { has_dynamic_modifier = { modifier = SAF_diamond_mining_dyn } } }
+					add_dynamic_modifier = { modifier = SAF_diamond_mining_dyn }
+				}
+				else = { force_update_dynamic_modifier = yes }
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 25
+		}
+	}
+	SAF_deepen_iron_mines = {
+		icon = steel
+		available = {
+			275 = {
+				is_controlled_by = ROOT
+			}
+			custom_trigger_tooltip = {
+				tooltip = SAF_deepen_iron_mines_trigger_tt
+				check_variable = { SAF_deepen_iron_mines_times < 3 }
+			}
+		}
+		custom_cost_trigger = {
+			set_temp_variable = { drill_bit_temp_cost = 200 }
+			check_variable = { drill_bit_total > drill_bit_temp_cost }
+		}
+		custom_cost_text = drill_bit_cost
+		days_remove = 50
+		
+		complete_effect = {
+			add_to_variable = { drill_bit_total = -200 }
+		}
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision SAF_deepen_iron_mines"
+			add_to_variable = { SAF_deepen_iron_mines_times = 1 }
+			275 = {
+				add_resource = { type = steel amount = 16 }
+			}
+		}
+		
+		ai_will_do = {
+			factor = 25
+		}
+	}
+}

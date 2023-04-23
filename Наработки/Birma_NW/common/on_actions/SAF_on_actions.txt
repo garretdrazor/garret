@@ -1,4 +1,5 @@
-#on_actions = {
+on_actions = {
+
 #	on_startup = {
 #		effect = {
 #			681 = {
@@ -21,4 +22,15 @@
 #			}
 #		}
 #	}
-#}
+
+	on_daily_SAF = {
+		effect = {
+			if = {
+				limit = {
+					check_variable = { modifier@drill_bit_modifiers > 0 }
+				}
+				add_to_variable = { drill_bit_total = modifier@drill_bit_modifiers }
+			}
+		}
+	}
+}

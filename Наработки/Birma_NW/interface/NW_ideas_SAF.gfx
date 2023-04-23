@@ -48,4 +48,8 @@ spriteTypes = {
 		name = "GFX_idea_Walter_Max_Ulyate_Sisulu"
 		texturefile = "gfx/interface/ideas/SAF/Walter_Max_Ulyate_Sisulu.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_excavation2"
+		texturefile = "gfx/interface/technologies/excavation2.dds"
+	}
 }

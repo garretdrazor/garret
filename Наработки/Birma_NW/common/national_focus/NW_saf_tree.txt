@@ -21,8 +21,13 @@ continuous_focus_position = { x = 4500 y = 700 }
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
         completion_reward = {
-			
 			custom_effect_tooltip = SAF_tooltip_30
+			custom_effect_tooltip = available_industrial_concern
+			show_ideas_tooltip = SAF_de_beers
+			unlock_decision_category_tooltip = SAF_deepen_deposits_category
+			hidden_effect = {
+				add_dynamic_modifier = { modifier = SAF_drill_bit_dyn }
+			}
 		}
 	}
 	
@@ -107,11 +112,24 @@ continuous_focus_position = { x = 4500 y = 700 }
 		cost = 7.2
 		prerequisite = { focus = SAF_brilliant }
 		
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = drill_bit_trigger_tt
+				set_temp_variable = { drill_bit_temp_cost = 300 }
+				check_variable = { drill_bit_total > drill_bit_temp_cost }
+			}
+		}
+		
 		ai_will_do = {
 			factor = 1
 		}
 		
 		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		select_effect = {
+			add_to_variable = { drill_bit_total = -300 }
+		}
+		
         completion_reward = {
 			custom_effect_tooltip = SAF_tooltip_34
 			
@@ -141,10 +159,7 @@ continuous_focus_position = { x = 4500 y = 700 }
 						}
 					}
 				}
-				else_if = {
-					limit = {
-						has_completed_focus = SAF_mountain_def
-					}
+				else = {
 					random_list = {
 						34 = {
 							random_list = {
