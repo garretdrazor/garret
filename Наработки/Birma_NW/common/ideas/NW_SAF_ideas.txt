@@ -1486,6 +1486,54 @@ ideas = {
 				conscription = 0.03
 			}
 		}
+		SAF_idea_128 = { # Умсебензи
+			allowed = { always = no	}
+			allowed_civil_war = { always = yes }
+			picture = hight_social
+			removal_cost = -1
+			modifier = {
+				communism_drift = 0.1
+				drift_defence_factor = 0.15
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+		SAF_idea_129 = { # Женские профсоюзы
+			allowed = { always = no	}
+			allowed_civil_war = { always = yes }
+			picture = hight_social
+			removal_cost = -1
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+		SAF_idea_130 = { # Коллективизация
+			allowed = { always = no	}
+			allowed_civil_war = { always = yes }
+			picture = hight_social
+			removal_cost = -1
+			modifier = {
+				MONTHLY_POPULATION = 0.2
+			}
+		}
+		SAF_idea_131 = { # Совет неевропейских профсоюзов
+			allowed = { always = no	}
+			allowed_civil_war = { always = yes }
+			picture = hight_social
+			removal_cost = -1
+			modifier = {
+				production_factory_start_efficiency_factor = 0.05
+			}
+		}
+		SAF_idea_132 = { # Стремление к свободной Африке
+			allowed = { always = no	}
+			allowed_civil_war = { always = yes }
+			picture = hight_social
+			removal_cost = -1
+			modifier = {
+				justify_war_goal_time = -0.25
+				puppet_cost_factor = -0.5
+			}
+		}
 	}
 	
 	industrial_concern = {

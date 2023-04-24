@@ -43,20 +43,19 @@ guiTypes = {
 			scale = 1
 		}
 		buttonType = {
-			name = "add_one_civ"
-			position = { x = 190 y = 55 }
-			quadTextureSprite ="GFX_add_one"
-			Orientation = "UPPER_LEFT"
-			pdx_tooltip = "add_one_tt"
-		}
-		buttonType = {
 			name = "subtract_one_civ"
-			position = { x = 270 y = 55 }
+			position = { x = 190 y = 55 }
 			quadTextureSprite ="GFX_subtract_one"
 			Orientation = "UPPER_LEFT"
 			pdx_tooltip = "subtract_one_tt"
 		}
-		
+		buttonType = {
+			name = "add_one_civ"
+			position = { x = 270 y = 55 }
+			quadTextureSprite ="GFX_add_one"
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "add_one_tt"
+		}
 		
     }
 }

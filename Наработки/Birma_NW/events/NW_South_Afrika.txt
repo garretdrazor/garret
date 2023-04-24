@@ -3428,3 +3428,25 @@ country_event = { # Завершено строительство чёрной �
 		add_ideas = SAF_idea_127
 	}
 }
+
+country_event = { # Речь Мозаса Котане
+	id = south_afrika.117
+	title = south_afrika.117.t
+	desc = south_afrika.117.d
+	picture = GFX_report_event_generic_read_white
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event south_afrika.117" }
+	
+	option = { # Попросим белых освободить свои места 
+		name = south_afrika.117.a
+		retire_character = SAF_William_Henry_Andrews
+		retire_character = SAF_Benjamin_Jennings_Caddy
+		set_temp_variable = { SAF_black_republik_temp = 5 }
+		add_to_variable = { SAF_black_republik_total = SAF_black_republik_temp }
+		custom_effect_tooltip = SAF_black_republik_tt
+		clamp_variable = { var = SAF_black_republik_total min = 0 max = 100 }
+	}
+}

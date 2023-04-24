@@ -3740,7 +3740,13 @@ continuous_focus_position = { x = 4500 y = 700 }
 		x = 17
 		y = 1
 		cost = 10
-        available = { has_completed_focus = SAF_YrGOMBuZ } 
+        available = {
+			has_completed_focus = SAF_YrGOMBuZ
+			custom_trigger_tooltip = {
+				tooltip = SAF_black_republik_25
+				check_variable = { SAF_black_republik_total > 24 }
+			}
+		} 
 		
 		prerequisite = { focus = SAF_gJmvdOxK }
 		mutually_exclusive = { focus = SAF_free_hartya }
@@ -4139,7 +4145,12 @@ continuous_focus_position = { x = 4500 y = 700 }
 		x = 1
 		y = 3
 		cost = 10
-		
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = SAF_black_republik_100
+				check_variable = { SAF_black_republik_total > 99 }
+			}
+		}
 		prerequisite = { focus = SAF_african_goverment }
 		prerequisite = { focus = SAF_EGmiweKH }
 		ai_will_do = {
@@ -4239,7 +4250,7 @@ continuous_focus_position = { x = 4500 y = 700 }
 		relative_position_id = SAF_EsrbxCit
 		x = 4
 		y = 1
-		cost = 10
+		cost = 5
 		
 		prerequisite = { focus = SAF_EsrbxCit }
 		ai_will_do = {
@@ -4247,7 +4258,11 @@ continuous_focus_position = { x = 4500 y = 700 }
 		}
         completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SAF_woman_in_commy"    
-			
+			add_stability = 0.05
+			set_temp_variable = { SAF_black_republik_temp = 5 }
+			add_to_variable = { SAF_black_republik_total = SAF_black_republik_temp }
+			custom_effect_tooltip = SAF_black_republik_tt
+			clamp_variable = { var = SAF_black_republik_total min = 0 max = 100 }
         }
 	}
 	
@@ -4258,14 +4273,20 @@ continuous_focus_position = { x = 4500 y = 700 }
 		x = 4
 		y = 2
 		cost = 10
-		
+		available = { 
+			custom_trigger_tooltip = {
+				tooltip = SAF_black_republik_30
+				check_variable = { SAF_black_republik_total > 29 }
+			}
+        }
 		prerequisite = { focus = SAF_woman_in_commy }
 		ai_will_do = {
 			factor = 1
 		}
         completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SAF_woman_profally"    
-			
+			add_popularity = { ideology = communism popularity = 0.05 }
+			add_ideas = SAF_idea_129
         }
 	}
 
@@ -4277,7 +4298,10 @@ continuous_focus_position = { x = 4500 y = 700 }
 		y = 1
 		cost = 10
 		available = { 
-			check_variable = { SAF_black_republik_total > 29 }
+			custom_trigger_tooltip = {
+				tooltip = SAF_black_republik_30
+				check_variable = { SAF_black_republik_total > 29 }
+			}
         }
 		prerequisite = { focus = SAF_EsrbxCit }
 		ai_will_do = {
@@ -4298,7 +4322,7 @@ continuous_focus_position = { x = 4500 y = 700 }
 		relative_position_id = SAF_EsrbxCit
 		x = -2
 		y = 2
-		cost = 10
+		cost = 5
         available = { 
 			check_variable = { SAF_black_republik_total > 19 }
 			has_country_leader = {
@@ -4324,7 +4348,10 @@ continuous_focus_position = { x = 4500 y = 700 }
 		y = 2
 		cost = 10
         available = { 
-			check_variable = { SAF_black_republik_total > 39 }
+			custom_trigger_tooltip = {
+				tooltip = SAF_black_republik_40
+				check_variable = { SAF_black_republik_total > 39 }
+			}
         }
 		
 		prerequisite = { focus = SAF_NYKcglJC }
@@ -4332,7 +4359,7 @@ continuous_focus_position = { x = 4500 y = 700 }
 			factor = 1
 		}
         completion_reward = { 
-			
+			add_ideas = SAF_idea_131
         }
 	}
 	
@@ -4344,7 +4371,10 @@ continuous_focus_position = { x = 4500 y = 700 }
 		y = 2
 		cost = 10
 		available = { 
-			check_variable = { SAF_black_republik_total > 49 }
+			custom_trigger_tooltip = {
+				tooltip = SAF_black_republik_50
+				check_variable = { SAF_black_republik_total > 49 }
+			}
         }
 		prerequisite = { focus = SAF_NYKcglJC }
 		ai_will_do = {
@@ -4357,6 +4387,7 @@ continuous_focus_position = { x = 4500 y = 700 }
 			random_owned_state = { add_extra_state_shared_building_slots = 1 }
 			random_owned_state = { add_extra_state_shared_building_slots = 1 }
 			random_owned_state = { add_extra_state_shared_building_slots = 1 }
+			add_ideas = SAF_idea_130
         }
 	}
 	
@@ -4434,7 +4465,11 @@ continuous_focus_position = { x = 4500 y = 700 }
 		}
         completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SAF_Umsbenzi"
-			
+			add_ideas = SAF_idea_128
+			set_temp_variable = { SAF_black_republik_temp = 5 }
+			add_to_variable = { SAF_black_republik_total = SAF_black_republik_temp }
+			custom_effect_tooltip = SAF_black_republik_tt
+			clamp_variable = { var = SAF_black_republik_total min = 0 max = 100 }
         }
 	}
 	
@@ -4445,7 +4480,11 @@ continuous_focus_position = { x = 4500 y = 700 }
 		x = 1
 		y = 3
 		cost = 10
-		
+		available = {
+			any_enemy_country = {
+				has_government = fascism
+			}
+		}
 		prerequisite = { 
 			focus = SAF_power_of_more 
 		}
@@ -4454,7 +4493,8 @@ continuous_focus_position = { x = 4500 y = 700 }
 		}
         completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SAF_Umsbenzi"
-			
+			add_war_support = 0.2
+			add_ideas = tot_economic_mobilisation
         }
 	}
 	
@@ -4487,14 +4527,14 @@ continuous_focus_position = { x = 4500 y = 700 }
 		relative_position_id = SAF_EsrbxCit
 		x = -1
 		y = 4
-		cost = 10
+		cost = 5
 		
 		prerequisite = { focus = SAF_YkdzEZpu focus = SAF_RJCOSkdQ }
 		ai_will_do = {
 			factor = 1
 		}
         completion_reward = {
-			
+			add_ideas = SAF_idea_132
 		}
 	}
 	
@@ -4505,13 +4545,19 @@ continuous_focus_position = { x = 4500 y = 700 }
 		x = 1
 		y = 4
 		cost = 10
-		
+		available = {
+			NMB = {
+				country_exists = yes
+				has_government = communism
+				is_in_faction = no
+			}
+		}
 		prerequisite = { focus = SAF_YkdzEZpu }
 		ai_will_do = {
 			factor = 1
 		}
         completion_reward = {
-			
+			NMB = { country_event = generic.3 }
 		}
 	}
 	
@@ -4522,13 +4568,19 @@ continuous_focus_position = { x = 4500 y = 700 }
 		x = 3
 		y = 4
 		cost = 10
-		
+		available = {
+			ZIM = {
+				country_exists = yes
+				has_government = communism
+				is_in_faction = no
+			}
+		}
 		prerequisite = { focus = SAF_YkdzEZpu }
 		ai_will_do = {
 			factor = 1
 		}
         completion_reward = {
-			
+			ZIM = { country_event = generic.3 }
 		}
 	}
 	
@@ -4539,13 +4591,19 @@ continuous_focus_position = { x = 4500 y = 700 }
 		x = 2
 		y = 5
 		cost = 10
-		
+		available = {
+			COG = {
+				country_exists = yes
+				has_government = communism
+				is_in_faction = no
+			}
+		}
 		prerequisite = { focus = SAF_YkdzEZpu }
 		ai_will_do = {
 			factor = 1
 		}
         completion_reward = {
-			
+			COG = { country_event = generic.3 }
 		}
 	}
 	
@@ -4555,7 +4613,7 @@ continuous_focus_position = { x = 4500 y = 700 }
 		relative_position_id = SAF_EsrbxCit
 		x = -2
 		y = 5
-		cost = 10
+		cost = 5
         available = { NMB = { exists = yes } }
         bypass = {
 			OR = {
@@ -4582,7 +4640,7 @@ continuous_focus_position = { x = 4500 y = 700 }
 		relative_position_id = SAF_EsrbxCit
 		x = 0
 		y = 5
-		cost = 10
+		cost = 5
         available = { ZIM = { exists = yes } }
         bypass = {
 			OR = {
@@ -4701,7 +4759,7 @@ continuous_focus_position = { x = 4500 y = 700 }
 		search_filters = { FOCUS_FILTER_ANNEXATION }
         completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SAF_free_gb_colonies"
-			every_state = { limit = { OR = { is_core_of = LES is_core_of = ESW is_core_of = BOT is_core_of = ZIM is_core_of = ZAM is_core_of = MLW } } add_claim_by = SAF }
+			every_state = { limit = { is_on_continent = africa is_controlled_by = ENG } add_claim_by = SAF }
         }
 	}
 	
@@ -4718,6 +4776,7 @@ continuous_focus_position = { x = 4500 y = 700 }
 			OR = {
 				NOT = { country_exists = COG }
 				COG = { has_government = communism }
+				COG = { has_government = trozkism }
 			}
 		}
 		
