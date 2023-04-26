@@ -2015,36 +2015,6 @@ country_event = { # Троцкисты свергают правительств
 	}
 }
 
-country_event = { # Несоответствие идеологии и действительности
-	id = south_afrika.77
-	title = south_afrika.77.t
-	desc = south_afrika.77.d
-	picture = GFX_report_event_gathering_protest
-	
-	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event south_afrika.77" }
-	
-	is_triggered_only = yes 
-
-	option = { # У лидерства нет расы?
-		name = south_afrika.77.a
-		ai_chance = { factor = 1 }
-		add_timed_idea = { idea = SAF_idea_67 days = 40 }
-	}
-	option = { # Мы сменим руководство
-		name = south_afrika.77.b
-		ai_chance = { factor = 1 }
-		create_country_leader = {
-			name = "Isaac Bangani Tabata"
-			desc = "POLITICS_SAF_Isaac_Bangani_Tabata_DESC"
-			picture = "Portrait_SAF_Isaac_Bangani_Tabata.dds"
-			expire = "1965.1.1"
-			ideology = trozkism1
-			traits = {
-			}
-		}
-	}
-}
-
 country_event = { # Белая рабочая партия побеждает на выборах
 	id = south_afrika.78
 	title = south_afrika.78.t

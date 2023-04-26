@@ -41,13 +41,34 @@ continuous_focus_position = { x = 4500 y = 700 }
 		cost = 7.2
 		prerequisite = { focus = SAF_sverla }
 		
+		available = {
+			set_temp_variable = { drill_bit_temp_cost = 300 }
+			custom_trigger_tooltip = {
+				check_variable = { drill_bit_total > drill_bit_temp_cost }
+				tooltip = drill_bit_trigger_tt
+			}
+		}
+		
 		ai_will_do = {
 			factor = 1
 		}
 		
 		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		select_effect = {
+			add_to_variable = { drill_bit_total = -300 }
+		}
+		
         completion_reward = {
-			
+			add_to_variable = { SAF_diamond_mining_var = -0.02 }
+			custom_effect_tooltip = SAF_diamond_mining_var_tt
+			hidden_effect = {
+				if = {
+					limit = { NOT = { has_dynamic_modifier = { modifier = SAF_diamond_mining_dyn } } }
+					add_dynamic_modifier = { modifier = SAF_diamond_mining_dyn }
+				}
+				else = { force_update_dynamic_modifier = yes }
+			}
 			custom_effect_tooltip = SAF_tooltip_31
 			hidden_effect = {
 				if = {
@@ -113,10 +134,10 @@ continuous_focus_position = { x = 4500 y = 700 }
 		prerequisite = { focus = SAF_brilliant }
 		
 		available = {
+			set_temp_variable = { drill_bit_temp_cost = 300 }
 			custom_trigger_tooltip = {
-				tooltip = drill_bit_trigger_tt
-				set_temp_variable = { drill_bit_temp_cost = 300 }
 				check_variable = { drill_bit_total > drill_bit_temp_cost }
+				tooltip = drill_bit_trigger_tt
 			}
 		}
 		
@@ -131,8 +152,12 @@ continuous_focus_position = { x = 4500 y = 700 }
 		}
 		
         completion_reward = {
+			add_resource = {
+				type = chrome
+				amount = 16
+				state = 719
+			}
 			custom_effect_tooltip = SAF_tooltip_34
-			
 			hidden_effect = {
 				if = {
 					limit = {
@@ -193,14 +218,31 @@ continuous_focus_position = { x = 4500 y = 700 }
 		cost = 7.2
 		prerequisite = { focus = SAF_sverla }
 		
+		available = {
+			set_temp_variable = { drill_bit_temp_cost = 300 }
+			custom_trigger_tooltip = {
+				check_variable = { drill_bit_total > drill_bit_temp_cost }
+				tooltip = drill_bit_trigger_tt
+			}
+		}
+		
 		ai_will_do = {
 			factor = 1
 		}
 		
 		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		select_effect = {
+			add_to_variable = { drill_bit_total = -300 }
+		}
+		
         completion_reward = {
+			add_resource = {
+				type = steel
+				amount = 8
+				state = 275
+			}
 			custom_effect_tooltip = SAF_tooltip_33
-			
 			hidden_effect = {
 				if = {
 					limit = {
@@ -274,13 +316,34 @@ continuous_focus_position = { x = 4500 y = 700 }
 		cost = 7.2
 		prerequisite = { focus = SAF_sverla }
 		
+		available = {
+			set_temp_variable = { drill_bit_temp_cost = 300 }
+			custom_trigger_tooltip = {
+				check_variable = { drill_bit_total > drill_bit_temp_cost }
+				tooltip = drill_bit_trigger_tt
+			}
+		}
+		
 		ai_will_do = {
 			factor = 1
 		}
 		
 		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		select_effect = {
+			add_to_variable = { drill_bit_total = -300 }
+		}
+		
         completion_reward = {
-			
+			add_to_variable = { SAF_gold_mining_var = 0.05 }
+			custom_effect_tooltip = SAF_gold_mining_var_tt
+			hidden_effect = {
+				if = {
+					limit = { NOT = { has_dynamic_modifier = { modifier = SAF_gold_mining_dyn } } }
+					add_dynamic_modifier = { modifier = SAF_gold_mining_dyn }
+				}
+				else = { force_update_dynamic_modifier = yes }
+			}
 			custom_effect_tooltip = SAF_tooltip_32
 			hidden_effect = {
 				if = {
@@ -346,13 +409,30 @@ continuous_focus_position = { x = 4500 y = 700 }
 		cost = 7.2
 		prerequisite = { focus = SAF_gold }
 		
+		available = {
+			set_temp_variable = { drill_bit_temp_cost = 1000 }
+			custom_trigger_tooltip = {
+				check_variable = { drill_bit_total > drill_bit_temp_cost }
+				tooltip = drill_bit_trigger_tt
+			}
+		}
+		
 		ai_will_do = {
 			factor = 1
 		}
 		
 		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		select_effect = {
+			add_to_variable = { drill_bit_total = -1000 }
+		}
+		
         completion_reward = {
-			
+			add_tech_bonus = {
+				bonus = 2.0
+				uses = 1
+				category = nuclear
+			}
 			custom_effect_tooltip = SAF_tooltip_35
 			hidden_effect = {
 				if = {
@@ -417,11 +497,24 @@ continuous_focus_position = { x = 4500 y = 700 }
 		cost = 7.2
 		prerequisite = { focus = SAF_sverla }
 		
+		available = {
+			set_temp_variable = { drill_bit_temp_cost = 300 }
+			custom_trigger_tooltip = {
+				check_variable = { drill_bit_total > drill_bit_temp_cost }
+				tooltip = drill_bit_trigger_tt
+			}
+		}
+		
 		ai_will_do = {
 			factor = 1
 		}
 		
 		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		select_effect = {
+			add_to_variable = { drill_bit_total = -300 }
+		}
+		
         completion_reward = {
 			275 = { 
 				add_extra_state_shared_building_slots = 2
@@ -520,7 +613,15 @@ continuous_focus_position = { x = 4500 y = 700 }
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
         completion_reward = {
-			
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				category = train_tech
+			}
+			add_equipment_to_stockpile = {
+				type = train_equipment
+				amount = 5
+			}
         }
 	}
 	
@@ -647,7 +748,20 @@ continuous_focus_position = { x = 4500 y = 700 }
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
         completion_reward = {
-			
+			build_railway = {
+				level = 1
+				controller_priority = {
+					base = 1
+					modifier = {
+						tag = SAF
+						add = 2
+					}
+				}
+				fallback = yes
+				path = { 14278 1688 14282 }
+				start_province = 275
+				target_province = 1110
+			}
 		}
 	}
 	
@@ -4751,7 +4865,11 @@ continuous_focus_position = { x = 4500 y = 700 }
 		x = -3
 		y = 7
 		cost = 10
-		
+		available = {
+			NOT = {
+				is_ally_with = ENG
+			}
+		}
 		prerequisite = { focus = SAF_union }
 		ai_will_do = {
 			factor = 1
@@ -4759,7 +4877,7 @@ continuous_focus_position = { x = 4500 y = 700 }
 		search_filters = { FOCUS_FILTER_ANNEXATION }
         completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SAF_free_gb_colonies"
-			every_state = { limit = { is_on_continent = africa is_controlled_by = ENG } add_claim_by = SAF }
+			every_state = { limit = { is_on_continent = africa is_controlled_by = ENG } add_claim_by = ROOT }
         }
 	}
 	
@@ -4799,7 +4917,11 @@ continuous_focus_position = { x = 4500 y = 700 }
 		x = 1
 		y = 7
 		cost = 10
-		
+		available = {
+			NOT = {
+				is_ally_with = FRA
+			}
+		}
 		prerequisite = { focus = SAF_madagascar }
 		ai_will_do = {
 			factor = 1
@@ -4807,7 +4929,7 @@ continuous_focus_position = { x = 4500 y = 700 }
 		search_filters = { FOCUS_FILTER_ANNEXATION }
         completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SAF_free_fra_colonies"
-			every_state = { limit = { is_on_continent = africa is_controlled_by = FRA } add_claim_by = SAF }
+			every_state = { limit = { is_on_continent = africa is_controlled_by = FRA } add_claim_by = ROOT }
         }
 	}
 	
@@ -4818,7 +4940,14 @@ continuous_focus_position = { x = 4500 y = 700 }
 		x = -2
 		y = 8
 		cost = 10
-		
+		available = {
+			NOT = {
+				OR = {
+					is_ally_with = SPA
+					is_ally_with = SPR
+				}
+			}
+		}
 		prerequisite = { focus = SAF_free_fra_colonies focus = SAF_free_belgium_colonies focus = SAF_free_gb_colonies }
 		ai_will_do = {
 			factor = 1
@@ -4826,7 +4955,7 @@ continuous_focus_position = { x = 4500 y = 700 }
 		search_filters = { FOCUS_FILTER_ANNEXATION }
         completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SAF_free_spa_colonies"
-			every_state = { limit = { is_on_continent = africa is_controlled_by = SPA } add_claim_by = SAF }
+			every_state = { limit = { is_on_continent = africa controller = { is_literally_spain = yes } } add_claim_by = ROOT }
         }
 	}
 	
@@ -4837,7 +4966,11 @@ continuous_focus_position = { x = 4500 y = 700 }
 		x = 0
 		y = 8
 		cost = 10
-		
+		available = {
+			NOT = {
+				is_ally_with = ITA
+			}
+		}
 		prerequisite = { focus = SAF_free_fra_colonies focus = SAF_free_belgium_colonies focus = SAF_free_gb_colonies }
 		ai_will_do = {
 			factor = 1
@@ -4845,7 +4978,7 @@ continuous_focus_position = { x = 4500 y = 700 }
 		search_filters = { FOCUS_FILTER_ANNEXATION }
         completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus SAF_free_ita_colonies"
-			every_state = { limit = { is_on_continent = africa is_controlled_by = ITA } add_claim_by = SAF }
+			every_state = { limit = { is_on_continent = africa is_controlled_by = ITA } add_claim_by = ROOT }
         }
 	}
 	

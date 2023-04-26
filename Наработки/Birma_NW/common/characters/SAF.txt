@@ -1,4 +1,20 @@
 characters={
+	SAF_Isaac_Bangani_Tabata={
+		name=SAF_Isaac_Bangani_Tabata
+		portraits={
+			civilian={
+				large="gfx/leaders/SAF/Portrait_Isaac_Bangani_Tabata.dds"
+			}
+		}
+		country_leader={
+			ideology=marxism1
+			expire="1965.1.1.1"
+			id=-1
+			traits = {
+				trozkist_revolutionary
+			}
+		}
+	}
 	SAF_j_b_m_hertzog={
 		name=SAF_j_b_m_hertzog
 		portraits={

@@ -1,0 +1,5 @@
+﻿l_russian:
+    drill_bit_modifiers:0 "Ежедневное производство алмазных сверл"
+    drill_bit_cost:0 "£drill_texticon §H[?drill_bit_temp_cost]§!"
+    drill_bit_cost_blocked:0 "£drill_texticon §R[?drill_bit_temp_cost]§!"
+    drill_bit_cost_tooltip:0 "Это стоит £drill_texticon §H[?drill_bit_temp_cost]§!"

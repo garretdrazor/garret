@@ -1072,20 +1072,21 @@ SAF_deepen_deposits_category = {
 	SAF_deepen_gold_bearing_rafs = {
 		icon = steel
 		available = {
+			has_completed_focus = SAF_gold
 			custom_trigger_tooltip = {
 				tooltip = SAF_deepen_gold_bearing_rafs_trigger_tt
 				check_variable = { SAF_gold_mining_var < 0.4 }
 			}
 		}
 		custom_cost_trigger = {
-			set_temp_variable = { drill_bit_temp_cost = 200 }
+			set_temp_variable = { drill_bit_temp_cost = 300 }
 			check_variable = { drill_bit_total > drill_bit_temp_cost }
 		}
 		custom_cost_text = drill_bit_cost
 		days_remove = 50
 		
 		complete_effect = {
-			add_to_variable = { drill_bit_total = -200 }
+			add_to_variable = { drill_bit_total = -300 }
 		}
 		
 		remove_effect = {
@@ -1109,6 +1110,7 @@ SAF_deepen_deposits_category = {
 		icon = chromium
 		fire_only_once = yes
 		available = {
+			has_completed_focus = SAF_up_chrome
 			FROM = {
 				is_controlled_by = ROOT
 			}
@@ -1142,9 +1144,10 @@ SAF_deepen_deposits_category = {
 	SAF_open_new_diamond_processing_enterprises = {
 		icon = generic_industrial
 		available = {
+			has_completed_focus = SAF_brilliant
 			custom_trigger_tooltip = {
-				tooltip = SAF_deepen_gold_bearing_rafs_trigger_tt
-				check_variable = { SAF_diamond_mining_var < 0.08 }
+				tooltip = SAF_new_diamond_processing_enterprises_trigger_tt
+				check_variable = { SAF_diamond_mining_var > -0.08 }
 			}
 		}
 		custom_cost_trigger = {
@@ -1186,6 +1189,7 @@ SAF_deepen_deposits_category = {
 	SAF_deepen_iron_mines = {
 		icon = steel
 		available = {
+			has_completed_focus = SAF_iron
 			275 = {
 				is_controlled_by = ROOT
 			}
