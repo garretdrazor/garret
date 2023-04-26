@@ -126,7 +126,7 @@ continuous_focus_position = { x = 4500 y = 700 }
 	
 	focus = { # Увеличить добычу Хрома 
 		id = SAF_up_chrome
-		icon = GFX_z_goal_electrotrain
+		icon = GFX_z_goal_development_of_chrome
 		x = -2
 		y = 2
 		relative_position_id = SAF_sverla
@@ -309,7 +309,7 @@ continuous_focus_position = { x = 4500 y = 700 }
 	
 	focus = { # Увеличить золотодобычу
 		id = SAF_gold
-		icon = GFX_z_goal_electrotrain
+		icon = GFX_z_goal_gold_mines2
 		x = 0
 		y = 1
 		relative_position_id = SAF_sverla
@@ -490,7 +490,7 @@ continuous_focus_position = { x = 4500 y = 700 }
 	
 	focus = { # Развитие угледобывающих кампаний
 		id = SAF_coal
-		icon = GFX_z_goal_electrotrain
+		icon = GFX_z_goal_copper_and_coal
 		x = 2
 		y = 1
 		relative_position_id = SAF_sverla
@@ -767,12 +767,12 @@ continuous_focus_position = { x = 4500 y = 700 }
 	
 	focus = { # Запустить электростанцию Столовой бухты 
 		id = SAF_electro
-		icon = GFX_z_goal_new_trains
+		icon = GFX_z_goal_build_electrostation
 		x = 0
 		y = 1
 		relative_position_id = SAF_RBxZIDNc
 		cost = 7.2
-		
+		available = { controls_state = 1108 }
 		prerequisite = { focus = SAF_RBxZIDNc }
 		ai_will_do = {
 			factor = 1
@@ -789,12 +789,12 @@ continuous_focus_position = { x = 4500 y = 700 }
 	
 	focus = { # Южноафриканская радиовещательная корпорация
 		id = SAF_radio
-		icon = GFX_z_goal_new_trains
+		icon = GFX_z_goal_radio_portative
 		x = 0
 		y = 2
 		relative_position_id = SAF_RBxZIDNc
 		cost = 7.2
-		
+		available = { controls_state = 1108 }
 		prerequisite = { focus = SAF_electro }
 		ai_will_do = {
 			factor = 1
@@ -1333,7 +1333,7 @@ continuous_focus_position = { x = 4500 y = 700 }
 	
 	focus = { # Закон о туземном тресте и земле 
 		id = SAF_land_order
-		icon = GFX_z_goal_great_science
+		icon = GFX_z_goal_nationalization_lands
 		x = 3
 		y = 1
 		relative_position_id = SAF_keLFamxQ
@@ -1443,7 +1443,7 @@ continuous_focus_position = { x = 4500 y = 700 }
 	
 	focus = { # Винодельни Пинотаж 
 		id = SAF_vine
-		icon = GFX_z_goal_great_science
+		icon = GFX_z_goal_muscat_san_marino
 		x = 2
 		y = 3
 		relative_position_id = SAF_keLFamxQ
