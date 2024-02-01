@@ -1,5 +1,5 @@
 ﻿add_namespace = xsm
-
+#Власть – дело семейное
 country_event = {
 	id = xsm.1
 	title = xsm.1.t
@@ -13,7 +13,7 @@ country_event = {
 		name = xsm.1.a
 	}
 }
-
+#Хорошие новости с северо-запада
 country_event = {
 	id = xsm.2
 	title = xsm.2.t
@@ -29,7 +29,7 @@ country_event = {
 		add_political_power = 15
 	}
 }
-
+#эропорт Юшу Батанг восстановлен
 country_event = {
 	id = xsm.3
 	title = xsm.3.t
@@ -44,7 +44,7 @@ country_event = {
 		add_opinion_modifier = { target = XSM modifier = XSM_air_butang_opinion } 
 	}
 }
-
+#Восстановление аэропорта Юшу Батанг
 country_event = {
 	id = xsm.4
 	title = xsm.4.t
@@ -60,7 +60,7 @@ country_event = {
 		add_war_support = -0.02
 	}
 }
-
+#Китайские войска у границы
 country_event = {
 	id = xsm.5
 	title = xsm.5.t
@@ -76,7 +76,7 @@ country_event = {
 		add_war_support = -0.03
 	}
 }
-
+#Предложение об объединении
 country_event = {
 	id = xsm.6
 	title = xsm.6.t
@@ -170,7 +170,7 @@ country_event = {
 		}
 	}
 }
-
+#Отказ лидеров клики Ма
 country_event = {
 	id = xsm.7
 	title = xsm.7.t
@@ -184,7 +184,7 @@ country_event = {
 		name = xsm.7.a
 	}
 }
-
+#Раскол Ихэвани
 country_event = {
 	id = xsm.8
 	title = xsm.8.t
@@ -202,7 +202,7 @@ country_event = {
 		}
 	}
 }
-
+#Личный разговор губернаторов
 country_event = {
 	id = xsm.9
 	title = xsm.9.t
@@ -240,7 +240,7 @@ country_event = {
 		}
 	}
 }
-
+#Вторжение мусульманских войск
 country_event = {
 	id = xsm.10
 	title = xsm.10.t
@@ -336,7 +336,7 @@ country_event = {
 		}
 	}
 }
-
+#Вторжение Панчен-ламы
 country_event = {
 	id = xsm.11
 	title = xsm.11.t
@@ -432,7 +432,7 @@ country_event = {
 		}
 	}
 }
-
+#Выход Ма Линя на пенсию
 country_event = {
 	id = xsm.12
 	title = xsm.12.t
@@ -444,14 +444,13 @@ country_event = {
 
 	option = {
 		name = xsm.12.a
-		create_country_leader = {
-			name = "Ma Pu"
-			desc = "Ma_Pu_desc"
-			picture = "gfx/leaders/XSM/Portrait_Ma_Pu.dds"
-			expire = "1965.1.1"
-			ideology = despotism
-			traits = {
-				manipulated
+		add_country_leader_role = {
+			character = XSM_Ma_Pu
+			promote_leader = yes
+			country_leader = {
+				ideology = despotism
+				expire = "1965.1.1.1"
+				traits = { manipulated }
 			}
 		}
 	}
@@ -480,7 +479,7 @@ country_event = { # это на проигрыш буфана
 		}
 	}
 }
-
+# Изменения в правительстве провинции
 country_event = { 
 	id = xsm.14
 	title = xsm.14.t
@@ -496,7 +495,7 @@ country_event = {
 		country_event = { id = xsm.15 days = 50 }
 	}
 }
-
+#Чистки в офицерском корпусе
 country_event = { 
 	id = xsm.15
 	title = xsm.15.t
@@ -510,11 +509,11 @@ country_event = {
 		name = xsm.15.a
 		add_stability = 0.03
 		add_command_power = 5
-		remove_unit_leader = 30193
+		retire_character = XSM_Ma_Pu
 		country_event = { id = xsm.16 days = 50 }
 	}
 }
-
+#Подозрительная деятельность Ма Цзо
 country_event = { 
 	id = xsm.16
 	title = xsm.16.t
@@ -529,7 +528,7 @@ country_event = {
 		country_event = { id = xsm.17 days = 50 }
 	}
 }
-
+#Новая компания Ма Цзо
 country_event = { 
 	id = xsm.17
 	title = xsm.17.t
@@ -544,7 +543,7 @@ country_event = {
 		country_event = { id = xsm.18 days = 50 }
 	}
 }
-
+#Национализация предприятий Ма Цзо
 country_event = { 
 	id = xsm.18
 	title = xsm.18.t
@@ -566,7 +565,7 @@ country_event = {
 		}
 	}
 }
-
+#Возвращение Чжан Дацяня
 country_event = { 
 	id = xsm.19
 	title = xsm.19.t
@@ -581,7 +580,7 @@ country_event = {
 		add_stability = 0.02
 	}
 }
-
+#Встреча с Ван Луобинем
 country_event = { 
 	id = xsm.20
 	title = xsm.20.t
@@ -597,7 +596,7 @@ country_event = {
 		hidden_effect = { country_event = { id = xsm.21 days = 360 } }
 	}
 }
-
+#Арест Вана Луобиня
 country_event = { 
 	id = xsm.21
 	title = xsm.21.t
@@ -613,7 +612,7 @@ country_event = {
 		hidden_effect = { country_event = { id = xsm.22 days = 15 } }
 	}
 }
-
+#Недоразумение
 country_event = { 
 	id = xsm.22
 	title = xsm.22.t
@@ -627,7 +626,7 @@ country_event = {
 		name = xsm.22.a
 	}
 }
-
+#Завершение съёмок фильма
 country_event = { 
 	id = xsm.23
 	title = xsm.23.t
@@ -642,7 +641,7 @@ country_event = {
 		add_stability = 0.02
 	}
 }
-
+#Песня боевого коня
 country_event = { 
 	id = xsm.24
 	title = xsm.24.t
@@ -660,7 +659,7 @@ country_event = {
 		}
 	}
 }
-
+#Марш китайских мусульман
 country_event = { 
 	id = xsm.25
 	title = xsm.25.t
@@ -678,7 +677,7 @@ country_event = {
 		}
 	}
 }
-
+#Напряжённый разговор между братьями
 country_event = { 
 	id = xsm.40
 	title = xsm.40.t

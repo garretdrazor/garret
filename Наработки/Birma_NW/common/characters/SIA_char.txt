@@ -1,0 +1,503 @@
+characters={
+	SIA_phraya_phahon={
+		name=SIA_phraya_phahon
+		portraits={
+			civilian={
+				large="gfx/leaders/SIA/Portrait_Siam_Phraya_Phahon.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_PHRAYA_PHAHON_DESC"
+			ideology=centrism
+			expire="1965.1.1.1"
+			id=-1
+		}
+		field_marshal={
+		    traits = { career_officer politically_connected trait_cautious infantry_officer trait_engineer } 
+			skill=2
+			attack_skill=1
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	SIA_plaek_phibunsongkhram={
+		name=SIA_plaek_phibunsongkhram
+		portraits={
+			civilian={
+				large="gfx/leaders/SIA/Portrait_Plaek_Phibunsongkhram.dds"
+			}
+			army={
+				large="gfx/leaders/SIA/Portrait_Plaek_Phibunsongkhram.dds"
+			    small="GFX_idea_generic_army_asia_3"
+			}
+		}
+		advisor={
+			slot = high_command
+			ledger = army
+			idea_token = SIA_plaek_phibunsongkhram
+			allowed = {
+				original_tag = SIA
+			}
+			traits = {
+				army_artillery_3
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+		field_marshal={
+		    traits = { brilliant_strategist politically_connected career_officer art_leader }
+			skill=2
+			attack_skill=2
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=1
+			legacy_id=-1
+		}
+		country_leader={
+			desc="POLITICS_PLAEK_PHIBUNSONGKHRAM_DESC"
+			ideology=fascism_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	SIA_rama_viii={
+		name=SIA_rama_viii
+		portraits={
+			civilian={
+				large="gfx/leaders/SIA/Portrait_Rama_VIII.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_PHRAYA_PHAHON_DESC"
+			traits = { inexperienced_monarch thai_king }
+			ideology=monarchy_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	SIA_Prince_Boworadet={
+		name=SIA_Prince_Boworadet
+		portraits={
+			civilian={
+				large="gfx/leaders/SIA/Portrait_Prince_Boworadet.dds"
+			}
+			army = {
+				small = GFX_idea_Prince_Boworadet
+			}
+		}
+		country_leader={
+			desc="POLITICS_Prince_Boworadet_DESC"
+			traits = { thai_monarchy_bastion }
+			ideology=monarchy_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	SIA_rama_vii={
+		name=SIA_rama_vii
+		portraits={
+			civilian={
+				large="gfx/leaders/SIA/Portrait_Rama_VII.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_RAMA_VII_DESC"
+			traits = { thai_king }
+			ideology=monarchy_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	SIA_rama_ix={
+		name=SIA_rama_ix
+		portraits={
+			civilian={
+				large="gfx/leaders/SIA/Portrait_Rama_ix.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_RAMA_IX_DESC"
+			traits = { thai_king inexperienced_monarch }
+			ideology=monarchy_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	SIA_rama_ix_2={
+		name=SIA_rama_ix_2
+		portraits={
+			civilian={
+				large="gfx/leaders/SIA/Portrait_Rama_ix_2.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_RAMA_IX_2_DESC"
+			traits = { thai_king }
+			ideology=monarchy_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	SIA_pridi_banomyong={
+		name=SIA_pridi_banomyong
+		portraits={
+			civilian={
+				large="gfx/leaders/SIA/Portrait_Pridi_Banomyong.dds"
+			}
+			army = {
+				small = GFX_idea_Pridi_Banomyong
+			}
+		}
+		country_leader={
+			desc="POLITICS_Pridi_Banomyong_DESC"
+			traits = { liberal_socialist }
+			ideology=socialism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	SIA_Khuang_Aphaiwong={
+		name=SIA_Khuang_Aphaiwong
+		portraits={
+			civilian={
+				large="gfx/leaders/SIA/Portrait_Khuang_Aphaiwong.dds"
+			}
+			army = {
+				small = GFX_idea_Khuang_Aphaiwong
+			}
+		}
+		country_leader={
+			desc="POLITICS_Khuang_Aphaiwong_DESC"
+			traits = {  }
+			ideology=conservatism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	#генералы
+	SIA_luang_chattrakankosol={
+		name=SIA_luang_chattrakankosol
+		portraits={
+			army={
+				small="GFX_idea_generic_army_asia_1"
+			}
+			army={
+				large="gfx/leaders/SIA/Portrait_Luang_Chattrakankosol.dds"
+			}
+		}
+	}
+	SIA_phao_siyanon={
+		name=SIA_phao_siyanon
+		portraits={
+			army={
+				small="GFX_idea_generic_army_asia_2"
+			}
+			army={
+				large="gfx/leaders/SIA/Portrait_Phao_Siyanon.dds"
+			}
+		}
+	}
+	SIA_rama_intru={
+		name=SIA_rama_intru
+		portraits={
+			army={
+				small="GFX_idea_generic_army_asia_2"
+			}
+			army={
+				large="gfx/leaders/SIA/Portrait_Rama_Intru.dds"
+			}
+		}
+	}
+	SIA_Pkhra_Pkhicharnfonkit={
+		name=SIA_Pkhra_Pkhicharnfonkit
+		portraits={
+			army={
+				small="GFX_idea_generic_army_asia_2"
+			}
+			army={
+				large="gfx/leaders/SIA/Portrait_Pkhra_Pkhicharnfonkit.dds"
+			}
+		}
+	}
+	SIA_Adul_Aduldeydzharat={
+		name=SIA_Adul_Aduldeydzharat
+		portraits={
+			army={
+				small="GFX_idea_generic_army_asia_2"
+			}
+			army={
+				large="gfx/leaders/SIA/Portrait_Adul_Aduldeydzharat.dds"
+			}
+		}
+	}
+	SIA_Phit_Kriangsakpichit={
+		name=SIA_Phit_Kriangsakpichit
+		portraits={
+			army={
+				small="GFX_idea_generic_army_asia_2"
+			}
+			army={
+				large="gfx/leaders/SIA/Portrait_Phit_Kriangsakpichit.dds"
+			}
+		}
+	}
+	SIA_Fin_Chunkhavan={
+		name=SIA_Fin_Chunkhavan
+		portraits={
+			army={
+				small="GFX_idea_generic_army_asia_2"
+			}
+			army={
+				large="gfx/leaders/SIA/Portrait_Phin_Choonhawan.dds"
+			}
+		}
+	}
+	SIA_Jaroon_Sereeruengrit={
+		name=SIA_Jaroon_Sereeruengrit
+		portraits={
+			army={
+				small="GFX_idea_generic_army_asia_2"
+			}
+			army={
+				large="gfx/leaders/SIA/Portrait_Jaroon_Sereeruengrit.dds"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SIA_Jaroon_Sereeruengrit
+			allowed  = {
+				original_tag  = SIA
+			}
+			available = {
+				has_country_flag = SIA_police_8_flag
+			}
+			traits = {
+				railroad_enthusiast
+			}
+		}
+	}
+	SIA_Plaad_Phibunphanuwat={
+		name=SIA_Plaad_Phibunphanuwat
+		portraits={
+			army={
+				small="GFX_idea_generic_army_asia_2"
+			}
+			army={
+				large="gfx/leaders/SIA/Portrait_Plaad_Phibunphanuwat.dds"
+			}
+		}
+	}
+	SIA_Phraya_Songsuradet={
+		name=SIA_Phraya_Songsuradet
+		portraits={
+			army={
+				small="GFX_idea_generic_army_asia_2"
+			}
+			army={
+				large="gfx/leaders/SIA/Portrait_Siam_Phraya_Songsuradet.dds"
+			}
+		}
+	}
+	SIA_Phraya_Thephasdin={
+		name=SIA_Phraya_Thephasdin
+		portraits={
+			army={
+				small="GFX_idea_generic_army_asia_2"
+			}
+			army={
+				large="gfx/leaders/SIA/Portrait_Phraya_Thephasdin.dds"
+			}
+		}
+	}
+	# Чисто министры
+	SIA_Luang_Wichitwathakan={
+		name=SIA_Luang_Wichitwathakan
+		portraits={
+			army = {
+				small = GFX_idea_Luang_Wichitwathakan
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SIA_Luang_Wichitwathakan
+			allowed  = {
+				original_tag  = SIA
+			}
+			available = {
+				has_government = fascism
+				has_completed_focus = SIA_ultranac
+			}
+			traits = {
+				nac_arhitektor
+			}
+		}
+	}
+	SIA_Rangsit_Prayurasakdi={
+		name=SIA_Rangsit_Prayurasakdi
+		portraits={
+			army = {
+				small = GFX_idea_Rangsit_Prayurasakdi
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SIA_Rangsit_Prayurasakdi
+			allowed  = {
+				original_tag  = SIA
+			}
+			available = {
+				NOT = {
+					has_completed_focus = SIA_no_king
+				}
+			}
+			traits = {
+				medicine_minister
+			}
+		}
+	}
+	SIA_Phraya_Pensawat={
+		name=SIA_Phraya_Pensawat
+		portraits={
+			army = {
+				small = GFX_idea_Phraya_Pensawat
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SIA_Phraya_Pensawat
+			allowed  = {
+				original_tag  = SIA
+			}
+			traits = {
+				minister_of_internal_affairs
+			}
+		}
+	}
+	SIA_Thawan_Thamrongnawasawat={
+		name=SIA_Thawan_Thamrongnawasawat
+		portraits={
+			army = {
+				small = GFX_idea_Thawan_Thamrongnawasawat
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SIA_Thawan_Thamrongnawasawat
+			allowed  = {
+				original_tag  = SIA
+			}
+			available = {
+				has_government = fascism
+			}
+			traits = {
+				prince_of_terror
+			}
+		}
+	}
+	SIA_Thawi_Bunyaket={
+		name=SIA_Thawi_Bunyaket
+		portraits={
+			army = {
+				small = GFX_idea_Thawi_Bunyaket
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SIA_Thawi_Bunyaket
+			allowed  = {
+				original_tag  = SIA
+			}
+			available = {
+				NOT = {
+					has_completed_focus = SIA_destroy_seri_thai
+				}
+			}
+			traits = {
+				education_minister
+			}
+		}
+	}
+	SIA_Direk_Jayanama={
+		name=SIA_Direk_Jayanama
+		portraits={
+			army = {
+				small = GFX_idea_Direk_Jayanama
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SIA_Direk_Jayanama
+			allowed  = {
+				original_tag  = SIA
+			}
+			available = {
+				NOT = {
+					has_completed_focus = SIA_destroy_seri_thai
+				}
+			}
+			traits = {
+				silent_workhorse
+			}
+		}
+	}
+	SIA_Prince_Chai_Nat={
+		name=SIA_Prince_Chai_Nat
+		portraits={
+			army = {
+				small = GFX_idea_Prince_Chai_Nat
+			}
+		}
+	}
+	SIA_Prince_Naris={
+		name=SIA_Prince_Naris
+		portraits={
+			army = {
+				small = GFX_idea_Prince_Naris
+			}
+		}
+	}
+	SIA_Prince_Damrong_Ratchanubab={
+		name=SIA_Prince_Damrong_Ratchanubab
+		portraits={
+			army = {
+				small = GFX_idea_Prince_Damrong_Ratchanubab
+			}
+		}
+	}
+	SIA_Prince_Narisara_Nuwattiwong={
+		name=SIA_Prince_Narisara_Nuwattiwong
+		portraits={
+			army = {
+				small = GFX_idea_Prince_Narisara_Nuwattiwong
+			}
+			army={
+				large="gfx/leaders/SIA/Portrait_Narisara Nuwattiwong.dds"
+			}
+		}
+	}
+	SIA_Prince_Mahra_Chakri={
+		name=SIA_Prince_Mahra_Chakri
+		portraits={
+			army = {
+				small = GFX_idea_Prince_Mahra_Chakri
+			}
+			army={
+				large="gfx/leaders/SIA/Portrait_Prince_Maha_Chakri_Sirindhorn.dds"
+			}
+		}
+	}
+	SIA_Prince_Tosasiriwong={
+		name=SIA_Prince_Tosasiriwong
+		portraits={
+			army = {
+				small = GFX_idea_Prince_Tosasiriwong
+			}
+			army={
+				large="gfx/leaders/SIA/Portrait_Prince_Thosasiriwong.dds"
+			}
+		}
+	}
+}

@@ -158,7 +158,7 @@ focus_tree = {
 		}
 		available = {
 			has_country_leader = {
-				name = "Ma Lin"
+				character = XSM_Ma_Lin
 				ruling_only = yes
 			}
 		}
@@ -179,7 +179,7 @@ focus_tree = {
 		}
 		available = {
 			has_country_leader = {
-				name = "Ma Lin"
+				character = XSM_Ma_Lin
 				ruling_only = yes
 			}
 			TIB = {
@@ -203,7 +203,7 @@ focus_tree = {
 		}
 		available = {
 			has_country_leader = {
-				name = "Ma Lin"
+				character = XSM_Ma_Lin
 				ruling_only = yes
 			}
 		}
@@ -224,7 +224,7 @@ focus_tree = {
 		}
 		available = {
 			has_country_leader = {
-				name = "Ma Bufang"
+				character = XSM_Ma_Bufang
 				ruling_only = yes
 			}
 		}
@@ -276,11 +276,11 @@ focus_tree = {
 		available = {
 			OR = {
 				has_country_leader = {
-					name = "Ma Lin"
+					character = XSM_Ma_Lin
 					ruling_only = yes
 				}
 				has_country_leader = {
-					name = "Ma Pu"
+					character = XSM_Ma_Pu
 					ruling_only = yes
 				}
 			}
@@ -338,14 +338,15 @@ focus_tree = {
 				original_tag_to_check = NEA
 				is_faction_leader = yes
 				NOT = { has_war_with = ROOT }
+				has_completed_focus = NEA_to_form_the_north_western_government_of_national_defense
 			}
 			OR = {
 				has_country_leader = {
-					name = "Ma Lin"
+					character = XSM_Ma_Lin
 					ruling_only = yes
 				}
 				has_country_leader = {
-					name = "Ma Pu"
+					character = XSM_Ma_Pu
 					ruling_only = yes
 				}
 			}
@@ -391,11 +392,11 @@ focus_tree = {
 			}
 			OR = {
 				has_country_leader = {
-					name = "Ma Lin"
+					character = XSM_Ma_Lin
 					ruling_only = yes
 				}
 				has_country_leader = {
-					name = "Ma Pu"
+					character = XSM_Ma_Pu
 					ruling_only = yes
 				}
 			}
@@ -436,11 +437,11 @@ focus_tree = {
 			is_subject = no
 			OR = {
 				has_country_leader = {
-					name = "Ma Lin"
+					character = XSM_Ma_Lin
 					ruling_only = yes
 				}
 				has_country_leader = {
-					name = "Ma Pu"
+					character = XSM_Ma_Pu
 					ruling_only = yes
 				}
 			}
@@ -455,37 +456,34 @@ focus_tree = {
 			if = {
 				limit = {
 					has_country_leader = {
-						name = "Ma Lin"
+						character = XSM_Ma_Lin
 						ruling_only = yes
 					}
 				}
-				create_country_leader = {
-					name = "Ma Lin"
-					desc = "Ma_Lin_desc"
-					picture = "gfx/leaders/XSM/Portrait_Ma_Lin.dds"
-					expire = "1965.1.1"
-					ideology = democratic_socialism
-					traits = {
-						old_horse
-						talk_with_ppl
+				add_country_leader_role = {
+					character = XSM_Ma_Lin
+					promote_leader = yes
+					country_leader = {
+						ideology = democratic_socialism
+						expire = "1965.1.1.1"
+						traits = { old_horse talk_with_ppl }
 					}
 				}
 			}
 			if = {
 				limit = {
 					has_country_leader = {
-						name = "Ma Pu"
+						character = XSM_Ma_Pu
 						ruling_only = yes
 					}
 				}
-				create_country_leader = {
-					name = "Ma Pu"
-					desc = "Ma_Pu_desc"
-					picture = "gfx/leaders/XSM/Portrait_Ma_Pu.dds"
-					expire = "1965.1.1"
-					ideology = democratic_socialism
-					traits = {
-						manipulated
+				add_country_leader_role = {
+					character = XSM_Ma_Pu
+					promote_leader = yes
+					country_leader = {
+						ideology = democratic_socialism
+						expire = "1965.1.1.1"
+						traits = { manipulated }
 					}
 				}
 			}
@@ -505,11 +503,11 @@ focus_tree = {
 			is_subject = no
 			OR = {
 				has_country_leader = {
-					name = "Ma Lin"
+					character = XSM_Ma_Lin
 					ruling_only = yes
 				}
 				has_country_leader = {
-					name = "Ma Pu"
+					character = XSM_Ma_Pu
 					ruling_only = yes
 				}
 			}
@@ -524,37 +522,34 @@ focus_tree = {
 			if = {
 				limit = {
 					has_country_leader = {
-						name = "Ma Lin"
+						character = XSM_Ma_Lin
 						ruling_only = yes
 					}
 				}
-				create_country_leader = {
-					name = "Ma Lin"
-					desc = "Ma_Lin_desc"
-					picture = "gfx/leaders/XSM/Portrait_Ma_Lin.dds"
-					expire = "1965.1.1"
-					ideology = right_wing_communism
-					traits = {
-						old_horse
-						talk_with_ppl
+				add_country_leader_role = {
+					character = XSM_Ma_Lin
+					promote_leader = yes
+					country_leader = {
+						ideology = leninism
+						expire = "1965.1.1.1"
+						traits = { old_horse talk_with_ppl }
 					}
 				}
 			}
 			if = {
 				limit = {
 					has_country_leader = {
-						name = "Ma Pu"
+						character = XSM_Ma_Pu
 						ruling_only = yes
 					}
 				}
-				create_country_leader = {
-					name = "Ma Pu"
-					desc = "Ma_Pu_desc"
-					picture = "gfx/leaders/XSM/Portrait_Ma_Pu.dds"
-					expire = "1965.1.1"
-					ideology = right_wing_communism
-					traits = {
-						manipulated
+				add_country_leader_role = {
+					character = XSM_Ma_Pu
+					promote_leader = yes
+					country_leader = {
+						ideology = leninism
+						expire = "1965.1.1.1"
+						traits = { manipulated }
 					}
 				}
 			}
@@ -572,11 +567,11 @@ focus_tree = {
 			country_exists = NEA
 			OR = {
 				has_country_leader = {
-					name = "Ma Lin"
+					character = XSM_Ma_Lin
 					ruling_only = yes
 				}
 				has_country_leader = {
-					name = "Ma Pu"
+					character = XSM_Ma_Pu
 					ruling_only = yes
 				}
 			}
@@ -666,11 +661,11 @@ focus_tree = {
 		available = {
 			OR = {
 				has_country_leader = {
-					name = "Ma Lin"
+					character = XSM_Ma_Lin
 					ruling_only = yes
 				}
 				has_country_leader = {
-					name = "Ma Pu"
+					character = XSM_Ma_Pu
 					ruling_only = yes
 				}
 			}
@@ -695,11 +690,11 @@ focus_tree = {
 		available = {
 			OR = {
 				has_country_leader = {
-					name = "Ma Lin"
+					character = XSM_Ma_Lin
 					ruling_only = yes
 				}
 				has_country_leader = {
-					name = "Ma Pu"
+					character = XSM_Ma_Pu
 					ruling_only = yes
 				}
 			}
@@ -711,13 +706,11 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_let_hesi_coridor"
 			if = {
 				limit = { 756 = { is_owned_by = ROOT } }
-				756 = { add_claim_by = NWA }
-				756 = { add_core_of = NWA }
+				756 = { add_claim_by = NWA add_core_of = NWA transfer_state_to = NWA }
 			}
 			if = {
 				limit = { 1126 = { is_owned_by = ROOT } }
-				1126 = { add_claim_by = NWA }
-				1126 = { add_core_of = NWA }
+				1126 = { add_claim_by = NWA add_core_of = NWA transfer_state_to = NWA }
 			}
 		}
 	}
@@ -730,14 +723,14 @@ focus_tree = {
 			focus = XSM_let_hesi_coridor
 		}
 		available = {
-			country_exists = NWB
+			country_exists = NWA
 			OR = {
 				has_country_leader = {
-					name = "Ma Lin"
+					character = XSM_Ma_Lin
 					ruling_only = yes
 				}
 				has_country_leader = {
-					name = "Ma Pu"
+					character = XSM_Ma_Pu
 					ruling_only = yes
 				}
 			}
@@ -748,9 +741,9 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_support_centralizatiom"
 			every_unit_leader = {
-				set_nationality = NWB
+				set_nationality = NWA
 			}
-			NWB = {
+			NWA = {
 				annex_country = {
 					target = ROOT
 					transfer_troops = yes
@@ -762,58 +755,58 @@ focus_tree = {
 							is_ai = no
 						}
 					}
-				NWB = { change_tag_from = ROOT }
+				NWA = { change_tag_from = ROOT }
 				}
 			}
 			if = {
 				limit = { 1133 = { is_owned_by = ROOT } }
-				1133 = { add_core_of = NWB }
-				1133 = { add_claim_by = NWB }
+				1133 = { add_core_of = NWA }
+				1133 = { add_claim_by = NWA }
 			}
 			if = {
 				limit = { 1125 = { is_owned_by = ROOT } }
-				1125 = { add_core_of = NWB }
-				1125 = { add_claim_by = NWB }
+				1125 = { add_core_of = NWA }
+				1125 = { add_claim_by = NWA }
 			}
 			if = {
 				limit = { 616 = { is_owned_by = ROOT } }
-				616 = { add_core_of = NWB }
-				616 = { add_claim_by = NWB }
+				616 = { add_core_of = NWA }
+				616 = { add_claim_by = NWA }
 			}
 			if = {
 				limit = { 604 = { is_owned_by = ROOT } }
-				604 = { add_core_of = NWB }
-				604 = { add_claim_by = NWB }
+				604 = { add_core_of = NWA }
+				604 = { add_claim_by = NWA }
 			}
 			if = {
 				limit = { 1166 = { is_owned_by = ROOT } }
-				1166 = { add_core_of = NWB }
-				1166 = { add_claim_by = NWB }
+				1166 = { add_core_of = NWA }
+				1166 = { add_claim_by = NWA }
 			}
 			if = {
 				limit = { 754 = { is_owned_by = ROOT } }
-				754 = { add_core_of = NWB }
-				754 = { add_claim_by = NWB }
+				754 = { add_core_of = NWA }
+				754 = { add_claim_by = NWA }
 			}
 			if = {
 				limit = { 755 = { is_owned_by = ROOT } }
-				755 = { add_core_of = NWB }
-				755 = { add_claim_by = NWB }
+				755 = { add_core_of = NWA }
+				755 = { add_claim_by = NWA }
 			}
 			if = {
 				limit = { 756 = { is_owned_by = ROOT } }
-				756 = { add_core_of = NWB }
-				756 = { add_claim_by = NWB }
+				756 = { add_core_of = NWA }
+				756 = { add_claim_by = NWA }
 			}
 			if = {
 				limit = { 1126 = { is_owned_by = ROOT } }
-				1126 = { add_core_of = NEA }
-				1126 = { add_claim_by = NWB }
+				1126 = { add_core_of = NWA }
+				1126 = { add_claim_by = NWA }
 			}
 			if = {
 				limit = { 1177 = { is_owned_by = ROOT } }
-				1177 = { add_core_of = NWB }
-				1177 = { add_claim_by = NWB }
+				1177 = { add_core_of = NWA }
+				1177 = { add_claim_by = NWA }
 			}
 		}
 	}
@@ -826,12 +819,12 @@ focus_tree = {
 		}
 		available = {
 			has_country_leader = {
-				name = "Ma Lin"
+				character = XSM_Ma_Lin
 				ruling_only = yes
 			}
 			TIB = {
 				has_country_leader = {
-					name = "Ma Bufang"
+					character = XSM_Ma_Bufang
 					ruling_only = yes
 				}
 			}
@@ -853,7 +846,7 @@ focus_tree = {
 		}
 		available = {
 			has_country_leader = {
-				name = "Ma Lin"
+				character = XSM_Ma_Lin
 				ruling_only = yes
 			}
 		}
@@ -874,11 +867,11 @@ focus_tree = {
 		available = {
 			OR = {
 				has_country_leader = {
-					name = "Ma Lin"
+					character = XSM_Ma_Lin
 					ruling_only = yes
 				}
 				has_country_leader = {
-					name = "Ma Pu"
+					character = XSM_Ma_Pu
 					ruling_only = yes
 				}
 			}
@@ -913,11 +906,11 @@ focus_tree = {
 		available = {
 			OR = {
 				has_country_leader = {
-					name = "Ma Lin"
+					character = XSM_Ma_Lin
 					ruling_only = yes
 				}
 				has_country_leader = {
-					name = "Ma Pu"
+					character = XSM_Ma_Pu
 					ruling_only = yes
 				}
 			}
@@ -944,11 +937,11 @@ focus_tree = {
 		available = {
 			OR = {
 				has_country_leader = {
-					name = "Ma Lin"
+					character = XSM_Ma_Lin
 					ruling_only = yes
 				}
 				has_country_leader = {
-					name = "Ma Pu"
+					character = XSM_Ma_Pu
 					ruling_only = yes
 				}
 			}
@@ -976,11 +969,11 @@ focus_tree = {
 		available = {
 			OR = {
 				has_country_leader = {
-					name = "Ma Lin"
+					character = XSM_Ma_Lin
 					ruling_only = yes
 				}
 				has_country_leader = {
-					name = "Ma Pu"
+					character = XSM_Ma_Pu
 					ruling_only = yes
 				}
 			}
@@ -1006,11 +999,11 @@ focus_tree = {
 		available = {
 			OR = {
 				has_country_leader = {
-					name = "Ma Lin"
+					character = XSM_Ma_Lin
 					ruling_only = yes
 				}
 				has_country_leader = {
-					name = "Ma Pu"
+					character = XSM_Ma_Pu
 					ruling_only = yes
 				}
 			}
@@ -1033,11 +1026,11 @@ focus_tree = {
 		available = {
 			OR = {
 				has_country_leader = {
-					name = "Ma Lin"
+					character = XSM_Ma_Lin
 					ruling_only = yes
 				}
 				has_country_leader = {
-					name = "Ma Pu"
+					character = XSM_Ma_Pu
 					ruling_only = yes
 				}
 			}
@@ -1047,7 +1040,11 @@ focus_tree = {
 		relative_position_id = XSM_low_officer_courpus
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_train_soldiers"
-
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.75
+				uses = 1
+				category = cat_asymmetric_warfare
+			}
 		}
 	}
 	focus = {
@@ -1064,11 +1061,11 @@ focus_tree = {
 		available = {
 			OR = {
 				has_country_leader = {
-					name = "Ma Lin"
+					character = XSM_Ma_Lin
 					ruling_only = yes
 				}
 				has_country_leader = {
-					name = "Ma Pu"
+					character = XSM_Ma_Pu
 					ruling_only = yes
 				}
 			}
@@ -1098,11 +1095,11 @@ focus_tree = {
 		available = {
 			OR = {
 				has_country_leader = {
-					name = "Ma Lin"
+					character = XSM_Ma_Lin
 					ruling_only = yes
 				}
 				has_country_leader = {
-					name = "Ma Pu"
+					character = XSM_Ma_Pu
 					ruling_only = yes
 				}
 			}
@@ -1126,11 +1123,11 @@ focus_tree = {
 		available = {
 			OR = {
 				has_country_leader = {
-					name = "Ma Lin"
+					character = XSM_Ma_Lin
 					ruling_only = yes
 				}
 				has_country_leader = {
-					name = "Ma Pu"
+					character = XSM_Ma_Pu
 					ruling_only = yes
 				}
 			}
@@ -1140,9 +1137,8 @@ focus_tree = {
 		relative_position_id = XSM_military_and_civilian
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_commy_strategy"
-			add_tech_bonus = {
-				name = XSM_commy_strategy_bonus
-				bonus = 1.0
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.75
 				uses = 1
 				category = cat_asymmetric_warfare
 			}
@@ -1158,11 +1154,11 @@ focus_tree = {
 		available = {
 			OR = {
 				has_country_leader = {
-					name = "Ma Lin"
+					character = XSM_Ma_Lin
 					ruling_only = yes
 				}
 				has_country_leader = {
-					name = "Ma Pu"
+					character = XSM_Ma_Pu
 					ruling_only = yes
 				}
 			}
@@ -1172,9 +1168,8 @@ focus_tree = {
 		relative_position_id = XSM_commy_strategy
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_gorizontal_army"
-			add_tech_bonus = {
-				name = XSM_commy_strategy_bonus
-				bonus = 0.5
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
 				uses = 1
 				category = cat_asymmetric_warfare
 			}
@@ -1191,11 +1186,11 @@ focus_tree = {
 		available = {
 			OR = {
 				has_country_leader = {
-					name = "Ma Lin"
+					character = XSM_Ma_Lin
 					ruling_only = yes
 				}
 				has_country_leader = {
-					name = "Ma Pu"
+					character = XSM_Ma_Pu
 					ruling_only = yes
 				}
 			}
@@ -1222,11 +1217,11 @@ focus_tree = {
 		available = {
 			OR = {
 				has_country_leader = {
-					name = "Ma Lin"
+					character = XSM_Ma_Lin
 					ruling_only = yes
 				}
 				has_country_leader = {
-					name = "Ma Pu"
+					character = XSM_Ma_Pu
 					ruling_only = yes
 				}
 			}
@@ -1276,7 +1271,7 @@ focus_tree = {
 						is_puppet = no
 					}
 				}
-				country_event = { id = xsm.4 }
+				TIB = { country_event = { id = xsm.4 } }
 			}
 		}
 	}
@@ -1358,7 +1353,9 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_cult_finance"
 			add_ideas = XSM_idea_cult_finance
-			country_event = { id = xsm.8 days = 50 }
+			hidden_effect = {
+				country_event = { id = xsm.8 days = 50 }
+			}
 		}
 	}
 	focus = {
@@ -1407,7 +1404,7 @@ focus_tree = {
 		}
 		available = {
 			has_country_leader = {
-				name = "Ma Lin"
+				character = XSM_Ma_Lin
 				ruling_only = yes
 			}
 			NOT = {
@@ -1433,11 +1430,11 @@ focus_tree = {
 		available = {
 			OR = {
 				has_country_leader = {
-					name = "Ma Lin"
+					character = XSM_Ma_Lin
 					ruling_only = yes
 				}
 				has_country_leader = {
-					name = "Ma Pu"
+					character = XSM_Ma_Pu
 					ruling_only = yes
 				}
 			}
@@ -1463,11 +1460,11 @@ focus_tree = {
 		available = {
 			OR = {
 				has_country_leader = {
-					name = "Ma Lin"
+					character = XSM_Ma_Lin
 					ruling_only = yes
 				}
 				has_country_leader = {
-					name = "Ma Pu"
+					character = XSM_Ma_Pu
 					ruling_only = yes
 				}
 			}
@@ -1553,11 +1550,11 @@ focus_tree = {
 		available = {
 			OR = {
 				has_country_leader = {
-					name = "Ma Lin"
+					character = XSM_Ma_Lin
 					ruling_only = yes
 				}
 				has_country_leader = {
-					name = "Ma Pu"
+					character = XSM_Ma_Pu
 					ruling_only = yes
 				}
 			}
@@ -1580,11 +1577,11 @@ focus_tree = {
 		available = {
 			OR = {
 				has_country_leader = {
-					name = "Ma Lin"
+					character = XSM_Ma_Lin
 					ruling_only = yes
 				}
 				has_country_leader = {
-					name = "Ma Pu"
+					character = XSM_Ma_Pu
 					ruling_only = yes
 				}
 			}
@@ -1610,11 +1607,11 @@ focus_tree = {
 		available = {
 			OR = {
 				has_country_leader = {
-					name = "Ma Lin"
+					character = XSM_Ma_Lin
 					ruling_only = yes
 				}
 				has_country_leader = {
-					name = "Ma Pu"
+					character = XSM_Ma_Pu
 					ruling_only = yes
 				}
 			}
@@ -1637,11 +1634,11 @@ focus_tree = {
 		available = {
 			OR = {
 				has_country_leader = {
-					name = "Ma Lin"
+					character = XSM_Ma_Lin
 					ruling_only = yes
 				}
 				has_country_leader = {
-					name = "Ma Pu"
+					character = XSM_Ma_Pu
 					ruling_only = yes
 				}
 			}
@@ -1680,11 +1677,11 @@ focus_tree = {
 		available = {
 			OR = {
 				has_country_leader = {
-					name = "Ma Lin"
+					character = XSM_Ma_Lin
 					ruling_only = yes
 				}
 				has_country_leader = {
-					name = "Ma Pu"
+					character = XSM_Ma_Pu
 					ruling_only = yes
 				}
 			}
@@ -1707,11 +1704,11 @@ focus_tree = {
 		available = {
 			OR = {
 				has_country_leader = {
-					name = "Ma Bufang"
+					character = XSM_Ma_Bufang
 					ruling_only = yes
 				}
 				has_country_leader = {
-					name = "Ma Buqing"
+					character = XSM_ma_buqing
 					ruling_only = yes
 				}
 			}
@@ -1741,11 +1738,11 @@ focus_tree = {
 		available = {
 			OR = {
 				has_country_leader = {
-					name = "Ma Bufang"
+					character = XSM_Ma_Bufang
 					ruling_only = yes
 				}
 				has_country_leader = {
-					name = "Ma Buqing"
+					character = XSM_ma_buqing
 					ruling_only = yes
 				}
 			}
@@ -1768,11 +1765,11 @@ focus_tree = {
 		available = {
 			OR = {
 				has_country_leader = {
-					name = "Ma Bufang"
+					character = XSM_Ma_Bufang
 					ruling_only = yes
 				}
 				has_country_leader = {
-					name = "Ma Buqing"
+					character = XSM_ma_buqing
 					ruling_only = yes
 				}
 			}
@@ -1798,11 +1795,11 @@ focus_tree = {
 		available = {
 			OR = {
 				has_country_leader = {
-					name = "Ma Bufang"
+					character = XSM_Ma_Bufang
 					ruling_only = yes
 				}
 				has_country_leader = {
-					name = "Ma Buqing"
+					character = XSM_ma_buqing
 					ruling_only = yes
 				}
 			}
@@ -1825,11 +1822,11 @@ focus_tree = {
 		available = {
 			OR = {
 				has_country_leader = {
-					name = "Ma Bufang"
+					character = XSM_Ma_Bufang
 					ruling_only = yes
 				}
 				has_country_leader = {
-					name = "Ma Buqing"
+					character = XSM_ma_buqing
 					ruling_only = yes
 				}
 			}
@@ -1852,11 +1849,11 @@ focus_tree = {
 		available = {
 			OR = {
 				has_country_leader = {
-					name = "Ma Bufang"
+					character = XSM_Ma_Bufang
 					ruling_only = yes
 				}
 				has_country_leader = {
-					name = "Ma Buqing"
+					character = XSM_ma_buqing
 					ruling_only = yes
 				}
 			}
@@ -1866,7 +1863,27 @@ focus_tree = {
 		relative_position_id = XSM_Ma_bufang
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_nice_roads"
-			
+			random_owned_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	focus = {
@@ -1879,11 +1896,11 @@ focus_tree = {
 		available = {
 			OR = {
 				has_country_leader = {
-					name = "Ma Bufang"
+					character = XSM_Ma_Bufang
 					ruling_only = yes
 				}
 				has_country_leader = {
-					name = "Ma Buqing"
+					character = XSM_ma_buqing
 					ruling_only = yes
 				}
 			}
@@ -1897,44 +1914,40 @@ focus_tree = {
 		relative_position_id = XSM_Ma_bufang
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_inegartion_blueshirts_ideas"
+			add_popularity = { ideology = neutrality popularity = -0.40 }
 			add_popularity = { ideology = fascism popularity = 0.40 }
 			set_politics = { ruling_party = fascism }
 			if = {
 				limit = {
 					has_country_leader = {
-						name = "Ma Bufang"
+						character = XSM_Ma_Bufang
 						ruling_only = yes
 					}
 				}
-				create_country_leader = {
-					name = "Ma Bufang"
-					desc = "Ma_Bufang_desc"
-					picture = "GFX_portrait_xsm_ma_bufang"
-					expire = "1965.1.1"
-					ideology = nationalism_ideology
-					traits = {
-						chinese_militarist
-						modernization
-						reformator
+				add_country_leader_role = {
+					character = XSM_Ma_Bufang
+					promote_leader = yes
+					country_leader = {
+						ideology = nationalism_ideology
+						expire = "1965.1.1.1"
+						traits = { chinese_militarist modernization reformator }
 					}
 				}
 			}
 			if = {
 				limit = {
 					has_country_leader = {
-						name = "Ma Buqing"
+						character = XSM_ma_buqing
 						ruling_only = yes
 					}
 				}
-				create_country_leader = {
-					name = "Ma Buqing"
-					desc = "Ma_Buqing_desc"
-					picture = "gfx/leaders/XSM/Portrait_Ma_Buqing.dds"
-					expire = "1965.1.1"
-					ideology = nationalism_ideology
-					traits = {
-						last_blood
-						corruption_loyality
+				add_country_leader_role = {
+					character = XSM_ma_buqing
+					promote_leader = yes
+					country_leader = {
+						ideology = nationalism_ideology
+						expire = "1965.1.1.1"
+						traits = { last_blood corruption_loyality }
 					}
 				}
 			}
@@ -1950,11 +1963,11 @@ focus_tree = {
 		available = {
 			OR = {
 				has_country_leader = {
-					name = "Ma Bufang"
+					character = XSM_Ma_Bufang
 					ruling_only = yes
 				}
 				has_country_leader = {
-					name = "Ma Buqing"
+					character = XSM_ma_buqing
 					ruling_only = yes
 				}
 			}
@@ -1977,11 +1990,11 @@ focus_tree = {
 		available = {
 			OR = {
 				has_country_leader = {
-					name = "Ma Bufang"
+					character = XSM_Ma_Bufang
 					ruling_only = yes
 				}
 				has_country_leader = {
-					name = "Ma Buqing"
+					character = XSM_ma_buqing
 					ruling_only = yes
 				}
 			}
@@ -2004,11 +2017,11 @@ focus_tree = {
 		available = {
 			OR = {
 				has_country_leader = {
-					name = "Ma Bufang"
+					character = XSM_Ma_Bufang
 					ruling_only = yes
 				}
 				has_country_leader = {
-					name = "Ma Buqing"
+					character = XSM_ma_buqing
 					ruling_only = yes
 				}
 			}
@@ -2031,11 +2044,11 @@ focus_tree = {
 		available = {
 			OR = {
 				has_country_leader = {
-					name = "Ma Bufang"
+					character = XSM_Ma_Bufang
 					ruling_only = yes
 				}
 				has_country_leader = {
-					name = "Ma Buqing"
+					character = XSM_ma_buqing
 					ruling_only = yes
 				}
 			}
@@ -2058,11 +2071,11 @@ focus_tree = {
 		available = {
 			OR = {
 				has_country_leader = {
-					name = "Ma Bufang"
+					character = XSM_Ma_Bufang
 					ruling_only = yes
 				}
 				has_country_leader = {
-					name = "Ma Buqing"
+					character = XSM_ma_buqing
 					ruling_only = yes
 				}
 			}
@@ -2085,11 +2098,11 @@ focus_tree = {
 		available = {
 			OR = {
 				has_country_leader = {
-					name = "Ma Bufang"
+					character = XSM_Ma_Bufang
 					ruling_only = yes
 				}
 				has_country_leader = {
-					name = "Ma Buqing"
+					character = XSM_ma_buqing
 					ruling_only = yes
 				}
 			}
@@ -2114,11 +2127,11 @@ focus_tree = {
 		available = {
 			OR = {
 				has_country_leader = {
-					name = "Ma Bufang"
+					character = XSM_Ma_Bufang
 					ruling_only = yes
 				}
 				has_country_leader = {
-					name = "Ma Buqing"
+					character = XSM_ma_buqing
 					ruling_only = yes
 				}
 			}
@@ -2144,11 +2157,11 @@ focus_tree = {
 		available = {
 			OR = {
 				has_country_leader = {
-					name = "Ma Bufang"
+					character = XSM_Ma_Bufang
 					ruling_only = yes
 				}
 				has_country_leader = {
-					name = "Ma Buqing"
+					character = XSM_ma_buqing
 					ruling_only = yes
 				}
 			}
@@ -2171,11 +2184,11 @@ focus_tree = {
 		available = {
 			OR = {
 				has_country_leader = {
-					name = "Ma Bufang"
+					character = XSM_Ma_Bufang
 					ruling_only = yes
 				}
 				has_country_leader = {
-					name = "Ma Buqing"
+					character = XSM_ma_buqing
 					ruling_only = yes
 				}
 			}
@@ -2198,11 +2211,11 @@ focus_tree = {
 		available = {
 			OR = {
 				has_country_leader = {
-					name = "Ma Bufang"
+					character = XSM_Ma_Bufang
 					ruling_only = yes
 				}
 				has_country_leader = {
-					name = "Ma Buqing"
+					character = XSM_ma_buqing
 					ruling_only = yes
 				}
 			}
@@ -2225,11 +2238,11 @@ focus_tree = {
 		available = {
 			OR = {
 				has_country_leader = {
-					name = "Ma Bufang"
+					character = XSM_Ma_Bufang
 					ruling_only = yes
 				}
 				has_country_leader = {
-					name = "Ma Buqing"
+					character = XSM_ma_buqing
 					ruling_only = yes
 				}
 			}
@@ -2252,11 +2265,11 @@ focus_tree = {
 		available = {
 			OR = {
 				has_country_leader = {
-					name = "Ma Bufang"
+					character = XSM_Ma_Bufang
 					ruling_only = yes
 				}
 				has_country_leader = {
-					name = "Ma Buqing"
+					character = XSM_ma_buqing
 					ruling_only = yes
 				}
 			}
@@ -2279,11 +2292,11 @@ focus_tree = {
 		available = {
 			OR = {
 				has_country_leader = {
-					name = "Ma Bufang"
+					character = XSM_Ma_Bufang
 					ruling_only = yes
 				}
 				has_country_leader = {
-					name = "Ma Buqing"
+					character = XSM_ma_buqing
 					ruling_only = yes
 				}
 			}
@@ -2306,11 +2319,11 @@ focus_tree = {
 		available = {
 			OR = {
 				has_country_leader = {
-					name = "Ma Bufang"
+					character = XSM_Ma_Bufang
 					ruling_only = yes
 				}
 				has_country_leader = {
-					name = "Ma Buqing"
+					character = XSM_ma_buqing
 					ruling_only = yes
 				}
 			}
@@ -2333,11 +2346,11 @@ focus_tree = {
 		available = {
 			OR = {
 				has_country_leader = {
-					name = "Ma Bufang"
+					character = XSM_Ma_Bufang
 					ruling_only = yes
 				}
 				has_country_leader = {
-					name = "Ma Buqing"
+					character = XSM_ma_buqing
 					ruling_only = yes
 				}
 			}
@@ -2360,11 +2373,11 @@ focus_tree = {
 		available = {
 			OR = {
 				has_country_leader = {
-					name = "Ma Bufang"
+					character = XSM_Ma_Bufang
 					ruling_only = yes
 				}
 				has_country_leader = {
-					name = "Ma Buqing"
+					character = XSM_ma_buqing
 					ruling_only = yes
 				}
 			}
@@ -2387,11 +2400,11 @@ focus_tree = {
 		available = {
 			OR = {
 				has_country_leader = {
-					name = "Ma Bufang"
+					character = XSM_Ma_Bufang
 					ruling_only = yes
 				}
 				has_country_leader = {
-					name = "Ma Buqing"
+					character = XSM_ma_buqing
 					ruling_only = yes
 				}
 			}
@@ -2414,11 +2427,11 @@ focus_tree = {
 		available = {
 			OR = {
 				has_country_leader = {
-					name = "Ma Bufang"
+					character = XSM_Ma_Bufang
 					ruling_only = yes
 				}
 				has_country_leader = {
-					name = "Ma Buqing"
+					character = XSM_ma_buqing
 					ruling_only = yes
 				}
 			}
@@ -2441,11 +2454,11 @@ focus_tree = {
 		available = {
 			OR = {
 				has_country_leader = {
-					name = "Ma Bufang"
+					character = XSM_Ma_Bufang
 					ruling_only = yes
 				}
 				has_country_leader = {
-					name = "Ma Buqing"
+					character = XSM_ma_buqing
 					ruling_only = yes
 				}
 			}
@@ -2471,11 +2484,11 @@ focus_tree = {
 		available = {
 			OR = {
 				has_country_leader = {
-					name = "Ma Bufang"
+					character = XSM_Ma_Bufang
 					ruling_only = yes
 				}
 				has_country_leader = {
-					name = "Ma Buqing"
+					character = XSM_ma_buqing
 					ruling_only = yes
 				}
 			}
@@ -2498,11 +2511,11 @@ focus_tree = {
 		available = {
 			OR = {
 				has_country_leader = {
-					name = "Ma Bufang"
+					character = XSM_Ma_Bufang
 					ruling_only = yes
 				}
 				has_country_leader = {
-					name = "Ma Buqing"
+					character = XSM_ma_buqing
 					ruling_only = yes
 				}
 			}
@@ -2525,11 +2538,11 @@ focus_tree = {
 		available = {
 			OR = {
 				has_country_leader = {
-					name = "Ma Bufang"
+					character = XSM_Ma_Bufang
 					ruling_only = yes
 				}
 				has_country_leader = {
-					name = "Ma Buqing"
+					character = XSM_ma_buqing
 					ruling_only = yes
 				}
 			}
@@ -2552,11 +2565,11 @@ focus_tree = {
 		available = {
 			OR = {
 				has_country_leader = {
-					name = "Ma Bufang"
+					character = XSM_Ma_Bufang
 					ruling_only = yes
 				}
 				has_country_leader = {
-					name = "Ma Buqing"
+					character = XSM_ma_buqing
 					ruling_only = yes
 				}
 			}
@@ -2585,11 +2598,11 @@ focus_tree = {
 		available = {
 			OR = {
 				has_country_leader = {
-					name = "Ma Bufang"
+					character = XSM_Ma_Bufang
 					ruling_only = yes
 				}
 				has_country_leader = {
-					name = "Ma Buqing"
+					character = XSM_ma_buqing
 					ruling_only = yes
 				}
 			}
@@ -2612,11 +2625,11 @@ focus_tree = {
 		available = {
 			OR = {
 				has_country_leader = {
-					name = "Ma Bufang"
+					character = XSM_Ma_Bufang
 					ruling_only = yes
 				}
 				has_country_leader = {
-					name = "Ma Buqing"
+					character = XSM_ma_buqing
 					ruling_only = yes
 				}
 			}
@@ -2640,11 +2653,11 @@ focus_tree = {
 		available = {
 			OR = {
 				has_country_leader = {
-					name = "Ma Bufang"
+					character = XSM_Ma_Bufang
 					ruling_only = yes
 				}
 				has_country_leader = {
-					name = "Ma Buqing"
+					character = XSM_ma_buqing
 					ruling_only = yes
 				}
 			}
@@ -2667,11 +2680,11 @@ focus_tree = {
 		available = {
 			OR = {
 				has_country_leader = {
-					name = "Ma Bufang"
+					character = XSM_Ma_Bufang
 					ruling_only = yes
 				}
 				has_country_leader = {
-					name = "Ma Buqing"
+					character = XSM_ma_buqing
 					ruling_only = yes
 				}
 			}
@@ -2694,11 +2707,11 @@ focus_tree = {
 		available = {
 			OR = {
 				has_country_leader = {
-					name = "Ma Bufang"
+					character = XSM_Ma_Bufang
 					ruling_only = yes
 				}
 				has_country_leader = {
-					name = "Ma Buqing"
+					character = XSM_ma_buqing
 					ruling_only = yes
 				}
 			}
@@ -2721,11 +2734,11 @@ focus_tree = {
 		available = {
 			OR = {
 				has_country_leader = {
-					name = "Ma Bufang"
+					character = XSM_Ma_Bufang
 					ruling_only = yes
 				}
 				has_country_leader = {
-					name = "Ma Buqing"
+					character = XSM_ma_buqing
 					ruling_only = yes
 				}
 			}
@@ -2748,11 +2761,11 @@ focus_tree = {
 		available = {
 			OR = {
 				has_country_leader = {
-					name = "Ma Bufang"
+					character = XSM_Ma_Bufang
 					ruling_only = yes
 				}
 				has_country_leader = {
-					name = "Ma Buqing"
+					character = XSM_ma_buqing
 					ruling_only = yes
 				}
 			}
@@ -2775,11 +2788,11 @@ focus_tree = {
 		available = {
 			OR = {
 				has_country_leader = {
-					name = "Ma Bufang"
+					character = XSM_Ma_Bufang
 					ruling_only = yes
 				}
 				has_country_leader = {
-					name = "Ma Buqing"
+					character = XSM_ma_buqing
 					ruling_only = yes
 				}
 			}
