@@ -1,5 +1,0 @@
-BRM_hangry_dyn = {
-	enable = { controller = { original_tag = BRM } }
-	icon = GFX_state_elephants_modifier
-	communism_drift = 0.05
-}

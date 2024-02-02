@@ -1,6 +1,0 @@
-#Китай ебаный
-
-GAN = "countries/_asian.txt"
-NWB = "countries/_asian.txt"
-NWE = "countries/_asian.txt"
-NWA = "countries/_asian.txt"
