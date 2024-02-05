@@ -660,7 +660,7 @@ country_event = {
 	}
 }
 #Марш китайских мусульман
-country_event = { 
+country_event = {
 	id = xsm.25
 	title = xsm.25.t
 	desc = xsm.25.d
@@ -675,6 +675,159 @@ country_event = {
 			idea = XSM_idea_marsh
 			days = 180
 		}
+	}
+}
+#Открытие светской школы для девочек
+country_event = {
+	id = xsm.26
+	title = xsm.26.t
+	desc = xsm.26.d
+	picture = GFX_report_event_xsm_26
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event xsm.26" }
+
+	option = {
+		name = xsm.26.a
+		add_stability = 0.01
+		add_political_power = 15
+	}
+}
+#Открытие тибетской школы
+country_event = {
+	id = xsm.27
+	title = xsm.27.t
+	desc = xsm.27.d
+	picture = GFX_report_event_xsm_27
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event xsm.27" }
+
+	option = {
+		name = xsm.27.a
+		add_stability = 0.02
+		1166 = {
+			add_building_construction = {
+				type = hospital
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+}
+#Восстание тибетцев
+country_event = {
+	id = xsm.28
+	title = xsm.28.t
+	desc = xsm.28.d
+	picture = GFX_report_event_xsm_28
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event xsm.28" }
+
+	option = {
+		name = xsm.28.a
+		add_stability = -0.05
+		add_political_power = -25
+		604 = {
+			damage_building = {
+				type = infrastructure
+				damage = 5
+			}
+			damage_building = {
+				type = industrial_complex
+				damage = 5
+			}
+			damage_building = {
+				type = arms_factory
+				damage = 5
+			}
+		}
+		TIB = {
+			country_event = { id = xsm.29 }
+		}
+	}
+}
+#Восстание в Цинхае
+country_event = {
+	id = xsm.29
+	title = xsm.29.t
+	desc = xsm.29.d
+	picture = GFX_report_event_xsm_29
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event xsm.29" }
+
+	option = {
+		name = xsm.29.a
+		trigger = { has_equipment = { infantry_equipment > 300 } }
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = -300
+		}
+		unlock_decision_category_tooltip = XSM_tibet_cinhai_help_category
+		set_country_flag = cinhai_rebellion_contine_flag
+		XSM = {
+			country_event = { id = xsm.30 }
+		}
+	}
+	option = {
+		name = xsm.29.b
+		XSM = {
+			country_event = { id = xsm.31 }
+		}
+	}
+}
+#Разрастание восстания
+country_event = {
+	id = xsm.30
+	title = xsm.30.t
+	desc = xsm.30.d
+	picture = GFX_report_event_xsm_30
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event xsm.30" }
+
+	option = {
+		name = xsm.30.a
+		unlock_decision_category_tooltip = XSM_south_regions_rebellion_category
+		add_ideas = XSM_idea_south_regions_rebellion
+		set_temp_variable = { XSM_meha_rebelion_temp = 2 }
+		add_to_variable = { XSM_meha_rebelion_total = XSM_meha_rebelion_temp }
+		custom_effect_tooltip = XSM_meha_rebelion_tt
+		clamp_variable = { var = XSM_meha_rebelion_total min = 0 max = 6 }
+	}
+}
+#снос флага
+country_event = {
+	id = xsm.31
+	title = xsm.31.t
+	desc = xsm.31.d
+	picture = GFX_report_event_xsm_31
+	is_triggered_only = yes
+	hidden = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event xsm.31" }
+
+	option = {
+		name = xsm.31.a
+		clr_country_flag = suppression_company_complete_flag
+	}
+}
+
+#Пирожки Ма Буфана
+country_event = { 
+	id = xsm.37
+	title = xsm.37.t
+	desc = xsm.37.d
+	picture = GFX_report_event_xsm_37
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event xsm.37" }
+
+	option = {
+		name = xsm.37.a
+		add_ideas = XSM_idea_soldiers_cruelty
 	}
 }
 #Напряжённый разговор между братьями

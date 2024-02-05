@@ -29,9 +29,21 @@ focus_tree = {
 		cost = 10
 		x = 31
 		y = 6
+		available = {
+			OR = {
+				has_country_leader = {
+					character = XSM_Ma_Bufang
+					ruling_only = yes
+				}
+				has_country_leader = {
+					character = XSM_ma_buqing
+					ruling_only = yes
+				}
+			}
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_pies"
-			
+			country_event = { id = xsm.37 }
 		}
 	}
 	focus = {
@@ -43,10 +55,26 @@ focus_tree = {
 		}
 		x = 0
 		y = 1
+		available = {
+			OR = {
+				has_country_leader = {
+					character = XSM_Ma_Bufang
+					ruling_only = yes
+				}
+				has_country_leader = {
+					character = XSM_ma_buqing
+					ruling_only = yes
+				}
+			}
+		}
 		relative_position_id = XSM_pies
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_codex_for_soldiers"
-			
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = cat_war_of_attrition
+			}
 		}
 	}
 	focus = {
@@ -243,12 +271,17 @@ focus_tree = {
 		prerequisite = {
 			focus = XSM_Ma_bufang
 		}
+		available = {
+			1166 = { is_controlled_by = ROOT }
+			604 = { is_controlled_by = ROOT }
+		}
 		x = 7
 		y = 1
 		relative_position_id = XSM_Ma_bufang
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_licvidate_slavery"
-			
+			604 = { remove_dynamic_modifier = { modifier = XSM_slavery_dyn } }
+			1166 = { remove_dynamic_modifier = { modifier = XSM_slavery_dyn } }
 		}
 	}
 	focus = {
@@ -1779,7 +1812,7 @@ focus_tree = {
 		relative_position_id = XSM_Ma_bufang
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_forest_rise"
-			
+			unlock_decision_category_tooltip = XSM_best_nature_category
 		}
 	}
 	focus = {
@@ -1809,7 +1842,7 @@ focus_tree = {
 		relative_position_id = XSM_forest_rise
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_irragacional_system"
-			
+			custom_effect_tooltip = XSM_tt_irreg
 		}
 	}
 	focus = {
@@ -1820,6 +1853,9 @@ focus_tree = {
 			focus = XSM_irragacional_system
 		}
 		available = {
+			NOT = {
+				has_idea = XSM_idea_muslim_salafit
+			}
 			OR = {
 				has_country_leader = {
 					character = XSM_Ma_Bufang
@@ -1836,7 +1872,15 @@ focus_tree = {
 		relative_position_id = XSM_irragacional_system
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_ppl_group"
-			
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				category = construction_tech
+			}
+			add_timed_idea = {
+				idea = XSM_idea_education_groups
+				days = 1080
+			}
 		}
 	}
 	focus = {
@@ -1977,7 +2021,7 @@ focus_tree = {
 		relative_position_id = XSM_Ma_bufang
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_press_control"
-			
+			add_ideas = XSM_idea_censor_media
 		}
 	}
 	focus = {
@@ -2004,7 +2048,8 @@ focus_tree = {
 		relative_position_id = XSM_press_control
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_clear_sinin"
-			
+			add_stability = 0.15
+			add_political_power = 100
 		}
 	}
 	focus = {
@@ -2015,6 +2060,9 @@ focus_tree = {
 			focus = XSM_clear_sinin
 		}
 		available = {
+			NOT = {
+				has_idea = XSM_idea_muslim_salafit
+			}
 			OR = {
 				has_country_leader = {
 					character = XSM_Ma_Bufang
@@ -2031,7 +2079,7 @@ focus_tree = {
 		relative_position_id = XSM_clear_sinin
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_build_school"
-			
+			add_research_slot = 1
 		}
 	}
 	focus = {
@@ -2058,7 +2106,7 @@ focus_tree = {
 		relative_position_id = XSM_Ma_bufang
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_expedition_golog"
-			
+			unlock_decision_category_tooltip = XSM_expedition_golog_category
 		}
 	}
 	focus = {
@@ -2069,6 +2117,8 @@ focus_tree = {
 			focus = XSM_licvidate_slavery
 		}
 		available = {
+			1166 = { is_controlled_by = ROOT }
+			604 = { is_controlled_by = ROOT }
 			OR = {
 				has_country_leader = {
 					character = XSM_Ma_Bufang
@@ -2085,7 +2135,11 @@ focus_tree = {
 		relative_position_id = XSM_licvidate_slavery
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_tibet_chinese"
-			
+			add_state_core = 1166
+			add_state_core = 604
+			hidden_effect = {
+				country_event = { id = xsm.27 days = 1 }
+			}
 		}
 	}
 	focus = {
@@ -2096,6 +2150,8 @@ focus_tree = {
 			focus = XSM_licvidate_slavery
 		}
 		available = {
+			1166 = { is_controlled_by = ROOT }
+			604 = { is_controlled_by = ROOT }
 			OR = {
 				has_country_leader = {
 					character = XSM_Ma_Bufang
@@ -2111,7 +2167,28 @@ focus_tree = {
 		y = 3
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_up_tibet_nalog"
-			
+			add_stability = -0.05
+			604 = {
+				add_dynamic_modifier = {
+					modifier = XSM_tibet_taxes_dyn
+				}
+			}
+			1166 = {
+				add_dynamic_modifier = {
+					modifier = XSM_tibet_taxes_dyn
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						TIB = {
+							country_exists = yes
+							is_puppet = no
+						}
+					}
+					country_event = { id = xsm.28 days = 50 }
+				}
+			}
 		}
 	}
 	focus = {
@@ -2125,6 +2202,8 @@ focus_tree = {
 			focus = XSM_up_tibet_nalog
 		}
 		available = {
+			1166 = { is_controlled_by = ROOT }
+			604 = { is_controlled_by = ROOT }
 			OR = {
 				has_country_leader = {
 					character = XSM_Ma_Bufang
@@ -2141,7 +2220,33 @@ focus_tree = {
 		relative_position_id = XSM_tibet_chinese
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_tibet_in_army"
-			
+			add_stability = 0.05
+			add_ideas = colonial_legions
+			hidden_effect = {
+				if = {
+					limit = { NOT = { has_template = "Tibet's soldiers" } }
+					division_template = {
+						name = "Tibet's soldiers"
+						is_locked = yes
+						division_names_group = RAJ_INF_01
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+							infantry = { x = 0 y = 2 }
+							infantry = { x = 1 y = 0 }
+							infantry = { x = 1 y = 1 }
+							infantry = { x = 1 y = 2 }
+						}
+					}
+				}
+			}
+			capital_scope = {
+				create_unit = {
+					division = "division_template = \"Tibet's soldiers\" start_experience_factor = 1"
+					owner = ROOT
+					count = 1
+				}
+			}
 		}
 	}
 	focus = {
@@ -2171,7 +2276,7 @@ focus_tree = {
 		relative_position_id = XSM_ppl_group
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_create_company"
-			
+			add_ideas = XSM_idea_monopolization
 		}
 	}
 	focus = {
@@ -2252,7 +2357,22 @@ focus_tree = {
 		relative_position_id = XSM_create_company
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_bank"
-			
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	focus = {
@@ -2263,6 +2383,9 @@ focus_tree = {
 			focus = XSM_pies
 		}
 		available = {
+			XMS = {
+				has_war_with = JAP
+			}
 			OR = {
 				has_country_leader = {
 					character = XSM_Ma_Bufang
@@ -2279,7 +2402,10 @@ focus_tree = {
 		relative_position_id = XSM_pies
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_jihad_vs_JAP"
-			
+			swap_ideas = {
+				remove_idea = XSM_idea_soldiers_cruelty
+				add_idea = XSM_idea_soldiers_cruelty2
+			}
 		}
 	}
 	focus = {
@@ -2306,7 +2432,10 @@ focus_tree = {
 		relative_position_id = XSM_pies
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_fight_with_commy"
-			
+			swap_ideas = {
+				remove_idea = XSM_idea_soldiers_cruelty4
+				add_idea = XSM_idea_soldiers_cruelty5
+			}
 		}
 	}
 	focus = {
@@ -2333,7 +2462,7 @@ focus_tree = {
 		relative_position_id = XSM_jihad_vs_JAP
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_elite_horse"
-			
+			add_ideas = XSM_idea_elite_cavalry
 		}
 	}
 	focus = {
@@ -2360,7 +2489,10 @@ focus_tree = {
 		relative_position_id = XSM_codex_for_soldiers
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_hight_train"
-			
+			swap_ideas = {
+				remove_idea = XSM_idea_soldiers_cruelty2
+				add_idea = XSM_idea_soldiers_cruelty3
+			}
 		}
 	}
 	focus = {
@@ -2371,6 +2503,7 @@ focus_tree = {
 			focus = XSM_codex_for_soldiers
 		}
 		available = {
+			date < 1941.01.18
 			OR = {
 				has_country_leader = {
 					character = XSM_Ma_Bufang
@@ -2441,7 +2574,11 @@ focus_tree = {
 		relative_position_id = XSM_elite_horse
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_wave_tactik"
-			
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = cat_war_of_attrition
+			}
 		}
 	}
 	focus = {
@@ -2452,6 +2589,7 @@ focus_tree = {
 			focus = XSM_hight_train
 		}
 		available = {
+			date < 1944.01.01
 			OR = {
 				has_country_leader = {
 					character = XSM_Ma_Bufang
@@ -2471,7 +2609,11 @@ focus_tree = {
 		relative_position_id = XSM_hight_train
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_modern_strategy"
-			
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
 		}
 	}
 	focus = {
@@ -2525,7 +2667,11 @@ focus_tree = {
 		relative_position_id = XSM_modern_strategy
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_motorize"
-			
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				category = motorized_equipment
+			}
 		}
 	}
 	focus = {
@@ -2552,7 +2698,11 @@ focus_tree = {
 		relative_position_id = XSM_modern_strategy
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_army_great"
-			
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
 		}
 	}
 	focus = {
@@ -2579,7 +2729,7 @@ focus_tree = {
 		relative_position_id = XSM_modern_strategy
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_repair_logistik"
-			
+			add_ideas = XSM_idea_new_logistik
 		}
 	}
 	focus = {
@@ -2612,7 +2762,10 @@ focus_tree = {
 		relative_position_id = XSM_motorize
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_rise_revolutionary"
-			
+			swap_ideas = {
+				remove_idea = XSM_idea_soldiers_cruelty3
+				add_idea = XSM_idea_soldiers_cruelty4
+			}
 		}
 	}
 	focus = {
@@ -2639,7 +2792,10 @@ focus_tree = {
 		relative_position_id = XSM_Ma_bufang
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_industrial"
-			
+			add_timed_idea = {
+				idea = XSM_idea_industrial_project
+				days = 1800
+			}
 		}
 	}
 
@@ -2651,6 +2807,10 @@ focus_tree = {
 			focus = XSM_industrial
 		}
 		available = {
+			has_country_flag = haisi_irreg_flag
+			has_country_flag = Jiuquan_irreg_flag
+			has_country_flag = amdo_irreg_flag
+			has_country_flag = uishu_irreg_flag
 			OR = {
 				has_country_leader = {
 					character = XSM_Ma_Bufang
@@ -2667,7 +2827,7 @@ focus_tree = {
 		relative_position_id = XSM_industrial
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_agrarian_projects"
-			
+			remove_ideas = XSM_idea_agrar_problem
 		}
 	}
 	focus = {
@@ -2678,6 +2838,9 @@ focus_tree = {
 			focus = XSM_industrial
 		}
 		available = {
+			NOT = {
+				has_idea = XSM_idea_muslim_salafit
+			}
 			OR = {
 				has_country_leader = {
 					character = XSM_Ma_Bufang
@@ -2694,7 +2857,10 @@ focus_tree = {
 		relative_position_id = XSM_industrial
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_education_projects"
-			
+			add_research_slot = 1
+			hidden_effect = {
+				country_event = { id = xsm.26 days = 50 }
+			}
 		}
 	}
 	focus = {
@@ -2705,6 +2871,7 @@ focus_tree = {
 			focus = XSM_agrarian_projects
 		}
 		available = {
+			754 = { is_owned_by = ROOT }
 			OR = {
 				has_country_leader = {
 					character = XSM_Ma_Bufang
@@ -2721,7 +2888,19 @@ focus_tree = {
 		relative_position_id = XSM_agrarian_projects
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_water_sinin"
-			
+			754 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	focus = {
@@ -2748,7 +2927,7 @@ focus_tree = {
 		relative_position_id = XSM_education_projects
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_money_for_scholar"
-			
+			add_ideas = XSM_idea_education_project
 		}
 	}
 	focus = {
@@ -2775,7 +2954,27 @@ focus_tree = {
 		relative_position_id = XSM_industrial
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_sanitar_project"
-			
+			random_core_state = {
+				add_building_construction = {
+					type = hospital
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_core_state = {
+				add_building_construction = {
+					type = hospital
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_core_state = {
+				add_building_construction = {
+					type = hospital
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	focus = {
@@ -2802,7 +3001,10 @@ focus_tree = {
 		relative_position_id = XSM_sanitar_project
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_medical_project"
-			
+			add_timed_idea = {
+				idea = XSM_idea_medical_project
+				days = 720
+			}
 		}
 	}
 }
