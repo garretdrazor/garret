@@ -3241,7 +3241,7 @@ continuous_focus_position = { x = 4500 y = 700 }
 		}
 		
 		select_effect = {
-			country_event = { id = south_afrika.98 }
+			country_event = { id = south_afrika.99 }
 		}
 		completion_reward = {
 			custom_effect_tooltip = SAF_tooltip_41

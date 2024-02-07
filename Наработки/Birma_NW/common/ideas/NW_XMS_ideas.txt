@@ -11,6 +11,17 @@ ideas = {
 				promote_cost_factor = 0.1
 			}
 		}
+		XSM_idea_gubernator_conflict_2 = {
+			removal_cost = -1
+			allowed = { always = no }
+			picture = gubernator_conflict
+			modifier = {
+				command_power_gain_mult = -0.5
+				political_power_factor = -0.2
+				political_advisor_cost_factor = 0.25
+				promote_cost_factor = 0.25
+			}
+		}
 		XSM_idea_muslim_salafit = {
 			removal_cost = -1
 			allowed = { always = no }
@@ -250,7 +261,9 @@ ideas = {
 			modifier = {
 				army_attack_factor = 0.05
 				army_defence_factor = 0.05
-				JAP = { attack_bonus_against = 0.1 defence_bonus_against = 0.1 }
+				surrender_limit = 0.1
+				out_of_supply_factor = -0.25
+				no_supply_grace = 24
 			}
 		}
 		XSM_idea_soldiers_cruelty3 = {
@@ -260,40 +273,37 @@ ideas = {
 			modifier = {
 				army_attack_factor = 0.05
 				army_defence_factor = 0.05
-				JAP = { attack_bonus_against = 0.1 defence_bonus_against = 0.1 }
-				surrender_limit = 0.1
-				out_of_supply_factor = -0.25
-				no_supply_grace = 24
-			}
-		}
-		XSM_idea_soldiers_cruelty4 = {
-			removal_cost = -1
-			allowed = { always = no }
-			picture = bad_economy
-			modifier = {
-				army_attack_factor = 0.05
-				army_defence_factor = 0.05
-				JAP = { attack_bonus_against = 0.1 defence_bonus_against = 0.1 }
 				surrender_limit = 0.1
 				out_of_supply_factor = -0.25
 				no_supply_grace = 24
 				war_support_weekly = 0.05
 			}
 		}
-		XSM_idea_soldiers_cruelty5 = {
+		XSM_idea_jihad_vs_jap = {
 			removal_cost = -1
 			allowed = { always = no }
 			picture = bad_economy
 			modifier = {
-				army_attack_factor = 0.05
-				army_defence_factor = 0.05
-				JAP = { attack_bonus_against = 0.1 defence_bonus_against = 0.1 }
-				surrender_limit = 0.1
-				out_of_supply_factor = -0.25
-				no_supply_grace = 24
-				war_support_weekly = 0.05
-				PRC = { attack_bonus_against = 0.1 }
-				FSR = { attack_bonus_against = 0.1 }
+				targeted_modifier = {
+					tag = JAP
+					attack_bonus_against = 0.1
+					defense_bonus_against = 0.1
+				}
+			}
+		}
+		XSM_idea_jihad_vs_commy = {
+			removal_cost = -1
+			allowed = { always = no }
+			picture = bad_economy
+			modifier = {
+				targeted_modifier = {
+					tag = PRC
+					attack_bonus_against = 0.1
+				}
+				targeted_modifier = {
+					tag = FSR
+					attack_bonus_against = 0.1
+				}
 			}
 		}
 		XSM_idea_elite_cavalry = {

@@ -1545,14 +1545,36 @@ XSM_south_regions_rebellion_category = {
 		
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision XSM_suppression_company"
-			set_country_flag = suppression_company_complete_flag
-			set_temp_variable = { XSM_meha_rebelion_temp = 1 }
-			subtract_from_variable = { XSM_meha_rebelion_total = XSM_meha_rebelion_temp }
-			custom_effect_tooltip = XSM_meha_rebelion_n_tt
-			clamp_variable = { var = XSM_meha_rebelion_total min = 0 max = 6 }
-			hidden_effect = {
-				country_event = { id = xsm.31 days = 30 }
+			if = {
+				limit = {
+					has_country_flag = easy_reberlion_flag
+				}
+				remove_ideas = XSM_idea_south_regions_rebellion
+				clr_country_flag = easy_reberlion_flag
+				add_manpower = -300
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -50
+				}
 			}
+			else_if = {
+				limit = {
+					NOT = { has_country_flag = easy_reberlion_flag }
+				}
+				set_country_flag = suppression_company_complete_flag
+				set_temp_variable = { XSM_meha_rebelion_temp = 1 }
+				subtract_from_variable = { XSM_meha_rebelion_total = XSM_meha_rebelion_temp }
+				custom_effect_tooltip = XSM_meha_rebelion_n_tt
+				clamp_variable = { var = XSM_meha_rebelion_total min = 0 max = 6 }
+				hidden_effect = {
+					country_event = { id = xsm.31 days = 30 }
+				}
+				add_manpower = -300
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -50
+				}
+			}			
 		}
 
 		ai_will_do = {
@@ -1605,6 +1627,253 @@ XSM_south_regions_rebellion_category = {
 
 		ai_will_do = {
 			factor = 10
+		}
+	}
+}
+
+XSM_tibet_cinhai_help_category = {
+	XSM_water_for_rebellion = {
+		icon = decision_eng_blackshirt_march
+		
+		available = {
+			XSM_meha_rebelion_total > 3
+			XSM = { has_idea = XSM_idea_south_regions_rebellion }
+		}
+		
+		days_remove = 30
+		
+		cost = 15
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision XSM_water_for_rebellion"
+			set_temp_variable = { XSM_meha_rebelion_temp = 1 }
+			add_to_variable = { XSM_meha_rebelion_total = XSM_meha_rebelion_temp }
+			custom_effect_tooltip = XSM_meha_rebelion_n_tt
+			clamp_variable = { var = XSM_meha_rebelion_total min = 0 max = 6 }
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	XSM_rifles_for_rebellion = {
+		icon = decision_eng_blackshirt_march
+		
+		available = {
+			has_equipment = { infantry_equipment > 150 }
+			XSM = { has_idea = XSM_idea_south_regions_rebellion }
+		}
+		
+		days_remove = 50
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision XSM_rifles_for_rebellion"
+			set_temp_variable = { XSM_meha_rebelion_temp = 1 }
+			add_to_variable = { XSM_meha_rebelion_total = XSM_meha_rebelion_temp }
+			custom_effect_tooltip = XSM_meha_rebelion_n_tt
+			clamp_variable = { var = XSM_meha_rebelion_total min = 0 max = 6 }
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -150
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	XSM_volunters_for_rebellion = {
+		icon = decision_eng_blackshirt_march
+		
+		available = {
+			has_manpower > 300
+			XSM = { has_idea = XSM_idea_south_regions_rebellion }
+		}
+		
+		days_remove = 70
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision XSM_volunters_for_rebellion"
+			set_temp_variable = { XSM_meha_rebelion_temp = 1 }
+			add_to_variable = { XSM_meha_rebelion_total = XSM_meha_rebelion_temp }
+			custom_effect_tooltip = XSM_meha_rebelion_n_tt
+			clamp_variable = { var = XSM_meha_rebelion_total min = 0 max = 6 }
+			add_manpower = -300
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	XSM_agitation_for_rebellion = {
+		icon = decision_eng_blackshirt_march
+		
+		available = {
+			XSM_meha_rebelion_total > 3
+			XSM = { has_idea = XSM_idea_south_regions_rebellion }
+		}
+		
+		days_remove = 50
+		
+		cost = 15
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision XSM_agitation_for_rebellion"
+			set_temp_variable = { XSM_meha_rebelion_temp = 1 }
+			add_to_variable = { XSM_meha_rebelion_total = XSM_meha_rebelion_temp }
+			custom_effect_tooltip = XSM_meha_rebelion_n_tt
+			clamp_variable = { var = XSM_meha_rebelion_total min = 0 max = 6 }
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+}
+
+XSM_pekin_armory_category = {
+	XSM_buy_japanese_rifles = {
+		icon = decision_eng_blackshirt_march
+		
+		available = {
+			XSM = {
+				NOT = {
+					has_war_with = JAP
+				}
+			}
+			608 = {
+				controller = { 
+					ROOT = {
+						NOT = {
+							has_war_with = JAP
+						}
+					}
+				}
+			}
+		}
+		
+		days_re_enable = 90
+		
+		cost = 100
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision XSM_buy_japanese_rifles"
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+				producer = JAP
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	XSM_buy_japanese_artillery = {
+		icon = decision_eng_blackshirt_march
+		
+		available = {
+			XSM = {
+				NOT = {
+					has_war_with = JAP
+				}
+			}
+			608 = {
+				controller = { 
+					ROOT = {
+						NOT = {
+							has_war_with = JAP
+						}
+					}
+				}
+			}
+		}
+		
+		days_re_enable = 90
+		
+		cost = 100
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision XSM_buy_japanese_artillery"
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 100
+				producer = JAP
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	XSM_buy_japanese_equipment = {
+		icon = decision_eng_blackshirt_march
+		
+		available = {
+			XSM = {
+				NOT = {
+					has_war_with = JAP
+				}
+			}
+			608 = {
+				controller = { 
+					ROOT = {
+						NOT = {
+							has_war_with = JAP
+						}
+					}
+				}
+			}
+		}
+		
+		days_re_enable = 90
+		
+		cost = 100
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): remove decision XSM_buy_japanese_equipment"
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 500
+				producer = JAP
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+}
+
+XSM_bro_fight_category = {
+	XSM_competition_success_mission = {
+		allowed = {
+			tag = XSM
+		}
+		available = {
+			NOT = {
+				has_country_flag = brother_war_flag
+			}
+		}
+		activation = {
+			has_country_flag = brother_war_flag
+		}
+		is_good = yes
+		days_mission_timeout = 700
+		icon = GFX_decision_hearth_salafir
+		timeout_effect = {
+			if = {
+				limit = {
+					
+				}
+				country_event = { id = xsm.39 }
+			}
+			else_if = {
+				limit= {
+					
+				}
+				country_event = { id = xsm.40 }
+			}
 		}
 	}
 }

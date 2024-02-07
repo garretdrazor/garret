@@ -291,12 +291,38 @@ focus_tree = {
 		prerequisite = {
 			focus = XSM_Ma_bufang
 		}
+		available = {
+			OR = {
+				has_country_leader = {
+					character = XSM_Ma_Bufang
+					ruling_only = yes
+				}
+				has_country_leader = {
+					character = XSM_ma_buqing
+					ruling_only = yes
+				}
+			}
+			XSM = {
+				NOT = {
+					has_war_with = JAP
+				}
+			}
+			608 = {
+				controller = { 
+					ROOT = {
+						NOT = {
+							has_war_with = JAP
+						}
+					}
+				}
+			}
+		}
 		x = 9
 		y = 1
 		relative_position_id = XSM_Ma_bufang
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_armory_from_pekyn"
-			
+			unlock_decision_category_tooltip = XSM_south_regions_rebellion_category
 		}
 	}
 	focus = {
@@ -888,6 +914,13 @@ focus_tree = {
 		relative_position_id = XSM_bulding_work
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_central_control"
+			custom_effect_tooltip = slot_of_political_minister_unlock_xsm_effect_tt
+			hidden_effect = {
+				set_country_flag = generic_political_advisor_blocked_1_political_advisor_flag
+				set_country_flag = generic_political_advisor_blocked_2_political_advisor_flag
+				deactivate_generic_political_advisor_blocked = yes
+				deactivate_generic_political_advisor_blocked = yes
+			}
 		}
 	}
 	focus = {
@@ -2402,10 +2435,7 @@ focus_tree = {
 		relative_position_id = XSM_pies
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_jihad_vs_JAP"
-			swap_ideas = {
-				remove_idea = XSM_idea_soldiers_cruelty
-				add_idea = XSM_idea_soldiers_cruelty2
-			}
+			add_ideas = XSM_idea_jihad_vs_jap
 		}
 	}
 	focus = {
@@ -2432,10 +2462,7 @@ focus_tree = {
 		relative_position_id = XSM_pies
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_fight_with_commy"
-			swap_ideas = {
-				remove_idea = XSM_idea_soldiers_cruelty4
-				add_idea = XSM_idea_soldiers_cruelty5
-			}
+			add_ideas = XSM_idea_jihad_vs_commy
 		}
 	}
 	focus = {
@@ -2490,8 +2517,8 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_hight_train"
 			swap_ideas = {
-				remove_idea = XSM_idea_soldiers_cruelty2
-				add_idea = XSM_idea_soldiers_cruelty3
+				remove_idea = XSM_idea_soldiers_cruelty1
+				add_idea = XSM_idea_soldiers_cruelty2
 			}
 		}
 	}
@@ -2520,7 +2547,15 @@ focus_tree = {
 		relative_position_id = XSM_codex_for_soldiers
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_field_for_sun"
-			
+			add_corps_commander_role = {
+				Character = XSM_Ma_Jiyuan
+				traits = { politically_connected }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
 		}
 	}
 	focus = {
@@ -2547,7 +2582,53 @@ focus_tree = {
 		relative_position_id = XSM_fight_with_commy
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_mobilize_militia"
-			
+			hidden_effect = {
+				if = {
+					limit = { NOT = { has_template = "Ma militia" } }
+					division_template = {
+						name = "Tibet's soldiers"
+						is_locked = yes
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+							infantry = { x = 1 y = 0 }
+							infantry = { x = 1 y = 1 }
+						}
+					}
+				}
+			}
+			capital_scope = {
+				create_unit = {
+					division = "division_template = \"Ma militia\" start_experience_factor = 1"
+					owner = ROOT
+					count = 1
+				}
+				create_unit = {
+					division = "division_template = \"Ma militia\" start_experience_factor = 1"
+					owner = ROOT
+					count = 1
+				}
+				create_unit = {
+					division = "division_template = \"Ma militia\" start_experience_factor = 1"
+					owner = ROOT
+					count = 1
+				}
+				create_unit = {
+					division = "division_template = \"Ma militia\" start_experience_factor = 1"
+					owner = ROOT
+					count = 1
+				}
+				create_unit = {
+					division = "division_template = \"Ma militia\" start_experience_factor = 1"
+					owner = ROOT
+					count = 1
+				}
+				create_unit = {
+					division = "division_template = \"Ma militia\" start_experience_factor = 1"
+					owner = ROOT
+					count = 1
+				}
+			}
 		}
 	}
 	focus = {
@@ -2609,6 +2690,9 @@ focus_tree = {
 		relative_position_id = XSM_hight_train
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_modern_strategy"
+			add_field_marshal_role = {
+				character = XSM_Ma_Jiyuan
+			}
 			add_doctrine_cost_reduction = {
 				cost_reduction = 0.5
 				uses = 1
@@ -2640,7 +2724,11 @@ focus_tree = {
 		relative_position_id = XSM_mobilize_militia
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_crowd_tactik"
-			
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
 		}
 	}
 	focus = {
@@ -2763,8 +2851,8 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus XSM_rise_revolutionary"
 			swap_ideas = {
-				remove_idea = XSM_idea_soldiers_cruelty3
-				add_idea = XSM_idea_soldiers_cruelty4
+				remove_idea = XSM_idea_soldiers_cruelty2
+				add_idea = XSM_idea_soldiers_cruelty3
 			}
 		}
 	}

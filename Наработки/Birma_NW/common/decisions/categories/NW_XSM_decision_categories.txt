@@ -102,14 +102,38 @@ XSM_south_regions_rebellion_category = {
 	}
 }
 
-XSM_brother_war_category = {
+XSM_pekin_armory_category = {
 	icon = generic_formable_nations
 	priority = 1500
 	allowed = {
 		original_tag = XSM
-		has_completed_focus = XSM_press_separate
+		has_completed_focus = XSM_armory_from_pekyn
 	}
 	visible = {
-		NOT = { has_war_with = CHI }
+		XSM = {
+			NOT = {
+				has_war_with = JAP
+			}
+		}
+		608 = {
+			controller = { 
+				ROOT = {
+					NOT = {
+						has_war_with = JAP
+					}
+				}
+			}
+		}
+	}
+}
+
+XSM_bro_fight_category = {
+	icon = generic_formable_nations
+	priority = 1500
+	allowed = {
+		original_tag = XSM
+	}
+	visible = {
+		has_country_flag = brother_war_flag
 	}
 }
