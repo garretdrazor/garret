@@ -48,7 +48,7 @@ focus_tree = {
 	}
 	focus = {
 		id = XSM_codex_for_soldiers
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_soldiers_hadzhar
 		cost = 10
 		prerequisite = {
 			focus = XSM_pies
@@ -286,7 +286,7 @@ focus_tree = {
 	}
 	focus = {
 		id = XSM_armory_from_pekyn
-		icon = GFX_z_goal_Armored_control
+		icon = GFX_z_goal_buy_japanese_rifles
 		cost = 10
 		prerequisite = {
 			focus = XSM_Ma_bufang
@@ -550,7 +550,7 @@ focus_tree = {
 	}
 	focus = {
 		id = XSM_create_commi
-		icon = GFX_z_goal_red_army
+		icon = GFX_z_goal_unification_of_communist_cells
 		cost = 10
 		prerequisite = {
 			focus = XSM_joining_SZPNO
@@ -925,7 +925,7 @@ focus_tree = {
 	}
 	focus = {
 		id = XSM_change_tibet_opinion
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_expansion_tibet
 		cost = 10
 		prerequisite = {
 			focus = XSM_central_control
@@ -995,7 +995,7 @@ focus_tree = {
 	}
 	focus = {
 		id = XSM_low_control_journalists
-		icon = GFX_z_goal_free_papers
+		icon = GFX_z_goal_freedom_of_the_press
 		cost = 10
 		prerequisite = {
 			focus = XSM_change_tibet_opinion
@@ -1180,7 +1180,7 @@ focus_tree = {
 	}
 	focus = {
 		id = XSM_commy_strategy
-		icon = GFX_z_goal_generic_communists_soldiers
+		icon = GFX_z_goal_transform_partisan_detachments
 		cost = 10
 		prerequisite = {
 			focus = XSM_military_and_civilian
@@ -1880,7 +1880,7 @@ focus_tree = {
 	}
 	focus = {
 		id = XSM_ppl_group
-		icon = GFX_goal_tfv_generic_tech_sharing
+		icon = GFX_z_goal_three_language_education
 		cost = 10
 		prerequisite = {
 			focus = XSM_irragacional_system
@@ -2087,7 +2087,7 @@ focus_tree = {
 	}
 	focus = {
 		id = XSM_build_school
-		icon = GFX_z_goal_school_neutral
+		icon = GFX_z_goal_Opening_of_the_school_of_Princes
 		cost = 10
 		prerequisite = {
 			focus = XSM_clear_sinin
@@ -2144,7 +2144,7 @@ focus_tree = {
 	}
 	focus = {
 		id = XSM_tibet_chinese
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_centralize_power_of_tibet
 		cost = 10
 		prerequisite = {
 			focus = XSM_licvidate_slavery
@@ -2177,7 +2177,7 @@ focus_tree = {
 	}
 	focus = {
 		id = XSM_up_tibet_nalog
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_money_for_tibet
 		cost = 10
 		prerequisite = {
 			focus = XSM_licvidate_slavery
@@ -2226,7 +2226,7 @@ focus_tree = {
 	}
 	focus = {
 		id = XSM_tibet_in_army
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_tibet_army
 		cost = 10
 		prerequisite = {
 			focus = XSM_tibet_chinese
@@ -2410,7 +2410,7 @@ focus_tree = {
 	}
 	focus = {
 		id = XSM_jihad_vs_JAP
-		icon = GFX_goal_unknown
+		icon = GFX_z_goal_holy_jihad
 		cost = 10
 		prerequisite = {
 			focus = XSM_pies
@@ -2440,7 +2440,7 @@ focus_tree = {
 	}
 	focus = {
 		id = XSM_fight_with_commy
-		icon = GFX_z_goal_broken_red_star
+		icon = GFX_z_goal_dissolve_communist_party
 		cost = 10
 		prerequisite = {
 			focus = XSM_pies
@@ -2920,7 +2920,7 @@ focus_tree = {
 	}
 	focus = {
 		id = XSM_education_projects
-		icon = GFX_goal_generic_scientific_exchange
+		icon = GFX_z_goal_new_educational_policy
 		cost = 10
 		prerequisite = {
 			focus = XSM_industrial
