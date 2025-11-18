@@ -1,0 +1,80 @@
+# befriend
+# alliance
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+# alliance
+# contain
+# area_priority
+
+
+IRQ_highway_to_the_291 = { # capital
+	allowed = {
+		original_tag = IRQ
+	}
+	enable = {
+		focus_progress = { focus = IRQ_hold_race_competition progress > 0 }
+		291 = {
+			is_capital = yes
+			is_controlled_by = ROOT
+			infrastructure < 10
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = build_building
+		id = infrastructure
+		target = 291
+		value = 10
+	}	
+}
+
+IRQ_time_for_arabs_act_on_their_own_strategy = {
+	allowed = {
+		NOT = { tag = IRQ }
+		is_historical_focus_on = no
+	}
+	enable = {
+		NOT = { capital_scope = { is_on_continent = middle_east } }
+		IRQ = {
+			is_faction_leader = yes
+			has_completed_focus = IRQ_time_for_arabs_act_on_their_own
+		}
+	}
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = alliance
+		id = "IRQ"
+		value = -6000
+	}
+}
+
+IRQ_time_for_arabs_act_on_their_own_strategy = {
+	allowed = {
+		original_tag = IRQ
+	}
+	enable = {
+		NOT = { 
+		    OR = {
+		        has_idea = IRQ_anglo_iraqi_treaty_new
+		        has_idea = IRQ_anglo_iraqi_treaty_new_2
+			    has_idea = IRQ_anglo_iraqi_treaty_new_3
+			    has_idea = IRQ_anglo_iraqi_treaty_new_4
+		    }
+		}
+	}
+	abort_when_not_enabled = yes
+	
+	ai_strategy = { type = diplo_action_desire id = ENG target = offer_military_access value = -2000 }
+	ai_strategy = { type = diplo_action_acceptance id = ENG target = military_access value = -2000 }
+}

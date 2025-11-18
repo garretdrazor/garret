@@ -1,0 +1,23 @@
+ideas = {
+
+	country = {
+		ENG_investment_in_iraq = {
+			allowed = {
+				always = yes
+			}
+			available = {
+				has_capitulated = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = chi_war_of_resistance3
+			modifier = {
+                consumer_goods_factor = 0.02
+			}
+		}
+    }
+}
+
+

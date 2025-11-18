@@ -1,0 +1,62 @@
+IRQ_anglo_iraqi_relationship = {
+	allowed = {
+		OR = {
+		    original_tag = IRQ
+		    original_tag = ENG
+		}
+		NOT = {
+			has_global_flag = THE_MOTHER_OF_ORDER_FLAG
+			has_global_flag = WORLD_OF_SPLIT_FLAG
+		}
+	}
+	visible = {
+	    IRQ = {
+            OR = {
+		        has_idea = IRQ_anglo_iraqi_treaty_new
+		        has_idea = IRQ_anglo_iraqi_treaty_new_2
+			    has_idea = IRQ_anglo_iraqi_treaty_new_3
+			    has_idea = IRQ_anglo_iraqi_treaty_new_4
+			}
+		}
+	}
+	visible_when_empty = yes
+	priority = 100
+}
+IRQ_shiite_uprise = {
+	allowed = {
+		original_tag = IRQ
+		NOT = {
+			has_global_flag = THE_MOTHER_OF_ORDER_FLAG
+			has_global_flag = WORLD_OF_SPLIT_FLAG
+		}
+	}
+	visible = {
+		has_idea = IRQ_shia_uprisings
+	}
+	priority = 100
+}
+IRQ_support_quwait = {
+	allowed = {
+		original_tag = IRQ
+		IRQ = {
+		    has_completed_focus = IRQ_support_kuwait_irredentism
+		}
+		NOT = {
+			has_global_flag = THE_MOTHER_OF_ORDER_FLAG
+			has_global_flag = WORLD_OF_SPLIT_FLAG
+		}
+	}
+	visible = {
+		656 = {
+		    is_owned_by = ENG
+		}
+		IRQ = {
+		    is_subject = no
+			IRQ_ghazi_i = {
+		        is_country_leader = yes
+		    }
+		}
+	}
+	priority = 100
+}
+

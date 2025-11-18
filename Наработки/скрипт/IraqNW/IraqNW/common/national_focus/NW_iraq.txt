@@ -1,0 +1,2842 @@
+focus_tree = {
+	id = nw_iraq_focus
+
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = IRQ
+		}
+	}
+	continuous_focus_position = { x = 80 y = 1400 }
+	default = no
+	
+	#Основа
+	
+	focus = {
+		id = IRQ_suppress_shiite_uprising
+		icon = GFX_z_goal_strengthen_control_over_tribes
+		mutually_exclusive = { focus = IRQ_make_concessions }
+		x = 15
+		y = 0
+		
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_suppress_shiite_uprising"
+            add_stability = 0.05
+			country_event = { id = NWiraq.4 }
+		}
+	}
+	focus = {
+		id = IRQ_al_muntafiq_return
+		icon = GFX_z_goal_arab_military_school
+		prerequisite = { focus = IRQ_suppress_shiite_uprising }
+		x = -4
+		y = 1
+		relative_position_id = IRQ_suppress_shiite_uprising
+		
+		cost = 5
+		
+		ai_will_do = {
+			factor = 10
+		}
+         
+		available = {
+		    AMQ = {
+			    exists = yes
+				NOT = {
+				    is_subject_of = IRQ
+					is_in_faction_with = IRQ
+				}
+			}
+			date > 1938.01.01
+			has_war_support > 0.5
+        }		
+		 
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_al_muntafiq_return"
+			create_wargoal = {
+                type = annex_everything
+                target = AMQ
+            }
+			add_threat = 2
+		}
+	}
+	focus = {
+		id = IRQ_emphasis_on_development_of_army
+		icon = GFX_z_goal_arab_military_school
+		prerequisite = { focus = IRQ_suppress_shiite_uprising }
+		x = -2
+		y = 1
+		relative_position_id = IRQ_suppress_shiite_uprising
+		
+		cost = 10
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_emphasis_on_development_of_army"
+			add_ideas = IRQ_emphasis_on_development_of_army
+		}
+	}
+	focus = {
+		id = IRQ_support_al_futuvva
+		icon = GFX_z_goal_factory_complex
+		prerequisite = { focus = IRQ_emphasis_on_development_of_army }
+		x = -2
+		y = 1
+		relative_position_id = IRQ_emphasis_on_development_of_army
+		
+		cost = 10
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_support_al_futuvva"
+			add_war_support = 0.1
+			add_popularity = {
+                ideology = fascism
+                popularity = 0.05
+            }
+			add_ideas = IRQ_al_futuvva
+		}
+	}
+	focus = {
+		id = IRQ_spread_newspaper
+		icon = GFX_z_goal_factory_complex
+		prerequisite = { focus = IRQ_support_al_futuvva }
+		x = 0
+		y = 1
+		relative_position_id = IRQ_support_al_futuvva
+		
+		cost = 10
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_spread_newspaper"
+			add_timed_idea = {
+                idea = IRQ_newspaper_arabian_world
+                days = 140
+            }
+		}
+	}
+	focus = {
+		id = IRQ_militarization_of_economy
+		icon = GFX_z_goal_factory_complex
+		prerequisite = { focus = IRQ_emphasis_on_development_of_army }
+		x = 0
+		y = 1
+		relative_position_id = IRQ_emphasis_on_development_of_army
+		
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_militarization_of_economy"
+			random_owned_controlled_state = {
+				limit = { 
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_ideas = partial_economic_mobilisation
+			add_ideas = TUR_militarization_economy
+		}
+	}
+	focus = {
+		id = IRQ_party_dissolve
+		icon = GFX_z_goal_arab_military_school
+		prerequisite = { focus = IRQ_suppress_shiite_uprising }
+		x = 0
+		y = 1
+		relative_position_id = IRQ_suppress_shiite_uprising
+		
+		cost = 10
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_party_dissolve"
+			add_timed_idea = {
+                idea = IRQ_ahali_persecution
+                days = 180
+            }
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = IRQ_assert_sunni_dominance
+		icon = GFX_z_goal_arab_military_school
+		prerequisite = { focus = IRQ_party_dissolve }
+		x = 1
+		y = 3
+		relative_position_id = IRQ_party_dissolve
+		
+		cost = 10
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_assert_sunni_dominance"
+            add_ideas = IRQ_sunni_dominance
+		}
+	}
+	focus = {
+		id = IRQ_agressive_panarabism
+		icon = GFX_z_goal_arab_military_school
+		prerequisite = { focus = IRQ_party_dissolve }
+		x = -1
+		y = 3
+		relative_position_id = IRQ_party_dissolve
+		
+		cost = 10
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_agressive_panarabism"
+            add_ideas = IRQ_agressive_panarabism
+		}
+	}
+	focus = {
+		id = IRQ_assyrians_persecuation
+		icon = GFX_z_goal_arab_military_school
+		prerequisite = { focus = IRQ_agressive_panarabism }
+		x = -3
+		y = 1
+		relative_position_id = IRQ_agressive_panarabism
+		
+		cost = 5
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+		    676 = {
+			    is_controlled_by = IRQ
+			}
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_assyrians_persecuation"
+			676 = {
+				add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+			}
+			add_stability = -0.5
+		}
+	}
+	focus = {
+		id = IRQ_prepare_mosul
+		icon = GFX_z_goal_arab_military_school
+		prerequisite = { focus = IRQ_assyrians_persecuation }
+		x = 0
+		y = 1
+		relative_position_id = IRQ_assyrians_persecuation
+		
+		cost = 10
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+		    676 = {
+			    is_controlled_by = IRQ
+			}
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_prepare_mosul"
+			676 = {
+				add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                    instant_build = yes
+                }
+			}
+		}
+	}
+	focus = {
+		id = IRQ_liquidate_kurds
+		icon = GFX_z_goal_arab_military_school
+		prerequisite = { focus = IRQ_agressive_panarabism }
+		x = -2
+		y = 3
+		relative_position_id = IRQ_agressive_panarabism
+		
+		cost = 5
+		
+		ai_will_do = {
+			factor = 10
+		}
+        
+		available = {
+		    OR = {
+			    has_government = fascism
+				fascism > 0.3
+			}
+			962 = {
+			    is_controlled_by = IRQ
+			}
+		}
+		
+		select_effect = {
+		    962 = {
+			    add_resistance = 30 
+			}
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_liquidate_kurds"
+			962 = {
+			    add_manpower = -50000
+			    add_core_of = IRQ
+			}
+			add_stability = -0.1
+		}
+	}
+	focus = {
+		id = IRQ_take_jews_property
+		icon = GFX_z_goal_arab_military_school
+		prerequisite = { focus = IRQ_agressive_panarabism }
+		x = -1
+		y = 1
+		relative_position_id = IRQ_agressive_panarabism
+		
+		cost = 5
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_take_jews_property"
+			capital_scope = {
+			    add_manpower = -10000
+				add_building_construction = {
+                    type = industrial_complex
+                    level = 3
+                    instant_build = yes
+                }
+			}
+			add_stability = -0.5
+		}
+	}
+	focus = {
+		id = IRQ_knights_of_arabism
+		icon = GFX_z_goal_arab_military_school
+		prerequisite = { focus = IRQ_agressive_panarabism }
+		x = 0
+		y = 2
+		relative_position_id = IRQ_agressive_panarabism
+		
+		cost = 10
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+        available = {
+		    has_government = fascism
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_knights_of_arabism"
+			add_ideas = IRQ_knights_of_arabism
+			capital_scope = {
+			    create_unit = {
+					division = "name = \"1. Knights of Arabism\" division_template = \"Alfurqat Almasha\" start_experience_factor = 1 start_equipment_factor = 1"
+					owner = IRQ
+				}
+			}
+		}
+	}
+	focus = {
+		id = IRQ_form_nationalist_government
+		icon = GFX_z_goal_arab_military_school
+		prerequisite = { 
+		    focus = IRQ_agressive_panarabism 
+			focus = IRQ_assert_sunni_dominance
+		}
+		x = 1
+		y = 1
+		relative_position_id = IRQ_agressive_panarabism
+		
+		cost = 10
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+		    NOT = {
+			    OR = {
+				    has_idea = IRQ_dictatorship_of_bakr_sidqi
+					has_idea = IRQ_dictatorship_of_yassin_al_hashimi
+				}
+			}
+			OR = {
+				AND = {
+					has_stability > 80 
+				    NOT = {
+						has_idea = IRQ_dictatorship_of_nuri_al_said
+				    }
+			    }
+				AND = {
+					fascism > 0.2
+					NOT = {
+						has_idea = IRQ_dictatorship_of_nuri_al_said
+					}
+				}
+				AND = {
+					fascism > 0.3
+					has_idea = IRQ_dictatorship_of_nuri_al_said
+					has_idea = IRQ_golden_square_influence
+				}
+				AND = {
+					fascism > 0.4
+					has_idea = IRQ_dictatorship_of_nuri_al_said
+					has_idea = IRQ_circle_of_seven_influence
+				}
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+		    }
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_form_nationalist_government"
+			add_political_power = 100
+			add_war_support = 0.2
+			if = {
+			    limit = {
+				    has_idea = IRQ_dictatorship_of_nuri_al_said
+				}
+				remove_ideas = IRQ_dictatorship_of_nuri_al_said
+			}
+		}
+	}
+	focus = {
+		id = IRQ_deal_with_communists
+		icon = GFX_z_goal_arab_military_school
+		prerequisite = { focus = IRQ_party_dissolve }
+		x = 0
+		y = 1
+		relative_position_id = IRQ_party_dissolve
+		
+		cost = 10
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_deal_with_communists"
+			add_timed_idea = {
+                idea = IRQ_communist_persecution
+                days = 180
+            }
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = IRQ_subjugate_artisans
+		icon = GFX_z_goal_arab_military_school
+		prerequisite = { focus = IRQ_deal_with_communists }
+		x = 0
+		y = 1
+		relative_position_id = IRQ_deal_with_communists
+		
+		cost = 10
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_subjugate_artisans"
+			add_ideas = IRQ_subjugate_trade_unions
+		}
+	}
+	focus = {
+		id = IRQ_support_sunni_revanchism
+		icon = GFX_z_goal_arab_military_school
+		prerequisite = { focus = IRQ_suppress_shiite_uprising }
+		x = 2
+		y = 5
+		relative_position_id = IRQ_suppress_shiite_uprising
+		
+		cost = 5
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+		    has_idea = IRQ_sunnite_revanchism
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_support_sunni_revanchism"
+			swap_ideas = {
+                remove_idea = IRQ_sunnite_revanchism
+                add_idea = IRQ_strength_sunnite_revanchism
+            }
+		}
+	}
+	focus = {
+		id = IRQ_military_state
+		icon = GFX_z_goal_arab_military_school
+		prerequisite = { 
+		    focus = IRQ_form_nationalist_government 
+			focus = IRQ_support_sunni_revanchism
+		}
+		mutually_exclusive = { focus = IRQ_overcome_army_influence }
+		x = -1
+		y = 1
+		relative_position_id = IRQ_form_nationalist_government
+		
+		cost = 10
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+		    OR = {
+		        has_idea = IRQ_golden_square_influence
+				has_idea = IRQ_strength_sunnite_revanchism
+				OR = {
+				    has_government = fascism
+					has_government = neutrality
+				}
+		    }
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_military_state"
+			if = {
+			    limit = {
+				    has_government = neutrality
+				}
+				add_ideas = IRQ_military_state
+			}
+			else = {
+			    set_politics = {
+			        ruling_party = fascism
+			    }
+			    add_popularity = {
+                    ideology = fascism
+                    popularity = 0.2
+                }
+			    add_ideas = IRQ_military_state
+				if = {
+				    limit = {
+					    has_idea = IRQ_golden_square_influence
+					}
+					remove_ideas = IRQ_golden_square_influence
+				}
+			}
+		}
+	}
+	focus = {
+		id = IRQ_implement_panarabist_programm
+		icon = GFX_z_goal_arab_military_school
+		prerequisite = { 
+		    focus = IRQ_form_nationalist_government 
+			focus = IRQ_military_state
+		}
+		x = 0
+		y = 2
+		relative_position_id = IRQ_form_nationalist_government
+		
+		cost = 10
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_implement_panarabist_programm"
+			add_war_support = 0.1
+			add_ideas = IRQ_right_panarabist_programm
+		}
+	}
+	focus = {
+		id = IRQ_cult_of_nationalists
+		icon = GFX_z_goal_arab_military_school
+		prerequisite = { focus = IRQ_military_state }
+		x = 0
+		y = 2
+		relative_position_id = IRQ_military_state
+		
+		cost = 10
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_cult_of_nationalists"
+			if = {
+			    limit = {
+				    has_government = fascism
+				}
+				add_popularity = {
+			        ideology = fascism
+				    popularity = 0.2
+			    }
+			}
+			else = {
+			    add_popularity = {
+			        ideology = neutrality
+				    popularity = 0.2
+				}
+			}
+		}
+	}
+	focus = {
+		id = IRQ_overcome_army_influence
+		icon = GFX_z_goal_arab_military_school
+		prerequisite = { focus = IRQ_suppress_shiite_uprising }
+		mutually_exclusive = { focus = IRQ_military_state }
+		x = 3
+		y = 6
+		relative_position_id = IRQ_suppress_shiite_uprising
+		
+		cost = 10
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+        available = {
+		    has_idea = IRQ_army_influence
+			NOT = {
+			    has_idea = IRQ_dictatorship_of_bakr_sidqi
+				OR = {
+				    has_government = fascism
+					has_government = neutrality
+				}
+			}
+			has_stability > 0.6
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_overcome_army_influence"
+			remove_ideas = IRQ_army_influence
+			if = {
+			    limit = {
+				    has_idea = IRQ_circle_of_seven_influence
+				}
+				remove_ideas = IRQ_circle_of_seven_influence
+			}
+			if = {
+			    limit = {
+				    has_idea = IRQ_golden_square_influence
+				}
+				remove_ideas = IRQ_golden_square_influence
+			}
+			add_political_power = 150
+		}
+	}
+	focus = {
+		id = IRQ_unite_around_hashemites
+		icon = GFX_z_goal_arab_military_school
+		prerequisite = { focus = IRQ_overcome_army_influence }
+		x = 0
+		y = 1
+		relative_position_id = IRQ_overcome_army_influence
+		
+		cost = 10
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+        available = {
+		    NOT = {
+		        has_idea = IRQ_rejection_of_hashemites
+			}
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_unite_around_hashemites"
+			add_ideas = IRQ_hashemites_arabian_leaders
+		}
+	}
+	focus = {
+		id = IRQ_get_rid_of_gaylani
+		icon = GFX_z_goal_arab_military_school
+		prerequisite = { focus = IRQ_unite_around_hashemites }
+		x = 0
+		y = 1
+		relative_position_id = IRQ_unite_around_hashemites
+		
+		cost = 10
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_get_rid_of_gaylani"
+			add_popularity = {
+			    ideology = fascism
+				popularity = -0.2
+			}
+		}
+	}
+	focus = {
+		id = IRQ_military_power_growth
+		icon = GFX_z_goal_arab_military_school
+		prerequisite = { 
+		    focus = IRQ_cult_of_as_sabagh 
+			focus = IRQ_get_rid_of_gaylani
+		}
+		x = 1
+		y = 1
+		relative_position_id = IRQ_cult_of_as_sabagh
+		
+		cost = 10
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_military_power_growth"
+			add_war_support = 0.1
+			add_ideas = IRQ_military_power_growth
+		}
+	}
+	focus = {
+		id = IRQ_army_loyal_nation
+		icon = GFX_z_goal_arab_military_school
+		prerequisite = { 
+		    focus = IRQ_cult_of_as_sabagh 
+		}
+		prerequisite = {
+			focus = IRQ_military_power_growth
+		}
+		x = 0
+		y = 2
+		relative_position_id = IRQ_cult_of_as_sabagh
+		
+		cost = 10
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_army_loyal_nation"
+            add_popularity = {
+			    ideology = ROOT
+				popularity = 0.2
+			}
+			add_ideas = IRQ_army_loyal_nation
+		}
+	}
+	focus = {
+		id = IRQ_army_loyal_king
+		icon = GFX_z_goal_arab_military_school
+		prerequisite = { 
+		    focus = IRQ_get_rid_of_gaylani 
+		}
+		prerequisite = {
+			focus = IRQ_military_power_growth
+		}
+		x = 0
+		y = 2
+		relative_position_id = IRQ_get_rid_of_gaylani
+		
+		cost = 10
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_army_loyal_king"
+            add_stability = 0.1
+			add_ideas = IRQ_army_loyal_king
+		}
+	}
+	focus = {
+		id = IRQ_reclaim_throne_of_hijaz
+		icon = GFX_goal_generic_major_war
+		prerequisite = {
+			focus = IRQ_implement_panarabist_programm
+		}
+		x = 0
+		y = 4
+		relative_position_id = IRQ_implement_panarabist_programm
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		bypass = {
+		}
+		select_effect = {
+		}
+		
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_reclaim_throne_of_hijaz"
+			add_state_claim = 679
+			add_state_claim = 1073
+			add_state_claim = 991
+			unlock_decision_tooltip = IRQ_legitimation_of_rule_in_hijaz
+			if = {
+				limit = {
+					679 = { owner = { original_tag = SAU } }
+					1073 = { owner = { original_tag = SAU } }
+					991 = { owner = { original_tag = SAU } }
+				}
+				679 = { owner = { country_event = { id = NWiraq.33 days = 1 } } }
+			}
+		}
+	}
+	
+	focus = {
+		id = IRQ_claim_najd
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = IRQ_reclaim_throne_of_hijaz }
+		x = 2
+		y = 1
+		relative_position_id = IRQ_reclaim_throne_of_hijaz
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0.5
+				strength_ratio = {
+					tag = SAU
+					ratio < 0.5
+				}
+			}
+			modifier = {
+				add = 15
+				strength_ratio = {
+					tag = SAU
+					ratio > 1
+				}
+			}
+		}
+		available = {
+			is_subject = no
+		}
+		bypass = {
+			OR = {
+				NOT = { country_exists = SAU }
+				has_war_with = SAU
+				is_in_faction_with = SAU
+				SAU = { is_subject_of = ROOT }
+			}
+		}
+		select_effect = {
+		}
+		
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_claim_najd"
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = SAU
+				expire = 0
+			}
+			add_ai_strategy = {
+				type = antagonize
+				id = "SAU"
+				value = 200
+			}
+			add_ai_strategy = {
+				type = conquer
+				id = "SAU"
+				value = 200
+			}
+		}
+	}
+	
+	focus = {
+		id = IRQ_save_iranian_arabs
+		icon = GFX_goal_generic_military_deal
+		prerequisite = { focus = IRQ_reclaim_throne_of_hijaz }
+		x = 0
+		y = 1
+		relative_position_id = IRQ_reclaim_throne_of_hijaz
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0.5
+				413 = {
+					owner = {
+						ROOT = {
+							strength_ratio = {
+								tag = PREV
+								ratio < 0.5
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				add = 15
+				413 = {
+					owner = {
+						OR = {
+							has_war = yes
+							ROOT = {
+								strength_ratio = {
+									tag = PREV
+									ratio > 1
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		available = {
+			is_subject = no
+		}
+		bypass = {
+			owns_state = 413
+		}
+		select_effect = {
+		}
+		
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_save_iranian_arabs"
+			if = {
+				limit = { 413 = { owner = { NOT = { original_tag = PER } } } }
+				413 = {
+					owner = {
+						ROOT = {
+							create_wargoal = {
+								type = annex_everything
+								target = PREV
+								expire = 0
+							}
+							add_ai_strategy = {
+								type = antagonize
+								id = PREV
+								value = 200
+							}
+							add_ai_strategy = {
+								type = conquer
+								id = PREV
+								value = 200
+							}
+						}
+					}
+				}
+			}
+			else = {
+				413 = { owner = { country_event = { id = NWiraq.36 days = 1 } } }
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = IRQ_demand_kuwait
+		icon = GFX_goal_demand_sudetenland
+		prerequisite = { focus = IRQ_save_iranian_arabs }
+		x = 0
+		y = 1
+		relative_position_id = IRQ_save_iranian_arabs
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		bypass = {
+			owns_state = 656
+		}
+		select_effect = {
+		}
+		
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_demand_kuwait"
+			if = {
+				limit = {
+					656 = {
+						owner = {
+							original_tag = KUW
+							is_subject_of = ENG
+						}
+					}
+				}
+				ENG = { country_event = { id = NWiraq.21 days = 1 } }
+			}
+			else = { 656 = { owner = { country_event = { id = NWiraq.21 days = 1 } } } }
+		}
+	}
+	
+	focus = {
+		id = IRQ_liberation_of_transjordan
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		prerequisite = { focus = IRQ_demand_kuwait }
+		x = -1
+		y = 1
+		relative_position_id = IRQ_demand_kuwait
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		bypass = {
+			any_enemy_country = {
+				any_owned_state = {
+					is_core_of = JOR
+				}
+			}
+		}
+		select_effect = {
+		}
+		
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_liberation_of_transjordan"
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = JOR
+						is_owned_by = JOR
+					}
+				}
+				add_claim_by = ROOT
+				owner = {
+					ROOT = {
+						add_ai_strategy = {
+							type = antagonize
+							id = PREV
+							value = 200
+						}
+						add_ai_strategy = {
+							type = conquer
+							id = PREV
+							value = 200
+						}
+						add_ai_strategy = {
+							type = declare_war
+							id = PREV
+							value = 100
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					country_exists = JOR
+					JOR = { is_subject = no }
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = JOR
+					expire = 0
+				}
+			}
+			if = {
+				limit = {
+					any_of_scopes = {
+						array = JOR.core_states
+						owner = {
+							OR = {
+								tag = ENG
+								AND = {
+									is_subject_of = ENG
+									OR = {
+										has_autonomy_state = autonomy_puppet
+										has_autonomy_state = autonomy_integrated_puppet
+									}
+								}
+							}
+						}
+					}
+				}
+				ENG = { country_event = { id = NWiraq.38 days = 1 } }
+			}
+		}
+	}
+	
+	focus = {
+		id = IRQ_liberation_of_syria
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = IRQ_demand_kuwait }
+		x = 1
+		y = 1
+		relative_position_id = IRQ_demand_kuwait
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		bypass = {
+			any_enemy_country = {
+				any_owned_state = {
+					OR = {
+						is_core_of = SYR
+						is_core_of = JDS
+						is_core_of = ALW
+						is_core_of = LEB
+					}
+				}
+			}
+		}
+		select_effect = {
+		}
+		
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_liberation_of_syria"
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = SYR
+						is_core_of = JDS
+						is_core_of = ALW
+						is_core_of = LEB
+					}
+				}
+				add_claim_by = ROOT
+				owner = {
+					ROOT = {
+						add_ai_strategy = {
+							type = antagonize
+							id = PREV
+							value = 200
+						}
+						add_ai_strategy = {
+							type = conquer
+							id = PREV
+							value = 200
+						}
+						add_ai_strategy = {
+							type = declare_war
+							id = PREV
+							value = 100
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					any_of_scopes = {
+						array = SYR.core_states
+						is_owned_by = event_target:NW_france_scope
+					}
+				}
+				event_target:NW_france_scope = { country_event = { id = NWiraq.42 days = 1 } }
+				custom_effect_tooltip = IRQ_liberation_of_syria_tt
+			}
+		}
+	}
+	
+	focus = {
+		id = IRQ_hashemite_arabia
+		icon = GFX_z_goal_shia_islamic_state
+		prerequisite = { focus = IRQ_liberation_of_transjordan }
+		prerequisite = { focus = IRQ_liberation_of_syria }
+		x = 1
+		y = 1
+		relative_position_id = IRQ_liberation_of_transjordan
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			is_subject = no
+		}
+		bypass = {
+		}
+		select_effect = {
+		}
+		
+		search_filters = { FOCUS_FILTER_STABILITY }
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_hashemite_arabia"
+			add_stability = 0.1
+			add_war_support = 0.1
+			every_state = {
+				limit = {
+					OR = {
+						state = 679
+						is_core_of = JOR
+						is_core_of = SYR
+						is_core_of = LEB
+					}
+				}
+				add_core_of = ROOT
+			}
+			set_cosmetic_tag = IRQ_hash
+		}
+	}
+	focus = {
+		id = IRQ_kill_bakr_sidqi
+		icon = GFX_z_goal_strengthen_control_over_tribes
+		x = 4
+		y = 2
+		relative_position_id = IRQ_suppress_shiite_uprising
+		prerequisite = {
+		    focus = IRQ_suppress_shiite_uprising
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available = {
+		    has_idea = IRQ_dictatorship_of_bakr_sidqi
+		    has_stability > 0.4
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_kill_bakr_sidqi"
+			custom_effect_tooltip = IRQ_kill_bakr_sidqi_tt
+			remove_ideas = IRQ_dictatorship_of_bakr_sidqi
+		}
+	}
+	focus = {
+		id = IRQ_supress_kurds
+		icon = GFX_z_goal_strengthen_control_over_tribes
+		x = 5
+		y = 1
+		relative_position_id = IRQ_suppress_shiite_uprising
+		prerequisite = {
+		    focus = IRQ_suppress_shiite_uprising
+		}
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available = {
+            TUR = {
+			    has_war_with = KRD
+			}
+			NOT = {
+			    ROOT = {
+				    has_war_with = KRD
+				}
+			}
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_supress_kurds"
+			add_ideas = IRQ_kurd_supressing
+		}
+	}
+	focus = {
+		id = IRQ_independence_from_britain
+		icon = GFX_z_goal_strengthen_control_over_tribes
+		x = 7
+		y = 1
+		relative_position_id = IRQ_suppress_shiite_uprising
+		prerequisite = {
+		    focus = IRQ_suppress_shiite_uprising
+			focus = IRQ_make_concessions
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available = {
+		    NOT = {
+		        is_subject_of = ENG
+			}
+			OR = {
+			    NOT = {
+			        has_completed_focus = IRQ_cooperate_with_london
+				}
+				AND = {
+			        has_completed_focus = IRQ_cooperate_with_london
+			        has_country_flag = IRQ_political_course_change
+				}
+			}
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_independence_from_britain"
+			custom_effect_tooltip = IRQ_independence_from_britain_tt
+		}
+	}
+	focus = {
+		id = IRQ_spread_king_speeches
+		icon = GFX_z_goal_strengthen_control_over_tribes
+		x = 0
+		y = 1
+		relative_position_id = IRQ_independence_from_britain
+		prerequisite = {
+		    focus = IRQ_independence_from_britain
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available = {
+		    NOT = {
+		        is_subject_of = ENG
+				has_country_flag = IRQ_speech_refusal
+			}
+			has_country_flag = IRQ_open_iraqi_radio
+		}
+		bypass = {
+		    has_country_flag = IRQ_speech_refusal
+		}
+        
+		select_effect = { 
+            set_temp_variable = { british_tension_temp = 1 }
+			add_to_variable = { british_tension_total = british_tension_temp }
+			custom_effect_tooltip = british_tension_tt		
+		}
+		completion_reward = {
+            log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_spread_king_speeches"
+			add_ideas = IRQ_ghazi_i_national_speeches
+		}
+	}
+	focus = {
+		id = IRQ_support_kuwait_irredentism
+		icon = GFX_z_goal_strengthen_control_over_tribes
+		x = 2
+		y = 1
+		relative_position_id = IRQ_spread_king_speeches
+		prerequisite = {
+		    focus = IRQ_spread_king_speeches
+		}
+		cost = 5
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available = {
+		    NOT = {
+		        is_subject_of = ENG
+				has_country_flag = IRQ_speech_refusal
+			}
+			is_subject = no
+			IRQ_ghazi_i = {
+			    is_country_leader = yes
+			}
+			656 = {
+			    is_owned_and_controlled_by = ENG
+			}
+		}
+
+		completion_reward = {
+            log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_support_kuwait_irredentism"
+			set_temp_variable = { british_tension_temp = 1 }
+			add_to_variable = { british_tension_total = british_tension_temp }
+			custom_effect_tooltip = british_tension_tt
+			656 = {
+			    add_resistance = 10
+			}
+			unlock_decision_category_tooltip = IRQ_support_quwait
+		}
+	}
+	focus = {
+		id = IRQ_head_of_divan
+		icon = GFX_z_goal_strengthen_control_over_tribes
+		x = 0
+		y = 1
+		relative_position_id = IRQ_spread_king_speeches
+		prerequisite = {
+		    focus = IRQ_spread_king_speeches
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available = {
+		    NOT = {
+		        is_subject_of = ENG
+				has_idea = IRQ_shia_uprisings
+			}
+		}
+
+        select_effect = { 
+            set_temp_variable = { british_tension_temp = 1 }
+			add_to_variable = { british_tension_total = british_tension_temp }	
+		}
+		
+		completion_reward = {
+            log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_head_of_divan"
+			add_political_power = 50
+			set_temp_variable = { british_control_temp = -5 }
+			add_to_variable = { british_control_total = british_control_temp }
+			clamp_variable = { var = british_control_total min = 0 max = 100 }
+			custom_effect_tooltip = british_control_tt
+			custom_effect_tooltip = british_tension_tt
+			country_event = { id = NWiraq.73 }
+		}
+	}
+	focus = {
+		id = IRQ_cooperate_with_germany
+		icon = GFX_z_goal_strengthen_control_over_tribes
+		x = -2
+		y = 1
+		relative_position_id = IRQ_head_of_divan
+		prerequisite = {
+		    focus = IRQ_head_of_divan
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available = {
+		    NOT = {
+		        is_subject_of = ENG
+			}
+			custom_trigger_tooltip = {
+                tooltip = british_control_35_tt	
+                check_variable = {
+                    var = british_control_total
+                    value = 35
+                    compare = less_than_or_equals
+                }				
+            }
+		}
+
+        select_effect = { 
+            set_temp_variable = { british_tension_temp = 1 }
+			add_to_variable = { british_tension_total = british_tension_temp }	
+		}
+		
+		completion_reward = {
+            log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_cooperate_with_germany"
+			custom_effect_tooltip = british_tension_tt
+		}
+	}
+	focus = {
+		id = IRQ_ger_military_support
+		icon = GFX_z_goal_strengthen_control_over_tribes
+		x = 0
+		y = 1
+		relative_position_id = IRQ_cooperate_with_germany
+		prerequisite = {
+		    focus = IRQ_cooperate_with_germany
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		cancel_if_invalid = yes
+		available = {
+		    NOT = {
+		        is_subject_of = ENG
+			}
+			has_idea = IRQ_german_iraqi_treaty
+			custom_trigger_tooltip = {
+                tooltip = IRQ_access_allowment_tt	
+                has_idea = IRQ_anglo_iraqi_treaty_new_3
+            }
+		}
+
+		completion_reward = {
+            log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_ger_military_support"
+			give_military_access = GER
+			army_experience = 5
+			add_tech_bonus = {
+			    bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	focus = {
+		id = IRQ_join_axis
+		icon = GFX_z_goal_strengthen_control_over_tribes
+		x = 0
+		y = 1
+		relative_position_id = IRQ_ger_military_support
+		prerequisite = {
+		    focus = IRQ_ger_military_support
+		}
+		mutually_exclusive = { 
+		    focus = IRQ_union_with_kremlin
+			focus = IRQ_central_treaty
+			focus = IRQ_join_saadabad_pact
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		cancel_if_invalid = yes
+		available = {
+		    NOT = {
+		        is_subject_of = ENG
+			}
+			custom_trigger_tooltip = {
+                tooltip = IRQ_factions_allowment_tt	
+                has_idea = IRQ_anglo_iraqi_treaty_new_4
+            }
+		}
+
+		completion_reward = {
+            log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_join_axis"
+			GER = {
+			    add_to_faction = IRQ
+			}
+		}
+	}
+	focus = {
+		id = IRQ_cooperate_with_ussr
+		icon = GFX_z_goal_strengthen_control_over_tribes
+		x = 0
+		y = 1
+		relative_position_id = IRQ_head_of_divan
+		prerequisite = {
+		    focus = IRQ_head_of_divan
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		cancel_if_invalid = yes
+		available = {
+		    NOT = {
+		        is_subject_of = ENG
+			}
+			custom_trigger_tooltip = {
+                tooltip = british_control_35_tt	
+                check_variable = {
+                    var = british_control_total
+                    value = 35
+                    compare = less_than_or_equals
+                }				
+            }
+		}
+
+        select_effect = { 
+            set_temp_variable = { british_tension_temp = 1 }
+			add_to_variable = { british_tension_total = british_tension_temp }	
+		}
+		
+		completion_reward = {
+            log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_cooperate_with_ussr"
+			custom_effect_tooltip = british_tension_tt
+		}
+	}
+	focus = {
+		id = IRQ_sov_military_support
+		icon = GFX_z_goal_strengthen_control_over_tribes
+		x = 0
+		y = 1
+		relative_position_id = IRQ_cooperate_with_germany
+		prerequisite = {
+		    focus = IRQ_cooperate_with_germany
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		cancel_if_invalid = yes
+		available = {
+		    NOT = {
+		        is_subject_of = ENG
+			}
+			has_idea = IRQ_soviet_iraqi_treaty
+			custom_trigger_tooltip = {
+                tooltip = IRQ_access_allowment_tt	
+                has_idea = IRQ_anglo_iraqi_treaty_new_3
+            }
+		}
+
+		completion_reward = {
+            log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_sov_military_support"
+			give_military_access = SOV
+			add_political_power = 50
+			army_experience = 5
+			add_tech_bonus = {
+			    bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+			capital_scope = { 
+			    add_building_construction = {
+                    type = arms_factory
+                    level = 3
+                    instant_build = yes
+                }
+			}
+		}
+	}
+	focus = {
+		id = IRQ_union_with_kremlin
+		icon = GFX_z_goal_strengthen_control_over_tribes
+		x = 0
+		y = 1
+		relative_position_id = IRQ_sov_military_support
+		prerequisite = {
+		    focus = IRQ_sov_military_support
+		}
+		mutually_exclusive = { 
+		    focus = IRQ_join_axis
+			focus = IRQ_central_treaty
+			focus = IRQ_join_saadabad_pact
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		cancel_if_invalid = yes
+		available = {
+		    NOT = {
+		        is_subject_of = ENG
+			}
+			custom_trigger_tooltip = {
+                tooltip = IRQ_factions_allowment_tt	
+                has_idea = IRQ_anglo_iraqi_treaty_new_4
+            }
+		}
+
+		completion_reward = {
+            log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_union_with_kremlin"
+			SOV = {
+			    add_to_faction = IRQ
+			}
+		}
+	}
+	focus = {
+		id = IRQ_focus_middle_east
+		icon = GFX_z_goal_strengthen_control_over_tribes
+		x = 3
+		y = 1
+		relative_position_id = IRQ_head_of_divan
+		prerequisite = {
+		    focus = IRQ_head_of_divan
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		cancel_if_invalid = yes
+		available = {
+		    NOT = {
+		        is_subject_of = ENG
+			}
+			custom_trigger_tooltip = {
+                tooltip = british_control_30_tt	
+                check_variable = {
+                    var = british_control_total
+                    value = 30
+                    compare = less_than_or_equals
+                }				
+            }
+		}
+
+        select_effect = { 
+            set_temp_variable = { british_tension_temp = 1 }
+			add_to_variable = { british_tension_total = british_tension_temp }	
+		}
+		
+		completion_reward = {
+            log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus focus_middle_east"
+			custom_effect_tooltip = british_tension_tt
+		}
+	}
+	focus = {
+		id = IRQ_central_treaty
+		icon = GFX_z_goal_strengthen_control_over_tribes
+		x = -1
+		y = 2
+		relative_position_id = IRQ_focus_middle_east
+		prerequisite = {
+		    focus = IRQ_focus_middle_east
+		}
+		mutually_exclusive = { 
+		    focus = IRQ_join_axis
+			focus = IRQ_union_with_kremlin
+			focus = IRQ_join_saadabad_pact
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		cancel_if_invalid = yes
+		available = {
+		    NOT = {
+		        is_subject_of = ENG
+			}
+			custom_trigger_tooltip = {
+                tooltip = IRQ_factions_allowment_tt	
+                has_idea = IRQ_anglo_iraqi_treaty_new_4
+            }
+		}
+		bypass = {
+            is_in_faction = yes
+			NOT = {
+			    OR = {
+				    has_completed_focus = IRQ_join_axis
+					has_completed_focus = IRQ_union_with_kremlin
+					has_completed_focus = IRQ_join_saadabad_pact
+				}
+			}
+		}
+
+		completion_reward = {
+            log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_central_treaty"
+			create_faction = IRQ_central_treaty
+		}
+	}
+	focus = {
+		id = IRQ_join_saadabad_pact
+		icon = GFX_z_goal_strengthen_control_over_tribes
+		x = 1
+		y = 2
+		relative_position_id = IRQ_focus_middle_east
+		prerequisite = {
+		    focus = IRQ_focus_middle_east
+		}
+		mutually_exclusive = { 
+		    focus = IRQ_join_axis
+			focus = IRQ_union_with_kremlin
+			focus = IRQ_central_treaty
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		cancel_if_invalid = yes
+		available = {
+		    NOT = {
+		        is_subject_of = ENG
+			}
+			custom_trigger_tooltip = {
+                tooltip = IRQ_factions_allowment_tt	
+                has_idea = IRQ_anglo_iraqi_treaty_new_4
+            }
+		}
+		bypass = {
+            is_in_faction = yes
+			NOT = {
+			    OR = {
+				    has_completed_focus = IRQ_join_axis
+					has_completed_focus = IRQ_union_with_kremlin
+					has_completed_focus = IRQ_join_saadabad_pact
+				}
+			}
+		}
+
+		completion_reward = {
+            log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_join_saadabad_pact"
+		}
+	}
+	focus = {
+		id = IRQ_deanon_anglo_iraqi_treaty
+		icon = GFX_z_goal_strengthen_control_over_tribes
+		x = 0
+		y = 1
+		relative_position_id = IRQ_union_with_kremlin
+		prerequisite = {
+		    focus = IRQ_join_axis
+		    focus = IRQ_union_with_kremlin
+			focus = IRQ_central_treaty
+			focus = IRQ_join_saadabad_pact
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		cancel_if_invalid = yes
+		available = {
+		    NOT = {
+		        is_subject_of = ENG
+			}
+		}
+		bypass = {
+		    custom_trigger_tooltip = {
+			    tooltip = IRQ_treaty_deanoned
+		        NOT = {
+			        OR = {
+			            has_idea = IRQ_anglo_iraqi_treaty_new
+		                has_idea = IRQ_anglo_iraqi_treaty_new_2
+			            has_idea = IRQ_anglo_iraqi_treaty_new_3
+			            has_idea = IRQ_anglo_iraqi_treaty_new_4
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+            log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_deanon_anglo_iraqi_treaty"
+			if = {
+			    limit = {
+				    has_idea = IRQ_anglo_iraqi_treaty_new
+				}
+				remove_ideas = IRQ_anglo_iraqi_treaty_new
+			}
+			else_if = {
+			    limit = {
+				    has_idea = IRQ_anglo_iraqi_treaty_new_2
+				}
+			    remove_ideas = IRQ_anglo_iraqi_treaty_new_2
+			}
+			else_if = {
+			    limit = {
+				    has_idea = IRQ_anglo_iraqi_treaty_new_3
+				}
+			    remove_ideas = IRQ_anglo_iraqi_treaty_new_3
+			}
+			else_if = {
+			    limit = {
+				    has_idea = IRQ_anglo_iraqi_treaty_new_4
+				}
+			    remove_ideas = IRQ_anglo_iraqi_treaty_new_4
+			}
+		}
+	}
+	focus = {
+		id = IRQ_nationalization_of_oil_fields
+		icon = GFX_z_goal_oil
+		prerequisite = {
+            focus = IRQ_deanon_anglo_iraqi_treaty
+		}
+		x = 0
+		y = 1
+		relative_position_id = IRQ_deanon_anglo_iraqi_treaty
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+				date < 1942.01.01
+			}
+			modifier = {
+				factor = 3
+				threat < 0.4
+			}
+		}
+		available = {
+			is_subject = no
+		}
+		select_effect = {
+			if = {
+				limit = { has_war_with = ENG }
+				complete_national_focus = IRQ_nationalization_of_oil_fields
+			}
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_nationalization_of_oil_fields"
+			ENG = {
+				if = {
+					limit = { NOT = { has_war_with = ROOT } }
+					country_event = { id = NWiraq.78 days = 1 }
+				}
+				remove_resource_rights = 962
+				remove_resource_rights = 676
+				remove_resource_rights = 291
+				remove_resource_rights = 995
+			}
+			custom_effect_tooltip = PER_nationalize_oil_industry_tt
+			if = {
+				limit = { has_war_with = ENG }
+				custom_effect_tooltip = generic_instant_focus_complete_tt
+			}
+		}
+	}
+	focus = {
+		id = IRQ_claims_against_kuwait
+		icon = GFX_z_goal_flames_of_rebellion
+		prerequisite = { focus = IRQ_deanon_anglo_iraqi_treaty }
+		x = -1
+		y = 2
+		relative_position_id = IRQ_deanon_anglo_iraqi_treaty
+		
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 3
+				is_historical_focus_on = yes
+			}
+		}
+		available = {
+			date > 1938.01.01
+		}
+		
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_claims_against_kuwait"
+			add_state_claim = 656
+			if = {
+				limit = {
+					656 = {
+						owner = {
+							NOT = {
+								tag = KUW
+								has_war_with = ROOT
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				656 = { owner = { country_event = { id = NWiraq.74 } } }
+			}
+		}
+	}
+	focus = {
+		id = IRQ_capture_413
+		icon = GFX_z_goal_swing_the_sword
+		prerequisite = { focus = IRQ_deanon_anglo_iraqi_treaty }
+		x = 1
+		y = 2
+		relative_position_id = IRQ_deanon_anglo_iraqi_treaty
+		
+		cost = 10
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0.5
+				413 = {
+					owner = {
+						ROOT = {
+							strength_ratio = {
+								tag = PREV
+								ratio < 0.5
+							}
+						}
+					}
+				}
+			}
+			modifier = {
+				add = 15
+				413 = {
+					owner = {
+						OR = {
+							has_war = yes
+							ROOT = {
+								strength_ratio = {
+									tag = PREV
+									ratio > 1
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		available = {
+			NOT = {
+				has_full_control_of_state = 413
+				413 = { owner = { has_war_with = ROOT } }
+			}
+			413 = { is_claimed_by = ROOT }
+			threat > 0.3
+		}
+		
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_capture_413"
+			if = {
+				limit = { 413 = { owner = { NOT = { original_tag = PER } } } }
+				413 = {
+					owner = {
+						ROOT = {
+							create_wargoal = {
+								type = take_state_focus
+								target = PREV
+								generator = { 413 }
+								expire = 0
+							}
+						}
+					}
+				}
+			}
+			else = {
+				413 = { owner = { country_event = { id = NWiraq.54 } } }
+			}
+		}
+	}
+	focus = {
+		id = IRQ_involve_minorites_in_army
+		icon = GFX_z_goal_strengthen_control_over_tribes
+		x = 10
+		y = 1
+		relative_position_id = IRQ_suppress_shiite_uprising
+		prerequisite = {
+		    focus = IRQ_suppress_shiite_uprising
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+            has_idea = IRQ_dictatorship_of_bakr_sidqi
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_involve_minorites_in_army"
+			add_ideas = IRQ_minorites_in_army
+			custom_effect_tooltip = IRQ_involve_minorites_in_army_tt
+		}
+	}
+	
+    #Альт.ветка
+	
+	focus = {
+		id = IRQ_make_concessions
+		icon = GFX_z_goal_muslims_friend
+		mutually_exclusive = { focus = IRQ_suppress_shiite_uprising }
+		x = 40
+		y = 0
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+		    NOT = {
+			    has_country_flag = IRQ_shia_uprised
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_make_concessions"
+			remove_ideas = IRQ_shia_uprisings
+            add_timed_idea = {
+			    idea = IRQ_shia_compromise
+				days = 180
+			}
+			add_stability = 0.1
+		}
+	}
+	focus = {
+		id = IRQ_cooperate_with_london
+		icon = GFX_z_goal_strengthen_control_over_tribes
+		x = -12
+		y = 1
+		relative_position_id = IRQ_make_concessions
+		prerequisite = {
+		    focus = IRQ_make_concessions
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+		    NOT = {
+		        has_country_flag = IRQ_political_course_change
+			}
+		    has_idea = IRQ_anglo_iraqi_treaty_new
+			OR = {
+			    NOT = {
+			        has_completed_focus = IRQ_independence_from_britain
+				}
+                is_subject_of = ENG
+			}
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_independence_from_britain"
+			custom_effect_tooltip = IRQ_cooperate_with_london_tt
+		}
+	}
+	focus = {
+		id = IRQ_support_nuri_al_said
+		icon = GFX_z_goal_strengthen_control_over_tribes
+		x = 0
+		y = 1
+		relative_position_id = IRQ_cooperate_with_london
+		prerequisite = {
+		    focus = IRQ_cooperate_with_london
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+		    NOT = {
+		        has_country_flag = IRQ_political_course_change
+			}
+		    has_idea = IRQ_anglo_iraqi_treaty_new
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_support_nuri_al_said"
+			add_ideas = IRQ_nuri_al_said_influence
+			ENG = {
+			    add_opinion_modifier = {
+				    target = IRQ
+					modifier = IRQ_nuri_support
+			    }
+			}
+		}
+	}
+	focus = {
+		id = IRQ_spread_british_programms
+		icon = GFX_z_goal_strengthen_control_over_tribes
+		x = 0
+		y = 1
+		relative_position_id = IRQ_support_nuri_al_said
+		prerequisite = {
+		    focus = IRQ_support_nuri_al_said
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+		    NOT = {
+		        has_country_flag = IRQ_political_course_change
+			}
+		    has_idea = IRQ_anglo_iraqi_treaty_new
+			has_country_flag = IRQ_open_iraqi_radio
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_spread_british_programms"
+			add_ideas = IRQ_probritish_programms
+		}
+	}
+    focus = {
+		id = IRQ_military_treaty
+		icon = GFX_z_goal_strengthen_control_over_tribes
+		x = -1
+		y = 1
+		relative_position_id = IRQ_spread_british_programms
+		prerequisite = {
+		    focus = IRQ_spread_british_programms
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+		    NOT = {
+		        has_country_flag = IRQ_political_course_change
+			}
+		    has_idea = IRQ_anglo_iraqi_treaty_new
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_military_treaty"
+			add_ideas = IRQ_anglo_iraqi_military_treaty
+			custom_effect_tooltip = IRQ_military_treaty_tt
+		}
+	}	
+	focus = {
+		id = IRQ_economical_treaty
+		icon = GFX_z_goal_strengthen_control_over_tribes
+		x = 1
+		y = 1
+		relative_position_id = IRQ_spread_british_programms
+		prerequisite = {
+		    focus = IRQ_spread_british_programms
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+		    NOT = {
+		        has_country_flag = IRQ_political_course_change
+			}
+		    has_idea = IRQ_anglo_iraqi_treaty_new
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_economical_treaty"
+			add_ideas = IRQ_anglo_iraqi_economical_treaty
+			custom_effect_tooltip = IRQ_economical_treaty_tt
+		}
+	}
+	focus = {
+		id = IRQ_union_obligations
+		icon = GFX_z_goal_strengthen_control_over_tribes
+		x = 1
+		y = 1
+		relative_position_id = IRQ_military_treaty
+		prerequisite = {
+		    focus = IRQ_military_treaty
+		}
+		prerequisite = {
+		    focus = IRQ_economical_treaty
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+		    NOT = {
+		        has_country_flag = IRQ_political_course_change
+			}
+		    has_idea = IRQ_anglo_iraqi_treaty_new
+			ENG = {
+			    is_faction_leader = yes
+			}
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_union_obligations"
+			ENG = {
+			    country_event = { id = NWiraq.67 }
+			}
+		}
+	}
+	focus = {
+		id = IRQ_iraqi_volunteers
+		icon = GFX_z_goal_strengthen_control_over_tribes
+		x = 2
+		y = 2
+		relative_position_id = IRQ_union_obligations
+		prerequisite = {
+		    focus = IRQ_union_obligations
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+		    NOT = {
+		        has_country_flag = IRQ_political_course_change
+			}
+		    has_idea = IRQ_anglo_iraqi_treaty_new
+			is_in_faction_with = ENG
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_iraqi_volunteers"
+			add_equipment_to_stockpile = {
+                type = infantry_equipment
+                amount = 1000
+                producer = ENG
+            }
+			add_equipment_to_stockpile = {
+                type = artillery_equipment
+                amount = 300
+                producer = ENG
+            }
+			division_template = {
+	            name = "Arab Legion Division"	
+                regiments = {
+		            infantry = { x = 0 y = 0 }
+	                infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+		            infantry = { x = 1 y = 0 }
+		            infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+					infantry = { x = 2 y = 0 }
+					artillery = { x = 2 y = 1 }
+					artillery = { x = 2 y = 2 }
+                }
+				is_locked = no
+	        }
+            random_owned_state = {            
+				create_unit = {
+					division = "name = \"1. Arab Legion Division-1\" division_template = \"Arab Legion Division\" start_experience_factor = 1 start_equipment_factor = 1"
+					owner = IRQ
+				}
+                create_unit = {
+					division = "name = \"2. Arab Legion Division-2\" division_template = \"Arab Legion Division\" start_experience_factor = 1 start_equipment_factor = 1"
+					owner = IRQ
+				}
+				create_unit = {
+					division = "name = \"3. Arab Legion Division-3\" division_template = \"Arab Legion Division\" start_experience_factor = 1 start_equipment_factor = 1"
+					owner = IRQ
+				}
+			}
+		}
+	}
+	focus = {
+		id = IRQ_unite_hashimites
+		icon = GFX_z_goal_strengthen_control_over_tribes
+		x = 1
+		y = 1
+		relative_position_id = IRQ_union_obligations
+		prerequisite = {
+		    focus = IRQ_union_obligations
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+		    NOT = {
+		        has_country_flag = IRQ_political_course_change
+			}
+		    has_idea = IRQ_anglo_iraqi_treaty_new
+			OR = {
+			    all_core_state = {
+				    is_core_of = JOR
+				    is_owned_and_controlled_by = ENG
+				}
+				AND = {
+				    BPL = {
+					    is_subject_of = ENG
+					}
+					all_core_state = {
+				        is_core_of = JOR
+				        is_owned_and_controlled_by = BPL
+				    }
+				}
+				JOR = {
+				    is_subject_of = ENG
+				}
+			}
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_unite_hashimites"
+			if = {
+			    limit = {
+				    JOR = {
+					    exists = no
+					}
+				}
+				release = JOR
+			}
+			set_autonomy = {
+                target = JOR
+                autonomy_state = autonomy_dominion
+            }
+		}
+	}
+	focus = {
+		id = IRQ_interest_in_syria
+		icon = GFX_z_goal_strengthen_control_over_tribes
+		x = 0
+		y = 3
+		relative_position_id = IRQ_unite_hashimites
+		prerequisite = {
+		    focus = IRQ_unite_hashimites
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+		    NOT = {
+		        has_country_flag = IRQ_political_course_change
+				SYR = {
+			        is_in_faction_with = ENG
+			    }
+			}
+		    has_idea = IRQ_anglo_iraqi_treaty_new
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_interest_in_syria"
+			every_core_state = {
+			    limit = { is_core_of = SYR }				
+				add_claim_by = IRQ
+			}
+			ENG = {
+			    create_wargoal = {
+				    type = annex_everything
+				    target = SYR					
+			    }
+			}
+		}
+	}
+    focus = {
+		id = IRQ_kuwait_control
+		icon = GFX_z_goal_strengthen_control_over_tribes
+		x = 3
+		y = 1
+		relative_position_id = IRQ_union_obligations
+		prerequisite = {
+		    focus = IRQ_union_obligations
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+		    NOT = {
+		        has_country_flag = IRQ_political_course_change
+			}
+		    has_idea = IRQ_anglo_iraqi_treaty_new
+			656 = {
+			    is_owned_and_controlled_by = ENG
+			}
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_kuwait_control"
+            transfer_state = 656
+		}
+	}
+	focus = {
+		id = IRQ_mosul_defense
+		icon = GFX_z_goal_strengthen_control_over_tribes
+		x = -1
+		y = 1
+		relative_position_id = IRQ_union_obligations
+		prerequisite = {
+		    focus = IRQ_union_obligations
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+		    NOT = {
+		        has_country_flag = IRQ_political_course_change
+			}
+		    has_idea = IRQ_anglo_iraqi_treaty_new
+			962 = {
+			    is_owned_and_controlled_by = ROOT
+			}
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_mosul_defense"	
+            962 = {			
+			    add_building_construction = {
+                    type = bunker
+                    level = 2
+                    instant_build = yes
+                    province = 10811					
+                }
+				add_building_construction = {
+                    type = bunker
+                    level = 2
+                    instant_build = yes
+                    province = 14618					
+                }
+            }
+		}
+	}
+	focus = {
+		id = IRQ_anglo_iraqi_research
+		icon = GFX_z_goal_strengthen_control_over_tribes
+		x = 0
+		y = 2
+		relative_position_id = IRQ_union_obligations
+		prerequisite = {
+		    focus = IRQ_union_obligations
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+		    NOT = {
+		        has_country_flag = IRQ_political_course_change
+			}
+		    has_idea = IRQ_anglo_iraqi_treaty_new
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_anglo_iraqi_research"	
+            add_to_tech_sharing_group = IRQ_anglo_iraqi_group
+			ENG = {
+			    add_to_tech_sharing_group = IRQ_anglo_iraqi_group
+			}
+		}
+	}
+	focus = {
+		id = IRQ_military_cooperation
+		icon = GFX_z_goal_strengthen_control_over_tribes
+		x = 0
+		y = 1
+		relative_position_id = IRQ_anglo_iraqi_research
+		prerequisite = {
+		    focus = IRQ_anglo_iraqi_research
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+		    NOT = {
+		        has_country_flag = IRQ_political_course_change
+			}
+		    has_idea = IRQ_anglo_iraqi_treaty_new
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_military_cooperation"	
+            add_tech_bonus = {
+                bonus = 0.5
+                uses = 1
+                category = land_doctrine
+            }
+		}
+	}
+	focus = {
+		id = IRQ_involve_indian_management_experience
+		icon = GFX_z_goal_strengthen_control_over_tribes
+		x = 2
+		y = 1
+		relative_position_id = IRQ_support_nuri_al_said
+		prerequisite = {
+		    focus = IRQ_support_nuri_al_said
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+		    NOT = {
+		        has_country_flag = IRQ_political_course_change
+			}
+		    has_idea = IRQ_anglo_iraqi_treaty_new
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_involve_indian_management_experience"
+			add_ideas = IRQ_indian_management_experience
+		}
+	}
+	focus = {
+		id = IRQ_allow_rupees
+		icon = GFX_z_goal_strengthen_control_over_tribes
+		x = 1
+		y = 1
+		relative_position_id = IRQ_involve_indian_management_experience
+		prerequisite = {
+		    focus = IRQ_involve_indian_management_experience
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+		    NOT = {
+		        has_country_flag = IRQ_political_course_change
+			}
+		    has_idea = IRQ_anglo_iraqi_treaty_new
+			RAJ = {
+			    is_subject_of = ENG
+			}
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_allow_rupees"
+			add_ideas = IRQ_use_rupees
+		}
+	}
+	focus = {
+		id = IRQ_british_agents_networth
+		icon = GFX_z_goal_strengthen_control_over_tribes
+		x = 3
+		y = 1
+		relative_position_id = IRQ_involve_indian_management_experience
+		prerequisite = {
+		    focus = IRQ_involve_indian_management_experience
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+		    NOT = {
+		        has_country_flag = IRQ_political_course_change
+			}
+		    has_idea = IRQ_anglo_iraqi_treaty_new
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_british_agents_networth"
+			add_ideas = IRQ_british_agents_networth
+		}
+	}
+	focus = {
+		id = IRQ_political_enemy_control
+		icon = GFX_z_goal_strengthen_control_over_tribes
+		x = -1
+		y = 1
+		relative_position_id = IRQ_british_agents_networth
+		prerequisite = {
+		    focus = IRQ_british_agents_networth
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+		    NOT = {
+		        has_country_flag = IRQ_political_course_change
+			}
+		    has_idea = IRQ_anglo_iraqi_treaty_new
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_political_enemy_control"
+			add_ideas = IRQ_political_enemy_control
+		}
+	}
+	focus = {
+		id = IRQ_country_control
+		icon = GFX_z_goal_strengthen_control_over_tribes
+		x = 1
+		y = 1
+		relative_position_id = IRQ_british_agents_networth
+		prerequisite = {
+		    focus = IRQ_british_agents_networth
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+		    NOT = {
+		        has_country_flag = IRQ_political_course_change
+			}
+		    has_idea = IRQ_anglo_iraqi_treaty_new
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_country_control"
+			add_ideas = IRQ_country_control
+		}
+	}
+	focus = {
+		id = IRQ_progerman_sentiments
+		icon = GFX_z_goal_strengthen_control_over_tribes
+		x = -1
+		y = 1
+		relative_position_id = IRQ_country_control
+		prerequisite = {
+		    focus = IRQ_country_control
+		}
+		prerequisite = {
+		    focus = IRQ_political_enemy_control
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+		    NOT = {
+		        has_country_flag = IRQ_political_course_change
+			}
+		    has_idea = IRQ_anglo_iraqi_treaty_new
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_progerman_sentiments"
+			add_stability = 0.1
+			add_ideas = IRQ_tame_progerman_sentiments
+		}
+	}
+	focus = {
+		id = IRQ_establish_parliamentary_monarchy
+		icon = GFX_z_goal_strengthen_control_over_tribes
+		x = 0
+		y = 1
+		relative_position_id = IRQ_progerman_sentiments
+		prerequisite = {
+		    focus = IRQ_progerman_sentiments
+		}
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+		    NOT = {
+		        has_country_flag = IRQ_political_course_change
+			}
+		    has_idea = IRQ_anglo_iraqi_treaty_new
+			neutrality > 0.4
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus IRQ_establish_parliamentary_monarchy"
+			set_politics = {
+	            ruling_party = neutrality
+                elections_allowed = no
+                last_election = "1936.01.01"
+                election_frequency = 48
+			}
+			remove_ideas = IRQ_rejection_of_hashemites
+		}
+	}
+}

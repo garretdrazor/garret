@@ -1,0 +1,920 @@
+ideas = {
+
+	country = {
+		
+		IRQ_anglo_iraqi_treaty_new = {
+			allowed = { always = no }
+			available = {
+				country_exists = ENG
+				NOT = {
+					has_war_with = ENG
+					has_government = communism
+					has_government = trozkism
+					has_government = anarchism
+					has_government = technocracy
+					has_government = fascism
+				}
+			}
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+					has_government = trozkism
+					has_government = anarchism
+					has_government = technocracy
+					has_government = fascism
+				}
+			}
+			removal_cost = -1
+			picture = anglo_iraqi_treaty
+			on_remove = {
+				add_to_variable = { weapons_buy_discount = -0.5 }
+			}
+			modifier = {
+			    custom_modifier_tooltip = IRQ_anglo_iraqi_treaty_tt
+			}
+			rule = {
+				can_not_declare_war = yes
+				can_join_factions = no
+			}
+		}
+		IRQ_anglo_iraqi_treaty_new_2 = {
+			allowed = { always = no }
+			available = {
+				country_exists = ENG
+				NOT = {
+					has_war_with = ENG
+					has_government = communism
+					has_government = trozkism
+					has_government = anarchism
+					has_government = technocracy
+					has_government = fascism
+				}
+			}
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+					has_government = trozkism
+					has_government = anarchism
+					has_government = technocracy
+					has_government = fascism
+				}
+			}
+			removal_cost = -1
+			picture = anglo_iraqi_treaty
+			modifier = {
+			    custom_modifier_tooltip = IRQ_anglo_iraqi_treaty_2_tt
+			}
+			rule = {
+				can_not_declare_war = yes
+				can_join_factions = no
+			}
+		}
+		IRQ_anglo_iraqi_treaty_new_3 = {
+			allowed = { always = no }
+			available = {
+				country_exists = ENG
+				NOT = {
+					has_war_with = ENG
+					has_government = communism
+					has_government = trozkism
+					has_government = anarchism
+					has_government = technocracy
+					has_government = fascism
+				}
+			}
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+					has_government = trozkism
+					has_government = anarchism
+					has_government = technocracy
+					has_government = fascism
+				}
+			}
+			removal_cost = -1
+			picture = anglo_iraqi_treaty
+			modifier = {
+			    custom_modifier_tooltip = IRQ_anglo_iraqi_treaty_3_tt
+			}
+			rule = {
+				can_not_declare_war = yes
+				can_join_factions = no
+			}
+		}
+		IRQ_anglo_iraqi_treaty_new_4 = {
+			allowed = { always = no }
+			available = {
+				country_exists = ENG
+				NOT = {
+					has_war_with = ENG
+					has_government = communism
+					has_government = trozkism
+					has_government = anarchism
+					has_government = technocracy
+					has_government = fascism
+				}
+			}
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+					has_government = trozkism
+					has_government = anarchism
+					has_government = technocracy
+					has_government = fascism
+				}
+			}
+			removal_cost = -1
+			picture = anglo_iraqi_treaty
+			modifier = {
+			    custom_modifier_tooltip = IRQ_anglo_iraqi_treaty_4_tt
+			}
+			rule = {
+				can_not_declare_war = yes
+			}
+		}
+		IRQ_rejection_of_hashemites = {
+			allowed = { always = no }
+			available = {
+				has_government = monarchy
+			}
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = FRA_scw_intervention_republicans_focus
+			modifier = {
+				drift_defence_factor = -0.2
+				stability_factor = -0.1
+			}
+		}
+		IRQ_ghazi_i_national_speeches = {
+			allowed = { always = no }
+			available = {
+				has_government = monarchy
+			}
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = FRA_scw_intervention_republicans_focus
+			modifier = {
+			    war_support_weekly = 0.1
+			}
+		}
+		IRQ_dictatorship_of_yassin_al_hashimi = {
+			allowed = { always = no }
+			available = {
+				OR = {
+					has_government = monarchy
+					has_government = democratic
+					has_government = neutrality
+				}
+			}
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_intel_bonus
+			modifier = {
+				stability_factor = -0.1
+			}
+		}
+		IRQ_loyal_to_hashimi_army = {
+			allowed = { always = no }
+			available = {
+				OR = {
+					has_government = monarchy
+					has_government = democratic
+					has_government = neutrality
+				}
+			}
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_intel_bonus
+			modifier = {
+				stability_factor = -0.1
+				recruitable_population_factor = -0.2
+			}
+		}
+		IRQ_army_influence = {
+			allowed = { always = no }
+			available = {
+				OR = {
+					has_government = monarchy
+					has_government = democratic
+					has_government = neutrality
+				}
+			}
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_intel_bonus
+			research_bonus = {
+			    land_doctrine = 0.05
+			}
+			modifier = {
+			    political_power_factor = -0.1
+				stability_factor = -0.05
+				surrender_limit = 0.05
+				experience_gain_army_factor = 0.05
+				command_power_gain = 0.05
+			}
+		}
+		IRQ_circle_of_seven_influence = {
+			allowed = { always = no }
+			available = {
+				OR = {
+					has_government = monarchy
+					has_government = democratic
+					has_government = neutrality
+				}
+			}
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_intel_bonus
+			research_bonus = {
+			    land_doctrine = 0.05
+			}
+			modifier = {
+                fascism_drift = 0.05
+				neutrality_drift = 0.05
+				stability_factor = 0.05
+			}
+		}
+		IRQ_golden_square_influence = {
+			allowed = { always = no }
+			available = {
+				OR = {
+					has_government = monarchy
+					has_government = democratic
+					has_government = neutrality
+				}
+			}
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_intel_bonus
+			research_bonus = {
+			    land_doctrine = 0.05
+			}
+			modifier = {
+                fascism_drift = 0.05
+			}
+		}
+		IRQ_antibrit_hashimi_influence = {
+			allowed = { always = no }
+			available = {
+				OR = {
+					has_government = monarchy
+					has_government = democratic
+					has_government = neutrality
+				}
+			}
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_intel_bonus
+			modifier = {
+			}
+		}
+		IRQ_nuri_al_said_influence = {
+			allowed = { always = no }
+			available = {
+				OR = {
+					has_government = monarchy
+					has_government = democratic
+					has_government = neutrality
+				}
+			}
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_intel_bonus
+			modifier = {
+			    political_power_factor = 0.05
+				neutrality_drift = 0.01
+			}
+		}
+		IRQ_dictatorship_of_nuri_al_said = {
+			allowed = { always = no }
+			available = {
+				OR = {
+					has_government = monarchy
+					has_government = democratic
+					has_government = neutrality
+				}
+			}
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_intel_bonus
+			modifier = {
+			}
+		}
+		IRQ_disappointed_iraqi_army = {
+			allowed = { always = no }
+			available = {
+				OR = {
+					has_government = monarchy
+					has_government = democratic
+					has_government = neutrality
+				}
+			}
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_intel_bonus
+			modifier = {
+			    army_org_factor = -0.1
+				targeted_modifier = {
+			        tag = ENG
+				    attack_bonus_against = -0.2
+					defense_bonus_against = -0.2
+			    }
+			}
+		}
+		IRQ_al_futuvva = {
+			allowed = { always = no }
+			available = {
+				OR = {
+					has_government = monarchy
+					has_government = democratic
+					has_government = neutrality
+				}
+			}
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_intel_bonus
+			modifier = {
+				army_org = 0.05
+				mobilization_speed = 0.05
+			}
+		}
+		IRQ_newspaper_arabian_world = {
+			allowed = { always = no }
+			available = {
+				OR = {
+					has_government = monarchy
+					has_government = democratic
+					has_government = neutrality
+				}
+			}
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_intel_bonus
+			modifier = {
+                fascism_drift = 0.025
+				war_support_weekly = 0.05
+				stability_weekly = 0.025
+				weekly_manpower = 100
+			}
+		}
+		IRQ_ahali_persecution = {
+			allowed = { always = no }
+			available = {
+				OR = {
+					has_government = monarchy
+					has_government = democratic
+					has_government = neutrality
+				}
+			}
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_intel_bonus
+			modifier = {
+                democratic_drift = -0.2
+			}
+		}
+		IRQ_sunni_dominance = {
+			allowed = { always = no }
+			available = {
+				OR = {
+					has_government = monarchy
+					has_government = democratic
+					has_government = neutrality
+				}
+			}
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_intel_bonus
+			modifier = {
+			    recruitable_population_factor = -0.05
+                army_org = 0.05
+				mobilization_speed = 0.05
+			}
+		}
+		IRQ_agressive_panarabism = {
+			allowed = { always = no }
+			available = {
+				OR = {
+					has_government = monarchy
+					has_government = democratic
+					has_government = neutrality
+				}
+			}
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_intel_bonus
+			modifier = {
+			    justify_war_goal_time = 0.1
+			    army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+                war_support_factor = 0.15
+			}
+		}
+		IRQ_communist_persecution = {
+			allowed = { always = no }
+			available = {
+				OR = {
+					has_government = monarchy
+					has_government = democratic
+					has_government = neutrality
+				}
+			}
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_intel_bonus
+			modifier = {
+                communism_drift = -0.2
+			}
+		}
+		IRQ_subjugate_trade_unions = {
+			allowed = { always = no }
+			available = {
+				OR = {
+					has_government = monarchy
+					has_government = democratic
+					has_government = neutrality
+				}
+			}
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = generic_intel_bonus
+			modifier = {
+                stability_factor = -0.05
+				production_factory_max_efficiency_factor = 0.05
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		IRQ_british_investments = {
+			allowed = { always = no }
+			available = {
+				OR = {
+					has_government = monarchy
+					has_government = democratic
+					has_government = neutrality
+				}
+			}
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = chi_war_of_resistance3
+			modifier = {
+			    production_speed_buildings_factor = 0.02
+				consumer_goods_factor = -0.02
+			}
+		}
+		IRQ_military_agreement = {
+			allowed = { always = no }
+			available = {
+				OR = {
+					has_government = monarchy
+					has_government = democratic
+					has_government = neutrality
+				}
+			}
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = chi_war_of_resistance3
+			rule = {
+                can_decline_call_to_war = no
+			}
+		}
+		IRQ_anglo_iraqi_military_treaty = {
+			allowed = { always = no }
+			available = {
+				OR = {
+					has_government = monarchy
+					has_government = democratic
+					has_government = neutrality
+				}
+			}
+			cancel = {
+			    NOT = {
+				    OR = {
+		                has_idea = IRQ_anglo_iraqi_treaty_new
+		                has_idea = IRQ_anglo_iraqi_treaty_new_2
+			            has_idea = IRQ_anglo_iraqi_treaty_new_3
+			            has_idea = IRQ_anglo_iraqi_treaty_new_4
+		            }
+				}
+			}
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = chi_war_of_resistance3
+            modifier = {
+			    army_leader_cost_factor = -0.05
+				planning_speed = 0.05
+			}
+		}
+		IRQ_anglo_iraqi_economical_treaty = {
+			allowed = { always = no }
+			available = {
+				OR = {
+					has_government = monarchy
+					has_government = democratic
+					has_government = neutrality
+				}
+			}
+			cancel = {
+			    NOT = {
+				    OR = {
+		                has_idea = IRQ_anglo_iraqi_treaty_new
+		                has_idea = IRQ_anglo_iraqi_treaty_new_2
+			            has_idea = IRQ_anglo_iraqi_treaty_new_3
+			            has_idea = IRQ_anglo_iraqi_treaty_new_4
+		            }
+				}
+			}
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = chi_war_of_resistance3
+            modifier = {
+                consumer_goods_factor = -0.05
+			}
+		}
+		IRQ_shia_compromise = {
+			allowed = { always = no }
+			available = {
+				OR = {
+					has_government = monarchy
+					has_government = democratic
+					has_government = neutrality
+				}
+			}
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = chi_war_of_resistance3
+			modifier = {
+				political_power_factor = -0.2
+				consumer_goods_factor = 0.05
+			}
+		}
+		IRQ_kurd_supressing = {
+			allowed = { always = no }
+			available = {
+				OR = {
+					has_government = monarchy
+					has_government = democratic
+					has_government = neutrality
+					has_government = fascism
+				}
+			}
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = chi_war_of_resistance3
+			modifier = {
+                send_volunteers_tension = -0.35
+			}
+		}
+		IRQ_minorites_in_army = {
+			allowed = { always = no }
+			available = {
+				OR = {
+					has_government = monarchy
+					has_government = democratic
+					has_government = neutrality
+					has_government = fascism
+				}
+			}
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = chi_war_of_resistance3
+			modifier = {
+                recruitable_population_factor = 0.1
+			}
+		}
+		IRQ_sunnite_revanchism = {
+			allowed = { always = no }
+			available = {
+				OR = {
+					has_government = monarchy
+					has_government = democratic
+					has_government = neutrality
+					has_government = fascism
+				}
+			}
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = chi_war_of_resistance3
+			modifier = {
+                fascism_drift = 0.01
+			}
+		}
+		IRQ_strength_sunnite_revanchism = {
+			allowed = { always = no }
+			available = {
+				OR = {
+					has_government = monarchy
+					has_government = democratic
+					has_government = neutrality
+					has_government = fascism
+				}
+			}
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = chi_war_of_resistance3
+			modifier = {
+                war_support_factor = 0.2
+				army_core_attack_factor = 0.2
+				army_core_defence_factor = 0.2
+			}
+		}
+		IRQ_sunnite_revanchism_victory = {
+			allowed = { always = no }
+			available = {
+				OR = {
+					has_government = monarchy
+					has_government = democratic
+					has_government = neutrality
+					has_government = fascism
+				}
+			}
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = chi_war_of_resistance3
+			modifier = {
+                army_org_factor = 0.1
+				resistance_growth_on_our_occupied_states = 0.1
+			}
+		}
+		IRQ_knights_of_allah = {
+			allowed = { always = no }
+			available = {
+				OR = {
+					has_government = monarchy
+					has_government = democratic
+					has_government = neutrality
+					has_government = fascism
+				}
+			}
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = chi_war_of_resistance3
+			modifier = {
+                stability_factor = -0.05
+				army_org = 0.05
+				high_command_cost_factor = -0.05
+				army_leader_cost_factor = -0.05
+				generate_wargoal_tension = -0.05
+				enemy_justify_war_goal_time = 0.05
+			}
+		}
+		IRQ_knights_of_arabism = {
+			allowed = { always = no }
+			available = {
+				OR = {
+					has_government = monarchy
+					has_government = democratic
+					has_government = neutrality
+					has_government = fascism
+				}
+			}
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = chi_war_of_resistance3
+			modifier = {
+                war_support_factor = 0.1
+				stability_factor = -0.1
+				army_org = 0.1
+                resistance_damage_to_garrison -0.1
+			}
+		}
+		IRQ_military_state = {
+			allowed = { always = no }
+			available = {
+				OR = {
+					has_government = monarchy
+					has_government = democratic
+					has_government = neutrality
+					has_government = fascism
+				}
+			}
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = chi_war_of_resistance3
+			modifier = {
+                army_org = 0.5
+				war_support_factor = 0.5
+			}
+		}
+		IRQ_implement_panarabist_programm = {
+			allowed = { always = no }
+			available = {
+				OR = {
+					has_government = monarchy
+					has_government = democratic
+					has_government = neutrality
+					has_government = fascism
+				}
+			}
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = chi_war_of_resistance3
+			targeted_modifier = {
+			    tag = SAU
+				tag = SYR
+				tag = BPL
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+			}
+		}
+		IRQ_hashemites_arabian_leaders = {
+			allowed = { always = no }
+			available = {
+				OR = {
+					has_government = monarchy
+					has_government = democratic
+					has_government = neutrality
+				}
+			}
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = chi_war_of_resistance3
+			modifier = {
+			    compilance_growth = 0.05
+			    stability_factor = 0.05
+			    monarchy_drift = 0.1
+                army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+		}
+		IRQ_army_loyal_nation = {
+			allowed = { always = no }
+			available = {
+				OR = {
+					has_government = monarchy
+					has_government = democratic
+					has_government = neutrality
+					has_government = fascism
+				}
+			}
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = chi_war_of_resistance3
+			modifier = {
+			    army_attack_factor = 0.05
+				army_attack_factor = 0.05
+				recruitable_population_factor = 0.1			
+			}
+		}
+		IRQ_army_loyal_king = {
+			allowed = { always = no }
+			available = {
+				OR = {
+					has_government = monarchy
+					has_government = democratic
+					has_government = neutrality
+				}
+			}
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = chi_war_of_resistance3
+			modifier = {
+			    army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+				resistance_growth = -0.1
+			}
+		}
+		IRQ_iraqi_ecenomic_save = {
+			allowed = { always = no }
+			available = {
+				OR = {
+					has_government = monarchy
+					has_government = democratic
+					has_government = neutrality
+				}
+			}
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = chi_war_of_resistance3
+			modifier = {
+				consumer_goods_factor = 0.05
+			}
+		}
+		IRQ_probritish_programms = {
+			allowed = { always = no }
+			available = {
+				OR = {
+					has_government = monarchy
+					has_government = democratic
+					has_government = neutrality
+				}
+			}
+			cancel = {
+			    OR = {
+			        has_country_flag = IRQ_political_course_change
+				    has_war_with = ENG
+				}
+			}
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = chi_war_of_resistance3
+			modifier = {
+				stability_factor = 0.05
+				neutrality_drift = 0.01
+			}
+		}
+		IRQ_tame_progerman_sentiments = {
+			allowed = { always = no }
+			available = {
+				OR = {
+					has_government = monarchy
+					has_government = democratic
+					has_government = neutrality
+				}
+			}
+			cancel = {
+			    OR = {
+			        has_government - fascism
+				    is_in_faction_with = GER
+				}
+			}
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = chi_war_of_resistance3
+			modifier = {
+				fascism_drift = -0.05
+			}
+		}
+		IRQ_indian_management_experience = {
+			allowed = { always = no }
+			available = {
+				OR = {
+					has_government = monarchy
+					has_government = democratic
+					has_government = neutrality
+				}
+			}
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = chi_war_of_resistance3
+			modifier = {
+				political_power_factor = 0.05
+			}
+		}
+		IRQ_use_rupees = {
+			allowed = { always = no }
+			available = {
+				OR = {
+					has_government = monarchy
+					has_government = democratic
+					has_government = neutrality
+				}
+			}
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = chi_war_of_resistance3
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		IRQ_british_agents_networth = {
+			allowed = { always = no }
+			available = {
+				OR = {
+					has_government = monarchy
+					has_government = democratic
+					has_government = neutrality
+				}
+			}
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = chi_war_of_resistance3
+			modifier = {
+			    operative_slot = 2
+			}
+		}
+		IRQ_political_enemy_control = {
+			allowed = { always = no }
+			available = {
+				OR = {
+					has_government = monarchy
+					has_government = democratic
+					has_government = neutrality
+				}
+			}
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = chi_war_of_resistance3
+			modifier = {
+			    decryption = 0.1
+			}
+		}
+		IRQ_country_control = {
+			allowed = { always = no }
+			available = {
+				OR = {
+					has_government = monarchy
+					has_government = democratic
+					has_government = neutrality
+				}
+			}
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			picture = chi_war_of_resistance3
+			modifier = {
+			    drift_defence_factor = 0.1
+			    stability_factor = 0.1
+			    encryption = 0.1
+			}
+		}
+	}
+}

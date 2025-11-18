@@ -1,0 +1,116 @@
+ENG_kill_taha_al_hashimi = {
+	icon = GFX_operations_coup_government
+	map_icon = GFX_operations_coup_government_map
+	name = ENG_kill_taha_al_hashimi
+	desc = ENG_kill_taha_al_hashimi_desc
+	days = 40
+
+	allowed = {
+		original_tag = ENG
+	}
+	visible = {
+	    has_country_flag = ENG_kill_hashimi
+	}
+	operatives = 1
+	network_strength = 50
+	risk_chance = 0.4
+	equipment = {
+	    support_equipment = 20
+	}
+	outcome_execute = { 
+		FROM = {
+			country_event = { id = NWiraq.37 }
+		}
+	}
+
+	phases = { 
+		infiltration_border = { base = 33 } 
+		infiltration_paradrop = { 
+			base = 33 
+			modifier = {
+				ROOT = { has_equipment = { transport_plane_equipment < 1 } }
+				factor = 0.1
+			}
+		} 
+		infiltration_diplomatic = { base = 33 }
+	}
+	phases = {
+		lar_fra_coup_pre_position_units = { base = 40 }
+		lar_fra_launch_coup = { base = 40 }
+		infiltrate_military_ideological_supporter = {
+			base = 20
+			modifier = {
+				FROM = { has_government = ROOT }
+				factor = 0
+			}
+		}
+	}
+	phases = { #exfiltration
+		exfiltration_air_pickup = {
+			base = 15 
+			modifier = {
+				ROOT = { 
+					has_equipment = {
+						transport_plane_equipment < 1
+					}
+				}
+				factor = 0.1 #less likely if we have no transports
+			}
+		}
+		exfiltration_border = { base = 50 }
+		exfiltration_go_to_ground = { base = 35 }
+	}
+}
+ENG_kill_ghazi_i = {
+	icon = GFX_operations_coup_government
+	map_icon = GFX_operations_coup_government_map
+	name = ENG_kill_ghazi_i
+	desc = ENG_kill_ghazi_i_desc
+	days = 40
+
+	allowed = {
+		original_tag = ENG
+	}
+	visible = {
+	    has_country_flag = ENG_kill_ghazi_i
+	}
+	operatives = 2
+	network_strength = 60
+	risk_chance = 0.5
+	equipment = {
+	    transport_plane_equipment = 1
+	    support_equipment = 20
+	}
+	outcome_execute = { 
+		FROM = {
+			country_event = { id = NWiraq.59 }
+		}
+	}
+
+	phases = { 
+		infiltration_border = { base = 33 } 
+		infiltration_paradrop = { 
+			base = 33 
+		} 
+		infiltration_diplomatic = { base = 33 }
+	}
+	phases = {
+		lar_fra_coup_pre_position_units = { base = 40 }
+		lar_fra_launch_coup = { base = 40 }
+		infiltrate_military_ideological_supporter = {
+			base = 20
+			modifier = {
+				FROM = { has_government = ROOT }
+				factor = 0
+			}
+		}
+	}
+	phases = { #exfiltration
+		exfiltration_air_pickup = {
+			base = 15 
+		}
+		exfiltration_border = { base = 50 }
+		exfiltration_go_to_ground = { base = 35 }
+	}
+}
+

@@ -1,0 +1,3270 @@
+# Allows you to create your own dynamic keys
+# to be called in localization.
+# defined_text -> this is it, we're defining the text
+# text -> a discrete entry that can be picked to display in loc.
+# trigger -> determines if a text entry will be picked or not.
+# (The triggers need to be valid for the scope the key is called in
+# (eg Root or From.From).)
+# localization_key -> points to the localization key
+# that'll be used if trigger passes
+
+defined_text = { #Mechanic
+	name = DemocraticPartyInCoalition
+	text = {
+		trigger = { is_in_array = { coalition_array = token:democratic } }
+		localization_key = dem_party_in_coalition_loc
+	}
+}
+defined_text = { #Mechanic
+	name = CommunistPartyInCoalition
+	text = {
+		trigger = { is_in_array = { coalition_array = token:communism } }
+		localization_key = com_party_in_coalition_loc
+	}
+}
+defined_text = { #Mechanic
+	name = FascistPartyInCoalition
+	text = {
+		trigger = { is_in_array = { coalition_array = token:fascism } }
+		localization_key = fasc_party_in_coalition_loc
+	}
+}
+defined_text = { #Mechanic
+	name = AuthoritarianPartyInCoalition
+	text = {
+		trigger = { is_in_array = { coalition_array = token:neutrality } }
+		localization_key = aut_party_in_coalition_loc
+	}
+}
+defined_text = { #Mechanic
+	name = TechnocraticPartyInCoalition
+	text = {
+		trigger = { is_in_array = { coalition_array = token:technocracy } }
+		localization_key = tech_party_in_coalition_loc
+	}
+}
+defined_text = { #Mechanic
+	name = TrotskyistPartyInCoalition
+	text = {
+		trigger = { is_in_array = { coalition_array = token:trozkism } }
+		localization_key = trotz_party_in_coalition_loc
+	}
+}
+defined_text = { #Mechanic
+	name = MonarchistPartyInCoalition
+	text = {
+		trigger = { is_in_array = { coalition_array = token:monarchy } }
+		localization_key = mon_party_in_coalition_loc
+	}
+}
+defined_text = { #Mechanic
+	name = AnarchistPartyInCoalition
+	text = {
+		trigger = { is_in_array = { coalition_array = token:anarchism } }
+		localization_key = ana_party_in_coalition_loc
+	}
+}
+
+# China
+defined_text = {
+	name = ChinaGetProvinceName
+	text = {
+		trigger = { state = 617 }
+		localization_key = xinjiang
+	}
+	text = {
+		trigger = { state = 754 }
+		localization_key = qinghai
+	}
+	text = {
+		trigger = { state = 283 }
+		localization_key = gansu
+	}
+	text = {
+		trigger = { state = 616 }
+		localization_key = ningxia
+	}
+	text = {
+		trigger = { state = 744 }
+		localization_key = shensi
+	}
+	text = {
+		trigger = { state = 615 }
+		localization_key = shansi
+	}
+	text = {
+		trigger = { state = 621 }
+		localization_key = suiyuan
+	}
+	text = {
+		trigger = { state = 611 }
+		localization_key = chahar
+	}
+	text = {
+		trigger = { state = 608 }
+		localization_key = hebei
+	}
+	text = {
+		trigger = { state = 597 }
+		localization_key = shandong
+	}
+	text = {
+		trigger = { state = 607 }
+		localization_key = henan
+	}
+	text = {
+		trigger = { state = 598 }
+		localization_key = jiangsu
+	}
+	text = {
+		trigger = { state = 606 }
+		localization_key = anhui
+	}
+	text = {
+		trigger = { state = 596 }
+		localization_key = zhejiang
+	}
+	text = {
+		trigger = { state = 595 }
+		localization_key = fujian
+	}
+	text = {
+		trigger = { state = 600 }
+		localization_key = jiangxi
+	}
+	text = {
+		trigger = { state = 620 }
+		localization_key = hubei
+	}
+	text = {
+		trigger = { state = 602 }
+		localization_key = hunan
+	}
+	text = {
+		trigger = { state = 603 }
+		localization_key = guizhou
+	}
+	text = {
+		trigger = { state = 599 }
+		localization_key = guangxi
+	}
+	text = {
+		trigger = { state = 592 }
+		localization_key = guangdong
+	}
+	text = {
+		trigger = { state = 325 }
+		localization_key = yunnan
+	}
+	text = {
+		trigger = { state = 605 }
+		localization_key = sichuan
+	}
+	text = {
+		trigger = { state = 751 }
+		localization_key = sikan
+	}
+	text = {
+		trigger = { state = 610 }
+		localization_key = zhehe
+	}
+	text = {
+		trigger = { state = 328 }
+		localization_key = girin
+	}
+	text = {
+		trigger = { state = 714 }
+		localization_key = heilongjiang
+	}
+	text = {
+		trigger = { state = 716 }
+		localization_key = fengtian
+	}
+	text = {
+		trigger = { state = 757 }
+		localization_key = tibet
+	}
+	text = {
+		trigger = { state = 957 }
+		localization_key = outer_mongolia
+	}
+	text = {
+		trigger = { state = 524 }
+		localization_key = taiwan
+	}
+	text = {
+		trigger = { state = 326 }
+		localization_key = hong_kong
+	}
+	text = {
+		trigger = { state = 728 }
+		localization_key = guangzhouwan
+	}
+	text = {
+		trigger = { state = 729 }
+		localization_key = macau
+	}
+	text = {
+		trigger = { state = 745 }
+		localization_key = dalian
+	}
+	text = {
+		trigger = { state = 1145 }
+		localization_key = shanghai
+	}
+}
+
+#Vanila FIX
+defined_text = {
+	name = GetRoyalTankRegimentName
+	text = {
+		trigger = {
+			original_tag = ENG
+			OR = {
+				has_government = democratic
+				has_government = fascism
+				has_government = neutrality
+				has_government = monarchy
+			}
+		}
+		localization_key = ENG_ROYAL_TANK_REGIMENT_NAME_HISTORICAL
+	}
+	text = {
+		trigger = {
+			original_tag = ENG
+			OR = {
+				has_government = communism
+				has_government = trozkism
+				has_government = anarchism
+			}
+		}
+		localization_key = ENG_ROYAL_TANK_REGIMENT_NAME_COMMUNIST
+	}
+}
+defined_text = {
+	name = GetRoyalTankRegimentDesc
+	text = {
+		trigger = {
+			original_tag = ENG
+			OR = {
+				has_government = democratic
+				has_government = fascism
+				has_government = neutrality
+				has_government = monarchy
+			}
+		}
+		localization_key = ENG_ROYAL_TANK_REGIMENT_DESC_HISTORICAL
+	}
+	text = {
+		trigger = {
+			original_tag = ENG
+			OR = {
+				has_government = communism
+				has_government = trozkism
+				has_government = anarchism
+			}
+		}
+		localization_key = ENG_ROYAL_TANK_REGIMENT_DESC_COMMUNIST
+	}
+}
+
+defined_text = {
+	name = GetRoyalOrdnanceFactoriesName
+	text = {
+		trigger = {
+			original_tag = ENG
+			OR = {
+				has_government = democratic
+				has_government = fascism
+				has_government = neutrality
+				has_government = monarchy
+			}
+		}
+		localization_key = ENG_ROYAL_ORDNANCE_FACTORIES_NAME_HISTORICAL
+	}
+	text = {
+		trigger = {
+			original_tag = ENG
+			OR = {
+				has_government = communism
+				has_government = trozkism
+				has_government = anarchism
+			}
+		}
+		localization_key = ENG_ROYAL_ORDNANCE_FACTORIES_NAME_COMMUNIST
+	}
+}
+defined_text = {
+	name = GetRoyalOrdnanceFactoriesDesc
+	text = {
+		trigger = {
+			original_tag = ENG
+			OR = {
+				has_government = democratic
+				has_government = fascism
+				has_government = neutrality
+				has_government = monarchy
+			}
+		}
+		localization_key = ENG_ROYAL_ORDNANCE_FACTORIES_DESC_HISTORICAL
+	}
+	text = {
+		trigger = {
+			original_tag = ENG
+			OR = {
+				has_government = communism
+				has_government = trozkism
+				has_government = anarchism
+			}
+		}
+		localization_key = ENG_ROYAL_ORDNANCE_FACTORIES_DESC_COMMUNIST
+	}
+}
+
+
+
+#NW
+
+defined_text = { # Country
+	name = GetTurKurdishAutonomyName
+	text = {
+		trigger = {
+			original_tag = TUR
+			has_country_flag = TUR_kurdish_autonomy_tranform
+		}
+		localization_key = TUR_KURDISH_AUTONOMY_RETURN_NAME
+	}
+	text = {
+		localization_key = TUR_KURDISH_AUTONOMY_NAME
+	}
+}
+
+defined_text = { # Country
+	name = GetInvitationToBUName
+	text = {
+		trigger = {
+			original_tag = HUN
+			has_cosmetic_tag = HABSBURGS
+		}
+		localization_key = GRE_INVITE_HABSBURG
+	}
+	text = {
+		localization_key = GRE_INVITE_HUNGARY
+	}
+}
+
+defined_text = { # Country
+	name = GetStalinineName
+	text = {
+		trigger = {
+			has_country_flag = alliance_with_kremlin_block_flag
+		}
+		localization_key = FRC_TORES_LINE_NAME
+	}
+	text = {
+		localization_key = FRC_STALIN_LINE_NAME
+	}
+}
+
+defined_text = { # Country
+	name = GetSpanishBourbonsName
+	text = {
+		trigger = {
+			has_global_flag = scw_over
+			SPA = { has_government = monarchy }
+		}
+		localization_key = FRA_SPANISH_BOURBONS_NAME
+	}
+	text = {
+		localization_key = FRA_SPANISH_COUNTERREVOLUTIONARIES_NAME
+	}
+}
+
+
+
+
+defined_text = {
+	name = f_agressive_level
+	text = {
+		trigger = {
+			SPR = { check_variable = { f_agressive_level_var = 1 } }
+		}
+		localization_key = agressive_level_red
+	}
+	text = {
+		trigger = {
+			SPR = { check_variable = { f_agressive_level_var = 2 } }
+		}
+		localization_key = agressive_level_yellow
+	}
+	text = {
+		trigger = {
+			SPR = { check_variable = { f_agressive_level_var = 3 } }
+		}
+		localization_key = agressive_level_green
+	}
+}
+defined_text = {
+	name = f_influence_level
+	text = {
+		trigger = {
+			SPR = { check_variable = { f_influence_level_var = 1 } }
+		}
+		localization_key = influence_level_low
+	}
+	text = {
+		trigger = {
+			SPR = { check_variable = { f_influence_level_var = 2 } }
+		}
+		localization_key = influence_level_medium
+	}
+	text = {
+		trigger = {
+			SPR = { check_variable = { f_influence_level_var = 3 } }
+		}
+		localization_key = influence_level_hight
+	}
+}
+
+defined_text = {
+	name = karl_agressive_level
+	text = {
+		trigger = {
+			SPR = { check_variable = { karl_agressive_level_var = 1 } }
+		}
+		localization_key = agressive_level_red
+	}
+	text = {
+		trigger = {
+			SPR = { check_variable = { karl_agressive_level_var = 2 } }
+		}
+		localization_key = agressive_level_yellow
+	}
+	text = {
+		trigger = {
+			SPR = { check_variable = { karl_agressive_level_var = 3 } }
+		}
+		localization_key = agressive_level_green
+	}
+}
+defined_text = {
+	name = karl_influence_level
+	text = {
+		trigger = {
+			SPR = { check_variable = { karl_influence_level_var = 1 } }
+		}
+		localization_key = influence_level_low
+	}
+	text = {
+		trigger = {
+			SPR = { check_variable = { karl_influence_level_var = 2 } }
+		}
+		localization_key = influence_level_medium
+	}
+	text = {
+		trigger = {
+			SPR = { check_variable = { karl_influence_level_var = 3 } }
+		}
+		localization_key = influence_level_hight
+	}
+}
+
+defined_text = {
+	name = nk_agressive_level
+	text = {
+		trigger = {
+			SPR = { check_variable = { nk_agressive_level_var = 1 } }
+		}
+		localization_key = agressive_level_red
+	}
+	text = {
+		trigger = {
+			SPR = { check_variable = { nk_agressive_level_var = 2 } }
+		}
+		localization_key = agressive_level_yellow
+	}
+	text = {
+		trigger = {
+			SPR = { check_variable = { nk_agressive_level_var = 3 } }
+		}
+		localization_key = agressive_level_green
+	}
+}
+defined_text = {
+	name = nk_influence_level
+	text = {
+		trigger = {
+			SPR = { check_variable = { nk_influence_level_var = 1 } }
+		}
+		localization_key = influence_level_low
+	}
+	text = {
+		trigger = {
+			SPR = { check_variable = { nk_influence_level_var = 2 } }
+		}
+		localization_key = influence_level_medium
+	}
+	text = {
+		trigger = {
+			SPR = { check_variable = { nk_influence_level_var = 3 } }
+		}
+		localization_key = influence_level_hight
+	}
+}
+
+defined_text = {
+	name = comm_agressive_level
+	text = {
+		trigger = {
+			SPR = { check_variable = { comm_agressive_level_var = 1 } }
+		}
+		localization_key = agressive_level_red
+	}
+	text = {
+		trigger = {
+			SPR = { check_variable = { comm_agressive_level_var = 2 } }
+		}
+		localization_key = agressive_level_yellow
+	}
+	text = {
+		trigger = {
+			SPR = { check_variable = { comm_agressive_level_var = 3 } }
+		}
+		localization_key = agressive_level_green
+	}
+}
+defined_text = {
+	name = comm_influence_level
+	text = {
+		trigger = {
+			SPR = { check_variable = { comm_influence_level_var = 1 } }
+		}
+		localization_key = influence_level_low
+	}
+	text = {
+		trigger = {
+			SPR = { check_variable = { comm_influence_level_var = 2 } }
+		}
+		localization_key = influence_level_medium
+	}
+	text = {
+		trigger = {
+			SPR = { check_variable = { comm_influence_level_var = 3 } }
+		}
+		localization_key = influence_level_hight
+	}
+}
+
+defined_text = {
+	name = sd_agressive_level
+	text = {
+		trigger = {
+			SPR = { check_variable = { sd_agressive_level_var = 1 } }
+		}
+		localization_key = agressive_level_red
+	}
+	text = {
+		trigger = {
+			SPR = { check_variable = { sd_agressive_level_var = 2 } }
+		}
+		localization_key = agressive_level_yellow
+	}
+	text = {
+		trigger = {
+			SPR = { check_variable = { sd_agressive_level_var = 3 } }
+		}
+		localization_key = agressive_level_green
+	}
+}
+defined_text = {
+	name = sd_influence_level
+	text = {
+		trigger = {
+			SPR = { check_variable = { sd_influence_level_var = 1 } }
+		}
+		localization_key = influence_level_low
+	}
+	text = {
+		trigger = {
+			SPR = { check_variable = { sd_influence_level_var = 2 } }
+		}
+		localization_key = influence_level_medium
+	}
+	text = {
+		trigger = {
+			SPR = { check_variable = { sd_influence_level_var = 3 } }
+		}
+		localization_key = influence_level_hight
+	}
+}
+
+defined_text = {
+	name = a_agressive_level
+	text = {
+		trigger = {
+			SPR = { check_variable = { a_agressive_level_var = 1 } }
+		}
+		localization_key = agressive_level_red
+	}
+	text = {
+		trigger = {
+			SPR = { check_variable = { a_agressive_level_var = 2 } }
+		}
+		localization_key = agressive_level_yellow
+	}
+	text = {
+		trigger = {
+			SPR = { check_variable = { a_agressive_level_var = 3 } }
+		}
+		localization_key = agressive_level_green
+	}
+}
+defined_text = {
+	name = a_influence_level
+	text = {
+		trigger = {
+			SPR = { check_variable = { a_influence_level_var = 1 } }
+		}
+		localization_key = influence_level_low
+	}
+	text = {
+		trigger = {
+			SPR = { check_variable = { a_influence_level_var = 2 } }
+		}
+		localization_key = influence_level_medium
+	}
+	text = {
+		trigger = {
+			SPR = { check_variable = { a_influence_level_var = 3 } }
+		}
+		localization_key = influence_level_hight
+	}
+}
+
+defined_text = { 
+	name = PropagandaName
+	text = {
+		trigger = {
+			original_tag = POL
+		}
+		localization_key = POL_propaganda
+	}
+	text = {
+		trigger = {
+			original_tag = HOL
+		}
+		localization_key = HOL_propaganda
+	}
+	text = {
+		localization_key = other_propaganda
+	}
+}
+
+defined_text = { 
+	name = RequestAidName
+	text = {
+		trigger = {
+			original_tag = POL
+		}
+		localization_key = POL_request_aid_for_the_engelandvaarders
+	}
+	text = {
+		trigger = {
+			original_tag = HOL
+		}
+		localization_key = HOL_request_aid_for_the_engelandvaarders
+	}
+	text = {
+		localization_key = other_request_aid_for_the_engelandvaarders
+	}
+}
+
+defined_text = { 
+	name = RequestAidNameDesc
+	text = {
+		trigger = {
+			original_tag = POL
+		}
+		localization_key = POL_request_aid_for_the_engelandvaarders_desc
+	}
+	text = {
+		trigger = {
+			original_tag = HOL
+		}
+		localization_key = HOL_request_aid_for_the_engelandvaarders_desc
+	}
+	text = {
+		localization_key = other_request_aid_for_the_engelandvaarders_desc
+	}
+}
+
+defined_text = { 
+	name = FormRebelArmyName
+	text = {
+		trigger = {
+			original_tag = POL
+			NOT = { has_government = communism has_government = trozkism }
+		}
+		localization_key = POL_form_a_rebel_army
+	}
+	text = {
+		trigger = {
+			original_tag = POL
+			OR = { has_government = communism has_government = trozkism }
+		}
+		localization_key = POL_form_a_rebel_army_al
+	}
+	text = {
+		localization_key = other_form_a_rebel_army
+	}
+}
+
+defined_text = { 
+	name = AirbornSpecialForcesName
+	text = {
+		trigger = {
+			original_tag = POL
+		}
+		localization_key = POL_airborne_special_forces_on_the_occupied_territory
+	}
+	text = {
+		localization_key = other_airborne_special_forces_on_the_occupied_territory
+	}
+}
+
+defined_text = { 
+	name = ResistanceMovementsDescName
+	text = {
+		trigger = {
+			has_country_flag = Form_rebel_army
+			any_of_scopes = {
+				array = ROOT.core_states
+				is_owned_by = ROOT
+				NOT = { is_controlled_by = ROOT }
+			}
+		}
+		localization_key = flag_resistance_movements_desc
+	}
+	text = {
+		trigger = {
+			has_country_flag = Form_rebel_army
+			NOT = {
+				any_of_scopes = {
+					array = ROOT.core_states
+					is_owned_by = ROOT
+					NOT = { is_controlled_by = ROOT }
+				}
+			}
+		}
+		localization_key = victory_resistance_movements_desc
+	}
+	text = {
+		localization_key = start_resistance_movements_desc
+	}
+}
+
+defined_text = { 
+	name = RebelManpowerName
+	text = {
+		trigger = {
+			ROOT = { check_variable = { rebel_manpower@ROOT < 4000 } }
+		}
+		localization_key = red_rebel_manpower
+	}
+	text = {
+		trigger = {
+			ROOT = { 
+				check_variable = { rebel_manpower@ROOT < 6600 }	
+				NOT = {  check_variable = { rebel_manpower@ROOT < 4000 } }
+			}
+		}
+		localization_key = yellow_rebel_manpower
+	}
+	text = {
+		trigger = {
+			ROOT = { check_variable = { rebel_manpower@ROOT > 6599 } }
+		}
+		localization_key = green_rebel_manpower
+	}
+}
+
+defined_text = { 
+	name = RebelInfantryName
+	text = {
+		trigger = {
+			ROOT = { check_variable = { rebel_infantry_equipment@ROOT < 400 } }
+		}
+		localization_key = red_rebel_infantry_equipment
+	}
+	text = {
+		trigger = {
+			ROOT = { 
+				check_variable = { rebel_infantry_equipment@ROOT < 610 }
+				NOT = {  check_variable = { rebel_infantry_equipment@ROOT < 400 } }				
+			}
+		}
+		localization_key = yellow_rebel_infantry_equipment
+	}
+	text = {
+		trigger = {
+			ROOT = { check_variable = { rebel_infantry_equipment@ROOT > 609 } }
+		}
+		localization_key = green_rebel_infantry_equipment
+	}
+}
+
+defined_text = { 
+	name = RebelSupportName
+	text = {
+		trigger = {
+			ROOT = { check_variable = { rebel_support_equipment@ROOT < 30 } }
+		}
+		localization_key = red_rebel_support_equipment
+	}
+	text = {
+		trigger = {
+			ROOT = { check_variable = { rebel_support_equipment@ROOT > 29 } }
+		}
+		localization_key = green_rebel_support_equipment
+	}
+}
+
+defined_text = { 
+	name = RebelArtilleryName
+	text = {
+		trigger = {
+			ROOT = { check_variable = { rebel_artillery_equipment@ROOT < 12 } }
+		}
+		localization_key = red_rebel_artillery_equipment
+	}
+	text = {
+		trigger = {
+			ROOT = { check_variable = { rebel_artillery_equipment@ROOT > 11 } }
+		}
+		localization_key = green_rebel_artillery_equipment
+	}
+}
+
+defined_text = {
+	name = CzasWName
+	text = {
+		trigger = {
+			original_tag = POL
+			OR = {
+				AND = {
+					owns_state = 10
+					NOT = { controls_state = 10 }
+				}
+				AND = {
+					NOT = { owns_state = 10 }
+					NOT = { controls_state = 10 }
+					10 = { OWNER = { has_war_with = POL } }
+				}
+			}
+			NOT = { has_global_flag = POL_powstanie_warszawskie }
+			check_variable = { num_all_division@ROOT < 5 }
+		}
+		localization_key = POL_czas_w_warszawa
+	}
+	text = {
+		trigger = {
+			original_tag = POL
+			OR = {
+				AND = {
+					owns_state = 10
+					NOT = { controls_state = 10 }
+				}
+				AND = {
+					NOT = { owns_state = 10 }
+					NOT = { controls_state = 10 }
+					10 = { OWNER = { has_war_with = POL } }
+				}
+			}
+			NOT = { has_global_flag = POL_powstanie_warszawskie }
+		}
+		localization_key = POL_czas_w_polska
+	}
+	text = {
+		localization_key = other_czas_w
+	}
+}
+
+defined_text = { 
+	name = CzasWDescName
+	text = {
+		trigger = {
+			original_tag = POL
+			OR = {
+				AND = {
+					owns_state = 10
+					NOT = { controls_state = 10 }
+				}
+				AND = {
+					NOT = { owns_state = 10 }
+					NOT = { controls_state = 10 }
+					10 = { OWNER = { has_war_with = POL } }
+				}
+			}
+			NOT = { has_global_flag = POL_powstanie_warszawskie }
+		}
+		localization_key = POL_czas_w_desc
+	}
+	text = {
+		localization_key = other_czas_w_desc
+	}
+}
+
+defined_text = { 
+	name = RebelName
+	text = {
+		trigger = {
+			original_tag = POL
+			NOT = { has_government = communism has_government = trozkism }
+		}
+		localization_key = ak_rebelname
+	}
+	text = {
+		trigger = {
+			original_tag = POL
+			OR = { has_government = communism has_government = trozkism }
+		}
+		localization_key = al_rebelname
+	}
+	text = {
+		localization_key = other_rebelname
+	}
+}
+
+defined_text = { 
+	name = RecruitRebel
+	text = {
+		trigger = {
+			original_tag = POL
+			NOT = { has_government = communism has_government = trozkism }
+		}
+		localization_key = ak_recruit_to_the_rebel_army
+	}
+	text = {
+		trigger = {
+			original_tag = POL
+			OR = { has_government = communism has_government = trozkism }
+		}
+		localization_key = al_recruit_to_the_rebel_army
+	}
+	text = {
+		localization_key = other_recruit_to_the_rebel_army
+	}
+}
+
+defined_text = { 
+	name = LIT_POL_border_area
+	text = {
+		trigger = {
+			original_tag = POL
+			LIT = {
+				has_country_flag = LIT_ATT_WILNO
+				NOT = { has_country_flag = LIT_ATT_DRUSK }
+				NOT = { has_country_flag = LIT_ATT_SUWALKI }
+			}
+		}
+		localization_key = wilno_border_area_pol
+	}
+	text = {
+		trigger = {
+			original_tag = LIT
+			LIT = {
+				has_country_flag = LIT_ATT_WILNO
+				NOT = { has_country_flag = LIT_ATT_DRUSK }
+				NOT = { has_country_flag = LIT_ATT_SUWALKI }
+			}
+		}
+		localization_key = wilno_border_area_lit
+	}
+	text = {
+		trigger = {
+			LIT = {
+				NOT = { has_country_flag = LIT_ATT_WILNO }
+				has_country_flag = LIT_ATT_DRUSK
+				NOT = { has_country_flag = LIT_ATT_SUWALKI }
+			}
+		}
+		localization_key = drusk_border_area
+	}
+	text = {
+		trigger = {
+			LIT = {
+				NOT = { has_country_flag = LIT_ATT_WILNO }
+				NOT = { has_country_flag = LIT_ATT_DRUSK }
+				has_country_flag = LIT_ATT_SUWALKI
+			}
+		}
+		localization_key = suwalki_border_area
+	}
+	text = {
+		trigger = {
+			original_tag = POL
+			LIT = {
+				has_country_flag = LIT_ATT_WILNO
+				has_country_flag = LIT_ATT_DRUSK
+				NOT = { has_country_flag = LIT_ATT_SUWALKI }
+			}
+		}
+		localization_key = wilno_drusk_border_area_pol
+	}
+	text = {
+		trigger = {
+			original_tag = LIT
+			LIT = {
+				has_country_flag = LIT_ATT_WILNO
+				has_country_flag = LIT_ATT_DRUSK
+				NOT = { has_country_flag = LIT_ATT_SUWALKI }
+			}
+		}
+		localization_key = wilno_drusk_border_area_lit
+	}
+	text = {
+		trigger = {
+			LIT = {
+				NOT = { has_country_flag = LIT_ATT_WILNO }
+				has_country_flag = LIT_ATT_DRUSK
+				has_country_flag = LIT_ATT_SUWALKI
+			}
+		}
+		localization_key = drusk_suwalki_border_area
+	}
+	text = {
+		trigger = {
+			original_tag = POL
+			LIT = {
+				has_country_flag = LIT_ATT_WILNO
+				NOT = { has_country_flag = LIT_ATT_DRUSK }
+				has_country_flag = LIT_ATT_SUWALKI
+			}
+		}
+		localization_key = suwalki_wilno_border_area_pol
+	}
+	text = {
+		trigger = {
+			original_tag = LIT
+			LIT = {
+				has_country_flag = LIT_ATT_WILNO
+				NOT = { has_country_flag = LIT_ATT_DRUSK }
+				has_country_flag = LIT_ATT_SUWALKI
+			}
+		}
+		localization_key = suwalki_wilno_border_area_lit
+	}
+	text = {
+		trigger = {
+			original_tag = POL
+			LIT = {
+				has_country_flag = LIT_ATT_WILNO
+				has_country_flag = LIT_ATT_DRUSK
+				has_country_flag = LIT_ATT_SUWALKI
+			}
+		}
+		localization_key = all_border_area_pol
+	}
+	text = {
+		trigger = {
+			original_tag = LIT
+			LIT = {
+				has_country_flag = LIT_ATT_WILNO
+				has_country_flag = LIT_ATT_DRUSK
+				has_country_flag = LIT_ATT_SUWALKI
+			}
+		}
+		localization_key = all_border_area_lit
+	}
+	text = {
+		localization_key = none_border_area
+	}
+}
+
+defined_text = {
+	name = GetNameCongressInfluence
+	text = {
+		trigger = {
+			set_temp_variable = { congress_influence = num_of_congresses_var }
+			divide_temp_variable = { congress_influence = num_owned_states }
+			check_variable = { congress_influence < 0.250 }
+		}
+		localization_key = HHNBRG_CONGRESS_INFLUENCE_ZERO
+	}
+	text = {
+		trigger = {
+			set_temp_variable = { congress_influence = num_of_congresses_var }
+			divide_temp_variable = { congress_influence = num_owned_states }
+			check_variable = { congress_influence > 0.249 }
+			check_variable = { congress_influence < 0.50 }
+		}
+		localization_key = HHNBRG_CONGRESS_INFLUENCE_LOW
+	}
+	text = {
+		trigger = {
+			set_temp_variable = { congress_influence = num_of_congresses_var }
+			divide_temp_variable = { congress_influence = num_owned_states }
+			check_variable = { congress_influence > 0.499 }
+			check_variable = { congress_influence < 0.750 }
+		}
+		localization_key = HHNBRG_CONGRESS_INFLUENCE_MIDDLE
+	}
+	text = {
+		trigger = {
+			set_temp_variable = { congress_influence = num_of_congresses_var }
+			divide_temp_variable = { congress_influence = num_owned_states }
+			check_variable = { congress_influence > 0.749 }
+			check_variable = { congress_influence < 1 }
+		}
+		localization_key = HHNBRG_CONGRESS_INFLUENCE_HIGHT
+	}
+	text = {
+		trigger = {
+			set_temp_variable = { congress_influence = num_of_congresses_var }
+			divide_temp_variable = { congress_influence = num_owned_states }
+			check_variable = { congress_influence > 0.999 }
+		}
+		localization_key = HHNBRG_CONGRESS_INFLUENCE_ABSOLUTE
+	}
+}
+
+defined_text = {
+	name = GetNameRootTotalScore
+	text = {
+		trigger = {
+			check_variable = { var = root_total_score value = from_total_score compare = greater_than }
+		}
+		localization_key = ROOT_TOTAL_SCORE_GREATER
+	}
+	text = {
+		trigger = {
+			check_variable = { var = root_total_score value = from_total_score compare = equals }
+		}
+		localization_key = ROOT_TOTAL_SCORE_EQUALS
+	}
+	text = {
+		trigger = {
+			check_variable = { var = root_total_score value = from_total_score compare = less_than }
+		}
+		localization_key = ROOT_TOTAL_SCORE_LESS
+	}
+}
+
+defined_text = {
+	name = GetNameTurCreateSadabatPact
+	text = {
+		trigger = {
+			original_tag = TUR
+			OR = {
+				has_country_flag = TUR_dem_sadabad_flag
+				AND = {
+					date > 1937.06.01
+					PER = { NOT = { has_country_flag = saadabad_accept_flag } }
+				}
+				PER = {
+					focus_progress = {
+						focus = PER_create_the_sadabat_pact
+						progress > 0
+					}
+				}
+			}
+		}
+		localization_key = TUR_NAME_CREATE_THE_TUR_PACT
+	}
+	text = {
+		localization_key = TUR_NAME_CREATE_THE_SADABAT_PACT
+	}
+}
+
+defined_text = {
+	name = GetNameSovIntegrationSouthAzerbaijanProgress
+	text = {
+		trigger = {
+			SOV = { has_country_flag = PER_integration_south_azerbaijan_flag }
+		}
+		localization_key = SOV_INTEGRATION_SA_PROGRESS_ON
+	}
+	text = {
+		localization_key = SOV_INTEGRATION_SA_PROGRESS_OFF
+	}
+}
+
+defined_text = {
+	name = GetNameTurIntegrationSouthAzerbaijanProgress
+	text = {
+		trigger = {
+			TUR = { has_country_flag = PER_integration_south_azerbaijan_flag }
+		}
+		localization_key = TUR_INTEGRATION_SA_PROGRESS_ON
+	}
+	text = {
+		localization_key = TUR_INTEGRATION_SA_PROGRESS_OFF
+	}
+}
+
+defined_text = {
+	name = GetNamePerIntegrationSouthAzerbaijanProgress
+	text = {
+		trigger = {
+			country_exists = PER
+			PER = {
+				owns_state = 419
+				is_subject = yes
+				has_country_flag = PER_integration_south_azerbaijan_flag
+			}
+			
+		}
+		localization_key = PER_INTEGRATION_SA_PROGRESS_ON
+	}
+	text = {
+		localization_key = PER_INTEGRATION_SA_PROGRESS_OFF
+	}
+}
+
+defined_text = {
+	name = GetNameBelColAdoptNaziPrinciples
+	text = {
+		trigger = {
+			is_subject_of = event_target:NW_france_scope
+		}
+		localization_key = BEL_COL_ADOPT_NAZI_PRINCIPLES_FRA
+	}
+	text = {
+		localization_key = BEL_COL_ADOPT_NAZI_PRINCIPLES_NO_FRA
+	}
+}
+
+defined_text = {
+	name = GetNameBelOverlord
+	text = {
+		trigger = {
+			BEL = { is_subject_of = event_target:NW_france_scope }
+		}
+		localization_key = BEL_COL_OVERLORD_FRA
+	}
+	text = {
+		trigger = {
+			BEL = { is_subject_of = GER }
+		}
+		localization_key = BEL_COL_OVERLORD_GER
+	}
+	text = {
+		localization_key = BEL_COL_OVERLORD
+	}
+}
+
+defined_text = {
+	name = GetNameBelOverlordAdj
+	text = {
+		trigger = {
+			BEL = { is_subject_of = event_target:NW_france_scope }
+		}
+		localization_key = BEL_COL_OVERLORD_ADJ_FRA
+	}
+	text = {
+		trigger = {
+			BEL = { is_subject_of = GER }
+		}
+		localization_key = BEL_COL_OVERLORD_ADJ_GER
+	}
+	text = {
+		localization_key = BEL_COL_OVERLORD_ADJ
+	}
+}
+
+defined_text = {
+	name = GetNameBelColFullMemberAxis
+	text = {
+		trigger = {
+			is_subject_of = event_target:NW_france_scope
+		}
+		localization_key = BEL_COL_FULL_MEMBER_OF_AXIS_FRA
+	}
+	text = {
+		localization_key = BEL_COL_FULL_MEMBER_OF_AXIS_NO_FRA
+	}
+}
+
+defined_text = {
+	name = GetNameBelColOriginsWalloons
+	text = {
+		trigger = {
+			is_subject_of = event_target:NW_france_scope
+		}
+		localization_key = BEL_col_germanic_origins_of_walloons_idea
+	}
+	text = {
+		localization_key = BEL_COL_GERMANIC_ORIGINS_OF_WALLOONS
+	}
+}
+
+defined_text = {
+	name = GetNameBelColCooperationWithGermanAdministration
+	text = {
+		trigger = {
+			is_subject_of = event_target:NW_france_scope
+		}
+		localization_key = BEL_COL_COOPERATION_WITH_GERMAN_ADMINISTRATION_FRA
+	}
+	text = {
+		localization_key = BEL_COL_COOPERATION_WITH_GERMAN_ADMINISTRATION_NO_FRA
+	}
+}
+
+defined_text = {
+	name = GetNameGenericExpandRecruitingStation
+	text = {
+		trigger = {
+			check_variable = { recruiting_station_var_level = 1 }
+		}
+		localization_key = GENERIC_EXPAND_SHARED_BUILDING_SLOTS
+	}
+	text = {
+		trigger = {
+			check_variable = { recruiting_station_var_level = 2 }
+		}
+		localization_key = GENERIC_EXPAND_HOSPITAL
+	}
+	text = {
+		trigger = {
+			check_variable = { recruiting_station_var_level = 3 }
+		}
+		localization_key = GENERIC_EXPAND_MANPOWER
+	}
+	text = {
+		trigger = {
+			check_variable = { recruiting_station_var_level = 4 }
+		}
+		localization_key = GENERIC_EXPAND_INFRASTRUCTURE
+	}
+	text = {
+		trigger = {
+			check_variable = { recruiting_station_var_level = 5 }
+		}
+		localization_key = GENERIC_EXPAND_BUNKER
+	}
+	text = {
+		localization_key = GENERIC_EXPAND_RECRUITING_STATIONS
+	}
+}
+
+defined_text = {
+	name = GetNameBplJewsTensionsTotal
+	text = {
+		trigger = {
+			check_variable = { BPL_jews_tensions_total > 89.999 }
+		}
+		localization_key = BPL_JEWS_TENSIONS_TOTAL_RED
+	}
+	text = {
+		trigger = {
+			check_variable = { BPL_jews_tensions_total > 39.999 }
+		}
+		localization_key = BPL_JEWS_TENSIONS_TOTAL_YELLOW
+	}
+	text = {
+		trigger = {
+			check_variable = { BPL_jews_tensions_total < 40 }
+		}
+		localization_key = BPL_JEWS_TENSIONS_TOTAL_GREEN
+	}
+}
+
+defined_text = {
+	name = GetNameBplArabTensionsTotal
+	text = {
+		trigger = {
+			check_variable = { BPL_arab_tensions_total > 89.999 }
+		}
+		localization_key = BPL_ARAB_TENSIONS_TOTAL_RED
+	}
+	text = {
+		trigger = {
+			check_variable = { BPL_arab_tensions_total > 39.999 }
+		}
+		localization_key = BPL_ARAB_TENSIONS_TOTAL_YELLOW
+	}
+	text = {
+		trigger = {
+			check_variable = { BPL_arab_tensions_total < 40 }
+		}
+		localization_key = BPL_ARAB_TENSIONS_TOTAL_GREEN
+	}
+}
+
+defined_text = {
+	name = GetNameAnarchismUnityAddVar
+	text = {
+		trigger = {
+			check_variable = { anarchism_unity_add_var > 0 }
+		}
+		localization_key = anarchism_unity_add_var_plus
+	}
+	text = {
+		trigger = {
+			check_variable = { anarchism_unity_add_var = 0 }
+		}
+		localization_key = anarchism_unity_add_var_zero
+	}
+	text = {
+		trigger = {
+			check_variable = { anarchism_unity_add_var < 0 }
+		}
+		localization_key = anarchism_unity_add_var_minus
+	}
+}
+
+defined_text = {
+	name = GetNameBplBritishRule
+	text = {
+		trigger = {
+			is_subject_of = ENG
+		}
+		localization_key = BPL_british_rule_eng
+	}
+	text = {
+		trigger = {
+			is_subject_of = event_target:NW_france_scope
+		}
+		localization_key = BPL_british_rule_fra
+	}
+	text = {
+		localization_key = BPL_british_rule_free
+	}
+}
+
+defined_text = {
+	name = GetNameBplBritishRuleDesc
+	text = {
+		trigger = {
+			is_subject_of = ENG
+		}
+		localization_key = BPL_british_rule_desc_eng
+	}
+	text = {
+		trigger = {
+			is_subject_of = event_target:NW_france_scope
+		}
+		localization_key = BPL_british_rule_desc_fra
+	}
+	text = {
+		localization_key = BPL_british_rule_desc_free
+	}
+}
+
+defined_text = {
+	name = GetNameBplSupportForBritain
+	text = {
+		trigger = {
+			is_subject_of = ENG
+		}
+		localization_key = BPL_support_for_britain_eng
+	}
+	text = {
+		trigger = {
+			is_subject_of = event_target:NW_france_scope
+		}
+		localization_key = BPL_support_for_britain_fra
+	}
+	text = {
+		localization_key = BPL_support_for_britain_free
+	}
+}
+
+defined_text = {
+	name = GetNameBplSupportForBritainDesc
+	text = {
+		trigger = {
+			is_subject = yes
+		}
+		localization_key = BPL_support_for_britain_desc_subj
+	}
+	text = {
+		localization_key = BPL_support_for_britain_desc_free
+	}
+}
+
+defined_text = {
+	name = GetNWpersian86descAdd
+	text = {
+		trigger = {
+			OR = {
+				count_triggers = {
+					amount = 2
+					has_completed_focus = PER_second_clearing_agreement_with_germany
+					has_completed_focus = PER_attract_german_investors
+					has_completed_focus = PER_involvement_german_advisers
+				}
+				has_completed_focus = PER_treaty_with_germany
+			}
+		}
+		localization_key = NWpersian_86_desc_b
+	}
+	text = {
+		localization_key = NWpersian_86_desc_a
+	}
+}
+
+defined_text = {
+	name = GetNWpersian87descAdd
+	text = {
+		trigger = {
+			monarchy < 0.490
+		}
+		localization_key = NWpersian_87_desc_b
+	}
+	text = {
+		localization_key = NWpersian_87_desc_a
+	}
+}
+
+defined_text = {
+	name = GetNamePerAbolishMonarchy
+	text = {
+		trigger = {
+			OR = {
+				has_country_flag = NWpersian_221_flag
+				has_country_flag = NWpersian_222_flag
+			}
+		}
+		localization_key = PER_unnecessary_to_abolish_monarchy_2
+	}
+	text = {
+		localization_key = PER_unnecessary_to_abolish_monarchy_1
+	}
+}
+
+defined_text = {
+	name = GetNamePerCrownMohammedRezaPahlavi
+	text = {
+		trigger = {
+			has_country_flag = NWpersian_223_flag
+		}
+		localization_key = PER_crown_mohammed_reza_pahlavi_1
+	}
+	text = {
+		localization_key = PER_crown_mohammed_reza_pahlavi_2
+	}
+}
+
+defined_text = {
+	name = GetNameFraProgramDaladier
+	text = {
+		trigger = {
+			original_tag = FRC
+		}
+		localization_key = FRC_army_upgrade_program
+	}
+	text = {
+		localization_key = FRA_program_daladier_name
+	}
+}
+
+defined_text = {
+	name = GetAttractingPublicAttention
+	text = {
+		trigger = {
+			NOT = {
+				has_country_flag = NWgeneric_110_a
+				has_country_flag = NWgeneric_110_b
+				has_country_flag = NWgeneric_110_c
+				has_country_flag = NWgeneric_111_a
+				has_country_flag = NWgeneric_111_b
+				has_country_flag = NWgeneric_111_c
+				has_country_flag = NWgeneric_112_a
+				has_country_flag = NWgeneric_112_b
+				has_country_flag = NWgeneric_112_c
+			}
+		}
+		localization_key = GET_ATTRACTING_PUBLIC_ATTENTION_ZERO
+	}
+	text = {
+		localization_key = GET_ATTRACTING_PUBLIC_ATTENTION
+	}
+}
+
+defined_text = {
+	name = GetNameStructureOfAnarchoKemalism
+	text = {
+		trigger = {
+			check_variable = { structure_of_anarcho_kemalism_var < 0 }
+		}
+		localization_key = STRUCTURE_OF_ANARCHO_KEMALISM_VAR_LOW
+	}
+	text = {
+		trigger = {
+			check_variable = { structure_of_anarcho_kemalism_var = 0 }
+		}
+		localization_key = STRUCTURE_OF_ANARCHO_KEMALISM_VAR_ZERO
+	}
+	text = {
+		trigger = {
+			check_variable = { structure_of_anarcho_kemalism_var > 0 }
+		}
+		localization_key = STRUCTURE_OF_ANARCHO_KEMALISM_VAR_MORE
+	}
+}
+
+defined_text = {
+	name = GetNameGenericExpandAnarchismCommune
+	text = {
+		trigger = {
+			has_completed_focus = anarcho_collectivism_focus
+		}
+		localization_key = GENERIC_EXPAND_WORKING_COMMUNE
+	}
+	text = {
+		trigger = {
+			has_completed_focus = anarcho_communism_focus
+		}
+		localization_key = GENERIC_EXPAND_AUTONOMOUS_COMMUNES
+	}
+	text = {
+		trigger = {
+			has_completed_focus = anarcho_syndicalism_focus
+		}
+		localization_key = GENERIC_EXPAND_SYNDICALISM
+	}
+	text = {
+		trigger = {
+			has_completed_focus = anarcho_egoism_focus
+		}
+		localization_key = GENERIC_EXPAND_EGOISM
+	}
+	text = {
+		trigger = {
+			has_completed_focus = libertarian_focus
+		}
+		localization_key = GENERIC_EXPAND_LIBERTARIAN
+	}
+	text = {
+		trigger = {
+			has_completed_focus = agorism_focus
+		}
+		localization_key = GENERIC_EXPAND_AGORISM
+	}
+	text = {
+		localization_key = GENERIC_EXPAND_NO
+	}
+}
+
+defined_text = {
+	name = GetNameGenericExpandAnarchismCommuneDesc
+	text = {
+		trigger = {
+			has_completed_focus = anarcho_collectivism_focus
+		}
+		localization_key = GENERIC_EXPAND_DESC_WORKING_COMMUNE
+	}
+	text = {
+		trigger = {
+			has_completed_focus = anarcho_communism_focus
+		}
+		localization_key = GENERIC_EXPAND_DESC_AUTONOMOUS_COMMUNES
+	}
+	text = {
+		trigger = {
+			has_completed_focus = anarcho_syndicalism_focus
+		}
+		localization_key = GENERIC_EXPAND_DESC_SYNDICALISM
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_completed_focus = synthetic_anarchism_focus
+				has_completed_focus = mutualism_focus
+			}
+		}
+		localization_key = GENERIC_EXPAND_DESC_NEUTRALS
+	}
+	text = {
+		localization_key = GENERIC_EXPAND_DESC_NO
+	}
+}
+defined_text = {
+	name = GetFreedomExperimentationVar
+	text = {
+		trigger = {
+			check_variable = { freedom_of_experimentation_var > 0 }
+		}
+		localization_key = FREEDOM_EXPERIMENTATION_VAR_LEFT
+	}
+	text = {
+		trigger = {
+			check_variable = { freedom_of_experimentation_var < 0 }
+		}
+		localization_key = FREEDOM_EXPERIMENTATION_VAR_RIGHT
+	}
+	text = {
+		localization_key = FREEDOM_EXPERIMENTATION_VAR_ZERO
+	}
+}
+defined_text = {
+	name = SOV_baltic_integration_local
+	text = {
+		trigger = {
+			has_global_flag = sov_yes_pact
+		}
+		localization_key = SOV_baltic_integration_mr
+	}
+	text = {
+		localization_key = SOV_baltic_integration_no_mr
+	}
+}
+defined_text = {
+	name = buy_anarhist_block
+	text = {
+		trigger = {
+			has_government = anarchism
+		}
+		localization_key = buy_anarhist_block_anarchism
+	}
+	text = {
+		localization_key = buy_anarhist_block_no
+	}
+}
+defined_text = {
+	name = GetNationale
+	text = {
+		trigger = {
+			has_country_flag = arm_flag
+		}
+		localization_key = nationale_arm
+	}
+	text = {
+		trigger = {
+			has_country_flag = jew_flag
+		}
+		localization_key = nationale_jew
+	}
+	text = {
+		trigger = {
+			has_country_flag = greek_flag
+		}
+		localization_key = nationale_greek
+	}
+}
+defined_text = {
+	name = GetTTCWtrozkism
+	text = {
+		trigger = {
+			has_global_flag = TTCW_trozkism_flag
+		}
+		localization_key = TTCWtrozkism_text
+	}
+	text = {
+		localization_key = empty_text
+	}
+}
+defined_text = {
+	name = GetTTCWmonarchy
+	text = {
+		trigger = {
+			has_global_flag = TTCW_monarchy_flag
+		}
+		localization_key = TTCWmonarchy_text
+	}
+	text = {
+		localization_key = empty_text
+	}
+}
+defined_text = {
+	name = GetTTCWcommunism
+	text = {
+		trigger = {
+			has_global_flag = TTCW_communism_flag
+		}
+		localization_key = TTCWcommunism_text
+	}
+	text = {
+		localization_key = empty_text
+	}
+}
+
+
+
+
+defined_text = {
+	name = civilwar_d_text
+	text = {
+		trigger = {
+				has_country_flag = ALB_civilwar_three_side_rm
+		}
+		localization_key = ALB_civilwar_three_side_rm
+	}
+	text = {
+		trigger = {
+				has_country_flag = ALB_civilwar_two_side_rm
+		}
+		localization_key = ALB_civilwar_two_side_rm
+	}
+	text = {
+		trigger = {
+			has_country_flag = ALB_trozkism_victory
+			has_country_flag = ALB_civilwar_three_side_rm
+		}
+		localization_key = ALB_civilwar_three_side_rm_2
+	}
+	text = {
+		trigger = {
+				has_country_flag = ALB_civilwar_two_side_nd
+		}
+		localization_key = ALB_civilwar_two_side_nd
+	}
+	text = {
+		localization_key = ALB_civilwar_three_side
+	}
+}
+defined_text = {
+	name = commi_name_text
+	text = {
+		trigger = {
+				has_country_flag = ALB_trozkism_lead
+		}
+		localization_key = ALB_commi_name_text_trozkism
+	}
+	text = {
+		trigger = {
+				has_country_flag = ALB_trozkism_victory
+		}
+		localization_key = ALB_commi_name_text_trozkism_young
+	}
+	text = {
+		localization_key = ALB_commi_name_text
+	}
+}
+defined_text = {
+	name = commi_pred_name_text
+	text = {
+		trigger = {
+				has_country_flag = ALB_resignation_of_meladin
+		}
+		localization_key = ALB_commi_pred_name_text
+	}
+	text = {
+		trigger = {
+				has_country_flag = ALB_fail_commi
+		}
+		localization_key = ALB_commi_pred_name_zisi_text
+	}
+	text = {
+		trigger = {
+				has_country_flag = ALB_trozkism_victory
+		}
+		localization_key = ALB_commi_pred_name_premtya_text
+	}
+	text = {
+		trigger = {
+				has_country_flag = ALB_hodja_lead
+		}
+		localization_key = ALB_commi_pred_name_hodja_text
+	}
+	text = {
+		trigger = {
+				has_country_flag = ALB_trozkism_fail
+		}
+		localization_key = ALB_commi_pred_name_dzode_text
+	}
+	text = {
+		localization_key = ALB_commi_pred_name_melpop_text
+	}
+}
+
+### GER
+defined_text = {
+	name = NWgermany_19_FIN_TEXT
+	text = {
+		trigger = {
+			FIN = {
+				exists = yes
+				is_subject = no
+			}
+		}
+		localization_key = NWgermany_19_FIN_YES_TEXT
+	}
+	text = {
+		localization_key = NWgermany_LOC_NO_TEXT
+	}
+}
+defined_text = {
+	name = NWgermany_19_TUR_TEXT
+	text = {
+		trigger = {
+			964 = {
+				controller = {
+					NOT = {
+						tag = SOV
+						is_subject_of = SOV
+						is_in_faction_with = SOV
+					}
+				}
+			}
+		}
+		localization_key = NWgermany_19_TUR_YES_TEXT
+	}
+	text = {
+		localization_key = NWgermany_LOC_NO_TEXT
+	}
+}
+defined_text = {
+	name = NWgermany_19_BUL_TEXT
+	text = {
+		trigger = {
+			BUL = { NOT = { is_in_faction_with = SOV } }
+		}
+		localization_key = NWgermany_19_BUL_YES_TEXT
+	}
+	text = {
+		localization_key = NWgermany_LOC_NO_TEXT
+	}
+}
+defined_text = {
+	name = NWgermany_29_WAR_TEXT
+	text = {
+		trigger = {
+			has_war = yes
+		}
+		localization_key = NWgermany_29_WAR_YES_TEXT
+	}
+	text = {
+		localization_key = NWgermany_LOC_NO_TEXT
+	}
+}
+defined_text = {
+	name = GetNameComThirdRepublic
+	text = {
+		trigger = {
+			any_country_with_original_tag = {
+				original_tag_to_check = event_target:NW_france_scope
+				has_government = ROOT
+			}
+		}
+		localization_key = GER_break_third_republic_2
+	}
+	text = {
+		localization_key = GER_break_third_republic_1
+	}
+}
+defined_text = {
+	name = GetNameComBrainchildVersailles
+	text = {
+		trigger = {
+			any_country_with_original_tag = {
+				original_tag_to_check = POL
+				has_government = ROOT
+			}
+		}
+		localization_key = GER_fate_of_pitiful_brainchild_of_versailles_2
+	}
+	text = {
+		localization_key = GER_fate_of_pitiful_brainchild_of_versailles_1
+	}
+}
+defined_text = {
+	name = GetNameComCzechoslovakComrades
+	text = {
+		trigger = {
+			any_country_with_original_tag = {
+				original_tag_to_check = CZE
+				has_government = ROOT
+			}
+		}
+		localization_key = GER_release_czechoslovak_comrades_2
+	}
+	text = {
+		localization_key = GER_release_czechoslovak_comrades_1
+	}
+}
+defined_text = {
+	name = GetNameComHungarianRevolution
+	text = {
+		trigger = {
+			any_country_with_original_tag = {
+				original_tag_to_check = HUN
+				has_government = ROOT
+			}
+		}
+		localization_key = GER_repeat_hungarian_revolution_2
+	}
+	text = {
+		localization_key = GER_repeat_hungarian_revolution_1
+	}
+}
+defined_text = {
+	name = GetNameComRedVein
+	text = {
+		trigger = {
+			any_country_with_original_tag = {
+				original_tag_to_check = AUS
+				has_government = ROOT
+			}
+		}
+		localization_key = GER_help_red_vein_2
+	}
+	text = {
+		localization_key = GER_help_red_vein_1
+	}
+}
+defined_text = {
+	name = GetNameComItalianFascism
+	text = {
+		trigger = {
+			any_country_with_original_tag = {
+				original_tag_to_check = ITA
+				has_government = ROOT
+			}
+		}
+		localization_key = GER_smash_italian_fascism_2
+	}
+	text = {
+		localization_key = GER_smash_italian_fascism_1
+	}
+}
+defined_text = {
+	name = GetNameComAttemptIberia
+	text = {
+		trigger = {
+			OR = {
+				any_country_with_original_tag = {
+					original_tag_to_check = SPR
+					has_government = ROOT
+				}
+				any_country_with_original_tag = {
+					original_tag_to_check = SPA
+					has_government = ROOT
+				}
+			}
+		}
+		localization_key = GER_another_attempt_in_iberia_2
+	}
+	text = {
+		localization_key = GER_another_attempt_in_iberia_1
+	}
+}
+defined_text = {
+	name = GetNameNazBolEndFrenchEurope
+	text = {
+		trigger = {
+			any_country_with_original_tag = {
+				original_tag_to_check = event_target:NW_france_scope
+				has_country_leader = { character = FRA_jacques_doriot ruling_only = yes }
+			}
+		}
+		localization_key = GER_end_french_europe_2
+	}
+	text = {
+		localization_key = GER_end_french_europe_1
+	}
+}
+defined_text = {
+	name = GetNameConcentrateOnEnemy
+	text = {
+		trigger = {
+			FROM = { tag = GRF }
+		}
+		localization_key = GER_concentrate_on_enemy_GRF
+	}
+	text = {
+		trigger = {
+			FROM = { tag = GBF }
+		}
+		localization_key = GER_concentrate_on_enemy_GBF
+	}
+	text = {
+		trigger = {
+			FROM = { tag = GFA }
+		}
+		localization_key = GER_concentrate_on_enemy_GFA
+	}
+	text = {
+		localization_key = GER_concentrate_on_enemy_wehrmacht
+	}
+}
+defined_text = {
+	name = GetNamePorsche
+	text = {
+		trigger = {
+			has_country_flag = rename_tank_concern
+		}
+		localization_key = porsche_red
+	}
+	text = {
+		localization_key = porsche
+	}
+}
+defined_text = {
+	name = GetNameHenschel
+	text = {
+		trigger = {
+			has_country_flag = rename_tank_concern
+		}
+		localization_key = henschel_red
+	}
+	text = {
+		localization_key = henschel
+	}
+}
+
+### PER
+defined_text = {
+	name = GetPerStageRiba
+	text = {
+		trigger = {
+			has_idea = PER_prohibit_riba_2
+		}
+		localization_key = stage_2
+	}
+	text = {
+		trigger = {
+			has_idea = PER_prohibit_riba_3
+		}
+		localization_key = stage_3
+	}
+	text = {
+		localization_key = stage_1
+	}
+}
+defined_text = {
+	name = GetPerStageBayt_al_mal
+	text = {
+		trigger = {
+			has_idea = PER_bayt_al_mal_2
+		}
+		localization_key = stage_2
+	}
+	text = {
+		trigger = {
+			has_idea = PER_bayt_al_mal_3
+		}
+		localization_key = stage_3
+	}
+	text = {
+		localization_key = stage_1
+	}
+}
+defined_text = {
+	name = GetPerStageGarars
+	text = {
+		trigger = {
+			has_idea = PER_prohibit_garar_2
+		}
+		localization_key = stage_2
+	}
+	text = {
+		trigger = {
+			has_idea = PER_prohibit_garar_3
+		}
+		localization_key = stage_3
+	}
+	text = {
+		localization_key = stage_1
+	}
+}
+defined_text = {
+	name = GetPerStageEducation
+	text = {
+		trigger = {
+			has_idea = PER_islamization_of_universities_2
+		}
+		localization_key = stage_2
+	}
+	text = {
+		trigger = {
+			has_idea = PER_islamization_of_universities_3
+		}
+		localization_key = stage_3
+	}
+	text = {
+		localization_key = stage_1
+	}
+}
+defined_text = {
+	name = GetPerStageGuards
+	text = {
+		trigger = {
+			has_idea = PER_guardians_of_islamic_revolution_2
+		}
+		localization_key = stage_2
+	}
+	text = {
+		trigger = {
+			has_idea = PER_guardians_of_islamic_revolution_3
+		}
+		localization_key = stage_3
+	}
+	text = {
+		localization_key = stage_1
+	}
+}
+defined_text = {
+	name = GET_FRA_ANTISOVIET_UNION_NAME
+	text = {
+		trigger = {
+			SOV = {
+				NOT = {
+					has_government = communism
+					has_government = trozkism
+				}
+			}
+		}
+		localization_key = FRA_antisoviet_union_NOT_RED
+	}
+	text = {
+		localization_key = FRA_antisoviet_union_RED
+	}
+}
+defined_text = {
+	name = GET_FRA_ANTISOVIET_UNION_DESC
+	text = {
+		trigger = {
+			SOV = {
+				NOT = {
+					has_government = communism
+					has_government = trozkism
+				}
+			}
+		}
+		localization_key = FRA_antisoviet_union_desc_NOT_RED
+	}
+	text = {
+		localization_key = FRA_antisoviet_union_desc_RED
+	}
+}
+defined_text = {
+	name = GET_FRA_ANTIGERMAN_UNION_NAME
+	text = {
+		trigger = {
+			GER = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+		}
+		localization_key = FRA_antigerman_union_NOT_FASH
+	}
+	text = {
+		localization_key = FRA_antigerman_union_FASH
+	}
+}
+defined_text = {
+	name = GET_FRA_ANTIGERMAN_UNION_DESC
+	text = {
+		trigger = {
+			GER = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+		}
+		localization_key = FRA_antigerman_union_desc_NOT_FASH
+	}
+	text = {
+		localization_key = FRA_antigerman_union_desc_FASH
+	}
+}
+
+defined_text = {
+	name = GetNameShowaRestoration
+	text = {
+		trigger = {
+			has_idea = JAP_hirohito 
+		}
+		localization_key = JAP_SHOWA_RESTORATION_OTHER
+	}
+	text = {
+		trigger = {
+			NOT = { has_idea = JAP_hirohito }
+		}
+		localization_key = JAP_REIWA_RESTORATION
+	}
+}
+
+defined_text = {
+	name = GetNews_36_d
+	text = {
+		trigger = {
+			tag = GBF
+		}
+		localization_key = news_36_d2
+	}
+	text = {
+		localization_key = news_36_d1
+	}
+}
+defined_text = { 
+	name = GetEventRebStrenght
+	text = { 
+		trigger = {
+			original_tag = EHB
+			has_country_flag = EHB_last_anti_rebel_decision
+		}
+		localization_key = EHB_LAST_DECISION ## Локализация ивента, если сила восстания < 2
+	}
+	text = {
+		localization_key = EHB_ANTI_REBEL_DECISION ## Локализация ивента, если сила восстания > 2
+	}
+}
+defined_text = { 
+	name = GetEventOptionRebStrenght
+	text = { 
+		trigger = {
+			original_tag = EHB
+			has_country_flag = EHB_last_anti_rebel_decision
+		}
+		localization_key = EHB_LAST_DECISION_OPTION ## Локализация кнопки ивента, если сила восстания < 2
+	}
+	text = {
+		localization_key = EHB_ANTI_REBEL_DECISION_OPTION ## Локализация кнопки ивента, если сила восстания > 2
+	}
+}
+
+##Локализация для ивента на обстрел лагерей восставших
+defined_text = { 
+	name = GetEventAtrileryEhb
+	text = { 
+		trigger = {
+			original_tag = EHB
+			has_country_flag = EHB_last_anti_rebel_decision
+		}
+		localization_key = EHB_LAST_DECISION_ARTILLERY ## Локализация ивента, если сила восстания < 2
+	}
+	text = {
+		localization_key = EHB_ANTI_REBEL_DECISION_ARTILLERY ## Локализация ивента, если сила восстания > 2
+	}
+}
+defined_text = { 
+	name = GetEventAtrileryEhbOption
+	text = { 
+		trigger = {
+			original_tag = EHB
+			has_country_flag = EHB_last_anti_rebel_decision
+		}
+		localization_key = EHB_LAST_DECISION_ARTILLERY_OPTION ## Локализация кнопки ивента, если сила восстания < 2
+	}
+	text = {
+		localization_key = EHB_ANTI_REBEL_DECISION_ARTILLERY_OPTION ## Локализация кнопки ивента, если сила восстания > 2
+	}
+}
+
+##Локализация для ивента на отправку переговорщиков
+defined_text = { 
+	name = GetEventNegotiator
+	text = { 
+		trigger = {
+			original_tag = EHB
+			has_country_flag = EHB_last_anti_rebel_decision
+		}
+		localization_key = EHB_LAST_DECISION_NEGOTIATOR ## Локализация кнопки ивента, если сила восстания < 2
+	}
+	text = {
+		localization_key = EHB_ANTI_REBEL_DECISION_NEGOTIATOR ## Локализация кнопки ивента, если сила восстания > 2
+	}
+}
+defined_text = { 
+	name = GetEventNegotiatorOption
+	text = { 
+		trigger = {
+			original_tag = EHB
+			has_country_flag = EHB_last_anti_rebel_decision
+		}
+		localization_key = EHB_LAST_DECISION_NEGOTIATOR_OPTION ## Локализация кнопки ивента, если сила восстания < 2
+	}
+	text = {
+		localization_key = EHB_ANTI_REBEL_DECISION_NEGOTIATOR_OPTION ## Локализация кнопки ивента, если сила восстания > 2
+	}
+}
+defined_text = { 
+	name = YSCGetEventCountryLeaderT
+	text = { 
+		trigger = {
+			original_tag = YSC
+			has_country_leader = {
+				character = YSC_wang_ying
+				ruling_only = yes
+			}
+		}
+		localization_key = YSC_WANG_YING_LOC_T 
+	}
+	text = {
+		localization_key = YSC_TITLE_LOC 
+	}
+}
+
+defined_text = { 
+	name = YSCGetEventCountryLeaderD
+	text = { 
+		trigger = {
+			original_tag = YSC
+			has_country_leader = {
+				character = YSC_wang_ying
+				ruling_only = yes
+			}
+		}
+		localization_key = YSC_WANG_YING_LOC_D 
+	}
+	text = {
+		localization_key = YSC_DESC_LOC 
+	}
+}
+
+defined_text = { 
+	name = YSCGetEventCountryLeaderA
+	text = { 
+		trigger = {
+			original_tag = YSC
+			has_country_leader = {
+				character = YSC_wang_ying
+				ruling_only = yes
+			}
+		}
+		localization_key = YSC_WANG_YING_LOC_A 
+	}
+	text = {
+		localization_key = YSC_A_BUTTON_LOC 
+	}
+}
+
+
+defined_text = { 
+	name = YSCGetEventCountryLeaderB
+	text = { 
+		trigger = {
+			original_tag = YSC
+			has_country_leader = {
+				character = YSC_chang_yin_tang
+				ruling_only = yes
+			}
+		}
+		localization_key = YSC_CHANG_YIN_TANG_LOC_B 
+	}
+	text = {
+		localization_key = YSC_B_BUTTON_LOC 
+	}
+}
+
+
+
+
+
+
+defined_text = {
+	name = land_cruiser_weapon_status
+	text = {
+		trigger = {
+			has_country_flag = land_cruiser_weapon_status_green
+		}
+		localization_key = IS_SOLVED
+	}
+	text = {
+		trigger = {
+			has_country_flag = land_cruiser_weapon_status_yellow
+		}
+		localization_key = PRELIMINARY_DRAFT
+	}
+	text = {
+		localization_key = NOT_SOLVED
+	}
+}
+defined_text = {
+	name = land_cruiser_layout_status
+	text = {
+		trigger = {
+			OR = {
+				has_country_flag = land_cruiser_multi_layout_status_green
+				has_country_flag = land_cruiser_single_layout_status_green
+			}
+		}
+		localization_key = IS_SOLVED
+	}
+	text = {
+		trigger = {
+			has_country_flag = land_cruiser_layout_status_yellow
+		}
+		localization_key = PRELIMINARY_DRAFT
+	}
+	text = {
+		localization_key = NOT_SOLVED
+	}
+}
+defined_text = {
+	name = land_cruiser_armor_status
+	text = {
+		trigger = {
+			has_country_flag = land_cruiser_armor_status_green
+		}
+		localization_key = IS_SOLVED
+	}
+	text = {
+		trigger = {
+			has_country_flag = land_cruiser_armor_status_yellow
+		}
+		localization_key = PRELIMINARY_DRAFT
+	}
+	text = {
+		localization_key = NOT_SOLVED
+	}
+}
+defined_text = {
+	name = land_cruiser_transmission_status
+	text = {
+		trigger = {
+			has_country_flag = land_cruiser_transmission_status_green
+		}
+		localization_key = IS_SOLVED
+	}
+	text = {
+		trigger = {
+			has_country_flag = land_cruiser_transmission_status_yellow
+		}
+		localization_key = PRELIMINARY_DRAFT
+	}
+	text = {
+		localization_key = NOT_SOLVED
+	}
+}
+defined_text = {
+	name = land_cruiser_engine_status
+	text = {
+		trigger = {
+			has_country_flag = land_cruiser_engine_status_green
+		}
+		localization_key = IS_SOLVED
+	}
+	text = {
+		trigger = {
+			has_country_flag = land_cruiser_engine_status_yellow
+		}
+		localization_key = PRELIMINARY_DRAFT
+	}
+	text = {
+		localization_key = NOT_SOLVED
+	}
+}
+defined_text = {
+	name = land_cruiser_track_status
+	text = {
+		trigger = {
+			has_country_flag = land_cruiser_track_status_green
+		}
+		localization_key = IS_SOLVED
+	}
+	text = {
+		trigger = {
+			has_country_flag = land_cruiser_track_status_yellow
+		}
+		localization_key = PRELIMINARY_DRAFT
+	}
+	text = {
+		localization_key = NOT_SOLVED
+	}
+}
+
+defined_text = {
+	name = GetRulingIdeologySubtype
+	text = {
+		trigger = {
+			has_country_leader_ideology = falangism
+		}
+		localization_key = falangism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = national_radicalism
+		}
+		localization_key = national_radicalism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = despotism
+		}
+		localization_key = despotism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = oligarchism
+		}
+		localization_key = oligarchism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = moderatism
+		}
+		localization_key = moderatism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = centrism
+		}
+		localization_key = centrism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = national_conservatism
+		}
+		localization_key = national_conservatism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = conservatism
+		}
+		localization_key = conservatism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = liberalism
+		}
+		localization_key = liberalism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = national_liberalism
+		}
+		localization_key = national_liberalism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = social_conservatism
+		}
+		localization_key = social_conservatism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = social_liberalism
+		}
+		localization_key = social_liberalism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = socialism
+		}
+		localization_key = socialism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = democratic_communism
+		}
+		localization_key = democratic_communism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = democratic_socialism
+		}
+		localization_key = democratic_socialism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = christian_democracy
+		}
+		localization_key = christian_democracy
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = dem_centrism
+		}
+		localization_key = dem_centrism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = marxism
+		}
+		localization_key = marxism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = leninism
+		}
+		localization_key = leninism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = stalinism
+		}
+		localization_key = stalinism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = right_wing_communism
+		}
+		localization_key = right_wing_communism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = red_monarchy_ideology
+		}
+		localization_key = red_monarchy_ideology
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = socialist_stratocracy
+		}
+		localization_key = socialist_stratocracy
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = buddah_socialism
+		}
+		localization_key = buddah_socialism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = kemalism_socialism
+		}
+		localization_key = kemalism_socialism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = national_communism
+		}
+		localization_key = national_communism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = national_bolshevism
+		}
+		localization_key = national_bolshevism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = nazism
+		}
+		localization_key = nazism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = gen_nazism
+		}
+		localization_key = gen_nazism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = fascism_ideology
+		}
+		localization_key = fascism_ideology
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = nationalism_ideology
+		}
+		localization_key = nationalism_ideology
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = integralism_ideology
+		}
+		localization_key = integralism_ideology
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = rexism
+		}
+		localization_key = rexism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = fascism_corporatism
+		}
+		localization_key = fascism_corporatism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = strasserismus
+		}
+		localization_key = strasserismus
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = kemalism
+		}
+		localization_key = kemalism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = militarism_ideology
+		}
+		localization_key = militarism_ideology
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = authoritarian_democracy
+		}
+		localization_key = authoritarian_democracy
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = military_socialism
+		}
+		localization_key = military_socialism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = austro_fascism
+		}
+		localization_key = austro_fascism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = wahhabism_neutrality
+		}
+		localization_key = wahhabism_neutrality
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = technocracy_ideology
+		}
+		localization_key = technocracy_ideology
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = trozkism1
+		}
+		localization_key = trozkism1
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = marxism1
+		}
+		localization_key = marxism1
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = left_communism
+		}
+		localization_key = left_communism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = communism_workers_soviets
+		}
+		localization_key = communism_workers_soviets
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = islamic_socialism
+		}
+		localization_key = islamic_socialism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = aprism
+		}
+		localization_key = aprism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = rerihism
+		}
+		localization_key = rerihism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = baathism
+		}
+		localization_key = baathism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = monarchy_ideology
+		}
+		localization_key = monarchy_ideology
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = absolute_monarchy
+		}
+		localization_key = absolute_monarchy
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = dual_monarchy
+		}
+		localization_key = dual_monarchy
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = theocratic_monarchy
+		}
+		localization_key = theocratic_monarchy
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = tribal_monarchy
+		}
+		localization_key = tribal_monarchy
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = wahhabism_monarchy
+		}
+		localization_key = wahhabism_monarchy
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = anarchism_ideology
+		}
+		localization_key = anarchism_ideology
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = anarcho_socialism
+		}
+		localization_key = anarcho_socialism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = anarcho_individualism
+		}
+		localization_key = anarcho_individualism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = anarcho_collectivism
+		}
+		localization_key = anarcho_collectivism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = anarcho_communism
+		}
+		localization_key = anarcho_communism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = anarcho_sindicalism
+		}
+		localization_key = anarcho_sindicalism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = sinthetic_anarchism
+		}
+		localization_key = sinthetic_anarchism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = mutualism
+		}
+		localization_key = mutualism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = anarcho_agorism
+		}
+		localization_key = anarcho_agorism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = anarcho_egoism
+		}
+		localization_key = anarcho_egoism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = libertarian
+		}
+		localization_key = libertarian
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = minarchism
+		}
+		localization_key = minarchism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = anarcho_nationalism
+		}
+		localization_key = anarcho_nationalism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = anarcho_monarchism
+		}
+		localization_key = anarcho_monarchism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = anarcho_transgumanism
+		}
+		localization_key = anarcho_transgumanism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = tridemism
+		}
+		localization_key = tridemism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = esoteric_nazism
+		}
+		localization_key = esoteric_nazism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = totalism
+		}
+		localization_key = totalism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = dang_guo
+		}
+		localization_key = dang_guo
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = pure_socialism
+		}
+		localization_key = pure_socialism
+	}
+}
+
+defined_text = {
+	name = core_map_mode_tooltip_status
+	text = {
+		trigger = {
+			FROM = {
+				is_claimed_by = ROOT
+				NOT = { is_controlled_by = ROOT }
+			}
+		}
+		localization_key = CORE_MAP_MODE_TOOLTIP_STATUS_RED
+	}
+	text = {
+		trigger = {
+			FROM = {
+				AND = {
+					is_core_of = ROOT
+					is_controlled_by = ROOT
+				}
+			}
+		}
+		localization_key = CORE_MAP_MODE_TOOLTIP_STATUS_BLUE
+	}
+	text = {
+		trigger = {
+			FROM = {
+				AND = {
+					is_core_of = ROOT
+					NOT = { is_controlled_by = ROOT }
+				}
+			}
+		}
+		localization_key = CORE_MAP_MODE_TOOLTIP_STATUS_YELLOW
+	}
+	text = {
+		trigger = {
+			FROM = {
+				is_controlled_by = ROOT
+			}
+		}
+		localization_key = CORE_MAP_MODE_TOOLTIP_STATUS_BLUE_2
+	}
+}
+
+defined_text = {
+	name = title_text
+	text = {
+		trigger = {
+			has_country_flag = change_legitimacy_flag
+			check_variable = { GUI_up_or_down_status_var = 1 }
+		}
+		localization_key = "LEGITIMACY_ALERT_TEXT_RED"
+	}
+	text = {
+		trigger = {
+			has_country_flag = change_legitimacy_flag
+			check_variable = { GUI_up_or_down_status_var = 2 }
+		}
+		localization_key = "LEGITIMACY_ALERT_TEXT_GREEN"
+	}
+	text = {
+		trigger = {
+			has_country_flag = change_migration_level_flag
+			check_variable = { GUI_up_or_down_status_var = 1 }
+		}
+		localization_key = "MIGRATION_ALERT_TEXT_RED"
+	}
+	text = {
+		trigger = {
+			has_country_flag = change_migration_level_flag
+			check_variable = { GUI_up_or_down_status_var = 2 }
+		}
+		localization_key = "MIGRATION_ALERT_TEXT_GREEN"
+	}
+}
+
+
+defined_text = {
+	name = GetNameOttomanRestorationSau
+	text = {
+		trigger = {
+			NOT = {
+				TUR = {
+					country_exists = yes
+					has_government = monarchy
+				}
+			}
+		}
+		localization_key = SAU_TURKEY_PUPPPET
+	}
+	text = {
+		trigger = {
+			TUR = {
+				country_exists = yes
+				has_government = monarchy
+			}
+		}
+		localization_key = SAU_OTTOMAN_PUPPET
+	}
+}
+
+defined_text = {
+	name = GetNameSaud_COUP_TRIBE
+	text = {
+		trigger = {
+			has_global_flag = sau_uprising
+			has_global_flag = sau_saud_uprising
+		}
+		localization_key = SAU_COUP_TRIBE_YEP
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_global_flag = sau_uprising
+			}
+		}
+		localization_key = SAU_COUP_TRIBE_NAH
+	}
+	text = {
+		trigger = {
+			NOT = { tag = NEJ has_global_flag = sau_saud_uprising }
+			has_global_flag = sau_uprising
+		}
+		localization_key = SAU_COUP_TRIBE_SAUD
+	}
+}
+
+defined_text = {
+	name = GetNameSaud_COUP_ULEMA
+	text = {
+		trigger = {
+			has_global_flag = sau_uprising
+		}
+		localization_key = SAU_COUP_ULEMA_YEP
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_global_flag = sau_uprising
+			}
+		}
+		localization_key = SAU_COUP_ULEMA_NAH
+	}
+}
+
+defined_text = {
+	name = GetTextFromTibet_60_desc
+	text = {
+		trigger = {
+			has_global_flag = TIB_CHI_pancha_plan_flag
+		}
+		localization_key = tibet.60.desc_from_tibet
+	}
+	text = {
+		localization_key = tibet.60.desc_from_china
+	}
+}
+
+defined_text = { 
+	name = DOM_Trujilio_Agreement
+	text = { 
+		trigger = {
+			OR = {
+				has_country_leader = {
+					character = DOM_rafael_trujillo
+					ruling_only = yes
+				}
+				has_country_leader = { 
+					character = DOM_hector_trujillo
+					ruling_only = yes
+				}
+			}
+		}
+		localization_key = DOM_hull_truhilio_a
+	}
+	text = { 
+		trigger = {
+			has_country_leader = {
+				character = DOM_jacinto_bienvenido_peynado
+				ruling_only = yes
+			}
+		}
+		localization_key = DOM_hull_truhilio_b
+	}
+	text = { 
+		trigger = {
+			has_country_leader = {
+				character = DOM_juan_emilio_bosch_gavino
+				ruling_only = yes
+			}
+		}
+		localization_key = DOM_hull_truhilio_c
+	}
+	text = {
+		localization_key = DOM_hull_truhilio_d
+	}
+}
+
+defined_text = {
+	name = GetName_MON_constitution_of_marshal_choibalsan_Name
+	text = {
+		trigger = {
+			has_country_leader = { character = MON_dansranbilegiin_dogsom ruling_only = yes }
+		}
+		localization_key = MON_dogsom_name
+	}
+	text = {
+		localization_key = MON_constitution_of_marshal_NAME_choibalsan
+	}
+}
+
+defined_text = {
+	name = GetMongolLeader
+	text = {
+		trigger = {
+			has_country_leader = { character = MON_dansranbilegiin_dogsom ruling_only = yes }
+		}
+		localization_key = MON_dogsoms_name
+	}
+	text = {
+		localization_key = MON_choibalsans_name
+	}
+}
+
+defined_text = {
+	name = GetName_MON_government_of_panchen_lama_Name
+	text = {
+		trigger = {
+			has_global_flag = TIB_panchen_lama_died
+		}
+		localization_key = MON_government_of_name_panchen_lama_alt
+	}
+	text = {
+		localization_key = MON_government_of_name_panchen_lama
+	}
+}
+defined_text = {
+	name = GetName_IRQ_cult_of_nationalists_Name
+	text = {
+		trigger = {
+			IRQ = {
+			    has_government = fascism
+			}
+		}
+		localization_key = IRQ_cult_of_as_sabagh
+	}
+	text = {
+		localization_key = IRQ_cult_of_al_hashimi
+	}
+}

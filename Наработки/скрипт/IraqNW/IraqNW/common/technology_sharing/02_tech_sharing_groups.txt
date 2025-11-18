@@ -1,0 +1,1010 @@
+
+technology_sharing_group = {
+
+	id = USSR_research
+	name = USSR_research_name
+	desc = USSR_research_desc
+	picture = GFX_technology_sharing_USSR_research
+    
+	research_sharing_per_country_bonus = 0.1
+
+    available = {
+        is_in_faction_with = SOV
+    }
+}
+
+technology_sharing_group = {
+
+	id = HBBRG_atlantic_cooperation_program_group
+	name = HBBRG_atlantic_cooperation_program_group_name
+	desc = HBBRG_atlantic_cooperation_program_group_desc
+	picture = GFX_technology_sharing_default
+    
+	research_sharing_per_country_bonus = 0.1
+	
+	categories = {
+		electronics
+		radar_tech
+		industry
+		synth_resources
+		encryption_tech
+		decryption_tech
+		computing_tech
+	}
+
+    available = {
+		any_allied_country = {
+			has_completed_focus = HBBRG_atlantic_cooperation_program
+		}
+    }
+}
+
+technology_sharing_group = {
+
+	id = HBBRG_vienna_circle_group
+	name = HBBRG_vienna_circle_group_name
+	desc = HBBRG_vienna_circle_group_desc
+	picture = GFX_technology_sharing_default
+    
+	research_sharing_per_country_bonus = 0.1
+	
+	categories = {
+	}
+
+    available = {
+		any_allied_country = {
+			has_completed_focus = HBBRG_vienna_circle
+		}
+    }
+}
+
+technology_sharing_group = {
+
+	id = TUR_sadabat_group
+	name = TUR_sadabat_group_name
+	desc = TUR_sadabat_group_desc
+	picture = GFX_technology_sharing_default
+    
+	research_sharing_per_country_bonus = 0.1
+	
+	categories = {
+	}
+
+    available = {
+		is_in_faction_with = TUR
+    }
+}
+
+technology_sharing_group = {
+
+	id = IRQ_baghdad_group
+	name = IRQ_baghdad_group_name
+	desc = IRQ_baghdad_group_desc
+	picture = GFX_technology_sharing_default
+    
+	research_sharing_per_country_bonus = 0.1
+	
+	categories = {
+	}
+
+    available = {
+		is_in_faction_with = IRQ
+    }
+}
+
+technology_sharing_group = {
+
+	id = IRQ_anglo_iraqi_group
+	name = IRQ_anglo_iraqi_group_name
+	desc = IRQ_anglo_iraqi_group_desc
+	picture = GFX_technology_sharing_default
+    
+	research_sharing_per_country_bonus = 0.1
+	
+	categories = {
+	}
+
+    available = {
+	    OR = {
+		    original_tag = ENG
+		    original_tag = IRQ
+		}
+		IRQ = {
+		    has_completed_focus = IRQ_anglo_iraqi_research
+		}
+    }
+}
+
+technology_sharing_group = {
+
+	id = BPL_jerusalem_group
+	name = BPL_jerusalem_group_name
+	desc = BPL_jerusalem_group_desc
+	picture = GFX_technology_sharing_default
+    
+	research_sharing_per_country_bonus = 0.1
+	
+	categories = {
+	}
+
+    available = {
+		is_in_faction_with = BPL
+    }
+}
+
+technology_sharing_group = {
+
+	id = TUR_british_turkish_group
+	name = TUR_british_turkish_group_name
+	desc = default_group_desc
+	picture = GFX_technology_sharing_default
+    
+	research_sharing_per_country_bonus = 0.1
+	
+	categories = {
+	}
+
+    available = {
+    	TUR = { is_in_faction_with = ENG }
+    	ENG = { is_faction_leader = yes }
+    }
+}
+
+technology_sharing_group = {
+
+	id = TUR_german_turkish_group
+	name = TUR_german_turkish_group_name
+	desc = default_group_desc
+	picture = GFX_technology_sharing_default
+    
+	research_sharing_per_country_bonus = 0.1
+	
+	categories = {
+	}
+
+    available = {
+    	TUR = { is_in_faction_with = GER }
+    	GER = { is_faction_leader = yes }
+    }
+}
+
+technology_sharing_group = {
+
+	id = TUR_islamist_bolshevik_group
+	name = TUR_islamist_bolshevik_group_name
+	desc = default_group_desc
+	picture = GFX_technology_sharing_default
+    
+	research_sharing_per_country_bonus = 0.1
+	
+	categories = {
+	}
+
+    available = {
+		is_in_faction_with = TUR
+    }
+}
+
+technology_sharing_group = {
+
+	id = ARA_spain_ara_group
+	name = ARA_spain_ara_group_name
+	desc = default_group_desc
+	picture = GFX_technology_sharing_default
+    
+	research_sharing_per_country_bonus = 0.1
+	
+	categories = {
+	}
+
+    available = {
+		OR = {
+			tag = ARA
+			tag = SPR
+		}
+    }
+}
+
+technology_sharing_group = {
+
+	id = ARA_union_anarchists_iberia_group
+	name = ARA_union_anarchists_iberia_group_name
+	desc = default_group_desc
+	picture = GFX_technology_sharing_default
+    
+	research_sharing_per_country_bonus = 0.1
+	
+	categories = {
+	}
+
+    available = {
+		is_in_faction_with = ARA
+    }
+}
+
+technology_sharing_group = {
+
+	id = ARA_cat_ara_group
+	name = ARA_cat_ara_group_name
+	desc = default_group_desc
+	picture = GFX_technology_sharing_default
+    
+	research_sharing_per_country_bonus = 0.1
+	
+	categories = {
+	}
+
+    available = {
+		OR = {
+			tag = ARA
+			tag = CAT
+		}
+    }
+}
+
+technology_sharing_group = {
+
+	id = CAT_spain_cat_group
+	name = CAT_spain_cat_group_name
+	desc = default_group_desc
+	picture = GFX_technology_sharing_default
+    
+	research_sharing_per_country_bonus = 0.1
+	
+	categories = {
+	}
+
+    available = {
+		OR = {
+			tag = CAT
+			tag = SPR
+		}
+    }
+}
+
+technology_sharing_group = {
+
+	id = FRC_soviet_group
+	name = FRC_soviet_group_name
+	desc = default_group_desc
+	picture = GFX_technology_sharing_default
+    
+	research_sharing_per_country_bonus = 0.1
+	
+	categories = {
+	}
+
+    available = {
+		OR = {
+			tag = FRC
+			tag = FRA
+			tag = SOV
+		}
+		is_in_faction_with = SOV
+    }
+}
+
+technology_sharing_group = {
+
+	id = FRC_marxist_science_group
+	name = FRC_marxist_science_group_name
+	desc = default_group_desc
+	picture = GFX_technology_sharing_default
+    
+	research_sharing_per_country_bonus = 0.1
+	
+	categories = {
+	}
+
+    available = {
+		is_in_faction_with = FRC
+    }
+}
+
+technology_sharing_group = {
+
+	id = BEL_benelux_group
+	name = BEL_benelux_group_name
+	desc = default_group_desc
+	picture = GFX_technology_sharing_default
+    
+	research_sharing_per_country_bonus = 0.1
+	
+	categories = {
+	}
+
+    available = {
+		OR = {
+			tag = BEL
+			tag = HOL
+			tag = LUX
+		}
+		NOT = { has_war_with = BEL }
+    }
+}
+
+technology_sharing_group = {
+
+	id = BEL_cooperation_with_allies_group
+	name = BEL_cooperation_with_allies_group_name
+	desc = default_group_desc
+	picture = GFX_technology_sharing_default
+    
+	research_sharing_per_country_bonus = 0.1
+	
+	categories = {
+	}
+
+    available = {
+		is_in_faction_with = BEL
+    }
+}
+
+technology_sharing_group = {
+
+	id = GRE_balkan_trade_union_group
+	name = GRE_balkan_trade_union_group_name
+	desc = default_group_desc
+	picture = GFX_technology_sharing_default
+    
+	research_sharing_per_country_bonus = 0.1
+	
+	categories = {
+	}
+
+    available = {
+		#is_in_faction_with = GRE
+    }
+}
+
+technology_sharing_group = {
+
+	id = FRA_european_federal_union_group
+	name = FRA_european_federal_union_group_name
+	desc = FRA_european_federal_union_group_desc
+	picture = GFX_technology_sharing_default
+    
+	research_sharing_per_country_bonus = 0.1
+	
+	categories = {
+	}
+
+    available = {
+		is_in_faction_with = FRA
+    }
+}
+
+technology_sharing_group = {
+
+	id = COG_cog_bel_group
+	name = COG_cog_bel_group_name
+	desc = default_group_desc
+	picture = GFX_technology_sharing_default
+    
+	research_sharing_per_country_bonus = 0.1
+	
+	categories = {
+	}
+
+    available = {
+		OR = {
+			tag = COG
+			tag = BEL
+		}
+		COG = { NOT = { has_war_with = BEL } }
+    }
+}
+
+technology_sharing_group = {
+
+	id = FRA_GER_group
+	name = FRA_GER_group_name
+	desc = default_group_desc
+	picture = GFX_technology_sharing_default
+    
+	research_sharing_per_country_bonus = 0.1
+	
+	categories = {
+	}
+
+    available = {
+		OR = {
+			tag = FRA
+			tag = GER
+		}
+		has_government = fascism
+		FRA = { is_in_faction_with = GER }
+    }
+}
+
+technology_sharing_group = {
+
+	id = PER_ENG_group
+	name = PER_ENG_group_name
+	desc = default_group_desc
+	picture = GFX_technology_sharing_default
+    
+	research_sharing_per_country_bonus = 0.1
+	
+	categories = {
+	}
+
+    available = {
+		OR = {
+			tag = ENG
+			tag = PER
+		}
+		PER = { is_in_faction_with = SOV }
+    }
+}
+
+technology_sharing_group = {
+
+	id = PER_middle_east_economic_union_group
+	name = PER_middle_east_economic_union_group_name
+	desc = default_group_desc
+	picture = GFX_technology_sharing_default
+    
+	research_sharing_per_country_bonus = 0.1
+	
+	categories = {
+	}
+
+    available = {
+		OR = {
+			tag = PER
+			has_country_flag = PER_economic_integration_flag
+		}
+		NOT = { has_war_with = PER }
+    }
+}
+
+technology_sharing_group = {
+
+	id = PER_SOV_group
+	name = PER_SOV_group_name
+	desc = default_group_desc
+	picture = GFX_technology_sharing_default
+    
+	research_sharing_per_country_bonus = 0.1
+	
+	categories = {
+	}
+
+    available = {
+		OR = {
+			tag = SOV
+			tag = PER
+		}
+		PER = { is_in_faction_with = SOV }
+    }
+}
+
+technology_sharing_group = {
+
+	id = TUR_pact_group
+	name = TUR_pact_group_name
+	desc = TUR_pact_group_desc
+	picture = GFX_technology_sharing_default
+    
+	research_sharing_per_country_bonus = 0.1
+	
+	categories = {
+	}
+
+    available = {
+		is_in_faction_with = TUR
+    }
+}
+
+technology_sharing_group = {
+
+	id = FRF_fascist_studies_group
+	name = FRF_fascist_studies_name
+	desc = default_group_desc
+	picture = GFX_technology_sharing_default
+    
+	research_sharing_per_country_bonus = 0.1
+	
+	categories = {
+	}
+
+    available = {
+		is_in_faction_with = FRF
+    }
+}
+
+technology_sharing_group = {
+
+	id = BEL_col_joint_scientific_research_group
+	name = BEL_col_joint_scientific_research_name
+	desc = default_group_desc
+	picture = GFX_technology_sharing_default
+    
+	research_sharing_per_country_bonus = 0.1
+	
+	categories = {
+	}
+
+    available = {
+		is_in_faction_with = BEL
+    }
+}
+
+technology_sharing_group = {
+
+	id = LIB_african_science_group
+	name = LIB_african_science_group_name
+	desc = default_group_desc
+	picture = GFX_technology_sharing_default
+    
+	research_sharing_per_country_bonus = 0.1
+	
+	categories = {
+	}
+
+    available = {
+		is_in_faction_with = LIB
+    }
+}
+
+technology_sharing_group = {
+
+	id = PER_middle_east_technate_group
+	name = PER_middle_east_technate_group_name
+	desc = default_group_desc
+	picture = GFX_technology_sharing_default
+    
+	research_sharing_per_country_bonus = 0.5
+	
+	categories = {
+	}
+
+    available = {
+		OR = {
+			has_completed_focus = PER_middle_east_technate
+			OVERLORD = {
+				has_completed_focus = PER_middle_east_technate
+			}
+		}
+    }
+}
+
+technology_sharing_group = {
+
+	id = BPL_joint_development_com_group
+	name = BPL_joint_development_com_group_name
+	desc = default_group_desc
+	picture = GFX_technology_sharing_default
+    
+	research_sharing_per_country_bonus = 0.1
+	
+	categories = {
+	}
+
+    available = {
+		is_in_faction_with = BPL
+    }
+}
+
+technology_sharing_group = {
+
+	id = BPL_support_group
+	name = BPL_support_group_name
+	desc = default_group_desc
+	picture = GFX_technology_sharing_default
+    
+	research_sharing_per_country_bonus = 0.1
+	
+	categories = {
+	}
+
+    available = {
+		OR = {
+			tag = BPL
+			BPL = { is_subject_of = ROOT }
+		}
+    }
+}
+
+technology_sharing_group = {
+
+	id = BPL_scientific_cooperation_group
+	name = BPL_scientific_cooperation_group_name
+	desc = default_group_desc
+	picture = GFX_technology_sharing_default
+    
+	research_sharing_per_country_bonus = 0.1
+	
+	categories = {
+	}
+
+    available = {
+		BPL = { is_in_faction_with = ITA }
+    }
+}
+
+technology_sharing_group = {
+
+	id = BPL_scientific_cooperation_comm_group
+	name = BPL_scientific_cooperation_comm_group_name
+	desc = default_group_desc
+	picture = GFX_technology_sharing_default
+    
+	research_sharing_per_country_bonus = 0.1
+	
+	categories = {
+	}
+
+    available = {
+		OR = {
+			tag = BPL
+			tag = PAL
+			tag = SOV
+		}
+		OR = {
+			is_in_faction_with = BPL
+			is_in_faction_with = PAL
+		}
+    }
+}
+
+technology_sharing_group = {
+
+	id = BPL_scientific_cooperation_fash_group
+	name = BPL_scientific_cooperation_fash_group_name
+	desc = default_group_desc
+	picture = GFX_technology_sharing_default
+    
+	research_sharing_per_country_bonus = 0.1
+	
+	categories = {
+	}
+
+    available = {
+		OR = {
+			tag = BPL
+			tag = PAL
+			tag = GER
+		}
+		OR = {
+			is_in_faction_with = BPL
+			is_in_faction_with = PAL
+		}
+    }
+}
+
+technology_sharing_group = {
+
+	id = BPL_joint_research_allies_group
+	name = BPL_joint_research_allies_group_name
+	desc = default_group_desc
+	picture = GFX_technology_sharing_default
+    
+	research_sharing_per_country_bonus = 0.1
+	
+	categories = {
+	}
+
+    available = {
+		OR = {
+			tag = BPL
+			tag = ENG
+		}
+		BPL = { is_in_faction_with = ENG }
+    }
+}
+
+technology_sharing_group = {
+
+	id = BPL_joint_research_iraq_group
+	name = BPL_joint_research_iraq_group_name
+	desc = default_group_desc
+	picture = GFX_technology_sharing_default
+    
+	research_sharing_per_country_bonus = 0.1
+	
+	categories = {
+	}
+
+    available = {
+		OR = {
+			tag = BPL
+			tag = IRQ
+		}
+		NOT = { has_war_with = BPL }
+    }
+}
+
+technology_sharing_group = {
+
+	id = EMA_technological_exchange
+	name = EMA_technological_exchange_name
+	desc = default_group_desc
+	picture = GFX_technology_sharing_default
+    
+	research_sharing_per_country_bonus = 0.1
+	
+	categories = {
+	}
+
+    available = {
+		OR = {
+			tag = EMA
+			tag = GRE
+		}
+		NOT = { has_war_with = GRE }
+    }
+}
+
+technology_sharing_group = {
+
+	id = us_newfoundland_economic_union
+	name = us_newfoundland_economic_union_name
+	desc = default_group_desc
+	picture = GFX_technology_sharing_default
+    
+	research_sharing_per_country_bonus = 0.1
+
+    available = {
+        NOT = { 
+			has_war_with = NFL
+			has_war_with = USA
+		}
+    }
+}
+
+technology_sharing_group = {
+
+	id = canadian_newfoundland_studies
+	name = canadian_newfoundland_studies_name
+	desc = default_group_desc
+	picture = GFX_technology_sharing_default
+    
+	research_sharing_per_country_bonus = 0.1
+
+    available = {
+        NOT = { 
+			has_war_with = NFL
+			has_war_with = CAN
+		}
+    }
+}
+
+technology_sharing_group = {
+
+	id = TUR_kurdish_turkish_science_group
+	name = TUR_kurdish_turkish_science_group_name
+	desc = default_group_desc
+	picture = GFX_technology_sharing_default
+    
+	research_sharing_per_country_bonus = 0.1
+
+    available = {
+        OR = {
+			original_tag = TUR
+			original_tag = TRK
+			original_tag = KRD
+		}
+    }
+}
+
+technology_sharing_group = {
+
+	id = TUR_union_developments_group
+	name = TUR_union_developments_group_name
+	desc = default_group_desc
+	picture = GFX_technology_sharing_default
+    
+	research_sharing_per_country_bonus = 0.1
+
+    available = {
+		OR = {
+			is_in_faction_with = TUR
+			is_in_faction_with = TRK
+		}
+    }
+}
+
+technology_sharing_group = {
+
+	id = KRD_kurdish_science_group
+	name = KRD_kurdish_science_group_name
+	desc = default_group_desc
+	picture = GFX_technology_sharing_default
+    
+	research_sharing_per_country_bonus = 0.1
+
+    available = {
+		is_in_faction_with = KRD
+    }
+}
+
+technology_sharing_group = {
+
+	id = KRD_joint_research_group
+	name = KRD_joint_research_group_name
+	desc = default_group_desc
+	picture = GFX_technology_sharing_default
+    
+	research_sharing_per_country_bonus = 0.1
+
+    available = {
+		is_in_faction_with = KRD
+    }
+}
+
+technology_sharing_group = {
+
+	id = KRD_joint_research_dem_group
+	name = KRD_joint_research_dem_group_name
+	desc = default_group_desc
+	picture = GFX_technology_sharing_default
+    
+	research_sharing_per_country_bonus = 0.1
+
+    available = {
+		is_in_faction_with = KRD
+    }
+}
+
+technology_sharing_group = {
+
+	id = himalayan_research_group
+	name = himalayan_research_group_name
+	desc = default_group_desc
+	picture = GFX_technology_sharing_default
+    
+	research_sharing_per_country_bonus = 0.1
+
+    available = {
+		is_in_faction_with = BHU
+    }
+}
+
+technology_sharing_group = {
+
+	id = DEN_ger_research
+	name = DEN_ger_research_name
+	desc = DEN_ger_research_desc
+	picture = GFX_technology_sharing_default
+    
+	research_sharing_per_country_bonus = 0.1
+
+    available = {
+        is_in_faction_with = GER
+        is_in_faction_with = DEN
+        GER = { has_government = fascism }
+        DEN = { has_government = fascism }
+    }
+}
+
+technology_sharing_group = {
+
+	id = DEN_eng_research
+	name = DEN_eng_research_name
+	desc = DEN_eng_research_desc
+	picture = GFX_technology_sharing_default
+    
+	research_sharing_per_country_bonus = 0.1
+
+    available = {
+        is_in_faction_with = ENG
+        is_in_faction_with = DEN
+    }
+}
+
+technology_sharing_group = {
+
+	id = DEN_north_research
+	name = DEN_north_research_name
+	desc = DEN_north_research_desc
+	picture = GFX_technology_sharing_default
+    
+	research_sharing_per_country_bonus = 0.1
+
+    available = {
+        has_idea = DEN_nordic_treaty_idea
+    }
+}
+
+technology_sharing_group = {
+
+	id = GER_european_scientific_cooperation
+	name = GER_european_scientific_cooperation
+	desc = default_group_desc
+	picture = GFX_technology_sharing_default
+    
+	research_sharing_per_country_bonus = 0.1
+
+    available = {
+        any_allied_country = {
+			has_completed_focus = GER_european_scientific_cooperation
+		}
+    }
+}
+
+technology_sharing_group = {
+
+	id = GER_european_academy
+	name = GER_european_academy
+	desc = default_group_desc
+	picture = GFX_technology_european_academy_strasserism
+    
+	research_sharing_per_country_bonus = 0.1
+
+    available = {
+        OR = {
+			tag = GBF
+			is_in_faction_with = GBF
+		}
+    }
+}
+
+technology_sharing_group = {
+
+	id = GER_european_research
+	name = GER_european_research
+	desc = default_group_desc
+	picture = GFX_technology_sharing_default
+    
+	research_sharing_per_country_bonus = 0.1
+
+    available = {
+        OR = {
+			original_tag = GER
+			is_in_faction_with = GER
+		}
+    }
+}
+
+technology_sharing_group = {
+
+	id = PER_ettehad_i_islam_group
+	name = PER_ettehad_i_islam_group
+	desc = default_group_desc
+	picture = GFX_technology_sharing_default
+    
+	research_sharing_per_country_bonus = 0.1
+
+    available = {
+        OR = {
+			original_tag = PER
+			is_in_faction_with = PER
+		}
+    }
+}
+
+technology_sharing_group = {
+
+	id = SAU_Turkish_cooperation
+	name = SAU_Turkish_cooperation
+	desc = default_group_desc
+	picture = GFX_technology_sharing_default
+    
+	research_sharing_per_country_bonus = 0.15
+
+    available = {
+        OR = {
+			original_tag = SAU
+			original_tag = TUR
+		}
+    }
+}
+
+technology_sharing_group = {
+
+	id = POR_iberian_science_group
+	name = POR_iberian_science_group
+	desc = default_group_desc
+	picture = GFX_technology_sharing_default
+    
+	research_sharing_per_country_bonus = 0.15
+
+    available = {
+        OR = {
+			original_tag = POR
+			is_in_faction_with = POR
+		}
+    }
+}

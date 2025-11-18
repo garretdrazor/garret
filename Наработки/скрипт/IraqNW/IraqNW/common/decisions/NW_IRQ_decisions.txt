@@ -1,0 +1,849 @@
+political_actions = {
+
+	IRQ_integrate_arabistan = {
+	
+		allowed = {
+			original_tag = IRQ
+		}
+
+		icon = generic_form_nation
+
+		highlight_states = { highlight_state_targets = { state = 413 } }	
+
+		available = {
+			controls_state = 413
+		}
+
+		fire_only_once = yes
+
+		cost = 30
+
+		ai_will_do = {
+			factor = 50
+		}
+		
+		visible = {
+			413 = { NOT = { is_core_of = ROOT } }
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision IRQ_integrate_arabistan"
+			413 = { add_core_of = ROOT }
+		}
+	}
+	
+	IRQ_integrate_kuwait = {
+	
+		allowed = {
+			original_tag = IRQ
+		}
+
+		icon = generic_form_nation
+
+		highlight_states = { highlight_state_targets = { state = 656 } }	
+
+		available = {
+			controls_state = 656
+		}
+
+		fire_only_once = yes
+
+		cost = 30
+
+		ai_will_do = {
+			factor = 50
+		}
+		
+		visible = {
+			656 = { NOT = { is_core_of = ROOT } }
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision IRQ_integrate_kuwait"
+			656 = { add_core_of = ROOT }
+		}
+	}
+	IRQ_muntafiq_return = {
+	
+		allowed = {
+			original_tag = IRQ
+		}
+
+		icon = generic_form_nation
+
+		highlight_states = { highlight_state_targets = { state = 995 } }	
+
+		available = {
+			has_full_control_of_state = 995
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 50
+		}
+		
+		visible = {
+			995 = { NOT = { is_core_of = ROOT } }
+			has_idea = IRQ_sunnite_revanchism
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision IRQ_muntafiq_return"
+			add_political_power = 60
+			add_war_support = 0.1
+			add_ideas = IRQ_sunnite_revanchism_victory
+		}
+	}
+}
+
+IRQ_anglo_iraqi_relationship = {
+    IRQ_call_britain = {
+		icon = GFX_decision_shia
+		available = {
+            has_defensive_war = yes
+		}
+		visible = {
+		    tag = IRQ
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision IRQ_call_britain"
+			ENG = {
+			    country_event = { id = NWiraq.1 }
+			}
+		}
+	}
+	IRQ_change_political_vector = {
+		icon = GFX_decision_shia
+		cost = 50
+		days_remove = 20
+		visible = {
+		    tag = IRQ
+			has_country_flag = IRQ_change_political_vector
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision IRQ_call_britain"
+			custom_effect_tooltip = IRQ_change_political_vector_tt
+            set_country_flag = IRQ_political_course_change
+		}
+	}
+	IRQ_involve_british_advisors = {
+		icon = GFX_decision_shia
+		days_remove = 120
+		visible = {
+		    tag = IRQ
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision IRQ_involve_british_advisors"
+		}
+		remove_effect = {
+		    set_temp_variable = { british_control_temp = 5 }
+			add_to_variable = { british_control_total = british_control_temp }
+			clamp_variable = { var = british_control_total min = 0 max = 100 }
+			custom_effect_tooltip = british_control_tt
+			add_political_power = 100
+			if = {
+			    limit = {
+				    has_completed_focus = IRQ_country_control
+				}
+                add_stability = 0.05
+			}
+		}
+	}
+	IRQ_british_manufaturers_concessions = {
+		icon = GFX_decision_shia
+		days_remove = 120
+		cost = 50
+		visible = {
+		    tag = IRQ
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision IRQ_british_manufaturers_concessions"
+		}
+		remove_effect = {
+		    set_temp_variable = { british_control_temp = 5 }
+			add_to_variable = { british_control_total = british_control_temp }
+			clamp_variable = { var = british_control_total min = 0 max = 100 }
+			custom_effect_tooltip = british_control_tt
+			random_owned_state = {
+			    add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+				}
+            } 
+			if = {
+			    limit = {
+				    has_completed_focus = IRQ_economical_treaty
+				}
+				random_owned_state = {
+				    add_building_construction = {
+                        type = industrial_complex
+                        level = 1
+                        instant_build = yes
+				    }
+			        add_building_construction = {
+                        type = arms_factory
+                        level = 1
+                        instant_build = yes
+				    }
+                } 
+			}
+		}
+	}
+	IRQ_invite_british_officers = {
+		icon = GFX_decision_shia
+		days_remove = 120
+		cost = 100
+		visible = {
+		    tag = IRQ
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision IRQ_invite_british_officers"
+		}
+		remove_effect = {
+		    set_temp_variable = { british_control_temp = 5 }
+			add_to_variable = { british_control_total = british_control_temp }
+			clamp_variable = { var = british_control_total min = 0 max = 100 }
+			custom_effect_tooltip = british_control_tt
+			army_experience = 20
+			add_tech_bonus = {
+                bonus = 0.2
+                uses = 1
+                category = land_doctrine
+            }
+			if = {
+			    limit = {
+				    has_completed_focus = IRQ_military_treaty
+				}
+				army_experience = 20
+				navy_experience = 10
+				air_experience = 10
+			}
+		}
+	}
+    IRQ_buy_british_equipment = {
+		icon = GFX_decision_shia
+		days_re_enable = 35
+        cost = 70
+		visible = {
+		    tag = IRQ
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision IRQ_buy_british_equipment"
+			set_temp_variable = { british_control_temp = 2 }
+			add_to_variable = { british_control_total = british_control_temp }
+			clamp_variable = { var = british_control_total min = 0 max = 100 }
+			custom_effect_tooltip = british_control_tt
+			add_popularity = {
+                ideology = neutrality
+                popularity = 0.02
+            }
+			add_equipment_to_stockpile = {
+                type = infantry_equipment
+                amount = 300
+                producer = ENG
+            }
+			add_equipment_to_stockpile = {
+                type = support_equipment
+                amount = 50
+                producer = ENG
+            }
+			if = {
+			    limit = {
+				    has_completed_focus = IRQ_british_weapon_market
+				}
+				add_equipment_to_stockpile = {
+                    type = infantry_equipment
+                    amount = 500
+                    producer = ENG
+                }
+			    add_equipment_to_stockpile = {
+                    type = support_equipment
+                    amount = 100
+                    producer = ENG
+                }
+			}
+		}
+	}
+	IRQ_buy_british_artillery = {
+		icon = GFX_decision_shia
+		days_re_enable = 35
+		cost = 70
+		visible = {
+		    tag = IRQ
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision IRQ_buy_british_artillery"
+			set_temp_variable = { british_control_temp = 2 }
+			add_to_variable = { british_control_total = british_control_temp }
+			clamp_variable = { var = british_control_total min = 0 max = 100 }
+			custom_effect_tooltip = british_control_tt
+			add_popularity = {
+                ideology = neutrality
+                popularity = 0.02
+            }
+			add_equipment_to_stockpile = {
+                type = artillery_equipment
+                amount = 100
+                producer = ENG
+            }
+			if = {
+			    limit = {
+				    has_completed_focus = IRQ_british_weapon_market
+				}
+				add_equipment_to_stockpile = {
+                    type = artillery_equipment
+                    amount = 150
+                    producer = ENG
+                }
+			}
+		}
+	}
+	IRQ_investment_offer = {
+		icon = GFX_decision_shia
+		days_remove = 90
+		cost = 30
+		visible = {
+		    tag = ENG
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision IRQ_investment_offer"
+			custom_effect_tooltip = IRQ_investment_offer_tt
+			IRQ = {
+			    country_event = { id = NWiraq.44 }
+			}
+		}
+	}
+	IRQ_equipment_supply_offer = {
+		icon = GFX_decision_shia
+		days_remove = 90
+		cost = 30
+		available = {
+		    has_equipment = {
+                infantry_equipment > 300
+            }
+		}
+		visible = {
+		    tag = ENG
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision IRQ_equipment_supply_offer"
+			custom_effect_tooltip = IRQ_equipment_supply_offer_tt
+			IRQ = {
+			    country_event = { id = NWiraq.45 }
+			}
+		}
+	}
+	IRQ_give_milacc = {
+		icon = GFX_decision_shia
+		available = {
+		    OR = {
+                ENG = {
+				    has_war = yes
+				}
+				threat > 0.4
+			}
+		}
+		visible = {
+		    tag = ENG
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision IRQ_give_milacc"
+			IRQ = {
+			    country_event = { id = NWiraq.46 }
+			}
+		}
+	}
+	IRQ_join_faction = {
+		icon = GFX_decision_shia
+		cost = 30
+		available = {
+            ENG = {
+				is_faction_leader = yes
+		    }
+		    threat > 0.4
+		}
+		visible = {
+		    tag = ENG
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision IRQ_join_faction"
+			IRQ = {
+			    country_event = { id = NWiraq.47 }
+			}
+		}
+	}
+	IRQ_fight_with_control = {
+		icon = GFX_decision_shia
+		available = {
+            has_completed_focus = IRQ_independence_from_britain
+		}
+		visible = {
+		    tag = IRQ
+		}
+		days_remove = 120
+		cost = 50
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision IRQ_fight_with_control"
+		}
+		remove_effect = {
+		    set_temp_variable = { british_control_temp = -5 }
+			add_to_variable = { british_control_total = british_control_temp }
+			clamp_variable = { var = british_control_total min = 0 max = 100 }
+			custom_effect_tooltip = british_control_tt
+		}
+	}
+	IRQ_allow_weapon_trade = {
+		icon = GFX_decision_shia
+		available = {
+		    has_completed_focus = IRQ_independence_from_britain
+            check_variable = { british_control_total < 30 }
+		}
+		visible = {
+		    tag = IRQ
+		}
+		fire_only_once = yes
+		cost = 50
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision IRQ_allow_weapon_trade"
+			custom_effect_tooltip = IRQ_allow_weapon_trade_tt
+			hidden_effect = {
+			    swap_ideas = {
+			        remove_idea = IRQ_anglo_iraqi_treaty_new
+				    add_idea = IRQ_anglo_iraqi_treaty_new_2
+			    }
+			}
+		}
+	}
+	IRQ_allow_access = {
+		icon = GFX_decision_shia
+		available = {
+		    has_completed_focus = IRQ_independence_from_britain
+            check_variable = { british_control_total < 20 }
+			has_decision = IRQ_allow_weapon_trade
+		}
+		visible = {
+		    tag = IRQ
+		}
+		fire_only_once = yes
+		cost = 50
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision IRQ_allow_access"
+			custom_effect_tooltip = IRQ_allow_access_tt
+			hidden_effect = {
+			    swap_ideas = {
+			        remove_idea = IRQ_anglo_iraqi_treaty_new_2
+				    add_idea = IRQ_anglo_iraqi_treaty_new_3
+			    }
+			}
+		}
+	}
+	IRQ_allow_factions = {
+		icon = GFX_decision_shia
+		available = {
+		    has_completed_focus = IRQ_independence_from_britain
+            check_variable = { british_control_total < 5 }
+			has_decision = IRQ_allow_access
+		}
+		visible = {
+		    tag = IRQ
+		}
+		fire_only_once = yes
+		cost = 50
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision IRQ_allow_factions"
+			custom_effect_tooltip = IRQ_allow_factions_tt
+			hidden_effect = {
+			    swap_ideas = {
+			        remove_idea = IRQ_anglo_iraqi_treaty_new_3
+				    add_idea = IRQ_anglo_iraqi_treaty_new_4
+			    }
+			}
+		}
+	}
+}
+
+IRQ_shiite_uprise = {
+
+	IRQ_shia_spread = {
+
+		icon = GFX_decision_shia
+		
+		available = {
+		    NOT = {
+                has_idea = IRQ_shia_uprisings
+			}
+		}
+		
+		is_good = no
+		days_mission_timeout = 170
+		fire_only_once = yes
+	   
+		timeout_effect = {
+            add_stability = -0.1
+			activate_mission = IRQ_radical_shia_spread
+        }
+    }
+	IRQ_radical_shia_spread = {
+
+		icon = GFX_decision_shia
+		
+		activation = {
+		    always = no
+		}
+		available = {
+		    NOT = {
+                has_idea = IRQ_shia_uprisings
+			}
+		}
+		
+		is_good = no		
+		days_mission_timeout = 50
+		fire_only_once = yes
+	
+		timeout_effect = {
+			country_event = { id = NWiraq.3 }
+        }
+    }
+	IRQ_supress_south_hashimi = {
+
+		icon = generic_form_nation
+		
+		available = {
+		    has_idea = IRQ_shia_uprisings
+		}
+		visible = {
+		    has_completed_focus = IRQ_suppress_shiite_uprising
+			IRQ_taha_al_hashimi = {
+                has_character_flag = IRQ_taha_al_hashimi_favor
+            }	
+		}
+		
+		days_remove = 20
+		fire_only_once = yes
+		custom_cost_trigger = {
+            command_power > 4
+        }
+        custom_cost_text = decision_cost_CP_5
+	
+	    complete_effect = {
+		    log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision IRQ_supress_south_hashimi"
+		}
+		
+		remove_effect = {
+            add_manpower = -2000
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+                amount = -300
+			}
+			remove_ideas = IRQ_shia_uprisings
+        }
+    }
+	IRQ_supress_arbil_hashimi = {
+
+		icon = generic_form_nation
+		
+		available = {
+		    has_idea = IRQ_shia_uprisings
+		}
+		visible = {
+		    has_completed_focus = IRQ_suppress_shiite_uprising
+			IRQ_taha_al_hashimi = {
+                has_character_flag = IRQ_taha_al_hashimi_favor
+            }	
+		}
+		
+		days_remove = 20
+		fire_only_once = yes
+		custom_cost_trigger = {
+            command_power > 4
+        }
+        custom_cost_text = decision_cost_CP_5
+	
+	    complete_effect = {
+		    log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision IRQ_supress_arbil_hashimi"
+		}
+		
+		remove_effect = {
+            add_manpower = -2000
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+                amount = -300
+			}
+			962 = {
+			    add_resistance = -40
+		    }
+        }
+    }
+	IRQ_supress_south_sidqi = {
+
+		icon = generic_form_nation
+		
+		available = {
+		    has_idea = IRQ_shia_uprisings
+		}
+		visible = {
+		    has_completed_focus = IRQ_suppress_shiite_uprising
+			IRQ_bakr_sidqi = {
+                has_character_flag = IRQ_bakr_sidqi_favor
+            }	
+		}
+		
+		days_remove = 50
+		fire_only_once = yes
+		cost = 60
+		custom_cost_trigger = {
+            command_power > 3
+        }
+        custom_cost_text = decision_cost_CP_4
+	
+	    complete_effect = {
+		    log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision IRQ_supress_south_sidqi"
+		    add_command_power = -4
+		}
+		
+		remove_effect = {
+            add_manpower = -1500
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+                amount = -200
+			}
+			remove_ideas = IRQ_shia_uprisings
+        }
+    }
+	IRQ_supress_arbil_sidqi = {
+
+		icon = generic_form_nation
+		
+		available = {
+		    has_idea = IRQ_shia_uprisings
+		}
+		visible = {
+		    has_completed_focus = IRQ_suppress_shiite_uprising
+			IRQ_bakr_sidqi = {
+                has_character_flag = IRQ_bakr_sidqi_favor
+            }	
+		}
+		
+		days_remove = 50
+		fire_only_once = yes
+		cost = 60
+		custom_cost_trigger = {
+            command_power > 3
+        }
+        custom_cost_text = decision_cost_CP_4
+	
+	    complete_effect = {
+		    log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision IRQ_supress_arbil_sidqi"
+		}
+		
+		remove_effect = {
+            add_manpower = -1500
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+                amount = -200
+			}
+			962 = {
+			    add_resistance = -40
+		    }
+        }
+    }
+	IRQ_supress_south_askari = {
+
+		icon = generic_form_nation
+		
+		available = {
+		    has_idea = IRQ_shia_uprisings
+		}
+		visible = {
+		    has_completed_focus = IRQ_suppress_shiite_uprising
+			IRQ_jafar_al_askari = {
+                has_character_flag = IRQ_jafar_al_askari_favor
+            }
+		}
+		
+		days_remove = 100
+		fire_only_once = yes
+		cost = 100
+		custom_cost_trigger = {
+            command_power > 2
+        }
+        custom_cost_text = decision_cost_CP_3
+	
+	    complete_effect = {
+		    log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision IRQ_supress_south_askari"
+		    add_command_power = -3
+		}
+		
+		remove_effect = {
+            add_manpower = -1000
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+                amount = -100
+			}
+			remove_ideas = IRQ_shia_uprisings
+			hidden_effect = {
+			    if = {
+				    limit = {
+					    NOT = {
+						    has_country_flag = IRQ_shia_uprised
+						}
+					}
+					country_event = { id = NWiraq.5 }
+				}
+			}
+        }
+    }
+	IRQ_supress_arbil_askari = {
+
+		icon = generic_form_nation
+		
+		available = {
+		    has_idea = IRQ_shia_uprisings
+		}
+		visible = {
+		    has_completed_focus = IRQ_suppress_shiite_uprising
+			IRQ_jafar_al_askari = {
+                has_character_flag = IRQ_jafar_al_askari_favor
+            }
+		}
+		
+		days_remove = 100
+		fire_only_once = yes
+		cost = 100
+		custom_cost_trigger = {
+            command_power > 2
+        }
+        custom_cost_text = decision_cost_CP_3
+	
+	    complete_effect = {
+		    log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision IRQ_supress_arbil_askari"
+		}
+		
+		remove_effect = {
+            add_manpower = -1000
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+                amount = -100
+			}
+			962 = {
+			    add_resistance = -40
+		    }
+			hidden_effect = {
+			    if = {
+				    limit = {
+					    NOT = {
+						    has_country_flag = IRQ_shia_uprised
+						}
+					}
+					country_event = { id = NWiraq.6 }
+				}
+			}
+        }
+    }
+	IRQ_involve_shia_sheikhs = {
+
+		icon = generic_form_nation
+		
+		available = {
+		    995 = {
+			    infrastructure > 0
+			}
+		}
+		visible = {
+		    has_decision = IRQ_supress_south_askari
+			IRQ_jafar_al_askari = {
+                has_character_flag = IRQ_jafar_al_askari_favor
+            }	
+		}
+		
+		fire_only_once = yes
+	
+	    complete_effect = {
+		    log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision IRQ_involve_shia_sheikhs"
+			division_template = {
+	            name = "Al-Muntafiq Tribe Division"	
+                regiments = {
+		            cavalry = { x = 0 y = 0 }
+	                cavalry = { x = 0 y = 1 }
+		            cavalry = { x = 1 y = 0 }
+		            cavalry = { x = 1 y = 1 }
+                }
+				is_locked = no
+	        }
+            995 = {            
+				create_unit = {
+					division = "name = \"1. Al-Muntafiq Tribe Division-1\" division_template = \"Al-Muntafiq Tribe Division\" start_experience_factor = 1 start_equipment_factor = 1"
+					owner = IRQ
+				}
+                create_unit = {
+					division = "name = \"2. Al-Muntafiq Tribe Division-2\" division_template = \"Al-Muntafiq Tribe Division\" start_experience_factor = 1 start_equipment_factor = 1"
+					owner = IRQ
+				}
+			}
+            add_manpower = 5000
+		}
+    }
+	IRQ_involve_kurd_tribes = {
+
+		icon = generic_form_nation
+		
+		available = {
+		    962 = {
+			    infrastructure > 0
+			}
+		}
+		visible = {
+		    has_decision = IRQ_supress_arbil_askari
+			IRQ_jafar_al_askari = {
+                has_character_flag = IRQ_jafar_al_askari_favor
+            }	
+		}
+		
+		fire_only_once = yes
+	
+	    complete_effect = {
+		    log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision IRQ_involve_kurd_tribes"
+		    962 = {
+			    add_compliance = 30
+			}
+		}
+    }
+}
+
+IRQ_support_quwait = {
+
+    IRQ_support_in_speech = {
+	
+	    icon = generic_form_nation
+
+		days_remove = 80
+		fire_only_once = yes
+		cost = 30
+	
+	    complete_effect = {
+		    log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision IRQ_support_in_speech"
+		    656 = {
+			    add_resistance = 10
+			}
+		}
+    }
+	IRQ_condemn_presecution = {
+	
+	    icon = generic_form_nation
+
+		days_remove = 80
+		fire_only_once = yes
+		cost = 30
+	
+	    complete_effect = {
+		    log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): complete decision IRQ_condemn_presecution"
+		    656 = {
+			    add_resistance = 10
+			}
+		}
+    }
+}

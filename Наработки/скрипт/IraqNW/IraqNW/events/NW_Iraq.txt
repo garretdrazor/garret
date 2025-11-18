@@ -1,0 +1,2472 @@
+﻿###########################
+# Ветка Ирака
+###########################
+
+add_namespace = NWiraq
+
+#Последствия Англо-иракского договора // IRQ
+country_event = {
+	id = NWiraq.1
+	title = NWiraq.1.t
+	desc = NWiraq.1.d
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.1" }
+	
+	option = {
+		name = NWiraq.1.a
+		ai_chance = {
+			factor = 0
+		}
+		every_other_country = {
+		    limit = {
+			    has_offensive_war_with = IRQ
+			}
+			ENG = {
+		        add_to_war = {
+                    targeted_alliance = IRQ
+                    enemy = PREV
+                    hostility_reason = asked_to_join
+			    }
+            }
+		}
+	}
+	option = {
+		name = NWiraq.1.b
+		ai_chance = {
+			factor = 0
+		}
+		IRQ = {
+	        country_event = { id = NWiraq.39 }
+		}
+	}
+}
+country_event = {
+	id = NWiraq.2
+	is_triggered_only = yes
+	hidden = yes	
+	
+    fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.2" }
+
+	option = {
+		name = NWiraq.2.a
+		add_to_variable = { weapons_buy_discount = 0.5 }
+	}
+}
+#Шиитские и курдские восстания // IRQ
+country_event = {
+	id = NWiraq.3
+	title = NWiraq.3.t
+	desc = NWiraq.3.d
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.3" }
+	
+	option = {
+		name = NWiraq.3.a 
+		set_country_flag = IRQ_shia_uprised
+		AMQ = {
+		    add_state_core = 345
+		}
+		release = AMQ
+		AMQ = {
+		    declare_war_on = {
+		        target = IRQ
+			    type = annex_everything
+		    }
+		}
+		division_template = {
+	        name = "Al-Muntafiq Tribe Division"	
+            regiments = {
+		        cavalry = { x = 0 y = 0 }
+	            cavalry = { x = 0 y = 1 }
+		        cavalry = { x = 1 y = 0 }
+		        cavalry = { x = 1 y = 1 }
+            }
+			is_locked = no
+	    }
+        995 = {            
+		    create_unit = {
+				division = "name = \"1. Al-Muntafiq Tribe Division-1\" division_template = \"Al-Muntafiq Tribe Division\" start_experience_factor = 1 start_equipment_factor = 1"
+				owner = AMQ
+			}
+            create_unit = {
+				division = "name = \"2. Al-Muntafiq Tribe Division-2\" division_template = \"Al-Muntafiq Tribe Division\" start_experience_factor = 1 start_equipment_factor = 1"
+				owner = AMQ
+			}
+			create_unit = {
+				division = "name = \"3. Al-Muntafiq Tribe Division-3\" division_template = \"Al-Muntafiq Tribe Division\" start_experience_factor = 1 start_equipment_factor = 1"
+				owner = AMQ
+			}
+		}
+		custom_effect_tooltip = NWiraq.3.tt
+		hidden_effect = {
+		    every_other_country = {
+			    limit = {
+				    OR = {
+				        tag = PER
+				  	    tag = SAU
+					    tag = TUR
+					    tag = SYR
+					    tag = BPL
+					    tag = YEM
+					    tag = KRD
+					    tag = JOR
+					}
+				    is_subject = no
+				}
+				country_event = { id = NWiraq.7 }
+			}
+		}
+	}
+}
+country_event = {
+	id = NWiraq.4
+	title = NWiraq.4.t
+	desc = NWiraq.4.d
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.4" }
+	
+	option = {
+		name = NWiraq.4.a 
+		trigger = {
+		    IRQ = {
+		        has_character = IRQ_bakr_sidqi
+			}
+		}
+		IRQ_bakr_sidqi = {
+            set_character_flag = IRQ_bakr_sidqi_favor
+        }		
+        unlock_decision_tooltip = IRQ_supress_south_sidqi
+        unlock_decision_tooltip = IRQ_supress_arbil_sidqi		
+	}
+	option = {
+		name = NWiraq.4.b  
+        IRQ_taha_al_hashimi = {
+            set_character_flag = IRQ_taha_al_hashimi_favor
+        }			
+		unlock_decision_tooltip = IRQ_supress_south_hashimi
+        unlock_decision_tooltip = IRQ_supress_arbil_hashimi		
+	}
+	option = {
+		name = NWiraq.4.c
+        IRQ_jafar_al_askari = {
+            set_character_flag = IRQ_jafar_al_askari_favor
+        }			
+		unlock_decision_tooltip = IRQ_supress_south_askari
+        unlock_decision_tooltip = IRQ_supress_arbil_askari	
+	}
+}
+country_event = {
+	id = NWiraq.5
+	title = NWiraq.5.t
+	desc = NWiraq.5.d
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.5" }
+	
+	option = {
+		name = NWiraq.5.a 
+		unlock_decision_tooltip = IRQ_involve_shia_sheikhs
+	}
+}
+country_event = {
+	id = NWiraq.6
+	title = NWiraq.6.t
+	desc = NWiraq.6.d
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.6" }
+	
+	option = {
+		name = NWiraq.6.a 
+		unlock_decision_tooltip = IRQ_involve_kurd_tribes
+	}
+}
+country_event = {
+	id = NWiraq.7
+	title = NWiraq.7.t
+	desc = NWiraq.7.d
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.7" }
+	
+	option = {
+		name = NWiraq.7.a 
+		add_equipment_to_stockpile = {
+            type = infantry_equipment
+            amount = -200
+        }
+		division_template = {
+	        name = "Al-Muntafiq Tribe Camel Division"	
+            regiments = {
+		        camelry = { x = 0 y = 0 }
+            }
+		    is_locked = no
+	    }
+        995 = {            
+		    create_unit = {
+				division = "name = \"1. Al-Muntafiq Tribe Camel Division\" division_template = \"Al-Muntafiq Tribe Camel Division\" start_experience_factor = 1 start_equipment_factor = 1"
+				owner = AMQ
+		    }
+	    }
+		AMQ = {
+		    add_opinion_modifier = {
+			    target = ROOT
+		        modifier = AMQ_supported_tribe
+			}
+		}
+	}
+	option = {
+		name = NWiraq.7.b
+		add_political_power = -20
+		AMQ = {
+			add_war_support = 0.05
+		}
+	}
+	option = {
+		name = NWiraq.7.c 
+	}
+}
+country_event = {
+	id = NWiraq.8
+	title = NWiraq.8.t
+	desc = NWiraq.8.d
+	trigger = {
+        tag = IRQ	
+		date > 1937.01.31
+		date < 1937.02.02
+		NOT = {
+			is_in_faction_with = AMQ
+		}
+		all_core_state = {
+		    is_core_of = AMQ
+			is_fully_controlled_by = AMQ
+		}
+		NOT = {
+		    has_country_flag = IRQ_peace_with_shia
+		}
+	}
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.8" }
+	
+	option = {
+		name = NWiraq.8.a  
+		white_peace = AMQ
+		hidden_effect = {
+		    country_event = { id = NWiraq.9 days = 3 }
+		}
+	}
+	option = {
+		name = NWiraq.8.b
+		add_war_support = -0.03
+		set_country_flag = {
+            flag = IRQ_peace_with_shia
+            days = 50
+        }
+	}
+}
+country_event = {
+	id = NWiraq.9
+	title = NWiraq.9.t
+	desc = NWiraq.9.d
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.9" }
+	
+	option = {
+		name = NWiraq.9.a 
+		add_timed_idea = {
+		    idea = IRQ_sunnite_revanchism
+			days = 720
+		}
+		unlock_decision_tooltip = IRQ_muntafiq_return
+		country_event = { id = NWiraq.10 days = 10 }
+	}
+}
+country_event = {
+	id = NWiraq.10
+	title = NWiraq.10.t
+	desc = NWiraq.10.d
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.10" }
+	
+	option = {
+		name = NWiraq.10.a 
+		add_popularity = {
+            ideology = fascism
+            popularity = 0.1
+        }
+		add_ideas = IRQ_knights_of_allah
+		set_party_name = {
+            ideology = fascism
+            name = IRQ_knights_of_allah
+        }
+	}
+	option = {
+		name = NWiraq.10.b
+		add_political_power = -90
+		set_party_name = {
+            ideology = fascism
+            name = IRQ_knights_of_allah
+        }
+	}
+}
+country_event = {
+	id = NWiraq.11
+	title = NWiraq.11.t
+	desc = NWiraq.11.d
+	trigger = {
+	    tag = IRQ
+	    OR = {
+		    KRD = {
+			    exists = no
+			}
+			ERB = {
+			    exists = no
+			}
+		}
+		962 = {
+		    is_owned_and_controlled_by = IRQ
+			resistance > 100
+		}
+		ENG = {
+		    NOT = {
+			    has_country_flag = IRQ_high_inflation
+			}
+		}
+	}
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.11" }
+	
+	option = {
+		name = NWiraq.11.a 
+		release = KRD
+		KRD = {
+		    declare_war_on = {
+			    target = IRQ
+                type = annex_everything
+			}
+			set_politics = {
+	            ruling_party = neutrality
+                elections_allowed = no
+                last_election = "1936.1.1"
+                election_frequency = 48
+            }
+		}
+	}
+	option = {
+		name = NWiraq.11.b
+		release = KRD
+		KRD = {
+		    declare_war_on = {
+			    target = IRQ
+                type = annex_everything
+			}
+			set_politics = {
+	            ruling_party = neutrality
+                elections_allowed = no
+                last_election = "1936.1.1"
+                election_frequency = 48
+            }
+			change_tag_from = IRQ
+		}
+	}
+}
+country_event = {
+	id = NWiraq.12
+	title = NWiraq.12.t
+	desc = NWiraq.12.d
+	trigger = {
+	    tag = ENG
+        has_war_with = IRQ
+		has_war_with_major = yes
+	    any_controlled_state = {
+			is_core_of = IRQ
+			is_controlled_by = ENG
+        }		
+        date > 1943.01.01		
+	}
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.12" }
+	
+	option = {
+		name = NWiraq.12.a  
+	    if = {
+		    limit = {
+		        962 = {
+			        is_controlled_by = ENG
+				}
+			}
+			962 = { 
+		        add_resistance = 40
+			}
+		}
+		every_core_state = {
+		    limit = {
+			    is_core_of = IRQ
+				is_controlled_by = ENG
+			}
+			add_resistance = 40
+		}
+		set_country_flag = IRQ_high_inflation
+	}
+	option = {
+		name = NWiraq.12.b
+		add_political_power = -50
+		add_timed_idea = {
+		    idea = IRQ_iraqi_ecenomic_save
+		    days = 90
+		}
+		if = {
+		    limit = {
+		        962 = {
+			        is_controlled_by = ENG
+				}
+			}
+			962 = {
+			    add_resistance = 5
+		        add_compliance = 20
+			}
+		}
+		every_core_state = {
+		    limit = {
+			    is_core_of = IRQ
+				is_controlled_by = ENG
+			}
+			add_resistance = 5
+			add_compliance = 20
+		}
+	}
+}
+country_event = {
+	id = NWiraq.13
+	title = NWiraq.13.t
+	desc = NWiraq.13.d
+	trigger = {
+	    tag = ENG
+	    OR = {
+		    KRD = {
+			    exists = no
+			}
+			ERB = {
+			    exists = no
+			}
+		}
+		owns_state = 962
+		ENG = {
+		    controls_state = 962
+			has_country_flag = IRQ_high_inflation
+		}
+		962 = {
+		    resistance > 100
+		}
+	}
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.13" }
+	
+	option = {
+		name = NWiraq.13.a 
+		release = KRD
+		KRD = {
+		    declare_war_on = {
+			    target = ENG
+                type = annex_everything
+			}
+			set_politics = {
+	            ruling_party = neutrality
+                elections_allowed = no
+                last_election = "1936.1.1"
+                election_frequency = 48
+            }
+		}
+	}
+}
+# События Ясина аль-Хашими, Бакра Сидки и других // IRQ
+country_event = {
+	id = NWiraq.14
+	title = NWiraq.14.t
+	desc = NWiraq.14.d
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.14" }
+	
+	option = {
+		name = NWiraq.14.a 
+		custom_effect_tooltip = NWiraq.14.tt
+	}
+}
+country_event = {
+	id = NWiraq.15
+	title = NWiraq.15.t
+	desc = NWiraq.15.d
+    is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.15" }
+	
+	option = {
+		name = NWiraq.15.a 
+		add_stability = 0.1
+		add_popularity = {
+            ideology = monarchy
+            popularity = -0.1
+        }
+	}	
+	option = {
+		name = NWiraq.15.b
+		add_political_power = -20
+	}
+}
+country_event = {
+	id = NWiraq.16
+	title = NWiraq.16.t
+	desc = NWiraq.16.d
+	trigger = {
+	    tag = IRQ
+	    date > 1936.10.28
+		date < 1936.10.30
+		has_idea = IRQ_dictatorship_of_yassin_al_hashimi
+		IRQ_bakr_sidqi = {
+            has_character_flag = IRQ_bakr_sidqi_favor
+        }
+	}
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.16" }
+	
+	option = {
+		name = NWiraq.16.a 
+		ai_chance = {
+			factor = 10
+		}
+		remove_ideas = IRQ_dictatorship_of_yassin_al_hashimi
+		set_party_name = {
+            ideology = monarchy
+            name = IRQ_national_reform_power_party
+        }
+		add_ideas = IRQ_army_influence
+		country_event = { id = NWiraq.17 hours = 2 }
+		country_event = { id = NWiraq.18 days = 1 }
+		country_event = { id = NWiraq.19 days = 2 }
+		hidden_effect = {
+			ENG = {
+				news_event = { id = trworldnews.122 }
+			}
+			every_possible_country = {
+			    limit = {
+					is_on_continent = middle_east
+				}
+				news_event = { id = trworldnews.122 }
+			}
+		}
+	}
+	option = {
+		name = NWiraq.16.b
+		ai_chance = {
+			factor = 1			
+		}
+		add_stability = -0.15
+		add_war_support = -0.15
+		IRQ_bakr_sidqi = {
+		    promote_character = yes
+		}
+		start_civil_war = {
+            ideology = neutrality
+            size = 0.8
+            states = all
+            states_filter = {
+                is_on_continent = middle_east
+                is_capital = no
+            }
+			set_country_flag = IRQ_bakr_clique
+            keep_unit_leaders_trigger = {
+				always = yes
+			}
+        }
+		custom_effect_tooltip = NWiraq.16.tt
+		hidden_effect = {
+		    ENG = {
+				news_event = { id = trworldnews.184 }
+			}
+			every_possible_country = {
+			    limit = {
+					is_on_continent = middle_east
+				}
+				news_event = { id = trworldnews.184 }
+			}
+		}
+	}
+}
+country_event = {
+	id = NWiraq.17
+	title = NWiraq.17.t
+	desc = NWiraq.17.d
+    is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.17" }
+	
+	option = {
+		name = NWiraq.17.a
+		retire_character = IRQ_jafar_al_askari
+	}
+}
+country_event = {
+	id = NWiraq.18
+	title = NWiraq.18.t
+	desc = NWiraq.18.d
+    is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.18" }
+	
+	option = {
+		name = NWiraq.18.a
+		add_ideas = IRQ_dictatorship_of_bakr_sidqi
+	}
+}
+country_event = {
+	id = NWiraq.19
+	title = NWiraq.19.t
+	desc = NWiraq.19.d
+    is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.19" }
+	
+	option = {
+		name = NWiraq.19.a
+		add_political_power = -150
+		country_event = { id = NWiraq.20 }
+	}
+	option = {
+		name = NWiraq.19.b
+		remove_ideas = IRQ_dictatorship_of_bakr_sidqi
+		IRQ_bakr_sidqi = {
+		    promote_character = yes
+		}
+		start_civil_war = {
+            ideology = neutrality
+            size = 0.8
+            states = all
+            states_filter = {
+                is_on_continent = middle_east
+                is_capital = no
+            }
+			set_country_flag = IRQ_bakr_clique
+            keep_unit_leaders_trigger = {
+				always = yes
+			}
+        }
+		custom_effect_tooltip = NWiraq.19.tt
+	}
+}
+country_event = {
+	id = NWiraq.20
+	title = NWiraq.20.t
+	desc = NWiraq.20.d
+    is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.20" }
+	
+	option = {
+		name = NWiraq.20.a
+		add_political_power = -50
+		add_stability = -0.1
+	}
+}
+country_event = {
+	id = NWiraq.21
+	title = NWiraq.21.t
+	desc = NWiraq.21.d
+    trigger = {
+	    tag = IRQ
+	    date > 1937.03.31
+		date > 1937.04.02
+		has_idea = IRQ_dictatorship_of_bakr_sidqi
+		AMQ = {
+		    exists = no
+		}
+	}
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.21" }
+	
+	option = {
+		name = NWiraq.21.a
+		add_stability = -0.1
+	}
+	option = {
+		name = NWiraq.21.b
+		add_political_power = -60
+	}
+}
+country_event = {
+	id = NWiraq.22
+	title = NWiraq.22.t
+	desc = NWiraq.22.d
+    trigger = {
+	    tag = IRQ
+	    date > 1937.08.11
+		date < 1937.08.13
+		has_idea = IRQ_dictatorship_of_bakr_sidqi
+	}
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.22" }
+	
+	option = {
+		name = NWiraq.22.a
+		complete_national_focus = IRQ_kill_bakr_sidqi
+		set_party_name = {
+            ideology = fascism
+            name = IRQ_circle_of_seven
+        }
+		add_ideas = IRQ_circle_of_seven_influence
+	}
+	option = {
+		name = NWiraq.22.b
+		add_political_power = -60
+	}
+}
+country_event = {
+	id = NWiraq.23
+	title = NWiraq.23.t
+	desc = NWiraq.23.d
+    trigger = {
+	    tag = IRQ
+	    date > 1936.10.28
+		date < 1936.10.30
+		has_idea = IRQ_dictatorship_of_yassin_al_hashimi
+		NOT = {
+		    IRQ_bakr_sidqi = {
+                has_character_flag = IRQ_bakr_sidqi_favor
+            }
+		}
+	}
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.23" }
+	
+	option = {
+		name = NWiraq.23.a
+        retire_character = IRQ_bakr_sidqi
+		add_popularity = {
+            ideology = monarchy
+            popularity = -0.1
+        }
+		if = {
+		    limit = {
+			    has_completed_focus = IRQ_make_concessions
+			}
+			country_event = { id = NWiraq.24 days = 1 }
+		}
+		if = {
+		    limit = {
+			    IRQ_taha_al_hashimi = {
+                    has_character_flag = IRQ_taha_al_hashimi_favor
+                }
+			}
+			country_event = { id = NWiraq.25 days = 1 }
+		}
+	}
+}
+country_event = {
+	id = NWiraq.24
+	title = NWiraq.24.t
+	desc = NWiraq.24.d
+    is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.24" }
+	
+	option = {
+		name = NWiraq.24.a
+		add_political_power = -200
+	}
+	option = {
+		name = NWiraq.24.b
+		custom_effect_tooltip = NWiraq.24.tt
+		add_ideas = IRQ_loyal_to_hashimi_army
+	}
+}
+country_event = {
+	id = NWiraq.25
+	title = NWiraq.25.t
+	desc = NWiraq.25.d
+    is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.25" }
+	
+	option = {
+		name = NWiraq.25.a 
+		IRQ_taha_al_hashimi = {
+		    promote_leader = yes
+		}
+		add_ideas = IRQ_army_influence
+	}
+}
+country_event = {
+	id = NWiraq.26
+	title = NWiraq.26.t
+	desc = NWiraq.26.d
+    is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.26" }
+	
+	option = {
+		name = NWiraq.26.a 
+		add_political_power = -20
+	}
+}
+country_event = {
+	id = NWiraq.27
+	title = NWiraq.27.t
+	desc = NWiraq.27.d
+    is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.27" }
+	
+	option = {
+		name = NWiraq.27.a 
+		remove_ideas = IRQ_dictatorship_of_yassin_al_hashimi
+		if = {
+		    limit = {
+			    IRQ_jafar_al_askari = {
+                    has_character_flag = IRQ_jafar_al_askari_favor
+                }
+			}
+			country_event = { id = NWiraq.31 }
+		}
+		else_if = {
+		    limit = {
+			    IRQ_taha_al_hashimi = {
+                    has_character_flag = IRQ_taha_al_hashimi_favor
+                }	
+				OR = {
+				    has_idea = IRQ_anglo_iraqi_treaty_new
+				    has_idea = IRQ_anglo_iraqi_treaty_new_2
+					has_idea = IRQ_anglo_iraqi_treaty_new_3
+					has_idea = IRQ_anglo_iraqi_treaty_new_4
+				}
+			}
+			country_event = { id = NWiraq.30 }
+		}
+	}
+}
+country_event = {
+	id = NWiraq.28
+	title = NWiraq.28.t
+	desc = NWiraq.28.d
+    is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.28" }
+	
+	option = {
+		name = NWiraq.28.a 
+		add_political_power = -50
+		retire_character = IRQ_yasin_al_hashimi
+		IRQ_taha_al_hashimi = {
+		    promote_character = yes
+		}
+	}
+}
+#Рандомка на смерть Хашими
+country_event = {
+	id = NWiraq.29
+    hidden = yes
+    trigger = {
+	    tag = IRQ
+		date > 1937.01.19
+		date < 1937.01.21
+		OR = {
+		    has_idea = IRQ_dictatorship_of_yassin_al_hashimi
+			IRQ_yasin_al_hashimi = {
+			    is_country_leader = yes
+			}
+		}
+	}
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.29" }
+	
+	option = {
+		name = NWiraq.29.a
+		random_list = {
+            50 = {
+                country_event = { id = NWiraq.26 days = 2 }
+            }
+            50 = {
+			    if = {
+		            limit = {
+			            has_war = yes
+						has_idea = IRQ_dictatorship_of_yassin_al_hashimi
+			        }
+			        country_event = { id = NWiraq.27 days = 1 }
+		        }
+				else_if = {
+				    limit = {
+			            IRQ_yasin_al_hashimi = {
+						    is_country_leader = yes
+						}
+			        }
+			        country_event = { id = NWiraq.28 days = 1 }
+				}
+		        else = {
+                    country_event = { id = NWiraq.27 days = 132 }
+		        }
+            }
+        }
+	}
+}
+country_event = {
+	id = NWiraq.30
+	title = NWiraq.30.t
+	desc = NWiraq.30.d
+    is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.30" }
+	
+	option = {
+		name = NWiraq.30.a 
+        add_ideas = IRQ_antibrit_hashimi_influence
+		hidden_effect = {
+		    ENG = {
+		        country_event = { id = NWiraq.33 }
+			}
+		}
+	}
+}
+country_event = {
+	id = NWiraq.31
+	title = NWiraq.31.t
+	desc = NWiraq.31.d
+    is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.31" }
+	
+	option = {
+		name = NWiraq.31.a 
+		add_ideas = IRQ_army_influence
+		country_event = { id = NWiraq.32 days = 50 }
+	}
+	option = {
+		name = NWiraq.31.b
+		add_political_power = -150
+		set_temp_variable = { temp1 = party_popularity@neutrality }
+		divide_temp_variable = { temp1 = 2 }
+		add_stability = temp1
+	}
+}
+country_event = {
+	id = NWiraq.32
+	title = NWiraq.32.t
+	desc = NWiraq.32.d
+    is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.32" }
+	
+	option = {
+		name = NWiraq.32.a 
+		add_ideas = IRQ_dictatorship_of_nuri_al_said
+	}
+	option = {
+		name = NWiraq.32.b
+		add_political_power = -150
+		set_temp_variable = { temp1 = party_popularity@neutrality }
+		divide_temp_variable = { temp1 = 2 }
+		add_stability = temp1
+	}
+}
+country_event = {
+	id = NWiraq.33
+	title = NWiraq.33.t
+	desc = NWiraq.33.d
+    is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.33" }
+	
+	option = {
+		name = NWiraq.33.a 
+		add_political_power = -30
+        set_country_flag = ENG_kill_hashimi
+	}
+	option = {
+		name = NWiraq.33.b
+		add_political_power = -100
+		custom_effect_tooltip = NWiraq.33.tt
+		hidden_effect = {
+		    if = {
+			    limit = {
+				    check_variable = { british_control_total > 30 }
+				}
+				country_event = { id = NWiraq.34 }
+			}
+			else = {
+			    country_event = { id = NWiraq.35 }
+			}
+		}
+	}
+	
+	option = {
+		name = NWiraq.33.c
+	}
+}
+country_event = {
+	id = NWiraq.34
+	title = NWiraq.34.t
+	desc = NWiraq.34.d
+    is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.34" }
+	
+	option = {
+		name = NWiraq.34.a 
+		IRQ = {
+		    country_event = { id = NWiraq.36 }
+		}
+	}
+}
+country_event = {
+	id = NWiraq.35
+	title = NWiraq.35.t
+	desc = NWiraq.35.d
+    is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.35" }
+	
+	option = {
+		name = NWiraq.35.a 
+		ROOT = {
+		    add_opinion_modifier = {
+			    target = ENG
+				modifier = IRQ_brimbery_attempt
+			}
+		}
+	}
+}
+country_event = {
+	id = NWiraq.36
+	title = NWiraq.36.t
+	desc = NWiraq.36.d
+    is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.36" }
+	
+	option = {
+		name = NWiraq.36.a 
+        remove_ideas = IRQ_antibrit_hashimi_influence
+	}
+}
+country_event = {
+	id = NWiraq.37
+	title = NWiraq.37.t
+	desc = NWiraq.37.d
+    is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.37" }
+	
+	option = {
+		name = NWiraq.37.a 
+		set_temp_variable = { british_control_temp = 5 }
+		add_to_variable = { british_control_total = british_control_temp }
+		clamp_variable = { var = british_control_total min = 0 max = 100 }
+		custom_effect_tooltip = british_control_tt
+        remove_ideas = IRQ_antibrit_hashimi_influence
+	}
+}
+country_event = {
+	id = NWiraq.38
+	title = NWiraq.38.t
+	desc = NWiraq.38.d
+    trigger = {
+	    NOT = {
+		    has_idea = IRQ_dictatorship_of_bakr_sidqi
+			has_idea = IRQ_dictatorship_of_yassin_al_hashimi
+		}
+		OR = {
+		    has_idea = IRQ_anglo_iraqi_treaty_new
+		    has_idea = IRQ_anglo_iraqi_treaty_new_2
+			has_idea = IRQ_anglo_iraqi_treaty_new_3
+			has_idea = IRQ_anglo_iraqi_treaty_new_4
+		}
+		neutrality > 0.2
+		has_completed_focus = IRQ_independence_from_britain
+	}
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.38" }
+	
+	option = {
+		name = NWiraq.38.a 
+		add_popularity = {
+		    ideology = neutrality
+            popularity = 0.05
+		}
+		add_popularity = {
+		    ideology = fascism
+            popularity = 0.05
+		}
+        add_ideas = IRQ_dictatorship_of_nuri_al_said
+	}
+}
+#Ивенты взаимодействия с Британией
+country_event = {
+	id = NWiraq.39
+	title = NWiraq.39.t
+	desc = NWiraq.39.d
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.39" }
+	
+	option = {
+		name = NWiraq.39.a 
+	}
+}
+country_event = {
+	id = NWiraq.40
+	title = NWiraq.40.t
+	desc = NWiraq.40.d
+	trigger = {
+	    tag = ENG
+		is_faction_leader = no
+		NOT = {
+		    has_country_flag = IRQ_political_course_change
+		}
+	}
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.40" }
+	
+	option = {
+		name = NWiraq.40.a 
+		IRQ = {
+		    add_opinion_modifier = {
+			    target = ENG
+				modifier = IRQ_disappointment
+			}
+		}
+		if = {
+		    limit = {
+			    has_completed_focus = IRQ_cooperate_with_london
+			}
+			set_country_flag = IRQ_change_political_vector
+			unlock_decision_tooltip = IRQ_change_political_vector
+		}
+	}
+}
+country_event = {
+	id = NWiraq.41
+	title = NWiraq.41.t
+	desc = NWiraq.41.d
+	trigger = {
+	    tag = ENG
+		check_variable = { british_control_total = 100 }
+		IRQ = {
+		    has_capitulated = no
+		}
+	}
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.41" }
+	
+	option = {
+		name = NWiraq.41.a 
+		add_political_power = -100
+        set_autonomy = {
+            target = IRQ
+            autonomy_state = autonomy_dominion
+            end_wars = no
+            end_civil_wars = no
+        }
+		if = {
+		    limit = {
+			    IRQ = {
+				    has_war = yes
+				}
+			}
+			every_possible_country = {
+			    limit = {
+				    has_war_with = IRQ
+				}
+			    ENG = {
+		            add_to_war = {
+                        targeted_alliance = IRQ
+                        enemy = PREV
+                        hostility_reason = asked_to_join
+		            }
+		        }
+		    }
+		}
+		IRQ = {
+		    country_event = { id = NWiraq.42 }
+		}
+		hidden_effect = {
+		    news_event = { id = trworldnews.185 }
+		}
+	}
+	option = {
+		name = NWiraq.41.b
+		if = {
+		    limit = {
+			    IRQ = {
+				    has_war = yes
+				}
+			}
+			every_possible_country = {
+			    limit = {
+				    has_war_with = IRQ
+				}
+			    ENG = {
+		            add_to_war = {
+                        targeted_alliance = IRQ
+                        enemy = PREV
+                        hostility_reason = asked_to_join
+		            }
+		        }
+		    }
+		}
+	}
+}
+country_event = {
+	id = NWiraq.42
+	title = NWiraq.42.t
+	desc = NWiraq.42.d
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.42" }
+	
+	option = {
+		name = NWiraq.42.a 
+		set_politics = {
+	        ruling_party = neutrality
+            elections_allowed = no
+            last_election = "1936.01.01"
+            election_frequency = 48
+        }
+	}
+}
+country_event = {
+	id = NWiraq.43
+	title = NWiraq.43.t
+	desc = NWiraq.43.d
+	trigger = {
+	    tag = IRQ
+		NOT = {
+		    OR = {
+		        has_idea = IRQ_anglo_iraqi_treaty_new
+		        has_idea = IRQ_anglo_iraqi_treaty_new_2
+			    has_idea = IRQ_anglo_iraqi_treaty_new_3
+			    has_idea = IRQ_anglo_iraqi_treaty_new_4
+		    }
+			has_completed_focus = IRQ_deanonce_treaty
+		}
+	}
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.43" }
+	
+	option = {
+		name = NWiraq.43.a 
+		add_political_power = -100
+		set_temp_variable = { temp2 = 0 }
+		subtract_from_temp_variable = { temp2 = british_control_total }
+		divide_temp_variable = { temp2 = 100 }
+		add_stability = temp2
+		add_timed_idea = {
+		    idea = IRQ_disappointed_iraqi_army
+			days = 120
+		}
+	}
+}
+country_event = {
+	id = NWiraq.44
+	title = NWiraq.44.t
+	desc = NWiraq.44.d
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.44" }
+	
+	option = {
+		name = NWiraq.44.a 
+		add_timed_idea = {
+		    idea = IRQ_british_investments
+			days = 90
+		}
+		set_temp_variable = { british_control_temp = 2 }
+		add_to_variable = { british_control_total = british_control_temp }
+		clamp_variable = { var = british_control_total min = 0 max = 100 }
+		custom_effect_tooltip = british_control_tt
+		ENG = {
+		    country_event = { id = NWiraq.48 }
+		}
+	}
+	option = {
+		name = NWiraq.44.b 
+		ENG = {
+		    country_event = { id = NWiraq.52 }
+		}
+	}
+}
+country_event = {
+	id = NWiraq.45
+	title = NWiraq.45.t
+	desc = NWiraq.45.d
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.45" }
+	
+	option = {
+		name = NWiraq.45.a 
+		add_equipment_to_stockpile = {
+            type = infantry_equipment
+            amount = 300
+            producer = ENG
+        }
+		set_temp_variable = { british_control_temp = 2 }
+		add_to_variable = { british_control_total = british_control_temp }
+		clamp_variable = { var = british_control_total min = 0 max = 100 }
+		custom_effect_tooltip = british_control_tt
+		ENG = {
+		    country_event = { id = NWiraq.49 }
+		}
+	}
+	option = {
+		name = NWiraq.45.b 
+		ENG = {
+		    country_event = { id = NWiraq.53 }
+		}
+	}
+}
+country_event = {
+	id = NWiraq.46
+	title = NWiraq.46.t
+	desc = NWiraq.46.d
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.46" }
+	
+	option = {
+		name = NWiraq.46.a
+        give_military_access = ENG		
+	}
+	option = {
+		name = NWiraq.46.b 
+		set_temp_variable = { temp3 = 0 }
+		subtract_from_temp_variable = { temp3 = british_control_total }
+		divide_temp_variable = { temp3 = 100 }
+		add_stability = temp3
+		set_temp_variable = { temp4 = 0 }
+		subtract_from_temp_variable = { temp4 = british_control_total }
+		add_political_power = temp4
+		ENG = {
+		    country_event = { id = NWiraq.50 }
+		}
+	}
+}
+country_event = {
+	id = NWiraq.47
+	title = NWiraq.47.t
+	desc = NWiraq.47.d
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.47" }
+	
+	option = {
+		name = NWiraq.47.a 
+		ENG = {
+		    add_to_faction = IRQ
+		}
+		add_timed_idea = {
+		    idea = IRQ_military_agreement
+			days = 360
+		}
+	}
+	option = {
+		name = NWiraq.47.b 
+		set_temp_variable = { temp5 = 0 }
+		subtract_from_temp_variable = { temp5 = british_control_total }
+		add_to_temp_variable = { temp5 = temp5 }
+		divide_temp_variable = { temp5 = 100 }
+		add_stability = temp5
+		set_temp_variable = { temp6 = 0 }
+		subtract_from_temp_variable = { temp6 = british_control_total }
+		add_to_temp_variable = { temp6 = temp6 }
+		add_political_power = temp6
+		ENG = {
+		    country_event = { id = NWiraq.51 }
+		}
+	}
+}
+country_event = {
+	id = NWiraq.48
+	title = NWiraq.48.t
+	desc = NWiraq.48.d
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.48" }
+	
+	option = {
+		name = NWiraq.48.a 
+		add_timed_idea = {
+		    idea = ENG_investment_in_iraq
+			days = 40
+		}
+	}
+}
+country_event = {
+	id = NWiraq.49
+	title = NWiraq.49.t
+	desc = NWiraq.49.d
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.49" }
+	
+	option = {
+		name = NWiraq.49.a 
+		add_equipment_to_stockpile = {
+            type = infantry_equipment
+            amount = -300
+            producer = ENG
+        }
+	}
+}
+country_event = {
+	id = NWiraq.50
+	title = NWiraq.50.t
+	desc = NWiraq.50.d
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.50" }
+	
+	option = {
+		name = NWiraq.50.a 
+	}
+}
+country_event = {
+	id = NWiraq.51
+	title = NWiraq.51.t
+	desc = NWiraq.51.d
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.51" }
+	
+	option = {
+		name = NWiraq.51.a 
+	}
+}
+country_event = {
+	id = NWiraq.52
+	title = NWiraq.52.t
+	desc = NWiraq.52.d
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.52" }
+	
+	option = {
+		name = NWiraq.52.a 
+	}
+}
+country_event = {
+	id = NWiraq.53
+	title = NWiraq.53.t
+	desc = NWiraq.53.d
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.53" }
+	
+	option = {
+		name = NWiraq.53.a 
+	}
+}
+country_event = {
+	id = NWiraq.54
+	title = NWiraq.54.t
+	desc = NWiraq.54.d
+	trigger = {
+	    tag = ENG
+		OR = {
+		    has_government = communism
+			has_government = trozkism
+			has_government = anarchism
+		}
+		IRQ = {
+		    OR = {
+		        has_idea = IRQ_anglo_iraqi_treaty_new
+		        has_idea = IRQ_anglo_iraqi_treaty_new_2
+			    has_idea = IRQ_anglo_iraqi_treaty_new_3
+			    has_idea = IRQ_anglo_iraqi_treaty_new_4
+		    }
+		}
+	}
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.54" }
+	
+	option = {
+		name = NWiraq.54.a 
+		if = {
+		    limit = {
+			    has_idea = IRQ_anglo_iraqi_treaty_new
+			}
+			remove_ideas = IRQ_anglo_iraqi_treaty_new
+		}
+		else_if = {
+		    limit = {
+			    has_idea = IRQ_anglo_iraqi_treaty_new_2
+			}
+			remove_ideas = IRQ_anglo_iraqi_treaty_new_2
+		}
+		else_if = {
+		    limit = {
+			    has_idea = IRQ_anglo_iraqi_treaty_new_3
+			}
+			remove_ideas = IRQ_anglo_iraqi_treaty_new_3
+		}
+		else = {
+		    remove_ideas = IRQ_anglo_iraqi_treaty_new_4
+		}
+	}
+	option = {
+		name = NWiraq.54.b
+		add_political_power = -60
+		hidden_effect = {
+            news_event = { id = trworldnews.186 }		
+		}
+	}
+}
+country_event = {
+	id = NWiraq.55
+	title = NWiraq.55.t
+	desc = NWiraq.55.d
+	trigger = {
+	    tag = IRQ
+		date > 1936.05.31
+		date < 1936.06.02
+	}
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.55" }
+	
+	option = {
+		name = NWiraq.55.a 
+		add_tech_bonus = {
+            bonus = 0.1
+            uses = 1
+            category = electronics
+        }
+		set_country_flag = IRQ_open_iraqi_radio
+	}
+}
+country_event = {
+	id = NWiraq.56
+	title = NWiraq.56.t
+	desc = NWiraq.56.d
+	trigger = {
+	    tag = IRQ
+        IRQ_ghazi_i = {
+		    is_country_leader = yes
+		}
+		has_stability > 50 
+		NOT = {
+		    OR = {
+			    has_idea = IRQ_dictatorship_of_yassin_al_hashimi
+				has_idea = IRQ_dictatorship_of_bakr_sidqi
+			}
+			has_idea = IRQ_army_influence
+			OR = {
+		        has_idea = IRQ_anglo_iraqi_treaty_new
+		        has_idea = IRQ_anglo_iraqi_treaty_new_2
+			    has_idea = IRQ_anglo_iraqi_treaty_new_3
+			    has_idea = IRQ_anglo_iraqi_treaty_new_4
+		    }
+		}
+		has_idea = IRQ_rejection_of_hashemites
+	}
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.56" }
+	
+	option = {
+		name = NWiraq.56.a 
+        remove_ideas = IRQ_rejection_of_hashemites
+		add_popularity = {
+            ideology = monarchy
+            popularity = 0.2
+        }
+	}
+}
+country_event = {
+	id = NWiraq.57
+	title = NWiraq.57.t
+	desc = NWiraq.57.d
+	trigger = {
+	    tag = IRQ
+        IRQ_ghazi_i = {
+		    is_country_leader = no
+		}
+		has_stability > 70 
+		NOT = {
+		    OR = {
+			    has_idea = IRQ_dictatorship_of_yassin_al_hashimi
+				has_idea = IRQ_dictatorship_of_bakr_sidqi
+			}
+			has_idea = IRQ_army_influence
+			OR = {
+		        has_idea = IRQ_anglo_iraqi_treaty_new
+		        has_idea = IRQ_anglo_iraqi_treaty_new_2
+			    has_idea = IRQ_anglo_iraqi_treaty_new_3
+			    has_idea = IRQ_anglo_iraqi_treaty_new_4
+		    }
+		}
+		has_idea = IRQ_rejection_of_hashemites
+	}
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.57" }
+	
+	option = {
+		name = NWiraq.57.a 
+        remove_ideas = IRQ_rejection_of_hashemites
+		add_popularity = {
+            ideology = monarchy
+            popularity = 0.2
+        }
+	}
+}
+country_event = {
+	id = NWiraq.58
+	title = NWiraq.58.t
+	desc = NWiraq.58.d
+	trigger = {
+	    tag = ENG
+		check_variable = {
+            var = british_tension_total
+            value = 4
+            compare = greater_than_or_equals
+        }
+        IRQ = {
+		    IRQ_ghazi_i = {
+		        is_country_leader = yes
+		    }
+			OR = {
+		        has_idea = IRQ_anglo_iraqi_treaty_new
+		        has_idea = IRQ_anglo_iraqi_treaty_new_2
+			    has_idea = IRQ_anglo_iraqi_treaty_new_3
+			    has_idea = IRQ_anglo_iraqi_treaty_new_4
+		    }
+		}
+	}
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.58" }
+	
+	option = {
+		name = NWiraq.58.a 
+		add_political_power = -30
+		custom_effect_tooltip = NWiraq.58.tt
+		set_country_flag = ENG_kill_ghazi_i
+	}
+	option = {
+		name = NWiraq.58.b
+	}
+}
+country_event = {
+	id = NWiraq.59
+	title = NWiraq.59.t
+	desc = NWiraq.59.d
+    is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.59" }
+	
+	option = {
+		name = NWiraq.59.a 
+        set_temp_variable = { british_control_temp = 20 }
+		add_to_variable = { british_control_total = british_control_temp }
+		clamp_variable = { var = british_control_total min = 0 max = 100 }
+		custom_effect_tooltip = british_control_tt
+		retire_character = IRQ_ghazi_i
+		promote_character = IRQ_abd_al_ilah
+		country_event = { id = NWiraq.60 days = 5 }
+	}
+}
+country_event = {
+	id = NWiraq.60
+	title = NWiraq.60.t
+	desc = NWiraq.60.d
+    is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.60" }
+	
+	option = {
+		name = NWiraq.60.a 
+		if = {
+		    limit = {
+			    has_idea = IRQ_circle_of_seven_influence
+			}
+			swap_ideas = {
+			    remove_idea = IRQ_circle_of_seven_influence
+				add_idea = IRQ_golden_square_influence
+			}
+		}
+		else = {
+		    add_ideas = IRQ_golden_square_influence 
+		}
+		add_popularity = {
+            ideology = neutrality
+            popularity = -0.15
+        }
+		add_popularity = {
+            ideology = fascism
+            popularity = 0.15
+        }
+	}
+}
+country_event = {
+	id = NWiraq.61
+	title = NWiraq.61.t
+	desc = NWiraq.61.d
+    trigger = {
+	    tag = ENG
+		IRQ = {
+		    is_subject = no
+		}
+		656 = {
+		    is_owned_and_controlled_by = ENG
+			resistance > 49
+		}
+		995 = {
+		    is_controlled_by = IRQ
+		}
+	}
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.61" }
+	
+	option = {
+		name = NWiraq.61.a 
+		add_political_power = -60
+		656 = {
+			add_resistance = -10
+		}
+	}
+	option = {
+		name = NWiraq.61.b 
+		release = KUW
+		division_template = {
+	        name = "Kuwait Cavalry Division"	
+            regiments = {
+		        cavalry = { x = 0 y = 0 }
+	            cavalry = { x = 0 y = 1 }
+		        cavalry = { x = 1 y = 0 }
+		        cavalry = { x = 1 y = 1 }
+            }
+		    is_locked = no
+	    }
+        656 = {            
+			create_unit = {
+				division = "name = \"1. Kuwait Cavalry Division-1\" division_template = \"Kuwait Cavalry Division\" start_experience_factor = 1 start_equipment_factor = 1"
+				owner = KUW
+			}
+            create_unit = {
+				division = "name = \"2. Kuwait Cavalry Division-2\" division_template = \"Kuwait Cavalry Division\" start_experience_factor = 1 start_equipment_factor = 1"
+				owner = KUW
+			}
+		}
+		IRQ = {
+		    country_event = { id = NWiraq.62 }
+		}
+	}
+	option = {
+		name = NWiraq.61.c 
+		656 = {
+			add_resistance = 15
+		}
+	}
+}
+country_event = {
+	id = NWiraq.62
+	title = NWiraq.62.t
+	desc = NWiraq.62.d
+    is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.62" }
+	
+	option = {
+		name = NWiraq.62.a 
+		set_autonomy = {
+            target = KUW
+            autonomy_state = autonomy_dominion
+        }
+	}
+	option = {
+		name = NWiraq.62.b 
+		declare_war_on = {
+            target = KUW
+            type = annex_everything
+        }
+	}
+}
+country_event = {
+	id = NWiraq.63
+	title = NWiraq.63.t
+	desc = NWiraq.63.d
+	trigger = {
+        tag = ENG
+		IRQ = {
+		    is_subject = no
+		}
+		656 = {
+		    is_owned_and_controlled_by = ENG
+			resistance > 69
+		}
+		995 = {
+		    is_controlled_by = IRQ
+		}
+	}
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.63" }
+	
+	option = {
+		name = NWiraq.63.a 
+        add_political_power = -50
+	}
+	option = {
+		name = NWiraq.63.b 
+        656 = {
+			add_resistance = 20
+		}
+	}
+}
+country_event = {
+	id = NWiraq.64
+	title = NWiraq.64.t
+	desc = NWiraq.64.d
+	trigger = {
+        tag = ENG
+		IRQ = {
+		    is_subject = no
+		}
+		656 = {
+		    is_owned_and_controlled_by = ENG
+			resistance > 99
+		}
+		995 = {
+		    is_controlled_by = IRQ
+		}
+	}
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.64" }
+	
+	option = {
+		name = NWiraq.64.a 
+		release = KUW
+		division_template = {
+	        name = "Kuwait Cavalry Division"	
+            regiments = {
+		        cavalry = { x = 0 y = 0 }
+	            cavalry = { x = 0 y = 1 }
+		        cavalry = { x = 1 y = 0 }
+		        cavalry = { x = 1 y = 1 }
+            }
+		    is_locked = no
+	    }
+        656 = {            
+			create_unit = {
+				division = "name = \"1. Kuwait Cavalry Division-1\" division_template = \"Kuwait Cavalry Division\" start_experience_factor = 1 start_equipment_factor = 1"
+				owner = KUW
+			}
+            create_unit = {
+				division = "name = \"2. Kuwait Cavalry Division-2\" division_template = \"Kuwait Cavalry Division\" start_experience_factor = 1 start_equipment_factor = 1"
+				owner = KUW
+			}
+		}
+		KUW = {
+		    declare_war_on = {
+                target = ENG
+                type = annex_everything
+			}
+        }		    
+	}
+	option = {
+		name = NWiraq.64.b 
+		release = KUW
+		division_template = {
+	        name = "Kuwait Cavalry Division"	
+            regiments = {
+		        cavalry = { x = 0 y = 0 }
+	            cavalry = { x = 0 y = 1 }
+		        cavalry = { x = 1 y = 0 }
+		        cavalry = { x = 1 y = 1 }
+            }
+		    is_locked = no
+	    }
+        656 = {            
+			create_unit = {
+				division = "name = \"1. Kuwait Cavalry Division-1\" division_template = \"Kuwait Cavalry Division\" start_experience_factor = 1 start_equipment_factor = 1"
+				owner = KUW
+			}
+            create_unit = {
+				division = "name = \"2. Kuwait Cavalry Division-2\" division_template = \"Kuwait Cavalry Division\" start_experience_factor = 1 start_equipment_factor = 1"
+				owner = KUW
+			}
+		}
+		IRQ = {
+		    country_event = { id = NWiraq.65 }
+		}
+	}
+	option = {
+		name = NWiraq.64.c
+		trigger = {
+		    IRQ = {
+			    OR = {
+		            has_idea = IRQ_anglo_iraqi_treaty_new
+		            has_idea = IRQ_anglo_iraqi_treaty_new_2
+			        has_idea = IRQ_anglo_iraqi_treaty_new_3
+			        has_idea = IRQ_anglo_iraqi_treaty_new_4
+		        }
+			}
+		}
+		add_political_power = -60
+		release = KUW
+		division_template = {
+	        name = "Kuwait Cavalry Division"	
+            regiments = {
+		        cavalry = { x = 0 y = 0 }
+	            cavalry = { x = 0 y = 1 }
+		        cavalry = { x = 1 y = 0 }
+		        cavalry = { x = 1 y = 1 }
+            }
+		    is_locked = no
+	    }
+        656 = {            
+			create_unit = {
+				division = "name = \"1. Kuwait Cavalry Division-1\" division_template = \"Kuwait Cavalry Division\" start_experience_factor = 1 start_equipment_factor = 1"
+				owner = KUW
+			}
+            create_unit = {
+				division = "name = \"2. Kuwait Cavalry Division-2\" division_template = \"Kuwait Cavalry Division\" start_experience_factor = 1 start_equipment_factor = 1"
+				owner = KUW
+			}
+		}
+		IRQ = {
+		    country_event = { id = NWiraq.66 }
+		}
+	}
+}
+country_event = {
+	id = NWiraq.65
+	title = NWiraq.65.t
+	desc = NWiraq.65.d
+    is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.65" }
+	
+	option = {
+		name = NWiraq.65.a 
+        IRQ = {
+		    annex_country = {
+                target = KUW
+                transfer_troops = yes
+            }
+		}
+	}
+}
+country_event = {
+	id = NWiraq.66
+	title = NWiraq.66.t
+	desc = NWiraq.66.d
+    is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.66" }
+	
+	option = {
+		name = NWiraq.66.a 
+        IRQ = {
+		    annex_country = {
+                target = KUW
+                transfer_troops = yes
+            }
+		}
+	}
+	option = {
+		name = NWiraq.66.b 
+        KUW = {
+            add_opinion_modifier = {
+			    target = IRQ
+			    modifier = KUW_betrayal
+			}
+		}
+	}
+}
+country_event = {
+	id = NWiraq.67
+	title = NWiraq.67.t
+	desc = NWiraq.67.d
+    is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.67" }
+	
+	option = {
+		name = NWiraq.67.a 
+		ENG = {
+		    add_to_faction = IRQ
+		}
+		IRQ = { 
+		    country_event = { id = NWiraq.68 }
+		}
+		custom_effect_tooltip = NWiraq.67.tt
+	}
+	option = {
+		name = NWiraq.67.b 
+		IRQ = {
+		    country_event = { id = NWiraq.69 }
+		}
+	}
+}
+country_event = {
+	id = NWiraq.68
+	title = NWiraq.68.t
+	desc = NWiraq.68.d
+    is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.68" }
+	
+	option = {
+		name = NWiraq.68.a 
+		set_temp_variable = { british_control_temp = -30 }
+		add_to_variable = { british_control_total = british_control_temp }
+		clamp_variable = { var = british_control_total min = 0 max = 100 }
+		custom_effect_tooltip = british_control_tt
+	}
+}
+country_event = {
+	id = NWiraq.69
+	title = NWiraq.69.t
+	desc = NWiraq.69.d
+    is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.69" }
+	
+	option = {
+		name = NWiraq.69.a 
+        add_opinion_modifier = {
+		    target = ENG
+			modifier = IRQ_disappointment
+		}
+		unlock_decision_tooltip = IRQ_change_political_vector
+		set_country_flag = IRQ_change_political_vector
+	}
+}
+country_event = {
+	id = NWiraq.70
+	title = NWiraq.70.t
+	desc = NWiraq.70.d
+    trigger = {
+	    tag = ENG
+		focus_progress = {
+            focus = IRQ_spread_king_speeches
+            progress > 0.93
+        }
+		OR = {
+		    has_idea = IRQ_anglo_iraqi_treaty_new
+		    has_idea = IRQ_anglo_iraqi_treaty_new_2
+			has_idea = IRQ_anglo_iraqi_treaty_new_3
+			has_idea = IRQ_anglo_iraqi_treaty_new_4
+	    }
+	}
+	
+	mean_time_to_happen = {
+	    days = 1
+	}
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.70" }
+	
+	option = {
+		name = NWiraq.70.a 
+		add_political_power = -30
+		IRQ = { 
+		    country_event = { id = NWiraq.71 }
+		}
+		custom_effect_tooltip = NWiraq.70.tt
+	}
+	option = {
+		name = NWiraq.70.b
+	}
+}
+country_event = {
+	id = NWiraq.71
+	title = NWiraq.71.t
+	desc = NWiraq.71.d
+    is_triggered_only = yes
+	
+	mean_time_to_happen = {
+	    days = 1
+	}
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.71" }
+	
+	option = {
+		name = NWiraq.71.a 
+		set_temp_variable = { british_tension_temp = 1 }
+		add_to_variable = { british_tension_total = british_tension_temp }
+		custom_effect_tooltip = british_tension_tt		
+		set_temp_variable = { temp6 = 0 }
+		subtract_from_temp_variable = { temp6 = british_control_total }
+		divide_temp_variable = { temp6 = 100 }
+		add_stability = temp6     
+	}
+	option = {
+		name = NWiraq.71.b
+		set_country_flag = IRQ_speech_refusal
+	}
+}
+country_event = {
+	id = NWiraq.72
+	title = NWiraq.72.t
+	desc = NWiraq.72.d
+    is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.72" }
+	
+	option = {
+		name = NWiraq.72.a  
+	}
+}
+country_event = {
+	id = NWiraq.73
+	title = NWiraq.73.t
+	desc = NWiraq.73.d
+    is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.73" }
+	
+	option = {
+		name = NWiraq.73.a  
+		trigger = {
+		    has_completed_focus = IRQ_suppress_shiite_uprising
+		}
+		add_popularity = {
+            ideology = fascism
+            popularity = 0.1
+        }
+	}
+	option = {
+		name = NWiraq.73.b
+		trigger = {
+		    has_completed_focus = IRQ_make_concessions
+		}
+		add_popularity = {
+            ideology = democratic
+            popularity = 0.1
+        }
+	}
+	option = {
+		name = NWiraq.73.c
+		add_political_power = -50
+	}
+}
+
+#Ирак требует вернуть 656 // owner
+country_event = {
+	id = NWiraq.74
+	title = NWiraq.74.t
+	desc = NWiraq.74.d
+	picture = GFX_report_event_generic_rally_3
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.74" }
+
+	option = {
+		name = NWiraq.74.a
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				original_tag = ENG
+			}
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		FROM = { transfer_state = 656 }
+		if = {
+			limit = { 656 = { is_claimed_by = ROOT } }
+			remove_state_claim = 656
+		}
+		if = {
+			limit = { 656 = { is_core_of = ROOT } }
+			remove_state_core = 656
+		}
+	}
+	
+	option = {
+		name = NWiraq.74.b
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				is_historical_focus_on = no
+				NOT = { original_tag = ENG }
+				OR = {
+					strength_ratio = {
+						tag = FROM
+						ratio < 1
+					}
+					has_war = yes
+				}
+			}
+		}
+		FROM = { country_event = { id = NWiraq.75 days = 1 } }
+	}
+}
+
+#656 owner отказ возвращать Кувейт // IRQ
+country_event = {
+	id = NWiraq.75
+	title = NWiraq.75.t
+	desc = NWiraq.75.d
+	picture = GFX_report_event_generic_rally_3
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.75" }
+
+	option = {
+		name = NWiraq.75.a
+	}
+}
+
+#Ирак требует вернуть 413 // PER
+country_event = {
+	id = NWiraq.76
+	title = NWiraq.76.t
+	desc = NWiraq.76.d
+	picture = GFX_report_event_generic_rally_3
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.76" }
+
+	option = {
+		name = NWiraq.76.a
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				OR = {
+					strength_ratio = {
+						tag = FROM
+						ratio < 1
+					}
+					has_war = yes
+				}
+			}
+		}
+		FROM = { country_event = { id = NWiraq.77 days = 1 } }
+	}
+	
+	option = {
+		name = NWiraq.76.b
+		ai_chance = {
+			factor = 50
+		}
+		FROM = { transfer_state = 413 }
+		if = {
+			limit = { 413 = { is_claimed_by = ROOT } }
+			remove_state_claim = 413
+		}
+		if = {
+			limit = { 413 = { is_core_of = ROOT } }
+			remove_state_core = 413
+		}
+	}
+}
+
+#Иран отказывается вернуть 413 // IRQ
+country_event = {
+	id = NWiraq.77
+	title = NWiraq.77.t
+	desc = NWiraq.77.d
+	picture = GFX_report_event_generic_rally_3
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.77" }
+
+	option = {
+		name = NWiraq.77.a
+		create_wargoal = {
+			type = annex_everything
+			target = FROM
+			expire = 0
+		}
+	}
+}
+
+#Ирак национализировал нефтяную промышленность // ENG
+country_event = {
+	id = NWiraq.78
+	title = NWiraq.78.t
+	desc = NWiraq.78.d
+	picture = GFX_report_event_generic_rally_3
+	is_triggered_only = yes
+	
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NWiraq.78" }
+	
+	option = {
+		name = NWiraq.78.a
+		if = {
+			limit = { threat > 0.45 }
+			create_wargoal = {
+				type = annex_everything
+				target = FROM
+				expire = 0
+			}
+			add_ai_strategy = {
+				type = antagonize
+				id = FROM
+				value = 50
+			}
+			add_ai_strategy = {
+				type = conquer
+				id = FROM
+				value = -50
+			}
+		}
+		add_opinion_modifier = { target = FROM modifier = PER_nationalize_oil_industry_op }
+		FROM = { add_opinion_modifier = { target = ROOT modifier = PER_nationalize_oil_industry_op } }
+		effect_tooltip = {
+			remove_resource_rights = 962
+			remove_resource_rights = 676
+			remove_resource_rights = 291
+			remove_resource_rights = 995
+		}
+		add_state_claim = 291
+		add_state_claim = 676
+	}
+}
+
