@@ -1,0 +1,115 @@
+# ============================================================
+#  ИДЕИ МАРОККО — дизайн-док [MOR], Шаг 2
+#  Стартовые национальные духи протектората Марокко (1936).
+#  Добавляются в history/countries/MOR - Morocco.txt
+# ============================================================
+
+ideas = {
+
+	country = {
+
+		# --- 1. Аграрная страна ---
+		mor_agrarian_country = {
+			picture = HAI_pernicious_situation_of_agriculture_idea
+			allowed = {
+				original_tag = MOR
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				monthly_population = 1				# +100% к ежемесячному приросту населения
+				conscription = -0.01				# военнообязанное население -1%
+				consumer_goods_factor = 0.1	# +10% к гражданским фабрикам (ФНП)
+				production_speed_buildings_factor = -0.10			# скорость строительства -10%
+				production_factory_max_efficiency_factor = -0.10	# -10% макс. эффективности производства
+				research_slot_modifier = -1			# «-1 ячейка исследований» 
+			}
+		}
+
+		# --- 2. Необразованное население ---
+		mor_uneducated_population = {
+			picture = AFG_uneducated_nomads
+			allowed = {
+				original_tag = MOR
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = -0.25		# -25% к темпам изучения
+			}
+		}
+
+		# --- 3. Разорванная страна ---
+		mor_divided_country = {
+			picture = Regent_council
+			allowed = {
+				original_tag = MOR
+				NOT = {
+					AND = {
+						controls_state = 290		# Испанская Африка (Риф)
+						controls_state = 1066		# Сеута
+					}
+				}
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			cancel = {
+				AND = {
+					controls_state = 290
+					controls_state = 1066
+				}
+			}
+			removal_cost = -1
+			modifier = {
+				army_core_attack_factor = 0.15		# +15% атаки на национальной территории
+				war_support_factor = 0.10			# +10% поддержки войны
+				stability_factor = -0.10			# -10% стабильности
+			}
+		}
+
+		# --- 4. Попранный Фесский договор ---
+		mor_treaty_of_fes_violated = {
+			picture = break_treaty_of_sanaa
+			allowed = {
+				original_tag = MOR
+				is_subject = yes					# пока Марокко не свободно
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			cancel = {
+				is_subject = no
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = -0.3			# прирост политической власти -0.3
+				cic_to_overlord_factor = 0.30		# 30% гражданских фабрик работает на сюзерена
+			}
+		}
+
+		# --- 5. Марокканская армия ---
+		mor_broken_army = {
+			picture = AFG_expansion_of_the_regular_army_idea
+			allowed = {
+				original_tag = MOR
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				experience_gain_army = -0.10		# -10% получения армейского опыта
+				max_command_power = -20				# -20 к максимуму командного ресурса
+				army_org_factor = -0.10				# -10% максимальной организации дивизий
+				mobilization_laws_cost_factor = 100	# законы о призыве фактически не сменить
+			}
+		}
+
+	}
+
+}

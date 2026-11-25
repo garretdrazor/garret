@@ -1,0 +1,551 @@
+# ============================================================
+#  ТРЕЙТЫ ПРАВИТЕЛЕЙ МАРОККО — дизайн-док [MOR], Шаг 4
+#  Лидер-трейты (common/country_leader), как в NW_traits.txt.
+#  Назначаются в common/characters/MOR characters (Morocco).txt
+#  и в common/scripted_effects/MOR scripted effects (Morocco).txt
+# ============================================================
+
+leader_traits = {
+
+	### АВТОКРАТЫ — генерал-резиденты Франции ###
+
+	# Огюст Анри Понсо — «Мягкий характер»: прирост автономии +0.5
+	mor_soft_character = {
+		random = no
+		autonomy_gain = 0.5
+	}
+
+	# Бернар Марсель Пейрутон — «Резидент-сатрап»:
+	# -20% стабильности, прирост автономии -0.3, прирост авторитаризма +0.1
+	mor_resident_satrap = {
+		random = no
+		stability_factor = -0.20
+		autonomy_gain = -0.3
+		neutrality_drift = 0.10
+	}
+
+	# Шарль Ногес — «Французский генерал-резидент»: прирост автономии -0.1
+	mor_french_resident_general = {
+		random = no
+		autonomy_gain = -0.1
+	}
+
+	# Шарль Ногес — «Усмиритель Эль-Рифского волка»:
+	# подавление сопротивления +15%, +10% атаки против Республики Эль-Риф (Испанская Республика)
+	mor_pacifier_of_the_rif_wolf = {
+		random = no
+		resistance_target = -0.15			# сопротивление на оккупированных территориях ниже на 15%
+		targeted_modifier = {
+			tag = SPR
+			attack_bonus_against = 0.10		# +10% атаки против Республики Эль-Риф
+		}
+	}
+
+	### ДЕМОКРАТИЯ — МБНД ###
+
+	# Мухаммед Саллаль Аль-Фасси — «Голос нации»: прирост политической власти +15%
+	mor_voice_of_the_nation = {
+		random = no
+		political_power_factor = 0.15
+	}
+
+	# Мухаммед Хасан аль-Уаззани — «Конституционный реформатор»:
+	# +5% стабильности, -20% стоимость смены законов, +3% темпы исследований, +0.1 прирост демократии
+	mor_constitutional_reformer = {
+		random = no
+		stability_factor = 0.05
+		mobilization_laws_cost_factor = -0.20
+		economy_cost_factor = -0.20
+		trade_laws_cost_factor = -0.20
+		research_speed_factor = 0.03
+		democratic_drift = 0.10
+	}
+
+	### МОНАРХИЯ — Мухаммед V ###
+
+	# «Бесправный монарх» (Ступень I: у султана 1-3 «тултипа власти» из девяти):
+	# прирост политической власти -15%, скорость изменения популярности
+	# идеологий -20% (-0.02/день), стоимость политических советников +25%.
+	mor_powerless_monarch = {
+		random = no
+		political_power_factor = -0.15
+		political_advisor_cost_factor = 0.25
+		monarchy_drift = -0.02
+		neutrality_drift = -0.02
+		democratic_drift = -0.02
+		communism_drift = -0.02
+		fascism_drift = -0.02
+	}
+
+	# «Ограниченный монарх» (Ступень II: у султана 4-6 «тултипов власти»):
+	# прирост политической власти -7.5%,
+	# прирост популярности идеологий -0.01/день, стоимость политических советников +12.5%
+	mor_limited_monarch = {
+		random = no
+		political_power_factor = -0.075
+		political_advisor_cost_factor = 0.125
+		# «-10% к скорости изменения популярности идеологий» из докa:
+		# отдельного модификатора «скорости» в движке нет, глушим дневной прирост всех сил Марокко
+		monarchy_drift = -0.01
+		neutrality_drift = -0.01
+		democratic_drift = -0.01
+		communism_drift = -0.01
+		fascism_drift = -0.01
+	}
+
+	# «Влиятельный монарх» (Ступень III: у султана 7-9 «тултипов власти»):
+	# прирост политической власти +5%, скорость изменения популярности
+	# идеологий +10% (+0.01/день), стоимость политических советников -10%.
+	# В дизайн-доке для третьей ступени значение скорости идеологий потеряно
+	# («скорость изменения стоимость назначения...»), здесь оно зеркалит
+	# вторую ступень: -10% -> +10%. Если задумка иная — править только здесь.
+	mor_influential_monarch = {
+		random = no
+		political_power_factor = 0.05
+		political_advisor_cost_factor = -0.10
+		monarchy_drift = 0.01
+		neutrality_drift = 0.01
+		democratic_drift = 0.01
+		communism_drift = 0.01
+		fascism_drift = 0.01
+	}
+
+	# «Потомок пророка»: +10% стабильности, +5% поддержки войны
+	mor_descendant_of_the_prophet = {
+		random = no
+		stability_factor = 0.10
+		war_support_factor = 0.05
+	}
+
+	# «Надежда националистов»: +0.2 прироста автономии
+	mor_hope_of_the_nationalists = {
+		random = no
+		autonomy_gain = 0.2
+	}
+
+	### КОММУНИЗМ — Леон Сультан ###
+
+	# «Оппозиционер фашизму»: согласие фашистов с нашими действиями -40
+	mor_opponent_of_fascism = {
+		random = no
+		fascism_acceptance = -40
+	}
+
+	# «Идеолог-интернационалист»: +0.1 прирост коммунизма, +7% людских ресурсов не на национальных стейтах
+	mor_internationalist_ideologue = {
+		random = no
+		communism_drift = 0.10
+		non_core_manpower = 0.07
+	}
+
+	### ФАШИЗМ — Абдельхалек Торрес ###
+
+	# «Голос Магриба»: +10% поддержки войны, +0.1 прирост фашизма,
+	# -50% к времени оправдания войны.
+	# -40 отношения с Испанией и Францией выдаются НЕ трейтом (трейты отношений
+	# не дают), а эффектом фокуса фашистской ветки:
+	#   add_opinion_modifier = { target = SPR modifier = mor_torres_hostile_to_spain }
+	#   add_opinion_modifier = { target = FRA modifier = mor_torres_hostile_to_france }
+	# Модификаторы уже объявлены; эффекты фокусов — Шаг 8 (пока TODO).
+	mor_voice_of_the_maghreb = {
+		random = no
+		war_support_factor = 0.10
+		fascism_drift = 0.10
+		justify_war_goal_time = -0.50		# стоимость и скорость оправдания войны суммарно -50%
+		custom_modifier_tooltip = mor_voice_of_the_maghreb_tt
+	}
+
+}
+
+# ============================================================
+#  ТРЕЙТЫ КОНЦЕРНОВ — см. common/ideas/MOR concerns (Morocco).txt
+# ============================================================
+
+leader_traits = {
+
+	# Шерифское управление фосфатов: фосфатная монополия.
+	# +12 хрома, +15% добыча ресурсов, +5% скорость строительства гражданских фабрик.
+	# +10% к исследованию промышленности вынесено в research_bonus самого концерна.
+	mor_phosphate_monopoly = {
+		random = no
+		sprite = 13
+		country_resource_chromium = 12
+		local_resources_factor = 0.15
+		production_speed_industrial_complex_factor = 0.05
+	}
+
+	# Железнодорожная компания Марокко: рельсы, инфраструктура, склады снабжения.
+	mor_railway_company = {
+		random = no
+		sprite = 13
+		production_speed_infrastructure_factor = 0.15
+		production_speed_rail_way_factor = 0.25
+		production_speed_supply_node_factor = 0.20
+	}
+
+	# Угледобывающие предприятия Джерады: уголь и топливо для заводов.
+	mor_coal_mines_of_jerada = {
+		random = no
+		sprite = 13
+		country_resource_coal = 8
+		fuel_gain = 1.00
+		production_speed_arms_factory_factor = 0.05
+	}
+
+	# Горнодобывающая компания Зеллиджи: рудник Слег-Бумаубера (вольфрам/свинец).
+	mor_zellidja_mining_company = {
+		random = no
+		sprite = 13
+		local_resources_factor = 0.10
+		country_resource_tungsten = 4
+		production_factory_max_efficiency_factor = 0.03
+	}
+
+	# «Североафриканское объединение»: строительный концерн Оmnium Nord-Africain.
+	mor_omnium_nord_africain_construction = {
+		random = no
+		sprite = 13
+		production_speed_buildings_factor = 0.10
+		production_speed_infrastructure_factor = 0.10
+		production_speed_industrial_complex_factor = 0.05
+		consumer_goods_factor = 0.02			# концерн забирает часть ресурсов под свои стройки
+	}
+
+	# «Электроэнергия Марокко»: электростанции, синтетическое топливо, радиолокация.
+	# +15% к исследованию электроники вынесено в research_bonus самого концерна.
+	mor_energie_electrique_du_maroc_power = {
+		random = no
+		sprite = 13
+		industrial_capacity_factory_powered = 0.05	# фабрики работают лучше на собственном токе
+		production_speed_synthetic_refinery_factor = 0.10
+		production_speed_radar_station_factor = 0.10
+	}
+
+}
+
+# ============================================================
+#  ТРЕЙТЫ МИНИСТРОВ МАРОККО — см. common/characters/MOR characters (Morocco).txt
+# ============================================================
+
+leader_traits = {
+
+	# --- Махзен и национальное движение ---
+
+	# Мухаммад аль-Мукри: нелояльный великий визирь
+	mor_disloyal_grand_vizier = {
+		random = no
+		sprite = 13
+		political_power_gain = 0.15
+		autonomy_gain = -0.20
+		political_advisor_cost_factor = 0.25
+	}
+
+	# Тайеб аль-Мукри: министр финансов махзена
+	mor_makhzen_financier = {
+		random = no
+		sprite = 13
+		consumer_goods_factor = -0.05
+		production_speed_buildings_factor = 0.05
+		political_power_gain = 0.05
+	}
+
+	# Тами аль-Мукри: первый инженер-агроном Марокко
+	mor_first_agronomist_engineer = {
+		random = no
+		sprite = 13
+		monthly_population = 0.50
+		global_building_slots_factor = 0.15
+	}
+
+	# Ахмед Баргач: министр образования махзена
+	mor_makhzen_educator = {
+		random = no
+		sprite = 13
+		research_speed_factor = 0.05
+		stability_factor = 0.03
+	}
+
+	# Мохаммед Маммери: глава королевского протокола и двора
+	mor_master_of_royal_ceremonies = {
+		random = no
+		sprite = 13
+		monarchy_drift = 0.10
+		research_speed_factor = 0.02
+		political_power_gain = 0.10
+	}
+
+	# Абдельазиз Бендрисс Амрауи: берберский писатель
+	mor_berber_writer = {
+		random = no
+		sprite = 13
+		stability_factor = 0.05
+		autonomy_gain = 0.50
+	}
+
+	# Мухаммед Карим Ламрани: капитан индустрии
+	mor_captain_of_industry = {
+		random = no
+		sprite = 13
+		industrial_capacity_factory = 0.05
+		production_factory_max_efficiency_factor = 0.05
+		production_speed_arms_factory_factor = 0.05
+		production_speed_industrial_complex_factor = 0.05
+	}
+
+	# Таухид Аль-Фарадж: экономист
+	mor_economist_reformer = {
+		random = no
+		sprite = 13
+		consumer_goods_factor = -0.03
+		stability_factor = 0.05
+	}
+
+	# Рабби Исраэль Абухацейра: еврейский религиозный деятель
+	mor_jewish_community_leader = {
+		random = no
+		sprite = 13
+		stability_factor = 0.10
+		research_speed_factor = -0.03
+		monthly_population = 0.20
+	}
+
+	# Мулай Дрисс Кандусси: министр шпионажа
+	mor_minister_of_spying = {
+		random = no
+		sprite = 13
+		intelligence_agency_defense = 0.15
+		intel_network_gain_factor = 0.15
+		agency_upgrade_time = -0.15
+	}
+
+	# Бубкер эль-Кадири: министр образования реформистского кабинета
+	mor_minister_of_education = {
+		random = no
+		sprite = 13
+		research_speed_factor = 0.08
+		stability_factor = 0.03
+		monthly_population = 0.05
+	}
+
+	# Мухаммед Хасан Уаззани: министр пропаганды
+	mor_minister_of_propaganda = {
+		random = no
+		sprite = 13
+		war_support_factor = 0.10
+		political_power_gain = 0.10
+		stability_factor = 0.03
+	}
+
+	# Ахмед Балафредж: министр иностранных дел
+	mor_minister_of_foreign_affairs = {
+		random = no
+		sprite = 13
+		trade_opinion_factor = 0.20
+		opinion_gain_monthly_factor = 0.15
+		political_power_gain = 0.05
+	}
+
+	# Омар Бенабдельджалил: министр сельского хозяйства
+	mor_minister_of_agriculture = {
+		random = no
+		sprite = 13
+		monthly_population = 0.15
+		production_speed_industrial_complex_factor = 0.05
+		local_resources_factor = 0.05
+	}
+
+	# Мохамед Диури: идеолог демократии
+	mor_democratic_ideologue = {
+		random = no
+		sprite = 13
+		democratic_drift = 0.10
+		political_power_gain = 0.10
+		stability_factor = 0.05
+	}
+
+	# Мохамед Лязиди: либеральный журналист
+	mor_liberal_journalist = {
+		random = no
+		sprite = 13
+		stability_factor = 0.05
+		drift_defence_factor = 0.15
+		democratic_drift = 0.05
+	}
+
+	# Абдалла Ибрагим: социальный деятель
+	mor_social_activist = {
+		random = no
+		sprite = 13
+		stability_factor = 0.05
+		production_speed_infrastructure_factor = 0.25
+		monthly_population = 0.25
+	}
+
+	# Тами Эль Глави: лояльный королю великий визирь
+	mor_loyal_grand_vizier = {
+		random = no
+		sprite = 13
+		political_power_gain = 0.15
+		monarchy_drift = 0.10
+		political_advisor_cost_factor = -0.25
+	}
+
+	# Абдельхалек Торрес: подражатель фалангизма
+	mor_falangist_imitator = {
+		random = no
+		sprite = 13
+		war_support_factor = 0.05
+		production_factory_max_efficiency_factor = 0.03
+		production_factory_efficiency_gain_factor = 0.03
+		conscription_factor = 0.005
+	}
+
+	# Мохаммед аль-Макки ан-Насири: глава духовного ведомства
+	mor_head_of_religious_affairs = {
+		random = no
+		sprite = 13
+		stability_factor = 0.05
+		drift_defence_factor = 0.15
+		monarchy_drift = 0.05
+	}
+
+	# --- Марокканская компартия и профсоюзы ---
+
+	# Мишель Мазелла: руководитель подпольной деятельности компартии
+	mor_underground_organizer = {
+		random = no
+		sprite = 13
+		subversive_activites_upkeep = -0.25
+		intel_network_gain_factor = 0.20
+		operative_slot = 1
+		communism_drift = 0.10
+	}
+
+	# Жан Дреш: горный картограф
+	mor_mountain_cartographer = {
+		random = no
+		sprite = 13
+		production_speed_infrastructure_factor = 0.10
+		production_speed_rail_way_factor = 0.10
+		mountaineers_special_forces_contribution_factor = 0.10
+	}
+
+	# Мишель Колонна: министр промышленности
+	mor_communist_industrial_commissar = {
+		random = no
+		sprite = 13
+		industrial_capacity_factory = 0.10
+		production_speed_arms_factory_factor = 0.10
+		production_speed_industrial_complex_factor = 0.10
+	}
+
+	# Шарль Дюпюи: народный комиссар дорог и узлов снабжения
+	mor_railway_and_nodes_commissar = {
+		random = no
+		sprite = 13
+		production_speed_rail_way_factor = 0.20
+		production_speed_supply_node_factor = 0.20
+		production_speed_infrastructure_factor = 0.10
+	}
+
+	# Поль Дюрель: профсоюзный деятель
+	mor_trade_unionist = {
+		random = no
+		sprite = 13
+		production_factory_efficiency_gain_factor = 0.10
+		production_factory_max_efficiency_factor = 0.05
+		conscription_factor = 0.02
+	}
+
+	# Эдмон Амран Эль Малех: голос марокканского подполья
+	mor_voice_of_the_underground = {
+		random = no
+		sprite = 13
+		political_power_factor = 0.15
+		communism_drift = 0.10
+		intelligence_agency_defense = 0.20
+	}
+
+	# Авраам Серфати: инженер
+	mor_engineer_of_labour = {
+		random = no
+		sprite = 13
+		production_factory_max_efficiency_factor = 0.05
+		production_factory_efficiency_gain_factor = 0.10
+	}
+
+	# Али Ята: член политбюро, рабочая лошадка
+	mor_workhorse_of_the_politburo = {
+		random = no
+		sprite = 13
+		political_power_gain = 0.15
+		production_factory_efficiency_gain_factor = 0.05
+		consumer_goods_factor = -0.02
+	}
+
+	# Мухаммед Ферхат: редактор партийной печати
+	mor_editor_of_the_party_press = {
+		random = no
+		sprite = 13
+		stability_factor = 0.05
+		war_support_factor = 0.05
+		communism_drift = 0.05
+	}
+
+	# Фортуне Султан: мать марокканской эмансипации
+	mor_mother_of_emancipation = {
+		random = no
+		sprite = 13
+		weekly_manpower = 150
+		consumer_goods_factor = -0.03
+		production_speed_infrastructure_factor = 0.15
+		production_speed_industrial_complex_factor = 0.05
+	}
+
+	# Люсетт Мазелла: министр труда
+	mor_labour_minister = {
+		random = no
+		sprite = 13
+		production_factory_efficiency_gain_factor = 0.10
+		conscription_factor = 0.02
+		monthly_population = 0.10
+	}
+
+	# Фрея Айаш: министр просвещения
+	mor_minister_of_enlightenment = {
+		random = no
+		sprite = 13
+		research_speed_factor = 0.06
+		monthly_population = 0.10
+		stability_factor = 0.03
+	}
+
+	# Сиди Ахмед Бен аль-Ахмар: член Лиги Учёных Севера
+	mor_ulema_of_the_north = {
+		random = no
+		sprite = 13
+		research_speed_factor = 0.05
+		stability_factor = 0.03
+	}
+
+	# Али Бен аль-Ахмар: теневой банкир
+	mor_shadow_banker = {
+		random = no
+		sprite = 13
+		consumer_goods_factor = -0.05
+		trade_opinion_factor = 0.10
+		intel_network_gain_factor = 0.20
+		opinion_gain_monthly_factor = 0.10
+	}
+
+	# Мухаммад Дауд: глава молодёжной организации
+	mor_youth_organization_leader = {
+		random = no
+		sprite = 13
+		war_support_factor = 0.05
+		monthly_population = 0.10
+		research_speed_factor = 0.02
+	}
+
+}
+

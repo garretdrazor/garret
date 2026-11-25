@@ -1,0 +1,43 @@
+# ============================================================
+#  КАТЕГОРИИ РЕШЕНИЙ — БАЛАНС СИЛ МАРОККО — дизайн-док [MOR], Шаг 7
+#
+#  MOR_balance_of_power_category — категория решений баланса сил Марокко.
+#  Исчезает, как только Марокко становится независимым ИЛИ к власти приходят
+#  коммунисты (visible). Снятие самого баланса сил — в
+#  common/on_actions/MOR power balance on actions (Morocco).txt.
+#
+#  MOR_french_colonial_policy_category — ответвление для Франции: понижение
+#  статуса Марокко по мере того, как шкала уходит в пользу резидента.
+#
+#  Иконки — ванильные спрайты interface/decisions.gfx:
+#  GFX_decision_category_generic_political_actions,
+#  GFX_decision_category_generic_foreign_policy.
+# ============================================================
+
+MOR_balance_of_power_category = {
+	allowed = {
+		original_tag = MOR
+	}
+	visible = {
+		has_power_balance = { id = MOR_power_balance }
+		is_subject = yes
+		NOT = {
+			has_government = communism
+		}
+	}
+	icon = generic_political_actions
+}
+
+MOR_french_colonial_policy_category = {
+	allowed = {
+		tag = FRA
+	}
+	visible = {
+		MOR = {
+			exists = yes
+			has_power_balance = { id = MOR_power_balance }
+			is_subject_of = FRA
+		}
+	}
+	icon = generic_foreign_policy
+}

@@ -1,0 +1,4063 @@
+##################################################
+# Morocco (MOR) national focus tree
+# layout, ids and links generated from the design doc:
+#   Nablotski/dizdoki/Markokko/Markokko.pptx  (183 focuses, 24 rows x 29 cols)
+#   Nablotski/dizdoki/Markokko/Markokko.docx  (descriptions / requirements)
+# NOTE: completion_reward blocks are placeholders - effects are a separate step.
+# NOTE: "doc requirements" comments are quoted from the design doc and still
+#       have to be turned into available = { } / bypass = { } conditions.
+##################################################
+focus_tree = {
+	id = morocco_focus
+
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = MOR
+		}
+	}
+
+	default = no
+
+	continuous_focus_position = { x = 1100 y = 1500 }
+
+	focus = {
+		id = MOR_Conduct_labor_reforms
+		icon = GFX_focus_generic_worker_expansion
+		x = 5
+		y = 0
+		cost = 10
+		mutually_exclusive = { focus = MOR_Powder_keg_of_red_june }
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Conduct_labor_reforms"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Powder_keg_of_red_june
+		icon = GFX_focus_generic_red_flags
+		x = 22
+		y = 0
+		cost = 10
+		mutually_exclusive = { focus = MOR_Conduct_labor_reforms }
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Powder_keg_of_red_june"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Oppose_the_Moroccan_Action_Committee
+		icon = GFX_focus_generic_conspiracy
+		x = -3
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Conduct_labor_reforms }
+		relative_position_id = MOR_Conduct_labor_reforms
+		mutually_exclusive = { focus = MOR_Support_the_Moroccan_Action_Committee }
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: Генерал-резидент контролирует внутренний порядок Марокко
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Oppose_the_Moroccan_Action_Committee"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Support_the_Moroccan_Action_Committee
+		icon = GFX_focus_generic_public_meetings
+		x = 3
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Conduct_labor_reforms }
+		relative_position_id = MOR_Conduct_labor_reforms
+		mutually_exclusive = { focus = MOR_Oppose_the_Moroccan_Action_Committee }
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: Вы субъект коммунистической франции, Ком франция в состоянии гражданской войны. Пропуск: ГВ с монархистами во Франции окончена.
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Support_the_Moroccan_Action_Committee"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Seek_aid_from_the_Comintern
+		icon = GFX_focus_generic_join_comintern
+		x = -1
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Powder_keg_of_red_june }
+		relative_position_id = MOR_Powder_keg_of_red_june
+		mutually_exclusive = { focus = MOR_Seek_compromise_with_the_new_France }
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: СССР коммунистическое, существует, не в гражданской войне.
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Seek_aid_from_the_Comintern"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Seek_compromise_with_the_new_France
+		icon = GFX_goal_generic_forceful_treaty
+		x = 1
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Powder_keg_of_red_june }
+		relative_position_id = MOR_Powder_keg_of_red_june
+		mutually_exclusive = { focus = MOR_Seek_aid_from_the_Comintern }
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: Франция коммунистическая
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Seek_compromise_with_the_new_France"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Dissolve_the_Moroccan_Action_Committee
+		icon = GFX_focus_generic_improve_the_administration
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Oppose_the_Moroccan_Action_Committee }
+		relative_position_id = MOR_Oppose_the_Moroccan_Action_Committee
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Dissolve_the_Moroccan_Action_Committee"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Ban_all_workers_gatherings
+		icon = GFX_goal_continuous_suppression
+		x = -1
+		y = 2
+		cost = 10
+		prerequisite = { focus = MOR_Conduct_labor_reforms }
+		relative_position_id = MOR_Conduct_labor_reforms
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: Марокко в состоянии войны, Генерал-резидент контролирует внутренний порядок Марокко
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Ban_all_workers_gatherings"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Request_weapons_for_the_garrisons
+		icon = GFX_goal_generic_small_arms
+		x = 1
+		y = 2
+		cost = 10
+		prerequisite = { focus = MOR_Conduct_labor_reforms }
+		relative_position_id = MOR_Conduct_labor_reforms
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: Генерал-резидент контролирует армию
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Request_weapons_for_the_garrisons"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Allow_publication_of_nationalist_newspapers
+		icon = GFX_focus_generic_printing_press
+		x = 1
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Support_the_Moroccan_Action_Committee }
+		relative_position_id = MOR_Support_the_Moroccan_Action_Committee
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: уровень автономии - колония
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Allow_publication_of_nationalist_newspapers"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Secure_support_of_the_Atlas_tribes
+		icon = GFX_focus_generic_camel_corps
+		x = -2
+		y = 2
+		cost = 10
+		prerequisite = { focus = MOR_Powder_keg_of_red_june }
+		relative_position_id = MOR_Powder_keg_of_red_june
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: фокус «Новое правительство Марокко согласовано» НЕ выполнен.
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Secure_support_of_the_Atlas_tribes"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Prepare_dynamite_work_of_miners
+		icon = GFX_focus_generic_mineral_prospecting
+		x = 0
+		y = 2
+		cost = 10
+		prerequisite = { focus = MOR_Powder_keg_of_red_june }
+		relative_position_id = MOR_Powder_keg_of_red_june
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: фокус «Новое правительство Марокко согласовано» НЕ выполнен.
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Prepare_dynamite_work_of_miners"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Arm_the_red_guard_bands
+		icon = GFX_focus_generic_red_army2
+		x = 2
+		y = 2
+		cost = 10
+		prerequisite = { focus = MOR_Powder_keg_of_red_june }
+		relative_position_id = MOR_Powder_keg_of_red_june
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: фокус «Новое правительство Марокко согласовано» НЕ выполнен.
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Arm_the_red_guard_bands"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Trust_in_France
+		icon = GFX_goal_generic_military_deal
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Dissolve_the_Moroccan_Action_Committee }
+		relative_position_id = MOR_Dissolve_the_Moroccan_Action_Committee
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Trust_in_France"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Accept_french_investments
+		icon = GFX_focus_generic_industry_investment
+		x = 0
+		y = 3
+		cost = 10
+		prerequisite = { focus = MOR_Conduct_labor_reforms }
+		relative_position_id = MOR_Conduct_labor_reforms
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: Марокко субъект Франции, Генерал-резидент контролирует экономику
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Accept_french_investments"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Begin_revision_of_the_reform_plan
+		icon = GFX_focus_generic_improve_the_administration_2
+		x = -2
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Allow_publication_of_nationalist_newspapers }
+		relative_position_id = MOR_Allow_publication_of_nationalist_newspapers
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: Поддержка демократии не менее 25%, поддержка монархии не менее 25%
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Begin_revision_of_the_reform_plan"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Replace_grand_vizier_with_prime_minister
+		icon = GFX_focus_generic_court
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Allow_publication_of_nationalist_newspapers }
+		relative_position_id = MOR_Allow_publication_of_nationalist_newspapers
+		mutually_exclusive = { focus = MOR_Appoint_a_vizier_loyal_to_the_king }
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: Марокко свободно, популярность демократии выше, чем популярность монархии.
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Replace_grand_vizier_with_prime_minister"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Appoint_a_vizier_loyal_to_the_king
+		icon = GFX_z_goal_generic_royal_assent
+		x = 2
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Allow_publication_of_nationalist_newspapers }
+		relative_position_id = MOR_Allow_publication_of_nationalist_newspapers
+		mutually_exclusive = { focus = MOR_Replace_grand_vizier_with_prime_minister }
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: Марокко свободно, популярность монархии выше, чем популярность демократии.
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Appoint_a_vizier_loyal_to_the_king"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Seek_help_among_nationalists
+		icon = GFX_z_goal_generic_political_support
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Secure_support_of_the_Atlas_tribes }
+		prerequisite = { focus = MOR_Prepare_dynamite_work_of_miners }
+		prerequisite = { focus = MOR_Arm_the_red_guard_bands }
+		relative_position_id = MOR_Secure_support_of_the_Atlas_tribes
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: фокус «Новое правительство Марокко согласовано» НЕ выполнен.
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Seek_help_among_nationalists"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Declare_claims_on_former_territories
+		icon = GFX_goal_generic_more_territorial_claims
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Secure_support_of_the_Atlas_tribes }
+		prerequisite = { focus = MOR_Prepare_dynamite_work_of_miners }
+		prerequisite = { focus = MOR_Arm_the_red_guard_bands }
+		relative_position_id = MOR_Prepare_dynamite_work_of_miners
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: фокус «Новое правительство Марокко согласовано» НЕ выполнен.
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Declare_claims_on_former_territories"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Poach_remnants_of_moroccans_from_the_army
+		icon = GFX_focus_generic_diverse_army
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Secure_support_of_the_Atlas_tribes }
+		prerequisite = { focus = MOR_Prepare_dynamite_work_of_miners }
+		prerequisite = { focus = MOR_Arm_the_red_guard_bands }
+		relative_position_id = MOR_Arm_the_red_guard_bands
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Poach_remnants_of_moroccans_from_the_army"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Introduce_martial_law_measures
+		icon = GFX_goal_generic_defence
+		x = -2
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Trust_in_France }
+		relative_position_id = MOR_Trust_in_France
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Introduce_martial_law_measures"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Ban_the_communist_party
+		icon = GFX_focus_generic_national_security
+		x = 1
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Ban_all_workers_gatherings }
+		prerequisite = { focus = MOR_Trust_in_France }
+		relative_position_id = MOR_Trust_in_France
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Ban_the_communist_party"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Declare_the_lesser_jihad
+		icon = GFX_z_goal_generic_cross_and_sword
+		x = -1
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Begin_revision_of_the_reform_plan }
+		relative_position_id = MOR_Begin_revision_of_the_reform_plan
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: терпение марроканцев меньше 90% Пропуск: Марокко свободно. имеется кантри флаг Франция согласилась пересмотреть судебную систему Откат: 30 дней Стоимость: 50 полит власти. имеется кантри флаг Франция согласилась пересмотреть административную систему Откат: 30 дней Стоимость: 50 полит власти. имеется кантри флаг Франция согласилась пересмотреть управленческую систему Откат: 30 дней Стоимость: 50 полит власти.
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Declare_the_lesser_jihad"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Prepare_a_replacement_for_the_makhzen
+		icon = GFX_z_goal_generic_laws
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Replace_grand_vizier_with_prime_minister }
+		relative_position_id = MOR_Replace_grand_vizier_with_prime_minister
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: Марокко свободно, популярность демократии выше, чем популярность монархии.
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Prepare_a_replacement_for_the_makhzen"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Reform_the_makhzen
+		icon = GFX_z_goal_generic_overcentralization
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Appoint_a_vizier_loyal_to_the_king }
+		relative_position_id = MOR_Appoint_a_vizier_loyal_to_the_king
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Reform_the_makhzen"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_A_new_country_of_workers
+		icon = GFX_z_goal_generic_dictatorship_of_proletariat
+		x = -3
+		y = 3
+		cost = 10
+		prerequisite = { focus = MOR_Seek_aid_from_the_Comintern }
+		relative_position_id = MOR_Seek_aid_from_the_Comintern
+		mutually_exclusive = { focus = MOR_New_Moroccan_government_agreed }
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: Марокко коммунистическое, независимое.
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_A_new_country_of_workers"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_New_Moroccan_government_agreed
+		icon = GFX_focus_generic_diplomatic_treaty
+		x = 3
+		y = 3
+		cost = 10
+		prerequisite = { focus = MOR_Seek_compromise_with_the_new_France }
+		relative_position_id = MOR_Seek_compromise_with_the_new_France
+		mutually_exclusive = { focus = MOR_A_new_country_of_workers }
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_New_Moroccan_government_agreed"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Modernization_of_the_port_of_Casablanca
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 2
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Introduce_martial_law_measures }
+		relative_position_id = MOR_Introduce_martial_law_measures
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: вы владеете провкой 7069, Генерал-резидент контролирует армию
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Modernization_of_the_port_of_Casablanca"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Support_unrest_in_Algeria
+		icon = GFX_z_goal_generic_struggle
+		x = -1
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Declare_the_lesser_jihad }
+		relative_position_id = MOR_Declare_the_lesser_jihad
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: Все нац стейты Алжира принадлежат Франции Пропуск: Марокко свободно ИЛИ все нац стейты Алжира принадлежат НЕ Франции
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Support_unrest_in_Algeria"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Form_the_government
+		icon = GFX_z_goal_generic_state1
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Prepare_a_replacement_for_the_makhzen }
+		relative_position_id = MOR_Prepare_a_replacement_for_the_makhzen
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: Баланс сил сдвинут на 75% и более процентов в одну из сторон.
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Form_the_government"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Accept_the_title_of_king
+		icon = GFX_focus_generic_monarchy_1
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Reform_the_makhzen }
+		relative_position_id = MOR_Reform_the_makhzen
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Accept_the_title_of_king"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Allow_rallies_and_unions
+		icon = GFX_focus_generic_workers
+		x = 2
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Reform_the_makhzen }
+		relative_position_id = MOR_Reform_the_makhzen
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Allow_rallies_and_unions"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Arabization_of_the_country
+		icon = GFX_goal_generic_propaganda
+		x = 4
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Reform_the_makhzen }
+		prerequisite = { focus = MOR_A_new_country_of_workers }
+		relative_position_id = MOR_Reform_the_makhzen
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Arabization_of_the_country"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Purge_the_french_from_the_party
+		icon = GFX_focus_generic_sabotage
+		x = -1
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_A_new_country_of_workers }
+		relative_position_id = MOR_A_new_country_of_workers
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Purge_the_french_from_the_party"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Organization_of_the_communal_assembly
+		icon = GFX_z_goal_generic_theatre
+		x = 2
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_A_new_country_of_workers }
+		prerequisite = { focus = MOR_New_Moroccan_government_agreed }
+		relative_position_id = MOR_A_new_country_of_workers
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Organization_of_the_communal_assembly"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Fate_of_the_sultan
+		icon = GFX_focus_generic_monarchist_sentiment
+		x = 4
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_A_new_country_of_workers }
+		prerequisite = { focus = MOR_New_Moroccan_government_agreed }
+		relative_position_id = MOR_A_new_country_of_workers
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Fate_of_the_sultan"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Nationalization_of_the_banks
+		icon = GFX_focus_BRA_nationalize_banks
+		x = -2
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_A_new_country_of_workers }
+		prerequisite = { focus = MOR_New_Moroccan_government_agreed }
+		relative_position_id = MOR_New_Moroccan_government_agreed
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: Фокус «Внедрить Марокканский дирхам» выполнен.
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Nationalization_of_the_banks"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Accept_french_refugees
+		icon = GFX_focus_generic_immigration
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_New_Moroccan_government_agreed }
+		relative_position_id = MOR_New_Moroccan_government_agreed
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: Вы субъект коммунистической франции, Ком франция в состоянии гражданской войны.
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Accept_french_refugees"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Recap_of_the_Torch
+		icon = GFX_goal_generic_occupy_states_coastal
+		x = 0
+		y = 2
+		cost = 10
+		prerequisite = { focus = MOR_Introduce_martial_law_measures }
+		relative_position_id = MOR_Introduce_martial_law_measures
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Recap_of_the_Torch"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Nouasser_project
+		icon = GFX_goal_generic_construct_military
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Modernization_of_the_port_of_Casablanca }
+		relative_position_id = MOR_Modernization_of_the_port_of_Casablanca
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: вы владеете провкой 4139, Генерал-резидент контролирует армию
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Nouasser_project"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Support_unrest_in_Mauritania
+		icon = GFX_focus_generic_provoke_border_clashes
+		x = -2
+		y = 2
+		cost = 10
+		prerequisite = { focus = MOR_Declare_the_lesser_jihad }
+		relative_position_id = MOR_Declare_the_lesser_jihad
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: Все нац стейты Мавритании принадлежат Франции Пропуск: Марокко свободно ИЛИ все нац стейты Мавритании принадлежат НЕ Франции
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Support_unrest_in_Mauritania"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Support_unrest_in_Tunisia
+		icon = GFX_z_goal_generic_political_commissars
+		x = 0
+		y = 2
+		cost = 10
+		prerequisite = { focus = MOR_Declare_the_lesser_jihad }
+		relative_position_id = MOR_Declare_the_lesser_jihad
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: Все нац стейты Туниса принадлежат Франции Пропуск: Марокко свободно ИЛИ все нац стейты Туниса принадлежат НЕ Франции
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Support_unrest_in_Tunisia"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Patriotic_Ouazzani_movement
+		icon = GFX_goal_generic_national_unity
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Form_the_government }
+		relative_position_id = MOR_Form_the_government
+		mutually_exclusive = { focus = MOR_Fassi_National_Party }
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Patriotic_Ouazzani_movement"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Fassi_National_Party
+		icon = GFX_goal_support_democracy
+		x = 2
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Form_the_government }
+		relative_position_id = MOR_Form_the_government
+		mutually_exclusive = { focus = MOR_Patriotic_Ouazzani_movement }
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Fassi_National_Party"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Reduce_the_influence_of_the_nationalists
+		icon = GFX_goal_generic_political_pressure
+		x = 1
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Accept_the_title_of_king }
+		prerequisite = { focus = MOR_Allow_rallies_and_unions }
+		relative_position_id = MOR_Allow_rallies_and_unions
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Reduce_the_influence_of_the_nationalists"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Communist_associations
+		icon = GFX_focus_generic_communist
+		x = -2
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Organization_of_the_communal_assembly }
+		relative_position_id = MOR_Organization_of_the_communal_assembly
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Communist_associations"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Agrarian_reform
+		icon = GFX_goal_agrarian
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Organization_of_the_communal_assembly }
+		relative_position_id = MOR_Organization_of_the_communal_assembly
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Agrarian_reform"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Literacy_programs
+		icon = GFX_focus_generic_socialist_science
+		x = -2
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Nationalization_of_the_banks }
+		relative_position_id = MOR_Nationalization_of_the_banks
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Literacy_programs"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Active_support_of_the_unions
+		icon = GFX_z_goal_generic_industrial_worker
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Nationalization_of_the_banks }
+		relative_position_id = MOR_Nationalization_of_the_banks
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: выполнен фокус «Легализовать Антифашистский комитет»
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Active_support_of_the_unions"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Legalize_the_antifascist_committee
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		x = 2
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Nationalization_of_the_banks }
+		relative_position_id = MOR_Nationalization_of_the_banks
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Legalize_the_antifascist_committee"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Support_from_the_United_States
+		icon = GFX_goal_generic_major_alliance
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Recap_of_the_Torch }
+		relative_position_id = MOR_Recap_of_the_Torch
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Support_from_the_United_States"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Repair_dockyard
+		icon = GFX_goal_continuous_repairments
+		x = 1
+		y = 2
+		cost = 10
+		prerequisite = { focus = MOR_Modernization_of_the_port_of_Casablanca }
+		relative_position_id = MOR_Modernization_of_the_port_of_Casablanca
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Repair_dockyard"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Begin_the_fight_for_our_freedom
+		icon = GFX_goal_generic_territory_or_war
+		x = 5
+		y = 7
+		cost = 10
+		prerequisite = {
+				focus = MOR_Support_unrest_in_Algeria
+				focus = MOR_Support_unrest_in_Mauritania
+				focus = MOR_Support_unrest_in_Tunisia
+		}
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Begin_the_fight_for_our_freedom"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Modernization_on_the_western_model
+		icon = GFX_focus_generic_modernize_industry
+		x = -1
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Patriotic_Ouazzani_movement }
+		relative_position_id = MOR_Patriotic_Ouazzani_movement
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: вы владеете провкой 7069, Генерал-резидент контролирует армию
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Modernization_on_the_western_model"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Separate_religious_and_secular_power
+		icon = GFX_focus_generic_self_management
+		x = 10
+		y = 7
+		cost = 10
+		prerequisite = {
+			focus = MOR_Patriotic_Ouazzani_movement
+			focus = MOR_Fassi_National_Party
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Separate_religious_and_secular_power"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Carry_out_religious_renewal
+		icon = GFX_focus_generic_islamic_propaganda
+		x = 12
+		y = 7
+		cost = 10
+		prerequisite = {
+			focus = MOR_Fassi_National_Party
+			focus = MOR_Reduce_the_influence_of_the_nationalists
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Carry_out_religious_renewal"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Sole_rule_of_Muhammad_V
+		icon = GFX_focus_generic_monarchy_2
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Reduce_the_influence_of_the_nationalists }
+		relative_position_id = MOR_Reduce_the_influence_of_the_nationalists
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Sole_rule_of_Muhammad_V"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Increase_loans_to_the_fellahin
+		icon = GFX_z_goal_generic_keynesian_economics
+		x = -1
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Agrarian_reform }
+		relative_position_id = MOR_Agrarian_reform
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: фокус «Национализация банков» выполнен.
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Increase_loans_to_the_fellahin"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Open_schools_for_the_fellahin
+		icon = GFX_focus_generic_university_1
+		x = -1
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Literacy_programs }
+		relative_position_id = MOR_Literacy_programs
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Open_schools_for_the_fellahin"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Nationalization_of_the_phosphate_companies
+		icon = GFX_focus_generic_expropriate_industrialist
+		x = -1
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Active_support_of_the_unions }
+		relative_position_id = MOR_Active_support_of_the_unions
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: Фокус «Внедрить Марокканский дирхам» выполнен.
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Nationalization_of_the_phosphate_companies"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_End_the_gross_exploitation_of_women
+		icon = GFX_focus_generic_women_in_military
+		x = 1
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Active_support_of_the_unions }
+		relative_position_id = MOR_Active_support_of_the_unions
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_End_the_gross_exploitation_of_women"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Support_the_popular_front_alliance
+		icon = GFX_goal_support_fourth_int
+		x = 2
+		y = 3
+		cost = 10
+		prerequisite = { focus = MOR_New_Moroccan_government_agreed }
+		relative_position_id = MOR_New_Moroccan_government_agreed
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: Вы субъект коммунистической франции, Ком франция в состоянии гражданской войны. Пропуск: ГВ с монархистами во Франции окончена.
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Support_the_popular_front_alliance"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Tangier_Fes_railway_loop
+		icon = GFX_focus_generic_railroad
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Support_from_the_United_States }
+		relative_position_id = MOR_Support_from_the_United_States
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: вы ИЛИ страна с которой вы не находитесь в состоянии войны владеете провками: 11987, 10013, 10113, 13907, 13313.
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Tangier_Fes_railway_loop"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Naval_air_base_Port_Lyautey
+		icon = GFX_goal_generic_air_naval_bomber
+		x = -1
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Support_from_the_United_States }
+		prerequisite = { focus = MOR_Repair_dockyard }
+		relative_position_id = MOR_Repair_dockyard
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: вы владеете провкой 1194
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Naval_air_base_Port_Lyautey"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Declare_claims_on_Mauritania
+		icon = GFX_goal_generic_demand_territory
+		x = -1
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Begin_the_fight_for_our_freedom }
+		relative_position_id = MOR_Begin_the_fight_for_our_freedom
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Declare_claims_on_Mauritania"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Return_Tangier_to_the_Sultan
+		icon = GFX_focus_generic_monarchist_workers
+		x = 1
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Begin_the_fight_for_our_freedom }
+		relative_position_id = MOR_Begin_the_fight_for_our_freedom
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: Танжер – существует.
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Return_Tangier_to_the_Sultan"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Progressive_social_policy
+		icon = GFX_focus_generic_welfare
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Separate_religious_and_secular_power }
+		relative_position_id = MOR_Separate_religious_and_secular_power
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Progressive_social_policy"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Introduce_the_zakat
+		icon = GFX_z_goal_generic_collective_ownership
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Carry_out_religious_renewal }
+		relative_position_id = MOR_Carry_out_religious_renewal
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Introduce_the_zakat"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Oath_of_the_tribes
+		icon = GFX_z_goal_generic_national_solidarity
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Sole_rule_of_Muhammad_V }
+		relative_position_id = MOR_Sole_rule_of_Muhammad_V
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Oath_of_the_tribes"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Moroccan_communist_youth_party
+		icon = GFX_focus_generic_support_the_left_right
+		x = 0
+		y = 2
+		cost = 10
+		prerequisite = { focus = MOR_Communist_associations }
+		relative_position_id = MOR_Communist_associations
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Moroccan_communist_youth_party"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Collectivization
+		icon = GFX_focus_generic_farmland
+		x = 1
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Increase_loans_to_the_fellahin }
+		prerequisite = { focus = MOR_Open_schools_for_the_fellahin }
+		relative_position_id = MOR_Increase_loans_to_the_fellahin
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Collectivization"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Establish_social_security
+		icon = GFX_focus_generic_low_cost_housing
+		x = 0
+		y = 2
+		cost = 10
+		prerequisite = { focus = MOR_Literacy_programs }
+		prerequisite = { focus = MOR_Active_support_of_the_unions }
+		relative_position_id = MOR_Literacy_programs
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: Марокко независимо
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Establish_social_security"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Set_minimum_wages_in_factories
+		icon = GFX_focus_generic_price_controls
+		x = 0
+		y = 2
+		cost = 10
+		prerequisite = { focus = MOR_Active_support_of_the_unions }
+		relative_position_id = MOR_Active_support_of_the_unions
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Set_minimum_wages_in_factories"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Womens_Union_of_Morocco
+		icon = GFX_focus_generic_workers_and_farmers_rise
+		x = 1
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Legalize_the_antifascist_committee }
+		prerequisite = { focus = MOR_End_the_gross_exploitation_of_women }
+		relative_position_id = MOR_End_the_gross_exploitation_of_women
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Womens_Union_of_Morocco"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Strike_spanish_Morocco
+		icon = GFX_goal_generic_major_war
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Support_the_popular_front_alliance }
+		relative_position_id = MOR_Support_the_popular_front_alliance
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: Нац Испания владеет стейтами: 290, 1066, 1015, 699 Пропуск: ГВ в Испании закончена
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Strike_spanish_Morocco"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Support_in_Europe
+		icon = GFX_focus_generic_military_mission
+		x = 2
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Support_the_popular_front_alliance }
+		relative_position_id = MOR_Support_the_popular_front_alliance
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: Вы субъект коммунистической франции, Ком франция в состоянии гражданской войны. Пропуск: ГВ с монархистами во Франции окончена.
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Support_in_Europe"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Evacuation_military_hospitals
+		icon = GFX_focus_generic_field_hostpital
+		x = 1
+		y = 2
+		cost = 10
+		prerequisite = { focus = MOR_Support_from_the_United_States }
+		relative_position_id = MOR_Support_from_the_United_States
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Evacuation_military_hospitals"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Declare_claims_on_part_of_Algeria
+		icon = GFX_goal_demand_sudetenland
+		x = -1
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Declare_claims_on_Mauritania }
+		relative_position_id = MOR_Declare_claims_on_Mauritania
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Declare_claims_on_part_of_Algeria"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Declare_the_greater_jihad
+		icon = GFX_z_goal_generic_fire_of_war
+		x = 0
+		y = 2
+		cost = 10
+		prerequisite = { focus = MOR_Begin_the_fight_for_our_freedom }
+		relative_position_id = MOR_Begin_the_fight_for_our_freedom
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: Марокко свободно
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Declare_the_greater_jihad"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Limit_the_power_of_the_monarch
+		icon = GFX_focus_generic_universal_suffrage
+		x = 0
+		y = 2
+		cost = 10
+		prerequisite = { focus = MOR_Modernization_on_the_western_model }
+		relative_position_id = MOR_Modernization_on_the_western_model
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Limit_the_power_of_the_monarch"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Penitentiary_reform
+		icon = GFX_focus_generic_sympathetic_judges
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Progressive_social_policy }
+		relative_position_id = MOR_Progressive_social_policy
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Penitentiary_reform"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Expand_religious_movements
+		icon = GFX_focus_generic_pope
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Introduce_the_zakat }
+		relative_position_id = MOR_Introduce_the_zakat
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Expand_religious_movements"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Give_refuge_and_protection_to_the_jews
+		icon = GFX_focus_generic_world_peace
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Oath_of_the_tribes }
+		relative_position_id = MOR_Oath_of_the_tribes
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Give_refuge_and_protection_to_the_jews"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Full_nationalization_of_french_property
+		icon = GFX_focus_generic_crush_capitalism
+		x = 0
+		y = 4
+		cost = 10
+		prerequisite = { focus = MOR_Purge_the_french_from_the_party }
+		relative_position_id = MOR_Purge_the_french_from_the_party
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Full_nationalization_of_french_property"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Raising_the_living_standard
+		icon = GFX_goal_generic_consumer_goods
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Collectivization }
+		prerequisite = { focus = MOR_Establish_social_security }
+		prerequisite = { focus = MOR_Set_minimum_wages_in_factories }
+		relative_position_id = MOR_Establish_social_security
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: ВСЕ (т.е. одно из двух открываемых фокусами) решения по балансу сил были прожаты
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Raising_the_living_standard"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Negotiations_for_independence
+		icon = GFX_focus_generic_treaty
+		x = 1
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Strike_spanish_Morocco }
+		prerequisite = { focus = MOR_Support_in_Europe }
+		relative_position_id = MOR_Strike_spanish_Morocco
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: Вы субъект коммунистической франции, ГВ во Франции закончилось, Франция коммунистическая. Пропуск: Вы независимы.
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Negotiations_for_independence"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Support_anticolonial_positions_in_the_arab_world
+		icon = GFX_z_goal_generic_general_support
+		x = -1
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Declare_the_greater_jihad }
+		relative_position_id = MOR_Declare_the_greater_jihad
+		mutually_exclusive = { focus = MOR_Pan_arab_ambitions_of_Muhammad_V }
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: Марокко свободно, выполнен фокус «Патриотичное движение Уаззани»
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Support_anticolonial_positions_in_the_arab_world"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Pan_arab_ambitions_of_Muhammad_V
+		icon = GFX_z_goal_generic_expansionism
+		x = 1
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Declare_the_greater_jihad }
+		relative_position_id = MOR_Declare_the_greater_jihad
+		mutually_exclusive = { focus = MOR_Support_anticolonial_positions_in_the_arab_world }
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: Марокко свободно, выполнен фокус «Национальная партия Фасси» ИЛИ «Единоличная власть Мухаммеда V»
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Pan_arab_ambitions_of_Muhammad_V"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Expand_student_movements
+		icon = GFX_z_goal_generic_student_organizations
+		x = 1
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Limit_the_power_of_the_monarch }
+		relative_position_id = MOR_Limit_the_power_of_the_monarch
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Expand_student_movements"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Land_reform
+		icon = GFX_focus_generic_land_redistribution
+		x = 1
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Penitentiary_reform }
+		relative_position_id = MOR_Penitentiary_reform
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Land_reform"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Join_the_Comintern
+		icon = GFX_focus_generic_communism_anti_fascism
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Full_nationalization_of_french_property }
+		relative_position_id = MOR_Full_nationalization_of_french_property
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: СССР существует, коммунистическое, не в состоянии ГВ.
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Join_the_Comintern"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Active_support_of_internationalism
+		icon = GFX_goal_support_communism
+		x = 5
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Full_nationalization_of_french_property }
+		prerequisite = { focus = MOR_Negotiations_for_independence }
+		relative_position_id = MOR_Full_nationalization_of_french_property
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: выполнен фокус «Легализовать Антифашистский комитет»
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Active_support_of_internationalism"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Annext_Tangier
+		icon = GFX_focus_generic_annex_country
+		x = -3
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Full_nationalization_of_french_property }
+		prerequisite = { focus = MOR_Negotiations_for_independence }
+		relative_position_id = MOR_Negotiations_for_independence
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: Ваши границы граничат с Танжером
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Annext_Tangier"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Remain_an_ally_of_France
+		icon = GFX_goal_generic_alliance
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Negotiations_for_independence }
+		relative_position_id = MOR_Negotiations_for_independence
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Remain_an_ally_of_France"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Drive_the_colonizers_from_the_Libyan_plateau
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x = -2
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Support_anticolonial_positions_in_the_arab_world }
+		relative_position_id = MOR_Support_anticolonial_positions_in_the_arab_world
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: Марокко свободно, поддержка войны больше 50%
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Drive_the_colonizers_from_the_Libyan_plateau"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Remove_the_shackles_from_the_Berbers
+		icon = GFX_focus_generic_swooping_falcon
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Support_anticolonial_positions_in_the_arab_world }
+		relative_position_id = MOR_Support_anticolonial_positions_in_the_arab_world
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: Марокко свободно, поддержка войны больше 50%
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Remove_the_shackles_from_the_Berbers"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Extend_our_rule_over_the_Maghreb
+		icon = GFX_goal_generic_military_sphere
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Pan_arab_ambitions_of_Muhammad_V }
+		relative_position_id = MOR_Pan_arab_ambitions_of_Muhammad_V
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: Марокко свободно
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Extend_our_rule_over_the_Maghreb"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Campaign_on_the_Libyan_plateau
+		icon = GFX_focus_generic_desert_training
+		x = 2
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Pan_arab_ambitions_of_Muhammad_V }
+		relative_position_id = MOR_Pan_arab_ambitions_of_Muhammad_V
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: Марокко свободно, граничит с нац стейтами Ливии.
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Campaign_on_the_Libyan_plateau"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Attract_spanish_refugees
+		icon = GFX_focus_generic_invite_republican_spanish_exiles
+		x = -2
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Active_support_of_internationalism }
+		relative_position_id = MOR_Active_support_of_internationalism
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: Испания не в ГВ, Испания не тро, комм или анархистская
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Attract_spanish_refugees"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Support_for_national_minorities
+		icon = GFX_focus_generic_concessions
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Active_support_of_internationalism }
+		relative_position_id = MOR_Active_support_of_internationalism
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Support_for_national_minorities"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Uphold_universal_human_rights
+		icon = GFX_z_goal_generic_popular_democracy
+		x = 2
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Active_support_of_internationalism }
+		relative_position_id = MOR_Active_support_of_internationalism
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Uphold_universal_human_rights"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Liberate_the_Arabian_peninsula
+		icon = GFX_focus_generic_asia_liberation
+		x = -1
+		y = 2
+		cost = 10
+		prerequisite = { focus = MOR_Support_anticolonial_positions_in_the_arab_world }
+		relative_position_id = MOR_Support_anticolonial_positions_in_the_arab_world
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: Марокко свободно, поддержка войны больше 50%
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Liberate_the_Arabian_peninsula"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Restore_the_holy_shrines_of_Arabia
+		icon = GFX_goal_continuous_boost_freedom
+		x = 1
+		y = 2
+		cost = 10
+		prerequisite = { focus = MOR_Pan_arab_ambitions_of_Muhammad_V }
+		relative_position_id = MOR_Pan_arab_ambitions_of_Muhammad_V
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: Марокко свободно, граничит с нац стейтами Палестины ИЛИ Израиля ИЛИ Саудов.
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Restore_the_holy_shrines_of_Arabia"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Promote_Arab_Muslim_Moroccan_national_identity
+		icon = GFX_focus_generic_radio_communication
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Support_for_national_minorities }
+		relative_position_id = MOR_Support_for_national_minorities
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Promote_Arab_Muslim_Moroccan_national_identity"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_No_mandates_in_the_Syrian_region
+		icon = GFX_focus_generic_league_of_nations
+		x = 1
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Drive_the_colonizers_from_the_Libyan_plateau }
+		prerequisite = { focus = MOR_Remove_the_shackles_from_the_Berbers }
+		prerequisite = { focus = MOR_Liberate_the_Arabian_peninsula }
+		relative_position_id = MOR_Liberate_the_Arabian_peninsula
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: Марокко свободно, поддержка войны больше 50%
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_No_mandates_in_the_Syrian_region"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Capture_distant_lands
+		icon = GFX_goal_generic_amphibious_assault
+		x = -1
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Extend_our_rule_over_the_Maghreb }
+		prerequisite = { focus = MOR_Campaign_on_the_Libyan_plateau }
+		prerequisite = { focus = MOR_Restore_the_holy_shrines_of_Arabia }
+		relative_position_id = MOR_Restore_the_holy_shrines_of_Arabia
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: Марокко свободно, граничит с нац стейтами Сирии.
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Capture_distant_lands"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Offer_unification_to_Israel
+		icon = GFX_goal_generic_improve_relations
+		x = -1
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Promote_Arab_Muslim_Moroccan_national_identity }
+		relative_position_id = MOR_Promote_Arab_Muslim_Moroccan_national_identity
+		mutually_exclusive = { focus = MOR_Liberate_the_holy_land }
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: Британская Палестина вышла в уступки Евреям или Арабам
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Offer_unification_to_Israel"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Liberate_the_holy_land
+		icon = GFX_focus_generic_the_suez
+		x = 1
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Promote_Arab_Muslim_Moroccan_national_identity }
+		relative_position_id = MOR_Promote_Arab_Muslim_Moroccan_national_identity
+		mutually_exclusive = { focus = MOR_Offer_unification_to_Israel }
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: Британская Палестина не вышла в уступки ИЛИ не существует она, И Израиль, И Палестина
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Liberate_the_holy_land"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Father_of_all_Arabs
+		icon = GFX_z_goal_generic_king_power
+		x = 5
+		y = 14
+		cost = 10
+		prerequisite = { 
+			focus = MOR_No_mandates_in_the_Syrian_region
+			focus = MOR_Capture_distant_lands
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: Марокко свободно
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Father_of_all_Arabs"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Embrace_the_Ahuvat_Amim_concept
+		icon = GFX_goal_generic_positive_trade_relations
+		x = -1
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Offer_unification_to_Israel }
+		prerequisite = { focus = MOR_Liberate_the_holy_land }
+		relative_position_id = MOR_Offer_unification_to_Israel
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Embrace_the_Ahuvat_Amim_concept"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_The_perfect_Morocco
+		icon = GFX_focus_generic_happy_cheer
+		x = 1
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Offer_unification_to_Israel }
+		prerequisite = { focus = MOR_Liberate_the_holy_land }
+		relative_position_id = MOR_Offer_unification_to_Israel
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_The_perfect_Morocco"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Ties_with_world_zionist_movements
+		icon = GFX_goal_generic_dangerous_deal
+		x = 1
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Offer_unification_to_Israel }
+		prerequisite = { focus = MOR_Liberate_the_holy_land }
+		relative_position_id = MOR_Liberate_the_holy_land
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: Израильские нац стейты принадлежат Марокко Стоимость: 50 политической власти, Время выполнения: 120 дней. Эффекты: на каждом нац стейте израиля стейте появится +1 свободная ячейка для строительства. 3. Принять еврейских беженцев. (Правые движения во всю гонят евреев их своих стран, и мы можем стать теми, кто примет их у себя с распростёртыми объятьями.) Стоимость: 25 политической власти, на время выполнения будет использоваться 5 фабрик Время выполнения: 90 дней. Эффекты: с момента прожатия на 90 дней даётся НД «Приём беженцев еврейского происхождения»: +50% прирост населения. 4. Выдать гражданство членам еврейских интербригад. (Еврейское сообщество будучи распространённое по всей земле, принимало участие во многих конфликтах. С помощью сионистских организаций мы можем найти и привлечь этих ветеранов на свою сторону) Одноразовое. Стоимость: 100 полит власти Время выполнения: 45 дней. Эффекты: Будет получено 50 армейского опыта, +5000 военнообязанного населения.
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Ties_with_world_zionist_movements"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Devalue_the_Moroccan_franc
+		icon = GFX_focus_generic_devaluation
+		x = 3
+		y = 16
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Devalue_the_Moroccan_franc"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Modernization_of_the_camps_in_Fes
+		icon = GFX_z_goal_generic_organization_of_the_troops
+		x = 13
+		y = 16
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: вы владеете провкой 7069, Генерал-резидент контролирует армию
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Modernization_of_the_camps_in_Fes"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Build_the_Kasba_Tadla_dam
+		icon = GFX_focus_generic_hydroelectric_energy
+		x = -2
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Devalue_the_Moroccan_franc }
+		relative_position_id = MOR_Devalue_the_Moroccan_franc
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Build_the_Kasba_Tadla_dam"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Construction_of_the_southern_railway
+		icon = GFX_focus_generic_reinforcing_the_supply_network
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Devalue_the_Moroccan_franc }
+		relative_position_id = MOR_Devalue_the_Moroccan_franc
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Construction_of_the_southern_railway"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Launch_the_public_works_service_program
+		icon = GFX_focus_generic_public_works
+		x = 2
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Devalue_the_Moroccan_franc }
+		relative_position_id = MOR_Devalue_the_Moroccan_franc
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Launch_the_public_works_service_program"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Continue_relying_on_tribal_troops
+		icon = GFX_goal_generic_cavalry
+		x = -2
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Modernization_of_the_camps_in_Fes }
+		relative_position_id = MOR_Modernization_of_the_camps_in_Fes
+		mutually_exclusive = { focus = MOR_Abandon_irregular_formations }
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Continue_relying_on_tribal_troops"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Abandon_irregular_formations
+		icon = GFX_goal_generic_special_forces
+		x = 2
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Modernization_of_the_camps_in_Fes }
+		relative_position_id = MOR_Modernization_of_the_camps_in_Fes
+		mutually_exclusive = { focus = MOR_Continue_relying_on_tribal_troops }
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: Султан контролирует армию ИЛИ во главе правительства коммунизм
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Abandon_irregular_formations"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Strip_Tangier_of_its_international_status
+		icon = GFX_goal_generic_neutrality_focus
+		x = 20
+		y = 17
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: Стейт 1042 в вашем владении.
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Strip_Tangier_of_its_international_status"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Mauritania_a_southern_province_of_Morocco
+		icon = GFX_focus_generic_subjugation
+		x = 24
+		y = 17
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: Стейты 1068, 1017, 557 в вашем владении.
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Mauritania_a_southern_province_of_Morocco"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Deprive_the_Caliph_of_power
+		icon = GFX_goal_tfv_burn_the_royal_portraits
+		x = 28
+		y = 17
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: стейты 1015, 699, 290 и 1066 в вашем владении.
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Deprive_the_Caliph_of_power"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Franco_Berber_schools
+		icon = GFX_focus_generic_university_2
+		x = -1
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Build_the_Kasba_Tadla_dam }
+		relative_position_id = MOR_Build_the_Kasba_Tadla_dam
+		mutually_exclusive = { focus = MOR_Support_the_free_schools_project }
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Franco_Berber_schools"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Support_the_free_schools_project
+		icon = GFX_focus_generic_education
+		x = 1
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Build_the_Kasba_Tadla_dam }
+		relative_position_id = MOR_Build_the_Kasba_Tadla_dam
+		mutually_exclusive = { focus = MOR_Franco_Berber_schools }
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Support_the_free_schools_project"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Development_of_the_canning_industry
+		icon = GFX_focus_generic_agricultural_subsidies
+		x = 1
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Construction_of_the_southern_railway }
+		prerequisite = { focus = MOR_Launch_the_public_works_service_program }
+		relative_position_id = MOR_Construction_of_the_southern_railway
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Development_of_the_canning_industry"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Modernization_of_the_phosphate_conveyors
+		icon = GFX_focus_generic_resource_extraction
+		x = 1
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Launch_the_public_works_service_program }
+		relative_position_id = MOR_Launch_the_public_works_service_program
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: вы владеете провкой 7069, Генерал-резидент контролирует армию
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Modernization_of_the_phosphate_conveyors"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Reforming_the_Moroccan_Rifles
+		icon = GFX_goal_generic_allies_build_infantry
+		x = -3
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Continue_relying_on_tribal_troops }
+		relative_position_id = MOR_Continue_relying_on_tribal_troops
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Reforming_the_Moroccan_Rifles"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Create_the_goum_auxiliary_institute
+		icon = GFX_focus_generic_mountain_troops
+		x = -1
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Continue_relying_on_tribal_troops }
+		relative_position_id = MOR_Continue_relying_on_tribal_troops
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Create_the_goum_auxiliary_institute"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Deployment_of_the_1st_and_3rd_Moroccan_divisions
+		icon = GFX_z_goal_generic_armed_forces
+		x = 1
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = MOR_Continue_relying_on_tribal_troops
+			focus = MOR_Abandon_irregular_formations
+		}
+		relative_position_id = MOR_Continue_relying_on_tribal_troops
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: Марокко субъект Франции, Генерал-резидент контролирует армию
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Deployment_of_the_1st_and_3rd_Moroccan_divisions"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Longer_term_of_service
+		icon = GFX_focus_generic_soldier_salute
+		x = -1
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = MOR_Continue_relying_on_tribal_troops
+			focus = MOR_Abandon_irregular_formations
+		}
+		relative_position_id = MOR_Abandon_irregular_formations
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Longer_term_of_service"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Recruit_elite_soldiers_into_the_guard
+		icon = GFX_focus_generic_fascist_troops
+		x = 1
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Abandon_irregular_formations }
+		relative_position_id = MOR_Abandon_irregular_formations
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: НД «Реформа армии» отсутствует Султан контролирует армию ИЛИ во главе правительства коммунизм
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Recruit_elite_soldiers_into_the_guard"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Regular_troops_from_tribal_soldiers
+		icon = GFX_z_goal_generic_commonwealth_build_infantry_up
+		x = 2
+		y = 2
+		cost = 10
+		prerequisite = { focus = MOR_Abandon_irregular_formations }
+		relative_position_id = MOR_Abandon_irregular_formations
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: НД «Реформа армии» отсутствует, Султан контролирует армию ИЛИ во главе правительства коммунизм
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Regular_troops_from_tribal_soldiers"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Free_port_of_Tangier
+		icon = GFX_goal_generic_trade
+		x = -1
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Strip_Tangier_of_its_international_status }
+		relative_position_id = MOR_Strip_Tangier_of_its_international_status
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: Стейт 1042 в вашем владении.
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Free_port_of_Tangier"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Tangier_capital_of_espionage
+		icon = GFX_focus_generic_secret_service_agency
+		x = 1
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Strip_Tangier_of_its_international_status }
+		relative_position_id = MOR_Strip_Tangier_of_its_international_status
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: Стейт 1042 в вашем владении.
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Tangier_capital_of_espionage"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Trans_saharan_railway_Fes_Nouakchott
+		icon = GFX_focus_generic_improve_roads
+		x = -1
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Mauritania_a_southern_province_of_Morocco }
+		relative_position_id = MOR_Mauritania_a_southern_province_of_Morocco
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: Стейты 1068, 1017, 557 в вашем владении.
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Trans_saharan_railway_Fes_Nouakchott"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Mauritanian_acacia_and_gum_arabic
+		icon = GFX_focus_generic_sheep
+		x = 1
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Mauritania_a_southern_province_of_Morocco }
+		relative_position_id = MOR_Mauritania_a_southern_province_of_Morocco
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: Стейты 1068, 1017, 557 в вашем владении.
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Mauritanian_acacia_and_gum_arabic"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Recruit_spanish_regulares_into_the_army
+		icon = GFX_goal_generic_axis_build_infantry
+		x = -1
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Deprive_the_Caliph_of_power }
+		relative_position_id = MOR_Deprive_the_Caliph_of_power
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: стейты 1015, 699, 290 и 1066 в вашем владении.
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Recruit_spanish_regulares_into_the_army"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Subdue_the_Riff_tribes
+		icon = GFX_goal_continuous_restrict_freedom
+		x = 1
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Deprive_the_Caliph_of_power }
+		relative_position_id = MOR_Deprive_the_Caliph_of_power
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: стейт 290 в вашем владении.
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Subdue_the_Riff_tribes"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Create_colleges_for_women
+		icon = GFX_goal_continuous_research
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = MOR_Franco_Berber_schools
+			focus = MOR_Support_the_free_schools_project
+		}
+		relative_position_id = MOR_Franco_Berber_schools
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Create_colleges_for_women"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_French_endowments_for_the_fellahin
+		icon = GFX_focus_generic_american_investments
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = MOR_Franco_Berber_schools
+			focus = MOR_Support_the_free_schools_project
+		}
+		relative_position_id = MOR_Support_the_free_schools_project
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_French_endowments_for_the_fellahin"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Start_the_El_Kansera_hydro_plant
+		icon = GFX_focus_generic_electrification
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = MOR_Development_of_the_canning_industry
+			focus = MOR_Modernization_of_the_phosphate_conveyors
+		}
+		relative_position_id = MOR_Development_of_the_canning_industry
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Start_the_El_Kansera_hydro_plant"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Shift_mining_to_war_production
+		icon = GFX_focus_generic_mining_industry
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Modernization_of_the_phosphate_conveyors }
+		relative_position_id = MOR_Modernization_of_the_phosphate_conveyors
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: страна находится в состоянии войны
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Shift_mining_to_war_production"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Mobilize_the_plain_tribes
+		icon = GFX_focus_generic_limited_social_mobilization
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Reforming_the_Moroccan_Rifles }
+		relative_position_id = MOR_Reforming_the_Moroccan_Rifles
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: Марокко в состоянии войны
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Mobilize_the_plain_tribes"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Mobilization_of_the_goums
+		icon = GFX_focus_generic_full_social_mobilization
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Create_the_goum_auxiliary_institute }
+		relative_position_id = MOR_Create_the_goum_auxiliary_institute
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: Марокко в состоянии войны
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Mobilization_of_the_goums"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Integration_of_the_foreign_legion_in_Fes
+		icon = GFX_goal_generic_position_armies
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Deployment_of_the_1st_and_3rd_Moroccan_divisions }
+		relative_position_id = MOR_Deployment_of_the_1st_and_3rd_Moroccan_divisions
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: Марокко субъект Франции, Генерал-резидент контролирует армию
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Integration_of_the_foreign_legion_in_Fes"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Defense_plan_for_Moroccan_Sahara
+		icon = GFX_goal_fortify_the_westwall
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Longer_term_of_service }
+		relative_position_id = MOR_Longer_term_of_service
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Defense_plan_for_Moroccan_Sahara"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Lessons_of_the_Atlas_mountains
+		icon = GFX_focus_generic_mountain_training
+		x = 0
+		y = 2
+		cost = 10
+		prerequisite = { focus = MOR_Regular_troops_from_tribal_soldiers }
+		relative_position_id = MOR_Regular_troops_from_tribal_soldiers
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: Султан контролирует армию ИЛИ во главе правительства коммунизм
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Lessons_of_the_Atlas_mountains"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Tangier_shipyard
+		icon = GFX_goal_continuous_naval_production
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Free_port_of_Tangier }
+		relative_position_id = MOR_Free_port_of_Tangier
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: Стейт 1042 в вашем владении.
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Tangier_shipyard"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Tangier_offshore_and_smuggling
+		icon = GFX_focus_generic_smugglers
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Free_port_of_Tangier }
+		prerequisite = { focus = MOR_Tangier_capital_of_espionage }
+		relative_position_id = MOR_Tangier_capital_of_espionage
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: Стейт 1042 в вашем владении.
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Tangier_offshore_and_smuggling"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Integrate_nationalists_of_the_spanish_protectorate
+		icon = GFX_focus_generic_the_council_of_europe
+		x = -1
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = MOR_Recruit_spanish_regulares_into_the_army
+			focus = MOR_Subdue_the_Riff_tribes
+		}
+		relative_position_id = MOR_Recruit_spanish_regulares_into_the_army
+		mutually_exclusive = { focus = MOR_Repress_members_of_the_Moroccan_Unity_Party }
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: Правящая партия НЕ коммунизм, стейты 1015, 699, 290 и 1066 в вашем владении.
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Integrate_nationalists_of_the_spanish_protectorate"
+			# Враждебность Торреса к Испанией и Францией (дизайн-док, Шаг 4):
+			# трейты стран отношений не дают, поэтому модификаторы вешаются эффектом.
+			if = {
+				limit = { has_government = fascism }
+				add_opinion_modifier = { target = SPR modifier = mor_torres_hostile_to_spain }
+				add_opinion_modifier = { target = FRA modifier = mor_torres_hostile_to_france }
+			}
+			# TODO: остальные эффекты из дизайн-дока
+		}
+	}
+
+	focus = {
+		id = MOR_Repress_members_of_the_Moroccan_Unity_Party
+		icon = GFX_focus_generic_strike_at_democracy1
+		x = -1
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = MOR_Recruit_spanish_regulares_into_the_army
+			focus = MOR_Subdue_the_Riff_tribes
+		}
+		relative_position_id = MOR_Subdue_the_Riff_tribes
+		mutually_exclusive = { focus = MOR_Integrate_nationalists_of_the_spanish_protectorate }
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: стейты 1015, 699, 290 и 1066 в вашем владении.
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Repress_members_of_the_Moroccan_Unity_Party"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Restart_the_Riff_iron_mines
+		icon = GFX_goal_generic_production2
+		x = 1
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Subdue_the_Riff_tribes }
+		relative_position_id = MOR_Subdue_the_Riff_tribes
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: стейт 290 в вашем владении.
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Restart_the_Riff_iron_mines"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Rural_modernization_sectors
+		icon = GFX_focus_generic_modernizing_agriculture
+		x = -2
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_French_endowments_for_the_fellahin }
+		relative_position_id = MOR_French_endowments_for_the_fellahin
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Rural_modernization_sectors"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Sanitary_reforms
+		icon = GFX_focus_generic_bad_medical
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_French_endowments_for_the_fellahin }
+		relative_position_id = MOR_French_endowments_for_the_fellahin
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Sanitary_reforms"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Create_the_State_Bank_of_Morocco
+		icon = GFX_focus_generic_fiat
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = MOR_Start_the_El_Kansera_hydro_plant 
+			focus = MOR_Shift_mining_to_war_production
+		}
+		relative_position_id = MOR_Start_the_El_Kansera_hydro_plant
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: выполнен фокус «Объявить Большой Джихад»
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Create_the_State_Bank_of_Morocco"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Open_war_plants_in_Meknes_and_Rabat
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Start_the_El_Kansera_hydro_plant }
+		prerequisite = { focus = MOR_Shift_mining_to_war_production }
+		relative_position_id = MOR_Shift_mining_to_war_production
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Open_war_plants_in_Meknes_and_Rabat"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Tighten_control_over_the_tribes
+		icon = GFX_goal_generic_occupy_start_war
+		x = 1
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Mobilize_the_plain_tribes }
+		prerequisite = { focus = MOR_Mobilization_of_the_goums }
+		relative_position_id = MOR_Mobilize_the_plain_tribes
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: Марокко в состоянии войны
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Tighten_control_over_the_tribes"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Train_local_officers_the_french_way
+		icon = GFX_focus_generic_military_academy
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Integration_of_the_foreign_legion_in_Fes }
+		relative_position_id = MOR_Integration_of_the_foreign_legion_in_Fes
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: Марокко субъект Франции, фокус «Поставить марроканцев на часть генеральских должностей» выполнен.
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Train_local_officers_the_french_way"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Fortify_the_Taza_pass
+		icon = GFX_focus_generic_mountain_fortification
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Defense_plan_for_Moroccan_Sahara }
+		relative_position_id = MOR_Defense_plan_for_Moroccan_Sahara
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Fortify_the_Taza_pass"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Appoint_moroccans_as_generals
+		icon = GFX_focus_generic_advanced_military_studies
+		x = 0
+		y = 2
+		cost = 10
+		prerequisite = { focus = MOR_Recruit_elite_soldiers_into_the_guard }
+		relative_position_id = MOR_Recruit_elite_soldiers_into_the_guard
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: Султан контролирует армию ИЛИ во главе правительства коммунизм Авто выполнение: Марокко независимо
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Appoint_moroccans_as_generals"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Proclaim_Greater_Morocco
+		icon = GFX_z_goal_generic_eagle
+		x = 2
+		y = 3
+		cost = 10
+		prerequisite = { focus = MOR_Strip_Tangier_of_its_international_status }
+		prerequisite = { focus = MOR_Mauritania_a_southern_province_of_Morocco }
+		prerequisite = { focus = MOR_Deprive_the_Caliph_of_power }
+		relative_position_id = MOR_Strip_Tangier_of_its_international_status
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: Марокко полностью независимо. Стейты 1042, 1015, 699, 290, 1068, 1017, 557, 1067, 513 в вашем владении.
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Proclaim_Greater_Morocco"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Secure_support_of_the_mufti_of_Jerusalem
+		icon = GFX_z_goal_generic_priesthood
+		x = -2
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Integrate_nationalists_of_the_spanish_protectorate }
+		relative_position_id = MOR_Integrate_nationalists_of_the_spanish_protectorate
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: Абдельхалек Торрес – министр.
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Secure_support_of_the_mufti_of_Jerusalem"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Utilize_the_Fityan_movement
+		icon = GFX_goal_continuous_def_against_influence
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Integrate_nationalists_of_the_spanish_protectorate }
+		relative_position_id = MOR_Integrate_nationalists_of_the_spanish_protectorate
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: Абдельхалек Торрес – министр.
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Utilize_the_Fityan_movement"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Break_the_National_Reform_Party
+		icon = GFX_focus_generic_strike_at_democracy2
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Repress_members_of_the_Moroccan_Unity_Party }
+		relative_position_id = MOR_Repress_members_of_the_Moroccan_Unity_Party
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: стейты 1015, 699, 290 и 1066 в вашем владении.
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Break_the_National_Reform_Party"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Develop_the_industry_of_the_north
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Restart_the_Riff_iron_mines }
+		relative_position_id = MOR_Restart_the_Riff_iron_mines
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: стейт 290 в вашем владении.
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Develop_the_industry_of_the_north"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Boost_heavy_industry
+		icon = GFX_goal_generic_production
+		x = -3
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Create_the_State_Bank_of_Morocco }
+		relative_position_id = MOR_Create_the_State_Bank_of_Morocco
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Boost_heavy_industry"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Compulsory_primary_education
+		icon = GFX_goal_tfv_generic_tech_sharing
+		x = -1
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = MOR_Franco_Berber_schools
+			focus = MOR_Support_the_free_schools_project
+		}
+		prerequisite = { focus = MOR_Create_the_State_Bank_of_Morocco }
+		relative_position_id = MOR_Create_the_State_Bank_of_Morocco
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Compulsory_primary_education"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Unified_curriculum_and_evening_schools
+		icon = GFX_goal_generic_scientific_exchange
+		x = 1
+		y = 1
+		cost = 10
+		prerequisite = {
+			focus = MOR_Franco_Berber_schools
+			focus = MOR_Support_the_free_schools_project
+		}
+		prerequisite = { focus = MOR_Create_the_State_Bank_of_Morocco }
+		relative_position_id = MOR_Create_the_State_Bank_of_Morocco
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Unified_curriculum_and_evening_schools"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Moroccan_spahis
+		icon = GFX_goal_generic_army_motorized
+		x = 0
+		y = 2
+		cost = 10
+		prerequisite = { focus = MOR_Mobilize_the_plain_tribes }
+		relative_position_id = MOR_Mobilize_the_plain_tribes
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Moroccan_spahis"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Arsenal_in_Casablanca
+		icon = GFX_z_goal_generic_arsenal
+		x = 2
+		y = 4
+		cost = 10
+		prerequisite = {
+			focus = MOR_Continue_relying_on_tribal_troops
+			focus = MOR_Abandon_irregular_formations
+		}
+		relative_position_id = MOR_Continue_relying_on_tribal_troops
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Arsenal_in_Casablanca"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Secure_support_of_the_kings
+		icon = GFX_z_goal_generic_king_army
+		x = -1
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Secure_support_of_the_mufti_of_Jerusalem }
+		relative_position_id = MOR_Secure_support_of_the_mufti_of_Jerusalem
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: Абдельхалек Торрес – министр.
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Secure_support_of_the_kings"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Secure_support_of_the_Andalusian_nobility
+		icon = GFX_z_goal_generic_king_goverment
+		x = -1
+		y = 2
+		cost = 10
+		prerequisite = { focus = MOR_Integrate_nationalists_of_the_spanish_protectorate }
+		relative_position_id = MOR_Integrate_nationalists_of_the_spanish_protectorate
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: стейты 1015, 699, 290 и 1066 в вашем владении, Абдельхалек Торрес – министр.
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Secure_support_of_the_Andalusian_nobility"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Return_to_active_tangerine_trade
+		icon = GFX_focus_generic_coffee
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Develop_the_industry_of_the_north }
+		relative_position_id = MOR_Develop_the_industry_of_the_north
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: стейты 1015, 699, 290 и 1066 в вашем владении.
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Return_to_active_tangerine_trade"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Begin_the_path_of_industrialization
+		icon = GFX_focus_generic_industry_1
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Boost_heavy_industry }
+		relative_position_id = MOR_Boost_heavy_industry
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Begin_the_path_of_industrialization"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Integrate_french_institutions_into_education
+		icon = GFX_z_goal_generic_technology_sharing_tmo
+		x = 1
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Compulsory_primary_education }
+		prerequisite = { focus = MOR_Unified_curriculum_and_evening_schools }
+		relative_position_id = MOR_Compulsory_primary_education
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: Правящая партия НЕ коммунизм, стейты 1015, 699, 290 и 1066 в вашем владении.
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Integrate_french_institutions_into_education"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Introduce_the_Moroccan_dirham
+		icon = GFX_focus_generic_monetary_union
+		x = 2
+		y = 2
+		cost = 10
+		prerequisite = { focus = MOR_Create_the_State_Bank_of_Morocco }
+		relative_position_id = MOR_Create_the_State_Bank_of_Morocco
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Introduce_the_Moroccan_dirham"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Build_our_own_defense_industry
+		icon = GFX_focus_generic_military_industry
+		x = -1
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Arsenal_in_Casablanca }
+		relative_position_id = MOR_Arsenal_in_Casablanca
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Build_our_own_defense_industry"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Create_a_new_general_staff
+		icon = GFX_focus_generic_commission
+		x = 1
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Appoint_moroccans_as_generals }
+		prerequisite = { focus = MOR_Arsenal_in_Casablanca }
+		relative_position_id = MOR_Arsenal_in_Casablanca
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: Марокко независимо
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Create_a_new_general_staff"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Reform_of_al_Qarawiyyin
+		icon = GFX_focus_generic_university_3
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Integrate_french_institutions_into_education }
+		relative_position_id = MOR_Integrate_french_institutions_into_education
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: более 50 фабрик
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Reform_of_al_Qarawiyyin"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Open_the_country_to_foreign_banks
+		icon = GFX_z_goal_generic_increased_intervention_in_economy
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Introduce_the_Moroccan_dirham }
+		relative_position_id = MOR_Introduce_the_Moroccan_dirham
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: Не коммунизм
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Open_the_country_to_foreign_banks"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Organize_the_air_force_of_Morocco
+		icon = GFX_goal_generic_build_airforce
+		x = -1
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Create_a_new_general_staff }
+		relative_position_id = MOR_Create_a_new_general_staff
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: Марокко независимо
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Organize_the_air_force_of_Morocco"
+			# TODO: effects from the design doc
+		}
+	}
+
+	focus = {
+		id = MOR_Found_the_navy_of_Morocco
+		icon = GFX_goal_generic_build_navy
+		x = 1
+		y = 1
+		cost = 10
+		prerequisite = { focus = MOR_Create_a_new_general_staff }
+		relative_position_id = MOR_Create_a_new_general_staff
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		# doc requirements: Марокко независимо
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): Focus MOR_Found_the_navy_of_Morocco"
+			# TODO: effects from the design doc
+		}
+	}
+}

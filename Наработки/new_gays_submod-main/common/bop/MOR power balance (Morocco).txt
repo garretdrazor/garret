@@ -1,0 +1,139 @@
+# ============================================================
+#  БАЛАНС СИЛ МАРОККО — дизайн-док [MOR], Шаг 7
+#  «Противостояние Мухаммеда V и Французского правления».
+#  После установления протектората власть оказалась разделена между султаном
+#  и генеральным резидентом: ни один из них не мог действовать без санкции
+#  другого. Право вето, формально оставленное султану, и было главным
+#  элементом марокканского суверенитета — а французы, перехватив большую
+#  часть власти, перешли к прямому администрированию.
+#
+#  Шкала: левая сторона (отрицательные значения) — Мухаммед V,
+#  правая сторона (положительные) — генерал-резидент.
+#  Старт: initial_value = 0.5, то есть 50 % в пользу генерал-резидента
+#  (выдаётся в history/countries/MOR - Morocco.txt эффектом set_power_balance).
+#
+#  Категория решений MOR_balance_of_power_category исчезает, когда Марокко
+#  становится независимым ИЛИ к власти приходят коммунисты (см. категории
+#  решений и common/on_actions/MOR power balance on actions (Morocco).txt).
+#
+#  ВЕХИ (диапазоны) и их эффекты — по дизайн-доку:
+#    100 % султан  +1.00 прироста автономии  -> свобода
+#     75 % султан  +0.75                     -> доминион
+#     50 % султан  +0.50                     -> колония
+#     25 % султан  +0.25                     -> марионетка
+#      0-25 %      равновесие, без модификаторов
+#     25 % резидент -0.25                    -> Франции доступна колония
+#     50 % резидент -0.50                    -> марионетка
+#     75 % резидент -0.75                    -> интегрированная марионетка
+#    100 % резидент -1.00                    -> поглощение
+#  Сами «доступы» — решения common/decisions/MOR power balance decisions
+#  (Morocco).txt: они гейтятся значением шкалы и флагами «тултипов власти».
+# ============================================================
+
+MOR_power_balance = {
+	initial_value = 0.5
+	left_side = MOR_sultan_side
+	right_side = MOR_resident_side
+	decision_category = MOR_balance_of_power_category
+
+	### РАВНОВЕСИЕ: от 0 % до 25 % в любую сторону — без бафов и дебафов ###
+	range = {
+		id = MOR_bop_balance_range
+		min = -0.25
+		max = 0.25
+		modifier = {
+		}
+	}
+
+	### СТОРОНА МУХАММЕДА V ###
+	side = {
+		id = MOR_sultan_side
+		icon = GFX_bop_ETH_decentralisation_side
+
+		# 25 % — прирост автономии +0.25
+		range = {
+			id = MOR_bop_sultan_25_range
+			min = -0.5
+			max = -0.25
+			modifier = {
+				autonomy_gain = 0.25
+			}
+		}
+
+		# 50 % — прирост автономии +0.5
+		range = {
+			id = MOR_bop_sultan_50_range
+			min = -0.75
+			max = -0.5
+			modifier = {
+				autonomy_gain = 0.50
+			}
+		}
+
+		# 75 % — прирост автономии +0.75
+		range = {
+			id = MOR_bop_sultan_75_range
+			min = -0.9
+			max = -0.75
+			modifier = {
+				autonomy_gain = 0.75
+			}
+		}
+
+		# 100 % — прирост автономии +1
+		range = {
+			id = MOR_bop_sultan_100_range
+			min = -1
+			max = -0.9
+			modifier = {
+				autonomy_gain = 1
+			}
+		}
+	}
+
+	### СТОРОНА ГЕНЕРАЛ-РЕЗИДЕНТА ###
+	side = {
+		id = MOR_resident_side
+		icon = GFX_bop_ETH_centralisation_side
+
+		# 25 % — прирост автономии -0.25
+		range = {
+			id = MOR_bop_resident_25_range
+			min = 0.25
+			max = 0.5
+			modifier = {
+				autonomy_gain = -0.25
+			}
+		}
+
+		# 50 % — прирост автономии -0.5
+		range = {
+			id = MOR_bop_resident_50_range
+			min = 0.5
+			max = 0.75
+			modifier = {
+				autonomy_gain = -0.50
+			}
+		}
+
+		# 75 % — прирост автономии -0.75
+		range = {
+			id = MOR_bop_resident_75_range
+			min = 0.75
+			max = 0.9
+			modifier = {
+				autonomy_gain = -0.75
+			}
+		}
+
+		# 100 % — прирост автономии -1
+		range = {
+			id = MOR_bop_resident_100_range
+			min = 0.9
+			max = 1
+			modifier = {
+				autonomy_gain = -1
+			}
+		}
+	}
+}

@@ -1,0 +1,44 @@
+﻿l_english:
+ MOR_mohammed_v: "Mohammed V"
+ MOR_mohammed_v_desc: "The Alaouite dynasty has long counted itself among the sharifs — direct descendants of the prophet Muhammad through his grandson Hasan. In Morocco this granted its rulers not only temporal authority but also the supreme spiritual rank of Commander of the Faithful, making their person sacred in the eyes of the religious population and the Berber tribes alike. Sidi Mohammed ben Yusef came from precisely this dynasty and was placed on the throne by the French in 1927, passed over in favour of his elder brothers because the colonial administration considered the young sultan weak and manageable. Now, in 1936, he is bound hand and foot by the terms of the Treaty of Fes, and real power in Rabat belongs to the French Resident-General. Yet beneath the mask of submission hides an ambitious ruler. The Sultan has begun to quietly sympathise with the «Committee of National Action» and their Plan of Reforms. While France regards him as a reliable puppet, the Moroccan people increasingly see in the young monarch the only legitimate force capable of restoring the country's lost independence."
+ MOR_auguste_henri_ponsot: "Auguste Henri Ponsot"
+ MOR_auguste_henri_ponsot_desc: "Auguste Henri Ponsot is a French diplomat rather than a soldier, and yet he was entrusted with so important a post. He began his career in Bangkok and later became envoy to the government of Siam. From 1926 to 1933 he held the post of High Commissioner of the League of Nations mandate for Syria and Lebanon, where he wholeheartedly supported French rule and ignored the demands of the local rebels. Leaving that post, on 14 September 1933 Ponsot took up the office of French Resident-General in Morocco, and he holds it to this day."
+ MOR_bernard_marcel_peyrouton: "Bernard Marcel Peyrouton"
+ MOR_bernard_marcel_peyrouton_desc: "Holding a doctorate in law and having completed his military service, Marcel passed the competitive examination for the Ministry of the Colonies and received his first appointment, to Tahiti, as chief of staff to the governor. During the Great War he was wounded and served at the Dardanelles, after which he served in a number of colonial possessions in North Africa — until he was appointed Resident-General in Morocco."
+ MOR_charles_nogues: "Charles Noguès"
+ MOR_charles_nogues_desc: "Having served through the First World War as an artilleryman, Noguès continued his military career and took part in the Rif campaign, from which he returned a major general. He is wholly devoted to France and intends therefore to uphold her interests."
+ MOR_mohammed_sallal_al_fassi: "Mohammed Sallal Al-Fassi"
+ MOR_mohammed_sallal_al_fassi_desc: "Sallal al-Fassi is a brilliant graduate and lecturer of the ancient Muslim university of al-Qarawiyyin, a poet and theologian who became the leading ideologue of Moroccan nationalism. In 1936, against the backdrop of the left-wing Popular Front coming to power in France, al-Fassi throws himself into furious activity in Casablanca and Fez, turning the scattered circles of the intelligentsia into a powerful political force — the Bloc of National Action. He rejects half-measures and demands that Paris strictly observe the Treaty of Fes, which the French have turned into outright colonisation. Blessed with a phenomenal gift for oratory, al-Fassi drove both students and workers to protest. Even Mohammed V did not stand aside, giving him mightiest support, and it was this that shifted Morocco's political vector."
+ MOR_mohamed_hassan_el_ouazzani: "Mohamed Hassan El Ouazzani"
+ MOR_mohamed_hassan_el_ouazzani_desc: "Mohamed Hassan al-Wazzani personifies the liberal and modernising wing of the Moroccan protest. Having graduated from the prestigious Paris Institute of Political Studies, al-Wazzani absorbed the values of European democracy and freedom of the press, which he now intends to turn against the colonisers themselves. He demands a sovereign Morocco with a strong parliament, a constitution and civil liberties. To the French authorities in Rabat this brilliant journalist and editor of the newspaper 'L'Action Marocaine' represents an enormous threat, for he strikes Paris with its own chief weapon — the ideals of the Great French Revolution."
+ MOR_leon_sultan: "Leon Sultan"
+ MOR_leon_sultan_desc: "A lawyer of Jewish origin, born in Algeria and settled in Casablanca, Leon Sultan is the leading intellectual and driving force of Marxism in Morocco. In 1936, after the events of Red June, he left the French Communist Party and founded the Moroccan Communist Party. Having established a communist order in Morocco, he believes that genuine liberation of the country is possible only through the union of Arab and Berber workers, the overcoming of religious barriers and the complete dismantling of both French colonialism and the feudal system of the sultanate."
+ MOR_abdelkhalek_torres: "Abdelkhalek Torres"
+ MOR_abdelkhalek_torres_desc: "A fiery orator, intellectual and the beating heart of the Moroccan national-liberation movement in the Spanish protectorate. The son of a high-ranking judge from Tetouan, Torres received an excellent education both in the religious schools of Morocco and in the universities of Cairo and Madrid, which allowed him to understand the mindset of the European colonisers perfectly. The Moroccan Reform Party he founded sailed right up to the edge of legality in Northern Morocco. Torres is a master of political compromise: he is ready to cooperate with the Spanish authorities temporarily if it brings Moroccan autonomy closer, yet his ultimate goal remains unchanged — full sovereignty and the reunification of the country under the Sultan. And it bore results. After Spanish Morocco returned beneath the Sultan's hand, he admitted these nationalists into his government, strengthening the influence of the National Party, the outcome of which was Torres' quiet coup within the government. His first act was to assure the Sultan of his full support for him and for the national aspirations."
+ # --- РULER TRAITS ---
+ mor_soft_character: "Soft Character"
+ mor_resident_satrap: "Resident-Satrap"
+ mor_french_resident_general: "French Resident-General"
+ mor_pacifier_of_the_rif_wolf: "Pacifier of the Wolf of the Rif"
+ mor_voice_of_the_nation: "Voice of the Nation"
+ mor_constitutional_reformer: "Constitutional Reformer"
+ mor_powerless_monarch: "Powerless Monarch"
+ mor_limited_monarch: "Limited Monarch"
+ mor_influential_monarch: "Influential Monarch"
+ mor_descendant_of_the_prophet: "Descendant of the Prophet"
+ mor_hope_of_the_nationalists: "Hope of the Nationalists"
+ mor_opponent_of_fascism: "Opponent of Fascism"
+ mor_internationalist_ideologue: "Internationalist Ideologue"
+ mor_voice_of_the_maghreb: "Voice of the Maghreb"
+ mor_voice_of_the_maghreb_tt: "Relations with Spain and France: -40"
+
+ # --- PARTY NAMES ---
+ # The other names (MOR_neutrality_party, MOR_democratic_party, MOR_communism_party,
+ # MOR_fascism_party and their long variants) are already in parties_l_english.yml.
+ MOR_monarchy_party_long: "House of Alawites"
+
+ # --- OPINION MODIFIERS ---
+ mor_torres_hostile_to_france: "Torres Government"
+ mor_torres_hostile_to_spain: "Torres Government"
+
+

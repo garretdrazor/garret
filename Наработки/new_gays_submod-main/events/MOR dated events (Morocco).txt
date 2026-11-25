@@ -1,0 +1,666 @@
+﻿add_namespace = mor_dated
+# ============================================================
+#  ДАТИРОВАННЫЕ СОБЫТИЯ ПРОТЕКТОРАТА — дизайн-док [MOR], Шаг 9
+#
+#  Цепочки 1936-1937 годов: «настоящее протектората», речь Лекаша в
+#  еврейской общине, «Красный июнь», фосфатный кризис, рождение
+#  независимой компартии, I Конгресс Марокканского комитета действий и
+#  ноябрьский политический кризис, неурожай 1937 года.
+#
+#  СОГЛАШЕНИЯ ФАЙЛА
+#  * Все события требуют, чтобы Марокко всё ещё было протекторатом, то
+#    есть пока у него висит шкала MOR_power_balance (Шаг 7 снимает её при
+#    независимости и приходе коммунистов). Цепочка сама гаснет, если
+#    Марокко вышло из-под протектората.
+#  * «Влияние генерал-резидента N %» = шкала MOR_power_balance уходит на
+#    N десятых в соответствующую сторону (минус — Мухаммед V, плюс —
+#    резидент), как и в решениях Шага 7.
+#  * «Очки автономии» = add_autonomy_score (Марокко — субъект Франции).
+#  * «НД» = национальные духи common/ideas/MOR june crisis ideas (Morocco).txt.
+#  * «Выполнение текущего фокуса будет прерван, начнётся фокус „Провести
+#    трудовые реформы“, и его нельзя будет прервать»: движок не умеет ни
+#    прерывать, ни начинать фокус эффектом — единственная гарантированная
+#    форма этой договорённости = complete_national_focus. Фокус завершается
+#    сразу, поэтому его и невозможно прервать; перед этим ставится
+#    mor_labor_reforms_forced_flag, чтобы Шаг 8 отличал «навязанные»
+#    реформы от добровольных.
+#  * Отложенные события («скрытый эффект» доки) спрятаны в hidden_effect,
+#    поэтому в тултипе варианта их не видно.
+#
+#  ФЛАГИ СОБЫТИЙ (для будущих шагов):
+#    mor_protectorate_intro_flag        сыграно событие о настоящем протектората
+#    mor_jewish_speech_flag             речь Лекаша в Уджде
+#    mor_jewish_communists_flag         фельетон о «красных соколах»
+#    mor_red_june_happened_flag         Красный июнь состоялся (любая ветка)
+#    mor_red_june_crackdown_flag        выбрана силовая развязка
+#    mor_labor_reforms_forced_flag      трудовые реформы навязаны улицей
+#    mor_phosphate_concessions_flag     уступки на рудниках Хурибги
+#    mor_legion_at_houribgha_flag       по рудникам ударил Иностранный легион
+#    mor_mcp_independent_flag           Партия коммунистов Марокко отделилась от ФКП
+#    mor_red_june_apogee_flag           восстание достигло апогея
+#    mor_mac_congress_flag              I Конгресс МКД состоялся
+#    mor_mac_crisis_pending_flag        ноябрьский кризис идёт, ответ не дан
+#    mor_mac_crisis_waiting_flag        Марокко «тянет с ответом» (см. on_actions)
+#    mor_mac_crisis_answered_flag       ответ националистам дан
+#    mor_mac_arrests_flag               лидеры МКД арестованы и отпущены
+#    mor_mac_negotiated_flag            МКД приглашён к столу переговоров
+#    mor_harvest_failure_flag           неурожайный год наступил
+#  * Каждый ивент лежит в блоке country_event = { id = mor_dated.N ... }. Без
+#    обёртки и ключа id движок ивент не регистриует вовсе: в error.log это
+#    "Unexpected token: mor_dated.N", а в setup.log — "Events loaded ... #0".
+#  * Поле icon у ивента невалидно ("Unexpected token: icon"), поэтому картинка
+#    одна — picture =, и спрайты взяты из NWR (gfx/event_pictures).
+#  * Дат у ивентов нет: date = внутри ивента не работает, а автоматические
+#    ивенты движок перепроверяет раз в ~20 дней. Дни берёт из дизайн-дока
+#    common/on_actions/MOR on_actions date (Morocco).txt, поэтому все ивенты
+#    is_triggered_only = yes, fire_only_once снят, а однократность держится
+#    на флагах mor_dated_N_fired_flag.
+#  * Каждый ивент помечает себя в логах строкой immediate = { log = ... }.
+
+# ============================================================
+
+
+# --- 1. Настоящее протектората Марокко (старт кампании) ---
+country_event = {
+	id = mor_dated.1
+	picture = GFX_report_event_colonial_building
+	title = mor_dated.1.t
+	desc = mor_dated.1.d
+	is_triggered_only = yes
+
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event mor_dated.1" }
+	
+	
+	trigger = {
+		original_tag = MOR
+		has_power_balance = { id = MOR_power_balance }
+	}
+
+	option = {
+		name = mor_dated.1.a
+		set_country_flag = mor_protectorate_intro_flag
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+# --- 2. Выступления в еврейской общине — 16 февраля 1936 ---
+country_event = {
+	id = mor_dated.2
+	picture = GFX_report_event_journalists_speech
+	title = mor_dated.2.t
+	desc = mor_dated.2.d
+	is_triggered_only = yes
+
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event mor_dated.2" }
+
+	trigger = {
+		original_tag = MOR
+		has_power_balance = { id = MOR_power_balance }
+	}
+
+	# Нам невыгодно объединение необразованных марокканцев
+	# и политизированных евреев: +3 % поддержки коммунизма.
+	option = {
+		name = mor_dated.2.a
+		set_country_flag = mor_jewish_speech_flag
+		add_popularity = {
+			ideology = communism
+			popularity = 0.03
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+# --- 3. Вопиющее поведение еврейских коммунистов — 2 июня 1936 ---
+country_event = {
+	id = mor_dated.3
+	picture = GFX_report_event_generic_riot
+	title = mor_dated.3.t
+	desc = mor_dated.3.d
+	is_triggered_only = yes
+
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event mor_dated.3" }
+
+	trigger = {
+		original_tag = MOR
+		has_power_balance = { id = MOR_power_balance }
+	}
+
+	# Слишком много стало шума от левых евреев: +2 % поддержки коммунизма.
+	option = {
+		name = mor_dated.3.a
+		set_country_flag = mor_jewish_communists_flag
+		add_popularity = {
+			ideology = communism
+			popularity = 0.02
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+# --- 4. Красный июнь в Касабланке — 12 июня 1936 ---
+# Событие приходит, если к 11 июня фокус «Провести трудовые реформы» так
+# и не завершён: волнение перекидывается с метрополии само.
+country_event = {
+	id = mor_dated.4
+	picture = GFX_report_event_worker_protests
+	title = mor_dated.4.t
+	desc = mor_dated.4.d
+	is_triggered_only = yes
+
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event mor_dated.4" }
+
+	trigger = {
+		original_tag = MOR
+		has_power_balance = { id = MOR_power_balance }
+		NOT = {
+			has_completed_focus = MOR_Conduct_labor_reforms
+		}
+	}
+
+	# Пойти на уступки и договориться с лидерами.
+	option = {
+		name = mor_dated.4.a
+		set_country_flag = mor_red_june_happened_flag
+		if = {
+			limit = {
+				NOT = { has_completed_focus = MOR_Conduct_labor_reforms }
+			}
+			set_country_flag = mor_labor_reforms_forced_flag
+			complete_national_focus = MOR_Conduct_labor_reforms
+		}
+		add_autonomy_score = {
+			value = 50
+			localization = mor_autonomy_reason_red_june
+		}
+		add_power_balance_value = {
+			id = MOR_power_balance
+			value = -0.1
+			tooltip_side = MOR_sultan_side
+		}
+		add_timed_idea = {
+			idea = mor_aftermath_of_red_june_light
+			days = 180
+		}
+		ai_chance = {
+			base = 60
+		}
+	}
+
+	# Использовать колониальные войска для разгона бунтовщиков!
+	option = {
+		name = mor_dated.4.b
+		set_country_flag = mor_red_june_happened_flag
+		set_country_flag = mor_red_june_crackdown_flag
+		add_stability = 0.05
+		add_political_power = -50
+		add_power_balance_value = {
+			id = MOR_power_balance
+			value = 0.1
+			tooltip_side = MOR_resident_side
+		}
+		add_idea = mor_workers_unrest_in_casablanca
+		hidden_effect = {
+			log = "[GetDateText]: MOR mor_dated.4 -> разгон забастовки, через 2 дня фосфатный кризис"
+			country_event = { id = mor_dated.5 days = 2 }
+		}
+		ai_chance = {
+			base = 40
+		}
+	}
+}
+
+# --- 5. Фосфатный кризис — через 2 дня после разгона ---
+country_event = {
+	id = mor_dated.5
+	picture = GFX_report_event_generic_factory
+	title = mor_dated.5.t
+	desc = mor_dated.5.d
+	is_triggered_only = yes
+
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event mor_dated.5" }
+
+	trigger = {
+		original_tag = MOR
+		has_power_balance = { id = MOR_power_balance }
+	}
+
+	# Мы всё же вынуждены пойти на уступки (исторический вариант).
+	option = {
+		name = mor_dated.5.a
+		set_country_flag = mor_phosphate_concessions_flag
+		if = {
+			limit = {
+				NOT = { has_completed_focus = MOR_Conduct_labor_reforms }
+			}
+			set_country_flag = mor_labor_reforms_forced_flag
+			complete_national_focus = MOR_Conduct_labor_reforms
+		}
+		add_autonomy_score = {
+			value = 75
+			localization = mor_autonomy_reason_phosphate
+		}
+		add_power_balance_value = {
+			id = MOR_power_balance
+			value = -0.3
+			tooltip_side = MOR_sultan_side
+		}
+		if = {
+			limit = { has_idea = mor_workers_unrest_in_casablanca }
+			remove_idea = mor_workers_unrest_in_casablanca
+		}
+		add_timed_idea = {
+			idea = mor_aftermath_of_red_june_medium
+			days = 180
+		}
+		ai_chance = {
+			base = 65
+		}
+	}
+
+	# Направить Иностранный легион для зачистки шахт.
+	option = {
+		name = mor_dated.5.b
+		set_country_flag = mor_legion_at_houribgha_flag
+		add_stability = 0.05
+		add_political_power = -50
+		add_power_balance_value = {
+			id = MOR_power_balance
+			value = 0.1
+			tooltip_side = MOR_resident_side
+		}
+		# «Рабочие волнения в Касабланке» превращаются в волнения
+		# Касабланки и Атласа с усиленным эффектом.
+		if = {
+			limit = { has_idea = mor_workers_unrest_in_casablanca }
+			remove_idea = mor_workers_unrest_in_casablanca
+		}
+		add_idea = mor_workers_unrest_in_casablanca_and_atlas
+		hidden_effect = {
+			log = "[GetDateText]: MOR mor_dated.5 -> Иностранный легион в Хурибге, через 3 дня рождение ПКМ"
+			country_event = { id = mor_dated.6 days = 3 }
+		}
+		ai_chance = {
+			base = 35
+		}
+	}
+}
+
+# --- 6. Партия коммунистов Марокко открещивается от ФКП ---
+# В дизайн-доке этот вызов подписан как «Подпольные профсоюзы формируют
+# Марокканскую Коммунистическую партию» — это одно и то же событие:
+# съезд в трущобах Касабланки и есть рождение независимой ПКМ.
+country_event = {
+	id = mor_dated.6
+	picture = GFX_report_event_communist_leader
+	title = mor_dated.6.t
+	desc = mor_dated.6.d
+	is_triggered_only = yes
+
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event mor_dated.6" }
+
+	trigger = {
+		original_tag = MOR
+		has_power_balance = { id = MOR_power_balance }
+	}
+
+	# Это тревожные новости.
+	option = {
+		name = mor_dated.6.a
+		set_country_flag = mor_mcp_independent_flag
+		add_popularity = {
+			ideology = communism
+			popularity = 0.05
+		}
+		# Компартия Марокко порывает с ФКП и выходит под своим именем.
+		set_party_name = {
+			ideology = communism
+			name = MOR_mcp_name
+			long_name = MOR_mcp_name_long
+		}
+		add_timed_idea = {
+			idea = mor_communist_split_from_fcp
+			days = 90
+		}
+		hidden_effect = {
+			log = "[GetDateText]: MOR mor_dated.6 -> ПКМ отделилась от ФКП, через 15 дней рассвет Красного июня"
+			country_event = { id = mor_dated.7 days = 15 }
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+# --- 7. Красный июнь рассветает — через 15 дней после съезда ---
+country_event = {
+	id = mor_dated.7
+	picture = GFX_report_event_gathering_protest
+	title = mor_dated.7.t
+	desc = mor_dated.7.d
+	is_triggered_only = yes
+
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event mor_dated.7" }
+
+	trigger = {
+		original_tag = MOR
+		has_power_balance = { id = MOR_power_balance }
+	}
+
+	# Нам придётся уступить, иначе мы захлебнёмся в крови!
+	option = {
+		name = mor_dated.7.a
+		if = {
+			limit = {
+				NOT = { has_completed_focus = MOR_Conduct_labor_reforms }
+			}
+			set_country_flag = mor_labor_reforms_forced_flag
+			complete_national_focus = MOR_Conduct_labor_reforms
+		}
+		add_autonomy_score = {
+			value = 100
+			localization = mor_autonomy_reason_red_dawn
+		}
+		add_power_balance_value = {
+			id = MOR_power_balance
+			value = -0.4
+			tooltip_side = MOR_sultan_side
+		}
+		if = {
+			limit = { has_idea = mor_workers_unrest_in_casablanca_and_atlas }
+			remove_idea = mor_workers_unrest_in_casablanca_and_atlas
+		}
+		if = {
+			limit = { has_idea = mor_workers_unrest_in_casablanca }
+			remove_idea = mor_workers_unrest_in_casablanca
+		}
+		add_timed_idea = {
+			idea = mor_aftermath_of_red_june_heavy
+			days = 180
+		}
+		ai_chance = {
+			base = 55
+		}
+	}
+
+	# Закончим дело!
+	option = {
+		name = mor_dated.7.b
+		add_stability = 0.05
+		add_political_power = -50
+		add_power_balance_value = {
+			id = MOR_power_balance
+			value = 0.1
+			tooltip_side = MOR_resident_side
+		}
+		if = {
+			limit = { has_idea = mor_workers_unrest_in_casablanca_and_atlas }
+			remove_idea = mor_workers_unrest_in_casablanca_and_atlas
+		}
+		if = {
+			limit = { has_idea = mor_workers_unrest_in_casablanca }
+			remove_idea = mor_workers_unrest_in_casablanca
+		}
+		hidden_effect = {
+			log = "[GetDateText]: MOR mor_dated.7 -> новая волна арестов, через 5 дней апогей Красного июня"
+			country_event = { id = mor_dated.8 days = 5 }
+		}
+		ai_chance = {
+			base = 45
+		}
+	}
+}
+
+# --- 8. Апогей красного июня — через 5 дней после арестов ---
+country_event = {
+	id = mor_dated.8
+	picture = GFX_news_event_the_uprising_of_unemployed_workers
+	title = mor_dated.8.t
+	desc = mor_dated.8.d
+	is_triggered_only = yes
+
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event mor_dated.8" }
+
+	trigger = {
+		original_tag = MOR
+		has_power_balance = { id = MOR_power_balance }
+	}
+
+	# Ситуация становится тревожной.
+	option = {
+		name = mor_dated.8.a
+		set_country_flag = mor_red_june_apogee_flag
+		add_stability = -0.10
+		add_power_balance_value = {
+			id = MOR_power_balance
+			value = -0.5
+			tooltip_side = MOR_sultan_side
+		}
+		# Восстание само по себе «завершает» фокус-веху Красного июня.
+		if = {
+			limit = {
+				NOT = { has_completed_focus = MOR_Powder_keg_of_red_june }
+			}
+			complete_national_focus = MOR_Powder_keg_of_red_june
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+# --- 9. I Конгресс Национального комитета действия в Рабате ---
+# 25 октября 1936, если фокус «Пороховая бочка красного июня» не выполнен.
+country_event = {
+	id = mor_dated.9
+	picture = GFX_report_event_generic_conference
+	title = mor_dated.9.t
+	desc = mor_dated.9.d
+	is_triggered_only = yes
+
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event mor_dated.9" }
+
+	trigger = {
+		original_tag = MOR
+		has_power_balance = { id = MOR_power_balance }
+		NOT = {
+			has_completed_focus = MOR_Powder_keg_of_red_june
+		}
+	}
+
+	# Потянем с ответом (исторический вариант).
+	option = {
+		name = mor_dated.9.a
+		set_country_flag = mor_mac_congress_flag
+		set_country_flag = mor_mac_crisis_pending_flag
+		add_idea = mor_november_crisis
+		hidden_effect = {
+			log = "[GetDateText]: MOR mor_dated.9 -> Конгресс МКД, через 21 день начало ноябрьского кризиса"
+			country_event = { id = mor_dated.10 days = 21 }
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+# --- 10. Начало ноябрьского политического кризиса ---
+# Три ответа, и вид ответа зависит от того, какой из фокусов по МКД уже
+# пройден. Если не пройден ни один — «тянем с ответом», и событие-последствие
+# приходит позже, когда фокус всё же завершат (common/on_actions/
+# MOR power balance on actions (Morocco).txt).
+country_event = {
+	id = mor_dated.10
+	picture = GFX_report_event_generic_rally_3
+	title = mor_dated.10.t
+	desc = mor_dated.10.d
+	is_triggered_only = yes
+
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event mor_dated.10" }
+
+	trigger = {
+		original_tag = MOR
+		has_power_balance = { id = MOR_power_balance }
+	}
+
+	# Султан не хочет ввязываться в это, генерал-резидент разберётся сам.
+	option = {
+		name = mor_dated.10.a
+		trigger = {
+			has_completed_focus = MOR_Oppose_the_Moroccan_Action_Committee
+		}
+		set_country_flag = mor_mac_crisis_answered_flag
+		clr_country_flag = mor_mac_crisis_waiting_flag
+		hidden_effect = {
+			log = "[GetDateText]: MOR mor_dated.10 -> резидент разбирается сам, через 21 день аресты лидеров МКД"
+			country_event = { id = mor_dated.11 days = 21 }
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+
+	# Султан симпатизирует им, и лично вызвался провести переговоры.
+	option = {
+		name = mor_dated.10.b
+		trigger = {
+			has_completed_focus = MOR_Support_the_Moroccan_Action_Committee
+		}
+		set_country_flag = mor_mac_crisis_answered_flag
+		clr_country_flag = mor_mac_crisis_waiting_flag
+		hidden_effect = {
+			log = "[GetDateText]: MOR mor_dated.10 -> султан берёт переговоры на себя, через 7 дней приглашение МКД"
+			country_event = { id = mor_dated.12 days = 7 }
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+
+	# Потянем с ответом.
+	option = {
+		name = mor_dated.10.c
+		trigger = {
+			NOT = { has_completed_focus = MOR_Oppose_the_Moroccan_Action_Committee }
+			NOT = { has_completed_focus = MOR_Support_the_Moroccan_Action_Committee }
+		}
+		set_country_flag = mor_mac_crisis_waiting_flag
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+# --- 11. Аресты лидеров Марокканского комитета действий ---
+country_event = {
+	id = mor_dated.11
+	picture = GFX_report_event_fascist_militia
+	title = mor_dated.11.t
+	desc = mor_dated.11.d
+	is_triggered_only = yes
+
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event mor_dated.11" }
+
+	trigger = {
+		original_tag = MOR
+		has_power_balance = { id = MOR_power_balance }
+	}
+
+	# Пока освободим их, будем действовать иначе.
+	option = {
+		name = mor_dated.11.a
+		set_country_flag = mor_mac_arrests_flag
+		set_country_flag = mor_mac_crisis_answered_flag
+		clr_country_flag = mor_mac_crisis_waiting_flag
+		add_stability = -0.05
+		add_power_balance_value = {
+			id = MOR_power_balance
+			value = -0.1
+			tooltip_side = MOR_sultan_side
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+# --- 12. Приглашение лидеров Марокканского комитета действий к переговорам ---
+country_event = {
+	id = mor_dated.12
+	picture = GFX_report_event_generic_sign_treaty2
+	title = mor_dated.12.t
+	desc = mor_dated.12.d
+	is_triggered_only = yes
+
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event mor_dated.12" }
+
+	trigger = {
+		original_tag = MOR
+		has_power_balance = { id = MOR_power_balance }
+	}
+
+	# Всё решится за столом переговоров.
+	option = {
+		name = mor_dated.12.a
+		set_country_flag = mor_mac_negotiated_flag
+		set_country_flag = mor_mac_crisis_answered_flag
+		clr_country_flag = mor_mac_crisis_waiting_flag
+		if = {
+			limit = { has_idea = mor_november_crisis }
+			remove_idea = mor_november_crisis
+		}
+		add_stability = 0.05
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.05
+		}
+		add_power_balance_value = {
+			id = MOR_power_balance
+			value = -0.2
+			tooltip_side = MOR_sultan_side
+		}
+		# Доступ к фокусу «Начать пересмотр „плана реформ“»: сам фокус,
+		# его требования (демократия и монархизм не менее 25 %) и награда —
+		# Шаг 8. Здесь лишь снимается блокировка.
+		custom_effect_tooltip = mor_dated.12.a.tt
+		unlock_national_focus = MOR_Begin_revision_of_the_reform_plan
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+# --- 13. Неурожайный год — 3 февраля 1937 ---
+country_event = {
+	id = mor_dated.13
+	picture = GFX_report_event_farm
+	title = mor_dated.13.t
+	desc = mor_dated.13.d
+	is_triggered_only = yes
+
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event mor_dated.13" }
+
+	trigger = {
+		original_tag = MOR
+		has_power_balance = { id = MOR_power_balance }
+	}
+
+	# Франция должна с этим помочь (исторический вариант).
+	option = {
+		name = mor_dated.13.a
+		set_country_flag = mor_harvest_failure_flag
+		add_timed_idea = {
+			idea = mor_harvest_failure
+			days = 300
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}

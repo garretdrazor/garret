@@ -1,0 +1,150 @@
+capital = 461
+
+oob = "MOR_1936"
+
+### СТАРТОВЫЕ УСЛОВИЯ — дизайн-док [MOR], Шаг 1 ###
+set_research_slots = 3			# 3 ячейки исследований
+set_stability = 0.40			# 40% стабильности
+set_war_support = 0.25			# 25% поддержки войны
+
+add_ideas = {
+	closed_economy				# Закрытая экономика
+	partial_regular_army
+}
+
+# Индустрия: суммарно 3 гражд. + 2 воен. (одна гражд. уже есть в 461)
+806 = {							# Casablanca
+	add_extra_state_shared_building_slots = 2
+	add_building_construction = {
+		type = industrial_complex
+		level = 2
+		instant_build = yes
+	}
+	add_building_construction = {
+		type = arms_factory
+		level = 1
+		instant_build = yes
+	}
+}
+461 = {							# Northern Morocco (Rabat-Fès)
+	add_extra_state_shared_building_slots = 1
+	add_building_construction = {
+		type = arms_factory
+		level = 1
+		instant_build = yes
+	}
+}
+
+# Интегрированная марионетка Франции, 50 очков автономии
+# Автономия входит в базовую игру, поэтому проверка DLC больше не нужна;
+# команда puppet в файлах истории недоступна — только set_autonomy.
+if = {
+	limit = {
+		country_exists = FRA
+	}
+	FRA = {
+		set_autonomy = {
+			target = ROOT
+			autonomy_state = autonomy_integrated_puppet
+			freedom_level = 0.1	# 0.2 (min_freedom_level) + 50/5000 = 50 очков
+		}
+	}
+}
+
+
+# Стартовые идеи — дизайн-док [MOR], Шаг 2
+add_ideas = {
+	mor_agrarian_country				# Аграрная страна
+	mor_uneducated_population			# Необразованное население
+	mor_divided_country					# Разорванная страна
+	mor_treaty_of_fes_violated			# Попранный Фесский договор
+	mor_broken_army						# Марокканская армия
+}
+# «-1 ячейка исследований» из дизайн-дока не применяем: количество слотов не меняем.
+
+
+# БАЛАНС СИЛ — дизайн-док [MOR], Шаг 7
+# «Противостояние Мухаммеда V и Французского правления»: 50 % в пользу
+# генерал-резидента (правая сторона шкалы). Шкала описана в
+# common/bop/MOR power balance (Morocco).txt, её решения — в
+# common/decisions/MOR power balance decisions (Morocco).txt.
+set_power_balance = {
+	id = MOR_power_balance
+	left_side = MOR_sultan_side
+	right_side = MOR_resident_side
+	set_default = yes
+}
+# «ТУЛТИПЫ ВЛАСТИ» на старте (Шаг 7 гейтит их странами-флагами Марокко).
+# Разделены между сторонами: у султана священные полномочия трона, у
+# генерал-резидента — реальное управление страной. Полный список флагов —
+# в шапке common/decisions/MOR power balance decisions (Morocco).txt.
+# Тултипы генерал-резидента:
+set_country_flag = mor_resident_legislative_initiative_flag		# право законодательных инициатив
+set_country_flag = mor_resident_controls_economy_flag				# контроль экономики
+set_country_flag = mor_resident_controls_internal_order_flag		# контроль внутреннего порядка
+set_country_flag = mor_resident_controls_army_flag					# контроль армии
+set_country_flag = mor_resident_controls_foreign_affairs_flag		# контроль внешних связей
+# Тултипы султана:
+set_country_flag = mor_sultan_executive_power_flag					# исполнительная власть
+set_country_flag = mor_sultan_judicial_power_flag					# судебная власть
+set_country_flag = mor_sultan_legislative_power_flag				# законодательная власть
+set_country_flag = mor_sultan_spiritual_leader_flag					# духовный лидер Марокко
+
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+}
+
+set_convoys = 30
+
+
+set_popularities = {
+	democratic = 10
+	fascism = 0
+	communism = 5
+	neutrality = 40
+	monarchy = 45
+}
+
+set_politics = {
+	# Авторитаризм (neutrality) — правящая сила протектората.
+	# Лидеры партий и кандидаты на пост правителя:
+	# common/characters/MOR characters (Morocco).txt
+	ruling_party = neutrality
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+# Названия политических сил — дизайн-док [MOR], Шаг 4
+set_party_name = { ideology = monarchy   long_name = MOR_monarchy_party_long   name = MOR_monarchy_party }
+set_party_name = { ideology = neutrality long_name = MOR_neutrality_party_long name = MOR_neutrality_party }
+set_party_name = { ideology = democratic long_name = MOR_democratic_party_long name = MOR_democratic_party }
+set_party_name = { ideology = communism  long_name = MOR_communism_party_long  name = MOR_communism_party }
+set_party_name = { ideology = fascism    long_name = MOR_fascism_party_long    name = MOR_fascism_party }
+
+# ПРАВИТЕЛИ — дизайн-док [MOR], Шаг 4
+# Описания и трейты: common/characters/MOR characters (Morocco).txt
+recruit_character = MOR_mohammed_v						# сюзерен Марокко (монархия)
+recruit_character = MOR_auguste_henri_ponsot				# генерал-резидент (авторитаризм, со старта)
+recruit_character = MOR_mohammed_sallal_al_fassi			# МБНД (демократия, по умолчанию)
+recruit_character = MOR_leon_sultan						# коммунизм
+recruit_character = MOR_abdelkhalek_torres				# фашизм
+# Пейрутон и Ногес в 1936 ещё не при должности: их набирает Франция
+# решениями Шага 10 (common/decisions/MOR protectorate administration
+# decisions (Morocco).txt); аль-Уаззани появляется позже, вместе со своим
+# появлением на экране лидеров.
+
+1940.1.1 = {
+	oob = "OOB_zero"
+	add_ideas = {
+		volunteer_only
+		civilian_economy
+		ai_aggression_ultra_idea
+	}
+	set_political_power = 0
+	set_stability = 0.5
+	set_war_support = 0.5
+	set_research_slots = 4
+}

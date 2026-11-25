@@ -1,0 +1,189 @@
+# ============================================================
+#  НАЦИОНАЛЬНЫЕ ДУХИ «КРАСНОГО ИЮНЯ» — дизайн-док [MOR], Шаг 9
+#  «Датированные события протектората» (1936-1937).
+#
+#  Все духи выдаются событиями events/MOR dated events (Morocco).txt.
+#  Временные (180/300/90 дней) выдаются эффектом add_timed_idea,
+#  постоянные снимаются следующими событиями либо блоком cancel.
+#
+#  Соответствие формулировок доки и модификаторов движка:
+#    «скорость строительства»          -> production_speed_buildings_factor
+#    «стабильность»                    -> stability_factor
+#    «максимум и рост эффективности
+#      производства»                   -> production_factory_max_efficiency_factor
+#                                         production_factory_efficiency_gain_factor
+#    «эффективность добычи ресурсов»   -> local_resources_factor
+#    «прирост населения»               -> monthly_population
+#    «прирост полит власти»            -> political_power_factor
+#    «прирост коммунизма»              -> communism_drift (в сутки)
+# ============================================================
+
+ideas = {
+
+	country = {
+
+		# --- «Последствия красного июня» (лёгкая ступень, 180 дней) ---
+		# Уступки после забастовки COSUMA: стройка -10%, стабильность -5%.
+		mor_aftermath_of_red_june_light = {
+			picture = civilian_economy
+			allowed = {
+				original_tag = MOR
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = -0.10
+				stability_factor = -0.05
+			}
+		}
+
+		# --- «Последствия красного июня» (средняя ступень, 180 дней) ---
+		# Уступки после фосфатного кризиса: стройка -10%, стабильность -10%,
+		# добыча ресурсов -50%.
+		mor_aftermath_of_red_june_medium = {
+			picture = generic_exploit_mines
+			allowed = {
+				original_tag = MOR
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = -0.10
+				stability_factor = -0.10
+				local_resources_factor = -0.50
+			}
+		}
+
+		# --- «Последствия красного июня» (тяжёлая ступень, 180 дней) ---
+		# Уступки после «рассвета Красного июня»: стройка -15%,
+		# стабильность -15%, добыча ресурсов -75%.
+		mor_aftermath_of_red_june_heavy = {
+			picture = generic_exploit_mines
+			allowed = {
+				original_tag = MOR
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = -0.15
+				stability_factor = -0.15
+				local_resources_factor = -0.75
+			}
+		}
+
+		# --- «Рабочие волнения в Касабланке» ---
+		# Жёсткий разгон забастовки COSUMA: максимум и рост эффективности
+		# производства -10%, стабильность -5%. Снимается событием mor_dated.5
+		# (уступки либо эскалация в Атласе).
+		mor_workers_unrest_in_casablanca = {
+			picture = por_iberian_workers_united
+			allowed = {
+				original_tag = MOR
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			cancel = {
+				NOT = { has_power_balance = { id = MOR_power_balance } }
+			}
+			modifier = {
+				production_factory_max_efficiency_factor = -0.10
+				production_factory_efficiency_gain_factor = -0.10
+				stability_factor = -0.05
+			}
+		}
+
+		# --- «Рабочие волнения в Касабланке и Атласе» ---
+		# Зачистка рудников Иностранным легионом: максимум и рост
+		# эффективности производства -15%, стабильность -10%, добыча
+		# ресурсов -100%. Заменяет собой «касабланкский» дух (mor_dated.5).
+		mor_workers_unrest_in_casablanca_and_atlas = {
+			picture = por_iberian_workers_united
+			allowed = {
+				original_tag = MOR
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			cancel = {
+				NOT = { has_power_balance = { id = MOR_power_balance } }
+			}
+			modifier = {
+				production_factory_max_efficiency_factor = -0.15
+				production_factory_efficiency_gain_factor = -0.15
+				stability_factor = -0.10
+				local_resources_factor = -1.00
+			}
+		}
+
+		# --- «Отделение коммунистической партии от ФКП» (90 дней) ---
+		# +0.1 прироста коммунизма в сутки. Для справки: в ваниле
+		# communism_drift лежит в пределах 0.01...0.3 (медиана 0.05),
+		# значения выше 0.1 за 90 дней уводят компартию почти к 100 %.
+		mor_communist_split_from_fcp = {
+			picture = generic_communist_revolutionary_middle_eastern_2d
+			allowed = {
+				original_tag = MOR
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				communism_drift = 0.1
+			}
+		}
+
+		# --- «Ноябрьский кризис» ---
+		# Нерешительность после I Конгресса МКД: стабильность -10%,
+		# прирост политической власти -25%. Снимается переговорами
+		# (mor_dated.12) — см. cancel.
+		mor_november_crisis = {
+			picture = gre_political_instability
+			allowed = {
+				original_tag = MOR
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			cancel = {
+				OR = {
+					has_country_flag = mor_mac_negotiated_flag
+					NOT = { has_power_balance = { id = MOR_power_balance } }
+				}
+			}
+			modifier = {
+				stability_factor = -0.10
+				political_power_factor = -0.25
+			}
+		}
+
+		# --- «Неурожайный год» (300 дней) ---
+		# Прирост населения -50%, стабильность -10%.
+		mor_harvest_failure = {
+			picture = raj_risk_of_famine
+			allowed = {
+				original_tag = MOR
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				monthly_population = -0.50
+				stability_factor = -0.10
+			}
+		}
+
+	}
+
+}

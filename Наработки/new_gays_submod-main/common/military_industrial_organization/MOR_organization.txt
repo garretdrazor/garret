@@ -1,0 +1,93 @@
+# ============================================================
+#  ВОЕННО-ПРОИЗВОДСТВЕННЫЕ ОРГАНИЗАЦИИ МАРОККО
+#  Заменяют generic-ВПО: они исключены для original_tag = MOR
+#  в common/military_industrial_organization/organizations/00_generic_organization.txt
+#  (метка NW-MOR). Дерево трейтов наследуется от generic-аналога (include),
+#  как это делают AFG / PER / IRQ в NWR.
+# ============================================================
+
+ ###  ##  #  # # #  ##
+  #  #  # ## # # # #
+  #  #### # ## ##   #
+  #  #  # #  # # #   #
+  #  #  # #  # # # ##
+
+###########################
+
+# Транспортная компания Марокко (Compagnie de Transports au Maroc) —
+# производитель автомобилей и колёсной техники протектората.
+MOR_compagnie_de_transports_au_maroc_organization = {
+	include = generic_motorized_mechanized_organization
+	icon = GFX_idea_generic_motorized_equipment_manufacturer_1
+
+	allowed = {
+		original_tag = MOR
+		has_dlc = "Arms Against Tyranny"
+	}
+}
+
+ #####################
+
+  ## #  # ### ###   ##
+ #   #  #  #  #  # #
+  #  ####  #  ###   #
+   # #  #  #  #      #
+ ##  #  # ### #    ##
+
+###########################
+
+# Общество марокканских портов (Société des Ports Marocains) —
+# мастерские по ремонту и переоснащению кораблей.
+MOR_societe_des_ports_marocains_organization = {
+	include = generic_refurbishment_repair_organization
+	icon = GFX_idea_generic_naval_manufacturer_3
+
+	allowed = {
+		original_tag = MOR
+		has_dlc = "Arms Against Tyranny"
+	}
+}
+
+ ####################
+
+ ### #   ##  #  # ###
+ #   #   #  # ## # #
+  ## #   #### # ## ##
+   # #   #  # #  # #
+ ### ### #  # #  # ###
+
+###########################
+
+# Промышленные предприятия Касабланки (Établissements Industriels de Casablanca) —
+# конструктор пехотных танков.
+MOR_etablissements_industriels_de_casablanca_organization = {
+	include = generic_infantry_tank_organization
+	icon = GFX_idea_generic_tank_manufacturer_1
+
+	allowed = {
+		original_tag = MOR
+		has_dlc = "Arms Against Tyranny"
+	}
+}
+
+ #####################
+
+ ###   ###  #  # ###  ##
+ #  # #   # ## # #   #
+ ###  #  # # ## # ##   #
+ #  # #  # #  # #     #
+ ###   ###  #  # ### ##
+
+###########################
+
+# Аэродром Касабланка-Анфа и мастерские Бреге (Aérodrome de Casablanca-Anfa & Breguet) —
+# конструктор лёгкой авиации.
+MOR_casablanca_anfa_breguet_organization = {
+	include = generic_light_aircraft_organization
+	icon = GFX_idea_generic_air_manufacturer_1
+
+	allowed = {
+		original_tag = MOR
+		has_dlc = "Arms Against Tyranny"
+	}
+}

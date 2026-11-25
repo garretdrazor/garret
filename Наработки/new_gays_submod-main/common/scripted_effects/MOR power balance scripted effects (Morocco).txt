@@ -1,0 +1,69 @@
+# ============================================================
+#  СЛУЖЕБНЫЕ ЭФФЕКТЫ БАЛАНСА СИЛ — дизайн-док [MOR], Шаг 7
+#
+#  Трейт правителя-монарха зависит от того, сколько «тултипов власти»
+#  сейчас принадлежит султану (всего их девять):
+#    0-3   -> mor_powerless_monarch     «Бесправный монарх»
+#    4-6   -> mor_limited_monarch       «Ограниченный монарх»
+#    7-9   -> mor_influential_monarch   «Влиятельный монарх»
+#  Эффект вызывается из каждого решения обмена тултипами
+#  (common/decisions/MOR power balance decisions (Morocco).txt) и раз в
+#  месяц из common/on_actions/MOR power balance on actions (Morocco).txt —
+#  на случай, если флаги меняет фокус или событие другого шага.
+#  Работает только если правитель носит один из трёх трейтов монарха,
+#  поэтому президенты и генерал-резиденты его не затрагивают.
+# ============================================================
+
+MOR_update_monarch_power_trait_effect = {
+	if = {
+		limit = {
+			OR = {
+				has_country_leader_with_trait = mor_powerless_monarch
+				has_country_leader_with_trait = mor_limited_monarch
+				has_country_leader_with_trait = mor_influential_monarch
+			}
+		}
+
+		# Считаем тултипы власти султана.
+		set_variable = { mor_sultan_power_tooltips = 0 }
+		if = { limit = { has_country_flag = mor_sultan_executive_power_flag } add_to_variable = { mor_sultan_power_tooltips = 1 } }
+		if = { limit = { has_country_flag = mor_sultan_legislative_power_flag } add_to_variable = { mor_sultan_power_tooltips = 1 } }
+		if = { limit = { has_country_flag = mor_sultan_judicial_power_flag } add_to_variable = { mor_sultan_power_tooltips = 1 } }
+		if = { limit = { has_country_flag = mor_sultan_spiritual_leader_flag } add_to_variable = { mor_sultan_power_tooltips = 1 } }
+		if = { limit = { has_country_flag = mor_sultan_legislative_initiative_flag } add_to_variable = { mor_sultan_power_tooltips = 1 } }
+		if = { limit = { has_country_flag = mor_sultan_controls_economy_flag } add_to_variable = { mor_sultan_power_tooltips = 1 } }
+		if = { limit = { has_country_flag = mor_sultan_controls_internal_order_flag } add_to_variable = { mor_sultan_power_tooltips = 1 } }
+		if = { limit = { has_country_flag = mor_sultan_controls_army_flag } add_to_variable = { mor_sultan_power_tooltips = 1 } }
+		if = { limit = { has_country_flag = mor_sultan_controls_foreign_affairs_flag } add_to_variable = { mor_sultan_power_tooltips = 1 } }
+
+		# 7-9 тултипов: «Влиятельный монарх».
+		if = {
+			limit = { check_variable = { mor_sultan_power_tooltips > 6 } }
+			if = {
+				limit = { NOT = { has_country_leader_with_trait = mor_influential_monarch } }
+				remove_country_leader_trait = mor_powerless_monarch
+				remove_country_leader_trait = mor_limited_monarch
+				add_country_leader_trait = mor_influential_monarch
+			}
+		}
+		# 4-6 тултипов: «Ограниченный монарх».
+		else_if = {
+			limit = { check_variable = { mor_sultan_power_tooltips > 3 } }
+			if = {
+				limit = { NOT = { has_country_leader_with_trait = mor_limited_monarch } }
+				remove_country_leader_trait = mor_powerless_monarch
+				remove_country_leader_trait = mor_influential_monarch
+				add_country_leader_trait = mor_limited_monarch
+			}
+		}
+		# 0-3 тултипа: «Бесправный монарх».
+		else = {
+			if = {
+				limit = { NOT = { has_country_leader_with_trait = mor_powerless_monarch } }
+				remove_country_leader_trait = mor_limited_monarch
+				remove_country_leader_trait = mor_influential_monarch
+				add_country_leader_trait = mor_powerless_monarch
+			}
+		}
+	}
+}

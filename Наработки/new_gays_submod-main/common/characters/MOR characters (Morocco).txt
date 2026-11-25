@@ -1,0 +1,204 @@
+# ============================================================
+#  ПРАВИТЕЛИ МАРОККО — дизайн-док [MOR], Шаг 4
+#  Формат — как в common/characters/MAN characters.txt (NWR).
+#  Трейты: common/country_leader/MOR traits (Morocco).txt
+#  Смена правителя: common/scripted_effects/MOR scripted effects (Morocco).txt
+#  Кнопка переключения: common/decisions/MOR decisions (Morocco).txt
+# ============================================================
+
+characters = {
+
+	### МОНАРХИЯ — сюзерен Марокко ###
+
+	MOR_mohammed_v = {
+		name = MOR_mohammed_v
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MOR/Portrait_Mohammed_V.dds"
+			}
+		}
+		country_leader = {
+			desc = MOR_mohammed_v_desc
+			ideology = tribal_monarchy
+			traits = {
+				mor_limited_monarch
+				mor_descendant_of_the_prophet
+				mor_hope_of_the_nationalists
+			}
+			expire = "1965.1.1.1"
+		}
+	}
+
+	### АВТОРИТАРИЗМ — французские генерал-резиденты ###
+	# Роли country_leader у Пейрутона и Ногеса выдаются скриптами (они приходят
+	# на смену Понсо решениями/фокусами), чтобы движок не выбрал их правителями партии.
+
+	MOR_auguste_henri_ponsot = {
+		name = MOR_auguste_henri_ponsot
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FRA/Portrait_France_Generic_1.dds"
+			}
+		}
+		country_leader = {
+			desc = MOR_auguste_henri_ponsot_desc
+			ideology = despotism
+			traits = {
+				mor_soft_character
+			}
+			expire = "1965.1.1.1"
+		}
+	}
+
+	MOR_bernard_marcel_peyrouton = {
+		name = MOR_bernard_marcel_peyrouton
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FRA/Portrait_France_Generic_2.dds"
+			}
+		}
+		# Роль country_leader появилась в Шаге 10: Пейрутон становится
+		# генерал-резидентом Марокко решением Парижа (common/decisions/
+		# MOR protectorate administration decisions (Morocco).txt), пока
+		# neutrality остаётся правящей силой протектората.
+		country_leader = {
+			desc = MOR_bernard_marcel_peyrouton_desc
+			ideology = despotism
+			traits = {
+				mor_resident_satrap
+			}
+			expire = "1965.1.1.1"
+		}
+	}
+
+	MOR_charles_nogues = {
+		name = MOR_charles_nogues
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FRA/Portrait_France_Generic_3.dds"
+			}
+			army = {
+				small = "gfx/leaders/FRA/Portrait_France_Generic_land_1.dds"
+			}
+		}
+		# Роль country_leader появилась в Шаге 10: Ногес становится
+		# генерал-резидентом Марокко после отзыва Пейрутона (common/decisions/
+		# MOR protectorate administration decisions (Morocco).txt). Он же
+		# приводит с собой армию: фельдмаршалом Марокко его делает то же
+		# событие (events/MOR resident-general changes (Morocco).txt).
+		country_leader = {
+			desc = MOR_charles_nogues_desc
+			ideology = despotism
+			traits = {
+				mor_french_resident_general
+				mor_pacifier_of_the_rif_wolf
+			}
+			expire = "1965.1.1.1"
+		}
+	}
+
+	### ДЕМОКРАТИЯ — Блок национального действия ###
+
+	MOR_mohammed_sallal_al_fassi = {
+		name = MOR_mohammed_sallal_al_fassi
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MOR/Portrait_Mohammed_Sallal_Al-Fassi.dds"
+			}
+		}
+		country_leader = {
+			desc = MOR_mohammed_sallal_al_fassi_desc
+			ideology = national_conservatism
+			traits = {
+				mor_voice_of_the_nation
+			}
+			expire = "1965.1.1.1"
+		}
+	}
+
+	MOR_mohamed_hassan_el_ouazzani = {
+		name = MOR_mohamed_hassan_el_ouazzani
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MOR/Portrait_Mohamed_Hassan_El_Ouazzani.dds"
+			}
+		}
+		# country_leader = { ... } появится позже, с альтернативным лидером МБНД
+		advisor = {
+			slot = political_advisor
+			idea_token = MOR_ouazzani_minister_of_propaganda
+			allowed = {
+				original_tag = MOR
+			}
+			available = {
+				has_completed_focus = MOR_Prepare_a_replacement_for_the_makhzen
+				NOT = { has_country_leader = { character = MOR_mohamed_hassan_el_ouazzani ruling_only = yes } }
+			}
+			traits = {
+				mor_minister_of_propaganda
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 3
+			}
+		}
+	}
+
+	### КОММУНИЗМ ###
+
+	MOR_leon_sultan = {
+		name = MOR_leon_sultan
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MOR/Portrait_Leon_Sultan.dds"
+			}
+		}
+		country_leader = {
+			desc = MOR_leon_sultan_desc
+			ideology = national_communism
+			traits = {
+				mor_opponent_of_fascism
+				mor_internationalist_ideologue
+			}
+			expire = "1965.1.1.1"
+		}
+	}
+
+	### ФАШИЗМ ###
+
+	MOR_abdelkhalek_torres = {
+		name = MOR_abdelkhalek_torres
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MOR/Portrait_Abdelkhalek_Torres.dds"
+			}
+		}
+		country_leader = {
+			desc = MOR_abdelkhalek_torres_desc
+			ideology = falangism
+			traits = {
+				mor_voice_of_the_maghreb
+			}
+			expire = "1965.1.1.1"
+		}
+		# Министр-подражатель фалангизма (дизайн-док): доступен, пока Торрес не во главе государства
+		advisor = {
+			slot = political_advisor
+			idea_token = MOR_torres_falangist_imitator
+			allowed = {
+				original_tag = MOR
+			}
+			available = {
+				NOT = { has_country_leader = { character = MOR_abdelkhalek_torres ruling_only = yes } }
+			}
+			traits = {
+				mor_falangist_imitator
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 2
+			}
+		}
+	}
+
+}

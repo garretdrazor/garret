@@ -1,0 +1,1137 @@
+# ============================================================
+#  РЕШЕНИЯ БАЛАНСА СИЛ — дизайн-док [MOR], Шаг 7
+#
+#  Файл разбит на блоки с id категорий решений (как в ваниле): решения,
+#  лежащие внутри блока категории, относятся именно к ней.
+#
+#  Шкала MOR_power_balance: минус — Мухаммед V, плюс — генерал-резидент.
+#  «Влияние стороны X %» = шкала ушла на X % в её сторону, поэтому гейты
+#  пишутся через power_balance_value: у султана значение отрицательное.
+#  «Более 25 % в пользу султана» = value < -0.25 (строже), вехи статуса —
+#  «не хуже 25 %» = NOT value > -0.25.
+#  Сдвиг шкалы: решения движения дают 10 %, обмен тултипом — 20 %.
+#  В дизайн-доке результат обмена записан как «-20 % влияния своей стороны» —
+#  это опечатка: шкала всегда уходит в пользу той стороны, чьё решение
+#  нажато, иначе требование «более X % в нашу пользу» противоречило бы эффекту.
+#
+#  «ТУЛТИПЫ ВЛАСТИ» — страновые флаги Марокко, по девять у каждой стороны.
+#  Обмен ими и происходит в решениях ниже: решение за султана снимает флаг
+#  резидента и ставит флаг султана, решение за резидента — наоборот. Одно и
+#  то же полномочие не может принадлежать обеим сторонам, поэтому решение
+#  «за султана» видно, пока полномочие у резидента, и наоборот — список
+#  решений сам меняется по ходу партии («открывающиеся по факту игры»).
+#
+#    НА СТАРТЕ (history/countries/MOR - Morocco.txt):
+#      султан:   исполнительная, законодательная, судебная власть,
+#                духовный лидер Марокко
+#      резидент: право законодательных инициатив, экономика, внутренний
+#                порядок, армия, внешние связи
+#
+#    ТУЛТИПЫ СУЛТАНА:
+#      mor_sultan_executive_power_flag             исполнительная власть
+#      mor_sultan_legislative_power_flag           законодательная власть
+#      mor_sultan_judicial_power_flag              судебная власть
+#      mor_sultan_spiritual_leader_flag            духовный лидер Марокко
+#      mor_sultan_legislative_initiative_flag      право законодательных инициатив
+#      mor_sultan_controls_economy_flag            контроль экономики
+#      mor_sultan_controls_internal_order_flag     контроль внутреннего порядка
+#      mor_sultan_controls_army_flag               контроль армии
+#      mor_sultan_controls_foreign_affairs_flag    контроль внешних связей
+#    ТУЛТИПЫ ГЕНЕРАЛ-РЕЗИДЕНТА:
+#      mor_resident_executive_power_flag           исполнительная власть
+#      mor_resident_legislative_power_flag         законодательная власть
+#      mor_resident_judicial_power_flag            судебная власть
+#      mor_resident_puppet_religious_leader_flag   подконтрольный духовный лидер
+#      mor_resident_legislative_initiative_flag    право законодательных инициатив
+#      mor_resident_controls_economy_flag          контроль экономики
+#      mor_resident_controls_internal_order_flag   контроль внутреннего порядка
+#      mor_resident_controls_army_flag             контроль армии
+#      mor_resident_controls_foreign_affairs_flag  контроль внешних связей
+#
+#  Полный набор тултипов султана нужен вехам статуса: 25 % — стартовые +
+#  право инициативы, 50 % — + экономика и внутренний порядок, 75 % — всё
+#  кроме внешних связей, 100 % — все девять. У Франции своя лесенка:
+#  25 % — стартовые + исполнительная власть, 50 % — + законодательная,
+#  75 % — + судебная, 100 % (аннексия) — все девять тултипов резидента.
+#
+#  Трейт монарха пересчитывается по числу тултипов султана эффектом
+#  MOR_update_monarch_power_trait_effect (common/scripted_effects/
+#  MOR power balance scripted effects (Morocco).txt).
+#
+#  Иконки — ванильные спрайты interface/decisions.gfx.
+# ============================================================
+
+MOR_balance_of_power_category = {
+
+	# --- Движение шкалы: обращение к верующим в мечете (+10 % султану) -----
+	MOR_appeal_to_the_faithful = {
+		icon = GFX_decision_generic_political_rally
+		allowed = {
+			original_tag = MOR
+		}
+		visible = {
+			has_power_balance = { id = MOR_power_balance }
+		}
+		available = {
+			# дальше 100 % в пользу султана шкала не уходит
+			power_balance_value = {
+				id = MOR_power_balance
+				value > -0.99
+			}
+		}
+		cost = 25
+		days_re_enable = 30
+		complete_effect = {
+			add_power_balance_value = {
+				id = MOR_power_balance
+				value = -0.1
+				tooltip_side = MOR_sultan_side
+			}
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				add = -1
+				has_political_power < 100			# ИИ копит запас политвласти
+			}
+		}
+	}
+
+	# --- Движение шкалы: поддержка из метрополии (+10 % резиденту) ---------
+	MOR_request_support_from_metropole = {
+		icon = GFX_decision_generic_civil_support
+		allowed = {
+			original_tag = MOR
+		}
+		visible = {
+			has_power_balance = { id = MOR_power_balance }
+		}
+		available = {
+			# дальше 100 % в пользу резидента шкала не уходит
+			power_balance_value = {
+				id = MOR_power_balance
+				value < 0.99
+			}
+		}
+		cost = 25
+		days_re_enable = 30
+		complete_effect = {
+			add_power_balance_value = {
+				id = MOR_power_balance
+				value = 0.1
+				tooltip_side = MOR_resident_side
+			}
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				add = -1
+				has_political_power < 100
+			}
+		}
+	}
+
+	# --- Тултип: право законодательных инициатив (более 25 % за султана) ----
+	MOR_restore_legislative_initiative = {
+		icon = GFX_decision_generic_political_discourse
+		allowed = {
+			original_tag = MOR
+		}
+		visible = {
+			has_power_balance = { id = MOR_power_balance }
+			has_country_flag = mor_resident_legislative_initiative_flag	# инициатива у резидента
+		}
+		available = {
+			power_balance_value = {
+				id = MOR_power_balance
+				value < -0.25
+			}
+		}
+		cost = 50
+		complete_effect = {
+			add_power_balance_value = {
+				id = MOR_power_balance
+				value = -0.2
+				tooltip_side = MOR_sultan_side
+			}
+			clr_country_flag = mor_resident_legislative_initiative_flag
+			set_country_flag = mor_sultan_legislative_initiative_flag
+			MOR_update_monarch_power_trait_effect = yes
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				add = -1
+				has_political_power < 150
+			}
+		}
+	}
+
+	# --- Тултип: контроль над экономикой (более 50 % за султана) ------------
+	MOR_restore_control_over_economy = {
+		icon = GFX_decision_generic_industry
+		allowed = {
+			original_tag = MOR
+		}
+		visible = {
+			has_power_balance = { id = MOR_power_balance }
+			has_country_flag = mor_resident_controls_economy_flag
+		}
+		available = {
+			power_balance_value = {
+				id = MOR_power_balance
+				value < -0.5
+			}
+		}
+		cost = 50
+		complete_effect = {
+			add_power_balance_value = {
+				id = MOR_power_balance
+				value = -0.2
+				tooltip_side = MOR_sultan_side
+			}
+			clr_country_flag = mor_resident_controls_economy_flag
+			set_country_flag = mor_sultan_controls_economy_flag
+			MOR_update_monarch_power_trait_effect = yes
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				add = -1
+				has_political_power < 150
+			}
+		}
+	}
+
+	# --- Тултип: контроль над внутренним порядком (более 50 % за султана) ---
+	MOR_restore_control_over_internal_order = {
+		icon = GFX_decision_generic_police_action
+		allowed = {
+			original_tag = MOR
+		}
+		visible = {
+			has_power_balance = { id = MOR_power_balance }
+			has_country_flag = mor_resident_controls_internal_order_flag
+		}
+		available = {
+			power_balance_value = {
+				id = MOR_power_balance
+				value < -0.5
+			}
+		}
+		cost = 50
+		complete_effect = {
+			add_power_balance_value = {
+				id = MOR_power_balance
+				value = -0.2
+				tooltip_side = MOR_sultan_side
+			}
+			clr_country_flag = mor_resident_controls_internal_order_flag
+			set_country_flag = mor_sultan_controls_internal_order_flag
+			MOR_update_monarch_power_trait_effect = yes
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				add = -1
+				has_political_power < 150
+			}
+		}
+	}
+
+	# --- Тултип: контроль над армией (более 75 % за султана) ----------------
+	MOR_restore_control_over_army = {
+		icon = GFX_decision_generic_military
+		allowed = {
+			original_tag = MOR
+		}
+		visible = {
+			has_power_balance = { id = MOR_power_balance }
+			has_country_flag = mor_resident_controls_army_flag
+		}
+		available = {
+			power_balance_value = {
+				id = MOR_power_balance
+				value < -0.75
+			}
+		}
+		cost = 50
+		complete_effect = {
+			add_power_balance_value = {
+				id = MOR_power_balance
+				value = -0.2
+				tooltip_side = MOR_sultan_side
+			}
+			clr_country_flag = mor_resident_controls_army_flag
+			set_country_flag = mor_sultan_controls_army_flag
+			MOR_update_monarch_power_trait_effect = yes
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				add = -1
+				has_political_power < 150
+			}
+		}
+	}
+
+	# --- Тултип: контроль над внешними связями (все 100 % за султана) -------
+	MOR_restore_control_over_foreign_affairs = {
+		icon = GFX_decision_generic_political_address
+		allowed = {
+			original_tag = MOR
+		}
+		visible = {
+			has_power_balance = { id = MOR_power_balance }
+			has_country_flag = mor_resident_controls_foreign_affairs_flag
+		}
+		available = {
+			# «более 100 %» из докa = вся шкала в пользу султана (веха 100 %)
+			NOT = {
+				power_balance_value = {
+					id = MOR_power_balance
+					value > -0.9
+				}
+			}
+		}
+		cost = 50
+		complete_effect = {
+			add_power_balance_value = {
+				id = MOR_power_balance
+				value = -0.2
+				tooltip_side = MOR_sultan_side
+			}
+			clr_country_flag = mor_resident_controls_foreign_affairs_flag
+			set_country_flag = mor_sultan_controls_foreign_affairs_flag
+			MOR_update_monarch_power_trait_effect = yes
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				add = -1
+				has_political_power < 150
+			}
+		}
+	}
+
+	# --- Тултип: исполнительная власть (более 25 % за султана) --------------
+	MOR_strip_resident_executive_power = {
+		icon = GFX_decision_generic_political_address
+		allowed = {
+			original_tag = MOR
+		}
+		visible = {
+			has_power_balance = { id = MOR_power_balance }
+			has_country_flag = mor_resident_executive_power_flag	# открывается, когда резидент её захватил
+		}
+		available = {
+			power_balance_value = {
+				id = MOR_power_balance
+				value < -0.25
+			}
+		}
+		cost = 50
+		complete_effect = {
+			add_power_balance_value = {
+				id = MOR_power_balance
+				value = -0.2
+				tooltip_side = MOR_sultan_side
+			}
+			clr_country_flag = mor_resident_executive_power_flag
+			set_country_flag = mor_sultan_executive_power_flag
+			MOR_update_monarch_power_trait_effect = yes
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				add = -1
+				has_political_power < 150
+			}
+		}
+	}
+
+	# --- Тултип: законодательная власть (более 25 % за султана) -------------
+	MOR_strip_resident_legislative_power = {
+		icon = GFX_decision_generic_political_discourse
+		allowed = {
+			original_tag = MOR
+		}
+		visible = {
+			has_power_balance = { id = MOR_power_balance }
+			has_country_flag = mor_resident_legislative_power_flag
+		}
+		available = {
+			power_balance_value = {
+				id = MOR_power_balance
+				value < -0.25
+			}
+		}
+		cost = 50
+		complete_effect = {
+			add_power_balance_value = {
+				id = MOR_power_balance
+				value = -0.2
+				tooltip_side = MOR_sultan_side
+			}
+			clr_country_flag = mor_resident_legislative_power_flag
+			set_country_flag = mor_sultan_legislative_power_flag
+			MOR_update_monarch_power_trait_effect = yes
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				add = -1
+				has_political_power < 150
+			}
+		}
+	}
+
+	# --- Тултип: судебная власть (более 25 % за султана) --------------------
+	MOR_strip_resident_judicial_power = {
+		icon = GFX_decision_generic_police_action
+		allowed = {
+			original_tag = MOR
+		}
+		visible = {
+			has_power_balance = { id = MOR_power_balance }
+			has_country_flag = mor_resident_judicial_power_flag
+		}
+		available = {
+			power_balance_value = {
+				id = MOR_power_balance
+				value < -0.25
+			}
+		}
+		cost = 50
+		complete_effect = {
+			add_power_balance_value = {
+				id = MOR_power_balance
+				value = -0.2
+				tooltip_side = MOR_sultan_side
+			}
+			clr_country_flag = mor_resident_judicial_power_flag
+			set_country_flag = mor_sultan_judicial_power_flag
+			MOR_update_monarch_power_trait_effect = yes
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				add = -1
+				has_political_power < 150
+			}
+		}
+	}
+
+	# --- Тултип: духовный лидер Марокко (более 25 % за султана) -------------
+	MOR_restore_spiritual_leader_title = {
+		icon = GFX_decision_generic_speech
+		allowed = {
+			original_tag = MOR
+		}
+		visible = {
+			has_power_balance = { id = MOR_power_balance }
+			has_country_flag = mor_resident_puppet_religious_leader_flag
+		}
+		available = {
+			power_balance_value = {
+				id = MOR_power_balance
+				value < -0.25
+			}
+		}
+		cost = 50
+		complete_effect = {
+			add_power_balance_value = {
+				id = MOR_power_balance
+				value = -0.2
+				tooltip_side = MOR_sultan_side
+			}
+			clr_country_flag = mor_resident_puppet_religious_leader_flag
+			set_country_flag = mor_sultan_spiritual_leader_flag
+			MOR_update_monarch_power_trait_effect = yes
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				add = -1
+				has_political_power < 150
+			}
+		}
+	}
+
+	# --- Тултип: исполнительная власть (более 25 % за резидента) ------------
+	MOR_strip_sultan_executive_power = {
+		icon = GFX_decision_generic_political_address
+		allowed = {
+			original_tag = MOR
+		}
+		visible = {
+			has_power_balance = { id = MOR_power_balance }
+			has_country_flag = mor_sultan_executive_power_flag	# полномочие ещё у трона
+		}
+		available = {
+			power_balance_value = {
+				id = MOR_power_balance
+				value > 0.25
+			}
+		}
+		cost = 50
+		complete_effect = {
+			add_power_balance_value = {
+				id = MOR_power_balance
+				value = 0.2
+				tooltip_side = MOR_resident_side
+			}
+			clr_country_flag = mor_sultan_executive_power_flag
+			set_country_flag = mor_resident_executive_power_flag
+			MOR_update_monarch_power_trait_effect = yes
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				add = -1
+				has_political_power < 150
+			}
+		}
+	}
+
+	# --- Тултип: законодательная власть (более 50 % за резидента) -----------
+	MOR_strip_sultan_legislative_power = {
+		icon = GFX_decision_generic_political_discourse
+		allowed = {
+			original_tag = MOR
+		}
+		visible = {
+			has_power_balance = { id = MOR_power_balance }
+			has_country_flag = mor_sultan_legislative_power_flag
+		}
+		available = {
+			power_balance_value = {
+				id = MOR_power_balance
+				value > 0.5
+			}
+		}
+		cost = 50
+		complete_effect = {
+			add_power_balance_value = {
+				id = MOR_power_balance
+				value = 0.2
+				tooltip_side = MOR_resident_side
+			}
+			clr_country_flag = mor_sultan_legislative_power_flag
+			set_country_flag = mor_resident_legislative_power_flag
+			MOR_update_monarch_power_trait_effect = yes
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				add = -1
+				has_political_power < 150
+			}
+		}
+	}
+
+	# --- Тултип: судебная власть (более 75 % за резидента) ------------------
+	MOR_strip_sultan_judicial_power = {
+		icon = GFX_decision_generic_intelligence_operation
+		allowed = {
+			original_tag = MOR
+		}
+		visible = {
+			has_power_balance = { id = MOR_power_balance }
+			has_country_flag = mor_sultan_judicial_power_flag
+		}
+		available = {
+			power_balance_value = {
+				id = MOR_power_balance
+				value > 0.75
+			}
+		}
+		cost = 50
+		complete_effect = {
+			add_power_balance_value = {
+				id = MOR_power_balance
+				value = 0.2
+				tooltip_side = MOR_resident_side
+			}
+			clr_country_flag = mor_sultan_judicial_power_flag
+			set_country_flag = mor_resident_judicial_power_flag
+			MOR_update_monarch_power_trait_effect = yes
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				add = -1
+				has_political_power < 150
+			}
+		}
+	}
+
+	# --- Тултип: подконтрольный духовный лидер (все 100 % за резидента) -----
+	MOR_install_puppet_religious_leader = {
+		icon = GFX_decision_generic_speech
+		allowed = {
+			original_tag = MOR
+		}
+		visible = {
+			has_power_balance = { id = MOR_power_balance }
+			has_country_flag = mor_sultan_spiritual_leader_flag
+		}
+		available = {
+			# «более 100 %» из докa = вся шкала в пользу резидента (веха 100 %)
+			NOT = {
+				power_balance_value = {
+					id = MOR_power_balance
+					value < 0.9
+				}
+			}
+		}
+		cost = 50
+		complete_effect = {
+			add_power_balance_value = {
+				id = MOR_power_balance
+				value = 0.2
+				tooltip_side = MOR_resident_side
+			}
+			clr_country_flag = mor_sultan_spiritual_leader_flag
+			set_country_flag = mor_resident_puppet_religious_leader_flag
+			MOR_update_monarch_power_trait_effect = yes
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				add = -1
+				has_political_power < 150
+			}
+		}
+	}
+
+	# --- Тултип: право законодательных инициатив (более 25 % за резидента) --
+	MOR_strip_sultan_legislative_initiative = {
+		icon = GFX_decision_generic_political_discourse
+		allowed = {
+			original_tag = MOR
+		}
+		visible = {
+			has_power_balance = { id = MOR_power_balance }
+			has_country_flag = mor_sultan_legislative_initiative_flag
+		}
+		available = {
+			power_balance_value = {
+				id = MOR_power_balance
+				value > 0.25
+			}
+		}
+		cost = 50
+		complete_effect = {
+			add_power_balance_value = {
+				id = MOR_power_balance
+				value = 0.2
+				tooltip_side = MOR_resident_side
+			}
+			clr_country_flag = mor_sultan_legislative_initiative_flag
+			set_country_flag = mor_resident_legislative_initiative_flag
+			MOR_update_monarch_power_trait_effect = yes
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				add = -1
+				has_political_power < 150
+			}
+		}
+	}
+
+	# --- Тултип: контроль над экономикой (более 25 % за резидента) ----------
+	MOR_strip_sultan_control_over_economy = {
+		icon = GFX_decision_generic_industry
+		allowed = {
+			original_tag = MOR
+		}
+		visible = {
+			has_power_balance = { id = MOR_power_balance }
+			has_country_flag = mor_sultan_controls_economy_flag
+		}
+		available = {
+			power_balance_value = {
+				id = MOR_power_balance
+				value > 0.25
+			}
+		}
+		cost = 50
+		complete_effect = {
+			add_power_balance_value = {
+				id = MOR_power_balance
+				value = 0.2
+				tooltip_side = MOR_resident_side
+			}
+			clr_country_flag = mor_sultan_controls_economy_flag
+			set_country_flag = mor_resident_controls_economy_flag
+			MOR_update_monarch_power_trait_effect = yes
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				add = -1
+				has_political_power < 150
+			}
+		}
+	}
+
+	# --- Тултип: контроль над внутренним порядком (более 25 % за резидента) -
+	MOR_strip_sultan_control_over_internal_order = {
+		icon = GFX_decision_generic_police_action
+		allowed = {
+			original_tag = MOR
+		}
+		visible = {
+			has_power_balance = { id = MOR_power_balance }
+			has_country_flag = mor_sultan_controls_internal_order_flag
+		}
+		available = {
+			power_balance_value = {
+				id = MOR_power_balance
+				value > 0.25
+			}
+		}
+		cost = 50
+		complete_effect = {
+			add_power_balance_value = {
+				id = MOR_power_balance
+				value = 0.2
+				tooltip_side = MOR_resident_side
+			}
+			clr_country_flag = mor_sultan_controls_internal_order_flag
+			set_country_flag = mor_resident_controls_internal_order_flag
+			MOR_update_monarch_power_trait_effect = yes
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				add = -1
+				has_political_power < 150
+			}
+		}
+	}
+
+	# --- Тултип: контроль над армией (более 25 % за резидента) --------------
+	MOR_strip_sultan_control_over_army = {
+		icon = GFX_decision_generic_military
+		allowed = {
+			original_tag = MOR
+		}
+		visible = {
+			has_power_balance = { id = MOR_power_balance }
+			has_country_flag = mor_sultan_controls_army_flag
+		}
+		available = {
+			power_balance_value = {
+				id = MOR_power_balance
+				value > 0.25
+			}
+		}
+		cost = 50
+		complete_effect = {
+			add_power_balance_value = {
+				id = MOR_power_balance
+				value = 0.2
+				tooltip_side = MOR_resident_side
+			}
+			clr_country_flag = mor_sultan_controls_army_flag
+			set_country_flag = mor_resident_controls_army_flag
+			MOR_update_monarch_power_trait_effect = yes
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				add = -1
+				has_political_power < 150
+			}
+		}
+	}
+
+	# --- Тултип: контроль над внешними связями (более 25 % за резидента) ----
+	MOR_strip_sultan_control_over_foreign_affairs = {
+		icon = GFX_decision_generic_army_support
+		allowed = {
+			original_tag = MOR
+		}
+		visible = {
+			has_power_balance = { id = MOR_power_balance }
+			has_country_flag = mor_sultan_controls_foreign_affairs_flag
+		}
+		available = {
+			power_balance_value = {
+				id = MOR_power_balance
+				value > 0.25
+			}
+		}
+		cost = 50
+		complete_effect = {
+			add_power_balance_value = {
+				id = MOR_power_balance
+				value = 0.2
+				tooltip_side = MOR_resident_side
+			}
+			clr_country_flag = mor_sultan_controls_foreign_affairs_flag
+			set_country_flag = mor_resident_controls_foreign_affairs_flag
+			MOR_update_monarch_power_trait_effect = yes
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				add = -1
+				has_political_power < 150
+			}
+		}
+	}
+
+	# --- Веха 25 % в пользу Мухаммеда V: статус марионетки -----------------
+	# Стартовые тултипы трона + право законодательных инициатив.
+	MOR_demand_puppet_status = {
+		icon = GFX_decision_generic_political_discourse
+		allowed = {
+			original_tag = MOR
+		}
+		visible = {
+			has_power_balance = { id = MOR_power_balance }
+			NOT = {
+				power_balance_value = {
+					id = MOR_power_balance
+					value > -0.25
+				}
+			}
+		}
+		available = {
+			is_subject = yes
+			has_country_flag = mor_sultan_executive_power_flag
+			has_country_flag = mor_sultan_legislative_power_flag
+			has_country_flag = mor_sultan_judicial_power_flag
+			has_country_flag = mor_sultan_spiritual_leader_flag
+			has_country_flag = mor_sultan_legislative_initiative_flag
+		}
+		cost = 50
+		fire_only_once = yes
+		complete_effect = {
+			overlord = {
+				set_autonomy = {
+					target = ROOT
+					autonomy_state = autonomy_puppet
+				}
+			}
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	# --- Веха 50 % в пользу Мухаммеда V: колониальный статус --------------
+	# Стартовые тултипы + инициатива, экономика и внутренний порядок.
+	MOR_demand_colonial_status = {
+		icon = GFX_decision_generic_political_discourse
+		allowed = {
+			original_tag = MOR
+		}
+		visible = {
+			has_power_balance = { id = MOR_power_balance }
+			NOT = {
+				power_balance_value = {
+					id = MOR_power_balance
+					value > -0.5
+				}
+			}
+		}
+		available = {
+			is_subject = yes
+			has_country_flag = mor_sultan_executive_power_flag
+			has_country_flag = mor_sultan_legislative_power_flag
+			has_country_flag = mor_sultan_judicial_power_flag
+			has_country_flag = mor_sultan_spiritual_leader_flag
+			has_country_flag = mor_sultan_legislative_initiative_flag
+			has_country_flag = mor_sultan_controls_economy_flag
+			has_country_flag = mor_sultan_controls_internal_order_flag
+		}
+		cost = 75
+		fire_only_once = yes
+		complete_effect = {
+			overlord = {
+				set_autonomy = {
+					target = ROOT
+					autonomy_state = autonomy_colony
+				}
+			}
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	# --- Веха 75 % в пользу Мухаммеда V: статус доминиона ------------------
+	# Все тултипы власти султана, кроме «контроль внешних связей».
+	MOR_demand_dominion_status = {
+		icon = GFX_decision_generic_political_address
+		allowed = {
+			original_tag = MOR
+		}
+		visible = {
+			has_power_balance = { id = MOR_power_balance }
+			NOT = {
+				power_balance_value = {
+					id = MOR_power_balance
+					value > -0.75
+				}
+			}
+		}
+		available = {
+			is_subject = yes
+			has_country_flag = mor_sultan_executive_power_flag
+			has_country_flag = mor_sultan_legislative_power_flag
+			has_country_flag = mor_sultan_judicial_power_flag
+			has_country_flag = mor_sultan_spiritual_leader_flag
+			has_country_flag = mor_sultan_legislative_initiative_flag
+			has_country_flag = mor_sultan_controls_economy_flag
+			has_country_flag = mor_sultan_controls_internal_order_flag
+			has_country_flag = mor_sultan_controls_army_flag
+		}
+		cost = 100
+		fire_only_once = yes
+		complete_effect = {
+			overlord = {
+				set_autonomy = {
+					target = ROOT
+					autonomy_state = autonomy_dominion
+				}
+			}
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	# --- Веха 100 % в пользу Мухаммеда V: обретение свободы ----------------
+	# Все девять тултипов власти султана, включая внешние связи.
+	MOR_proclaim_independence = {
+		icon = GFX_decision_generic_political_rally
+		allowed = {
+			original_tag = MOR
+		}
+		visible = {
+			has_power_balance = { id = MOR_power_balance }
+			power_balance_value = {
+				id = MOR_power_balance
+				value < -0.9
+			}
+		}
+		available = {
+			is_subject = yes
+			has_country_flag = mor_sultan_executive_power_flag
+			has_country_flag = mor_sultan_legislative_power_flag
+			has_country_flag = mor_sultan_judicial_power_flag
+			has_country_flag = mor_sultan_spiritual_leader_flag
+			has_country_flag = mor_sultan_legislative_initiative_flag
+			has_country_flag = mor_sultan_controls_economy_flag
+			has_country_flag = mor_sultan_controls_internal_order_flag
+			has_country_flag = mor_sultan_controls_army_flag
+			has_country_flag = mor_sultan_controls_foreign_affairs_flag
+		}
+		cost = 150
+		fire_only_once = yes
+		priority = 99
+		complete_effect = {
+			overlord = {
+				set_autonomy = {
+					target = ROOT
+					autonomy_state = autonomy_free
+				}
+			}
+			remove_power_balance = { id = MOR_power_balance }
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+}
+
+# ====== Категория решений Франции: понижение статуса Марокко ======
+# Гейтится тултипами генерал-резидента: 25 % — пять стартовых + исполнительная
+# власть, 50 % — + законодательная, 75 % — + судебная, 100 % — все девять.
+
+MOR_french_colonial_policy_category = {
+
+	# --- Веха 25 % в пользу генерал-резидента: понижение до колонии --------
+	MOR_impose_colonial_regime = {
+		icon = GFX_decision_generic_army_support
+		allowed = {
+			tag = FRA
+		}
+		visible = {
+			MOR = {
+				exists = yes
+				has_power_balance = { id = MOR_power_balance }
+				NOT = {
+					power_balance_value = {
+						id = MOR_power_balance
+						value < 0.25
+					}
+				}
+			}
+		}
+		available = {
+			MOR = {
+				is_subject_of = FRA
+				has_country_flag = mor_resident_legislative_initiative_flag
+				has_country_flag = mor_resident_controls_economy_flag
+				has_country_flag = mor_resident_controls_internal_order_flag
+				has_country_flag = mor_resident_controls_army_flag
+				has_country_flag = mor_resident_controls_foreign_affairs_flag
+				has_country_flag = mor_resident_executive_power_flag
+			}
+		}
+		cost = 75
+		fire_only_once = yes
+		complete_effect = {
+			set_autonomy = {
+				target = MOR
+				autonomy_state = autonomy_colony
+			}
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	# --- Веха 50 % в пользу генерал-резидента: понижение до марионетки -----
+	MOR_take_over_legislation = {
+		icon = GFX_decision_generic_army_support
+		allowed = {
+			tag = FRA
+		}
+		visible = {
+			MOR = {
+				exists = yes
+				has_power_balance = { id = MOR_power_balance }
+				NOT = {
+					power_balance_value = {
+						id = MOR_power_balance
+						value < 0.5
+					}
+				}
+			}
+		}
+		available = {
+			MOR = {
+				is_subject_of = FRA
+				has_country_flag = mor_resident_legislative_initiative_flag
+				has_country_flag = mor_resident_controls_economy_flag
+				has_country_flag = mor_resident_controls_internal_order_flag
+				has_country_flag = mor_resident_controls_army_flag
+				has_country_flag = mor_resident_controls_foreign_affairs_flag
+				has_country_flag = mor_resident_executive_power_flag
+				has_country_flag = mor_resident_legislative_power_flag
+			}
+		}
+		cost = 100
+		fire_only_once = yes
+		complete_effect = {
+			set_autonomy = {
+				target = MOR
+				autonomy_state = autonomy_puppet
+			}
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	# --- Веха 75 %: понижение до интегрированной марионетки ----------------
+	MOR_establish_direct_administration = {
+		icon = GFX_decision_generic_army_support
+		allowed = {
+			tag = FRA
+		}
+		visible = {
+			MOR = {
+				exists = yes
+				has_power_balance = { id = MOR_power_balance }
+				NOT = {
+					power_balance_value = {
+						id = MOR_power_balance
+						value < 0.75
+					}
+				}
+			}
+		}
+		available = {
+			MOR = {
+				is_subject_of = FRA
+				has_country_flag = mor_resident_legislative_initiative_flag
+				has_country_flag = mor_resident_controls_economy_flag
+				has_country_flag = mor_resident_controls_internal_order_flag
+				has_country_flag = mor_resident_controls_army_flag
+				has_country_flag = mor_resident_controls_foreign_affairs_flag
+				has_country_flag = mor_resident_executive_power_flag
+				has_country_flag = mor_resident_legislative_power_flag
+				has_country_flag = mor_resident_judicial_power_flag
+			}
+		}
+		cost = 150
+		fire_only_once = yes
+		complete_effect = {
+			set_autonomy = {
+				target = MOR
+				autonomy_state = autonomy_integrated_puppet
+			}
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	# --- Веха 100 % в пользу генерал-резидента: поглощение Марокко ---------
+	MOR_annex_morocco = {
+		icon = GFX_decision_generic_army_support
+		allowed = {
+			tag = FRA
+		}
+		visible = {
+			MOR = {
+				exists = yes
+				has_power_balance = { id = MOR_power_balance }
+				power_balance_value = {
+					id = MOR_power_balance
+					value > 0.9
+				}
+			}
+		}
+		available = {
+			MOR = {
+				is_subject_of = FRA
+				has_country_flag = mor_resident_legislative_initiative_flag
+				has_country_flag = mor_resident_controls_economy_flag
+				has_country_flag = mor_resident_controls_internal_order_flag
+				has_country_flag = mor_resident_controls_army_flag
+				has_country_flag = mor_resident_controls_foreign_affairs_flag
+				has_country_flag = mor_resident_executive_power_flag
+				has_country_flag = mor_resident_legislative_power_flag
+				has_country_flag = mor_resident_judicial_power_flag
+				has_country_flag = mor_resident_puppet_religious_leader_flag
+			}
+		}
+		cost = 200
+		fire_only_once = yes
+		priority = 99
+		complete_effect = {
+			MOR = {
+				remove_power_balance = { id = MOR_power_balance }
+			}
+			annex_country = {
+				target = MOR
+				transfer_troops = yes
+			}
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+}
+

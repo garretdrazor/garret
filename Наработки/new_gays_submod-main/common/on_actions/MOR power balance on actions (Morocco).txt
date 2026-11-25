@@ -1,0 +1,71 @@
+# ============================================================
+#  СЛУЖЕБНЫЕ СОБЫТИЯ БАЛАНСА СИЛ — дизайн-док [MOR], Шаг 7
+#
+#  Категория решений MOR_balance_of_power_category исчезает сама (visible),
+#  но сама шкала продолжала бы давать модификаторы, поэтому при независимости
+#  Марокко или приходе коммунистов к власти баланс сил снимается здесь.
+#  on_monthly_MOR — страновой хук (перечень хуков: common/on_actions/
+#  _documentation.md), область выполнения — Марокко. Любой хук обязан стоять
+#  внутри блока on_actions = { }, иначе файл не загружается вовсе.
+# ============================================================
+
+on_actions = {
+
+	on_monthly_MOR = {
+		effect = {
+			if = {
+				limit = {
+					has_power_balance = { id = MOR_power_balance }
+				}
+				if = {
+					limit = {
+						OR = {
+							is_subject = no					# Марокко независимо
+							has_government = communism		# к власти пришли коммунисты
+						}
+					}
+					remove_power_balance = { id = MOR_power_balance }
+				}
+				# Страховка: трейт монарха всегда соответствует числу тултипов
+				# власти султана (решения обмена тултипами зовут тот же эффект).
+				MOR_update_monarch_power_trait_effect = yes
+			}
+
+			# ------------------------------------------------------------
+			#  Ноябрьский политический кризис — дизайн-док [MOR], Шаг 9.
+			#  mor_dated.10 дал вариант «Потянем с ответом», когда не пройден
+			#  ни один из фокусов по Марокканскому комитету действий. Развязка
+			#  приходит сама, как только игрок завершает один из них:
+			#    «Противостоять МКД»    -> через 21 день аресты лидеров (mor_dated.11)
+			#    «Оказать поддержку МКД» -> через 7 дней приглашение к переговорам
+			#                               (mor_dated.12)
+			# ------------------------------------------------------------
+			if = {
+				limit = {
+					has_power_balance = { id = MOR_power_balance }	# цепочка живёт, пока Марокко под протекторатом
+					has_country_flag = mor_mac_crisis_waiting_flag
+					NOT = {
+						has_country_flag = mor_mac_crisis_answered_flag
+					}
+				}
+				if = {
+					limit = {
+						has_completed_focus = MOR_Oppose_the_Moroccan_Action_Committee
+					}
+					set_country_flag = mor_mac_crisis_answered_flag
+					clr_country_flag = mor_mac_crisis_waiting_flag
+					country_event = { id = mor_dated.11 days = 21 }
+				}
+				else_if = {
+					limit = {
+						has_completed_focus = MOR_Support_the_Moroccan_Action_Committee
+					}
+					set_country_flag = mor_mac_crisis_answered_flag
+					clr_country_flag = mor_mac_crisis_waiting_flag
+					country_event = { id = mor_dated.12 days = 7 }
+				}
+			}
+		}
+	}
+
+}

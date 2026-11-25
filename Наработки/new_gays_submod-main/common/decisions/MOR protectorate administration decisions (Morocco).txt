@@ -1,0 +1,118 @@
+# ============================================================
+#  РЕШЕНИЯ ФРАНЦИИ — РАБОТА С ПРОТЕКТОРАТАМИ — дизайн-док [MOR], Шаг 10
+#
+#  Категория: MOR_protectorate_administration_category
+#  (common/decisions/categories/MOR protectorate administration categories
+#  (Morocco).txt). Решения Франции о смене генерал-резидента Марокко.
+#
+#  КАК ЭТО РАБОТАЕТ
+#  * Генерал-резидент в Марокко — это лидер правящей «авторитарной»
+#    (neutrality) силы протектората, поэтому сменяется он наймом другого
+#    персонажа: recruit_character = MOR_... (common/characters/
+#    MOR characters (Morocco).txt), как и на старте в
+#    history/countries/MOR - Morocco.txt.
+#  * Узнать, кто сейчас сидит в резидентуре, надёжнее всего по трейту
+#    правителя: mor_soft_character — Понсо, mor_resident_satrap — Пейрутон,
+#    mor_french_resident_general — Ногес (common/country_leader/
+#    MOR traits (Morocco).txt).
+#  * Решение лишь открывает событие: одно и то же событие приходит и
+#    Франции, и Марокко, а варианты в нём поделены по странам
+#    (events/MOR resident-general changes (Morocco).txt).
+#  * «-10 % влияния султана» = шкала MOR_power_balance уходит на +0.1
+#    в пользу генерал-резидента (минус — Мухаммед V, плюс — резидент).
+#  * «-100 очков автономии» = add_autonomy_score = -100 у Марокко.
+#
+#  ИСТОРИЧЕСКАЯ ОПОРКА
+#  22 марта 1936 — Париж снимает мягкосердечного Огюста Анри Понсо и ставит
+#  Марселя Пейрутона, «прославившегося» подавлением националистов в Тунисе.
+#  16 сентября 1936 — Пейрутона, «резидента-сатрапа», меняют на более
+#  гибкого Шарля Ногеса, участника Рифской кампании.
+#  Даты в решении не гейтят его: категория открыта с самого старта, игрок
+#  сам решает, когда менять резидентов.
+#
+#  Иконки — ванильные спрайты interface/decisions.gfx.
+# ============================================================
+
+MOR_protectorate_administration_category = {
+
+	# --- Смена Понсо на Пейрутона (исторически 22 марта 1936) -------------
+	MOR_recall_ponsot = {
+		icon = GFX_decision_generic_colonial_administration
+		allowed = {
+			tag = FRA
+		}
+		visible = {
+			MOR = {
+				exists = yes
+				is_subject_of = FRA
+				has_country_leader_with_trait = mor_soft_character
+			}
+		}
+		available = {
+			MOR = {
+				exists = yes
+				is_subject_of = FRA
+				has_country_leader_with_trait = mor_soft_character
+			}
+		}
+		cost = 25
+		fire_only_once = yes
+		complete_effect = {
+			hidden_effect = {
+				log = "[GetDateText]: MOR MOR_recall_ponsot -> отстраняем Понсо, событие для Франции и Марокко"
+				country_event = { id = mor_resident.1 }
+				MOR = {
+					country_event = { id = mor_resident.1 }
+				}
+			}
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				add = -1
+				has_political_power < 60			# ИИ не тратит последние силы
+			}
+		}
+	}
+
+	# --- Смена Пейрутона на Ногеса (исторически 16 сентября 1936) ---------
+	MOR_recall_peyrouton = {
+		icon = GFX_decision_generic_army_support
+		allowed = {
+			tag = FRA
+		}
+		visible = {
+			MOR = {
+				exists = yes
+				is_subject_of = FRA
+				has_country_leader_with_trait = mor_resident_satrap
+			}
+		}
+		available = {
+			MOR = {
+				exists = yes
+				is_subject_of = FRA
+				has_country_leader_with_trait = mor_resident_satrap
+			}
+		}
+		cost = 25
+		fire_only_once = yes
+		complete_effect = {
+			hidden_effect = {
+				log = "[GetDateText]: MOR MOR_recall_peyrouton -> отстраняем Пейрутона, событие для Франции и Марокко"
+				country_event = { id = mor_resident.2 }
+				MOR = {
+					country_event = { id = mor_resident.2 }
+				}
+			}
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				add = -1
+				has_political_power < 60			# ИИ не тратит последние силы
+			}
+		}
+	}
+
+}

@@ -1,0 +1,214 @@
+﻿add_namespace = mor_resident
+# ============================================================
+#  СМЕНА ГЕНЕРАЛ-РЕЗИДЕНТОВ МАРОККО — дизайн-док [MOR], Шаг 10
+#
+#  События решений категории «Деятельность специального управления
+#  протекторатами» (common/decisions/MOR protectorate administration
+#  decisions (Morocco).txt): Париж отзывает одного генерал-резидента и
+#  ставит другого.
+#
+#  СОГЛАШЕНИЯ ФАЙЛА
+#  * Одно и то же событие приходит Франции и Марокко: варианты поделены по
+#    странам (trigger = { tag = FRA } и trigger = { original_tag = MOR }),
+#    поэтому каждая сторона жмёт собственный ответ, а механика правит только
+#    та сторона, которой она касается.
+#  * События не датированные: их вызывает решение, а решение fire_only_once,
+#    так что приходит оно ровно один раз и без задержки.
+#  * «-10 % влияния султана» = add_power_balance_value = +0.1 (минус —
+#    Мухаммед V, плюс — генерал-резидент), как в Шагах 7 и 9.
+#  * «-100 очков автономии» = add_autonomy_score = -100 у Марокко.
+#  * Новый генерал-резидент = новый лидер авторитарной (neutrality) силы
+#    протектората: роль правителя выдаётся явно — add_country_leader_role с
+#    promote_leader = yes, после чего у старого резидента роль снимается
+#    remove_country_leader_role. Персонажи лежат в common/characters/
+#    MOR characters (Morocco).txt, где у обоих уже прописаны country_leader
+#    блоки и трейты из common/country_leader/MOR traits (Morocco).txt.
+#  * Ногес приходит в Марокко и как военный: в базовой игре и NWR его нет во
+#    французском генералитете, поэтому «ушёл от Франции и перешёл в Марокко»
+#    оформлено ролью фельдмаршала у самого Марокко (add_field_marshal_role +
+#    set_nationality).
+#
+#  ФЛАГИ СОБЫТИЙ (для будущих шагов):
+#    Марокко:
+#      mor_ponsot_recalled_flag       Понсо отозван, резидентом стал Пейрутон
+#      mor_peyrouton_recalled_flag    Пейрутон отозван, резидентом стал Ногес
+#    Франция:
+#      fra_recall_ponsot_flag         отзыв Понсо оформлен Парижем
+#      fra_recall_peyrouton_flag      отзыв Пейрутона оформлен Парижем
+#  * Оба ивента лежат в блоках country_event = { id = mor_resident.N ... }. Без
+#    обёртки и id движок ивент не регистриует ("Unexpected token: mor_resident.N").
+#  * Поле icon у ивента невалидно, картинка одна — picture = из NWR
+#    (gfx/event_pictures); оба ивента помечают себя в логах через immediate.
+#  * Ивенты is_triggered_only = yes: их вызывает решение из common/decisions/
+#    MOR protectorate administration decisions (Morocco).txt, а решение
+#    fire_only_once, так что ивент приходит ровно один раз.
+
+# ============================================================
+
+
+# --- 1. Огюст Анри Понсо снят с поста генерал-резидента Марокко ---
+country_event = {
+	id = mor_resident.1
+	picture = GFX_report_event_generic_sign_treaty1
+	title = mor_resident.1.t
+	desc = mor_resident.1.d
+	is_triggered_only = yes
+
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event mor_resident.1" }
+
+	trigger = {
+		OR = {
+			tag = FRA
+			original_tag = MOR
+		}
+	}
+
+	# --- Ответ Франции ---
+	option = {
+		name = mor_resident.1.a
+		trigger = {
+			tag = FRA
+		}
+		set_country_flag = fra_recall_ponsot_flag
+		custom_effect_tooltip = mor_resident.1.a.tt
+		ai_chance = {
+			base = 1
+		}
+	}
+
+	# --- Ответ Марокко ---
+	option = {
+		name = mor_resident.1.b
+		trigger = {
+			original_tag = MOR
+		}
+		set_country_flag = mor_ponsot_recalled_flag
+		# «-10 % влияния султана»: шкала уходит к генерал-резиденту
+		add_power_balance_value = {
+			id = MOR_power_balance
+			value = 0.1
+			tooltip_side = MOR_resident_side
+		}
+		# «-100 очков автономии»
+		add_autonomy_score = {
+			value = -100
+			localization = mor_autonomy_reason_peyrouton
+		}
+		# Пейрутон возглавляет авторитарную силу протектората: роль
+		# правителя ему выдаётся явно и с повышением (как в ваниле), а не
+		# только наймом.
+		recruit_character = MOR_bernard_marcel_peyrouton
+		add_country_leader_role = {
+			character = MOR_bernard_marcel_peyrouton
+			promote_leader = yes
+			country_leader = {
+				ideology = despotism
+				expire = "1965.1.1.1"
+				traits = {
+					mor_resident_satrap
+				}
+			}
+		}
+		# Понсо отозван в метрополию и больше не правит Марокко
+		remove_country_leader_role = {
+			character = MOR_auguste_henri_ponsot
+			ideology = despotism
+		}
+		hidden_effect = {
+			log = "[GetDateText]: MOR mor_resident.1 -> Понсо отозван, Марокко возглавил Пейрутон"
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+# --- 2. Пейрутон отстранён от управления Марокко ---
+country_event = {
+	id = mor_resident.2
+	picture = GFX_report_event_soldiers_marching
+	title = mor_resident.2.t
+	desc = mor_resident.2.d
+	is_triggered_only = yes
+
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event mor_resident.2" }
+
+	trigger = {
+		OR = {
+			tag = FRA
+			original_tag = MOR
+		}
+	}
+
+	# --- Ответ Франции ---
+	option = {
+		name = mor_resident.2.a
+		trigger = {
+			tag = FRA
+		}
+		set_country_flag = fra_recall_peyrouton_flag
+		custom_effect_tooltip = mor_resident.2.a.tt
+		ai_chance = {
+			base = 1
+		}
+	}
+
+	# --- Ответ Марокко ---
+	option = {
+		name = mor_resident.2.b
+		trigger = {
+			original_tag = MOR
+		}
+		set_country_flag = mor_peyrouton_recalled_flag
+		# «-10 % влияния султана»: за резидентом снова армия
+		add_power_balance_value = {
+			id = MOR_power_balance
+			value = 0.1
+			tooltip_side = MOR_resident_side
+		}
+		# Ногес возглавляет авторитарную силу протектората
+		recruit_character = MOR_charles_nogues
+		add_country_leader_role = {
+			character = MOR_charles_nogues
+			promote_leader = yes
+			country_leader = {
+				ideology = despotism
+				expire = "1965.1.1.1"
+				traits = {
+					mor_french_resident_general
+					mor_pacifier_of_the_rif_wolf
+				}
+			}
+		}
+		# Пейрутон отозван в метрополию и больше не правит Марокко
+		remove_country_leader_role = {
+			character = MOR_bernard_marcel_peyrouton
+			ideology = despotism
+		}
+		# ...и уводит свою карьеру из французской армии в марокканскую:
+		# Ногес становится фельдмаршалом Марокко (в базовой игре и NWR его во
+		# французском генералитете нет, поэтому set_nationality здесь страховка
+		# на случай, если другой мод сделает его французом).
+		custom_effect_tooltip = mor_resident.2.b.tt
+		MOR_charles_nogues = {
+			set_nationality = MOR
+			add_field_marshal_role = {
+				skill = 3
+				attack_skill = 3
+				defense_skill = 4
+				planning_skill = 3
+				logistics_skill = 2
+				traits = {
+					commando
+					infantry_officer
+				}
+			}
+		}
+		hidden_effect = {
+			log = "[GetDateText]: MOR mor_resident.2 -> Пейрутон отозван, Марокко возглавил Ногес"
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}

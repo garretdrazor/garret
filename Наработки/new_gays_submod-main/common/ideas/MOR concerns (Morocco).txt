@@ -1,0 +1,139 @@
+# ============================================================
+#  КОНЦЕРНЫ МАРОККО — промышленные концерны протектората (1936)
+#  Группа industrial_concern: каждый концерт покупается во вкладке
+#  «Концерны» за политическую власть, модификаторы носит трейт.
+#  Трейты: common/country_leader/MOR traits (Morocco).txt
+#  Generic-концерны для Марокко отключены в common/ideas/00 generic ideas.txt
+#  ВАЖНО: трейты industrial_concern / electronics_concern из common/country_leader/00_traits.txt
+#  здесь НЕ используются — они выдают ванильные модификаторы (+6 угля, -10% потребления
+#  энергии фабриками), которые Марокко не подходят; слоты concerns обходятся собственными
+#  трейтами, а замена generic-идей обеспечена явным allowed-блоком с # NW-MOR.
+# ============================================================
+
+ideas = {
+
+	industrial_concern = {
+
+		# --- Шерифское управление фосфатов (Office Chérifien des Phosphates) ---
+		MOR_office_cherifien_des_phosphates = {
+			picture = generic_industrial_concern_2
+
+			allowed = {
+				original_tag = MOR
+			}
+
+			available = {
+				NOT = { has_completed_focus = MOR_Nationalization_of_the_phosphate_companies }
+			}
+
+			removal_cost = -1
+			cost = 150
+
+			research_bonus = {
+				industry = 0.10			# скорость исследования промышленности +10%
+			}
+
+			traits = { mor_phosphate_monopoly }
+
+			ai_will_do = {
+				factor = 30
+			}
+		}
+
+		# --- Железнодорожная компания Марокко (Compagnie des chemins de fer du Maroc) ---
+		MOR_chemins_de_fer_du_maroc = {
+			picture = SOV_soviet_railways
+
+			allowed = {
+				original_tag = MOR
+			}
+
+			removal_cost = -1
+			cost = 150
+
+			traits = { mor_railway_company }
+
+			ai_will_do = {
+				factor = 25
+			}
+		}
+
+		# --- Угледобывающие предприятия Джерады (Charbonnages de Jerada) ---
+		MOR_charbonnages_de_jerada = {
+			picture = generic_industrial_concern_1
+
+			allowed = {
+				original_tag = MOR
+			}
+
+			removal_cost = -1
+			cost = 150
+
+			traits = { mor_coal_mines_of_jerada }
+
+			ai_will_do = {
+				factor = 25
+			}
+		}
+
+		# --- Горнодобывающая компания Зеллиджи (Société des Mines de Zellidja) ---
+		MOR_societe_des_mines_de_zellidja = {
+			picture = generic_exploit_mines
+
+			allowed = {
+				original_tag = MOR
+			}
+
+			removal_cost = -1
+			cost = 150
+
+			traits = { mor_zellidja_mining_company }
+
+			ai_will_do = {
+				factor = 20
+			}
+		}
+
+		# --- Североафриканское объединение (Omnium Nord-Africain) ---
+		MOR_omnium_nord_africain = {
+			picture = generic_industrial_concern_3
+
+			allowed = {
+				original_tag = MOR
+			}
+
+			removal_cost = -1
+			cost = 200
+
+			traits = { mor_omnium_nord_africain_construction }
+
+			ai_will_do = {
+				factor = 30
+			}
+		}
+
+		# --- Электроэнергия Марокко (Énergie Électrique du Maroc) ---
+		MOR_energie_electrique_du_maroc = {
+			picture = english_electric
+
+			allowed = {
+				original_tag = MOR
+			}
+
+			removal_cost = -1
+			cost = 150
+
+			research_bonus = {
+				electronics = 0.15
+			}
+
+			traits = { mor_energie_electrique_du_maroc_power }
+
+			ai_will_do = {
+				factor = 25
+			}
+		}
+
+	}
+
+}

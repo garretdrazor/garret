@@ -1,0 +1,901 @@
+# ============================================================
+#  МИНИСТРЫ МАРОККО — политические советники (дизайн-док, Шаг 5)
+#  Трейты: common/country_leader/MOR traits (Morocco).txt
+#  Generic-концерны (industrial / electronics) для Марокко отключены в
+#  common/ideas/00 generic ideas.txt (метка NW-MOR) — вместо них 6 своих
+#  концерна в common/ideas/MOR concerns (Morocco).txt; generic-ВПО отключены в
+#  00_generic_organization.txt (метка NW-MOR) — вместо них свои ВПО в
+#  MOR_organization.txt (include дерева generic-аналога).
+#  Generic-министры и generic-конструкторы НЕ отключены: своих replacements
+#  для всех слотов нет, поэтому Марокко получает и generic-кандидатов.
+#  Портреты — временные заглушки из пула NWR (SAU / EGY / IRQ / FRA / MOR).
+# ============================================================
+
+characters = {
+
+	# --- Мухаммад аль-Мукри: нелояльный великий визирь (со старта, не убираемый) ---
+	MOR_muhammad_al_muqri = {
+		name = MOR_muhammad_al_muqri
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SAU/Portrait_Arabia_Generic_NW_1.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MOR_muhammad_al_muqri
+			can_be_fired = no
+			allowed = {
+				original_tag = MOR
+			}
+			traits = {
+				mor_disloyal_grand_vizier
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 2
+			}
+		}
+	}
+
+	# --- Тайеб аль-Мукри: министр финансов махзена (пока махзен не заменён) ---
+	MOR_taieb_al_muqri = {
+		name = MOR_taieb_al_muqri
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SAU/Portrait_Arabia_Generic_NW_2.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MOR_taieb_al_muqri
+			allowed = {
+				original_tag = MOR
+			}
+			available = {
+				NOT = { has_completed_focus = MOR_Prepare_a_replacement_for_the_makhzen }
+			}
+			traits = {
+				mor_makhzen_financier
+			}
+			cost = 75
+			ai_will_do = {
+				factor = 2
+			}
+		}
+	}
+
+	# --- Тами аль-Мукри: первый инженер-агроном Марокко ---
+	MOR_thami_al_muqri = {
+		name = MOR_thami_al_muqri
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SAU/Portrait_Arabia_Generic_NW_3.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MOR_thami_al_muqri
+			allowed = {
+				original_tag = MOR
+			}
+			traits = {
+				mor_first_agronomist_engineer
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 3
+			}
+		}
+	}
+
+	# --- Ахмед Баргач: министр образования махзена (пока махзен не заменён) ---
+	MOR_ahmed_bargach = {
+		name = MOR_ahmed_bargach
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SAU/Portrait_Arabia_Generic_NW_4.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MOR_ahmed_bargach
+			allowed = {
+				original_tag = MOR
+			}
+			available = {
+				NOT = { has_completed_focus = MOR_Prepare_a_replacement_for_the_makhzen }
+			}
+			traits = {
+				mor_makhzen_educator
+			}
+			cost = 75
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	# --- Мохаммед Маммери: глава королевского протокола и двора ---
+	MOR_mohammed_mammeri = {
+		name = MOR_mohammed_mammeri
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SAU/Portrait_Arabia_Generic_NW_5.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MOR_mohammed_mammeri
+			allowed = {
+				original_tag = MOR
+				NOT = { has_government = neutrality }		# НЕ авторитаризм
+				NOT = { has_government = communism }		# НЕ коммунизм
+			}
+			traits = {
+				mor_master_of_royal_ceremonies
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 2
+			}
+		}
+	}
+
+	# --- Абдельазиз Бендрисс Амрауи: берберский писатель ---
+	MOR_abdelaziz_bendriss_amraoui = {
+		name = MOR_abdelaziz_bendriss_amraoui
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SAU/Portrait_Arabia_Generic_NW_6.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MOR_abdelaziz_bendriss_amraoui
+			allowed = {
+				original_tag = MOR
+			}
+			traits = {
+				mor_berber_writer
+			}
+			cost = 75
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	# --- Мухаммед Карим Ламрани: капитан индустрии ---
+	MOR_mohammed_karim_lamrani = {
+		name = MOR_mohammed_karim_lamrani
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SAU/Portrait_Arabia_Generic_NW_7.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MOR_mohammed_karim_lamrani
+			allowed = {
+				original_tag = MOR
+			}
+			traits = {
+				mor_captain_of_industry
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 4
+			}
+		}
+	}
+
+	# --- Таухид Аль-Фарадж: экономист ---
+	MOR_tawheed_al_faraj = {
+		name = MOR_tawheed_al_faraj
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SAU/Portrait_Arabia_Generic_NW_8.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MOR_tawheed_al_faraj
+			allowed = {
+				original_tag = MOR
+			}
+			traits = {
+				mor_economist_reformer
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 3
+			}
+		}
+	}
+
+	# --- Рабби Исраэль Абухацейра: еврейский религиозный деятель (НЕ авторитаризм) ---
+	MOR_yisrael_abu_hatzira = {
+		name = MOR_yisrael_abu_hatzira
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/EGY/Portrait_Hasan_Sabry.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MOR_yisrael_abu_hatzira
+			allowed = {
+				original_tag = MOR
+				NOT = { has_government = neutrality }		# НЕ авторитаризм
+			}
+			traits = {
+				mor_jewish_community_leader
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 2
+			}
+		}
+	}
+
+	# --- Мулай Дрисс Кандусси: министр шпионажа (НЕ авторитаризм) ---
+	MOR_moulay_driss_kandoussi = {
+		name = MOR_moulay_driss_kandoussi
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/IRQ/Portrait_Tawfiq_al-Suwaidi.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MOR_moulay_driss_kandoussi
+			allowed = {
+				original_tag = MOR
+				NOT = { has_government = neutrality }		# НЕ авторитаризм
+			}
+			traits = {
+				mor_minister_of_spying
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 3
+			}
+		}
+	}
+
+	# --- Бубкер эль-Кадири: министр образования (школьные фокусы) ---
+	MOR_boubker_el_kadiri = {
+		name = MOR_boubker_el_kadiri
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SAU/Portrait_Arabia_Generic_NW_10.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MOR_boubker_el_kadiri
+			allowed = {
+				original_tag = MOR
+			}
+			available = {
+				OR = {
+					has_completed_focus = MOR_Compulsory_primary_education
+					has_completed_focus = MOR_Unified_curriculum_and_evening_schools
+				}
+			}
+			traits = {
+				mor_minister_of_education
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 3
+			}
+		}
+	}
+
+	# --- Ахмед Балафредж: министр иностранных дел ---
+	MOR_ahmed_balafrej = {
+		name = MOR_ahmed_balafrej
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/IRQ/Portrait_Taha_al_Hashimi.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MOR_ahmed_balafrej
+			allowed = {
+				original_tag = MOR
+			}
+			available = {
+				has_completed_focus = MOR_Prepare_a_replacement_for_the_makhzen
+			}
+			traits = {
+				mor_minister_of_foreign_affairs
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 3
+			}
+		}
+	}
+
+	# --- Омар Бенабдельджалил: министр сельского хозяйства ---
+	MOR_omar_abdeljalil = {
+		name = MOR_omar_abdeljalil
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SAU/Portrait_Arabia_Generic_NW_11.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MOR_omar_abdeljalil
+			allowed = {
+				original_tag = MOR
+			}
+			available = {
+				has_completed_focus = MOR_Prepare_a_replacement_for_the_makhzen
+			}
+			traits = {
+				mor_minister_of_agriculture
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 2
+			}
+		}
+	}
+
+	# --- Мохамед Диури: идеолог демократии ---
+	MOR_mohamed_diouri = {
+		name = MOR_mohamed_diouri
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/EGY/Portrait_Georges_Henein.png"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MOR_mohamed_diouri
+			allowed = {
+				original_tag = MOR
+				has_government = democratic
+			}
+			available = {
+				has_completed_focus = MOR_Prepare_a_replacement_for_the_makhzen
+			}
+			traits = {
+				mor_democratic_ideologue
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 3
+			}
+		}
+	}
+
+	# --- Мохамед Лязиди: либеральный журналист ---
+	MOR_mohamed_lyazidi = {
+		name = MOR_mohamed_lyazidi
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/EGY/Portrait_Mahmoud_Fahmy_Elnokrashy.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MOR_mohamed_lyazidi
+			allowed = {
+				original_tag = MOR
+				has_government = democratic
+			}
+			available = {
+				has_completed_focus = MOR_Prepare_a_replacement_for_the_makhzen
+			}
+			traits = {
+				mor_liberal_journalist
+			}
+			cost = 75
+			ai_will_do = {
+				factor = 2
+			}
+		}
+	}
+
+	# --- Абдалла Ибрагим: социальный деятель ---
+	MOR_abdallah_ibrahim = {
+		name = MOR_abdallah_ibrahim
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/IRQ/Portrait_Fahmi_Said.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MOR_abdallah_ibrahim
+			allowed = {
+				original_tag = MOR
+			}
+			available = {
+				has_completed_focus = MOR_Patriotic_Ouazzani_movement
+			}
+			traits = {
+				mor_social_activist
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 3
+			}
+		}
+	}
+
+	# --- Тами Эль Глави: лояльный королю великий визирь (не убираемый) ---
+	MOR_thami_el_glaoui = {
+		name = MOR_thami_el_glaoui
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Africa/Portrait_Africa_Generic_Monarchy_1.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MOR_thami_el_glaoui
+			can_be_fired = no
+			allowed = {
+				original_tag = MOR
+			}
+			available = {
+				has_completed_focus = MOR_Appoint_a_vizier_loyal_to_the_king
+			}
+			traits = {
+				mor_loyal_grand_vizier
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 4
+			}
+		}
+	}
+
+	# --- Мохаммед аль-Макки ан-Насири: глава духовного ведомства ---
+	MOR_mohammed_al_makki_al_nasiri = {
+		name = MOR_mohammed_al_makki_al_nasiri
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Arabia/Portrait_Arabia_Generic_Monarchy_1.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MOR_mohammed_al_makki_al_nasiri
+			allowed = {
+				original_tag = MOR
+			}
+			traits = {
+				mor_head_of_religious_affairs
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 2
+			}
+		}
+	}
+
+	# --- Сиди Ахмед Бен аль-Ахмар: член Лиги Учёных Севера ---
+	MOR_sidi_ahmed_bin_al_ahmar = {
+		name = MOR_sidi_ahmed_bin_al_ahmar
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/EGY/Portrait_Ahmad_Maher_Pasha.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MOR_sidi_ahmed_bin_al_ahmar
+			allowed = {
+				original_tag = MOR
+			}
+			available = {
+				has_completed_focus = MOR_Secure_support_of_the_Andalusian_nobility
+			}
+			traits = {
+				mor_ulema_of_the_north
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 3
+			}
+		}
+	}
+
+	# --- Али Бен аль-Ахмар: теневой банкир ---
+	MOR_ali_bin_al_ahmar = {
+		name = MOR_ali_bin_al_ahmar
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/IRQ/Portrait_Abd_Al_Latif_Nuri.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MOR_ali_bin_al_ahmar
+			allowed = {
+				original_tag = MOR
+			}
+			available = {
+				has_completed_focus = MOR_Secure_support_of_the_Andalusian_nobility
+			}
+			traits = {
+				mor_shadow_banker
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 4
+			}
+		}
+	}
+
+	# --- Мухаммад Дауд: глава молодёжной организации ---
+	MOR_muhammed_daoud = {
+		name = MOR_muhammed_daoud
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/EGY/Portrait_Ahmed_Abdul_Aziz.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MOR_muhammed_daoud
+			allowed = {
+				original_tag = MOR
+			}
+			available = {
+				has_completed_focus = MOR_Utilize_the_Fityan_movement
+			}
+			traits = {
+				mor_youth_organization_leader
+			}
+			cost = 75
+			ai_will_do = {
+				factor = 2
+			}
+		}
+	}
+
+
+
+	### КОММУНИСТИЧЕСКИЕ МИНИСТРЫ ###
+	# Деятели марокканской компартии.
+	# «Французские» министры исчезают после фокуса MOR_Purge_the_french_from_the_party.
+
+	# --- Мишель Мазелла: руководитель подпольной деятельности компартии ---
+	MOR_michel_mazella = {
+		name = MOR_michel_mazella
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FRA/Portrait_France_Generic_1.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MOR_michel_mazella
+			allowed = {
+				original_tag = MOR
+				has_government = communism
+			}
+			traits = {
+				mor_underground_organizer
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 4
+			}
+		}
+	}
+
+	# --- Жан Дреш: горный картограф ---
+	MOR_jean_dresch = {
+		name = MOR_jean_dresch
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FRA/Portrait_France_Generic_2.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MOR_jean_dresch
+			allowed = {
+				original_tag = MOR
+				has_government = communism
+			}
+			available = {
+				NOT = { has_completed_focus = MOR_Purge_the_french_from_the_party }
+			}
+			traits = {
+				mor_mountain_cartographer
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 3
+			}
+		}
+	}
+
+	# --- Мишель Колонна: министр промышленности ---
+	MOR_michel_colonna = {
+		name = MOR_michel_colonna
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FRA/Portrait_France_Generic_3.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MOR_michel_colonna
+			allowed = {
+				original_tag = MOR
+				has_government = communism
+			}
+			available = {
+				NOT = { has_completed_focus = MOR_Purge_the_french_from_the_party }
+			}
+			traits = {
+				mor_communist_industrial_commissar
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 4
+			}
+		}
+	}
+
+	# --- Шарль Дюпюи: комиссар дорог и узлов снабжения ---
+	MOR_charles_dupuy = {
+		name = MOR_charles_dupuy
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FRA/Portrait_France_Generic_land_1.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MOR_charles_dupuy
+			allowed = {
+				original_tag = MOR
+				has_government = communism
+			}
+			available = {
+				NOT = { has_completed_focus = MOR_Purge_the_french_from_the_party }
+			}
+			traits = {
+				mor_railway_and_nodes_commissar
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 3
+			}
+		}
+	}
+
+	# --- Поль Дюрель: профсоюзный деятель ---
+	MOR_paul_durel = {
+		name = MOR_paul_durel
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FRA/Portrait_France_Generic_land_2.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MOR_paul_durel
+			allowed = {
+				original_tag = MOR
+				has_government = communism
+			}
+			available = {
+				NOT = { has_completed_focus = MOR_Purge_the_french_from_the_party }
+			}
+			traits = {
+				mor_trade_unionist
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 3
+			}
+		}
+	}
+
+	# --- Эдмон Амран Эль Малех: голос марокканского подполья ---
+	MOR_edmond_amran_el_maleh = {
+		name = MOR_edmond_amran_el_maleh
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FRA/Portrait_France_Generic_land_3.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MOR_edmond_amran_el_maleh
+			allowed = {
+				original_tag = MOR
+				has_government = communism
+			}
+			traits = {
+				mor_voice_of_the_underground
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 4
+			}
+		}
+	}
+
+
+	# --- Авраам Серфати: инженер ---
+	MOR_abraham_serfati = {
+		name = MOR_abraham_serfati
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FRA/Portrait_France_Generic_land_4.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MOR_abraham_serfati
+			allowed = {
+				original_tag = MOR
+				has_government = communism
+			}
+			traits = {
+				mor_engineer_of_labour
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 3
+			}
+		}
+	}
+
+	# --- Али Ята: член политбюро (пока не стоит во главе государства) ---
+	MOR_ali_yata = {
+		name = MOR_ali_yata
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Africa/Portrait_Africa_Generic_NW_1.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MOR_ali_yata
+			allowed = {
+				original_tag = MOR
+				has_government = communism
+			}
+			available = {
+				NOT = { has_country_leader = { character = MOR_ali_yata ruling_only = yes } }
+			}
+			traits = {
+				mor_workhorse_of_the_politburo
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 3
+			}
+		}
+	}
+
+	# --- Мухаммед Ферхат: редактор партийной печати ---
+	MOR_mohammed_ferhat = {
+		name = MOR_mohammed_ferhat
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Africa/Portrait_Africa_Generic_NW_2.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MOR_mohammed_ferhat
+			allowed = {
+				original_tag = MOR
+				has_government = communism
+			}
+			traits = {
+				mor_editor_of_the_party_press
+			}
+			cost = 75
+			ai_will_do = {
+				factor = 2
+			}
+		}
+	}
+
+	# --- Фортуне Султан: мать марокканской эмансипации ---
+	MOR_fortune_sultan = {
+		name = MOR_fortune_sultan
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/EGY/Portrait_Huda_Shaarawi.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MOR_fortune_sultan
+			allowed = {
+				original_tag = MOR
+				has_government = communism
+			}
+			available = {
+				has_completed_focus = MOR_Womens_Union_of_Morocco
+			}
+			traits = {
+				mor_mother_of_emancipation
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 4
+			}
+		}
+	}
+
+	# --- Люсетт Мазелла: министр труда ---
+	MOR_lucette_mazella = {
+		name = MOR_lucette_mazella
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FRA/Portrait_France_Generic_navy_1.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MOR_lucette_mazella
+			allowed = {
+				original_tag = MOR
+				has_government = communism
+			}
+			available = {
+				has_completed_focus = MOR_Set_minimum_wages_in_factories
+				has_completed_focus = MOR_End_the_gross_exploitation_of_women
+			}
+			traits = {
+				mor_labour_minister
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 3
+			}
+		}
+	}
+
+	# --- Фрея Айаш: министр просвещения ---
+	MOR_freyha_ayache = {
+		name = MOR_freyha_ayache
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/EGY/Portrait_Huda_Shaarawi.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MOR_freyha_ayache
+			allowed = {
+				original_tag = MOR
+				has_government = communism
+			}
+			available = {
+				has_completed_focus = MOR_Literacy_programs
+				has_completed_focus = MOR_End_the_gross_exploitation_of_women
+			}
+			traits = {
+				mor_minister_of_enlightenment
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 3
+			}
+		}
+	}
+
+}
+
