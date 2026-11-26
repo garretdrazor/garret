@@ -151,7 +151,7 @@ leader_traits = {
 		random = no
 		war_support_factor = 0.10
 		fascism_drift = 0.10
-		justify_war_goal_time = -0.50		# стоимость и скорость оправдания войны суммарно -50%
+		justify_war_goal_time = -0.25		# стоимость и скорость оправдания войны суммарно -50%
 		custom_modifier_tooltip = mor_voice_of_the_maghreb_tt
 	}
 

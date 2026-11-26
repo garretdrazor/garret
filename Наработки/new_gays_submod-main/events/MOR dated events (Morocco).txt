@@ -1,4 +1,4 @@
-﻿add_namespace = mor_dated
+﻿add_namespace = NW_MOR
 # ============================================================
 #  ДАТИРОВАННЫЕ СОБЫТИЯ ПРОТЕКТОРАТА — дизайн-док [MOR], Шаг 9
 #
@@ -45,39 +45,34 @@
 #    mor_mac_arrests_flag               лидеры МКД арестованы и отпущены
 #    mor_mac_negotiated_flag            МКД приглашён к столу переговоров
 #    mor_harvest_failure_flag           неурожайный год наступил
-#  * Каждый ивент лежит в блоке country_event = { id = mor_dated.N ... }. Без
+#  * Каждый ивент лежит в блоке country_event = { id = NW_MOR.N ... }. Без
 #    обёртки и ключа id движок ивент не регистриует вовсе: в error.log это
-#    "Unexpected token: mor_dated.N", а в setup.log — "Events loaded ... #0".
+#    "Unexpected token: NW_MOR.N", а в setup.log — "Events loaded ... #0".
 #  * Поле icon у ивента невалидно ("Unexpected token: icon"), поэтому картинка
 #    одна — picture =, и спрайты взяты из NWR (gfx/event_pictures).
 #  * Дат у ивентов нет: date = внутри ивента не работает, а автоматические
 #    ивенты движок перепроверяет раз в ~20 дней. Дни берёт из дизайн-дока
 #    common/on_actions/MOR on_actions date (Morocco).txt, поэтому все ивенты
 #    is_triggered_only = yes, fire_only_once снят, а однократность держится
-#    на флагах mor_dated_N_fired_flag.
+#    на флагах NW_MOR_N_fired_flag.
 #  * Каждый ивент помечает себя в логах строкой immediate = { log = ... }.
 
 # ============================================================
 
 
 # --- 1. Настоящее протектората Марокко (старт кампании) ---
-country_event = {
-	id = mor_dated.1
-	picture = GFX_report_event_colonial_building
-	title = mor_dated.1.t
-	desc = mor_dated.1.d
-	is_triggered_only = yes
 
-	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event mor_dated.1" }
+country_event = {
+	id = NW_MOR.1
+	title = NW_MOR.1.t
+	desc = NW_MOR.1.d
+	picture = GFX_report_event_colonial_building
+	is_triggered_only = yes
 	
-	
-	trigger = {
-		original_tag = MOR
-		has_power_balance = { id = MOR_power_balance }
-	}
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NW_MOR.1" }
 
 	option = {
-		name = mor_dated.1.a
+		name = NW_MOR.1.a
 		set_country_flag = mor_protectorate_intro_flag
 		ai_chance = {
 			base = 1
@@ -87,23 +82,18 @@ country_event = {
 
 # --- 2. Выступления в еврейской общине — 16 февраля 1936 ---
 country_event = {
-	id = mor_dated.2
+	id = NW_MOR.2
 	picture = GFX_report_event_journalists_speech
-	title = mor_dated.2.t
-	desc = mor_dated.2.d
+	title = NW_MOR.2.t
+	desc = NW_MOR.2.d
 	is_triggered_only = yes
 
-	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event mor_dated.2" }
-
-	trigger = {
-		original_tag = MOR
-		has_power_balance = { id = MOR_power_balance }
-	}
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NW_MOR.2" }
 
 	# Нам невыгодно объединение необразованных марокканцев
 	# и политизированных евреев: +3 % поддержки коммунизма.
 	option = {
-		name = mor_dated.2.a
+		name = NW_MOR.2.a
 		set_country_flag = mor_jewish_speech_flag
 		add_popularity = {
 			ideology = communism
@@ -117,22 +107,17 @@ country_event = {
 
 # --- 3. Вопиющее поведение еврейских коммунистов — 2 июня 1936 ---
 country_event = {
-	id = mor_dated.3
+	id = NW_MOR.3
 	picture = GFX_report_event_generic_riot
-	title = mor_dated.3.t
-	desc = mor_dated.3.d
+	title = NW_MOR.3.t
+	desc = NW_MOR.3.d
 	is_triggered_only = yes
 
-	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event mor_dated.3" }
-
-	trigger = {
-		original_tag = MOR
-		has_power_balance = { id = MOR_power_balance }
-	}
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NW_MOR.3" }
 
 	# Слишком много стало шума от левых евреев: +2 % поддержки коммунизма.
 	option = {
-		name = mor_dated.3.a
+		name = NW_MOR.3.a
 		set_country_flag = mor_jewish_communists_flag
 		add_popularity = {
 			ideology = communism
@@ -148,25 +133,17 @@ country_event = {
 # Событие приходит, если к 11 июня фокус «Провести трудовые реформы» так
 # и не завершён: волнение перекидывается с метрополии само.
 country_event = {
-	id = mor_dated.4
+	id = NW_MOR.4
 	picture = GFX_report_event_worker_protests
-	title = mor_dated.4.t
-	desc = mor_dated.4.d
+	title = NW_MOR.4.t
+	desc = NW_MOR.4.d
 	is_triggered_only = yes
 
-	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event mor_dated.4" }
-
-	trigger = {
-		original_tag = MOR
-		has_power_balance = { id = MOR_power_balance }
-		NOT = {
-			has_completed_focus = MOR_Conduct_labor_reforms
-		}
-	}
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NW_MOR.4" }
 
 	# Пойти на уступки и договориться с лидерами.
 	option = {
-		name = mor_dated.4.a
+		name = NW_MOR.4.a
 		set_country_flag = mor_red_june_happened_flag
 		if = {
 			limit = {
@@ -195,7 +172,7 @@ country_event = {
 
 	# Использовать колониальные войска для разгона бунтовщиков!
 	option = {
-		name = mor_dated.4.b
+		name = NW_MOR.4.b
 		set_country_flag = mor_red_june_happened_flag
 		set_country_flag = mor_red_june_crackdown_flag
 		add_stability = 0.05
@@ -207,8 +184,8 @@ country_event = {
 		}
 		add_idea = mor_workers_unrest_in_casablanca
 		hidden_effect = {
-			log = "[GetDateText]: MOR mor_dated.4 -> разгон забастовки, через 2 дня фосфатный кризис"
-			country_event = { id = mor_dated.5 days = 2 }
+			log = "[GetDateText]: MOR NW_MOR.4 -> разгон забастовки, через 2 дня фосфатный кризис"
+			country_event = { id = NW_MOR.5 days = 2 }
 		}
 		ai_chance = {
 			base = 40
@@ -218,22 +195,17 @@ country_event = {
 
 # --- 5. Фосфатный кризис — через 2 дня после разгона ---
 country_event = {
-	id = mor_dated.5
+	id = NW_MOR.5
 	picture = GFX_report_event_generic_factory
-	title = mor_dated.5.t
-	desc = mor_dated.5.d
+	title = NW_MOR.5.t
+	desc = NW_MOR.5.d
 	is_triggered_only = yes
 
-	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event mor_dated.5" }
-
-	trigger = {
-		original_tag = MOR
-		has_power_balance = { id = MOR_power_balance }
-	}
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NW_MOR.5" }
 
 	# Мы всё же вынуждены пойти на уступки (исторический вариант).
 	option = {
-		name = mor_dated.5.a
+		name = NW_MOR.5.a
 		set_country_flag = mor_phosphate_concessions_flag
 		if = {
 			limit = {
@@ -266,7 +238,7 @@ country_event = {
 
 	# Направить Иностранный легион для зачистки шахт.
 	option = {
-		name = mor_dated.5.b
+		name = NW_MOR.5.b
 		set_country_flag = mor_legion_at_houribgha_flag
 		add_stability = 0.05
 		add_political_power = -50
@@ -283,8 +255,8 @@ country_event = {
 		}
 		add_idea = mor_workers_unrest_in_casablanca_and_atlas
 		hidden_effect = {
-			log = "[GetDateText]: MOR mor_dated.5 -> Иностранный легион в Хурибге, через 3 дня рождение ПКМ"
-			country_event = { id = mor_dated.6 days = 3 }
+			log = "[GetDateText]: MOR NW_MOR.5 -> Иностранный легион в Хурибге, через 3 дня рождение ПКМ"
+			country_event = { id = NW_MOR.6 days = 3 }
 		}
 		ai_chance = {
 			base = 35
@@ -297,22 +269,17 @@ country_event = {
 # Марокканскую Коммунистическую партию» — это одно и то же событие:
 # съезд в трущобах Касабланки и есть рождение независимой ПКМ.
 country_event = {
-	id = mor_dated.6
+	id = NW_MOR.6
 	picture = GFX_report_event_communist_leader
-	title = mor_dated.6.t
-	desc = mor_dated.6.d
+	title = NW_MOR.6.t
+	desc = NW_MOR.6.d
 	is_triggered_only = yes
 
-	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event mor_dated.6" }
-
-	trigger = {
-		original_tag = MOR
-		has_power_balance = { id = MOR_power_balance }
-	}
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NW_MOR.6" }
 
 	# Это тревожные новости.
 	option = {
-		name = mor_dated.6.a
+		name = NW_MOR.6.a
 		set_country_flag = mor_mcp_independent_flag
 		add_popularity = {
 			ideology = communism
@@ -329,8 +296,8 @@ country_event = {
 			days = 90
 		}
 		hidden_effect = {
-			log = "[GetDateText]: MOR mor_dated.6 -> ПКМ отделилась от ФКП, через 15 дней рассвет Красного июня"
-			country_event = { id = mor_dated.7 days = 15 }
+			log = "[GetDateText]: MOR NW_MOR.6 -> ПКМ отделилась от ФКП, через 15 дней рассвет Красного июня"
+			country_event = { id = NW_MOR.7 days = 15 }
 		}
 		ai_chance = {
 			base = 1
@@ -340,22 +307,17 @@ country_event = {
 
 # --- 7. Красный июнь рассветает — через 15 дней после съезда ---
 country_event = {
-	id = mor_dated.7
+	id = NW_MOR.7
 	picture = GFX_report_event_gathering_protest
-	title = mor_dated.7.t
-	desc = mor_dated.7.d
+	title = NW_MOR.7.t
+	desc = NW_MOR.7.d
 	is_triggered_only = yes
 
-	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event mor_dated.7" }
-
-	trigger = {
-		original_tag = MOR
-		has_power_balance = { id = MOR_power_balance }
-	}
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NW_MOR.7" }
 
 	# Нам придётся уступить, иначе мы захлебнёмся в крови!
 	option = {
-		name = mor_dated.7.a
+		name = NW_MOR.7.a
 		if = {
 			limit = {
 				NOT = { has_completed_focus = MOR_Conduct_labor_reforms }
@@ -391,7 +353,7 @@ country_event = {
 
 	# Закончим дело!
 	option = {
-		name = mor_dated.7.b
+		name = NW_MOR.7.b
 		add_stability = 0.05
 		add_political_power = -50
 		add_power_balance_value = {
@@ -408,8 +370,8 @@ country_event = {
 			remove_idea = mor_workers_unrest_in_casablanca
 		}
 		hidden_effect = {
-			log = "[GetDateText]: MOR mor_dated.7 -> новая волна арестов, через 5 дней апогей Красного июня"
-			country_event = { id = mor_dated.8 days = 5 }
+			log = "[GetDateText]: MOR NW_MOR.7 -> новая волна арестов, через 5 дней апогей Красного июня"
+			country_event = { id = NW_MOR.8 days = 5 }
 		}
 		ai_chance = {
 			base = 45
@@ -419,22 +381,17 @@ country_event = {
 
 # --- 8. Апогей красного июня — через 5 дней после арестов ---
 country_event = {
-	id = mor_dated.8
+	id = NW_MOR.8
 	picture = GFX_news_event_the_uprising_of_unemployed_workers
-	title = mor_dated.8.t
-	desc = mor_dated.8.d
+	title = NW_MOR.8.t
+	desc = NW_MOR.8.d
 	is_triggered_only = yes
 
-	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event mor_dated.8" }
-
-	trigger = {
-		original_tag = MOR
-		has_power_balance = { id = MOR_power_balance }
-	}
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NW_MOR.8" }
 
 	# Ситуация становится тревожной.
 	option = {
-		name = mor_dated.8.a
+		name = NW_MOR.8.a
 		set_country_flag = mor_red_june_apogee_flag
 		add_stability = -0.10
 		add_power_balance_value = {
@@ -458,31 +415,23 @@ country_event = {
 # --- 9. I Конгресс Национального комитета действия в Рабате ---
 # 25 октября 1936, если фокус «Пороховая бочка красного июня» не выполнен.
 country_event = {
-	id = mor_dated.9
+	id = NW_MOR.9
 	picture = GFX_report_event_generic_conference
-	title = mor_dated.9.t
-	desc = mor_dated.9.d
+	title = NW_MOR.9.t
+	desc = NW_MOR.9.d
 	is_triggered_only = yes
 
-	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event mor_dated.9" }
-
-	trigger = {
-		original_tag = MOR
-		has_power_balance = { id = MOR_power_balance }
-		NOT = {
-			has_completed_focus = MOR_Powder_keg_of_red_june
-		}
-	}
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NW_MOR.9" }
 
 	# Потянем с ответом (исторический вариант).
 	option = {
-		name = mor_dated.9.a
+		name = NW_MOR.9.a
 		set_country_flag = mor_mac_congress_flag
 		set_country_flag = mor_mac_crisis_pending_flag
 		add_idea = mor_november_crisis
 		hidden_effect = {
-			log = "[GetDateText]: MOR mor_dated.9 -> Конгресс МКД, через 21 день начало ноябрьского кризиса"
-			country_event = { id = mor_dated.10 days = 21 }
+			log = "[GetDateText]: MOR NW_MOR.9 -> Конгресс МКД, через 21 день начало ноябрьского кризиса"
+			country_event = { id = NW_MOR.10 days = 21 }
 		}
 		ai_chance = {
 			base = 1
@@ -496,30 +445,25 @@ country_event = {
 # приходит позже, когда фокус всё же завершат (common/on_actions/
 # MOR power balance on actions (Morocco).txt).
 country_event = {
-	id = mor_dated.10
+	id = NW_MOR.10
 	picture = GFX_report_event_generic_rally_3
-	title = mor_dated.10.t
-	desc = mor_dated.10.d
+	title = NW_MOR.10.t
+	desc = NW_MOR.10.d
 	is_triggered_only = yes
 
-	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event mor_dated.10" }
-
-	trigger = {
-		original_tag = MOR
-		has_power_balance = { id = MOR_power_balance }
-	}
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NW_MOR.10" }
 
 	# Султан не хочет ввязываться в это, генерал-резидент разберётся сам.
 	option = {
-		name = mor_dated.10.a
+		name = NW_MOR.10.a
 		trigger = {
 			has_completed_focus = MOR_Oppose_the_Moroccan_Action_Committee
 		}
 		set_country_flag = mor_mac_crisis_answered_flag
 		clr_country_flag = mor_mac_crisis_waiting_flag
 		hidden_effect = {
-			log = "[GetDateText]: MOR mor_dated.10 -> резидент разбирается сам, через 21 день аресты лидеров МКД"
-			country_event = { id = mor_dated.11 days = 21 }
+			log = "[GetDateText]: MOR NW_MOR.10 -> резидент разбирается сам, через 21 день аресты лидеров МКД"
+			country_event = { id = NW_MOR.11 days = 21 }
 		}
 		ai_chance = {
 			base = 1
@@ -528,15 +472,15 @@ country_event = {
 
 	# Султан симпатизирует им, и лично вызвался провести переговоры.
 	option = {
-		name = mor_dated.10.b
+		name = NW_MOR.10.b
 		trigger = {
 			has_completed_focus = MOR_Support_the_Moroccan_Action_Committee
 		}
 		set_country_flag = mor_mac_crisis_answered_flag
 		clr_country_flag = mor_mac_crisis_waiting_flag
 		hidden_effect = {
-			log = "[GetDateText]: MOR mor_dated.10 -> султан берёт переговоры на себя, через 7 дней приглашение МКД"
-			country_event = { id = mor_dated.12 days = 7 }
+			log = "[GetDateText]: MOR NW_MOR.10 -> султан берёт переговоры на себя, через 7 дней приглашение МКД"
+			country_event = { id = NW_MOR.12 days = 7 }
 		}
 		ai_chance = {
 			base = 1
@@ -545,7 +489,7 @@ country_event = {
 
 	# Потянем с ответом.
 	option = {
-		name = mor_dated.10.c
+		name = NW_MOR.10.c
 		trigger = {
 			NOT = { has_completed_focus = MOR_Oppose_the_Moroccan_Action_Committee }
 			NOT = { has_completed_focus = MOR_Support_the_Moroccan_Action_Committee }
@@ -559,22 +503,17 @@ country_event = {
 
 # --- 11. Аресты лидеров Марокканского комитета действий ---
 country_event = {
-	id = mor_dated.11
+	id = NW_MOR.11
 	picture = GFX_report_event_fascist_militia
-	title = mor_dated.11.t
-	desc = mor_dated.11.d
+	title = NW_MOR.11.t
+	desc = NW_MOR.11.d
 	is_triggered_only = yes
 
-	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event mor_dated.11" }
-
-	trigger = {
-		original_tag = MOR
-		has_power_balance = { id = MOR_power_balance }
-	}
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NW_MOR.11" }
 
 	# Пока освободим их, будем действовать иначе.
 	option = {
-		name = mor_dated.11.a
+		name = NW_MOR.11.a
 		set_country_flag = mor_mac_arrests_flag
 		set_country_flag = mor_mac_crisis_answered_flag
 		clr_country_flag = mor_mac_crisis_waiting_flag
@@ -592,22 +531,17 @@ country_event = {
 
 # --- 12. Приглашение лидеров Марокканского комитета действий к переговорам ---
 country_event = {
-	id = mor_dated.12
+	id = NW_MOR.12
 	picture = GFX_report_event_generic_sign_treaty2
-	title = mor_dated.12.t
-	desc = mor_dated.12.d
+	title = NW_MOR.12.t
+	desc = NW_MOR.12.d
 	is_triggered_only = yes
 
-	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event mor_dated.12" }
-
-	trigger = {
-		original_tag = MOR
-		has_power_balance = { id = MOR_power_balance }
-	}
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NW_MOR.12" }
 
 	# Всё решится за столом переговоров.
 	option = {
-		name = mor_dated.12.a
+		name = NW_MOR.12.a
 		set_country_flag = mor_mac_negotiated_flag
 		set_country_flag = mor_mac_crisis_answered_flag
 		clr_country_flag = mor_mac_crisis_waiting_flag
@@ -628,7 +562,7 @@ country_event = {
 		# Доступ к фокусу «Начать пересмотр „плана реформ“»: сам фокус,
 		# его требования (демократия и монархизм не менее 25 %) и награда —
 		# Шаг 8. Здесь лишь снимается блокировка.
-		custom_effect_tooltip = mor_dated.12.a.tt
+		custom_effect_tooltip = NW_MOR.12.a.tt
 		unlock_national_focus = MOR_Begin_revision_of_the_reform_plan
 		ai_chance = {
 			base = 1
@@ -638,22 +572,17 @@ country_event = {
 
 # --- 13. Неурожайный год — 3 февраля 1937 ---
 country_event = {
-	id = mor_dated.13
+	id = NW_MOR.13
 	picture = GFX_report_event_farm
-	title = mor_dated.13.t
-	desc = mor_dated.13.d
+	title = NW_MOR.13.t
+	desc = NW_MOR.13.d
 	is_triggered_only = yes
 
-	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event mor_dated.13" }
-
-	trigger = {
-		original_tag = MOR
-		has_power_balance = { id = MOR_power_balance }
-	}
+	immediate = { log = "[GetDateText]: [Root.GetName] ([Root.GetTag]): event NW_MOR.13" }
 
 	# Франция должна с этим помочь (исторический вариант).
 	option = {
-		name = mor_dated.13.a
+		name = NW_MOR.13.a
 		set_country_flag = mor_harvest_failure_flag
 		add_timed_idea = {
 			idea = mor_harvest_failure
